@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "nuxt": "^3.12.3",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "@iconify-json/ph": "^1.1.13",
+    "@nuxt/content": "^2.13.1",
+    "@nuxt/eslint": "^0.3.13",
+    "@nuxt/fonts": "^0.7.1",
+    "@nuxt/icon": "^1.0.0",
+    "@nuxt/image": "^1.7.0",
+    "@nuxt/ui": "npm:@nuxt/ui-edge@latest",
+    "@nuxthq/studio": "^2.0.3",
+    "@nuxtjs/seo": "^2.0.0-rc.11",
+    "eslint": "^9.6.0",
+    "nuxt-content-assets": "^1.4.4",
+    "nuxt-resend": "^0.0.2",
+    "vite-plugin-eslint2": "^4.4.0"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "name": "mubaidr.js.org",
+  "pnpm": {},
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "postinstall": "nuxt prepare",
+    "preview": "nuxt preview"
+  },
+  "type": "module"
+}
