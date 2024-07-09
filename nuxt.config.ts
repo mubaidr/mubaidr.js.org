@@ -2,48 +2,49 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+  debug: true,
   modules: [
     '@nuxt/content',
-    '@nuxt/eslint',
-    '@nuxt/fonts',
+    // '@nuxt/eslint',
+    // '@nuxt/fonts',
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/ui',
-    '@nuxtjs/seo',
+    // '@nuxtjs/seo',
     'nuxt-resend',
-    'nuxt-content-assets',
+    // 'nuxt-content-assets',
     '@nuxthq/studio',
   ],
-  content: {},
-  eslint: {
-    checker: {
-      cache: true,
-      fix: true,
-      lintOnStart: false,
-    },
-  },
-  fonts: {
-    google: {
-      families: {
-        Inter: [400, 700],
-      },
-    },
-  },
+  // content: {},
+  // eslint: {
+  //   checker: {
+  //     cache: true,
+  //     fix: true,
+  //     lintOnStart: false,
+  //   },
+  // },
+  // fonts: {
+  //   google: {
+  //     families: {
+  //       Inter: [400, 700],
+  //     },
+  //   },
+  // },
   icon: {
     collections: ['ph'],
   },
-  image: {},
-  ui: {
-    global: true,
-  },
-  seo: {
-    automaticDefaults: true,
-    enabled: false,
-  },
+  // image: {},
+  // ui: {
+  //   global: true,
+  // },
+  // seo: {
+  //   automaticDefaults: true,
+  //   enabled: true,
+  // },
   resend: {
     apiKey: '',
   },
-  contentAssets: {},
+  // contentAssets: {},
   studio: {
     enabled: true,
   },
