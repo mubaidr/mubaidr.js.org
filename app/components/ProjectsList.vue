@@ -1,71 +1,105 @@
+<script setup lang="ts">
+const { data: projects, status } = await useAsyncData<any>('projects', () =>
+  $fetch(
+    'https://api.github.com/search/repositories?q=user:mubaidr&sort=stars&per_page=7'
+  )
+)
+</script>
+
 <template>
   <div class="mt-20">
-    <div
-      class="flex justify-center items-center text-base font-semibold text-gray-600 dark:text-gray-300"
-    >
-      <h2 class="text-center">Open Source Projects</h2>
-      <IconDoubleDown class="h-4 w-4" />
+    <div class="flex justify-center items-center my-12">
+      <h2 class="text-xl text-center">
+        Open Source Projects
+        <Icon name="i-ph-arrow-down" />
+      </h2>
     </div>
 
-    <div class="wrapper-small my-5">
+    <template v-if="status === 'pending'">
+      <div class="px-32 md:px-64">
+        <UProgress animation="carousel" />
+      </div>
+    </template>
+    <template v-else-if="status === 'error'">
+      <div class="text-center">
+        <p>
+          Oh no! Failed to fetch projects. Never mind, please visit my
+          <NuxtLink to="https://github.com/mubaidr">Github Profile</NuxtLink>
+          .
+        </p>
+      </div>
+    </template>
+    <template v-else>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <a
-          v-for="(project, index) in projects"
+        <UButton
+          v-for="(project, index) in projects.items"
           :key="index"
-          :href="project.html_url"
-          class="block bg-gray-50 dark:bg-gray-800 p-6 shadow rounded-lg mt-2 lg:mt-0"
-          rel="noreferrer"
+          to="project.html_url"
+          size="xl"
+          :external="true"
           target="_blank"
+          class="flex h-full w-full"
+          color="gray"
         >
           <div>
-            <h3 class="text-lg font-medium text-gray-800 dark:text-gray-100">
+            <h3 class="text-lg font-medium">
               {{ project.name }}
             </h3>
-            <p class="my-2 text-base text-gray-500 dark:text-gray-400">
+            <p class="my-2">
               {{ project.description }}
             </p>
-            <ul
-              class="flex items-center space-x-4 text-black dark:text-gray-200"
-            >
+            <ul class="flex items-center space-x-4">
+              <li
+                v-if="project.stargazers_count"
+                class="inline-flex items-center"
+              >
+                <Icon
+                  name="i-ph-eyes"
+                  class="mr-1"
+                />
+                <span>{{ project.forks }}</span>
+              </li>
               <li class="inline-flex items-center">
-                <IconStar class="h-4 w-4 mr-1" />
+                <Icon
+                  name="i-ph-star"
+                  class="mr-1"
+                />
                 <span>{{ project.stargazers_count }}</span>
               </li>
               <li
                 v-if="project.forks"
                 class="inline-flex items-center"
               >
-                <IconFork class="h-4 w-4 mr-1" />
+                <Icon
+                  name="i-ph-git-fork"
+                  class="mr-1"
+                />
                 <span>{{ project.forks }}</span>
               </li>
             </ul>
           </div>
-        </a>
+        </UButton>
+
         <div class="flex items-center justify-center">
-          <a
-            class="bg-black w-full md:w-auto flex items-center justify-center px-10 md:px-24 py-3 shadow-md hover:bg-gray-800 rounded-lg text-white"
-            href="https://github.com/aymaneMx"
-            rel="noreferrer"
+          <UButton
+            to="https://github.com/mubaidr"
+            size="xl"
             target="_blank"
+            :external="true"
+            class="flex h-full w-full text-center items-center content-center align-middle"
+            variant="ghost"
           >
-            <IconGithub class="text-white h-6 w-6 mr-3" />
-            See More Projects
-          </a>
+            <div class="mx-auto">
+              <span>See More Projects on Github</span>
+
+              <Icon
+                name="i-ph-arrow-square-out"
+                class="ml-1"
+              ></Icon>
+            </div>
+          </UButton>
         </div>
       </div>
-    </div>
+    </template>
   </div>
 </template>
-
-<script setup lang="ts">
-const {
-  data: projects,
-  pending,
-  error,
-  refresh,
-} = await useAsyncData('projects', () =>
-  $fetch(
-    'https://api.github.com/search/repositories?q=user:mubaidr&sort=stars&per_page=3'
-  )
-)
-</script>

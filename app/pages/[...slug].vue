@@ -5,7 +5,7 @@
     <!-- Similar to <ContentDoc :path="$route.path" /> -->
     <ContentDoc />
 
-    <!-- <ProjectsList /> -->
+    <ProjectsList />
   </main>
 </template>
 

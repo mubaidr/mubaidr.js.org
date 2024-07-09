@@ -1,5 +1,5 @@
 <template>
-  <div class="md:px-16">
+  <div class="py-6 px-6 md:px-12">
     <hr class="h-px mt-6 border-gray-600 max-w-screen-xl mx-auto" />
     <div class="md:py-5">
       <div

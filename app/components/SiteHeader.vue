@@ -1,38 +1,36 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
-    <nav class="py-6">
-      <div class="px-10 flex justify-between items-center">
-        <div class="logo">
-          <ULink
-            to="/"
-            active-class="border-b-2 border-b-primary"
-            class="text-xl text-primary font-extrabold tracking-widest"
-          >
-            mubaidr
-          </ULink>
-        </div>
+  <nav class="flex justify-between items-center py-6 px-6 md:px-12">
+    <div class="logo">
+      <ULink
+        to="/"
+        class="text-xl text-primary font-extrabold tracking-widest border-b-4 border-transparent"
+        active-class="border-b-primary"
+      >
+        mubaidr
+      </ULink>
+    </div>
 
-        <div class="flex flex-row gap-4">
-          <ULink
-            to="/contact"
-            active-class="border-b-2 border-b-primary"
-          >
-            Contact
-          </ULink>
-          <ULink
-            to="/about"
-            active-class="border-b-2 border-b-primary"
-          >
-            About
-          </ULink>
+    <div class="flex flex-row gap-4">
+      <ULink
+        to="/contact"
+        class="border-b-4 border-transparent"
+        active-class="border-b-primary"
+      >
+        Contact
+      </ULink>
+      <ULink
+        to="/about"
+        class="border-b-4 border-transparent"
+        active-class="border-b-primary"
+      >
+        About
+      </ULink>
 
-          <ThemeSwitcher />
-        </div>
-      </div>
-    </nav>
-  </div>
+      <ThemeSwitcher />
+    </div>
+  </nav>
 </template>
 
 <style></style>

@@ -7,19 +7,24 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   // compatibilityDate: '2024-04-03',
   colorMode: {
     preference: 'dark',
   },
+
   content: {
     documentDriven: true,
     experimental: {
       cacheContents: true,
     },
   },
+
   // contentAssets: {},
   debug: false,
+
   devtools: { enabled: true },
+
   // eslint: {
   //   checker: {
   //     cache: true,
@@ -32,6 +37,7 @@ export default defineNuxtConfig({
     sharedPrerenderData: true,
     writeEarlyHints: true,
   },
+
   // fonts: {
   //   google: {
   //     families: {
@@ -42,10 +48,9 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  icon: {
-    collections: ['ph'],
-    size: '1.25em',
-  },
+
+  icon: {},
+
   // image: {},
   modules: [
     '@nuxt/content',
@@ -59,26 +64,36 @@ export default defineNuxtConfig({
     // 'nuxt-content-assets',
     '@nuxthq/studio',
   ],
+
   resend: {
     apiKey: '',
   },
+
   seo: {
     automaticDefaults: true,
     enabled: true,
     fallbackTitle: true,
   },
+
   site: {
     indexable: true,
   },
+
   sitemap: {
     cacheMaxAgeSeconds: 86400,
     credits: true,
     experimentalCompression: true,
   },
+
+  ui: {
+    icons: {
+      scale: 1.5,
+    },
+  },
+
   studio: {
     enabled: true,
   },
-  // ui: {
-  //   global: true,
-  // },
+
+  compatibilityDate: '2024-07-09',
 })

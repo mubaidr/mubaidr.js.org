@@ -1,11 +1,8 @@
 export default defineAppConfig({
+  nuxtIcon: {},
   ui: {
-    primary: 'green',
-    gray: 'slate',
-    link: {
-      default: {
-        activeClass: 'text-primary',
-      },
-    },
+    primary: 'red',
+    gray: 'stone',
   },
+  icon: {},
 })
