@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   debug: true,
+  future: {
+    compatibilityVersion: 4,
+  },
   modules: [
     '@nuxt/content',
     // '@nuxt/eslint',
@@ -47,5 +50,10 @@ export default defineNuxtConfig({
   // contentAssets: {},
   studio: {
     enabled: true,
+  },
+  experimental: {
+    typedPages: true,
+    sharedPrerenderData: true,
+    writeEarlyHints: true,
   },
 })
