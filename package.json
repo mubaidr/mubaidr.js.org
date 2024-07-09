@@ -10,7 +10,7 @@
     "@nuxt/fonts": "^0.7.1",
     "@nuxt/icon": "^1.0.0",
     "@nuxt/image": "^1.7.0",
-    "@nuxt/ui": "npm:@nuxt/ui-edge@latest",
+    "@nuxt/ui": "^2.17.0",
     "@nuxthq/studio": "^2.0.3",
     "@nuxtjs/seo": "^2.0.0-rc.11",
     "eslint": "^9.6.0",

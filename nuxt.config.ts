@@ -1,24 +1,25 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
-  devtools: { enabled: true },
-  debug: true,
-  future: {
-    compatibilityVersion: 4,
+  app: {
+    header: {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: './assets/favicon.png' },
+      ],
+    },
   },
-  modules: [
-    '@nuxt/content',
-    // '@nuxt/eslint',
-    // '@nuxt/fonts',
-    '@nuxt/icon',
-    '@nuxt/image',
-    '@nuxt/ui',
-    // '@nuxtjs/seo',
-    'nuxt-resend',
-    // 'nuxt-content-assets',
-    '@nuxthq/studio',
-  ],
-  // content: {},
+  // compatibilityDate: '2024-04-03',
+  colorMode: {
+    preference: 'dark',
+  },
+  content: {
+    documentDriven: true,
+    experimental: {
+      cacheContents: true,
+    },
+  },
+  // contentAssets: {},
+  debug: false,
+  devtools: { enabled: true },
   // eslint: {
   //   checker: {
   //     cache: true,
@@ -26,6 +27,11 @@ export default defineNuxtConfig({
   //     lintOnStart: false,
   //   },
   // },
+  experimental: {
+    typedPages: true,
+    sharedPrerenderData: true,
+    writeEarlyHints: true,
+  },
   // fonts: {
   //   google: {
   //     families: {
@@ -33,27 +39,46 @@ export default defineNuxtConfig({
   //     },
   //   },
   // },
+  future: {
+    compatibilityVersion: 4,
+  },
   icon: {
     collections: ['ph'],
+    size: '1.25em',
   },
   // image: {},
-  // ui: {
-  //   global: true,
-  // },
-  // seo: {
-  //   automaticDefaults: true,
-  //   enabled: true,
-  // },
+  modules: [
+    '@nuxt/content',
+    // '@nuxt/eslint',
+    // '@nuxt/fonts',
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxt/ui',
+    '@nuxtjs/seo',
+    'nuxt-resend',
+    // 'nuxt-content-assets',
+    '@nuxthq/studio',
+  ],
   resend: {
     apiKey: '',
   },
-  // contentAssets: {},
+  seo: {
+    automaticDefaults: true,
+    enabled: true,
+    fallbackTitle: true,
+  },
+  site: {
+    indexable: true,
+  },
+  sitemap: {
+    cacheMaxAgeSeconds: 86400,
+    credits: true,
+    experimentalCompression: true,
+  },
   studio: {
     enabled: true,
   },
-  experimental: {
-    typedPages: true,
-    sharedPrerenderData: true,
-    writeEarlyHints: true,
-  },
+  // ui: {
+  //   global: true,
+  // },
 })
