@@ -6,7 +6,7 @@
       <SiteHeader />
     </div>
 
-    <div class="mb-auto px-6 md:px-12">
+    <div class="mb-auto px-6 md:px-24">
       <NuxtRouteAnnouncer />
       <NuxtPage />
     </div>

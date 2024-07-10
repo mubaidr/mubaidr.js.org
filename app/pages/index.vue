@@ -2,7 +2,8 @@
 
 <template>
   <div>
-    <!-- <ProjectsList /> -->
+    <ContentDoc path="/"></ContentDoc>
+    <ProjectsList />
   </div>
 </template>
 

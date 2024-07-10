@@ -2,7 +2,7 @@
 
 <template>
   <main>
-    <div class="prose dark:prose-invert">
+    <div class="prose dark:prose-invert !max-w-full">
       <ContentDoc />
     </div>
   </main>

@@ -1,7 +1,5 @@
-<script setup lang="ts"></script>
-
 <template>
-  <nav class="flex justify-between items-center py-6 px-6 md:px-12">
+  <nav class="flex justify-between items-center py-6 px-6 md:px-24">
     <div class="logo">
       <ULink
         to="/"
