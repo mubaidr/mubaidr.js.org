@@ -5,7 +5,7 @@
     <div class="logo">
       <ULink
         to="/"
-        class="text-xl text-primary font-extrabold tracking-widest border-b-4 border-transparent"
+        class="text-xl text-primary font-extrabold tracking-widest border-b-2 border-transparent"
         active-class="border-b-primary"
       >
         mubaidr
@@ -15,14 +15,14 @@
     <div class="flex flex-row gap-4">
       <ULink
         to="/contact"
-        class="border-b-4 border-transparent"
+        class="border-b-2 border-transparent"
         active-class="border-b-primary"
       >
         Contact
       </ULink>
       <ULink
         to="/about"
-        class="border-b-4 border-transparent"
+        class="border-b-2 border-transparent"
         active-class="border-b-primary"
       >
         About

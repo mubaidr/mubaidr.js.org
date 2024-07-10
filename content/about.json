@@ -1,0 +1,14 @@
+{
+  "contact": {
+    "email": "mubaidr@gmail.com",
+    "linkedin": "mubaidr",
+    "twitter": "mubaidr"
+  },
+  "description": "I'm a full-stack developer who loves to build web applications. I have been working with Vue.js and Nuxt.js for the past 3 years. I have experience in building web applications using Node.js, Express.js, MongoDB, and Firebase. I have also worked with Docker, GitHub Actions, Netlify, and Vercel for deployment. I love to write technical articles and share my knowledge with the community. I'm currently working on a new project using Nuxt 3 and I'm loving the writing experience. I'm excited to see what the future holds for Nuxt 3.",
+  "skills": {
+    "backend": ["Node.js", "Express.js", "MongoDB", "Firebase"],
+    "devops": ["Docker", "GitHub Actions", "Netlify", "Vercel"],
+    "frontend": ["Vue.js", "Nuxt.js", "Tailwind CSS", "Vite"]
+  },
+  "title": "About Me"
+}

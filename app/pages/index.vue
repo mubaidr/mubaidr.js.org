@@ -1,11 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
-  <main>
-    <div class="prose dark:prose-invert">
-      <ContentDoc />
-    </div>
-  </main>
+  <div>
+    <!-- <ProjectsList /> -->
+  </div>
 </template>
 
 <style lang="scss" scoped></style>

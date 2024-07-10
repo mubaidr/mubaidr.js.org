@@ -2,9 +2,9 @@
 title: Home
 ---
 
-# About Me
-
-Hi, I'm Muhammad Ubaid Raza, a web developer from Rawalpindi, Pakistan.
+<div class="font-bold">
+  Hi, I'm Muhammad Ubaid Raza, a web developer from Rawalpindi, Pakistan.
+</div>
 
 ## Skills
 
