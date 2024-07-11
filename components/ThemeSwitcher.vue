@@ -17,10 +17,7 @@ const isDark = computed({
       aria-label="Theme"
       @click="isDark = !isDark"
     >
-      <Icon
-        :name="isDark ? 'i-ph-moon' : 'i-ph-sun'"
-        size="1.5em"
-      ></Icon>
+      <Icon :name="isDark ? 'i-ph-moon' : 'i-ph-sun'"></Icon>
     </UButton>
     <template #fallback>
       <div class="w-8 h-8" />

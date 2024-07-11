@@ -6,7 +6,7 @@
       <SiteHeader />
     </div>
 
-    <div class="my-6 md:my-12 px-6 md:px-24">
+    <div class="py-6 md:py-12 px-6 md:px-24">
       <NuxtRouteAnnouncer />
       <NuxtPage />
     </div>
@@ -20,5 +20,6 @@
 <style lang="scss">
 body {
   overflow-y: scroll;
+  font-family: 'Open Sans', sans-serif;
 }
 </style>

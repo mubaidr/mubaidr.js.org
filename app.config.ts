@@ -1,8 +1,9 @@
 export default defineAppConfig({
-  // nuxtIcon: {},
   ui: {
-    primary: 'red',
+    primary: 'amber',
     gray: 'stone',
   },
-  // icon: {},
+  nuxtIcon: {
+    size: '2em',
+  },
 })

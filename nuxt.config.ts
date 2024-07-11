@@ -8,13 +8,12 @@ export default defineNuxtConfig({
     },
   },
 
-  // compatibilityDate: '2024-04-03',
   colorMode: {
     preference: 'dark',
   },
 
   content: {
-    documentDriven: true,
+    // documentDriven: true,
     experimental: {
       cacheContents: true,
     },
@@ -38,16 +37,17 @@ export default defineNuxtConfig({
     writeEarlyHints: true,
   },
 
-  // fonts: {
-  //   google: {
-  //     families: {
-  //       Inter: [400, 700],
-  //     },
-  //   },
-  // },
-  future: {
-    compatibilityVersion: 4,
+  fonts: {
+    google: {
+      families: {
+        'Open Sans': [400, 700],
+      },
+    },
   },
+
+  // future: {
+  //   compatibilityVersion: 4,
+  // },
 
   // icon: {},
 
@@ -55,19 +55,21 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     // '@nuxt/eslint',
-    // '@nuxt/fonts',
+    '@nuxt/fonts',
     '@nuxt/icon',
-    '@nuxt/image',
+    // '@nuxt/image',
     '@nuxt/ui',
     '@nuxtjs/seo',
-    'nuxt-resend',
+    // 'nuxt-resend',
     // 'nuxt-content-assets',
     '@nuxthq/studio',
   ],
 
-  resend: {
-    apiKey: '',
-  },
+  // robots: {},
+
+  // resend: {
+  //   apiKey: '',
+  // },
 
   seo: {
     automaticDefaults: true,
@@ -77,13 +79,18 @@ export default defineNuxtConfig({
 
   site: {
     indexable: true,
+    url: 'https://mubaidr.js.org',
+    name: 'Muhammad Ubaid Raza',
+    description:
+      'Personal Website of Muhammad Ubaid Raza, Full Stack Developer',
+    defaultLocale: 'en',
   },
 
-  sitemap: {
-    cacheMaxAgeSeconds: 86400,
-    credits: true,
-    experimentalCompression: true,
-  },
+  // sitemap: {
+  //   cacheMaxAgeSeconds: 86400,
+  //   credits: true,
+  //   experimentalCompression: true,
+  // },
 
   // ui: {
   //   icons: {
@@ -95,5 +102,5 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
-  compatibilityDate: '2024-07-09',
+  // compatibilityDate: '2024-07-11',
 })
