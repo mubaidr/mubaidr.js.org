@@ -13,7 +13,7 @@
     "@nuxt/image": "^1.7.0",
     "@nuxt/ui": "^2.17.0",
     "@nuxthq/studio": "^2.0.3",
-    "@nuxtjs/seo": "^2.0.0-rc.11",
+    "@nuxtjs/seo": "^2.0.0-rc.12",
     "@types/eslint": "~8.56.10",
     "eslint": "^9.6.0",
     "nuxt-content-assets": "^1.4.4",
