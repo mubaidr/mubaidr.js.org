@@ -98,9 +98,10 @@ export default defineNuxtConfig({
   //   },
   // },
 
+  // compatibilityDate: '2024-07-11',
   studio: {
     enabled: true,
   },
 
-  // compatibilityDate: '2024-07-11',
+  compatibilityDate: '2024-07-12',
 })
