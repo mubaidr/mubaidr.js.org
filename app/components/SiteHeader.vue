@@ -11,20 +11,13 @@
     </div>
 
     <div class="flex flex-row gap-4">
-      <ULink
+      <!-- <ULink
         to="/contact"
         class="border-b-2 border-transparent"
         active-class="border-b-primary"
       >
         Contact
-      </ULink>
-      <ULink
-        to="/about"
-        class="border-b-2 border-transparent"
-        active-class="border-b-primary"
-      >
-        About
-      </ULink>
+      </ULink> -->
 
       <ThemeSwitcher />
     </div>

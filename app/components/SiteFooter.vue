@@ -7,7 +7,11 @@
       >
         <div class="logo flex items-center">
           <p class="text-sm text-gray-700 dark:text-gray-200 mx-1">
-            ©2024 mubaidr
+            <Icon
+              name="i-ph-copyright"
+              size="1.5em"
+            ></Icon>
+            2024 mubaidr
           </p>
         </div>
 

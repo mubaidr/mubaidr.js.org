@@ -1,21 +1,240 @@
-<template>
-  <div class="mt-16 md:mt-24">
-    <div
-      class="flex justify-center items-center text-base font-semibold text-gray-600 dark:text-gray-300"
-    >
-      <h2 class="text-center">Tech stack I use</h2>
-      <IconDoubleDown class="h-4 w-4" />
-    </div>
+<script lang="ts" setup></script>
 
-    <div class="flex flex-wrap justify-center items-center text-4xl mt-5">
-      <IconPython class="m-2 md:m-4" />
-      <IconDjango class="m-2 md:m-4" />
-      <IconAws class="m-2 md:m-4" />
-      <IconHeroku class="m-2 md:m-4" />
-      <IconJavascript class="m-2 md:m-4" />
-      <IconTailwind class="m-2 md:m-4" />
-      <IconVuejs class="m-2 md:m-4" />
-      <IconNuxt class="m-2 md:m-4" />
+<template>
+  <div>
+    <h2 class="text-4xl font-extrabold">Tech Stack & Tools I Use</h2>
+
+    <div class="flex flex-wrap gap-2 justify-center">
+      <Icon
+        name="i-devicon-nodejs"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-typescript"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-javascript"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-nuxtjs"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-vuejs"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-vuetify"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-nestjs"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-express-wordmark"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-dot-net"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-csharp"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-azuresqldatabase"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-postgresql"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-firebase"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-supabase"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-mongodb"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-redis"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-mysql"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-microsoftsqlserver"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-sqlite"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-docker"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-amazonwebservices-wordmark"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-cloudflare"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-googlecloud"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-nginx"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-netlify"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-vercel"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-heroku"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-git"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-github"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-githubactions"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-vitest"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-eslint"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-puppeteer"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-playwright"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-chrome"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-firefox"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-tailwindcss"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-css3"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-html5"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-opensuse"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-openapi"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-portainer"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-vitejs"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-json"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-adonisjs"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-electron"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-vscode"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-bash"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-fastify"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-figma"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-filezilla"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-lodash"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-pnpm"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-plotly"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-prisma"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-sass"
+        size="2em"
+      ></Icon>
+      <Icon
+        name="i-devicon-storybook"
+        size="2em"
+      ></Icon>
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped></style>

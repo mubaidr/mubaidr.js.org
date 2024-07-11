@@ -7,13 +7,8 @@ const { data: projects, status } = await useAsyncData<any>('projects', () =>
 </script>
 
 <template>
-  <div class="mt-20">
-    <div class="flex justify-center items-center my-12">
-      <h2 class="text-xl text-center">
-        Open Source Projects
-        <Icon name="i-ph-arrow-down" />
-      </h2>
-    </div>
+  <div>
+    <h2 class="text-4xl font-extrabold">My Open Source Projects</h2>
 
     <template v-if="status === 'pending'">
       <div class="px-32 md:px-64">
@@ -23,8 +18,13 @@ const { data: projects, status } = await useAsyncData<any>('projects', () =>
     <template v-else-if="status === 'error'">
       <div class="text-center">
         <p>
-          Oh no! Failed to fetch projects. Never mind, please visit my
-          <NuxtLink to="https://github.com/mubaidr">Github Profile</NuxtLink>
+          Oh no! Failed to fetch projects. Never mind, you can always visit my
+          <NuxtLink
+            to="https://github.com/mubaidr"
+            target="_blank"
+          >
+            Github Profile
+          </NuxtLink>
           .
         </p>
       </div>
@@ -35,20 +35,17 @@ const { data: projects, status } = await useAsyncData<any>('projects', () =>
           v-for="(project, index) in projects.items"
           :key="index"
           to="project.html_url"
-          size="xl"
           :external="true"
           target="_blank"
-          class="flex h-full w-full"
-          color="gray"
         >
           <div>
             <h3 class="text-lg font-medium">
               {{ project.name }}
             </h3>
-            <p class="my-2">
+            <p>
               {{ project.description }}
             </p>
-            <ul class="flex items-center space-x-4">
+            <ul class="flex gap-4">
               <li
                 v-if="project.stargazers_count"
                 class="inline-flex items-center"
@@ -87,7 +84,6 @@ const { data: projects, status } = await useAsyncData<any>('projects', () =>
             target="_blank"
             :external="true"
             class="flex h-full w-full text-center items-center content-center align-middle"
-            variant="ghost"
           >
             <div class="mx-auto">
               <span>See More Projects on Github</span>

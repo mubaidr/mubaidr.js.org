@@ -49,7 +49,7 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
-  icon: {},
+  // icon: {},
 
   // image: {},
   modules: [
@@ -85,11 +85,11 @@ export default defineNuxtConfig({
     experimentalCompression: true,
   },
 
-  ui: {
-    icons: {
-      scale: 1.5,
-    },
-  },
+  // ui: {
+  //   icons: {
+  //     scale: 1.5,
+  //   },
+  // },
 
   studio: {
     enabled: true,
