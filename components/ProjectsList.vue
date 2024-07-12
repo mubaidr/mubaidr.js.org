@@ -12,7 +12,7 @@ const { data: projects, status } = await useAsyncData<any>('projects', () =>
 
     <template v-if="status === 'pending'">
       <div class="px-32 md:px-64">
-        <UProgress animation="carousel" />
+        <!-- <UProgress animation="carousel" /> -->
       </div>
     </template>
     <template v-else-if="status === 'error'">
@@ -31,7 +31,7 @@ const { data: projects, status } = await useAsyncData<any>('projects', () =>
     </template>
     <template v-else>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <UButton
+        <NuxtLink
           v-for="(project, index) in projects.items"
           :key="index"
           to="project.html_url"
@@ -75,10 +75,10 @@ const { data: projects, status } = await useAsyncData<any>('projects', () =>
               </li>
             </ul>
           </div>
-        </UButton>
+        </NuxtLink>
 
         <div class="flex items-center justify-center">
-          <UButton
+          <NuxtLink
             to="https://github.com/mubaidr"
             size="xl"
             target="_blank"
@@ -93,7 +93,7 @@ const { data: projects, status } = await useAsyncData<any>('projects', () =>
                 class="ml-1"
               ></Icon>
             </div>
-          </UButton>
+          </NuxtLink>
         </div>
       </div>
     </template>

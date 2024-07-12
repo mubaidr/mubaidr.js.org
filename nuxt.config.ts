@@ -8,29 +8,37 @@ export default defineNuxtConfig({
     },
   },
 
-  colorMode: {
-    preference: 'dark',
-  },
+  // @ts-ignore
+  booster: {
+    detection: {
+      performance: true,
+      browserSupport: true,
+    },
 
-  content: {
-    // documentDriven: true,
-    experimental: {
-      cacheContents: true,
+    performanceMetrics: {
+      device: {
+        hardwareConcurrency: { min: 2, max: 48 },
+        deviceMemory: { min: 2 },
+      },
+      timing: {
+        fcp: 800,
+        dcl: 1200,
+      },
     },
   },
 
-  // contentAssets: {},
+  colorMode: {
+    preference: 'light',
+  },
+
+  content: {
+    contentHead: false,
+  },
+
   debug: false,
 
   devtools: { enabled: true },
 
-  // eslint: {
-  //   checker: {
-  //     cache: true,
-  //     fix: true,
-  //     lintOnStart: false,
-  //   },
-  // },
   experimental: {
     typedPages: true,
     sharedPrerenderData: true,
@@ -45,36 +53,33 @@ export default defineNuxtConfig({
     },
   },
 
-  // future: {
-  //   compatibilityVersion: 4,
-  // },
+  icon: {
+    size: '2em',
+  },
 
-  // icon: {},
+  linkChecker: {
+    enabled: false,
+  },
 
-  // image: {},
   modules: [
+    '@nuxtjs/color-mode',
     '@nuxt/content',
-    // '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/icon',
-    // '@nuxt/image',
-    '@nuxt/ui',
     '@nuxtjs/seo',
-    // 'nuxt-resend',
-    // 'nuxt-content-assets',
     '@nuxthq/studio',
+    '@nuxtjs/tailwindcss',
   ],
 
-  // robots: {},
-
-  // resend: {
-  //   apiKey: '',
-  // },
+  routeRules: {
+    '/': {
+      static: true,
+    },
+  },
 
   seo: {
     automaticDefaults: true,
     enabled: true,
-    fallbackTitle: true,
   },
 
   site: {
@@ -86,21 +91,13 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
 
-  // sitemap: {
-  //   cacheMaxAgeSeconds: 86400,
-  //   credits: true,
-  //   experimentalCompression: true,
-  // },
-
-  // ui: {
-  //   icons: {
-  //     scale: 1.5,
-  //   },
-  // },
-
-  // compatibilityDate: '2024-07-11',
   studio: {
     enabled: true,
+  },
+
+  tailwindcss: {
+    configPath: './tailwind.config',
+    editorSupport: true,
   },
 
   compatibilityDate: '2024-07-12',

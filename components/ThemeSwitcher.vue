@@ -11,14 +11,12 @@ const isDark = computed({
 </script>
 <template>
   <ClientOnly>
-    <UButton
-      color="gray"
-      variant="ghost"
+    <Button
       aria-label="Theme"
       @click="isDark = !isDark"
     >
       <Icon :name="isDark ? 'i-ph-moon' : 'i-ph-sun'"></Icon>
-    </UButton>
+    </Button>
     <template #fallback>
       <div class="w-8 h-8" />
     </template>

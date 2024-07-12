@@ -21,5 +21,6 @@
 body {
   overflow-y: scroll;
   font-family: 'Open Sans', sans-serif;
+  @apply bg-amber-50 text-stone-800 dark:bg-stone-800  dark:text-stone-50;
 }
 </style>

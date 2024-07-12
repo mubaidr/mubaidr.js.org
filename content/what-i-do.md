@@ -1,5 +1,3 @@
-# What I Do Well
-
 🚀 **Code**: Node.js, TypeScript, JavaScript, Nuxt, VueJS, NestJs, ExpressJs, ASP .NET, C#, T-SQL <br/>
 🚀 **Data**: PostgreSQL, Firebase, Supabase, MongoDB, Redis, memcached, MySQL, SQL Server and SQLite. <br/>
 🚀 **Deployment**: Docker, Amazon Web Services (AWS), Cloudflare, Heroku, Nginx. <br/>

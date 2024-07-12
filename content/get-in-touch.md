@@ -1,5 +1,3 @@
-# Get In Touch
-
-☞ DM me on X (Formerly twitter) [@mubaidr](http://twitter.com/mubaidr) <br/>
-☞ Email me at mubaidr@gmail.com <br/>
-☞ Arrange a [meeting](https://cal.com/mubaidr)
+☞ DM me on X (Formerly twitter) <u>[@mubaidr](http://twitter.com/mubaidr)</u> <br/>
+☞ Email me at <u>mubaidr@gmail.com</u> <br/>
+☞ Arrange a <u>[meeting](https://cal.com/mubaidr)</u>

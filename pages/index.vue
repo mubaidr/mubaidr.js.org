@@ -1,25 +1,46 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useSeoMeta({
+  ogImage: '[og:image]',
+  twitterTitle: '[twitter:title]',
+  twitterDescription: '[twitter:description]',
+  twitterImage: '[twitter:image]',
+  twitterCard: 'summary',
+})
+
+useHead({
+  htmlAttrs: {
+    lang: 'en',
+  },
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png',
+    },
+  ],
+})
+</script>
 
 <template>
   <main>
-    <div class="prose dark:prose-invert !max-w-full">
+    <div>
+      <h2 class="text-3xl font-extrabold mb-6">Hey there!</h2>
       <ContentDoc path="about" />
+    </div>
 
-      <div class="mt-12">
-        <TechStack />
-      </div>
+    <div class="mt-12">
+      <h2 class="text-3xl font-extrabold mb-6">Tech Stack & Tools I Use</h2>
+      <TechStack />
+    </div>
 
-      <div class="mt-12">
-        <ContentDoc path="what-i-do" />
-      </div>
+    <div class="mt-12">
+      <h2 class="text-3xl font-extrabold mb-6">What I Do Well</h2>
+      <ContentDoc path="what-i-do" />
+    </div>
 
-      <div class="mt-12">
-        <ContentDoc path="get-in-touch" />
-      </div>
-
-      <!-- <div class="mt-12">
-        <ProjectsList />
-      </div> -->
+    <div class="mt-12">
+      <h2 class="text-3xl font-extrabold mb-6">Get In Touch</h2>
+      <ContentDoc path="get-in-touch" />
     </div>
   </main>
 </template>
