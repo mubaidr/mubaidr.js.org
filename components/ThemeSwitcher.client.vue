@@ -10,15 +10,13 @@ const isDark = computed({
 })
 </script>
 <template>
-  <ClientOnly>
-    <Button
-      aria-label="Theme"
-      @click="isDark = !isDark"
-    >
-      <Icon :name="isDark ? 'i-ph-moon' : 'i-ph-sun'"></Icon>
-    </Button>
-    <template #fallback>
-      <div class="w-8 h-8" />
-    </template>
-  </ClientOnly>
+  <Button
+    aria-label="Theme"
+    @click="isDark = !isDark"
+  >
+    <Icon :name="isDark ? 'i-ph-moon' : 'i-ph-sun'"></Icon>
+  </Button>
+  <!-- <template #fallback>
+    <div class="w-8 h-8" />
+  </template> -->
 </template>

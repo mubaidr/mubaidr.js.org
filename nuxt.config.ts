@@ -53,6 +53,10 @@ export default defineNuxtConfig({
     },
   },
 
+  generate: {
+    routes: ['/'],
+  },
+
   icon: {
     size: '2em',
   },
@@ -73,7 +77,7 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': {
-      static: true,
+      prerender: true,
     },
   },
 
