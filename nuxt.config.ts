@@ -57,10 +57,6 @@ export default defineNuxtConfig({
     routes: ['/'],
   },
 
-  icon: {
-    size: '2em',
-  },
-
   linkChecker: {
     enabled: false,
   },

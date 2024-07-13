@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="flex justify-between items-center py-6 mx-6 md:mx-24 border-b border-gray-500"
+    class="flex justify-between items-center py-6 md:py-12 border-b border-gray-500"
   >
     <h1 class="text-primary-600 dark:text-primary-400 text-3xl font-extrabold">
       mubaidr

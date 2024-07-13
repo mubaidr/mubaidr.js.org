@@ -1,19 +1,15 @@
 <template>
   <div
-    class="flex flex-col h-screen justify-between max-w-screen-xl mx-auto px-6 md:px-12"
+    class="flex flex-col h-screen justify-between max-w-screen-lg mx-auto px-6 md:px-12"
   >
-    <div>
-      <SiteHeader />
-    </div>
+    <SiteHeader />
 
-    <div class="py-6 md:py-12 px-6 md:px-24">
+    <div class="my-6 md:my-12">
       <NuxtRouteAnnouncer />
       <NuxtPage />
     </div>
 
-    <div>
-      <SiteFooter />
-    </div>
+    <SiteFooter />
   </div>
 </template>
 
