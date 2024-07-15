@@ -1,3 +1,30 @@
+<script setup>
+// Fetching data
+const { path, params } = useRoute()
+const blogCountLimit = 6
+
+const getPageLimit = (totalPosts) => {
+  return Math.ceil(totalPosts / blogCountLimit)
+}
+
+const getPageNumber = () => {
+  return Number(params.number)
+}
+
+// Attempt to get the number
+const router = useRouter()
+let pageNo
+try {
+  pageNo = getPageNumber()
+  if (isNaN(pageNo) || pageNo <= 0) {
+    router.replace('/blog/')
+  }
+} catch (err) {
+  console.error(err)
+  router.replace('/blog/')
+}
+</script>
+
 <template>
   <main>
     <!-- Query for the given blog page number -->
@@ -44,7 +71,7 @@
       <template #not-found>
         <!-- Show hero and message -->
         <BlogHero />
-        <Section
+        <BlogSection
           id="main"
           class="!pt-0"
         >
@@ -52,35 +79,8 @@
             :data="[]"
             message="There are no posts in this page, maybe try searching on another one."
           />
-        </Section>
+        </BlogSection>
       </template>
     </ContentQuery>
   </main>
 </template>
-
-<script setup>
-// Fetching data
-const { path, params } = useRoute()
-const blogCountLimit = 6
-
-const getPageLimit = (totalPosts) => {
-  return Math.ceil(totalPosts / blogCountLimit)
-}
-
-const getPageNumber = () => {
-  return Number(params.number)
-}
-
-// Attempt to get the number
-const router = useRouter()
-let pageNo
-try {
-  pageNo = getPageNumber()
-  if (isNaN(pageNo) || pageNo <= 0) {
-    router.replace('/blog/')
-  }
-} catch (err) {
-  console.error(err)
-  router.replace('/blog/')
-}
-</script>

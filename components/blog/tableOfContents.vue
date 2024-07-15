@@ -1,3 +1,34 @@
+<script setup>
+defineProps({
+  links: {
+    type: Array,
+    required: true,
+  },
+})
+
+// flatten TOC links nested arrays to one array
+const flattenLinks = (links) => {
+  let _links = links
+    .map((link) => {
+      let _link = [link]
+      if (link.children) {
+        // recursively flatten children links
+        let flattened = flattenLinks(link.children)
+        _link = [link, ...flattened]
+      }
+      return _link
+    })
+    .flat(1)
+  return _links
+}
+
+import { ref } from 'vue'
+const isVisible = ref(true)
+const toggleToc = () => {
+  isVisible.value = !isVisible.value
+}
+</script>
+
 <template>
   <nav class="w-full">
     <header
@@ -36,36 +67,3 @@
     </ul>
   </nav>
 </template>
-
-<script setup>
-defineProps({
-  links: {
-    type: Array,
-    required: true,
-  },
-})
-
-// flatten TOC links nested arrays to one array
-const flattenLinks = (links) => {
-  let _links = links
-    .map((link) => {
-      let _link = [link]
-      if (link.children) {
-        // recursively flatten children links
-        let flattened = flattenLinks(link.children)
-        _link = [link, ...flattened]
-      }
-      return _link
-    })
-    .flat(1)
-  return _links
-}
-
-import { ref } from 'vue'
-const isVisible = ref(true)
-const toggleToc = () => {
-  isVisible.value = !isVisible.value
-}
-</script>
-
-<style scoped></style>

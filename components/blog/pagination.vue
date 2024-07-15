@@ -1,3 +1,45 @@
+<script setup>
+import { computed } from 'vue'
+const props = defineProps({
+  currentPage: {
+    type: Number,
+    required: true,
+  },
+  totalPages: {
+    type: Number,
+    required: true,
+  },
+  nextPage: {
+    type: Boolean,
+    required: true,
+  },
+  baseUrl: {
+    type: String,
+    required: true,
+  },
+  pageUrl: {
+    type: String,
+    required: true,
+  },
+})
+
+const getPageUrl = (pageNo) => {
+  return `${props.pageUrl}${pageNo}/`
+}
+// Calculate the page range to show
+const pageRange = [
+  Math.max(1, props.currentPage - 1),
+  props.currentPage,
+  Math.min(props.totalPages, props.currentPage + 1),
+]
+
+const prevLink = computed(() => {
+  return props.currentPage === 2
+    ? props.baseUrl
+    : `${props.pageUrl}${props.currentPage - 1}/`
+})
+</script>
+
 <template>
   <div class="flex gap-4">
     <!-- Chevron -->
@@ -72,47 +114,3 @@
     </nuxt-link>
   </div>
 </template>
-
-<script setup>
-import { computed } from 'vue'
-const props = defineProps({
-  currentPage: {
-    type: Number,
-    required: true,
-  },
-  totalPages: {
-    type: Number,
-    required: true,
-  },
-  nextPage: {
-    type: Boolean,
-    required: true,
-  },
-  baseUrl: {
-    type: String,
-    required: true,
-  },
-  pageUrl: {
-    type: String,
-    required: true,
-  },
-})
-
-const getPageUrl = (pageNo) => {
-  return `${props.pageUrl}${pageNo}/`
-}
-// Calculate the page range to show
-const pageRange = [
-  Math.max(1, props.currentPage - 1),
-  props.currentPage,
-  Math.min(props.totalPages, props.currentPage + 1),
-]
-
-const prevLink = computed(() => {
-  return props.currentPage === 2
-    ? props.baseUrl
-    : `${props.pageUrl}${props.currentPage - 1}/`
-})
-</script>
-
-<style scoped></style>

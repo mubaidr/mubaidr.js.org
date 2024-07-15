@@ -1,17 +1,3 @@
-<template>
-  <component
-    :is="props.type"
-    :class="[
-      'px-section_x_sm py-section_y_sm sm:px-section_x sm:py-section_y relative',
-      props.fullHeight ? 'full-height' : '',
-      props.forcedHeight ? 'full-height--forced' : '',
-    ]"
-    :id="props.id"
-  >
-    <slot />
-  </component>
-</template>
-
 <script setup>
 const props = defineProps({
   id: {
@@ -35,4 +21,16 @@ const props = defineProps({
 })
 </script>
 
-<style scoped></style>
+<template>
+  <component
+    :is="props.type"
+    :class="[
+      'px-section_x_sm py-section_y_sm sm:px-section_x sm:py-section_y relative',
+      props.fullHeight ? 'full-height' : '',
+      props.forcedHeight ? 'full-height--forced' : '',
+    ]"
+    :id="props.id"
+  >
+    <slot />
+  </component>
+</template>

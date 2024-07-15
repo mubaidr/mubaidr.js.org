@@ -1,3 +1,12 @@
+<script setup>
+defineProps({
+  surround: {
+    type: Array,
+    required: true,
+  },
+})
+</script>
+
 <template>
   <div>
     <span class="mt-6 block font-extralight">Continue Reading:</span>
@@ -22,12 +31,3 @@
     </ul>
   </div>
 </template>
-
-<script setup>
-defineProps({
-  surround: {
-    type: Array,
-    required: true,
-  },
-})
-</script>

@@ -32,7 +32,7 @@ export default defineNuxtConfig({
   },
 
   content: {
-    contentHead: false,
+    contentHead: true,
   },
 
   debug: false,
@@ -55,6 +55,12 @@ export default defineNuxtConfig({
 
   linkChecker: {
     enabled: false,
+  },
+
+  mdc: {
+    components: {
+      prose: true,
+    },
   },
 
   modules: [

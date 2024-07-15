@@ -1,3 +1,18 @@
+<script setup>
+const props = defineProps({
+  data: {
+    type: Array,
+    required: true,
+  },
+  message: {
+    type: String,
+    default:
+      'There are no posts right now, but stay tuned for newer releases in the future.',
+  },
+})
+const { $formatDate } = useNuxtApp()
+</script>
+
 <template>
   <ul class="grid grid-cols-12 gap-6">
     <li
@@ -30,18 +45,3 @@
     {{ message }}
   </p>
 </template>
-
-<script setup>
-const props = defineProps({
-  data: {
-    type: Array,
-    required: true,
-  },
-  message: {
-    type: String,
-    default:
-      'There are no posts right now, but stay tuned for newer releases in the future.',
-  },
-})
-const { $formatDate } = useNuxtApp()
-</script>

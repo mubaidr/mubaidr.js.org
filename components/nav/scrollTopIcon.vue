@@ -1,25 +1,3 @@
-<template>
-  <div
-    :class="[
-      'fixed flex flex-col items-center w-24 z-20 bottom-[48px] right-0 transform duration-150 p-6',
-      isVisible ? '' : 'translate-x-full',
-    ]"
-  >
-    <a
-      href="#"
-      aria-label="Scroll to Top"
-      class="flex flex-col gap-2 items-center text-center rounded-full bg-primary-500 p-4"
-    >
-      <IconsArrowUp
-        class="w-4 h-4"
-        width="16"
-        height="16"
-      />
-      <span class="text-xs">Scroll to Top</span>
-    </a>
-  </div>
-</template>
-
 <script setup>
 // Scroll handling
 import { onUnmounted, ref, nextTick } from 'vue'
@@ -41,3 +19,25 @@ onUnmounted(() => {
   }
 })
 </script>
+
+<template>
+  <div
+    :class="[
+      'fixed flex flex-col items-center w-24 z-20 bottom-[48px] right-0 transform duration-150 p-6',
+      isVisible ? '' : 'translate-x-full',
+    ]"
+  >
+    <a
+      href="#"
+      aria-label="Scroll to Top"
+      class="flex flex-col gap-2 items-center text-center rounded-full bg-primary-500 p-4"
+    >
+      <IconsArrowUp
+        class="w-4 h-4"
+        width="16"
+        height="16"
+      />
+      <span class="text-xs">Scroll to Top</span>
+    </a>
+  </div>
+</template>

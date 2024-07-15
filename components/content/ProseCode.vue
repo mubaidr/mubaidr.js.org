@@ -71,5 +71,3 @@ const languageText = computed(() =>
   props.language ? languageMap[props.language]?.text : null
 )
 </script>
-
-<style scoped></style>

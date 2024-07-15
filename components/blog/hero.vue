@@ -1,5 +1,7 @@
+<script setup lang="ts"></script>
+
 <template>
-  <Section id="blog">
+  <BlogSection id="blog">
     <div>
       <ol
         itemscope
@@ -57,5 +59,5 @@
       <NuxtLink to="https://github.com/">GitHub Profile</NuxtLink>
       . Let's code, learn, and grow together!
     </p>
-  </Section>
+  </BlogSection>
 </template>

@@ -1,155 +1,3 @@
-<template>
-  <main>
-    <ContentDoc>
-      <template v-slot="{ doc }">
-        <Section
-          id="blog-title"
-          type="header"
-        >
-          <div class="flex justify-between">
-            <!-- Breadcrumbs -->
-            <ol
-              itemscope
-              itemtype="https://schema.org/BreadcrumbList"
-              class="flex gap-1"
-            >
-              <li
-                itemprop="itemListElement"
-                itemscope
-                itemtype="https://schema.org/ListItem"
-              >
-                <a
-                  itemprop="item"
-                  href="/"
-                >
-                  <span itemprop="name">Home</span>
-                </a>
-                <meta
-                  itemprop="position"
-                  content="1"
-                />
-              </li>
-              <li class="separator">/</li>
-              <li
-                itemprop="itemListElement"
-                itemscope
-                itemtype="https://schema.org/ListItem"
-              >
-                <a
-                  itemscope
-                  itemtype="https://schema.org/WebPage"
-                  itemprop="item"
-                  itemid="/blog/"
-                  href="/blog/"
-                >
-                  <span itemprop="name">Blog</span>
-                </a>
-                <meta
-                  itemprop="position"
-                  content="2"
-                />
-              </li>
-              <li class="separator">/</li>
-              <li
-                itemprop="itemListElement"
-                itemscope
-                itemtype="https://schema.org/ListItem"
-              >
-                <span itemprop="name">{{ doc.headline }}</span>
-                <meta
-                  itemprop="position"
-                  content="3"
-                />
-              </li>
-            </ol>
-            <!-- Publish date -->
-            <span>
-              {{ $formatDate(doc.date) }}
-            </span>
-          </div>
-
-          <!-- Headline -->
-          <h1 class="text-3xl font-extrabold mt-6">
-            {{ doc.headline }}
-          </h1>
-          <p>
-            {{ doc.excerpt }}
-          </p>
-
-          <div class="flex justify-between mb-6">
-            <!-- Author -->
-            <div class="flex flex-row items-center justify-center">
-              <span class="text-lg leading-lg font-light">
-                By
-                <a
-                  class="hover:underline"
-                  :href="doc.authorUrl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {{ doc.author }}
-                </a>
-              </span>
-            </div>
-            <!-- Social Share -->
-            <div class="mt-6 md:mt-0 flex">
-              Share now:
-              <NavShareIcons
-                :headline="doc.headline"
-                :excerpt="doc.excerpt"
-                :path="doc._path + '/'"
-              />
-            </div>
-          </div>
-        </Section>
-
-        <!-- Content -->
-        <Section
-          id="main"
-          class="grid grid-cols-10 gap-8 lg:gap-12"
-        >
-          <div class="prose col-span-full md:col-span-7">
-            <!-- Update date -->
-            <span
-              v-show="doc.dateUpdated"
-              class="italic text-xs font-light"
-            >
-              (Updated: {{ $formatDate(doc.dateUpdated) }})
-            </span>
-            <!-- Blog content -->
-            <ContentRenderer
-              :value="doc"
-              class="prose dark:prose-invert"
-            />
-          </div>
-          <aside class="col-span-full md:col-span-3 h-fit">
-            <!-- Mobile Table of Content -->
-            <div class="!hidden md:!flex mb-4">
-              <BlogTableOfContents
-                :links="doc.body?.toc?.links"
-                class="blog-post-text"
-              />
-            </div>
-            <!-- Related articles -->
-            <div
-              v-if="data?.surround?.filter((elem) => elem !== null)?.length > 0"
-            >
-              <BlogRelatedArticles :surround="data?.surround" />
-            </div>
-          </aside>
-        </Section>
-
-        <!-- Scroll to top -->
-        <NavScrollTopIcon />
-      </template>
-      <!-- Error in case not found -->
-      <template #not-found>
-        <SectionsError />
-      </template>
-    </ContentDoc>
-  </main>
-</template>
-
 <script setup>
 const { $formatDate } = useNuxtApp()
 const { path } = useRoute()
@@ -278,4 +126,154 @@ useHead({
 })
 </script>
 
-<style scoped></style>
+<template>
+  <main>
+    <ContentDoc>
+      <template v-slot="{ doc }">
+        <BlogSection
+          id="blog-title"
+          type="header"
+        >
+          <div class="flex justify-between">
+            <!-- Breadcrumbs -->
+            <ol
+              itemscope
+              itemtype="https://schema.org/BreadcrumbList"
+              class="flex gap-1"
+            >
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a
+                  itemprop="item"
+                  href="/"
+                >
+                  <span itemprop="name">Home</span>
+                </a>
+                <meta
+                  itemprop="position"
+                  content="1"
+                />
+              </li>
+              <li class="separator">/</li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a
+                  itemscope
+                  itemtype="https://schema.org/WebPage"
+                  itemprop="item"
+                  itemid="/blog/"
+                  href="/blog/"
+                >
+                  <span itemprop="name">Blog</span>
+                </a>
+                <meta
+                  itemprop="position"
+                  content="2"
+                />
+              </li>
+              <li class="separator">/</li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <span itemprop="name">{{ doc.headline }}</span>
+                <meta
+                  itemprop="position"
+                  content="3"
+                />
+              </li>
+            </ol>
+            <!-- Publish date -->
+            <span>
+              {{ $formatDate(doc.date) }}
+            </span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="text-3xl font-extrabold mt-6">
+            {{ doc.headline }}
+          </h1>
+          <p>
+            {{ doc.excerpt }}
+          </p>
+
+          <div class="flex justify-between mb-6">
+            <!-- Author -->
+            <div class="flex flex-row items-center justify-center">
+              <span class="text-lg leading-lg font-light">
+                By
+                <a
+                  class="hover:underline"
+                  :href="doc.authorUrl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {{ doc.author }}
+                </a>
+              </span>
+            </div>
+            <!-- Social Share -->
+            <div class="mt-6 md:mt-0 flex">
+              Share now:
+              <NavShareIcons
+                :headline="doc.headline"
+                :excerpt="doc.excerpt"
+                :path="doc._path + '/'"
+              />
+            </div>
+          </div>
+        </BlogSection>
+
+        <!-- Content -->
+        <BlogSection
+          id="main"
+          class="grid grid-cols-10 gap-8 lg:gap-12"
+        >
+          <div class="prose col-span-full md:col-span-7">
+            <!-- Update date -->
+            <span
+              v-show="doc.dateUpdated"
+              class="italic text-xs font-light"
+            >
+              (Updated: {{ $formatDate(doc.dateUpdated) }})
+            </span>
+            <!-- Blog content -->
+            <ContentRenderer
+              :value="doc"
+              class="prose dark:prose-invert"
+            />
+          </div>
+          <aside class="col-span-full md:col-span-3 h-fit">
+            <!-- Mobile Table of Content -->
+            <div class="!hidden md:!flex mb-4">
+              <BlogTableOfContents
+                :links="doc.body?.toc?.links"
+                class="blog-post-text"
+              />
+            </div>
+            <!-- Related articles -->
+            <div
+              v-if="data?.surround?.filter((elem) => elem !== null)?.length > 0"
+            >
+              <BlogRelatedArticles :surround="data?.surround" />
+            </div>
+          </aside>
+        </BlogSection>
+
+        <!-- Scroll to top -->
+        <NavScrollTopIcon />
+      </template>
+      <!-- Error in case not found -->
+      <template #not-found>
+        <SectionsError />
+      </template>
+    </ContentDoc>
+  </main>
+</template>
