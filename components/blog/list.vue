@@ -1,5 +1,5 @@
 <template>
-  <ul class="grid grid-cols-12 gap-4">
+  <ul class="grid grid-cols-12 gap-6">
     <li
       v-for="article in data"
       :key="article._path"
@@ -11,14 +11,10 @@
       >
         <div class="wrapper">
           <header>
-            <h2
-              class="text-h3 leading-h3 font-semibold group-hover:text-brand_primary"
-            >
+            <h2 class="text-2xl">
               {{ article.headline }}
             </h2>
-            <p
-              class="text-sm leading-sm mb-4 text-typography_primary/75 dark:text-typography_primary_dark/75"
-            >
+            <p>
               {{ $formatDate(article.date) }}
             </p>
             <p>{{ article.excerpt }}</p>

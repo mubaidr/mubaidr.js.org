@@ -69,19 +69,17 @@
           </div>
 
           <!-- Headline -->
-          <h1 class="text-3xl font-extrabold my-6">
+          <h1 class="text-3xl font-extrabold mt-6">
             {{ doc.headline }}
           </h1>
-          <p
-            class="blog-post-text mb-8 md:w-8/12 md:text-lg md:leading-lg text-center md:text-left"
-          >
+          <p>
             {{ doc.excerpt }}
           </p>
 
           <div class="flex justify-between mb-6">
             <!-- Author -->
             <div class="flex flex-row items-center justify-center">
-              <span class="blog-post-text text-lg leading-lg font-light">
+              <span class="text-lg leading-lg font-light">
                 By
                 <a
                   class="hover:underline"
@@ -94,7 +92,8 @@
               </span>
             </div>
             <!-- Social Share -->
-            <div class="mt-6 md:mt-0">
+            <div class="mt-6 md:mt-0 flex">
+              Share now:
               <NavShareIcons
                 :headline="doc.headline"
                 :excerpt="doc.excerpt"
@@ -107,25 +106,25 @@
         <!-- Content -->
         <Section
           id="main"
-          class="!pt-0 relative grid grid-cols-10 gap-8 lg:gap-12"
+          class="grid grid-cols-10 gap-8 lg:gap-12"
         >
-          <article class="prose col-span-full md:col-span-7 relative">
+          <div class="prose col-span-full md:col-span-7">
             <!-- Update date -->
             <span
               v-show="doc.dateUpdated"
-              class="italic absolute -top-8 text-sm leading-sm font-light text-typography_primary/75 dark:text-typography_primary_dark/75"
+              class="italic text-xs font-light"
             >
               (Updated: {{ $formatDate(doc.dateUpdated) }})
             </span>
             <!-- Blog content -->
             <ContentRenderer
               :value="doc"
-              class="blog-content blog-post-text"
+              class="prose dark:prose-invert"
             />
-          </article>
-          <aside class="col-span-full md:col-span-3 blog-aside h-fit">
+          </div>
+          <aside class="col-span-full md:col-span-3 h-fit">
             <!-- Mobile Table of Content -->
-            <div class="!hidden blog-aside-wrapper md:!flex mb-4">
+            <div class="!hidden md:!flex mb-4">
               <BlogTableOfContents
                 :links="doc.body?.toc?.links"
                 class="blog-post-text"
@@ -134,12 +133,8 @@
             <!-- Related articles -->
             <div
               v-if="data?.surround?.filter((elem) => elem !== null)?.length > 0"
-              class="blog-aside-wrapper"
             >
-              <BlogRelatedArticles
-                :surround="data?.surround"
-                class="blog-post-text"
-              />
+              <BlogRelatedArticles :surround="data?.surround" />
             </div>
           </aside>
         </Section>
@@ -181,9 +176,10 @@ const { data: authorData } = await useAsyncData('home', () =>
 )
 
 // Set the meta
-const baseUrl = 'https://example.com'
+const baseUrl = 'https://mubaidr.js.org/'
 const canonicalPath = baseUrl + (path + '/').replace(/\/+$/, '/')
-const image = baseUrl + (data.value?.article?.socialImage.src || '/sample.webp')
+const image =
+  baseUrl + (data.value?.article?.socialImage?.src || '/sample.webp')
 
 // JSON+LD
 const jsonScripts = [
@@ -194,7 +190,7 @@ const jsonScripts = [
       '@type': 'BlogPosting',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://example.com/',
+        '@id': 'https://mubaidr.js.org/',
       },
       url: canonicalPath,
       image: image,
@@ -204,7 +200,7 @@ const jsonScripts = [
       dateModified:
         data.value?.article?.dateUpdated || data.value?.article?.date,
       author: authorData.value[data.value?.article?.author],
-      publisher: authorData.value['Gonzalo Hirsch'],
+      publisher: authorData.value['mubaidr'],
     }),
   },
 ]
@@ -234,22 +230,22 @@ useHead({
     {
       hid: 'og:image:type',
       property: 'og:image:type',
-      content: `image/${data.value?.article?.socialImage.mime}`,
+      content: `image/${data.value?.article?.socialImage?.mime}`,
     },
     {
       hid: 'og:image:width',
       property: 'og:image:width',
-      content: data.value?.article?.socialImage.width || 190,
+      content: data.value?.article?.socialImage?.width || 190,
     },
     {
       hid: 'og:image:height',
       property: 'og:image:height',
-      content: data.value?.article?.socialImage.height || 190,
+      content: data.value?.article?.socialImage?.height || 190,
     },
     {
       hid: 'og:image:alt',
       property: 'og:image:alt',
-      content: data.value?.article?.socialImage.alt,
+      content: data.value?.article?.socialImage?.alt,
     },
     // Twitter
     { hid: 'twitter:card', name: 'twitter:card', content: 'Summary' },
@@ -268,7 +264,7 @@ useHead({
     {
       hid: 'twitter:image:alt',
       name: 'twitter:image:alt',
-      content: data.value?.article?.socialImage.alt,
+      content: data.value?.article?.socialImage?.alt,
     },
   ],
   link: [

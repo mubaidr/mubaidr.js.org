@@ -8,6 +8,7 @@
     "@nuxt/content": "^2.13.1",
     "@nuxt/fonts": "^0.7.1",
     "@nuxt/icon": "^1.1.1",
+    "@nuxt/image": "^1.7.0",
     "@nuxthq/studio": "^2.0.3",
     "@nuxtjs/color-mode": "^3.4.2",
     "@nuxtjs/seo": "^2.0.0-rc.14",

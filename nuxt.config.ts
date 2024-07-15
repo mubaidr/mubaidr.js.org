@@ -62,10 +62,17 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/fonts',
     '@nuxt/icon',
+    '@nuxt/image',
     '@nuxtjs/seo',
     '@nuxthq/studio',
     '@nuxtjs/tailwindcss',
   ],
+
+  nitro: {
+    prerender: {
+      routes: ['/public/blog/img/**'],
+    },
+  },
 
   routeRules: {
     '/': {
