@@ -1,0 +1,15 @@
+{
+  "mubaidr": {
+    "@context": "https://schema.org/author",
+    "@id": "https://example.com/",
+    "@type": "Person",
+    "alternateName": "mubaidr",
+    "gender": "Gender",
+    "image": "https://example.com/meta-img.jpg",
+    "jobTitle": "Software Engineer",
+    "name": "Muhammad Ubaid Raza",
+    "nationality": "Pakistan",
+    "sameAs": ["https://mubaidr.js.org/"],
+    "url": "https://mubaidr.js.org/"
+  }
+}

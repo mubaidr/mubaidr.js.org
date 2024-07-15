@@ -53,10 +53,6 @@ export default defineNuxtConfig({
     },
   },
 
-  generate: {
-    routes: ['/'],
-  },
-
   linkChecker: {
     enabled: false,
   },
@@ -74,6 +70,9 @@ export default defineNuxtConfig({
   routeRules: {
     '/': {
       prerender: true,
+    },
+    '/blog/**': {
+      isr: true,
     },
   },
 
