@@ -76,7 +76,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ['/public/blog/img/**'],
+      // routes: ['/public/blog/img/**'],
     },
   },
 
