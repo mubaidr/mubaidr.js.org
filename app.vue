@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex flex-col h-screen justify-between max-w-screen-lg mx-auto px-6 md:px-12"
-  >
+  <div class="max-w-screen-lg mx-auto px-6 md:px-12">
     <SiteHeader />
 
     <div class="my-6 md:my-12">

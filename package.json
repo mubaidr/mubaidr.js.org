@@ -11,7 +11,7 @@
     "@nuxt/image": "^1.7.0",
     "@nuxthq/studio": "^2.0.3",
     "@nuxtjs/color-mode": "^3.4.2",
-    "@nuxtjs/seo": "^2.0.0-rc.14",
+    "@nuxtjs/seo": "^2.0.0-rc.15",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "nuxt": "^3.12.3",
     "nuxt-booster": "^3.0.16"
