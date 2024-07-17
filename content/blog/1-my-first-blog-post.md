@@ -4,15 +4,15 @@ description: 'My First Blog Post'
 headline: 'Introduction to My Blog'
 excerpt: 'Discover why I started this blog, what you can expect, and how we can connect as a community.'
 date: '2024-07-16T12:00:00'
-# dateUpdated: ''
+dateUpdated: ''
 author: 'Muhammad Ubaid Raza'
 authorUrl: 'https://mubaidr.js.org/'
-# socialImage:
-#   src: '/img/blog/sample.webp'
-#   mime: 'webp'
-#   alt: 'Mountain'
-#   width: 1200
-#   height: 630
+socialImage:
+  src: '/img/blog/2-my-vscode-setup/typescript-dark.png'
+  mime: 'png'
+  alt: 'Mountain'
+  width: 1200
+  height: 630
 ---
 
 # My Journey into Tech Blogging

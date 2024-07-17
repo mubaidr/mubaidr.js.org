@@ -4,12 +4,12 @@ description: 'Explore my minimalist VSCode setup featuring the Minimal Mist them
 headline: 'My VSCode Setup'
 excerpt: 'Discover how the Minimal Mist theme and custom VSCode settings create a clean and focused coding environment.'
 date: '2024-07-17T12:00:00'
-# dateUpdated: ''
+dateUpdated: ''
 author: 'Muhammad Ubaid Raza'
 authorUrl: 'https://mubaidr.js.org/'
 socialImage:
-  src: '/img/blog/2-my-vscode-setup/typescript-light.png'
-  mime: 'webp'
+  src: '/img/blog/2-my-vscode-setup/typescript-dark.png'
+  mime: 'png'
   alt: 'Workplace Screenshot'
   width: 1200
   height: 630

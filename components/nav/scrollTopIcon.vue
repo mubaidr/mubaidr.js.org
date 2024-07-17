@@ -1,6 +1,6 @@
 <script setup>
 // Scroll handling
-import { onUnmounted, ref, nextTick } from 'vue'
+import { nextTick, onUnmounted, ref } from 'vue'
 const isVisible = ref(false)
 const handleScroll = () => {
   // Only run the code if we are on the client
@@ -30,14 +30,14 @@ onUnmounted(() => {
     <a
       href="#"
       aria-label="Scroll to Top"
-      class="flex flex-col gap-2 items-center text-center rounded-full bg-primary-500 p-4"
+      class="flex flex-col gap-2 items-center text-center rounded-full bg-black bg-opacity-50 p-4 text-white"
     >
       <IconsArrowUp
         class="w-4 h-4"
         width="16"
         height="16"
       />
-      <span class="text-xs">Scroll to Top</span>
+      <span class="text-xs font-semibold">Scroll to Top</span>
     </a>
   </div>
 </template>

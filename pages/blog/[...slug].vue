@@ -222,6 +222,7 @@ useHead({
             <!-- Social Share -->
             <div class="mt-6 md:mt-0 flex">
               Share now:
+              {{ doc }}
               <NavShareIcons
                 :headline="doc.headline"
                 :excerpt="doc.excerpt"
