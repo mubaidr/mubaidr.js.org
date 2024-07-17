@@ -11,7 +11,8 @@ const isDark = computed({
 </script>
 
 <template>
-  <Button
+  <button
+    type="button"
     aria-label="Theme"
     @click="isDark = !isDark"
   >
@@ -41,7 +42,7 @@ const isDark = computed({
         />
       </svg>
     </template>
-  </Button>
+  </button>
   <!-- <template #fallback>
     <div class="w-8 h-8" />
   </template> -->

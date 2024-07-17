@@ -43,6 +43,8 @@ export default defineNuxtConfig({
     typedPages: true,
     sharedPrerenderData: true,
     writeEarlyHints: true,
+    componentIslands: 'local+remote',
+    viewTransition: true,
   },
 
   fonts: {

@@ -2,7 +2,7 @@
 title: 'My VSCode Setup | Blog'
 description: 'Explore my minimalist VSCode setup featuring the Minimal Mist theme and settings for a clean, distraction-free coding environment.'
 headline: 'My VSCode Setup'
-excerpt: 'Discover how the Minimal Mist theme and custom VSCode settings create a clean and focused coding environment.'
+abstract: 'Discover how the Minimal Mist theme and custom VSCode settings create a clean and focused coding environment.'
 date: '2024-07-17T12:00:00'
 dateUpdated: ''
 author: 'Muhammad Ubaid Raza'

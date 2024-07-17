@@ -32,7 +32,7 @@ const { $formatDate } = useNuxtApp()
             <p>
               {{ $formatDate(article.date) }}
             </p>
-            <p>{{ article.excerpt }}</p>
+            <p class="mt-6">{{ article.abstract }}</p>
           </header>
         </div>
       </NuxtLink>

@@ -18,7 +18,7 @@ const { data } = await useAsyncData(`content-/blog`, async () => {
     <BlogSection id="main">
       <ContentQuery
         path="/blog"
-        :only="['headline', 'excerpt', 'date', 'tags', '_path', 'image']"
+        :only="['headline', 'abstract', 'date', 'tags', '_path', 'image']"
         :sort="{
           date: -1,
         }"

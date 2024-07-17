@@ -20,7 +20,6 @@ try {
     router.replace('/blog/')
   }
 } catch (err) {
-  console.error(err)
   router.replace('/blog/')
 }
 </script>
@@ -30,7 +29,7 @@ try {
     <!-- Query for the given blog page number -->
     <ContentQuery
       path="/blog"
-      :only="['headline', 'excerpt', 'date', 'tags', '_path', 'image']"
+      :only="['headline', 'abstract', 'date', 'tags', '_path', 'image']"
       :sort="{
         date: -1,
       }"

@@ -1,16 +1,16 @@
 <script setup>
-import Twitter from '../icons/twitter.vue'
-import Pinterest from '../icons/pinterest.vue'
-import Linkedin from '../icons/linkedin.vue'
 import Facebook from '../icons/facebook.vue'
 import Gmail from '../icons/gmail.vue'
+import Linkedin from '../icons/linkedin.vue'
+import Pinterest from '../icons/pinterest.vue'
+import Twitter from '../icons/twitter.vue'
 
 const props = defineProps({
   headline: {
     type: String,
     required: true,
   },
-  excerpt: {
+  abstract: {
     type: String,
     required: true,
   },
@@ -20,7 +20,7 @@ const props = defineProps({
   },
 })
 
-const baseUrl = 'https://example.com'
+const baseUrl = 'https://mubaidr.js.org'
 const encodedUrl = encodeURIComponent(baseUrl + props.path)
 
 const icons = [
@@ -30,7 +30,7 @@ const icons = [
     getHref: () => {
       return `https://www.linkedin.com/sharing/share-offsite/?mini=true&url=${encodedUrl}&title=${encodeURI(
         props.headline
-      )}&summary=${encodeURI(props.excerpt)}`
+      )}&summary=${encodeURI(props.abstract)}`
     },
   },
   {

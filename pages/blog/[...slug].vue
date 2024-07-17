@@ -2,16 +2,19 @@
 const { $formatDate } = useNuxtApp()
 const { path } = useRoute()
 const cleanPath = path.replace(/\/+$/, '')
+
 const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
   // Remove a trailing slash in case the browser adds it, it might break the routing
   // fetch document where the document path matches with the cuurent route
   let article = queryContent('/blog').where({ _path: cleanPath }).findOne()
+
   // get the surround information,
   // which is an array of documeents that come before and after the current document
   let surround = queryContent('/blog')
     .sort({ date: -1 })
-    .only(['_path', 'headline', 'excerpt'])
+    .only(['_path', 'headline', 'abstract'])
     .findSurround(cleanPath, { before: 1, after: 1 })
+
   return {
     article: await article,
     surround: await surround,
@@ -43,7 +46,7 @@ const jsonScripts = [
       url: canonicalPath,
       image: image,
       headline: data.value?.article?.headline,
-      abstract: data.value?.article?.excerpt,
+      abstract: data.value?.article?.abstract,
       datePublished: data.value?.article?.date,
       dateModified:
         data.value?.article?.dateUpdated || data.value?.article?.date,
@@ -200,11 +203,9 @@ useHead({
           <h1 class="text-3xl font-extrabold mt-6">
             {{ doc.headline }}
           </h1>
-          <p>
-            {{ doc.excerpt }}
-          </p>
+          <p>{{ doc.abstract }}</p>
 
-          <div class="flex justify-between mb-6">
+          <div class="flex justify-between my-6">
             <!-- Author -->
             <div class="flex flex-row items-center justify-center">
               <span class="text-lg leading-lg font-light">
@@ -222,10 +223,9 @@ useHead({
             <!-- Social Share -->
             <div class="mt-6 md:mt-0 flex">
               Share now:
-              {{ doc }}
               <NavShareIcons
                 :headline="doc.headline"
-                :excerpt="doc.excerpt"
+                :abstract="doc.abstract"
                 :path="doc._path + '/'"
               />
             </div>

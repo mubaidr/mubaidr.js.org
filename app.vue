@@ -8,6 +8,13 @@
     </div>
 
     <SiteFooter />
+
+    <!-- Scroll to top -->
+    <!-- <ClientOnly>
+      <NavScrollTopIcon />
+    </ClientOnly> -->
+
+    <LazyNuxtIsland name="NavScrollTopIcon"></LazyNuxtIsland>
   </div>
 </template>
 

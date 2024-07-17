@@ -23,14 +23,14 @@ onUnmounted(() => {
 <template>
   <div
     :class="[
-      'fixed flex flex-col items-center w-24 z-20 bottom-[48px] right-0 transform duration-150 p-6',
+      'fixed flex flex-col items-center w-24 z-20 bottom-[132px] right-0 transform duration-150 p-6',
       isVisible ? '' : 'translate-x-full',
     ]"
   >
     <a
       href="#"
       aria-label="Scroll to Top"
-      class="flex flex-col gap-2 items-center text-center rounded-full bg-black bg-opacity-50 p-4 text-white"
+      class="flex flex-col gap-2 items-center text-center bg-black p-4 text-white"
     >
       <IconsArrowUp
         class="w-4 h-4"

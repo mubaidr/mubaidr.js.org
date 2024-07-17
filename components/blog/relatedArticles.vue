@@ -24,7 +24,7 @@ defineProps({
             {{ other.headline }}
           </NuxtLink>
           <p>
-            {{ other.excerpt }}
+            {{ other.abstract }}
           </p>
         </li>
       </template>
