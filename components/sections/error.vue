@@ -1,5 +1,5 @@
 <template>
-  <BlogSection
+  <div
     id="error"
     :fullHeight="true"
   >
@@ -17,5 +17,5 @@
         extraClass="mx-auto mt-8"
       />
     </div>
-  </BlogSection>
+  </div>
 </template>

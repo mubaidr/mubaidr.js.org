@@ -55,7 +55,8 @@ Here’s a preview of what you can expect:
 
 To further enhance the workspace setup, I use the following settings to reduce clutter and make my workspace even more minimal without sacrificing any functionality. You can add these settings to your `settings.json` file in VSCode to achieve the same look as in the screenshots above:
 
-```jsonc
+<!--
+```json
 "editor.renderLineHighlight": "none",
 "editor.scrollbar.vertical": "hidden",
 "window.commandCenter": false,
@@ -68,5 +69,5 @@ To further enhance the workspace setup, I use the following settings to reduce c
 "workbench.sideBar.location": "right",
 "workbench.statusBar.visible": false,
 "workbench.tree.indent": 22,
-"workbench.tree.renderIndentGuides": "none",
-```
+"workbench.tree.renderIndentGuides": "none"
+``` -->

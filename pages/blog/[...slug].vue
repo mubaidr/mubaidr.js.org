@@ -133,7 +133,7 @@ useHead({
   <main>
     <ContentDoc>
       <template v-slot="{ doc }">
-        <BlogSection
+        <div
           id="blog-title"
           type="header"
         >
@@ -230,27 +230,24 @@ useHead({
               />
             </div>
           </div>
-        </BlogSection>
+        </div>
 
         <!-- Content -->
-        <BlogSection
+        <div
           id="main"
           class="grid grid-cols-10 gap-8 lg:gap-12"
         >
-          <div class="prose col-span-full md:col-span-7">
+          <article class="prose dark:prose-invert col-span-full md:col-span-7">
             <!-- Update date -->
             <span
               v-show="doc.dateUpdated"
-              class="italic text-xs font-light"
+              class="text-xs font-light"
             >
               (Updated: {{ $formatDate(doc.dateUpdated) }})
             </span>
             <!-- Blog content -->
-            <ContentRenderer
-              :value="doc"
-              class="prose dark:prose-invert"
-            />
-          </div>
+            <ContentRenderer :value="doc"></ContentRenderer>
+          </article>
           <aside class="col-span-full md:col-span-3 h-fit">
             <!-- Mobile Table of Content -->
             <div class="!hidden md:!flex mb-4">
@@ -266,7 +263,7 @@ useHead({
               <BlogRelatedArticles :surround="data?.surround" />
             </div>
           </aside>
-        </BlogSection>
+        </div>
 
         <!-- Scroll to top -->
         <NavScrollTopIcon />

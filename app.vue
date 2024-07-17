@@ -14,7 +14,7 @@
       <NavScrollTopIcon />
     </ClientOnly> -->
 
-    <LazyNuxtIsland name="NavScrollTopIcon"></LazyNuxtIsland>
+    <!-- <LazyNuxtIsland name="NavScrollTopIcon"></LazyNuxtIsland> -->
   </div>
 </template>
 

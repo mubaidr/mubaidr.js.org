@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <BlogSection id="blog">
+  <div id="blog">
     <h1 class="text-3xl font-extrabold my-6">What You'll Find Here</h1>
 
     <p>
@@ -22,5 +22,5 @@
       <NuxtLink to="https://github.com/">GitHub Profile</NuxtLink>
       . Let's code, learn, and grow together!
     </p>
-  </BlogSection>
+  </div>
 </template>

@@ -15,7 +15,7 @@ const { data } = await useAsyncData(`content-/blog`, async () => {
     <br />
     <br />
 
-    <BlogSection id="main">
+    <div id="main">
       <ContentQuery
         path="/blog"
         :only="['headline', 'abstract', 'date', 'tags', '_path', 'image']"
@@ -37,6 +37,6 @@ const { data } = await useAsyncData(`content-/blog`, async () => {
         baseUrl="/blog/"
         pageUrl="/blog/page/"
       />
-    </BlogSection>
+    </div>
   </main>
 </template>

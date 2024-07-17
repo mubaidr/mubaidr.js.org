@@ -43,7 +43,7 @@ try {
         <br />
         <br />
 
-        <BlogSection id="main">
+        <div id="main">
           <BlogList :data="data" />
           <ContentQuery
             path="/blog"
@@ -64,13 +64,13 @@ try {
               <!-- Nothing -->
             </template>
           </ContentQuery>
-        </BlogSection>
+        </div>
       </template>
       <!-- In case not found -->
       <template #not-found>
         <!-- Show hero and message -->
         <BlogHero />
-        <BlogSection
+        <div
           id="main"
           class="!pt-0"
         >
@@ -78,7 +78,7 @@ try {
             :data="[]"
             message="There are no posts in this page, maybe try searching on another one."
           />
-        </BlogSection>
+        </div>
       </template>
     </ContentQuery>
   </main>
