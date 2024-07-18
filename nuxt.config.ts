@@ -33,11 +33,36 @@ export default defineNuxtConfig({
 
   content: {
     contentHead: true,
+    documentDriven: true,
+    highlight: {
+      theme: 'github-dark',
+      preload: ['typescript', 'javascript', 'json', 'bash'],
+    },
+    experimental: {
+      cacheContents: true,
+    },
+    markdown: {
+      mdc: true,
+      toc: {
+        depth: 3,
+      },
+      rehypePlugins: [
+        [
+          'rehype-external-links',
+          {
+            target: '_blank',
+            rel: 'noopener noreferer',
+          },
+        ],
+      ],
+    },
   },
 
   debug: false,
 
   devtools: { enabled: true },
+
+  sourcemap: false,
 
   experimental: {
     typedPages: true,
@@ -45,12 +70,13 @@ export default defineNuxtConfig({
     writeEarlyHints: true,
     componentIslands: 'local+remote',
     viewTransition: true,
+    payloadExtraction: false,
   },
 
   fonts: {
     google: {
       families: {
-        'Open Sans': [400, 700],
+        Inter: [400, 700],
       },
     },
   },
@@ -76,11 +102,11 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
   ],
 
-  nitro: {
-    prerender: {
-      // routes: ['/public/blog/img/**'],
-    },
-  },
+  // nitro: {
+  //   prerender: {
+  //     // routes: ['/public/blog/img/**'],
+  //   },
+  // },
 
   routeRules: {
     '/': {

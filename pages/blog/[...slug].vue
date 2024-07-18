@@ -3,7 +3,7 @@ const { $formatDate } = useNuxtApp()
 const { path } = useRoute()
 const cleanPath = path.replace(/\/+$/, '')
 
-const { data, error } = await useAsyncData(`content-${cleanPath}`, async () => {
+const { data } = await useAsyncData(`content-${cleanPath}`, async () => {
   // Remove a trailing slash in case the browser adds it, it might break the routing
   // fetch document where the document path matches with the cuurent route
   let article = queryContent('/blog').where({ _path: cleanPath }).findOne()
@@ -237,7 +237,9 @@ useHead({
           id="main"
           class="grid grid-cols-10 gap-8 lg:gap-12"
         >
-          <article class="prose dark:prose-invert col-span-full md:col-span-7">
+          <article
+            class="prose lg:prose-xl dark:prose-invert col-span-full md:col-span-7"
+          >
             <!-- Update date -->
             <span
               v-show="doc.dateUpdated"
@@ -251,10 +253,7 @@ useHead({
           <aside class="col-span-full md:col-span-3 h-fit">
             <!-- Mobile Table of Content -->
             <div class="!hidden md:!flex mb-4">
-              <BlogTableOfContents
-                :links="doc.body?.toc?.links"
-                class="blog-post-text"
-              />
+              <BlogTableOfContents :links="doc.body?.toc?.links" />
             </div>
             <!-- Related articles -->
             <div
