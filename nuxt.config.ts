@@ -2,6 +2,12 @@
 export default defineNuxtConfig({
   app: {
     header: {
+      meta: [
+        {
+          name: 'google-site-verification',
+          content: 'HCL7-zzyR002AD-QxBUEhq9uwSKx2KWCsamU0ANbBW8',
+        },
+      ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: './assets/favicon.png' },
       ],
@@ -66,11 +72,7 @@ export default defineNuxtConfig({
 
   experimental: {
     typedPages: true,
-    sharedPrerenderData: true,
-    writeEarlyHints: true,
-    componentIslands: 'local+remote',
     viewTransition: true,
-    payloadExtraction: false,
   },
 
   fonts: {
@@ -85,12 +87,6 @@ export default defineNuxtConfig({
     enabled: false,
   },
 
-  mdc: {
-    components: {
-      prose: true,
-    },
-  },
-
   modules: [
     '@nuxtjs/color-mode',
     '@nuxt/content',
@@ -101,12 +97,6 @@ export default defineNuxtConfig({
     '@nuxthq/studio',
     '@nuxtjs/tailwindcss',
   ],
-
-  // nitro: {
-  //   prerender: {
-  //     // routes: ['/public/blog/img/**'],
-  //   },
-  // },
 
   routeRules: {
     '/': {
