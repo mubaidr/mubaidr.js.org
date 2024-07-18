@@ -68,8 +68,6 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  sourcemap: false,
-
   experimental: {
     typedPages: true,
     viewTransition: true,
@@ -84,7 +82,7 @@ export default defineNuxtConfig({
   },
 
   linkChecker: {
-    enabled: false,
+    enabled: true,
   },
 
   modules: [
@@ -97,6 +95,14 @@ export default defineNuxtConfig({
     '@nuxthq/studio',
     '@nuxtjs/tailwindcss',
   ],
+
+  nitro: {
+    preset: 'github-pages',
+    prerender: {
+      crawlLinks: true,
+      failOnError: false,
+    },
+  },
 
   routeRules: {
     '/': {
@@ -120,6 +126,8 @@ export default defineNuxtConfig({
       'Personal Website of Muhammad Ubaid Raza, Full Stack Developer',
     defaultLocale: 'en',
   },
+
+  sourcemap: true,
 
   studio: {
     enabled: true,

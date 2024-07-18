@@ -127,6 +127,10 @@ useHead({
   ],
   script: jsonScripts,
 })
+
+defineOgImage({
+  alt: data.value?.article?.title,
+})
 </script>
 
 <template>
