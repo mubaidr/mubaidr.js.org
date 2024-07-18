@@ -1,25 +1,4 @@
-<script lang="ts" setup>
-useSeoMeta({
-  ogImage: '[og:image]',
-  twitterTitle: '[twitter:title]',
-  twitterDescription: '[twitter:description]',
-  twitterImage: '[twitter:image]',
-  twitterCard: 'summary',
-})
-
-useHead({
-  htmlAttrs: {
-    lang: 'en',
-  },
-  link: [
-    {
-      rel: 'icon',
-      type: 'image/png',
-      href: '/favicon.png',
-    },
-  ],
-})
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <main>

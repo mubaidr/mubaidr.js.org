@@ -1,19 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  app: {
-    header: {
-      meta: [
-        {
-          name: 'google-site-verification',
-          content: 'HCL7-zzyR002AD-QxBUEhq9uwSKx2KWCsamU0ANbBW8',
-        },
-      ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: './assets/favicon.png' },
-      ],
-    },
-  },
-
   // @ts-ignore
   booster: {
     detection: {
