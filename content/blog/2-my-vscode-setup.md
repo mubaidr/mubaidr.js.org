@@ -1,16 +1,16 @@
 ---
-title: 'My VSCode Setup | Blog'
-description: 'Explore my minimalist VSCode setup featuring the Minimal Mist theme and settings for a clean, distraction-free coding environment.'
-headline: 'My VSCode Setup'
-abstract: 'Discover how the Minimal Mist theme and custom VSCode settings create a clean and focused coding environment.'
+title: My VSCode Setup | Blog
+description: Explore my minimalist VSCode setup featuring the Minimal Mist theme and settings for a clean, distraction-free coding environment.
+headline: My VSCode Setup
+abstract: Discover how the Minimal Mist theme and custom VSCode settings create a clean and focused coding environment.
 date: '2024-07-17T12:00:00'
 dateUpdated: ''
-author: 'Muhammad Ubaid Raza'
-authorUrl: 'https://mubaidr.js.org/'
+author: Muhammad Ubaid Raza
+authorUrl: https://mubaidr.js.org/
 socialImage:
-  src: '/img/blog/2-my-vscode-setup/typescript-dark.png'
-  mime: 'png'
-  alt: 'Workplace Screenshot'
+  src: /img/blog/2-my-vscode-setup/typescript-dark.png
+  mime: png
+  alt: Workplace Screenshot
   width: 1200
   height: 630
 ---
@@ -55,7 +55,6 @@ Here’s a preview of what you can expect:
 
 To further enhance the workspace setup, I use the following settings to reduce clutter and make my workspace even more minimal without sacrificing any functionality. You can add these settings to your `settings.json` file in VSCode to achieve the same look as in the screenshots above:
 
-<!--
 ```json
 "editor.renderLineHighlight": "none",
 "editor.scrollbar.vertical": "hidden",
@@ -70,4 +69,4 @@ To further enhance the workspace setup, I use the following settings to reduce c
 "workbench.statusBar.visible": false,
 "workbench.tree.indent": 22,
 "workbench.tree.renderIndentGuides": "none"
-``` -->
+```
