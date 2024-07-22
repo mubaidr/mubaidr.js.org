@@ -119,9 +119,9 @@ export default defineNuxtConfig({
 
   ssr: true,
 
-  features: {
-    noScripts: true,
-  },
+  // features: {
+  //   noScripts: true,
+  // },
 
   robots: {
     enabled: true,
