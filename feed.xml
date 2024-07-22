@@ -4,13 +4,13 @@
         <title></title>
         <link>undefined</link>
         <description>undefined</description>
-        <lastBuildDate>Mon, 22 Jul 2024 11:10:32 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 22 Jul 2024 17:43:53 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <ttl>360</ttl>
         <item>
             <title><![CDATA[About]]></title>
-            <pubDate>Mon, 22 Jul 2024 11:10:32 GMT</pubDate>
+            <pubDate>Mon, 22 Jul 2024 17:43:53 GMT</pubDate>
             <description><![CDATA[👋🏼 I’m Muhammad Ubaid Raza, a Software Engineer with 8+ years of experience. 
 🎓 I Graduated in 2012 and completed Master's in Project Management in 2019. 
 ☝ I help startups and founders add value to society by crafting software. 
@@ -23,7 +23,7 @@
         </item>
         <item>
             <title><![CDATA[Authors]]></title>
-            <pubDate>Mon, 22 Jul 2024 11:10:32 GMT</pubDate>
+            <pubDate>Mon, 22 Jul 2024 17:43:53 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[My First Blog Post | Blog]]></title>
@@ -37,14 +37,14 @@
         </item>
         <item>
             <title><![CDATA[Get In Touch]]></title>
-            <pubDate>Mon, 22 Jul 2024 11:10:32 GMT</pubDate>
-            <description><![CDATA[☞ DM me on X (Formerly twitter) @mubaidr 
-☞ Email me at mubaidr@gmail.com 
-☞ Arrange a meeting]]></description>
+            <pubDate>Mon, 22 Jul 2024 17:43:53 GMT</pubDate>
+            <description><![CDATA[🤝 DM me on X (Formerly twitter) @mubaidr 
+🤝 Email me at mubaidr@gmail.com 
+🤝 Arrange a meeting]]></description>
         </item>
         <item>
             <title><![CDATA[What I Do]]></title>
-            <pubDate>Mon, 22 Jul 2024 11:10:32 GMT</pubDate>
+            <pubDate>Mon, 22 Jul 2024 17:43:53 GMT</pubDate>
             <description><![CDATA[🚀 Code: Node.js, TypeScript, JavaScript, Nuxt, VueJS, NestJs, ExpressJs, ASP .NET, C#, T-SQL 
 🚀 Data: PostgreSQL, Firebase, Supabase, MongoDB, Redis, memcached, MySQL, SQL Server and SQLite. 
 🚀 Deployment: Docker, Amazon Web Services (AWS), Cloudflare, Heroku, Nginx. 
