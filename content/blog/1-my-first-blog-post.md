@@ -6,7 +6,7 @@ abstract: 'Discover why I started this blog, what you can expect, and how we can
 date: '2024-07-16T12:00:00'
 dateUpdated: ''
 author: 'Muhammad Ubaid Raza'
-authorUrl: 'https://mubaidr.js.org/'
+authorUrl: '/'
 socialImage:
   src: '/img/blog/2-my-vscode-setup/typescript-dark.png'
   mime: 'png'

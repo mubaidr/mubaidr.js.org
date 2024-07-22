@@ -6,7 +6,7 @@ abstract: Discover how the Minimal Mist theme and custom VSCode settings create 
 date: '2024-07-17T12:00:00'
 dateUpdated: ''
 author: Muhammad Ubaid Raza
-authorUrl: https://mubaidr.js.org/
+authorUrl: /
 socialImage:
   src: /img/blog/2-my-vscode-setup/typescript-dark.png
   mime: png

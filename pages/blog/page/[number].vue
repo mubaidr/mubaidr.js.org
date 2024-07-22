@@ -17,10 +17,10 @@ let pageNo
 try {
   pageNo = getPageNumber()
   if (isNaN(pageNo) || pageNo <= 0) {
-    router.replace('/blog/')
+    router.replace('/blog')
   }
 } catch (err) {
-  router.replace('/blog/')
+  router.replace('/blog')
 }
 </script>
 
@@ -56,8 +56,8 @@ try {
                 :currentPage="getPageNumber()"
                 :totalPages="getPageLimit(data.length)"
                 :nextPage="getPageNumber() < getPageLimit(data.length)"
-                baseUrl="/blog/"
-                pageUrl="/blog/page/"
+                baseUrl="/blog"
+                pageUrl="/blog/page"
               />
             </template>
             <template #not-found>

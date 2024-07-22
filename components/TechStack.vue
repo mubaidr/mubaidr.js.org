@@ -61,5 +61,3 @@
     <Icon name="i-devicon-azuresqldatabase"></Icon>
   </div>
 </template>
-
-<style lang="scss" scoped></style>

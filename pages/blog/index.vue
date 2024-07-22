@@ -1,10 +1,14 @@
 <script setup>
+// definePageMeta({
+//   documentDriven: false,
+// })
+
 // Find the number of blogs present
 const blogCountLimit = 6
 
-const { data } = await useAsyncData(`content-/blog`, async () => {
+const { data: count } = await useAsyncData(`content-blog-count`, async () => {
   const _posts = await queryContent('/blog').only('headline').find()
-  return Math.ceil(_posts.length / blogCountLimit)
+  return Math.ceil(_posts.length / blogCountLimit) || 0
 })
 </script>
 
@@ -29,13 +33,13 @@ const { data } = await useAsyncData(`content-/blog`, async () => {
       </ContentQuery>
 
       <BlogPagination
-        v-if="data > 1"
+        v-if="count > 1"
         class="mt-8"
         :currentPage="1"
-        :totalPages="data"
-        :nextPage="data > 1"
-        baseUrl="/blog/"
-        pageUrl="/blog/page/"
+        :totalPages="count"
+        :nextPage="count > 1"
+        baseUrl="/blog"
+        pageUrl="/blog/page"
       />
     </div>
   </main>

@@ -22,12 +22,12 @@ const { data } = await useAsyncData(`content-${cleanPath}`, async () => {
 })
 
 // Get the authors
-const { data: authorData } = await useAsyncData('home', () =>
+const { data: authorData } = await useAsyncData('content-authors', () =>
   queryContent('/authors').findOne()
 )
 
 // Set the meta
-const baseUrl = 'https://mubaidr.js.org/'
+const baseUrl = 'https://mubaidr.js.org'
 const canonicalPath = baseUrl + (path + '/').replace(/\/+$/, '/')
 const image =
   baseUrl + (data.value?.article?.socialImage?.src || '/sample.webp')
@@ -41,7 +41,7 @@ const jsonScripts = [
       '@type': 'BlogPosting',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://mubaidr.js.org/',
+        '@id': 'https://mubaidr.js.org',
       },
       url: canonicalPath,
       image: image,
@@ -174,8 +174,8 @@ defineOgImage({
                   itemscope
                   itemtype="https://schema.org/WebPage"
                   itemprop="item"
-                  itemid="/blog/"
-                  href="/blog/"
+                  itemid="/blog"
+                  href="/blog"
                 >
                   <span itemprop="name">Blog</span>
                 </a>
@@ -230,7 +230,7 @@ defineOgImage({
               <NavShareIcons
                 :headline="doc.headline"
                 :abstract="doc.abstract"
-                :path="doc._path + '/'"
+                :path="doc._path"
               />
             </div>
           </div>

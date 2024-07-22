@@ -24,14 +24,14 @@ export default defineNuxtConfig({
   },
 
   content: {
-    contentHead: true,
-    documentDriven: true,
+    contentHead: false,
+    documentDriven: false,
     highlight: {
       theme: 'github-dark',
       preload: ['typescript', 'javascript', 'json', 'bash'],
     },
     experimental: {
-      cacheContents: true,
+      clientDB: true,
     },
     markdown: {
       mdc: true,
@@ -51,12 +51,12 @@ export default defineNuxtConfig({
   },
 
   debug: false,
-
   devtools: { enabled: true },
 
   experimental: {
     typedPages: true,
     viewTransition: true,
+    componentIslands: true,
   },
 
   fonts: {
@@ -80,6 +80,7 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxthq/studio',
     '@nuxtjs/tailwindcss',
+    'nuxt-feedme',
   ],
 
   nitro: {
@@ -88,20 +89,19 @@ export default defineNuxtConfig({
       crawlLinks: true,
       failOnError: false,
     },
+    compressPublicAssets: true,
   },
 
   routeRules: {
-    '/': {
+    '/**': {
       prerender: true,
-    },
-    '/blog/**': {
-      isr: true,
     },
   },
 
   seo: {
     automaticDefaults: true,
     enabled: true,
+    redirectToCanonicalSiteUrl: true,
   },
 
   site: {
@@ -113,7 +113,19 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
 
-  sourcemap: true,
+  sitemap: {
+    enabled: true,
+  },
+
+  ssr: true,
+
+  features: {
+    noScripts: true,
+  },
+
+  robots: {
+    enabled: true,
+  },
 
   studio: {
     enabled: true,
@@ -124,5 +136,5 @@ export default defineNuxtConfig({
     editorSupport: true,
   },
 
-  compatibilityDate: '2024-07-12',
+  compatibilityDate: '2024-07-22',
 })

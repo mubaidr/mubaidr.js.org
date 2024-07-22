@@ -1,10 +1,18 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+// definePageMeta({
+//   documentDriven: false,
+// })
+
+// defineOgImage({
+//   alt: 'Muhammad Ubaid Raza',
+// })
+</script>
 
 <template>
   <main>
     <div>
       <h2 class="text-3xl font-extrabold mb-6">Hey there!</h2>
-      <ContentDoc path="about" />
+      <ContentDoc path="/about" />
     </div>
 
     <div class="mt-12">
@@ -14,14 +22,12 @@
 
     <div class="mt-12">
       <h2 class="text-3xl font-extrabold mb-6">What I Do Well</h2>
-      <ContentDoc path="what-i-do" />
+      <ContentDoc path="/what-i-do" />
     </div>
 
     <div class="mt-12">
       <h2 class="text-3xl font-extrabold mb-6">Get In Touch</h2>
-      <ContentDoc path="get-in-touch" />
+      <ContentDoc path="/get-in-touch" />
     </div>
   </main>
 </template>
-
-<style lang="scss" scoped></style>

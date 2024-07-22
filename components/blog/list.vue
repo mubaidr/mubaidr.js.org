@@ -21,7 +21,7 @@ const { $formatDate } = useNuxtApp()
       class="col-span-full md:col-span-6 relative border-2 border-primary-200 hover:border-primary-500"
     >
       <NuxtLink
-        :to="article._path + '/'"
+        :to="article._path"
         class="p-4 block relative"
       >
         <div class="wrapper">

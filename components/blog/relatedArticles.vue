@@ -17,7 +17,7 @@ defineProps({
       >
         <li v-if="other">
           <NuxtLink
-            :to="other._path + '/'"
+            :to="other._path"
             :aria-label="other.headline"
             class="underline underline-offset-2"
           >

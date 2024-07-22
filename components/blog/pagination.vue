@@ -24,7 +24,7 @@ const props = defineProps({
 })
 
 const getPageUrl = (pageNo) => {
-  return `${props.pageUrl}${pageNo}/`
+  return `${props.pageUrl}${pageNo}`
 }
 // Calculate the page range to show
 const pageRange = [
@@ -36,7 +36,7 @@ const pageRange = [
 const prevLink = computed(() => {
   return props.currentPage === 2
     ? props.baseUrl
-    : `${props.pageUrl}${props.currentPage - 1}/`
+    : `${props.pageUrl}${props.currentPage - 1}`
 })
 </script>
 
