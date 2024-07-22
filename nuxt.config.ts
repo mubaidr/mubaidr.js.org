@@ -20,7 +20,8 @@ export default defineNuxtConfig({
   },
 
   colorMode: {
-    preference: 'light',
+    preference: 'system',
+    fallback: 'light',
   },
 
   content: {
@@ -51,6 +52,11 @@ export default defineNuxtConfig({
   },
 
   debug: false,
+
+  delayHydration: {
+    mode: 'mount',
+  },
+
   devtools: { enabled: true },
 
   experimental: {
@@ -67,6 +73,12 @@ export default defineNuxtConfig({
     },
   },
 
+  image: {
+    domains: ['mubaidr.js.org'],
+    format: ['webp'],
+    quality: 80,
+  },
+
   linkChecker: {
     enabled: true,
   },
@@ -80,6 +92,8 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxthq/studio',
     '@nuxtjs/tailwindcss',
+    'nuxt-build-cache',
+    'nuxt-delay-hydration',
     'nuxt-feedme',
   ],
 
@@ -96,6 +110,9 @@ export default defineNuxtConfig({
     '/**': {
       prerender: true,
     },
+    // '/blog/**': {
+    //   prerender: true,
+    // },
   },
 
   seo: {

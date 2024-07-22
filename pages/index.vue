@@ -1,12 +1,4 @@
-<script lang="ts" setup>
-// definePageMeta({
-//   documentDriven: false,
-// })
-
-// defineOgImage({
-//   alt: 'Muhammad Ubaid Raza',
-// })
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <main>

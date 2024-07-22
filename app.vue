@@ -38,11 +38,7 @@ useHead({
     <SiteFooter />
 
     <!-- Scroll to top -->
-    <!-- <ClientOnly>
-      <NavScrollTopIcon />
-    </ClientOnly> -->
-
-    <!-- <LazyNuxtIsland name="NavScrollTopIcon"></LazyNuxtIsland> -->
+    <NavScrollTopIcon />
   </div>
 </template>
 

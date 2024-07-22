@@ -7,7 +7,7 @@
     "@iconify-json/ph": "^1.1.13",
     "@nuxt/content": "^2.13.2",
     "@nuxt/fonts": "^0.7.1",
-    "@nuxt/icon": "^1.2.1",
+    "@nuxt/icon": "^1.3.0",
     "@nuxt/image": "^1.7.0",
     "@nuxthq/studio": "^2.0.3",
     "@nuxtjs/color-mode": "^3.4.2",
@@ -16,6 +16,8 @@
     "@tailwindcss/typography": "^0.5.13",
     "nuxt": "^3.12.4",
     "nuxt-booster": "^3.0.16",
+    "nuxt-build-cache": "^0.1.1",
+    "nuxt-delay-hydration": "^1.3.5",
     "nuxt-feedme": "^1.0.0"
   },
   "engines": {

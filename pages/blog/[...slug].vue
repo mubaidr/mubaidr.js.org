@@ -267,9 +267,6 @@ defineOgImage({
             </div>
           </aside>
         </div>
-
-        <!-- Scroll to top -->
-        <NavScrollTopIcon />
       </template>
       <!-- Error in case not found -->
       <template #not-found>
