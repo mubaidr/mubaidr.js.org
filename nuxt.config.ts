@@ -110,6 +110,9 @@ export default defineNuxtConfig({
     '/**': {
       prerender: true,
     },
+    '/_ipx/**': {
+      prerender: true,
+    },
     // '/blog/**': {
     //   prerender: true,
     // },
