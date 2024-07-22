@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id/>
+    <title/>
+    <updated>2024-07-22T11:00:42.106Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <entry>
+        <title type="html"><![CDATA[About]]></title>
+        <id/>
+        <link/>
+        <updated>2024-07-22T11:00:42.101Z</updated>
+        <summary type="html"><![CDATA[👋🏼 I’m Muhammad Ubaid Raza, a Software Engineer with 8+ years of experience. 
+🎓 I Graduated in 2012 and completed Master's in Project Management in 2019. 
+☝ I help startups and founders add value to society by crafting software. 
+🚩 I'm based in Rawalpindi, Pakistan. 
+🔨 I currently work remotely as a freelancer, delivering customized solutions to clients. 
+🗡 As a passionate web developer, I specialize in cutting-edge technologies and frameworks. 
+🔍 Explore my latest projects and contributions on my GitHub Profile. 
+📚 I'm currently learning about DevOps and Cloud Computing. 
+🎯 My goal is to become a Full Stack Developer and contribute to open-source projects. ]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Authors]]></title>
+        <id/>
+        <link/>
+        <updated>2024-07-22T11:00:42.103Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[My First Blog Post | Blog]]></title>
+        <id/>
+        <link/>
+        <updated>2024-07-16T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[My First Blog Post]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[My VSCode Setup | Blog]]></title>
+        <id/>
+        <link/>
+        <updated>2024-07-17T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Explore my minimalist VSCode setup featuring the Minimal Mist theme and settings for a clean, distraction-free coding environment.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Get In Touch]]></title>
+        <id/>
+        <link/>
+        <updated>2024-07-22T11:00:42.105Z</updated>
+        <summary type="html"><![CDATA[☞ DM me on X (Formerly twitter) @mubaidr 
+☞ Email me at mubaidr@gmail.com 
+☞ Arrange a meeting]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What I Do]]></title>
+        <id/>
+        <link/>
+        <updated>2024-07-22T11:00:42.106Z</updated>
+        <summary type="html"><![CDATA[🚀 Code: Node.js, TypeScript, JavaScript, Nuxt, VueJS, NestJs, ExpressJs, ASP .NET, C#, T-SQL 
+🚀 Data: PostgreSQL, Firebase, Supabase, MongoDB, Redis, memcached, MySQL, SQL Server and SQLite. 
+🚀 Deployment: Docker, Amazon Web Services (AWS), Cloudflare, Heroku, Nginx. 
+🚀 Environment: Git, GitHub, CI, CircleCi and Test Driven Development. 
+🚀 Others: Web Automation, Web Scrapping, Chrome, Firefox and other browser extension development, Puppeteer, TailwindCss, SCSS, Rest API, GraphQL, , Jest, Vite, Vitest, Pug, ejs ]]></summary>
+    </entry>
+</feed>

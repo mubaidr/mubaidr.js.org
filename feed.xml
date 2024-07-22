@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title></title>
+        <link>undefined</link>
+        <description>undefined</description>
+        <lastBuildDate>Mon, 22 Jul 2024 11:00:42 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <ttl>360</ttl>
+        <item>
+            <title><![CDATA[About]]></title>
+            <pubDate>Mon, 22 Jul 2024 11:00:42 GMT</pubDate>
+            <description><![CDATA[👋🏼 I’m Muhammad Ubaid Raza, a Software Engineer with 8+ years of experience. 
+🎓 I Graduated in 2012 and completed Master's in Project Management in 2019. 
+☝ I help startups and founders add value to society by crafting software. 
+🚩 I'm based in Rawalpindi, Pakistan. 
+🔨 I currently work remotely as a freelancer, delivering customized solutions to clients. 
+🗡 As a passionate web developer, I specialize in cutting-edge technologies and frameworks. 
+🔍 Explore my latest projects and contributions on my GitHub Profile. 
+📚 I'm currently learning about DevOps and Cloud Computing. 
+🎯 My goal is to become a Full Stack Developer and contribute to open-source projects. ]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Authors]]></title>
+            <pubDate>Mon, 22 Jul 2024 11:00:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[My First Blog Post | Blog]]></title>
+            <pubDate>Tue, 16 Jul 2024 12:00:00 GMT</pubDate>
+            <description><![CDATA[My First Blog Post]]></description>
+        </item>
+        <item>
+            <title><![CDATA[My VSCode Setup | Blog]]></title>
+            <pubDate>Wed, 17 Jul 2024 12:00:00 GMT</pubDate>
+            <description><![CDATA[Explore my minimalist VSCode setup featuring the Minimal Mist theme and settings for a clean, distraction-free coding environment.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Get In Touch]]></title>
+            <pubDate>Mon, 22 Jul 2024 11:00:42 GMT</pubDate>
+            <description><![CDATA[☞ DM me on X (Formerly twitter) @mubaidr 
+☞ Email me at mubaidr@gmail.com 
+☞ Arrange a meeting]]></description>
+        </item>
+        <item>
+            <title><![CDATA[What I Do]]></title>
+            <pubDate>Mon, 22 Jul 2024 11:00:42 GMT</pubDate>
+            <description><![CDATA[🚀 Code: Node.js, TypeScript, JavaScript, Nuxt, VueJS, NestJs, ExpressJs, ASP .NET, C#, T-SQL 
+🚀 Data: PostgreSQL, Firebase, Supabase, MongoDB, Redis, memcached, MySQL, SQL Server and SQLite. 
+🚀 Deployment: Docker, Amazon Web Services (AWS), Cloudflare, Heroku, Nginx. 
+🚀 Environment: Git, GitHub, CI, CircleCi and Test Driven Development. 
+🚀 Others: Web Automation, Web Scrapping, Chrome, Firefox and other browser extension development, Puppeteer, TailwindCss, SCSS, Rest API, GraphQL, , Jest, Vite, Vitest, Pug, ejs ]]></description>
+        </item>
+    </channel>
+</rss>
