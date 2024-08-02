@@ -19,6 +19,8 @@ socialImage:
 
 Hello, fellow developers! I’m Muhammad Ubaid Raza, and I want to share my latest VSCode setup with you. I've crafted this environment to be as minimalist and distraction-free as possible, and I call it Minimal Mist. This theme and setup have greatly enhanced my coding experience, and I hope it can do the same for you.
 
+**You can install this theme from VsCode marketplace: \[Minimal Mist]\(Minimal Mist - Visual Studio Marketplace)**
+
 ## Features of Minimal Mist
 
 ### Subtle Background
@@ -55,7 +57,7 @@ Here’s a preview of what you can expect:
 
 To further enhance the workspace setup, I use the following settings to reduce clutter and make my workspace even more minimal without sacrificing any functionality. You can add these settings to your `settings.json` file in VSCode to achieve the same look as in the screenshots above:
 
-```json
+```json [settings.json]
 "editor.renderLineHighlight": "none",
 "editor.scrollbar.vertical": "hidden",
 "window.commandCenter": false,
@@ -70,3 +72,7 @@ To further enhance the workspace setup, I use the following settings to reduce c
 "workbench.tree.indent": 22,
 "workbench.tree.renderIndentGuides": "none"
 ```
+
+**For complete settings and configurations setup, please visit this gist:** [**My VsCode Settings**](https://gist.github.com/mubaidr/7ec5b5b2b72a2cbf948d53db9459abfd)
+
+Happy Coding!
