@@ -1,7 +1,5 @@
 ### **Tasks I Handle to Bring Your Vision to Life**
 
-\<br>
-
 🚀 **Code**: Node.js, TypeScript, JavaScript, Nuxt, VueJS, NestJs, ExpressJs, ASP .NET, C# and T-SQL.
 
 🚀 **Data**: PostgreSQL, Firebase, Supabase, MongoDB, Redis, memcached, MySQL, SQL Server and SQLite.
