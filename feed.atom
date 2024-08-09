@@ -2,19 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id/>
     <title/>
-    <updated>2024-08-09T05:14:46.162Z</updated>
+    <updated>2024-08-09T05:17:16.157Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <entry>
         <title type="html"><![CDATA[About]]></title>
         <id/>
         <link/>
-        <updated>2024-08-09T05:14:46.160Z</updated>
+        <updated>2024-08-09T05:17:16.155Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Authors]]></title>
         <id/>
         <link/>
-        <updated>2024-08-09T05:14:46.160Z</updated>
+        <updated>2024-08-09T05:17:16.155Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[My First Blog Post | Blog]]></title>
@@ -34,12 +34,12 @@
         <title type="html"><![CDATA[Get In Touch]]></title>
         <id/>
         <link/>
-        <updated>2024-08-09T05:14:46.161Z</updated>
+        <updated>2024-08-09T05:17:16.156Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[What I Do]]></title>
         <id/>
         <link/>
-        <updated>2024-08-09T05:14:46.162Z</updated>
+        <updated>2024-08-09T05:17:16.157Z</updated>
     </entry>
 </feed>
