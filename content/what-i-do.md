@@ -1,4 +1,4 @@
-### [Tasks I Handle to Bring Your Vision to Life:]{.mb-4}
+### [Tasks I Handle to Bring Your Vision to Life:]{.block.mb-4.text-xl}
 
 🚀 **Code**: Node.js, TypeScript, JavaScript, Nuxt, VueJS, NestJs, ExpressJs, ASP .NET, C# and T-SQL.
 

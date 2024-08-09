@@ -1,4 +1,4 @@
-### [A Bit About Me:]
+### [A Bit About Me:]{.block.mb-4.text-xl}
 
 👋🏼 I'm Muhammad Ubaid Raza, a Software Engineer with 8+ years of experience.
 
