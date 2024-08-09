@@ -4,17 +4,17 @@
         <title></title>
         <link>undefined</link>
         <description>undefined</description>
-        <lastBuildDate>Fri, 09 Aug 2024 05:19:27 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 09 Aug 2024 05:25:26 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <ttl>360</ttl>
         <item>
             <title><![CDATA[About]]></title>
-            <pubDate>Fri, 09 Aug 2024 05:19:27 GMT</pubDate>
+            <pubDate>Fri, 09 Aug 2024 05:25:26 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Authors]]></title>
-            <pubDate>Fri, 09 Aug 2024 05:19:27 GMT</pubDate>
+            <pubDate>Fri, 09 Aug 2024 05:25:26 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[My First Blog Post | Blog]]></title>
@@ -28,11 +28,11 @@
         </item>
         <item>
             <title><![CDATA[Get In Touch]]></title>
-            <pubDate>Fri, 09 Aug 2024 05:19:27 GMT</pubDate>
+            <pubDate>Fri, 09 Aug 2024 05:25:26 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[What I Do]]></title>
-            <pubDate>Fri, 09 Aug 2024 05:19:27 GMT</pubDate>
+            <pubDate>Fri, 09 Aug 2024 05:25:26 GMT</pubDate>
         </item>
     </channel>
 </rss>
