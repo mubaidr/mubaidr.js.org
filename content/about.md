@@ -1,6 +1,6 @@
-### **A Bit About Me**
+### **A Bit About Me:**\\
 
-👋🏼 I’m Muhammad Ubaid Raza, a Software Engineer with 8+ years of experience.
+👋🏼 I'm Muhammad Ubaid Raza, a Software Engineer with 8+ years of experience.
 
 🎓 I Graduated in 2012 and completed Master's in Project Management in 2019.
 

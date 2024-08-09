@@ -1,4 +1,4 @@
-### **Tasks I Handle to Bring Your Vision to Life**
+### **Tasks I Handle to Bring Your Vision to Life:**\\
 
 🚀 **Code**: Node.js, TypeScript, JavaScript, Nuxt, VueJS, NestJs, ExpressJs, ASP .NET, C# and T-SQL.
 
