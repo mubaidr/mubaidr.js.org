@@ -1,4 +1,4 @@
-### **A Bit About Me:**\\
+### [A Bit About Me:]
 
 👋🏼 I'm Muhammad Ubaid Raza, a Software Engineer with 8+ years of experience.
 
