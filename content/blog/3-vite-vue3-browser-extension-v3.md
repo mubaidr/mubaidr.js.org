@@ -81,7 +81,7 @@ pnpm build
 
 ## Contribute and Provide Feedback
 
-We're constantly working on improving this template, and your feedback is invaluable. Please take a moment to [fill out our feedback form](#) and let us know what features you'd like to see or if you'd be interested in purchasing the template once it's ready. Your responses will shape the future of this project.
+We're constantly working on improving this template, and your feedback is invaluable. Please take a moment to [fill out our feedback form](https://forms.gle/2nzS2AQkVGmqHTLV6) and let us know what features you'd like to see or if you'd be interested in purchasing the template once it's ready. Your responses will shape the future of this project.
 
 ## Final Thoughts
 
