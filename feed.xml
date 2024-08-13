@@ -4,17 +4,17 @@
         <title></title>
         <link>undefined</link>
         <description>undefined</description>
-        <lastBuildDate>Fri, 09 Aug 2024 05:31:29 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 13 Aug 2024 07:37:31 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <ttl>360</ttl>
         <item>
             <title><![CDATA[About]]></title>
-            <pubDate>Fri, 09 Aug 2024 05:31:29 GMT</pubDate>
+            <pubDate>Tue, 13 Aug 2024 07:37:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Authors]]></title>
-            <pubDate>Fri, 09 Aug 2024 05:31:29 GMT</pubDate>
+            <pubDate>Tue, 13 Aug 2024 07:37:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[My First Blog Post | Blog]]></title>
@@ -27,12 +27,17 @@
             <description><![CDATA[Explore my minimalist VSCode setup featuring the Minimal Mist theme and settings for a clean, distraction-free coding environment.]]></description>
         </item>
         <item>
+            <title><![CDATA[Kickstart Your Browser Extension Development with Vite, Vue 3, and Manifest V3]]></title>
+            <pubDate>Tue, 13 Aug 2024 07:37:31 GMT</pubDate>
+            <description><![CDATA[Are you looking for a quick and efficient way to start building browser extensions with modern web technologies? Introducing our Vite-powered WebExtension Starter Template! This template is designed to streamline your development process by combining Vue 3, Vite, and Manifest V3, enabling you to create powerful and efficient extensions for Chrome, Firefox, and other browsers.]]></description>
+        </item>
+        <item>
             <title><![CDATA[Get In Touch]]></title>
-            <pubDate>Fri, 09 Aug 2024 05:31:29 GMT</pubDate>
+            <pubDate>Tue, 13 Aug 2024 07:37:31 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[What I Do]]></title>
-            <pubDate>Fri, 09 Aug 2024 05:31:29 GMT</pubDate>
+            <pubDate>Tue, 13 Aug 2024 07:37:31 GMT</pubDate>
         </item>
     </channel>
 </rss>

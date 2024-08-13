@@ -2,19 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id/>
     <title/>
-    <updated>2024-08-09T05:31:29.645Z</updated>
+    <updated>2024-08-13T07:37:31.191Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <entry>
         <title type="html"><![CDATA[About]]></title>
         <id/>
         <link/>
-        <updated>2024-08-09T05:31:29.642Z</updated>
+        <updated>2024-08-13T07:37:31.187Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Authors]]></title>
         <id/>
         <link/>
-        <updated>2024-08-09T05:31:29.643Z</updated>
+        <updated>2024-08-13T07:37:31.188Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[My First Blog Post | Blog]]></title>
@@ -31,15 +31,22 @@
         <summary type="html"><![CDATA[Explore my minimalist VSCode setup featuring the Minimal Mist theme and settings for a clean, distraction-free coding environment.]]></summary>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Kickstart Your Browser Extension Development with Vite, Vue 3, and Manifest V3]]></title>
+        <id/>
+        <link/>
+        <updated>2024-08-13T07:37:31.189Z</updated>
+        <summary type="html"><![CDATA[Are you looking for a quick and efficient way to start building browser extensions with modern web technologies? Introducing our Vite-powered WebExtension Starter Template! This template is designed to streamline your development process by combining Vue 3, Vite, and Manifest V3, enabling you to create powerful and efficient extensions for Chrome, Firefox, and other browsers.]]></summary>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Get In Touch]]></title>
         <id/>
         <link/>
-        <updated>2024-08-09T05:31:29.644Z</updated>
+        <updated>2024-08-13T07:37:31.190Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[What I Do]]></title>
         <id/>
         <link/>
-        <updated>2024-08-09T05:31:29.645Z</updated>
+        <updated>2024-08-13T07:37:31.190Z</updated>
     </entry>
 </feed>
