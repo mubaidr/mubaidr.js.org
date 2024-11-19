@@ -20,16 +20,16 @@ export default defineNuxtConfig({
   },
 
   colorMode: {
-    preference: 'system',
-    fallback: 'light',
+    preference: "system",
+    fallback: "light",
   },
 
   content: {
     contentHead: false,
     documentDriven: false,
     highlight: {
-      theme: 'github-dark',
-      preload: ['typescript', 'javascript', 'json', 'bash'],
+      theme: "github-dark",
+      preload: ["typescript", "javascript", "json", "bash"],
     },
     experimental: {
       clientDB: true,
@@ -41,10 +41,10 @@ export default defineNuxtConfig({
       },
       rehypePlugins: [
         [
-          'rehype-external-links',
+          "rehype-external-links",
           {
-            target: '_blank',
-            rel: 'noopener noreferer',
+            target: "_blank",
+            rel: "noopener noreferer",
           },
         ],
       ],
@@ -54,7 +54,7 @@ export default defineNuxtConfig({
   debug: false,
 
   delayHydration: {
-    mode: 'mount',
+    mode: "mount",
   },
 
   devtools: { enabled: true },
@@ -65,17 +65,15 @@ export default defineNuxtConfig({
     componentIslands: true,
   },
 
-  fonts: {
-    google: {
-      families: {
-        Inter: [400, 700],
-      },
-    },
+  future: {
+    compatibilityVersion: 4,
   },
 
+  fonts: {},
+
   image: {
-    domains: ['mubaidr.js.org'],
-    format: ['webp'],
+    domains: ["mubaidr.js.org"],
+    format: ["webp"],
     quality: 80,
   },
 
@@ -84,21 +82,21 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@nuxtjs/color-mode',
-    '@nuxt/content',
-    '@nuxt/fonts',
-    '@nuxt/icon',
-    '@nuxt/image',
-    '@nuxtjs/seo',
-    '@nuxthq/studio',
-    '@nuxtjs/tailwindcss',
-    'nuxt-build-cache',
-    'nuxt-delay-hydration',
-    'nuxt-feedme',
+    "@nuxtjs/color-mode",
+    "@nuxt/content",
+    "@nuxt/fonts",
+    "@nuxt/icon",
+    "@nuxt/image",
+    "@nuxtjs/seo",
+    "@nuxthq/studio",
+    "@nuxtjs/tailwindcss",
+    "nuxt-build-cache",
+    "nuxt-delay-hydration",
+    "nuxt-feedme",
   ],
 
   nitro: {
-    preset: 'github-pages',
+    preset: "github-pages",
     prerender: {
       crawlLinks: true,
       failOnError: false,
@@ -107,10 +105,10 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/**': {
+    "/**": {
       prerender: true,
     },
-    '/_ipx/**': {
+    "/_ipx/**": {
       prerender: true,
     },
     // '/blog/**': {
@@ -126,11 +124,11 @@ export default defineNuxtConfig({
 
   site: {
     indexable: true,
-    url: 'https://mubaidr.js.org',
-    name: 'Muhammad Ubaid Raza',
+    url: "https://mubaidr.js.org",
+    name: "Muhammad Ubaid Raza",
     description:
-      'Personal Website of Muhammad Ubaid Raza, Full Stack Developer',
-    defaultLocale: 'en',
+      "Personal Website and Blog by Muhammad Ubaid Raza, Full Stack Developer",
+    defaultLocale: "en",
   },
 
   sitemap: {
@@ -139,22 +137,23 @@ export default defineNuxtConfig({
 
   ssr: true,
 
-  // features: {
-  //   noScripts: true,
-  // },
-
   robots: {
     enabled: true,
   },
 
   studio: {
     enabled: true,
+    gitInfo: {
+      name: "mubaidr.js.org",
+      owner: "mubaidr-org",
+      url: "https://github.com/mubaidr-org/mubaidr.js.org",
+    },
   },
 
   tailwindcss: {
-    configPath: './tailwind.config',
+    configPath: "./tailwind.config",
     editorSupport: true,
   },
 
-  compatibilityDate: '2024-07-22',
+  compatibilityDate: "2024-11-19",
 })
