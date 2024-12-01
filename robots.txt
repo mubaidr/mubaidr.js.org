@@ -1,5 +1,0 @@
-# START nuxt-robots (indexable)
-User-agent: *
-
-Sitemap: https://mubaidr.js.org/sitemap.xml
-# END nuxt-robots
