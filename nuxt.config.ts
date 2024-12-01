@@ -145,8 +145,8 @@ export default defineNuxtConfig({
     enabled: true,
     gitInfo: {
       name: "mubaidr.js.org",
-      owner: "mubaidr-org",
-      url: "https://github.com/mubaidr-org/mubaidr.js.org",
+      owner: "mubaidr",
+      url: "https://github.com/mubaidr/mubaidr.js.org",
     },
   },
 
@@ -155,5 +155,5 @@ export default defineNuxtConfig({
     editorSupport: true,
   },
 
-  compatibilityDate: "2024-11-19",
+  compatibilityDate: "2024-12-01",
 })

@@ -1,6 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
+  <h2 class="block mb-4 text-xl font-semibold">
+    Frameworks and tools I used to craft projects
+  </h2>
   <div class="flex flex-wrap gap-2 justify-center">
     <Icon name="i-devicon-typescript"></Icon>
     <Icon name="i-devicon-javascript"></Icon>
