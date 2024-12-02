@@ -24,6 +24,8 @@ export default defineNuxtConfig({
     fallback: "light",
   },
 
+  compatibilityDate: "2024-12-01",
+
   content: {
     contentHead: false,
     documentDriven: false,
@@ -155,5 +157,13 @@ export default defineNuxtConfig({
     editorSupport: true,
   },
 
-  compatibilityDate: "2024-12-01",
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler", // or "modern"
+        },
+      },
+    },
+  },
 })
