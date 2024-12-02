@@ -1,0 +1,1 @@
+import{k as s,c as r,e as c,ac as n}from"./C4oVNenx.js";const o={};function t(e,a){return r(),c("p",null,[n(e.$slots,"default")])}const _=Object.assign(s(o,[["render",t]]),{__name:"ProseP"});export{_ as default};

@@ -1,1 +1,0 @@
-import{k as s,c as o,e as r,ac as c}from"./Cs39-VwS.js";const n={};function t(e,a){return o(),r("ol",null,[c(e.$slots,"default")])}const _=Object.assign(s(n,[["render",t]]),{__name:"ProseOl"});export{_ as default};

@@ -1,0 +1,1 @@
+import{k as n,c as o,e as s,ac as c}from"./C4oVNenx.js";const r={};function t(e,a){return o(),s("code",null,[c(e.$slots,"default")])}const _=Object.assign(n(r,[["render",t]]),{__name:"ProseCodeInline"});export{_ as default};

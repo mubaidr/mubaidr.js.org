@@ -1,1 +1,0 @@
-import{k as n,c as o,e as t,f as s}from"./Cs39-VwS.js";const r={},c={xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24"};function _(a,e){return o(),t("svg",c,e[0]||(e[0]=[s("path",{fill:"currentColor",d:"M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"},null,-1)]))}const f=Object.assign(n(r,[["render",_]]),{__name:"IconsChevronDown"});export{f as _};

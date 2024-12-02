@@ -1,1 +1,0 @@
-import{k as s,c as r,e as t,ac as c}from"./Cs39-VwS.js";const n={};function o(e,a){return r(),t("td",null,[c(e.$slots,"default")])}const _=Object.assign(s(n,[["render",o]]),{__name:"ProseTd"});export{_ as default};
