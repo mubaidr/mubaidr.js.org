@@ -98,10 +98,11 @@ export default defineNuxtConfig({
   ],
 
   nitro: {
-    // preset: "github-pages",
+    preset: "github-pages",
     prerender: {
       crawlLinks: true,
       failOnError: false,
+      autoSubfolderIndex: true,
     },
     compressPublicAssets: true,
   },
@@ -121,7 +122,7 @@ export default defineNuxtConfig({
   seo: {
     automaticDefaults: true,
     enabled: true,
-    redirectToCanonicalSiteUrl: true,
+    // redirectToCanonicalSiteUrl: true,
   },
 
   site: {
