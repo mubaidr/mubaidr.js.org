@@ -31,7 +31,7 @@ export default defineNuxtConfig({
     documentDriven: false,
     highlight: {
       theme: "github-dark",
-      preload: ["typescript", "javascript", "json", "bash"],
+      // preload: ["typescript", "javascript", "json", "bash"],
     },
     experimental: {
       clientDB: true,
@@ -98,7 +98,7 @@ export default defineNuxtConfig({
   ],
 
   nitro: {
-    preset: "github-pages",
+    // preset: "github-pages",
     prerender: {
       crawlLinks: true,
       failOnError: false,
