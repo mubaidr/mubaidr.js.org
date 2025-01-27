@@ -12,7 +12,11 @@
     <Icon name="i-devicon-vuejs"></Icon>
     <Icon name="i-devicon-vuetify"></Icon>
     <Icon name="i-devicon-nestjs"></Icon>
-    <Icon name="i-devicon-express-wordmark"></Icon>
+    <Icon name="i-devicon-express-wordmark"></Icon>    
+    <Icon name="i-devicon-php-plain"></Icon>
+    <Icon name="i-devicon-laravel-original"></Icon>
+    <Icon name="i-devicon-livewire-plain-wordmark"></Icon>
+    <Icon name="i-devicon-mysql-original"></Icon>
     <Icon name="i-devicon-dot-net"></Icon>
     <Icon name="i-devicon-csharp"></Icon>
     <Icon name="i-devicon-postgresql"></Icon>
