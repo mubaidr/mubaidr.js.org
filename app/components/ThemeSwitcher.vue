@@ -11,28 +11,22 @@ const isDark = computed({
 </script>
 
 <template>
-  <ClientOnly>
-    <button
-      type="button"
-      aria-label="Theme"
-      @click="isDark = !isDark"
-    >
-      <template v-if="isDark">
-        <Icon
-          name="i-ph-moon"
-          size="1.5em"
-        ></Icon>
-      </template>
-      <template v-else>
-        <Icon
-          name="i-ph-sun"
-          size="1.5em"
-        ></Icon>
-      </template>
-    </button>
-
-    <template #fallback>
-      <div class="w-8 h-8" />
+  <button
+    type="button"
+    aria-label="Theme"
+    @click="isDark = !isDark"
+  >
+    <template v-if="isDark">
+      <Icon
+        name="i-ph-moon"
+        size="1.5em"
+      ></Icon>
     </template>
-  </ClientOnly>
+    <template v-else>
+      <Icon
+        name="i-ph-sun"
+        size="1.5em"
+      ></Icon>
+    </template>
+  </button>
 </template>
