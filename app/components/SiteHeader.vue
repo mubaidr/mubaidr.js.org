@@ -3,27 +3,27 @@
     <nav
       class="flex justify-between items-center py-6 md:py-12 border-b-2 border-gray-500"
     >
-      <div class="flex gap-2 align-baseline"></div>
+      <div class="flex gap-4 align-baseline"></div>
 
-      <div class="flex gap-2 align-baseline">
-        <NuxtLink
+      <div class="flex gap-4 align-baseline">
+        <!-- <NuxtLink
           to="/"
           active-class="border-primary-600"
         >
           Home
-        </NuxtLink>
+        </NuxtLink> -->
         <NuxtLink
           to="/#got-an-exciting-project-to-talk-about"
           active-class="border-primary-600"
         >
-          Contact
+          Contact Me
         </NuxtLink>
-        <NuxtLink
+        <!-- <NuxtLink
           to="/blog"
           active-class="border-primary-600"
         >
           Blog
-        </NuxtLink>
+        </NuxtLink> -->
 
         <NuxtLink
           :external="true"

@@ -107,9 +107,9 @@ export default defineNuxtConfig({
     "/**": {
       prerender: true,
     },
-    "/blog/**": {
-      prerender: true,
-    },
+    // "/blog/**": {
+    //   prerender: true,
+    // },
   },
 
   seo: {
