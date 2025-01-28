@@ -1,17 +1,27 @@
-### [A Bit About Me:]{.block.mb-4.text-xl.font-semibold}
+### A Bit About Me:
 
-👋🏼 I'm Muhammad Ubaid Raza, a Software Engineer with 10+ years of experience.
+👋🏼 **Hello! I'm Muhammad Ubaid Raza**, a Software Engineer with over 10 years of experience in the industry.
 
-🎓 I Graduated in 2012 and completed Master's in Project Management in 2019.
+🎓 **Educational Background**:
+- Graduated in 2012 with a Bachelor's degree in Software Engineering.
+- Completed a Master's in Project Management in 2019.
 
-☝ I help startups and founders add value to society by crafting software.
+☝ **Mission**:
+- I assist startups and founders in adding value to society by crafting innovative and efficient software solutions.
 
-🚩 I'm based in Rawalpindi, Pakistan.
+🚩 **Location**:
+- Based in Rawalpindi, Pakistan, offering services globally.
 
-🔨 I currently work remotely as a freelancer, delivering customized solutions to clients.
+🔨 **Current Role**:
+- Working remotely as a freelancer, I deliver customized and scalable solutions tailored to meet the unique needs of my clients.
 
-🗡 As a passionate web developer, I specialize in cutting-edge technologies and frameworks.
+🗡 **Specialization**:
+- Passionate web developer with expertise in cutting-edge technologies and frameworks.
 
-📚 I'm currently learning about DevOps and Cloud Computing.
+📚 **Continuous Learning**:
+- Currently enhancing my skills in DevOps and Cloud Computing to stay ahead of the curve and provide the best solutions.
 
-🔍 Explore my latest projects and contributions on my [GitHub Profile](https://github.com/mubaidr){.text-underline}.
+🔍 **Explore My Work**:
+- Check out my latest projects and contributions on my [GitHub Profile](https://github.com/mubaidr).
+
+With a solid educational background, a decade of hands-on experience, and a commitment to continuous learning, I am well-equipped to deliver top-notch software solutions. My passion for web development and dedication to helping startups and founders make me a reliable partner for your next project. Let's collaborate to turn your vision into reality!
