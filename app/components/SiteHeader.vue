@@ -1,30 +1,69 @@
 <template>
-  <nav
-    class="flex justify-between items-center py-6 md:py-12 border-b border-gray-500"
-  >
-    <h1>
-      <NuxtLink
-        to="/"
-        class="text-3xl font-extrabold text-primary-600 dark:text-primary-400 border-b-2 border-transparent"
-        active-class="border-primary-600"
-      >
-        mubaidr
-      </NuxtLink>
-    </h1>
+  <div>
+    <nav
+      class="flex justify-between items-center py-6 md:py-12 border-b-2 border-gray-500"
+    >
+      <div class="flex gap-2 align-baseline"></div>
 
-    <div class="flex flex-row gap-4">
-      <!-- <NuxtLink
-        to="/blog"
-        class="text-xl font-semibold border-b-2 border-transparent"
-        active-class="border-primary-600"
-      >
-        Blog
-      </NuxtLink> -->
-      <div></div>
+      <div class="flex gap-2 align-baseline">
+        <NuxtLink
+          to="/"
+          active-class="border-primary-600"
+        >
+          Home
+        </NuxtLink>
+        <NuxtLink
+          to="/#got-an-exciting-project-to-talk-about"
+          active-class="border-primary-600"
+        >
+          Contact
+        </NuxtLink>
+        <NuxtLink
+          to="/blog"
+          active-class="border-primary-600"
+        >
+          Blog
+        </NuxtLink>
 
-      <!-- <ThemeSwitcher /> -->
+        <NuxtLink
+          :external="true"
+          aria-label="Github"
+          to="https://github.com/mubaidr"
+        >
+          <Icon
+            name="i-ph-github-logo"
+            size="1.5em"
+          ></Icon>
+        </NuxtLink>
+
+        <NuxtLink
+          :external="true"
+          aria-label="Twitter"
+          to="https://www.twitter.com/mubaidr"
+        >
+          <Icon
+            name="i-ph-twitter-logo"
+            size="1.5em"
+          ></Icon>
+        </NuxtLink>
+
+        <NuxtLink
+          :external="true"
+          aria-label="LinkedIn"
+          to="https://www.linkedin.com/in/mubaidr"
+        >
+          <Icon
+            name="i-ph-linkedin-logo"
+            size="1.5em"
+          ></Icon>
+        </NuxtLink>
+
+        <ThemeSwitcher />
+      </div>
+    </nav>
+
+    <div class="text-center">
+      <CurrentTime />
     </div>
-  </nav>
+  </div>
 </template>
-
-<style></style>

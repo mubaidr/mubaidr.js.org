@@ -30,13 +30,12 @@ onUnmounted(() => {
     <a
       href="#"
       aria-label="Scroll to Top"
-      class="flex flex-col gap-2 items-center text-center bg-black p-4 text-white"
+      class="flex flex-col gap-2 items-center text-center bg-black p-4 text-white rounded"
     >
       <Icon
         name="i-ph-arrow-up"
-        size="2em"
+        size="1.5em"
       ></Icon>
-      <span class="text-xs font-semibold">Scroll to Top</span>
     </a>
   </div>
 </template>

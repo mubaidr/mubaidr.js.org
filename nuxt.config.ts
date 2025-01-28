@@ -1,8 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const IS_DEV = import.meta.dev
 
-console.log(IS_DEV)
-
 export default defineNuxtConfig({
   // @ts-ignore
   booster: {
@@ -54,16 +52,15 @@ export default defineNuxtConfig({
 
   debug: false,
 
-  // delayHydration: {
-  //   mode: "mount",
-  // },
+  delayHydration: {
+    mode: "mount",
+  },
 
   devtools: { enabled: IS_DEV },
 
   experimental: {
     typedPages: true,
     viewTransition: true,
-    componentIslands: true,
     buildCache: true,
   },
 
@@ -85,13 +82,13 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxtjs/color-mode",
-    // "@nuxt/fonts",
+    "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxtjs/seo",
     "@nuxtjs/tailwindcss",
     "nuxt-build-cache",
-    // "nuxt-delay-hydration",
+    "nuxt-delay-hydration",
     // "nuxt-feedme",
     "@nuxt/content",
   ],
@@ -110,9 +107,9 @@ export default defineNuxtConfig({
     "/**": {
       prerender: true,
     },
-    // '/blog/**': {
-    //   prerender: true,
-    // },
+    "/blog/**": {
+      prerender: true,
+    },
   },
 
   seo: {

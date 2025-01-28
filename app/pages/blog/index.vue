@@ -1,9 +1,10 @@
-<script setup>
+<script setup lang="ts">
 const blogCountLimit = 6
 
-const { data: count } = await useAsyncData(`content-blog-count`, async () => {
-  const _posts = await queryContent("/blog").only("headline").find()
-  return Math.ceil(_posts.length / blogCountLimit) || 0
+const { data: blogCount } = await useAsyncData("blog-count", async () => {
+  const posts = await queryCollection("blog").select("title").all()
+
+  return Math.ceil(posts.length / blogCountLimit) || 0
 })
 </script>
 
@@ -11,11 +12,8 @@ const { data: count } = await useAsyncData(`content-blog-count`, async () => {
   <main>
     <BlogHero />
 
-    <br />
-    <br />
-
-    <div id="main">
-      <ContentQuery
+    <div v-if="blogCount">
+      <!-- <ContentQuery
         path="/blog"
         :only="['headline', 'abstract', 'date', 'tags', '_path', 'image']"
         :sort="{
@@ -25,14 +23,14 @@ const { data: count } = await useAsyncData(`content-blog-count`, async () => {
         v-slot="{ data }"
       >
         <BlogList :data="data" />
-      </ContentQuery>
+      </ContentQuery> -->
 
       <BlogPagination
-        v-if="count > 1"
+        v-if="blogCount > 1"
         class="mt-8"
         :currentPage="1"
-        :totalPages="count"
-        :nextPage="count > 1"
+        :totalPages="blogCount"
+        :nextPage="blogCount > 1"
         baseUrl="/blog"
         pageUrl="/blog/page"
       />

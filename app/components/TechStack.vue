@@ -1,8 +1,6 @@
 <script lang="ts" setup></script>
 
 <template>
-  <h2>Tech Stack & Tools I Use</h2>
-  <h3>Frameworks and tools I use to craft projects:</h3>
   <div class="flex flex-wrap gap-2 justify-center">
     <Icon
       name="i-devicon-typescript"
