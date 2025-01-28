@@ -5,66 +5,66 @@
     Frameworks and tools I use to craft projects:
   </h2>
   <div class="flex flex-wrap gap-2 justify-center">
-    <Icon name="i-devicon-typescript"></Icon>
-    <Icon name="i-devicon-javascript"></Icon>
-    <Icon name="i-devicon-nodejs"></Icon>
-    <Icon name="i-devicon-nuxtjs"></Icon>
-    <Icon name="i-devicon-vuejs"></Icon>
-    <Icon name="i-devicon-vuetify"></Icon>
-    <Icon name="i-devicon-nestjs"></Icon>
-    <Icon name="i-devicon-express-wordmark"></Icon>    
-    <Icon name="i-devicon-php-plain"></Icon>
-    <Icon name="i-devicon-laravel-original"></Icon>
-    <Icon name="i-devicon-livewire-plain-wordmark"></Icon>
-    <Icon name="i-devicon-mysql-original"></Icon>
-    <Icon name="i-devicon-dot-net"></Icon>
-    <Icon name="i-devicon-csharp"></Icon>
-    <Icon name="i-devicon-postgresql"></Icon>
-    <Icon name="i-devicon-firebase"></Icon>
-    <Icon name="i-devicon-supabase"></Icon>
-    <Icon name="i-devicon-mongodb"></Icon>
-    <Icon name="i-devicon-redis"></Icon>
-    <Icon name="i-devicon-mysql"></Icon>
-    <Icon name="i-devicon-microsoftsqlserver"></Icon>
-    <Icon name="i-devicon-sqlite"></Icon>
-    <Icon name="i-devicon-docker"></Icon>
-    <Icon name="i-devicon-amazonwebservices-wordmark"></Icon>
-    <Icon name="i-devicon-googlecloud"></Icon>
-    <Icon name="i-devicon-cloudflare"></Icon>
-    <Icon name="i-devicon-heroku"></Icon>
-    <Icon name="i-devicon-nginx"></Icon>
-    <Icon name="i-devicon-git"></Icon>
-    <Icon name="i-devicon-github"></Icon>
-    <Icon name="i-devicon-githubactions"></Icon>
-    <Icon name="i-devicon-vitest"></Icon>
-    <Icon name="i-devicon-eslint"></Icon>
-    <Icon name="i-devicon-puppeteer"></Icon>
-    <Icon name="i-devicon-playwright"></Icon>
-    <Icon name="i-devicon-chrome"></Icon>
-    <Icon name="i-devicon-firefox"></Icon>
-    <Icon name="i-devicon-tailwindcss"></Icon>
-    <Icon name="i-devicon-css3"></Icon>
-    <Icon name="i-devicon-html5"></Icon>
-    <Icon name="i-devicon-opensuse"></Icon>
-    <Icon name="i-devicon-openapi"></Icon>
-    <Icon name="i-devicon-portainer"></Icon>
-    <Icon name="i-devicon-vitejs"></Icon>
-    <Icon name="i-devicon-json"></Icon>
-    <Icon name="i-devicon-adonisjs"></Icon>
-    <Icon name="i-devicon-electron"></Icon>
-    <Icon name="i-devicon-vscode"></Icon>
-    <Icon name="i-devicon-bash"></Icon>
-    <Icon name="i-devicon-fastify"></Icon>
-    <Icon name="i-devicon-figma"></Icon>
-    <Icon name="i-devicon-filezilla"></Icon>
-    <Icon name="i-devicon-lodash"></Icon>
-    <Icon name="i-devicon-pnpm"></Icon>
-    <Icon name="i-devicon-plotly"></Icon>
-    <Icon name="i-devicon-prisma"></Icon>
-    <Icon name="i-devicon-sass"></Icon>
-    <Icon name="i-devicon-storybook"></Icon>
-    <Icon name="i-devicon-netlify"></Icon>
-    <Icon name="i-devicon-vercel"></Icon>
-    <Icon name="i-devicon-azuresqldatabase"></Icon>
+    <Icon name="i-devicon-typescript" title="TypeScript"></Icon>
+    <Icon name="i-devicon-javascript" title="JavaScript"></Icon>
+    <Icon name="i-devicon-nodejs" title="Node.js"></Icon>
+    <Icon name="i-devicon-nuxtjs" title="Nuxt.js"></Icon>
+    <Icon name="i-devicon-vuejs" title="Vue.js"></Icon>
+    <Icon name="i-devicon-vuetify" title="Vuetify"></Icon>
+    <Icon name="i-devicon-nestjs" title="NestJS"></Icon>
+    <Icon name="i-devicon-express-wordmark" title="Express"></Icon>    
+    <Icon name="i-devicon-php-plain" title="PHP"></Icon>
+    <Icon name="i-devicon-laravel-original" title="Laravel"></Icon>
+    <Icon name="i-devicon-livewire-plain-wordmark" title="Livewire"></Icon>
+    <Icon name="i-devicon-mysql-original" title="MySQL"></Icon>
+    <Icon name="i-devicon-dot-net" title=".NET"></Icon>
+    <Icon name="i-devicon-csharp" title="C#"></Icon>
+    <Icon name="i-devicon-postgresql" title="PostgreSQL"></Icon>
+    <Icon name="i-devicon-firebase" title="Firebase"></Icon>
+    <Icon name="i-devicon-supabase" title="Supabase"></Icon>
+    <Icon name="i-devicon-mongodb" title="MongoDB"></Icon>
+    <Icon name="i-devicon-redis" title="Redis"></Icon>
+    <Icon name="i-devicon-mysql" title="MySQL"></Icon>
+    <Icon name="i-devicon-microsoftsqlserver" title="Microsoft SQL Server"></Icon>
+    <Icon name="i-devicon-sqlite" title="SQLite"></Icon>
+    <Icon name="i-devicon-docker" title="Docker"></Icon>
+    <Icon name="i-devicon-amazonwebservices-wordmark" title="Amazon Web Services"></Icon>
+    <Icon name="i-devicon-googlecloud" title="Google Cloud"></Icon>
+    <Icon name="i-devicon-cloudflare" title="Cloudflare"></Icon>
+    <Icon name="i-devicon-heroku" title="Heroku"></Icon>
+    <Icon name="i-devicon-nginx" title="Nginx"></Icon>
+    <Icon name="i-devicon-git" title="Git"></Icon>
+    <Icon name="i-devicon-github" title="GitHub"></Icon>
+    <Icon name="i-devicon-githubactions" title="GitHub Actions"></Icon>
+    <Icon name="i-devicon-vitest" title="Vitest"></Icon>
+    <Icon name="i-devicon-eslint" title="ESLint"></Icon>
+    <Icon name="i-devicon-puppeteer" title="Puppeteer"></Icon>
+    <Icon name="i-devicon-playwright" title="Playwright"></Icon>
+    <Icon name="i-devicon-chrome" title="Chrome"></Icon>
+    <Icon name="i-devicon-firefox" title="Firefox"></Icon>
+    <Icon name="i-devicon-tailwindcss" title="Tailwind CSS"></Icon>
+    <Icon name="i-devicon-css3" title="CSS3"></Icon>
+    <Icon name="i-devicon-html5" title="HTML5"></Icon>
+    <Icon name="i-devicon-opensuse" title="OpenSUSE"></Icon>
+    <Icon name="i-devicon-openapi" title="OpenAPI"></Icon>
+    <Icon name="i-devicon-portainer" title="Portainer"></Icon>
+    <Icon name="i-devicon-vitejs" title="ViteJS"></Icon>
+    <Icon name="i-devicon-json" title="JSON"></Icon>
+    <Icon name="i-devicon-adonisjs" title="AdonisJS"></Icon>
+    <Icon name="i-devicon-electron" title="Electron"></Icon>
+    <Icon name="i-devicon-vscode" title="VSCode"></Icon>
+    <Icon name="i-devicon-bash" title="Bash"></Icon>
+    <Icon name="i-devicon-fastify" title="Fastify"></Icon>
+    <Icon name="i-devicon-figma" title="Figma"></Icon>
+    <Icon name="i-devicon-filezilla" title="FileZilla"></Icon>
+    <Icon name="i-devicon-lodash" title="Lodash"></Icon>
+    <Icon name="i-devicon-pnpm" title="pnpm"></Icon>
+    <Icon name="i-devicon-plotly" title="Plotly"></Icon>
+    <Icon name="i-devicon-prisma" title="Prisma"></Icon>
+    <Icon name="i-devicon-sass" title="Sass"></Icon>
+    <Icon name="i-devicon-storybook" title="Storybook"></Icon>
+    <Icon name="i-devicon-netlify" title="Netlify"></Icon>
+    <Icon name="i-devicon-vercel" title="Vercel"></Icon>
+    <Icon name="i-devicon-azuresqldatabase" title="Azure SQL Database"></Icon>
   </div>
 </template>
