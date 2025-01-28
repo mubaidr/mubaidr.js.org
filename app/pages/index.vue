@@ -1,25 +1,37 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { data: allSections } = await useAsyncData("content-components", () => {
+  return queryCollection("components").all()
+})
+const aboutSection = allSections.value?.find(
+  (section) => section.path === "/components/about"
+)!
+const whatIDoSection = allSections.value?.find(
+  (section) => section.path === "/components/what-i-do"
+)!
+const getInTouchSection = allSections.value?.find(
+  (section) => section.path === "/components/get-in-touch"
+)!
+</script>
 
 <template>
   <main>
     <div>
-      <h2 class="text-3xl font-extrabold">Hey there!</h2>
-      <ContentDoc path="/about" />
+      <ContentRenderer :value="aboutSection" />
     </div>
 
     <div class="mt-12">
-      <h2 class="text-3xl font-extrabold">Tech Stack & Tools I Use</h2>
       <TechStack />
     </div>
 
     <div class="mt-12">
-      <h2 class="text-3xl font-extrabold">What I Do Well</h2>
-      <ContentDoc path="/what-i-do" />
+      <ContentRenderer :value="whatIDoSection" />
     </div>
 
-    <div class="mt-12">
-      <h2 class="text-3xl font-extrabold">Get In Touch</h2>
-      <ContentDoc path="/get-in-touch" />
+    <div
+      class="mt-12"
+      id="#got-an-exciting-project-to-talk-about"
+    >
+      <ContentRenderer :value="getInTouchSection" />
     </div>
   </main>
 </template>

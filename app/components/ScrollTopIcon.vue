@@ -1,21 +1,21 @@
 <script setup>
 // Scroll handling
-import { nextTick, onUnmounted, ref } from 'vue'
+import { nextTick, onUnmounted, ref } from "vue"
 const isVisible = ref(false)
 const handleScroll = () => {
   // Only run the code if we are on the client
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     const st = window.pageYOffset || document.documentElement.scrollTop
     isVisible.value = st > window.innerHeight / 2
   }
 }
-if (typeof window !== 'undefined') {
-  window.addEventListener('scroll', handleScroll)
+if (typeof window !== "undefined") {
+  window.addEventListener("scroll", handleScroll)
   nextTick(() => handleScroll())
 }
 onUnmounted(() => {
-  if (typeof window !== 'undefined') {
-    window.removeEventListener('scroll', handleScroll)
+  if (typeof window !== "undefined") {
+    window.removeEventListener("scroll", handleScroll)
   }
 })
 </script>
@@ -28,16 +28,14 @@ onUnmounted(() => {
     ]"
   >
     <a
-      href="#"
+      href="#header"
       aria-label="Scroll to Top"
-      class="flex flex-col gap-2 items-center text-center bg-black p-4 text-white"
+      class="flex flex-col gap-2 items-center text-center bg-black p-4 text-white rounded"
     >
-      <IconsArrowUp
-        class="w-4 h-4"
-        width="16"
-        height="16"
-      />
-      <span class="text-xs font-semibold">Scroll to Top</span>
+      <Icon
+        name="i-ph-arrow-up"
+        size="1.5em"
+      ></Icon>
     </a>
   </div>
 </template>

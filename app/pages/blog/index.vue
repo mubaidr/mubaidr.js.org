@@ -1,46 +1,33 @@
-<script setup>
-// definePageMeta({
-//   documentDriven: false,
-// })
+<script setup lang="ts">
+const blogPageCountLimit = 6
 
-// Find the number of blogs present
-const blogCountLimit = 6
+const { data: blogPageCount } = await useAsyncData("blog-count", async () => {
+  const posts = await queryCollection("blog").select("title").all()
 
-const { data: count } = await useAsyncData(`content-blog-count`, async () => {
-  const _posts = await queryContent('/blog').only('headline').find()
-  return Math.ceil(_posts.length / blogCountLimit) || 0
+  return Math.ceil(posts.length / blogPageCountLimit) || 0
 })
+
+// const { data: blogPosts } = await useAsyncData(`blog-posts-${}`, async () => {
+//   const posts = await queryCollection("blog").select("title").all()
+
+//   return Math.ceil(posts.length / blogPageCountLimit) || 0
+// })
 </script>
 
 <template>
   <main>
     <BlogHero />
 
-    <br />
-    <br />
-
-    <div id="main">
-      <ContentQuery
-        path="/blog"
-        :only="['headline', 'abstract', 'date', 'tags', '_path', 'image']"
-        :sort="{
-          date: -1,
-        }"
-        :limit="blogCountLimit"
-        v-slot="{ data }"
-      >
-        <BlogList :data="data" />
-      </ContentQuery>
+      <!-- <BlogList :data="blogPosts" /> -->
 
       <BlogPagination
-        v-if="count > 1"
+        v-if="blogPageCount && blogPageCount >= 1"
         class="mt-8"
         :currentPage="1"
-        :totalPages="count"
-        :nextPage="count > 1"
+        :totalPages="blogPageCount"
+        :nextPage="blogPageCount > 1"
         baseUrl="/blog"
         pageUrl="/blog/page"
       />
-    </div>
   </main>
 </template>

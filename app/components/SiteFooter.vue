@@ -1,18 +1,13 @@
 <template>
   <div
-    class="flex justify-between items-center py-6 md:py-12 border-t border-gray-500"
+    class="py-6 md:py-12 border-t border-gray-500"
   >
-    <div class="logo flex items-center">
-      <p class="flex items-center">
-        <Icon
+    <div class="flex items-center justify-center gap-2">
+      <Icon
           name="i-ph-copyright"
-          size="2em"
-          class="mr-1"
+          size="1.5em"
         ></Icon>
-        <span>2024 mubaidr</span>
-      </p>
+        <span>2025 Muhammad Ubaid Raza</span>
     </div>
-
-    <SocialLinks />
   </div>
 </template>
