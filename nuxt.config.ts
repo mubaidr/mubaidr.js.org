@@ -26,6 +26,8 @@ export default defineNuxtConfig({
     fallback: "light",
   },
 
+  css: ["./app/assets/css/main.scss"],
+
   compatibilityDate: "2025-01-01",
 
   content: {
@@ -107,9 +109,9 @@ export default defineNuxtConfig({
     "/**": {
       prerender: true,
     },
-    // "/blog/**": {
-    //   prerender: true,
-    // },
+    "/blog/**": {
+      prerender: false,
+    },
   },
 
   seo: {

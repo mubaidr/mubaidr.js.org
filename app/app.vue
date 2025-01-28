@@ -38,6 +38,6 @@ useHead({
     <SiteFooter />
 
     <!-- Scroll to top -->
-    <NavScrollTopIcon />
+    <ScrollTopIcon />
   </div>
 </template>

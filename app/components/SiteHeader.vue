@@ -1,6 +1,7 @@
 <template>
   <div>
     <nav
+      id="header"
       class="flex justify-between items-center py-6 md:py-12 border-b-2 border-gray-500"
     >
       <div class="flex gap-4 align-baseline"></div>

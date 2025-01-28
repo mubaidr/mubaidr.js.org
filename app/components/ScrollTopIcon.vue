@@ -28,7 +28,7 @@ onUnmounted(() => {
     ]"
   >
     <a
-      href="#"
+      href="#header"
       aria-label="Scroll to Top"
       class="flex flex-col gap-2 items-center text-center bg-black p-4 text-white rounded"
     >
