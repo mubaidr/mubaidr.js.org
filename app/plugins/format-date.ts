@@ -1,9 +1,14 @@
-import { defineNuxtPlugin } from '#app'
+import { defineNuxtPlugin } from "#app"
 
 export default defineNuxtPlugin(() => {
-    return {
-        provide: {
-            formatDate: (dateStr) => (dateStr ? Intl.DateTimeFormat('us-EN', { dateStyle: 'full' }).format(new Date(dateStr)) : undefined)
-        }
-    };
-});
+  return {
+    provide: {
+      formatDate: (dateStr: string) =>
+        dateStr
+          ? Intl.DateTimeFormat("us-EN", { dateStyle: "full" }).format(
+              new Date(dateStr)
+            )
+          : undefined,
+    },
+  }
+})

@@ -14,7 +14,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         document.querySelector(hash) ||
         new Promise((resolve) => {
           if (x > 0) {
-            return resolve(document.querySelector('#app'))
+            return resolve(document.querySelector("#app"))
           }
           // Need to set the timeout to something larger or equal than 300
           setTimeout(() => {
@@ -24,18 +24,18 @@ export default defineNuxtPlugin((nuxtApp) => {
       )
     }
 
-    if (to.hash && to.hash !== '#') {
+    if (to.hash && to.hash !== "#") {
       const el = await findEl(to.hash)
       if (el) {
         const offset =
           el.getBoundingClientRect().top + window.scrollY - navHeight
-        if ('scrollBehavior' in document.documentElement.style) {
-          return window.scrollTo({ top: offset, behavior: 'smooth' })
+        if ("scrollBehavior" in document.documentElement.style) {
+          return window.scrollTo({ top: offset, behavior: "smooth" })
         } else {
           return window.scrollTo(0, offset)
         }
       }
     }
-    return { left: 0, top: 0, behaviour: 'smooth' }
+    return { left: 0, top: 0, behaviour: "smooth" }
   }
 })

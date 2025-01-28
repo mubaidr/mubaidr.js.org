@@ -1,4 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+const IS_DEV = import.meta.dev
+
+console.log(IS_DEV)
+
 export default defineNuxtConfig({
   // @ts-ignore
   booster: {
@@ -24,54 +28,50 @@ export default defineNuxtConfig({
     fallback: "light",
   },
 
-  compatibilityDate: "2024-12-01",
+  compatibilityDate: "2025-01-01",
 
   content: {
-    contentHead: false,
-    documentDriven: false,
-    highlight: {
-      theme: "github-dark",
-      // preload: ["typescript", "javascript", "json", "bash"],
-    },
-    experimental: {
-      clientDB: true,
-    },
-    markdown: {
-      mdc: true,
-      toc: {
-        depth: 3,
+    preview: {
+      dev: IS_DEV,
+      api: "https://api.nuxt.studio",
+      gitInfo: {
+        name: "mubaidr.js.org",
+        owner: "mubaidr",
+        url: "https://github.com/mubaidr/mubaidr.js.org",
       },
-      rehypePlugins: [
-        [
-          "rehype-external-links",
-          {
+    },
+    build: {
+      markdown: {
+        rehypePlugins: {
+          "rehype-external-links": {
             target: "_blank",
             rel: "noopener noreferer",
           },
-        ],
-      ],
+        },
+      },
     },
   },
 
   debug: false,
 
-  delayHydration: {
-    mode: "mount",
-  },
+  // delayHydration: {
+  //   mode: "mount",
+  // },
 
-  devtools: { enabled: true },
+  devtools: { enabled: IS_DEV },
 
   experimental: {
     typedPages: true,
     viewTransition: true,
     componentIslands: true,
+    buildCache: true,
   },
 
   future: {
     compatibilityVersion: 4,
   },
 
-  fonts: {},
+  // fonts: {},
 
   image: {
     domains: ["mubaidr.js.org"],
@@ -85,16 +85,15 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxtjs/color-mode",
-    "@nuxt/content",
-    "@nuxt/fonts",
+    // "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxtjs/seo",
-    "@nuxthq/studio",
     "@nuxtjs/tailwindcss",
     "nuxt-build-cache",
-    "nuxt-delay-hydration",
-    "nuxt-feedme",
+    // "nuxt-delay-hydration",
+    // "nuxt-feedme",
+    "@nuxt/content",
   ],
 
   nitro: {
@@ -109,9 +108,6 @@ export default defineNuxtConfig({
 
   routeRules: {
     "/**": {
-      prerender: true,
-    },
-    "/_ipx/**": {
       prerender: true,
     },
     // '/blog/**': {
@@ -144,18 +140,13 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
-  studio: {
-    enabled: true,
-    gitInfo: {
-      name: "mubaidr.js.org",
-      owner: "mubaidr",
-      url: "https://github.com/mubaidr/mubaidr.js.org",
-    },
-  },
-
   tailwindcss: {
     configPath: "./tailwind.config",
     editorSupport: true,
+  },
+
+  typescript: {
+    strict: true,
   },
 
   vite: {

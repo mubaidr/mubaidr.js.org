@@ -1,13 +1,8 @@
 <script setup>
-// definePageMeta({
-//   documentDriven: false,
-// })
-
-// Find the number of blogs present
 const blogCountLimit = 6
 
 const { data: count } = await useAsyncData(`content-blog-count`, async () => {
-  const _posts = await queryContent('/blog').only('headline').find()
+  const _posts = await queryContent("/blog").only("headline").find()
   return Math.ceil(_posts.length / blogCountLimit) || 0
 })
 </script>

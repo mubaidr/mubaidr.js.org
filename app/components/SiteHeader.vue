@@ -13,15 +13,16 @@
     </h1>
 
     <div class="flex flex-row gap-4">
-      <NuxtLink
+      <!-- <NuxtLink
         to="/blog"
         class="text-xl font-semibold border-b-2 border-transparent"
         active-class="border-primary-600"
       >
         Blog
-      </NuxtLink>
+      </NuxtLink> -->
+      <div></div>
 
-      <ThemeSwitcher />
+      <!-- <ThemeSwitcher /> -->
     </div>
   </nav>
 </template>
