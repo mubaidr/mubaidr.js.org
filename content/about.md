@@ -1,6 +1,6 @@
 ### [A Bit About Me:]{.block.mb-4.text-xl.font-semibold}
 
-👋🏼 I'm Muhammad Ubaid Raza, a Software Engineer with 8+ years of experience.
+👋🏼 I'm Muhammad Ubaid Raza, a Software Engineer with 10+ years of experience.
 
 🎓 I Graduated in 2012 and completed Master's in Project Management in 2019.
 
@@ -14,6 +14,4 @@
 
 📚 I'm currently learning about DevOps and Cloud Computing.
 
-🎯 My goal is to become a Full Stack Developer and contribute to open-source projects.
-
-🔍 Explore my latest projects and contributions on my [GitHub Profile](https://github.com/mubaidr).
+🔍 Explore my latest projects and contributions on my [GitHub Profile](https://github.com/mubaidr){.text-underline}.
