@@ -55,7 +55,7 @@ export default defineNuxtConfig({
   debug: false,
 
   delayHydration: {
-    mode: "mount",
+    mode: "init",
   },
 
   devtools: { enabled: IS_DEV },

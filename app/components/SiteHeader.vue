@@ -13,12 +13,12 @@
         >
           Home
         </NuxtLink> -->
-        <NuxtLink
+        <!-- <NuxtLink
           to="/#got-an-exciting-project-to-talk-about"
           active-class="border-primary-600"
         >
           Contact Me
-        </NuxtLink>
+        </NuxtLink> -->
         <!-- <NuxtLink
           to="/blog"
           active-class="border-primary-600"
