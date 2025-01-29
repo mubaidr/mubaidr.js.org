@@ -3,7 +3,6 @@ html {
 }
 
 body {
-  overflow-y: scroll;
   font-family: Poppins;
-  @apply bg-amber-50 text-stone-700 dark:bg-stone-800 dark:text-amber-50;
+  @apply bg-amber-50 dark:bg-stone-800 overflow-y-scroll pt-32;
 }

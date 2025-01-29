@@ -1,4 +1,4 @@
-## Got an exciting project to talk about?
+## Get a Quote for Your Project
 
 Email me at <mubaidr@gmail.com>
 

@@ -1,24 +1,25 @@
 <template>
-  <div>
+  <div
+    class="fixed w-full z-50 top-0 left-0 pt-3 md:pt-6 bg-amber-50 dark:bg-stone-800 bg-opacity-80 backdrop-blur-lg"
+  >
     <nav
-      id="header"
-      class="flex justify-between items-center py-6 md:py-12 border-b-2 border-gray-500"
+      class="flex justify-between align-middle border-b-2 border-gray-500 pb-3 md:pb-6 px-3 md:px-6"
     >
-      <div class="flex gap-4 align-baseline"></div>
+      <div class="flex gap-4"></div>
 
-      <div class="flex gap-4 align-baseline">
+      <div class="flex gap-4">
         <!-- <NuxtLink
           to="/"
           active-class="border-primary-600"
         >
           Home
         </NuxtLink> -->
-        <!-- <NuxtLink
-          to="/#got-an-exciting-project-to-talk-about"
-          active-class="border-primary-600"
+        <NuxtLink
+          to="/#get-a-quote-for-your-project"
+          class="bg-amber-600 text-stone-100 px-4 rounded-full hover:shadow no-underline transition-shadow align-middle content-center"
         >
-          Contact Me
-        </NuxtLink> -->
+          Get a Free Quote
+        </NuxtLink>
         <!-- <NuxtLink
           to="/blog"
           active-class="border-primary-600"
@@ -68,3 +69,5 @@
     </div>
   </div>
 </template>
+
+<style lang="scss"></style>

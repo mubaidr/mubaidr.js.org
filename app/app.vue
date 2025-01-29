@@ -27,7 +27,9 @@ useHead({
 })
 </script>
 <template>
-  <div class="max-w-screen-lg mx-auto px-6 md:px-12 prose dark:prose-invert">
+  <div
+    class="max-w-screen-lg mx-auto px-6 md:px-12 prose dark:prose-invert text-pretty"
+  >
     <SiteHeader />
 
     <div class="my-6 md:my-12">
