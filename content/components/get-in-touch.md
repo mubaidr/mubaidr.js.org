@@ -1,5 +1,6 @@
 ## Get a Quote for Your Project
 
-Email me at <mubaidr@gmail.com>
+Let’s collaborate to bring your vision to life!
 
-Arrange a [meeting](https://cal.com/mubaidr)
+- Email me at <mubaidr@gmail.com>
+- Arrange a [meeting](https://cal.com/mubaidr)

@@ -1,5 +1,7 @@
 ## Tasks I Handle to Bring Your Vision to Life
 
+With expertise spanning across a wide range of technologies and tools, I am here to transform your ideas into reality. Whether it's developing robust backend systems, designing efficient databases, deploying scalable solutions, or creating seamless user interfaces, I am equipped to handle all aspects of your project.
+
 **Code**:
 
 - **Languages & Frameworks**: Node.js, TypeScript, JavaScript, Nuxt, VueJS, NestJs, ExpressJs, PHP, Laravel, ASP.NET, C#, T-SQL, HTML, CSS, SCSS, TailwindCSS, Pug, EJS.
@@ -27,7 +29,3 @@
 - **API Development**: REST API, GraphQL.
 - **Build Tools**: Vite, Webpack.
 - **UI/UX**: Responsive design, user experience optimization.
-
-With expertise spanning across a wide range of technologies and tools, I am here to transform your ideas into reality. Whether it's developing robust backend systems, designing efficient databases, deploying scalable solutions, or creating seamless user interfaces, I am equipped to handle all aspects of your project.
-
-Let’s collaborate to bring your vision to life!

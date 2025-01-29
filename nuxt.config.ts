@@ -93,6 +93,8 @@ export default defineNuxtConfig({
     "nuxt-delay-hydration",
     // "nuxt-feedme",
     "@nuxt/content",
+    "nuxt-marquee",
+    "vue3-carousel-nuxt",
   ],
 
   nitro: {

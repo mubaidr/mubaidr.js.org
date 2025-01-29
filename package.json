@@ -19,7 +19,9 @@
     "nuxt-build-cache": "^0.1.1",
     "nuxt-delay-hydration": "^1.3.8",
     "nuxt-feedme": "^1.0.1",
-    "sass-embedded": "^1.83.4"
+    "nuxt-marquee": "1.0.4",
+    "sass-embedded": "^1.83.4",
+    "vue3-carousel-nuxt": "1.1.5"
   },
   "engines": {
     "node": ">=23",
@@ -30,6 +32,7 @@
     "vite": "npm:vite@latest",
     "vue": "npm:vue@latest"
   },
+  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0",
   "pnpm": {},
   "private": true,
   "scripts": {

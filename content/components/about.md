@@ -1,6 +1,6 @@
 # Hi, I'm Muhammad Ubaid Raza
 
-> I turn ideas into high-performing websites that drive business growth
+I turn ideas into high-performing websites that drive business growth
 
 **Experience**: Software Engineer with over 10 years of experience in the industry.
 

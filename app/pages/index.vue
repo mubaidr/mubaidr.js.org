@@ -20,7 +20,7 @@ const getInTouchSection = allSections.value?.find(
     </div>
 
     <div class="mt-12">
-      <TechStack />
+      <ClientTestimonials />
     </div>
 
     <div class="mt-12">
@@ -28,7 +28,7 @@ const getInTouchSection = allSections.value?.find(
     </div>
 
     <div class="mt-12">
-      <ClientTestimonials />
+      <TechStack />
     </div>
 
     <div
