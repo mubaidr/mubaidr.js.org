@@ -18,16 +18,10 @@ const isDark = computed({
     @click="isDark = !isDark"
   >
     <div v-show="isDark">
-      <Icon
-        name="i-ph-moon"
-        size="1.5em"
-      ></Icon>
+      <Icon name="i-ph-moon"></Icon>
     </div>
     <div v-show="!isDark">
-      <Icon
-        name="i-ph-sun"
-        size="1.5em"
-      ></Icon>
+      <Icon name="i-ph-sun"></Icon>
     </div>
   </button>
 </template>

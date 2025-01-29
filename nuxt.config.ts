@@ -72,6 +72,14 @@ export default defineNuxtConfig({
 
   // fonts: {},
 
+  icon: {
+    size: "1.5em",
+    clientBundle: {
+      scan: true,
+    },
+    // provider: 'iconify'
+  },
+
   image: {
     domains: ["mubaidr.js.org"],
     format: ["webp"],

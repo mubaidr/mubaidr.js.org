@@ -41,10 +41,7 @@ onUnmounted(() => {
       class="flex flex-col gap-2 items-center text-center bg-black p-4 text-white rounded-full"
       @click="scrollToTop"
     >
-      <Icon
-        name="i-ph-arrow-up"
-        size="1.5em"
-      ></Icon>
+      <Icon name="i-ph-arrow-up"></Icon>
     </button>
   </div>
 </template>

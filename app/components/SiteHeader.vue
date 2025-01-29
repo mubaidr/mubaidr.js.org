@@ -32,10 +32,7 @@
           aria-label="Github"
           to="https://github.com/mubaidr"
         >
-          <Icon
-            name="i-ph-github-logo"
-            size="1.5em"
-          ></Icon>
+          <Icon name="i-ph-github-logo"></Icon>
         </NuxtLink>
 
         <NuxtLink
@@ -43,10 +40,7 @@
           aria-label="Twitter"
           to="https://www.twitter.com/mubaidr"
         >
-          <Icon
-            name="i-ph-twitter-logo"
-            size="1.5em"
-          ></Icon>
+          <Icon name="i-ph-twitter-logo"></Icon>
         </NuxtLink>
 
         <NuxtLink
@@ -54,10 +48,7 @@
           aria-label="LinkedIn"
           to="https://www.linkedin.com/in/mubaidr"
         >
-          <Icon
-            name="i-ph-linkedin-logo"
-            size="1.5em"
-          ></Icon>
+          <Icon name="i-ph-linkedin-logo"></Icon>
         </NuxtLink>
 
         <ThemeSwitcher />
