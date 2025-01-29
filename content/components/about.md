@@ -1,6 +1,6 @@
 # Hi, I'm Muhammad Ubaid Raza
 
-I turn ideas into high-performing websites that drive business growth
+I turn ideas into high-performing applications that drive business growth and enhance user experience. I specialize in developing web applications, desktop applications, browser extensions, APIs, and microservices using modern technologies and best practices.
 
 **Experience**: Software Engineer with over 10 years of experience in the industry.
 

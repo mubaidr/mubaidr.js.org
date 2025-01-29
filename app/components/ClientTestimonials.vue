@@ -22,9 +22,9 @@ const { data: testimonials } = useAsyncData("testimonials", async () => {
         :key="testimonial.name"
       >
         <div
-          class="carousel__item bg-amber-100 px-6 md:px-12 py-3 md:py-6 bg-opacity-75 rounded w-full justify-center text-center"
+          class="carousel__item bg-amber-100 dark:bg-stone-700 px-6 md:px-12 py-3 md:py-6 bg-opacity-75 rounded w-full justify-center text-center"
         >
-          <p>
+          <p class="text-base md:text-lg font-light">
             {{ testimonial.quote }}
           </p>
 
@@ -39,7 +39,7 @@ const { data: testimonials } = useAsyncData("testimonials", async () => {
               </template>
               <template v-else>
                 <div
-                  class="w-16 h-16 rounded bg-amber-600 text-stone-50 text-3xl font-semibold text-center justify-center align-middle mx-auto"
+                  class="w-16 h-16 rounded bg-amber-600 text-stone-50 text-5xl font-semibold text-center justify-center align-middle content-center mx-auto"
                 >
                   {{ testimonial.name[0] }}
                 </div>

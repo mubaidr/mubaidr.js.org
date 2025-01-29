@@ -27,10 +27,6 @@ const getInTouchSection = allSections.value?.find(
       <ContentRenderer :value="whatIDoSection" />
     </div>
 
-    <div class="mt-12">
-      <TechStack />
-    </div>
-
     <div
       class="mt-12"
       id="#got-an-exciting-project-to-talk-about"

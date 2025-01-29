@@ -64,7 +64,7 @@
       </div>
     </nav>
 
-    <div class="text-center">
+    <div class="text-center px-3 md:px-6">
       <CurrentTime />
     </div>
   </div>

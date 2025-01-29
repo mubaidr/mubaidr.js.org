@@ -55,7 +55,7 @@ export default defineNuxtConfig({
   debug: false,
 
   delayHydration: {
-    mode: "init",
+    mode: "mount",
   },
 
   devtools: { enabled: IS_DEV },
@@ -86,7 +86,8 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxt/fonts",
     "@nuxt/icon",
-    "@nuxt/image",
+    // "@nuxt/image",
+    "@nuxtjs/mdc",
     "@nuxtjs/seo",
     "@nuxtjs/tailwindcss",
     "nuxt-build-cache",
