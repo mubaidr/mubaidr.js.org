@@ -36,7 +36,7 @@ export default defineNuxtConfig({
   debug: false,
 
   delayHydration: {
-    mode: "mount",
+    mode: "init",
   },
 
   devtools: { enabled: IS_DEV },
@@ -103,12 +103,11 @@ export default defineNuxtConfig({
 
   routeRules: {
     "/**": {
-      static: true,
+      prerender: true,
     },
-    // Blog posts page generated on demand, revalidates in background, cached on CDN for 1 hour (3600 seconds)
-    "/blog": { isr: 3600 },
-    // Blog post page generated on demand once until next deployment, cached on CDN
-    "/blog/**": { isr: true },
+    "/blog/**": {
+      prerender: true,
+    },
   },
 
   seo: {

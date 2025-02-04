@@ -39,7 +39,7 @@ const { data: testimonials } = useAsyncData("testimonials", async () => {
               </template>
               <template v-else>
                 <div
-                  class="w-16 h-16 rounded bg-amber-600 text-stone-50 text-5xl font-semibold text-center justify-center align-middle content-center mx-auto"
+                  class="w-16 h-16 rounded bg-amber-700 text-stone-50 text-5xl font-semibold text-center justify-center align-middle content-center mx-auto"
                 >
                   {{ testimonial.name[0] }}
                 </div>
