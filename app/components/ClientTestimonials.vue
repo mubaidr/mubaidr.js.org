@@ -3,7 +3,7 @@ import "vue3-carousel/carousel.css"
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel"
 
 const carouselConfig = {
-  autoplay: 2500,
+  autoplay: 5000,
   itemsToShow: 1,
   wrapAround: true,
   gap: 16,
@@ -15,16 +15,16 @@ const { data: testimonials } = useAsyncData("testimonials", async () => {
 </script>
 
 <template>
-  <div>
+  <div class="not-prose">
     <Carousel v-bind="carouselConfig">
       <Slide
         v-for="testimonial in testimonials"
         :key="testimonial.name"
       >
         <div
-          class="carousel__item bg-amber-100 dark:bg-stone-700 px-6 md:px-12 py-3 md:py-6 bg-opacity-75 rounded w-full justify-center text-center"
+          class="carousel__item bg-amber-100 dark:bg-stone-700 px-6 md:px-12 py-3 md:py-6 bg-opacity-75 rounded-xl w-full justify-center text-center"
         >
-          <p class="text-base md:text-lg font-light">
+          <p class="text-lg md:text-xl font-light mb-6">
             {{ testimonial.quote }}
           </p>
 
@@ -45,7 +45,7 @@ const { data: testimonials } = useAsyncData("testimonials", async () => {
                 </div>
               </template>
             </div>
-            <span class="font-semibold">{{ testimonial.name }}</span>
+            <span>{{ testimonial.name }}</span>
           </div>
         </div>
       </Slide>

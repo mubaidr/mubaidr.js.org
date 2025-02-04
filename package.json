@@ -3,9 +3,9 @@
     "vue": "latest"
   },
   "devDependencies": {
-    "@iconify-json/devicon": "^1.2.12",
+    "@iconify-json/devicon": "^1.2.13",
     "@iconify-json/ph": "^1.2.2",
-    "@nuxt/content": "^3.0.1",
+    "@nuxt/content": "^3.1.0",
     "@nuxt/fonts": "^0.10.3",
     "@nuxt/icon": "^1.10.3",
     "@nuxt/image": "^1.9.0",
@@ -33,7 +33,7 @@
     "vite": "npm:vite@latest",
     "vue": "npm:vue@latest"
   },
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@10.2.0",
   "private": true,
   "scripts": {
     "build": "nuxt build",
