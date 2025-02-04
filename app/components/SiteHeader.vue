@@ -16,7 +16,7 @@
         </NuxtLink> -->
         <NuxtLink
           to="/#get-a-quote-for-your-project"
-          class="bg-amber-600 text-stone-50 px-4 rounded-full hover:shadow no-underline transition-shadow align-middle content-center"
+          class="bg-amber-600 text-white px-4 rounded-full hover:shadow no-underline transition-shadow align-middle content-center"
         >
           Get a Free Quote
         </NuxtLink>
