@@ -2,25 +2,6 @@
 const IS_DEV = import.meta.dev
 
 export default defineNuxtConfig({
-  // @ts-ignore
-  booster: {
-    detection: {
-      performance: true,
-      browserSupport: true,
-    },
-
-    performanceMetrics: {
-      device: {
-        hardwareConcurrency: { min: 2, max: 48 },
-        deviceMemory: { min: 2 },
-      },
-      timing: {
-        fcp: 800,
-        dcl: 1200,
-      },
-    },
-  },
-
   colorMode: {
     preference: "system",
     fallback: "light",
@@ -64,6 +45,7 @@ export default defineNuxtConfig({
     typedPages: true,
     viewTransition: true,
     buildCache: true,
+    asyncEntry: true,
   },
 
   future: {
@@ -80,11 +62,11 @@ export default defineNuxtConfig({
     // provider: 'iconify'
   },
 
-  image: {
-    domains: ["mubaidr.js.org"],
-    format: ["webp"],
-    quality: 80,
-  },
+  // image: {
+  //   domains: ["mubaidr.js.org"],
+  //   format: ["webp"],
+  //   quality: 80,
+  // },
 
   linkChecker: {
     enabled: true,
@@ -113,16 +95,20 @@ export default defineNuxtConfig({
       failOnError: false,
       autoSubfolderIndex: true,
     },
-    compressPublicAssets: true,
+    compressPublicAssets: {
+      brotli: true,
+      gzip: true,
+    },
   },
 
   routeRules: {
     "/**": {
-      prerender: true,
+      static: true,
     },
-    "/blog/**": {
-      prerender: false,
-    },
+    // Blog posts page generated on demand, revalidates in background, cached on CDN for 1 hour (3600 seconds)
+    "/blog": { isr: 3600 },
+    // Blog post page generated on demand once until next deployment, cached on CDN
+    "/blog/**": { isr: true },
   },
 
   seo: {
