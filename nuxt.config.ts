@@ -12,6 +12,30 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-01-01",
 
   content: {
+    build: {
+      markdown: {
+        rehypePlugins: {
+          "rehype-external-links": {
+            target: "_blank",
+            rel: "noopener noreferer",
+          },
+        },
+        highlight: {
+          theme: {
+            // Default theme (same as single string)
+            default: "github-light",
+            // Theme used if `html.dark`
+            dark: "github-dark",
+            // Theme used if `html.sepia`
+            sepia: "monokai",
+          },
+        },
+        toc: {
+          depth: 2,
+          searchDepth: 2,
+        },
+      },
+    },
     preview: {
       dev: IS_DEV,
       api: "https://api.nuxt.studio",
@@ -21,15 +45,8 @@ export default defineNuxtConfig({
         url: "https://github.com/mubaidr/mubaidr.js.org",
       },
     },
-    build: {
-      markdown: {
-        rehypePlugins: {
-          "rehype-external-links": {
-            target: "_blank",
-            rel: "noopener noreferer",
-          },
-        },
-      },
+    renderer: {
+      anchorLinks: true,
     },
   },
 
@@ -52,14 +69,13 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
-  // fonts: {},
+  fonts: {},
 
   icon: {
     size: "1.5em",
     clientBundle: {
       scan: true,
     },
-    // provider: 'iconify'
   },
 
   // image: {
@@ -86,6 +102,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "nuxt-marquee",
     "vue3-carousel-nuxt",
+    "@nuxtjs/web-vitals",
   ],
 
   nitro: {
@@ -103,17 +120,16 @@ export default defineNuxtConfig({
 
   routeRules: {
     "/**": {
-      prerender: true,
+      static: true,
     },
     "/blog/**": {
-      prerender: true,
+      static: true,
     },
   },
 
   seo: {
     automaticDefaults: true,
     enabled: true,
-    // redirectToCanonicalSiteUrl: true,
   },
 
   site: {
@@ -152,5 +168,14 @@ export default defineNuxtConfig({
         },
       },
     },
+    build: {
+      cssCodeSplit: true,
+    },
+  },
+
+  webVitals: {
+    // provider: '', // auto detectd
+    debug: false,
+    disabled: true,
   },
 })

@@ -1,23 +1,11 @@
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from "vue"
-
-// Reactive time variable
+// Reactive time and weather variables
 let interval: number
 const currentTime = ref<string>("")
-
-const { data: weatherData } = await useFetch<WeatherData>(
-  "https://api.openweathermap.org/data/2.5/weather",
-  {
-    params: {
-      q: "Rawalpindi,PK", // City and country code
-      appid: "d903c9eb7a15022580eb78e3bfe46cad", // Replace with your OpenWeather API key
-      units: "metric", // Use 'imperial' for Fahrenheit
-    },
-  }
-)
+const weatherData = ref<any>(null)
 
 // Update time every second
-const updateTime = () => {
+async function updateTime() {
   currentTime.value = new Intl.DateTimeFormat("en-PK", {
     hour: "2-digit",
     minute: "2-digit",
@@ -27,8 +15,25 @@ const updateTime = () => {
   }).format(new Date())
 }
 
+// Fetch weather data
+async function fetchWeatherData() {
+  try {
+    const response = await fetch(
+      "https://api.openweathermap.org/data/2.5/weather?q=Rawalpindi,PK&appid=d903c9eb7a15022580eb78e3bfe46cad&units=metric"
+    )
+
+    if (!response.ok) {
+      console.error("Failed to fetch weather data")
+    }
+
+    weatherData.value = await response.json()
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 onMounted(() => {
-  updateTime() // Initial update
+  fetchWeatherData() // Fetch weather data on mount
   interval = window.setInterval(updateTime, 1000) // Update every second
 })
 

@@ -1,16 +1,25 @@
-## Tasks I Handle to Bring Your Vision to Life
+## 🛠️ Tech Stack & Tools
 
-With expertise spanning across a wide range of technologies and tools, I am here to transform your ideas into reality. Whether it's developing robust backend systems, designing efficient databases, deploying scalable solutions, or creating seamless user interfaces, I am equipped to handle all aspects of your project.
+I leverage modern technologies to build scalable, high-performance applications.
 
-::TechStack
-::
+### Development & Frameworks
 
-**Code**: Node.js, TypeScript, JavaScript, Nuxt, VueJS, NestJs, ExpressJs, PHP, Laravel, ASP.NET, C#, T-SQL, HTML, CSS, SCSS, TailwindCSS, Pug, EJS.
+- **Languages & Backend:** Node.js, TypeScript, JavaScript, PHP, C#, T-SQL
+- **Frontend & UI:** Nuxt, Vue.js, NestJS, ExpressJS, Laravel, ASP.NET
+- **Styling:** TailwindCSS, SCSS, Pug, EJS, HTML, CSS
 
-**Testing**: Jest, Vitest, TDD.
+### Testing & Quality Assurance
 
-**Data**: PostgreSQL, Firebase, Supabase, MongoDB, Redis, Memcached, MySQL, SQL Server, SQLite.
+- Jest, Vitest, Test-Driven Development (TDD)
 
-**Deployment**: Docker, AWS, Cloudflare, Heroku, Nginx, GitHub Actions, CircleCI, CI/CD.
+### Databases & Storage
 
-**Others**: Puppeteer, Selenium, Web Scraping, Browser Extensions, REST API, GraphQL, Vite, Webpack, Responsive design, UX optimization.
+- PostgreSQL, Firebase, Supabase, MongoDB, Redis, Memcached, MySQL, SQL Server, SQLite
+
+### DevOps & Deployment
+
+- Docker, AWS, Cloudflare, Heroku, Nginx, GitHub Actions, CircleCI, CI/CD
+
+### Additional Expertise
+
+- Puppeteer, Selenium, Web Scraping, Browser Extensions, REST API, GraphQL, Vite, Webpack, Performance Optimization, Responsive Design

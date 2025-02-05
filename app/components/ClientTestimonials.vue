@@ -15,45 +15,48 @@ const { data: testimonials } = useAsyncData("testimonials", async () => {
 </script>
 
 <template>
-  <div class="not-prose">
-    <Carousel v-bind="carouselConfig">
-      <Slide
-        v-for="testimonial in testimonials"
-        :key="testimonial.name"
-      >
-        <div
-          class="carousel__item bg-amber-100 dark:bg-stone-700 px-6 md:px-12 py-3 md:py-6 bg-opacity-75 rounded-xl w-full justify-center text-center"
+  <div>
+    <h2>💬 What Clients Say About My Work</h2>
+    <div class="not-prose">
+      <Carousel v-bind="carouselConfig">
+        <Slide
+          v-for="testimonial in testimonials"
+          :key="testimonial.name"
         >
-          <p class="text-lg md:text-xl font-light mb-6">
-            {{ testimonial.quote }}
-          </p>
+          <div
+            class="carousel__item bg-amber-100 dark:bg-stone-700 px-6 md:px-12 py-3 md:py-6 bg-opacity-75 rounded w-full justify-center text-center"
+          >
+            <p class="text-lg md:text-xl font-light mb-6">
+              {{ testimonial.quote }}
+            </p>
 
-          <div>
-            <div class="text-center">
-              <template v-if="testimonial.avatar">
-                <img
-                  :src="testimonial.avatar"
-                  :alt="testimonial.name"
-                  class="w-16 h-16 rounded mx-auto my-0"
-                />
-              </template>
-              <template v-else>
-                <div
-                  class="w-16 h-16 rounded bg-amber-700 text-stone-50 text-5xl font-semibold text-center justify-center align-middle content-center mx-auto"
-                >
-                  {{ testimonial.name[0] }}
-                </div>
-              </template>
+            <div>
+              <div class="text-center">
+                <template v-if="testimonial.avatar">
+                  <img
+                    :src="testimonial.avatar"
+                    :alt="testimonial.name"
+                    class="w-16 h-16 rounded mx-auto my-0"
+                  />
+                </template>
+                <template v-else>
+                  <div
+                    class="w-16 h-16 rounded bg-amber-700 text-stone-50 text-5xl font-semibold text-center justify-center align-middle content-center mx-auto"
+                  >
+                    {{ testimonial.name[0] }}
+                  </div>
+                </template>
+              </div>
+              <span>{{ testimonial.name }}</span>
             </div>
-            <span>{{ testimonial.name }}</span>
           </div>
-        </div>
-      </Slide>
+        </Slide>
 
-      <template #addons>
-        <Navigation />
-        <!-- <Pagination /> -->
-      </template>
-    </Carousel>
+        <template #addons>
+          <Navigation />
+          <!-- <Pagination /> -->
+        </template>
+      </Carousel>
+    </div>
   </div>
 </template>

@@ -8,7 +8,7 @@ const handleScroll = () => {
   // Only run the code if we are on the client
   if (typeof window !== "undefined") {
     const st = window.pageYOffset || document.documentElement.scrollTop
-    isVisible.value = st > window.innerHeight / 2
+    isVisible.value = st > window.innerHeight / 3
   }
 }
 
@@ -31,14 +31,14 @@ onUnmounted(() => {
 <template>
   <div
     :class="[
-      'fixed flex flex-col items-center w-24 z-20 bottom-[132px] right-0 transform duration-150 p-6',
+      'fixed flex flex-col items-center w-24 z-20 bottom-[96px] right-0 transform duration-150 p-6',
       isVisible ? '' : 'translate-x-full',
     ]"
   >
     <button
       type="button"
       aria-label="Scroll to Top"
-      class="flex flex-col gap-2 items-center text-center bg-black p-4 text-white rounded-full"
+      class="flex flex-col gap-2 items-center text-center bg-amber-700 p-4 text-white rounded-full"
       @click="scrollToTop"
     >
       <Icon name="i-ph-arrow-up"></Icon>

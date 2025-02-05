@@ -1,11 +1,28 @@
-# Hi, I'm Muhammad Ubaid Raza
+# 👋 Hi, I'm Muhammad Ubaid Raza
 
-**Experience**: Senior Software Engineer with over 10 years of experience in the industry.
+> Senior Software Engineer | Full-Stack Developer | DevOps Enthusiast
 
-**Educational Background**: Graduated in 2012 with a Bachelor's degree in Software Engineering. Completed a Master's in Project Management in 2019.
+## 🚀 **About Me**
 
-**Current Role**: Working remotely as a freelancer, I deliver customized and scalable solutions tailored to meet the unique needs of my clients.
+I’m a Senior Software Engineer with 10+ years of experience in building scalable web applications, SaaS platforms, and browser extensions. I specialize in full-stack development, focusing on modern JavaScript/TypeScript frameworks (Vue, Nuxt, Node.js) and cloud-native solutions.
 
-**Continuous Learning**: Currently enhancing my skills in DevOps and Cloud Computing to stay ahead of the curve and provide the best solutions.
-<!--
-**Explore My Work**: Check out my latest projects and contributions on my [GitHub Profile](https://github.com/mubaidr) -->
+### 🎓 **Educational Background**
+
+- Bachelor's in Software Engineering (2012)
+- Master's in Project Management (2019)
+
+### 💼 **Current Role & Expertise**
+
+As a remote developer, I help businesses develop custom software solutions optimized for performance, scalability, and security. My expertise includes:
+
+- Full-Stack & SaaS Development
+- Browser Extensions
+- Cloud & DevOps
+- Frontend & UI/UX
+
+::TechStack
+::
+
+### 📈 **Continuous Learning & Future Goals**
+
+I’m currently expanding my knowledge in DevOps, Cloud Computing, and AI-driven development to build the next generation of web applications. My goal is to create open-source tools, launch scalable SaaS products, and contribute to developer communities.

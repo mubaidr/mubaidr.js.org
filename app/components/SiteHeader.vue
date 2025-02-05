@@ -1,13 +1,13 @@
 <template>
   <div
-    class="fixed w-full z-50 top-0 left-0 pt-3 md:pt-6 bg-amber-50 dark:bg-stone-800 bg-opacity-75 backdrop-blur-lg"
+    class="fixed w-full z-50 top-0 left-0 pt-3 md:pt-6 bg-opacity-75 backdrop-blur-lg"
   >
     <nav
-      class="flex justify-between align-middle border-b-2 border-amber-700 pb-3 md:pb-6 px-3 md:px-6"
+      class="flex justify-between border-b-2 border-amber-700 pb-3 md:pb-6 px-3 md:px-6"
     >
-      <div class="flex gap-4"></div>
+      <div class="inline-flex gap-4"></div>
 
-      <div class="flex gap-4">
+      <div class="inline-flex gap-4">
         <!-- <NuxtLink
           to="/"
           active-class="border-primary-600"
@@ -16,8 +16,9 @@
         </NuxtLink> -->
         <NuxtLink
           to="/#get-a-quote-for-your-project"
-          class="bg-amber-700 text-white px-4 rounded-full hover:shadow no-underline transition-shadow align-middle content-center"
+          class="bg-amber-700 text-white px-4 rounded-full hover:shadow no-underline transition-shadow font-semibold inline-flex gap-1 align-middle"
         >
+          <Icon name="i-ph-lightning"></Icon>
           Get a Free Quote
         </NuxtLink>
         <!-- <NuxtLink
