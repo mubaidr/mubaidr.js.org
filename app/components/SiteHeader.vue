@@ -16,7 +16,7 @@
         </NuxtLink> -->
         <NuxtLink
           to="/#get-a-quote-for-your-project"
-          class="bg-amber-700 text-white px-4 rounded-full hover:shadow no-underline transition-shadow font-semibold inline-flex gap-1 align-middle"
+          class="bg-amber-700 text-white px-4 rounded-full hover:shadow no-underline transition-shadow font-semibold inline-flex gap-1 items-center"
         >
           <Icon name="i-ph-lightning"></Icon>
           Get a Free Quote
