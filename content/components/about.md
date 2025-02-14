@@ -4,7 +4,7 @@
 
 ## 🚀 **About Me**
 
-I’m a Senior Software Engineer with 10+ years of experience in building scalable web applications, SaaS platforms, and browser extensions. I specialize in full-stack development, focusing on modern JavaScript/TypeScript frameworks (Vue, Nuxt, Node.js) and cloud-native solutions.
+I’m a Senior Software Engineer with 10+ years of experience in building scalable web applications, SaaS platforms, and browser extensions.
 
 ### 🎓 **Educational Background**
 
@@ -20,7 +20,7 @@ As a remote developer, I help businesses develop custom software solutions optim
 - Cloud & DevOps
 - Frontend & UI/UX
 
-::TechStack
+::tech-stack
 ::
 
 ### 📈 **Continuous Learning & Future Goals**
