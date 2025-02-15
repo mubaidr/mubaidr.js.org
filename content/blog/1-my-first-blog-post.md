@@ -1,16 +1,17 @@
 ---
-title: 'My First Blog Post | Blog'
-description: 'My First Blog Post'
-headline: 'Introduction to My Blog'
-abstract: 'Discover why I started this blog, what you can expect, and how we can connect as a community.'
-date: '2024-07-16T12:00:00'
-dateUpdated: ''
-author: 'Muhammad Ubaid Raza'
-authorUrl: '/'
+title: My First Blog Post | Blog
+description: My First Blog Post
+headline: Introduction to My Blog
+abstract: Discover why I started this blog, what you can expect, and how we can
+  connect as a community.
+date: 2024-07-16T12:00:00
+dateUpdated: ""
+author: Muhammad Ubaid Raza
+authorUrl: /
 socialImage:
-  src: '/img/blog/2-my-vscode-setup/typescript-dark.png'
-  mime: 'png'
-  alt: 'Mountain'
+  src: /img/blog/2-my-vscode-setup/typescript-dark.png
+  mime: png
+  alt: Mountain
   width: 1200
   height: 630
 ---
