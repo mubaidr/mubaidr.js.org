@@ -36,6 +36,8 @@ useHead({
   >
     <SiteHeader />
 
+    <br />
+
     <div class="my-6 md:my-12">
       <NuxtRouteAnnouncer />
       <NuxtPage />

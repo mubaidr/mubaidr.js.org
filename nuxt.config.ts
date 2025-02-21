@@ -4,7 +4,7 @@ const IS_DEV = import.meta.dev
 export default defineNuxtConfig({
   colorMode: {
     preference: "system",
-    fallback: "light",
+    fallback: "dark",
   },
 
   css: ["./app/assets/css/main.scss"],
@@ -72,7 +72,6 @@ export default defineNuxtConfig({
   fonts: {},
 
   icon: {
-    size: "1.5em",
     clientBundle: {
       scan: true,
     },

@@ -75,7 +75,7 @@ const icons = ref([
         :key="icon.name"
         :name="icon.name"
         :title="icon.title"
-        size="3em"
+        size="4em"
       ></Icon>
     </NuxtMarquee>
   </div>

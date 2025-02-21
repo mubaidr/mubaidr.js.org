@@ -1,24 +1,26 @@
 <template>
-  <div
-    class="fixed w-full z-50 top-0 left-0 pt-3 md:pt-6 bg-opacity-75 backdrop-blur-lg"
-  >
+  <div class="fixed w-full z-50 top-0 left-0 bg-opacity-75 backdrop-blur-lg">
     <nav
-      class="flex justify-between border-b-2 border-amber-700 pb-3 md:pb-6 px-3 md:px-6"
+      class="flex justify-between border-b-2 border-amber-700 py-6 px-3 md:px-6"
     >
-      <div class="inline-flex gap-4"></div>
-
-      <div class="inline-flex gap-4">
+      <div class="flex gap-2">
         <!-- <NuxtLink
           to="/"
           active-class="border-primary-600"
         >
           Home
         </NuxtLink> -->
+      </div>
+
+      <div class="flex gap-2">
         <NuxtLink
           to="/#get-a-quote-for-your-project"
-          class="bg-amber-700 text-white px-4 rounded-full hover:shadow no-underline transition-shadow font-semibold inline-flex gap-1 items-center"
+          class="group text-amber-700 border-2 border-amber-700 px-4 rounded-full no-underline h-8 text-lg leading-none flex gap-2 items-center"
         >
-          <Icon name="i-ph-lightning"></Icon>
+          <Icon
+            name="i-ph-lightning-fill"
+            class="transition-transform group-hover:scale-150"
+          ></Icon>
           Get a Free Quote
         </NuxtLink>
         <!-- <NuxtLink
@@ -32,24 +34,36 @@
           :external="true"
           aria-label="Github"
           to="https://github.com/mubaidr"
+          class="h-8"
         >
-          <Icon name="i-ph-github-logo"></Icon>
+          <Icon
+            name="i-ph-github-logo"
+            class="text-amber-700"
+          ></Icon>
         </NuxtLink>
 
         <NuxtLink
           :external="true"
           aria-label="Twitter"
           to="https://www.twitter.com/mubaidr"
+          class="h-8"
         >
-          <Icon name="i-ph-twitter-logo"></Icon>
+          <Icon
+            name="i-ph-twitter-logo"
+            class="text-amber-700"
+          ></Icon>
         </NuxtLink>
 
         <NuxtLink
           :external="true"
           aria-label="LinkedIn"
           to="https://www.linkedin.com/in/mubaidr"
+          class="h-8"
         >
-          <Icon name="i-ph-linkedin-logo"></Icon>
+          <Icon
+            name="i-ph-linkedin-logo"
+            class="text-amber-700"
+          ></Icon>
         </NuxtLink>
 
         <ThemeSwitcher />
@@ -61,5 +75,3 @@
     </div>
   </div>
 </template>
-
-<style lang="scss"></style>

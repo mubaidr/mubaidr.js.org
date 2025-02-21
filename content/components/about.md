@@ -11,6 +11,9 @@ I’m a Senior Software Engineer with 10+ years of experience in building scalab
 - Bachelor's in Software Engineering (2012)
 - Master's in Project Management (2019)
 
+::tech-stack
+::
+
 ### 💼 **Current Role & Expertise**
 
 As a remote developer, I help businesses develop custom software solutions optimized for performance, scalability, and security. My expertise includes:
@@ -19,9 +22,6 @@ As a remote developer, I help businesses develop custom software solutions optim
 - Browser Extensions
 - Cloud & DevOps
 - Frontend & UI/UX
-
-::tech-stack
-::
 
 ### 📈 **Continuous Learning & Future Goals**
 

@@ -45,8 +45,13 @@ onBeforeUnmount(() => {
 <template>
   <div>
     <template v-if="weatherData">
-      It's currently {{ currentTime }}, {{ weatherData.main.feels_like }}°C and
-      {{ weatherData.weather[0]?.description }} here in Rawalpindi, Pakistan
+      It's currently
+      <strong>{{ currentTime }}</strong>
+      ,
+      <strong>{{ weatherData.main.feels_like }}°C</strong>
+      and
+      <strong>{{ weatherData.weather[0]?.description }}</strong>
+      here in Rawalpindi, Pakistan
     </template>
     <template v-else>
       It's currently {{ currentTime }} here in Rawalpindi, Pakistan
