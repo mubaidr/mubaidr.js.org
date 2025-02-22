@@ -12,7 +12,7 @@ const isDark = computed({
 </script>
 
 <template>
-  <NuxtLink
+  <button
     type="button"
     aria-label="Theme"
     @click="isDark = !isDark"
@@ -21,14 +21,14 @@ const isDark = computed({
     <div v-show="isDark">
       <Icon
         name="i-ph-moon"
-        class="text-amber-700"
+        class="text-black dark:text-white"
       ></Icon>
     </div>
     <div v-show="!isDark">
       <Icon
         name="i-ph-sun"
-        class="text-amber-700"
+        class="text-black dark:text-white"
       ></Icon>
     </div>
-  </NuxtLink>
+  </button>
 </template>

@@ -4,9 +4,9 @@ I leverage modern technologies to build scalable, high-performance applications.
 
 ### Development & Frameworks
 
-- **Languages & Backend:** Node.js, TypeScript, JavaScript, NestJS, ExpressJS, Laravel, ASP.NET, , PHP, C#, T-SQL
-- **Frontend & UI:** Nuxt, Vue.js, React, Next, Javascript
-- **Styling:** TailwindCSS, SCSS, Pug, EJS, HTML, CSS
+- **Languages & Backend:** Node.js, TypeScript, JavaScript, NestJS, ExpressJS, Laravel, ASP.NET, PHP, C#, T-SQL
+- **Frontend & UI:** Nuxt, Vue.js, React, Next, JavaScript, Pug, EJS, HTML
+- **Styling:** TailwindCSS, SCSS, CSS3, Canvas
 
 ### Testing & Quality Assurance
 

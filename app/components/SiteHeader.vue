@@ -1,7 +1,7 @@
 <template>
   <div class="fixed w-full z-50 top-0 left-0 bg-opacity-75 backdrop-blur-lg">
     <nav
-      class="flex justify-between border-b-2 border-amber-700 py-6 px-3 md:px-6"
+      class="flex justify-between py-6 px-3 md:px-6 border-b-2 border-amber-700"
     >
       <div class="flex gap-2">
         <!-- <NuxtLink
@@ -15,12 +15,9 @@
       <div class="flex gap-2">
         <NuxtLink
           to="/#get-a-quote-for-your-project"
-          class="group text-amber-700 border-2 border-amber-700 px-4 rounded-full no-underline h-8 text-lg leading-none flex gap-2 items-center"
+          class="bg-amber-800 text-white px-4 rounded-full no-underline h-8 text-lg leading-none flex gap-1 items-center"
         >
-          <Icon
-            name="i-ph-lightning-fill"
-            class="transition-transform group-hover:scale-150"
-          ></Icon>
+          <Icon name="i-ph-lightning"></Icon>
           Get a Free Quote
         </NuxtLink>
         <!-- <NuxtLink
@@ -36,10 +33,7 @@
           to="https://github.com/mubaidr"
           class="h-8"
         >
-          <Icon
-            name="i-ph-github-logo"
-            class="text-amber-700"
-          ></Icon>
+          <Icon name="i-ph-github-logo"></Icon>
         </NuxtLink>
 
         <NuxtLink
@@ -48,10 +42,7 @@
           to="https://www.twitter.com/mubaidr"
           class="h-8"
         >
-          <Icon
-            name="i-ph-twitter-logo"
-            class="text-amber-700"
-          ></Icon>
+          <Icon name="i-ph-twitter-logo"></Icon>
         </NuxtLink>
 
         <NuxtLink
@@ -60,10 +51,7 @@
           to="https://www.linkedin.com/in/mubaidr"
           class="h-8"
         >
-          <Icon
-            name="i-ph-linkedin-logo"
-            class="text-amber-700"
-          ></Icon>
+          <Icon name="i-ph-linkedin-logo"></Icon>
         </NuxtLink>
 
         <ThemeSwitcher />

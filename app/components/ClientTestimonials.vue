@@ -24,7 +24,7 @@ const { data: testimonials } = useAsyncData("testimonials", async () => {
           :key="testimonial.name"
         >
           <div
-            class="carousel__item bg-amber-100 dark:bg-stone-700 px-6 md:px-12 py-3 md:py-6 bg-opacity-75 w-full justify-center text-center"
+            class="carousel__item bg-amber-200 dark:bg-stone-700 px-6 md:px-12 py-3 md:py-6 bg-opacity-75 w-full justify-center text-center"
           >
             <p class="mb-6">
               <q>{{ testimonial.quote }}</q>
