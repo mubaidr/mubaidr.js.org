@@ -15,7 +15,7 @@
       <div class="flex gap-2">
         <NuxtLink
           to="/#get-a-quote-for-your-project"
-          class="bg-amber-800 text-white px-4 rounded-full no-underline h-8 text-lg leading-none flex gap-1 items-center"
+          class="bg-amber-800 text-white px-4 rounded-full no-underline h-8 text-base md:text-lg leading-none flex gap-1 items-center"
         >
           <Icon name="i-ph-lightning"></Icon>
           Get a Free Quote
