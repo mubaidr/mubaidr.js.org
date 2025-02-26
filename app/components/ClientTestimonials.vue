@@ -17,21 +17,23 @@ const { data: testimonials } = useAsyncData("testimonials", async () => {
 <template>
   <div>
     <h2>💬 What Clients Say About My Work</h2>
-    <div class="not-prose">
+    <div
+      class="not-prose border-t-2 border-b-2 border-amber-700 bg-amber-700 bg-opacity-5"
+    >
       <Carousel v-bind="carouselConfig">
         <Slide
           v-for="testimonial in testimonials"
           :key="testimonial.name"
         >
           <div
-            class="carousel__item bg-amber-200 dark:bg-stone-700 px-6 md:px-12 py-3 md:py-6 bg-opacity-75 w-full justify-center text-center"
+            class="carousel__item px-6 md:px-12 py-3 md:py-6 w-full text-center"
           >
-            <p class="mb-6">
+            <p class="mb-6 text-lg">
               <q>{{ testimonial.quote }}</q>
             </p>
 
             <div>
-              <div class="text-center">
+              <div>
                 <template v-if="testimonial.avatar">
                   <img
                     :src="testimonial.avatar"

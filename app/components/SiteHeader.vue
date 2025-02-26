@@ -1,7 +1,7 @@
 <template>
-  <div class="fixed w-full z-50 top-0 left-0 bg-opacity-75 backdrop-blur-lg">
+  <div class="fixed w-full z-50 top-0 left-0 backdrop-blur-lg">
     <nav
-      class="flex justify-between py-6 px-3 md:px-6 border-b-2 border-amber-700"
+      class="flex justify-between py-6 px-3 md:px-6 border-b-2 border-amber-700 bg-amber-700 bg-opacity-5"
     >
       <div class="flex gap-2">
         <!-- <NuxtLink
