@@ -2,14 +2,9 @@
 const IS_DEV = import.meta.dev
 
 export default defineNuxtConfig({
-  colorMode: {
-    preference: "system",
-    fallback: "dark",
-  },
+  css: ["./app/assets/css/main.css"],
 
-  css: ["./app/assets/css/main.scss"],
-
-  compatibilityDate: "2025-01-01",
+  compatibilityDate: "2025-10-03",
 
   content: {
     build: {
@@ -52,9 +47,9 @@ export default defineNuxtConfig({
 
   debug: false,
 
-  delayHydration: {
-    mode: "init",
-  },
+  // delayHydration: {
+  //   mode: "init",
+  // },
 
   devtools: { enabled: IS_DEV },
 
@@ -69,7 +64,7 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
-  fonts: {},
+  // fonts: {},
 
   icon: {
     clientBundle: {
@@ -83,26 +78,11 @@ export default defineNuxtConfig({
   //   quality: 80,
   // },
 
-  linkChecker: {
-    enabled: true,
-  },
+  // linkChecker: {
+  //   enabled: true,
+  // },
 
-  modules: [
-    "@nuxtjs/color-mode",
-    "@nuxt/fonts",
-    "@nuxt/icon",
-    // "@nuxt/image",
-    "@nuxtjs/mdc",
-    "@nuxtjs/seo",
-    "@nuxtjs/tailwindcss",
-    "nuxt-build-cache",
-    "nuxt-delay-hydration",
-    // "nuxt-feedme",
-    "@nuxt/content",
-    "nuxt-marquee",
-    "vue3-carousel-nuxt",
-    "@nuxtjs/web-vitals",
-  ],
+  modules: ["@nuxt/ui", "@nuxtjs/mdc", "@nuxt/content"],
 
   nitro: {
     preset: "github-pages",
@@ -126,37 +106,36 @@ export default defineNuxtConfig({
     },
   },
 
-  seo: {
-    automaticDefaults: true,
-    enabled: true,
-  },
+  // seo: {
+  //   automaticDefaults: true,
+  //   enabled: true,
+  // },
 
-  site: {
-    indexable: true,
-    url: "https://mubaidr.js.org",
-    name: "Muhammad Ubaid Raza",
-    description:
-      "Personal Website and Blog by Muhammad Ubaid Raza, Full Stack Developer",
-    defaultLocale: "en",
-  },
+  // site: {
+  //   indexable: true,
+  //   url: "https://mubaidr.js.org",
+  //   name: "Muhammad Ubaid Raza",
+  //   description:
+  //     "Personal Website and Blog by Muhammad Ubaid Raza, Full Stack Developer",
+  //   defaultLocale: "en",
+  // },
 
-  sitemap: {
-    enabled: true,
-  },
+  // sitemap: {
+  //   enabled: true,
+  // },
 
   ssr: true,
 
-  robots: {
-    enabled: true,
-  },
-
-  tailwindcss: {
-    configPath: "./tailwind.config",
-    editorSupport: true,
-  },
+  // robots: {
+  //   enabled: true,
+  // },
 
   typescript: {
     strict: true,
+  },
+
+  ui: {
+    fonts: false
   },
 
   vite: {
@@ -172,9 +151,9 @@ export default defineNuxtConfig({
     },
   },
 
-  webVitals: {
-    // provider: '', // auto detectd
-    debug: false,
-    disabled: true,
-  },
+  // webVitals: {
+  //   // provider: '', // auto detectd
+  //   debug: false,
+  //   disabled: true,
+  // },
 })

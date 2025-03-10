@@ -1,14 +1,4 @@
 <script lang="ts" setup>
-import "vue3-carousel/carousel.css"
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel"
-
-const carouselConfig = {
-  autoplay: 5000,
-  itemsToShow: 1,
-  wrapAround: true,
-  gap: 16,
-}
-
 const { data: testimonials } = useAsyncData("testimonials", async () => {
   return queryCollection("testimonials").all()
 })
