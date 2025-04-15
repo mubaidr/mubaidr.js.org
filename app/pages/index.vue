@@ -14,24 +14,28 @@ const getInTouchSection = allSections.value?.find(
 </script>
 
 <template>
-  <main>
-    <div>
-      <ContentRenderer :value="aboutSection" />
+  <main class="container mx-auto px-4 md:px-8 py-8">
+    <!-- About Section -->
+    <div class="mb-20 animate-fade-in">
+      <ContentRenderer :value="aboutSection" class="prose prose-lg max-w-none dark:prose-invert" />
     </div>
 
-    <div class="mt-12">
+    <!-- Testimonials Section -->
+    <div>
       <ClientTestimonials />
     </div>
 
-    <div class="mt-12">
-      <ContentRenderer :value="whatIDoSection" />
+    <!-- What I Do Section -->
+    <div class="my-20 animate-fade-in">
+      <ContentRenderer :value="whatIDoSection" class="prose prose-lg max-w-none dark:prose-invert" />
     </div>
 
+    <!-- Get In Touch Section -->
     <div
-      class="mt-12"
-      id="#got-an-exciting-project-to-talk-about"
+      class="my-20 py-12 px-4 md:px-8 bg-white dark:bg-neutral-800 rounded-lg shadow-soft-lg animate-fade-in"
+      id="got-an-exciting-project-to-talk-about"
     >
-      <ContentRenderer :value="getInTouchSection" />
+      <ContentRenderer :value="getInTouchSection" class="prose prose-lg max-w-none dark:prose-invert" />
     </div>
   </main>
 </template>

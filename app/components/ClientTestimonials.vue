@@ -18,7 +18,7 @@ const { data: testimonials } = useAsyncData("testimonials", async () => {
   <div>
     <h2>💬 What Clients Say About My Work</h2>
     <div
-      class="not-prose border-t-2 border-b-2 border-amber-700 bg-amber-700 bg-opacity-5"
+      class="not-prose border-t-2 border-b-2 border-primary-700 bg-primary-700 bg-opacity-5"
     >
       <Carousel v-bind="carouselConfig">
         <Slide
@@ -43,7 +43,7 @@ const { data: testimonials } = useAsyncData("testimonials", async () => {
                 </template>
                 <template v-else>
                   <div
-                    class="w-16 h-16 rounded bg-amber-700 text-stone-50 text-5xl font-semibold text-center justify-center align-middle content-center mx-auto"
+                    class="w-16 h-16 rounded bg-primary-700 text-stone-50 text-5xl font-semibold text-center justify-center align-middle content-center mx-auto"
                   >
                     {{ testimonial.name[0] }}
                   </div>
