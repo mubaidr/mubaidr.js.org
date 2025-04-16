@@ -18,7 +18,6 @@ const { data: testimonials } = useAsyncData("testimonials", async () => {
   <div>
     <h2>💬 What Clients Say About My Work</h2>
     <div
-      class="not-prose border-t-2 border-b-2 border-primary-700 bg-primary-700 bg-opacity-5"
     >
       <Carousel v-bind="carouselConfig">
         <Slide
@@ -26,7 +25,7 @@ const { data: testimonials } = useAsyncData("testimonials", async () => {
           :key="testimonial.name"
         >
           <div
-            class="carousel__item px-6 md:px-12 py-3 md:py-6 w-full text-center"
+            class="carousel__item px-6 md:px-12 py-3 md:py-6 w-full text-center bg-white dark:bg-neutral-800 rounded-lg"
           >
             <p class="mb-6 text-lg">
               <q>{{ testimonial.quote }}</q>

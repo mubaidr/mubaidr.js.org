@@ -2,19 +2,19 @@
   <div class="fixed w-full z-50 top-0 left-0 backdrop-blur-lg">
     <nav class="flex justify-between items-center py-3 px-4 md:px-8 border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/80">
       <div class="flex items-center gap-2">
-        <!-- <NuxtLink
+        <NuxtLink
           to="/"
           class="font-semibold text-xl text-primary-600 dark:text-primary-400 flex items-center gap-2"
         >
           <img src="/brand.png" alt="Logo" class="h-8 w-auto" />
-          <span class="hidden sm:inline">Muhammad Ubaid</span>
-        </NuxtLink> -->
+          <span class="hidden sm:inline">mubaidr</span>
+        </NuxtLink>
       </div>
 
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2">
         <NuxtLink
           to="/#get-a-quote-for-your-project"
-          class="bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white px-4 py-1.5 no-underline text-sm font-medium transition-colors duration-200 flex gap-1 items-center rounded-full"
+          class="bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white px-4 py-1.5 no-underline text-sm font-medium transition-colors duration-200 flex gap-1 items-center rounded-full shadow-soft-lg"
         >
           <Icon name="i-ph-lightning" class="mr-1"></Icon>
           <span>Get a Quote</span>

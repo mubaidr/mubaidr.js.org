@@ -31,21 +31,21 @@ useHead({
 })
 </script>
 <template>
-  <div
-    class="max-w-screen-lg mx-auto px-6 md:px-12 prose dark:prose-invert text-pretty"
-  >
-    <SiteHeader />
+  <div>
+    <div class="max-w-screen-lg mx-auto px-3 md:px-6 text-pretty">
+      <SiteHeader />
 
-    <br />
+      <br />
 
-    <div class="my-6 md:my-12">
-      <NuxtRouteAnnouncer />
-      <NuxtPage />
+      <div class="my-6 md:my-12">
+        <NuxtRouteAnnouncer />
+        <NuxtPage />
+      </div>
+
+      <!-- Scroll to top -->
+      <ScrollTopIcon />
     </div>
-
     <SiteFooter />
 
-    <!-- Scroll to top -->
-    <ScrollTopIcon />
   </div>
 </template>

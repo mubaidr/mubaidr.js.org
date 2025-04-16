@@ -242,7 +242,7 @@ defineOgImage({
           class="grid grid-cols-10 gap-8 lg:gap-12"
         >
           <article
-            class="prose lg:prose-xl dark:prose-invert col-span-full md:col-span-7"
+            class="prose dark:prose-invert col-span-full md:col-span-7"
           >
             <!-- Update date -->
             <span
