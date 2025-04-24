@@ -1,4 +1,4 @@
-## 🛠️ Tech Stack & Tools
+## Tech Stack & Tools
 
 I leverage modern technologies to build scalable, high-performance applications.
 

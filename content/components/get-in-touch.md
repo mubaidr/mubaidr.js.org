@@ -1,4 +1,4 @@
-## 📝 Get a Quote for Your Project
+## Get a Quote for Your Project
 
 Let’s collaborate to bring your vision to life!
 

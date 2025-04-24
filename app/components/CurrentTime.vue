@@ -54,7 +54,7 @@ onBeforeUnmount(() => {
       here in Rawalpindi, Pakistan
     </template>
     <template v-else>
-      It's currently {{ currentTime }} here in Rawalpindi, Pakistan
+      Checking conditions...
     </template>
   </div>
 </template>

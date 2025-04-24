@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     fallback: "dark",
   },
 
-  css: ["./app/assets/css/main.scss"],
+  css: ["./app/assets/css/main.css"],
 
   compatibilityDate: "2025-01-01",
 
@@ -136,7 +136,7 @@ export default defineNuxtConfig({
     url: "https://mubaidr.js.org",
     name: "Muhammad Ubaid Raza",
     description:
-      "Personal Website and Blog by Muhammad Ubaid Raza, Full Stack Developer",
+      "Personal Website and Blog by Muhammad Ubaid Raza, Senior Software Engineer",
     defaultLocale: "en",
   },
 
@@ -157,19 +157,6 @@ export default defineNuxtConfig({
 
   typescript: {
     strict: true,
-  },
-
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          api: "modern-compiler", // or "modern"
-        },
-      },
-    },
-    build: {
-      cssCodeSplit: true,
-    },
   },
 
   webVitals: {

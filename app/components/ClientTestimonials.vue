@@ -15,8 +15,15 @@ const { data: testimonials } = useAsyncData("testimonials", async () => {
 </script>
 
 <template>
-  <div>
-    <h2>💬 What Clients Say About My Work</h2>
+  <div id="testimonials">
+    <div class="prose dark:prose-invert">
+    <h2>
+      <a href="#testimonials">What Clients Say About My Work</a>
+    </h2>
+    <p>
+      I have had the pleasure of working with some amazing clients, and their feedback means the world to me. Here are a few testimonials from my clients:
+    </p>
+  </div>
     <div
     >
       <Carousel v-bind="carouselConfig">
@@ -25,7 +32,7 @@ const { data: testimonials } = useAsyncData("testimonials", async () => {
           :key="testimonial.name"
         >
           <div
-            class="carousel__item px-6 md:px-12 py-3 md:py-6 w-full text-center bg-white dark:bg-neutral-800 rounded-lg"
+            class="carousel__item px-6 md:px-12 py-3 md:py-6 w-full text-center  rounded-lg"
           >
             <p class="mb-6 text-lg">
               <q>{{ testimonial.quote }}</q>

@@ -2,15 +2,16 @@ import type { Config } from "tailwindcss"
 import colors from "tailwindcss/colors"
 
 export default <Partial<Config>>{
-  // content: [`components/**/*.vue`, `pages/**/*.vue`, `app.vue`],
   theme: {
     extend: {
       colors: {
-        primary: colors.indigo,
-        accent: colors.sky,
+        primary: colors.neutral, // Use neutral for minimalist look
+        accent: colors.sky[400], // Subtle accent
+        background: colors.zinc[50], // Soft background
+        foreground: colors.zinc[900], // Main text
       },
       fontFamily: {
-        sans: ['"Inter"', 'Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['"Inter"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',
@@ -22,8 +23,7 @@ export default <Partial<Config>>{
         }
       },
       boxShadow: {
-        'soft': '0 4px 20px 0 rgba(0, 0, 0, 0.05)',
-        'soft-lg': '0 10px 30px 0 rgba(0, 0, 0, 0.05)',
+        'soft': '0 2px 8px 0 rgba(0,0,0,0.03)', // Softer shadow
       }
     },
   },
