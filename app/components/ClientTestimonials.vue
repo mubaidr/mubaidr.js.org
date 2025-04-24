@@ -26,7 +26,7 @@ const { data: testimonials } = useAsyncData("testimonials", async () => {
   </div>
     <div
     >
-      <Carousel v-bind="carouselConfig">
+      <Carousel v-bind="carouselConfig" aria-label="Client testimonials carousel">
         <Slide
           v-for="testimonial in testimonials"
           :key="testimonial.name"
@@ -43,13 +43,14 @@ const { data: testimonials } = useAsyncData("testimonials", async () => {
                 <template v-if="testimonial.avatar">
                   <img
                     :src="testimonial.avatar"
-                    :alt="testimonial.name"
+                    :alt="`Photo of ${testimonial.name}`"
                     class="w-16 h-16 rounded mx-auto my-0"
                   />
                 </template>
                 <template v-else>
                   <div
                     class="w-16 h-16 rounded bg-primary-700 text-stone-50 text-5xl font-semibold text-center justify-center align-middle content-center mx-auto"
+                    aria-hidden="true"
                   >
                     {{ testimonial.name[0] }}
                   </div>

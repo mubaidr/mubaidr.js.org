@@ -16,7 +16,7 @@ const getInTouchSection = allSections.value?.find(
 <template>
   <main class="container mx-auto px-3 md:px-6 py-10">
     <!-- About Section -->
-    <div class="mb-16 animate-fade-in">
+    <div class="mb-16">
       <ContentRenderer :value="aboutSection" class="prose max-w-none dark:prose-invert" />
     </div>
 
@@ -26,7 +26,7 @@ const getInTouchSection = allSections.value?.find(
     </div>
 
     <!-- What I Do Section -->
-    <div class="mb-16 animate-fade-in">
+    <div class="mb-16">
       <ContentRenderer :value="whatIDoSection" class="prose max-w-none dark:prose-invert" />
     </div>
 

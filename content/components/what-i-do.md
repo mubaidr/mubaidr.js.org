@@ -1,6 +1,6 @@
 ## Tech Stack & Tools
 
-I leverage modern technologies to build scalable, high-performance applications.
+I utilize cutting-edge technologies to deliver robust, high-performance solutions.
 
 ### Development & Frameworks
 

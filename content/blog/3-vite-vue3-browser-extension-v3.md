@@ -1,12 +1,8 @@
 ---
 title: Kickstart Your Browser Extension Development
-description: Are you looking for a quick and efficient way to start building
-  browser extensions with modern web technologies? Introducing our
-  **Vite-powered WebExtension Starter Template**!
+description: Quickly start building browser extensions with Vite, Vue 3, and Manifest V3. Discover a feature-rich, accessible starter template for modern web extension development.
 headline: Kickstart Your Browser Extension Development with Vite, Vue 3, and Manifest V3
-abstract: Our template is pre-packed with essential features, making it easier
-  for you to focus on developing your extension rather than setting up the
-  environment.
+abstract: Our template is pre-packed with essential features, making it easier for you to focus on developing your extension rather than setting up the environment.
 date: 2024-08-13T12:00:00
 dateUpdated: ""
 author: Muhammad Ubaid Raza
@@ -17,7 +13,7 @@ authorUrl: /
 
 Are you looking for a quick and efficient way to start building browser extensions with modern web technologies? Introducing our **Vite-powered WebExtension Starter Template**! This template is designed to streamline your development process by combining **Vue 3**, **Vite**, and **Manifest V3**, enabling you to create powerful and efficient extensions for Chrome, Firefox, and other browsers.
 
-## Why This Template?
+## Why Use This Template?
 
 Building a browser extension from scratch can be a daunting task, especially when you want to leverage the latest technologies like **Vue 3** and **Vite**. Our template is pre-packed with essential features, making it easier for you to focus on developing your extension rather than setting up the environment.
 

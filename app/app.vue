@@ -31,13 +31,14 @@ useHead({
 })
 </script>
 <template>
+  <a href="#main-content" class="sr-only focus:not-sr-only bg-primary-700 text-white p-2 absolute z-50 left-2 top-2 rounded" tabindex="0">Skip to main content</a>
   <div class="min-h-screen">
     <div class="max-w-screen-md mx-auto px-3 md:px-6">
       <!-- <SiteHeader /> -->
-      <div class="my-12">
+      <main id="main-content" aria-label="Main content" class="my-12">
         <NuxtRouteAnnouncer />
         <NuxtPage />
-      </div>
+      </main>
       <!-- <ScrollTopIcon /> -->
     </div>
     <SiteFooter />

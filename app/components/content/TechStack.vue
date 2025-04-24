@@ -76,6 +76,8 @@ const icons = ref([
         :name="icon.name"
         :title="icon.title"
         size="3em"
+        role="img"
+        :aria-label="icon.title"
       ></Icon>
     </NuxtMarquee>
   </div>
