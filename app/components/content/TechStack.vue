@@ -68,23 +68,19 @@ const icons = ref([
 </script>
 
 <template>
-  <div class="my-6 md:my-12">
-    <NuxtMarquee>
-      <Icon
-        v-for="icon in icons"
-        :key="icon.name"
-        :name="icon.name"
-        :title="icon.title"
-        size="3em"
-        role="img"
-        :aria-label="icon.title"
-      ></Icon>
-    </NuxtMarquee>
-  </div>
+  <div class="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-10 gap-2">
+  <Icon
+    v-for="icon in icons"
+    :key="icon.name"
+    :name="icon.name"
+    :title="icon.title"
+    size="3em"
+    class="transition-transform hover:scale-110"
+    role="img"
+    :aria-label="icon.title"
+  />
+</div>
 </template>
 
-<style lang="scss">
-.vfm-parent {
-  @apply flex gap-2;
-}
+<style>
 </style>

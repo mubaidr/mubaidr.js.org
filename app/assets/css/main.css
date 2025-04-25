@@ -3,21 +3,10 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fafafa;
-  color: #18181b;
+  font-family: 'Inter', sans-serif;
   overflow-y: scroll;
-  /* padding-top: 4rem; */
-}
-
-:root {
-  --transition-standard: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .prose {
-  @apply prose-slate max-w-none;
-}
-
-.prose p {
-  margin-bottom: 1.5em;  /* Increased margin for better spacing */
+  @apply prose-zinc max-w-none;
 }

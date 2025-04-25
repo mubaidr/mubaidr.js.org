@@ -10,9 +10,9 @@ With over a decade of experience, I specialize in designing and building scalabl
 
 - Bachelor’s in Software Engineering (2012)
 - Master’s in Project Management (2019)
-
+<!--
 ::tech-stack
-::
+:: -->
 
 ### **Current Role & Expertise**
 
