@@ -91,3 +91,5 @@ _“Always exceeds expectations. Professional, adaptable, and easy to work with.
 ---
 
 Thank you for your interest. I look forward to collaborating and building something exceptional together.
+
+_Last updated: April 26, 2025_
