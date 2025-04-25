@@ -6,7 +6,7 @@
 
 Delivering robust, scalable, and user-focused software solutions that drive business success.
 
-I’m a Senior Software Engineer with over a decade of experience building scalable web applications, SaaS platforms, and advanced browser extensions. I hold a BS in Software Engineering (2012) and an MS in Project Management (2019). I specialize in delivering high-performance, secure, and maintainable solutions for businesses worldwide—remotely and independently.
+I’m a Senior Software Engineer with over a decade of experience building scalable web applications, SaaS platforms, and advanced browser extensions. I hold a BS in Software Engineering (2012) and an MS in Project Management (2019).
 
 <div style="text-align:center;">
 <a href="https://github.com/mubaidr">GitHub</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/mubaidr">LinkedIn</a>
@@ -14,15 +14,9 @@ I’m a Senior Software Engineer with over a decade of experience building scala
 
 ## How I Work
 
-- Designing product architecture, solutions, and managing lifecycles
-- Optimizing performance, scalability, and security
-- Enhancing developer experience, automating workflows, and ensuring code quality
-- Building UI/UX systems, improving accessibility, and maintaining documentation
-- Leading projects, managing agile teams, and collaborating with clients
-- Communicating proactively and clearly
-- Maintaining high code quality and reliability
-- Meeting deadlines and ensuring transparency
-- Adapting to change with a focus on client and user success
+- Architecting solutions and managing product lifecycles - optimizing performance, scalability, and security
+- Leading agile teams and collaborating with clients - Ensuring clarity, timeliness, and adaptability in all project phases
+- Automating workflows and ensuring code quality
 
 ## Current Focus
 
@@ -31,8 +25,6 @@ I’m currently deepening my expertise in:
 - Infrastructure as Code (IaC)
 - Cloud-native tooling and observability
 - AI-assisted development workflows
-
-My goal is to contribute meaningfully to developer ecosystems, build production-grade SaaS products, and launch open-source tools.
 
 ## Availability & Collaboration
 
@@ -43,7 +35,7 @@ Open to freelance, consulting, and collaborative projects. Flexible with remote,
 Let’s build something great —
 
 <div style="text-align:center;">
-<a href="mailto:mubaidr@gmail.com" style="display:inline-block; padding:0.75em 2em;border-width:2px; text-decoration:none;">Email now to discuss your project or idea</a>
+<a href="mailto:mubaidr@gmail.com">Email Now To Discuss Your Project Or Idea</a>
 </div>
 
 I aim to reply as quickly as possible with the attention your message deserves.
