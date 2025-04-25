@@ -134,9 +134,9 @@ export default defineNuxtConfig({
   site: {
     indexable: true,
     url: "https://mubaidr.js.org",
-    name: "Muhammad Ubaid Raza",
+    name: "Muhammad Ubaid Raza - Full Stack Engineer Muhammad Ubaid Raza | TypeScript, Node.js, Vue",
     description:
-      "Personal Website and Blog by Muhammad Ubaid Raza, Senior Software Engineer",
+      "Senior Software Engineer specializing in TypeScript, Node.js, Vue.js, Supabase, Tailwind CSS, and modern web technologies. Crafting scalable web applications, browser extensions, and cloud-native solutions for startups and founders.",
     defaultLocale: "en",
   },
 
