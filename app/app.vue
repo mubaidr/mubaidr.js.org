@@ -1,12 +1,4 @@
 <script setup lang="ts">
-useSeoMeta({
-  ogImage: "[og:image]",
-  twitterTitle: "[twitter:title]",
-  twitterDescription: "[twitter:description]",
-  twitterImage: "[twitter:image]",
-  twitterCard: "summary",
-})
-
 useHead({
   htmlAttrs: {
     lang: "en",
