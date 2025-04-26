@@ -26,7 +26,7 @@ useHead({
   <div class="min-h-screen">
     <div class="max-w-screen-md mx-auto px-3 md:px-6">
       <!-- <SiteHeader /> -->
-      <main id="main-content" aria-label="Main content" class="my-12">
+      <main id="main-content" aria-label="Main content" class="my-6 md:my-12">
         <NuxtRouteAnnouncer />
         <NuxtPage />
       </main>
