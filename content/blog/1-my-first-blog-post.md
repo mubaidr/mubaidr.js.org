@@ -1,8 +1,10 @@
 ---
 title: My First Blog Post | Blog
-description: Welcome to my tech blog! Learn why I started blogging, what topics I cover, and how you can connect with me and the developer community.
+description: Welcome to my tech blog! Learn why I started blogging, what topics
+  I cover, and how you can connect with me and the developer community.
 headline: Introduction to My Blog
-abstract: Discover why I started this blog, what you can expect, and how we can connect as a community.
+abstract: Discover why I started this blog, what you can expect, and how we can
+  connect as a community.
 date: 2024-07-16T12:00:00
 dateUpdated: ""
 author: Muhammad Ubaid Raza

@@ -1,6 +1,8 @@
 ---
 title: Getting Started with Full Stack Development
-description: Master full stack development with Node.js and Vue.js. Learn project structuring, environment setup, and best practices for building scalable web applications.
+description: Master full stack development with Node.js and Vue.js. Learn
+  project structuring, environment setup, and best practices for building
+  scalable web applications.
 headline: Getting Started with Full Stack Development
 abstract: Using Node.js and Vue.js gives you a powerful toolkit to build
   efficient and scalable solutions. This guide is here to help you navigate the
@@ -21,9 +23,7 @@ First off, understanding the fundamentals of Node.js is crucial. It’s a runtim
 On the frontend, Vue.js shines with its progressive framework. It's designed to be incrementally adaptable, which means you can use it for a single page or scale up to a full-featured application. Its simplicity and flexibility make it a favorite among developers looking to create dynamic user interfaces.
 
 - **Project Structuring**: Learn how to organize your codebase efficiently for both Node.js and Vue.js. A well-structured project is easier to maintain and scale.
-
 - **Environment Setup**: Discover the tools and configurations needed to get your development environment up and running smoothly. This includes setting up Node.js, Vue.js, and database connections.
-
 - **Essential Tools**: Familiarize yourself with vital tools like npm for package management, Vue CLI for scaffolding projects, and Git for version control.
 
 With these foundations in place, you’re on your way to building applications that are not only robust and efficient but also ready for production. This guide will ensure you have the practical knowledge needed to succeed in full stack development using Node.js and Vue.js.
@@ -60,8 +60,8 @@ Managing environment variables is crucial. These help you handle sensitive data 
 
 Here's a quick guide to configuring your development tools:
 
-- **Install `nodemon`**: It automatically restarts your server whenever you make changes to your Node.js files.
-- **Use `concurrently`**: This allows you to run both the client and server simultaneously. It’s a lifesaver for full stack development, keeping everything in sync.
+- **Install** **nodemon**: It automatically restarts your server whenever you make changes to your Node.js files.
+- **Use** **concurrently**: This allows you to run both the client and server simultaneously. It’s a lifesaver for full stack development, keeping everything in sync.
 - **Organize config files**: Separate your configuration files for development and production. This keeps your settings clean and easy to switch between environments.
 
 Setting things up this way ensures a streamlined workflow from development to production. It’s about making your life easier while maintaining a high-performance application.
