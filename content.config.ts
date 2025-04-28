@@ -1,5 +1,4 @@
 import { defineContentConfig, defineCollection, z } from "@nuxt/content"
-import type ClientTestimonials from "~/components/ClientTestimonials.vue"
 
 export default defineContentConfig({
   collections: {
@@ -9,7 +8,7 @@ export default defineContentConfig({
     }),
     pages: defineCollection({
       type: "page",
-      source: "pages/**/*.md",
+      source: "*.md",
     }),
     blog: defineCollection({
       type: "page",

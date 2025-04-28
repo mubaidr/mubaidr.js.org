@@ -1,10 +1,12 @@
+import tailwindcss from "@tailwindcss/vite";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const IS_DEV = import.meta.dev
 
 export default defineNuxtConfig({
   colorMode: {
-    preference: "system",
-    fallback: "dark",
+    preference: "light",
+    fallback: "light",
   },
 
   css: ["./app/assets/css/main.css"],
@@ -12,6 +14,9 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-01-01",
 
   content: {
+    renderer: {
+      anchorLinks: false
+    },
     build: {
       markdown: {
         rehypePlugins: {
@@ -45,16 +50,9 @@ export default defineNuxtConfig({
         url: "https://github.com/mubaidr/mubaidr.js.org",
       },
     },
-    renderer: {
-      anchorLinks: true,
-    },
   },
 
   debug: false,
-
-  delayHydration: {
-    mode: "init",
-  },
 
   devtools: { enabled: IS_DEV },
 
@@ -69,13 +67,13 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
-  fonts: {},
+  // fonts: {},
 
-  icon: {
-    clientBundle: {
-      scan: true,
-    },
-  },
+  // icon: {
+  //   clientBundle: {
+  //     scan: true,
+  //   },
+  // },
 
   // image: {
   //   domains: ["mubaidr.js.org"],
@@ -92,16 +90,10 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxt/icon",
     // "@nuxt/image",
-    "@nuxtjs/mdc",
+    // "@nuxtjs/mdc",
     "@nuxtjs/seo",
-    "@nuxtjs/tailwindcss",
-    "nuxt-build-cache",
-    "nuxt-delay-hydration",
     // "nuxt-feedme",
-    "@nuxt/content",
-    // "nuxt-marquee",
-    "vue3-carousel-nuxt",
-    "@nuxtjs/web-vitals",
+    "@nuxt/content"
   ],
 
   nitro: {
@@ -120,9 +112,11 @@ export default defineNuxtConfig({
   routeRules: {
     "/**": {
       static: true,
+      prerender: true,
     },
     "/blog/**": {
       static: true,
+      prerender: true,
     },
   },
 
@@ -150,18 +144,13 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
-  tailwindcss: {
-    configPath: "./tailwind.config",
-    editorSupport: true,
-  },
-
   typescript: {
     strict: true,
   },
 
-  webVitals: {
-    // provider: '', // auto detectd
-    debug: false,
-    disabled: true,
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
   },
 })

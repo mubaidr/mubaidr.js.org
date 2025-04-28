@@ -1,12 +1,11 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   overflow-y: scroll;
-}
-
-.prose {
-  @apply prose-zinc max-w-none;
 }

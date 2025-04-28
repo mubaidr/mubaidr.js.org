@@ -24,14 +24,12 @@ useHead({
 </script>
 <template>
   <div class="min-h-screen">
-    <div class="max-w-screen-md mx-auto px-3 md:px-6">
-      <!-- <SiteHeader /> -->
-      <main id="main-content" aria-label="Main content" class="my-6 md:my-12">
-        <NuxtRouteAnnouncer />
-        <NuxtPage />
-      </main>
-      <!-- <ScrollTopIcon /> -->
-    </div>
+    <!-- <SiteHeader /> -->
+    <main aria-label="Main content" class="px-6 md:px-12 py-6 md:py-12 prose prose-zinc dark:prose-invert max-w-none">
+      <NuxtPage />
+    </main>
+    <!-- <ScrollTopIcon /> -->
     <SiteFooter />
+    <NuxtRouteAnnouncer />
   </div>
 </template>
