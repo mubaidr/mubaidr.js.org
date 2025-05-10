@@ -2,7 +2,7 @@
 const route = useRoute()
 
 const { data: page } = await useAsyncData(`page-${route.path}`, () => {
-  return queryCollection("pages").path(route.path).first()
+  return queryCollection("blog").path(route.path).first()
 })
 
 // @ts-expect-error extended in content config
@@ -19,7 +19,7 @@ if (!page.value) {
 </script>
 
 <template>
-  <div class="max-w-2xl mx-auto ">
+  <div>
     <ContentRenderer v-if="page" :value="page" />
     <div v-else>No content available.</div>
   </div>

@@ -1,4 +1,5 @@
 import tailwindcss from "@tailwindcss/vite";
+import { definePerson } from 'nuxt-schema-org/schema'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const IS_DEV = import.meta.dev
@@ -11,7 +12,7 @@ export default defineNuxtConfig({
 
   css: ["./app/assets/css/main.css"],
 
-  compatibilityDate: "2025-01-01",
+  compatibilityDate: "2025-05-05",
 
   content: {
     renderer: {
@@ -58,9 +59,7 @@ export default defineNuxtConfig({
 
   experimental: {
     typedPages: true,
-    viewTransition: true,
     buildCache: true,
-    asyncEntry: true,
   },
 
   future: {
@@ -80,10 +79,6 @@ export default defineNuxtConfig({
   //   format: ["webp"],
   //   quality: 80,
   // },
-
-  linkChecker: {
-    enabled: true,
-  },
 
   modules: [
     "@nuxtjs/color-mode",
@@ -120,11 +115,6 @@ export default defineNuxtConfig({
     },
   },
 
-  seo: {
-    automaticDefaults: true,
-    enabled: true,
-  },
-
   site: {
     indexable: true,
     url: "https://mubaidr.js.org",
@@ -132,17 +122,10 @@ export default defineNuxtConfig({
     description:
       "Senior Software Engineer specializing in modern web technologies. Crafting scalable web applications and browser extensions for startups and founders.",
     defaultLocale: "en",
-  },
-
-  sitemap: {
     enabled: true,
   },
 
   ssr: true,
-
-  robots: {
-    enabled: true,
-  },
 
   typescript: {
     strict: true,
@@ -153,4 +136,36 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
+
+  schemaOrg: {
+    identity: definePerson({
+      // Basic Information, if applicable
+      name: 'Muhammad Ubaid Raza',
+      givenName: 'Muhammad Ubaid',
+      familyName: 'Raza',
+      additionalName: 'mubaidr', // middle name or other additional names
+      alternateName: 'Muhammad Ubaid Raza',
+
+      // Profile Information, if applicable
+      image: '/mubaidr.png',
+      description: 'Senior Software Engineer specializing in modern web technologies. Crafting scalable web applications and browser extensions for startups and founders.',
+      jobTitle: 'Senior Software Engineer | Full-Stack Developer | DevOps Enthusiast',
+
+      // Contact & Social, if applicable
+      email: 'mubaidr@gmail.com',
+      url: 'https://mubaidr.js.org',
+      sameAs: [
+        'https://twitter.com/mubaidr',
+        'https://github.com/mubaidr',
+        'https://linkedin.com/in/mubaidr',
+      ],
+
+      // Professional Details, if applicable
+      worksFor: {
+        '@type': 'Organization',
+        'name': 'Paragon Square Inc.',
+        'url': 'https://paragonsquare.ai'
+      },
+    })
+  }
 })

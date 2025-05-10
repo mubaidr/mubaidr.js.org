@@ -1,4 +1,5 @@
 import { defineContentConfig, defineCollection, z } from "@nuxt/content"
+import { asOgImageCollection } from 'nuxt-og-image/content'
 
 export default defineContentConfig({
   collections: {
@@ -6,14 +7,14 @@ export default defineContentConfig({
       type: "page",
       source: "components/**/*.md",
     }),
-    pages: defineCollection({
+    pages: defineCollection(asOgImageCollection({
       type: "page",
       source: "*.md",
-    }),
-    blog: defineCollection({
+    })),
+    blog: defineCollection(asOgImageCollection({
       type: "page",
       source: "blog/*.md",
-    }),
+    })),
     authors: defineCollection({
       type: "data",
       source: "authors/**/*.{json,yml,yaml}",

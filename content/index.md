@@ -1,4 +1,13 @@
-# Muhammad Ubaid Raza
+<!-- <nav style="margin:1.5em 0; text-align:center; font-size:1.1em;">
+<a href="/" style="margin:0 1em;">Home</a>
+<a href="/blog" style="margin:0 1em;">Blog</a>
+<a href="mailto:mubaidr@gmail.com" style="margin:0 1em;">Contact</a>
+</nav> -->
+
+<h1 style="display:flex;align-items:center;gap:0.75em;">
+<img src="/mubaidr.png" alt="Muhammad Ubaid Raza, Senior Software Engineer, Full-Stack Developer, Pakistan" style="width:64px;height:64px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px #0002;margin: 0!important;" />
+<span>Muhammad Ubaid Raza</span>
+</h1>
 
 **Senior Software Engineer | Full-Stack Developer | DevOps Enthusiast**
 
@@ -45,22 +54,22 @@ I aim to reply as quickly as possible with the attention your message deserves.
 A focused set of modern tools and platforms I use to deliver robust, efficient, and scalable solutions:
 
 - **Languages & Backend:**
-  Node.js, TypeScript, JavaScript, PHP, C#, T-SQL, Python, Go
+Node.js, TypeScript, JavaScript, PHP, C#, T-SQL, Python, Go
 - **Frameworks:** Nuxt, NestJS, ExpressJS, Laravel, ASP.NET, Fastify
 - **Frontend & UI:**
-  Vue 3, Nuxt, React, Next.js, Tailwind CSS, SCSS, HTML, Pug, EJS, Canvas
+Vue 3, Nuxt, React, Next.js, Tailwind CSS, SCSS, HTML, Pug, EJS, Canvas
 - **Testing & QA:**
-  Jest, Vitest, Playwright, Selenium, TDD
+Jest, Vitest, Playwright, Selenium, TDD
 - **Databases & Storage:**
-  PostgreSQL, Supabase, Firebase, MongoDB, Redis, Memcached, MySQL, SQL Server, SQLite
+PostgreSQL, Supabase, Firebase, MongoDB, Redis, Memcached, MySQL, SQL Server, SQLite
 - **DevOps & Deployment:**
-  Docker, AWS, Google Cloud, Cloudflare, GitHub Actions, CircleCI, Heroku, Nginx, Netlify, Vercel
+Docker, AWS, Google Cloud, Cloudflare, GitHub Actions, CircleCI, Heroku, Nginx, Netlify, Vercel
 - **Automation & Productivity:**
-  Puppeteer, Web Scraping, Bash, pnpm, Git, GitHub, GitHub Actions, VSCode, Webstorm
+Puppeteer, Web Scraping, Bash, pnpm, Git, GitHub, GitHub Actions, VSCode, Webstorm
 - **Build & Tooling:**
-  Vite, Webpack, ESLint, Prettier, Storybook, Prisma
+Vite, Webpack, ESLint, Prettier, Storybook, Prisma
 - **Other Expertise:**
-  Browser Extensions (MV2/MV3), REST APIs, GraphQL, Performance Optimization, Accessibility
+Browser Extensions (MV2/MV3), REST APIs, GraphQL, Performance Optimization, Accessibility
 
 ## Client Feedback
 
@@ -76,4 +85,6 @@ A focused set of modern tools and platforms I use to deliver robust, efficient, 
 
 Thank you for your interest. I look forward to collaborating and building something exceptional together.
 
-*Last updated: April 26, 2025*
+<p class="text-xs text-zinc-500 tracking-tight font-medium">
+Last updated: May 10, 2025
+</p>
