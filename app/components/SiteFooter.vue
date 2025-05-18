@@ -1,5 +1,5 @@
 <template>
-  <footer aria-label="Site footer">
+  <footer aria-label="Site footer" class="prose dark:prose-invert mx-auto max-w-auto">
     <div class="py-4">
       <div class="container mx-auto px-4 flex flex-col items-center gap-2">
         <div class="flex items-center text-xs">

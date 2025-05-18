@@ -5,9 +5,7 @@ const { data: page } = await useAsyncData(`page-${route.path}`, () => {
   return queryCollection("pages").path(route.path).first()
 })
 
-// @ts-expect-error extended in content config
 if (page.value?.ogImage) {
-  // @ts-expect-error extended in content config
   defineOgImage(page.value.ogImage)
 }
 

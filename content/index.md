@@ -85,6 +85,6 @@ Browser Extensions (MV2/MV3), REST APIs, GraphQL, Performance Optimization, Acce
 
 Thank you for your interest. I look forward to collaborating and building something exceptional together.
 
-<p class="text-xs text-zinc-500 tracking-tight font-medium">
-Last updated: May 10, 2025
+<p class="text-xs tracking-tight">
+Last updated: May 18, 2025
 </p>

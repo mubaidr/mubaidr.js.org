@@ -8,4 +8,5 @@ html {
 body {
   font-family: 'Manrope', sans-serif;
   overflow-y: scroll;
+  @apply dark:bg-stone-800;
 }
