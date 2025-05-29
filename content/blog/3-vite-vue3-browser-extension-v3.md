@@ -7,7 +7,7 @@ headline: Kickstart Your Browser Extension Development with Vite, Vue 3, and Man
 abstract: Our template is pre-packed with essential features, making it easier
   for you to focus on developing your extension rather than setting up the
   environment.
-date: 2024-08-13T12:00:00
+date: 2024-08-13T12:00:00.000Z
 dateUpdated: ""
 author: Muhammad Ubaid Raza
 authorUrl: /

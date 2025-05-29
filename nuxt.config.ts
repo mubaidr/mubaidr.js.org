@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   colorMode: {
     preference: "light",
     fallback: "light",
+    classSuffix: "",
   },
 
   css: ["./app/assets/css/main.css"],
@@ -84,11 +85,13 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxt/fonts",
     "@nuxt/icon",
+    "@nuxt/ui",
     // "@nuxt/image",
     // "@nuxtjs/mdc",
     "@nuxtjs/seo",
     // "nuxt-feedme",
-    "@nuxt/content"
+    "@nuxt/content",
+    'nuxt-mcp'
   ],
 
   nitro: {

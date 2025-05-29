@@ -5,7 +5,7 @@ description: Welcome to my tech blog! Learn why I started blogging, what topics
 headline: Introduction to My Blog
 abstract: Discover why I started this blog, what you can expect, and how we can
   connect as a community.
-date: 2024-07-16T12:00:00
+date: 2024-07-16T12:00:00.000Z
 dateUpdated: ""
 author: Muhammad Ubaid Raza
 authorUrl: /
@@ -31,6 +31,6 @@ Here, you'll find articles on web development, database management, DevOps, clou
 
 ## Let's Connect
 
-Interested in these topics? Check out my [GitHub profile for my latest projects and contributions](https://github.com/). Let's embark on this journey together—coding, learning, and growing as a community.
+Interested in these topics? Check out my [GitHub profile for my latest projects and contributions](https://github.com/mubaidr). Let's embark on this journey together—coding, learning, and growing as a community.
 
 Thank you for visiting! Stay tuned for more insightful content soon.

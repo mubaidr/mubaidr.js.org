@@ -24,8 +24,8 @@ useHead({
 </script>
 <template>
   <div class="min-h-screen">
-    <!-- <SiteHeader /> -->
-    <main aria-label="Main content" class="px-6 md:px-12 py-12 md:py-24 prose prose-zinc dark:prose-invert max-w-none">
+    <SiteHeader />
+    <main aria-label="Main content" class="p-24 md:p-36">
       <NuxtPage />
     </main>
     <!-- <ScrollTopIcon /> -->

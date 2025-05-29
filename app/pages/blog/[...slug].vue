@@ -5,9 +5,7 @@ const { data: page } = await useAsyncData(`page-${route.path}`, () => {
   return queryCollection("blog").path(route.path).first()
 })
 
-// @ts-expect-error extended in content config
 if (page.value?.ogImage) {
-  // @ts-expect-error extended in content config
   defineOgImage(page.value.ogImage)
 }
 
@@ -19,7 +17,7 @@ if (!page.value) {
 </script>
 
 <template>
-  <div>
+  <div class="max-w-4xl mx-auto prose prose-zinc dark:prose-invert">
     <ContentRenderer v-if="page" :value="page" />
     <div v-else>No content available.</div>
   </div>
