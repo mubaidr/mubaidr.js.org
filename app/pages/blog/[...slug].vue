@@ -17,7 +17,7 @@ if (!page.value) {
 </script>
 
 <template>
-  <div class="max-w-4xl mx-auto prose prose-zinc dark:prose-invert">
+  <div class="max-w-3xl mx-auto prose prose-zinc dark:prose-invert">
     <ContentRenderer v-if="page" :value="page" />
     <div v-else>No content available.</div>
   </div>

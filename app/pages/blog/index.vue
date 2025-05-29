@@ -83,13 +83,13 @@ const getExcerpt = (content: any, maxLength = 150) => {
 </script>
 
 <template>
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <div class="max-w-3xl mx-auto">
     <!-- Page Header -->
-    <div class="mb-12 text-center">
+    <div class="mb-12">
       <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
         Blog
       </h1>
-      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+      <p class="text-xl text-gray-600 dark:text-gray-400">
         Insights, tutorials, and thoughts on web development, technology, and more.
       </p>
     </div>
@@ -127,9 +127,9 @@ const getExcerpt = (content: any, maxLength = 150) => {
               <div class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mt-auto">
                 <div class="flex items-center space-x-4">
                   <!-- Author -->
-                  <span v-if="post.author">
+                  <!-- <span v-if="post.author">
                     by {{ post.author }}
-                  </span>
+                  </span> -->
 
                   <!-- Date -->
                   <span v-if="post.date">

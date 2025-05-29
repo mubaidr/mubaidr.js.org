@@ -13,7 +13,7 @@ const toggleTheme = () => {
     :icon="isDark ? 'i-ph-moon' : 'i-ph-sun'"
     variant="ghost"
     color="neutral"
-    size="sm"
+    size="xs"
     :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
     @click="toggleTheme"
   />
