@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="fixed w-full z-40 top-0 left-0 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border-b border-neutral-100 dark:border-neutral-800">
-      <nav class="flex justify-between items-center py-4 px-4 md:px-8 max-w-6xl mx-auto" role="navigation" aria-label="Main navigation">
+      <nav class="flex justify-between items-center py-4 max-w-3xl mx-auto" role="navigation" aria-label="Main navigation">
         <NuxtLink
           to="/"
           class="font-semibold text-lg flex items-center gap-2 tracking-tight text-zinc-900 dark:text-zinc-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"

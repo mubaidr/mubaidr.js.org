@@ -14,6 +14,25 @@ export default defineContentConfig({
     blog: defineCollection(asOgImageCollection({
       type: "page",
       source: "blog/*.md",
+      schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        headline: z.string().optional(),
+        abstract: z.string().optional(),
+        date: z.string().datetime(),
+        dateUpdated: z.string().datetime().optional(),
+        author: z.string(),
+        authorUrl: z.string().optional(),
+        socialImage: z.object({
+          src: z.string(),
+          mime: z.string(),
+          alt: z.string(),
+          width: z.number(),
+          height: z.number(),
+        }).optional(),
+        image: z.string().optional(),
+        tags: z.array(z.string()).optional(),
+      }),
     })),
     authors: defineCollection({
       type: "data",

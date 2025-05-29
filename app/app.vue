@@ -23,9 +23,9 @@ useHead({
 })
 </script>
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen px-4 md:px-8 pt-32">
     <SiteHeader />
-    <main aria-label="Main content" class="p-24 md:p-36">
+    <main aria-label="Main content">
       <NuxtPage />
     </main>
     <!-- <ScrollTopIcon /> -->
