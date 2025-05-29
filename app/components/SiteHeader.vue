@@ -1,15 +1,16 @@
 <template>
   <header>
-    <div class="fixed w-full z-40 top-0 left-0 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border-b border-neutral-100 dark:border-neutral-800">
+    <div class="fixed w-full z-40 top-0 left-0 bg-white/25 dark:bg-zinc-900/25 backdrop-blur-lg border-b border-neutral-100 dark:border-neutral-800">
       <nav class="flex justify-between items-center py-4 max-w-3xl mx-auto" role="navigation" aria-label="Main navigation">
-        <NuxtLink
+        <!-- <NuxtLink
           to="/"
           class="font-semibold text-lg flex items-center gap-2 tracking-tight text-zinc-900 dark:text-zinc-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
           aria-label="Go to homepage"
         >
-          <!-- <img src="/brand.png" alt="mubaidr logo" class="h-7 w-auto" /> -->
           <span class="hidden sm:inline">mubaidr</span>
-        </NuxtLink>
+        </NuxtLink> -->
+
+        <div></div>
 
         <!-- Navigation Links -->
         <div class="flex items-center gap-6">
@@ -17,14 +18,14 @@
             <NuxtLink
               to="/"
               class="text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200"
-              :class="{ 'text-blue-600 dark:text-blue-400': route.path === '/' }"
-            >
+            active-class="!font-bold"
+              >
               Home
             </NuxtLink>
             <NuxtLink
               to="/blog"
               class="text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200"
-              :class="{ 'text-blue-600 dark:text-blue-400': route.path.startsWith('/blog') }"
+            active-class="!font-bold"
             >
               Blog
             </NuxtLink>
@@ -53,7 +54,7 @@
             to="/"
             @click="mobileMenuOpen = false"
             class="text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200"
-            :class="{ 'text-blue-600 dark:text-blue-400': route.path === '/' }"
+            active-class="!text-primary"
           >
             Home
           </NuxtLink>
@@ -61,7 +62,7 @@
             to="/blog"
             @click="mobileMenuOpen = false"
             class="text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200"
-            :class="{ 'text-blue-600 dark:text-blue-400': route.path.startsWith('/blog') }"
+            active-class="!text-primary"
           >
             Blog
           </NuxtLink>

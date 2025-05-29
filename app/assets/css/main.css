@@ -9,5 +9,157 @@ html {
 body {
   font-family: 'Manrope', sans-serif;
   overflow-y: scroll;
-  @apply dark:bg-stone-800;
+  /* @apply dark:bg-stone-800; */
+}
+
+/* Glass Shape Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-0.5deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  25% {
+    transform: translateX(5px) translateY(-5px);
+  }
+  50% {
+    transform: translateX(0px) translateY(-8px);
+  }
+  75% {
+    transform: translateX(-5px) translateY(-3px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Glass shape base styles and animations */
+.glass-shape {
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.glass-diamond {
+  animation: float 8s ease-in-out infinite, pulse-glow 6s ease-in-out infinite;
+  animation-delay: 0s, 1s;
+}
+
+.glass-triangle {
+  animation: floatReverse 10s ease-in-out infinite, rotate-slow 15s linear infinite;
+  animation-delay: 2s, 0s;
+}
+
+.glass-rect {
+  animation: drift 12s ease-in-out infinite, pulse-glow 8s ease-in-out infinite;
+  animation-delay: 1s, 3s;
+}
+
+.glass-hexagon {
+  animation: float 9s ease-in-out infinite, rotate-slow 20s linear infinite reverse;
+  animation-delay: 3s, 1s;
+}
+
+.glass-parallelogram {
+  animation: floatReverse 7s ease-in-out infinite, pulse-glow 5s ease-in-out infinite;
+  animation-delay: 1.5s, 2s;
+}
+
+.glass-trapezoid {
+  animation: drift 11s ease-in-out infinite, float 6s ease-in-out infinite;
+  animation-delay: 4s, 0.5s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .glass-shape {
+    opacity: 0.3;
+  }
+
+  .glass-diamond {
+    width: 200px;
+    height: 200px;
+    top: 5%;
+    right: -50px;
+  }
+
+  .glass-triangle {
+    width: 150px;
+    height: 150px;
+    left: -30px;
+  }
+
+  .glass-rect {
+    width: 120px;
+    height: 80px;
+  }
+
+  .glass-hexagon {
+    width: 100px;
+    height: 100px;
+    left: 10%;
+  }
+
+  .glass-parallelogram {
+    width: 60px;
+    height: 30px;
+  }
+
+  .glass-trapezoid {
+    width: 50px;
+    height: 40px;
+  }
+}
+
+/* Additional glass refinements */
+.glass-shape {
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.glass-shape:hover {
+  opacity: 0.6;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .glass-shape {
+    opacity: 0.25;
+  }
 }

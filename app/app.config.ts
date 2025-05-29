@@ -1,10 +1,10 @@
 export default defineAppConfig({
   icon: {
-    size: "32px",
+    size: "24px",
   },
   ui: {
     colors: {
-      primary: 'blue',
+      primary: 'green',
       neutral: 'zinc'
     }
   }
