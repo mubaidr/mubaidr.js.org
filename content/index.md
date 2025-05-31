@@ -65,7 +65,7 @@ PostgreSQL, Supabase, Firebase, MongoDB, Redis, Memcached, MySQL, SQL Server, SQ
 - **DevOps & Deployment:**
 Docker, AWS, Google Cloud, Cloudflare, GitHub Actions, CircleCI, Heroku, Nginx, Netlify, Vercel
 - **Automation & Productivity:**
-Puppeteer, Web Scraping, Bash, pnpm, Git, GitHub, GitHub Actions, VSCode, Webstorm
+Puppeteer, Web Scraping, Bash, Git, GitHub, GitHub Actions, VSCode, Webstorm
 - **Build & Tooling:**
 Vite, Webpack, ESLint, Prettier, Storybook, Prisma
 - **Other Expertise:**

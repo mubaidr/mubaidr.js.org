@@ -226,10 +226,10 @@ Let's build a simple but practical extension together. We'll create a "Reading T
 # Clone the template
 pnpx degit mubaidr/vite-vue3-browser-extension-v3 reading-time-extension
 cd reading-time-extension
-pnpm install
+npm install
 
 # Start development
-pnpm dev
+npm run dev
 ```
 
 ### 2. Configure the Extension
@@ -332,14 +332,14 @@ defineProps<Props>()
 
 ```bash
 # Development with HMR
-pnpm dev
+npm run dev
 
 # Build for production
-pnpm build
+npm run build
 
 # Build for specific browsers
-pnpm build:chrome
-pnpm build:firefox
+npm run build:chrome
+npm run build:firefox
 ```
 
 ## Advanced Development Patterns
@@ -429,7 +429,7 @@ The template includes scripts to prepare your extension for store submission:
 
 ```bash
 # Generate store-ready packages
-pnpm build:submission
+npm run build:submission
 
 # This creates:
 # - chrome-extension.zip (for Chrome Web Store)
@@ -470,9 +470,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - run: pnpm install
-      - run: pnpm test
-      - run: pnpm build
+      - run: npm install
+      - run: npm run test
+      - run: npm run build
 ```
 
 ## Real-World Examples and Use Cases

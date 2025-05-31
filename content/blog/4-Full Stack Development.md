@@ -146,7 +146,7 @@ Add these scripts to your root `package.json` for easier development:
     "server": "cd server && npm run dev",
     "client": "cd client && npm run serve",
     "build": "cd client && npm run build",
-    "start": "cd server && npm start"
+    "start": "cd server && npm run start"
   },
   "devDependencies": {
     "concurrently": "^7.6.0"
