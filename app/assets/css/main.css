@@ -18,6 +18,7 @@ body {
   overflow-y: scroll;
 }
 
+/* Glass shapes optimized for mobile view */
 /* Glass Shape Animations */
 @keyframes float {
   0%,

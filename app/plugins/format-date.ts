@@ -6,7 +6,7 @@ export default defineNuxtPlugin(() => {
       formatDate: (dateStr: string) =>
         dateStr
           ? Intl.DateTimeFormat("us-EN", { dateStyle: "full" }).format(
-              new Date(dateStr)
+              new Date(dateStr),
             )
           : undefined,
     },
