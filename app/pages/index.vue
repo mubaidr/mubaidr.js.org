@@ -1,32 +1,13 @@
 <script lang="ts" setup>
-// Define blog post type
-interface BlogPost {
-  _path?: string
-  title?: string
-  description?: string
-  date?: string
-  [key: string]: any
-}
-
 // Fetch profile data from Nuxt Content collection
 const { data: profile } = await useAsyncData("profile", () => {
   return queryCollection("profile").first()
 })
 
 // Fetch recent blog posts - limit to 2 most recent
-const { data: recentPosts } = await useAsyncData(
-  "recent-posts",
-  async (): Promise<BlogPost[]> => {
-    try {
-      // Try to fetch blog posts, but return empty array if collection doesn't exist
-      const posts = await queryCollection("blog").limit(2)
-      return Array.isArray(posts) ? posts : []
-    } catch (error) {
-      // Return empty array if blog collection doesn't exist yet
-      return []
-    }
-  },
-)
+const { data: recentPosts } = await useAsyncData("recent-posts", async () => {
+  return queryCollection("blog").order("date", "DESC").limit(2).all()
+})
 
 // Featured projects data - matching projects page structure
 const featuredProjects = ref([
@@ -190,7 +171,7 @@ function getIconForCategory(category: string): string {
             :src="profile.avatar"
             :alt="profile.name"
             size="3xl"
-            class="ring-4 ring-primary-500/20"
+            class="ring-2 ring-primary/50"
           />
         </div>
 
@@ -472,7 +453,6 @@ function getIconForCategory(category: string): string {
       </section>
 
       <!-- Recent Blog Posts - Show 2 Most Recent -->
-      <!-- TODO: Implement recent blog posts section from content -->
       <section class="space-y-8">
         <div class="text-center">
           <h2 class="text-3xl md:text-4xl font-bold mb-4">Recent Blog Posts</h2>
@@ -488,10 +468,10 @@ function getIconForCategory(category: string): string {
         >
           <UCard
             v-for="(post, index) in recentPosts"
-            :key="post._path || `post-${index}`"
+            :key="post.path || `post-${index}`"
             class="group cursor-pointer transition-all duration-300 hover:scale-[1.02] h-full"
             variant="soft"
-            @click="navigateTo(post._path || '/blog')"
+            @click="navigateTo(post.path || '/blog')"
           >
             <div class="space-y-4">
               <!-- Blog post image placeholder -->

@@ -31,17 +31,12 @@ onUnmounted(() => {
 <template>
   <div
     :class="[
-      'fixed flex flex-col items-center w-24 z-20 bottom-[128px] right-0 transform duration-150 p-6',
+      'fixed flex flex-col items-center w-24 z-21 bottom-[56px] right-0 transform duration-250 p-8',
       isVisible ? '' : 'translate-x-full',
     ]"
   >
-    <button
-      type="button"
-      aria-label="Scroll to Top"
-      class="flex flex-col gap-2 items-center text-center bg-primary-700 p-4 text-white rounded-full"
-      @click="scrollToTop"
-    >
+    <UButton aria-label="Scroll to Top" @click="scrollToTop" variant="subtle">
       <Icon name="i-ph-arrow-up"></Icon>
-    </button>
+    </UButton>
   </div>
 </template>

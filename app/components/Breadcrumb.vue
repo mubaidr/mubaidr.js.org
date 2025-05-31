@@ -10,18 +10,18 @@
         <UIcon
           v-if="index === 0"
           name="i-ph-house"
-          class="w-4 h-4 text-zinc-500 dark:text-zinc-400 mr-2"
+          class="w-4 h-4 text-slate-500 dark:text-slate-400 mr-2"
         />
 
         <!-- Breadcrumb Link or Text -->
         <NuxtLink
           v-if="index < breadcrumbs.length - 1"
           :to="crumb.path"
-          class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200"
+          class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200"
         >
           {{ crumb.label }}
         </NuxtLink>
-        <span v-else class="text-zinc-900 dark:text-zinc-100 font-medium">
+        <span v-else class="text-slate-900 dark:text-slate-100 font-medium">
           {{ crumb.label }}
         </span>
 
@@ -29,7 +29,7 @@
         <UIcon
           v-if="index < breadcrumbs.length - 1"
           name="i-ph-caret-right"
-          class="w-4 h-4 text-zinc-400 dark:text-zinc-500 mx-2"
+          class="w-4 h-4 text-slate-400 dark:text-slate-500 mx-2"
         />
       </li>
     </ol>

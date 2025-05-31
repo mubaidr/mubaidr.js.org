@@ -1,6 +1,6 @@
 <template>
   <header
-    class="fixed w-full z-40 top-0 left-0 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-lg border-b border-neutral-100/50 dark:border-neutral-800/50"
+    class="fixed w-full z-40 top-0 left-0 bg-white/25 dark:bg-slate-900/25 backdrop-blur-lg border-b border-neutral-100/50 dark:border-neutral-800/50"
   >
     <div class="max-w-6xl mx-auto px-4 md:px-8">
       <nav
@@ -11,7 +11,7 @@
         <!-- Logo/Brand -->
         <NuxtLink
           to="/"
-          class="font-bold text-xl flex items-center gap-3 tracking-tight text-zinc-900 dark:text-zinc-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+          class="font-bold text-xl flex items-center gap-3 tracking-tight text-slate-900 dark:text-slate-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
           aria-label="Go to homepage"
         >
           <div
@@ -26,7 +26,7 @@
         <div class="hidden lg:flex items-center gap-1">
           <NuxtLink
             to="/"
-            class="px-4 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50 rounded-lg transition-all duration-200"
+            class="px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200"
             active-class="!text-primary-600 dark:!text-primary-400 !bg-primary-50 dark:!bg-primary-900/20"
           >
             Home
@@ -34,7 +34,7 @@
 
           <NuxtLink
             to="/about"
-            class="px-4 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50 rounded-lg transition-all duration-200"
+            class="px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200"
             active-class="!text-primary-600 dark:!text-primary-400 !bg-primary-50 dark:!bg-primary-900/20"
           >
             About
@@ -42,7 +42,7 @@
 
           <NuxtLink
             to="/projects"
-            class="px-4 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50 rounded-lg transition-all duration-200"
+            class="px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200"
             active-class="!text-primary-600 dark:!text-primary-400 !bg-primary-50 dark:!bg-primary-900/20"
           >
             Projects
@@ -50,7 +50,7 @@
 
           <NuxtLink
             to="/blog"
-            class="px-4 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50 rounded-lg transition-all duration-200"
+            class="px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200"
             active-class="!text-primary-600 dark:!text-primary-400 !bg-primary-50 dark:!bg-primary-900/20"
           >
             Blog
@@ -58,7 +58,7 @@
 
           <NuxtLink
             to="/services"
-            class="px-4 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50 rounded-lg transition-all duration-200"
+            class="px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200"
             active-class="!text-primary-600 dark:!text-primary-400 !bg-primary-50 dark:!bg-primary-900/20"
           >
             Services
@@ -81,13 +81,8 @@
           </UButton> -->
 
           <!-- Contact CTA -->
-          <UButton
-            to="/contact"
-            variant="soft"
-            size="sm"
-            class="hidden lg:flex"
-          >
-            <UIcon name="i-ph-envelope" class="w-4 h-4" />
+          <UButton to="/contact" variant="subtle" class="hidden lg:flex">
+            <!-- <UIcon name="i-ph-envelope" class="w-4 h-4" /> -->
             <span class="ml-2">Let's Talk</span>
           </UButton>
 
@@ -122,13 +117,13 @@
       >
         <div
           v-show="mobileMenuOpen"
-          class="lg:hidden border-t border-neutral-100/50 dark:border-neutral-800/50 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md"
+          class="lg:hidden border border-neutral-100/50 dark:border-neutral-800/50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md"
         >
           <nav class="flex flex-col py-4 gap-1" aria-label="Mobile navigation">
             <!-- Search in Mobile -->
             <button
               @click="openSearch"
-              class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50 transition-colors duration-200"
+              class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors duration-200"
             >
               <UIcon name="i-ph-magnifying-glass" class="w-5 h-5" />
               Search
@@ -138,7 +133,7 @@
             <NuxtLink
               to="/"
               @click="closeMobileMenu"
-              class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50 transition-colors duration-200"
+              class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors duration-200"
               active-class="!text-primary-600 dark:!text-primary-400 !bg-primary-50 dark:!bg-primary-900/20"
             >
               <UIcon name="i-ph-house" class="w-5 h-5" />
@@ -148,7 +143,7 @@
             <NuxtLink
               to="/about"
               @click="closeMobileMenu"
-              class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50 transition-colors duration-200"
+              class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors duration-200"
               active-class="!text-primary-600 dark:!text-primary-400 !bg-primary-50 dark:!bg-primary-900/20"
             >
               <UIcon name="i-ph-user" class="w-5 h-5" />
@@ -158,7 +153,7 @@
             <NuxtLink
               to="/projects"
               @click="closeMobileMenu"
-              class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50 transition-colors duration-200"
+              class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors duration-200"
               active-class="!text-primary-600 dark:!text-primary-400 !bg-primary-50 dark:!bg-primary-900/20"
             >
               <UIcon name="i-ph-folder-open" class="w-5 h-5" />
@@ -168,7 +163,7 @@
             <NuxtLink
               to="/blog"
               @click="closeMobileMenu"
-              class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50 transition-colors duration-200"
+              class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors duration-200"
               active-class="!text-primary-600 dark:!text-primary-400 !bg-primary-50 dark:!bg-primary-900/20"
             >
               <UIcon name="i-ph-article" class="w-5 h-5" />
@@ -178,7 +173,7 @@
             <NuxtLink
               to="/services"
               @click="closeMobileMenu"
-              class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50 transition-colors duration-200"
+              class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors duration-200"
               active-class="!text-primary-600 dark:!text-primary-400 !bg-primary-50 dark:!bg-primary-900/20"
             >
               <UIcon name="i-ph-briefcase" class="w-5 h-5" />
@@ -219,12 +214,12 @@
           @click.self="closeSearch"
         >
           <div
-            class="w-full max-w-2xl bg-white/95 dark:bg-zinc-900/95 backdrop-blur-xl rounded-xl sm:rounded-2xl shadow-2xl border border-gray-200/50 dark:border-zinc-700/50 overflow-hidden transform transition-all duration-200"
+            class="w-full max-w-2xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-xl sm:rounded-2xl shadow-2xl border border-gray-200/50 dark:border-slate-700/50 overflow-hidden transform transition-all duration-200"
             @click.stop
           >
             <!-- Search Header with Enhanced Glass Effect -->
             <div
-              class="flex items-center gap-3 p-3 sm:p-4 border-b border-gray-200/30 dark:border-zinc-700/30 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-md"
+              class="flex items-center gap-3 p-3 sm:p-4 border-b border-gray-200/30 dark:border-slate-700/30 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md"
             >
               <UIcon
                 name="i-ph-magnifying-glass"
@@ -240,7 +235,7 @@
               />
               <div class="flex items-center gap-2 flex-shrink-0">
                 <span
-                  class="text-xs text-gray-400 dark:text-gray-500 px-2 py-1 bg-gray-100/80 dark:bg-zinc-800/80 backdrop-blur-sm rounded border border-gray-200/50 dark:border-zinc-700/50"
+                  class="text-xs text-gray-400 dark:text-gray-500 px-2 py-1 bg-gray-100/80 dark:bg-slate-800/80 backdrop-blur-sm rounded border border-gray-200/50 dark:border-slate-700/50"
                   >Esc</span
                 >
               </div>
@@ -248,7 +243,7 @@
 
             <!-- Search Content with Mobile-Optimized Glass Effect -->
             <div
-              class="max-h-[60vh] sm:max-h-96 overflow-y-auto bg-white/80 dark:bg-zinc-900/80 backdrop-blur-lg"
+              class="max-h-[60vh] sm:max-h-96 overflow-y-auto bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg"
             >
               <div v-if="searchQuery.length > 0" class="p-3 sm:p-4">
                 <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
@@ -289,7 +284,7 @@
 
                 <!-- Quick Links with Mobile-First Design -->
                 <div
-                  class="border-t border-gray-200/40 dark:border-zinc-700/40 pt-3 sm:pt-4"
+                  class="border-t border-gray-200/40 dark:border-slate-700/40 pt-3 sm:pt-4"
                 >
                   <p
                     class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3"
@@ -300,7 +295,7 @@
                     <NuxtLink
                       to="/projects"
                       @click="closeSearch"
-                      class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100/80 dark:hover:bg-zinc-800/80 backdrop-blur-sm transition-all group border border-transparent hover:border-gray-200/50 dark:hover:border-zinc-700/50"
+                      class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100/80 dark:hover:bg-slate-800/80 backdrop-blur-sm transition-all group border border-transparent hover:border-gray-200/50 dark:hover:border-slate-700/50"
                     >
                       <UIcon
                         name="i-ph-folder-open"
@@ -311,7 +306,7 @@
                     <NuxtLink
                       to="/blog"
                       @click="closeSearch"
-                      class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100/80 dark:hover:bg-zinc-800/80 backdrop-blur-sm transition-all group border border-transparent hover:border-gray-200/50 dark:hover:border-zinc-700/50"
+                      class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100/80 dark:hover:bg-slate-800/80 backdrop-blur-sm transition-all group border border-transparent hover:border-gray-200/50 dark:hover:border-slate-700/50"
                     >
                       <UIcon
                         name="i-ph-article"
@@ -322,7 +317,7 @@
                     <NuxtLink
                       to="/about"
                       @click="closeSearch"
-                      class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100/80 dark:hover:bg-zinc-800/80 backdrop-blur-sm transition-all group border border-transparent hover:border-gray-200/50 dark:hover:border-zinc-700/50"
+                      class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100/80 dark:hover:bg-slate-800/80 backdrop-blur-sm transition-all group border border-transparent hover:border-gray-200/50 dark:hover:border-slate-700/50"
                     >
                       <UIcon
                         name="i-ph-user"
@@ -333,7 +328,7 @@
                     <NuxtLink
                       to="/contact"
                       @click="closeSearch"
-                      class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100/80 dark:hover:bg-zinc-800/80 backdrop-blur-sm transition-all group border border-transparent hover:border-gray-200/50 dark:hover:border-zinc-700/50"
+                      class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100/80 dark:hover:bg-slate-800/80 backdrop-blur-sm transition-all group border border-transparent hover:border-gray-200/50 dark:hover:border-slate-700/50"
                     >
                       <UIcon
                         name="i-ph-envelope"

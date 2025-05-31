@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="bg-gray-50 dark:bg-zinc-800/50 border-t border-gray-200 dark:border-zinc-700"
+    class="bg-white/25 dark:bg-slate-900/25 border-t border-gray-200 dark:border-slate-700"
   >
     <div class="max-w-6xl mx-auto px-4 md:px-8 py-12">
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -28,6 +28,7 @@
               variant="ghost"
               size="sm"
               square
+              aria-label="GitHub Profile"
             >
               <UIcon name="i-ph-github-logo" class="w-5 h-5" />
             </UButton>
@@ -37,6 +38,7 @@
               variant="ghost"
               size="sm"
               square
+              aria-label="LinkedIn Profile"
             >
               <UIcon name="i-ph-linkedin-logo" class="w-5 h-5" />
             </UButton>
@@ -46,6 +48,7 @@
               variant="ghost"
               size="sm"
               square
+              aria-label="Twitter Profile"
             >
               <UIcon name="i-ph-twitter-logo" class="w-5 h-5" />
             </UButton>
@@ -136,7 +139,7 @@
       </div>
 
       <!-- Bottom Bar -->
-      <div class="border-t border-gray-200 dark:border-zinc-700 mt-12 pt-8">
+      <div class="border-t border-gray-200 dark:border-slate-700 mt-12 pt-8">
         <div
           class="flex flex-col md:flex-row justify-between items-center gap-4"
         >
@@ -145,14 +148,12 @@
             reserved.
           </p>
           <div class="flex items-center gap-6">
-            <!-- TODO: add privacy page -->
             <NuxtLink
               to="/privacy"
               class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               Privacy Policy
             </NuxtLink>
-            <!-- TODO: add terms page -->
             <NuxtLink
               to="/terms"
               class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
