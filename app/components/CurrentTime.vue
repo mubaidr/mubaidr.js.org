@@ -19,7 +19,7 @@ async function updateTime() {
 async function fetchWeatherData() {
   try {
     const response = await fetch(
-      "https://api.openweathermap.org/data/2.5/weather?q=Rawalpindi,PK&appid=d903c9eb7a15022580eb78e3bfe46cad&units=metric"
+      "https://api.openweathermap.org/data/2.5/weather?q=Rawalpindi,PK&appid=d903c9eb7a15022580eb78e3bfe46cad&units=metric",
     )
 
     if (!response.ok) {
@@ -43,12 +43,19 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div>
-    <template v-if="weatherData">
-      It's currently {{ currentTime }}, {{ weatherData.main.feels_like }}°C and {{ weatherData.weather[0]?.description }} here in Rawalpindi, Pakistan
-    </template>
-    <template v-else>
-      Checking conditions...
-    </template>
+  <div class="text-sm font-light text-gray-500 dark:text-gray-400 text-center">
+    <ClientOnly>
+      <div>
+        <template v-if="weatherData">
+          It's currently {{ currentTime }}, {{ weatherData.main.feels_like }}°C
+          and {{ weatherData.weather[0]?.description }} here in Rawalpindi,
+          Pakistan
+        </template>
+      </div>
+
+      <template #fallback>
+        <div>Checking conditions...</div>
+      </template>
+    </ClientOnly>
   </div>
 </template>

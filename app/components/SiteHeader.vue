@@ -1,7 +1,13 @@
 <template>
-  <header>
-    <div class="fixed w-full z-40 top-0 left-0 bg-white/25 dark:bg-zinc-900/25 backdrop-blur-lg border-b border-neutral-100 dark:border-neutral-800">
-      <nav class="flex justify-between items-center py-4 max-w-3xl mx-auto" role="navigation" aria-label="Main navigation">
+  <header
+    class="fixed w-full z-40 top-0 left-0 bg-white/25 dark:bg-zinc-900/25 backdrop-blur-lg"
+  >
+    <div class="border-b border-neutral-100 dark:border-neutral-800">
+      <nav
+        class="flex justify-between items-center py-4 px-4 md:px-8 max-w-5xl mx-auto"
+        role="navigation"
+        aria-label="Main navigation"
+      >
         <!-- <NuxtLink
           to="/"
           class="font-semibold text-lg flex items-center gap-2 tracking-tight text-zinc-900 dark:text-zinc-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
@@ -10,22 +16,28 @@
           <span class="hidden sm:inline">mubaidr</span>
         </NuxtLink> -->
 
-        <div></div>
+        <div>
+          <!-- Current Time and Weather Info -->
+          <!-- <CurrentTime /> -->
+        </div>
 
         <!-- Navigation Links -->
         <div class="flex items-center gap-6">
-          <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
+          <nav
+            class="hidden md:flex items-center gap-6"
+            aria-label="Main navigation"
+          >
             <NuxtLink
               to="/"
               class="text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200"
-            active-class="!font-bold"
-              >
+              active-class="!font-bold"
+            >
               Home
             </NuxtLink>
             <NuxtLink
               to="/blog"
               class="text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200"
-            active-class="!font-bold"
+              active-class="!font-bold"
             >
               Blog
             </NuxtLink>
@@ -49,7 +61,10 @@
         v-show="mobileMenuOpen"
         class="md:hidden border-t border-neutral-100 dark:border-neutral-800 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md"
       >
-        <nav class="flex flex-col px-4 py-4 gap-4 max-w-6xl mx-auto" aria-label="Mobile navigation">
+        <nav
+          class="flex flex-col px-4 py-4 gap-4 max-w-6xl mx-auto"
+          aria-label="Mobile navigation"
+        >
           <NuxtLink
             to="/"
             @click="mobileMenuOpen = false"
@@ -77,7 +92,10 @@ const mobileMenuOpen = ref(false)
 
 // Close mobile menu when route changes
 const route = useRoute()
-watch(() => route.path, () => {
-  mobileMenuOpen.value = false
-})
+watch(
+  () => route.path,
+  () => {
+    mobileMenuOpen.value = false
+  },
+)
 </script>

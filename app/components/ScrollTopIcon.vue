@@ -38,7 +38,7 @@ onUnmounted(() => {
     <button
       type="button"
       aria-label="Scroll to Top"
-      class="flex flex-col gap-2 items-center text-center bg-primary-700 p-4 text-white rounded-full shadow-soft-lg"
+      class="flex flex-col gap-2 items-center text-center bg-primary-700 p-4 text-white rounded-full"
       @click="scrollToTop"
     >
       <Icon name="i-ph-arrow-up"></Icon>

@@ -83,7 +83,7 @@ const getExcerpt = (content: any, maxLength = 150) => {
 </script>
 
 <template>
-  <div class="max-w-3xl mx-auto">
+  <div>
     <!-- Page Header -->
     <div class="mb-12">
       <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -103,7 +103,7 @@ const getExcerpt = (content: any, maxLength = 150) => {
     <div v-else-if="posts.length > 0" class="space-y-8">
       <div class="grid gap-8 md:grid-cols-2">
         <article v-for="post in posts" :key="post.id" class="group cursor-pointer">
-          <UCard class="h-full hover:shadow-lg transition-all duration-200 group-hover:scale-[1.02] overflow-hidden">
+          <UCard class="h-full transition-all duration-200 group-hover:scale-[1.02] overflow-hidden">
             <div class="p-6 flex flex-col h-full">
               <!-- Featured Image (if available) -->
               <div v-if="post.image" class="aspect-[16/9] bg-gray-100 dark:bg-gray-800 rounded-lg mb-4 overflow-hidden">
@@ -187,7 +187,7 @@ const getExcerpt = (content: any, maxLength = 150) => {
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 .line-clamp-3 {
   display: -webkit-box;
   -webkit-line-clamp: 3;

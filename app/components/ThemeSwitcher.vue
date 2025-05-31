@@ -1,20 +1,25 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
 
-const isDark = computed(() => colorMode.value === 'dark')
+const isDark = computed(() => colorMode.value === "dark")
 
 const toggleTheme = () => {
-  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+  colorMode.preference = colorMode.value === "dark" ? "light" : "dark"
 }
 </script>
 
 <template>
-  <UButton
-    :icon="isDark ? 'i-ph-moon' : 'i-ph-sun'"
-    variant="ghost"
-    color="neutral"
-    size="xs"
-    :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
-    @click="toggleTheme"
-  />
+  <ClientOnly>
+    <UButton
+      :icon="isDark ? 'i-ph-moon' : 'i-ph-sun'"
+      variant="ghost"
+      color="neutral"
+      size="xs"
+      :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+      @click="toggleTheme"
+    />
+    <template #fallback>
+      <div class="h-8 w-8"></div>
+    </template>
+  </ClientOnly>
 </template>

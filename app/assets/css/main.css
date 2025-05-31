@@ -2,19 +2,26 @@
 @import "@nuxt/ui";
 @plugin "@tailwindcss/typography";
 
+@theme static {
+  --font-sans: "Manrope", "Public Sans", sans-serif;
+}
+
+:root {
+  --ui-radius: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
   overflow-y: scroll;
-  /* @apply dark:bg-stone-800; */
 }
 
 /* Glass Shape Animations */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) rotate(0deg);
   }
   50% {
@@ -23,7 +30,8 @@ body {
 }
 
 @keyframes floatReverse {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) rotate(0deg);
   }
   50% {
@@ -32,7 +40,8 @@ body {
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.3;
     transform: scale(1);
   }
@@ -82,7 +91,8 @@ body {
 }
 
 .glass-triangle {
-  animation: floatReverse 10s ease-in-out infinite, rotate-slow 15s linear infinite;
+  animation: floatReverse 10s ease-in-out infinite,
+    rotate-slow 15s linear infinite;
   animation-delay: 2s, 0s;
 }
 
@@ -92,12 +102,14 @@ body {
 }
 
 .glass-hexagon {
-  animation: float 9s ease-in-out infinite, rotate-slow 20s linear infinite reverse;
+  animation: float 9s ease-in-out infinite,
+    rotate-slow 20s linear infinite reverse;
   animation-delay: 3s, 1s;
 }
 
 .glass-parallelogram {
-  animation: floatReverse 7s ease-in-out infinite, pulse-glow 5s ease-in-out infinite;
+  animation: floatReverse 7s ease-in-out infinite,
+    pulse-glow 5s ease-in-out infinite;
   animation-delay: 1.5s, 2s;
 }
 
