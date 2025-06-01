@@ -32,7 +32,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "postinstall": "nuxt prepare",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "lint": "eslint . --fix",
+    "format": "prettier --write ."
   },
   "type": "module"
 }

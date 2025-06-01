@@ -1,0 +1,220 @@
+experiences:
+  - id: 1
+    title: "Senior Software Engineer"
+    company: "Freelance"
+    location: "Remote"
+    period: "2020 - Present"
+    current: true
+    description: "Leading full-stack development projects and providing technical consulting for various clients across different industries."
+    responsibilities:
+      - "Architecting and developing scalable web applications using Vue.js, Nuxt.js, and Node.js"
+      - "Implementing DevOps practices and CI/CD pipelines"
+      - "Mentoring development teams and conducting code reviews"
+      - "Optimizing application performance and scalability"
+    technologies:
+      - "Vue.js"
+      - "Nuxt.js"
+      - "Node.js"
+      - "TypeScript"
+      - "PostgreSQL"
+      - "AWS"
+      - "Docker"
+    achievements:
+      - "Successfully delivered 20+ projects with 100% client satisfaction"
+      - "Reduced application load times by 60% through optimization"
+      - "Mentored 15+ junior developers"
+
+  - id: 2
+    title: "Full-Stack Developer"
+    company: "Tech Solutions Inc"
+    location: "Karachi, Pakistan"
+    period: "2018 - 2020"
+    current: false
+    description: "Developed and maintained enterprise web applications for financial and healthcare sectors."
+    responsibilities:
+      - "Built responsive web applications using React and Vue.js"
+      - "Designed and implemented RESTful APIs using Laravel and Express.js"
+      - "Collaborated with UX/UI designers to implement pixel-perfect designs"
+      - "Participated in agile development processes"
+    technologies:
+      - "React"
+      - "Vue.js"
+      - "Laravel"
+      - "Express.js"
+      - "MySQL"
+      - "MongoDB"
+    achievements:
+      - "Led migration of legacy system to modern tech stack"
+      - "Improved system performance by 40%"
+      - "Implemented automated testing increasing code coverage to 85%"
+
+  - id: 3
+    title: "Software Developer"
+    company: "Digital Agency Pro"
+    location: "Lahore, Pakistan"
+    period: "2015 - 2018"
+    current: false
+    description: "Focused on frontend development and creating interactive user experiences for client projects."
+    responsibilities:
+      - "Developed custom WordPress themes and plugins"
+      - "Created responsive websites using HTML, CSS, and JavaScript"
+      - "Integrated third-party APIs and payment gateways"
+      - "Provided technical support and maintenance"
+    technologies:
+      - "JavaScript"
+      - "PHP"
+      - "WordPress"
+      - "jQuery"
+      - "Bootstrap"
+      - "MySQL"
+    achievements:
+      - "Delivered 50+ client websites on time and within budget"
+      - "Reduced development time by 30% through reusable components"
+      - "Achieved 98% client retention rate"
+
+  - id: 4
+    title: "Junior Developer"
+    company: "StartUp Hub"
+    location: "Islamabad, Pakistan"
+    period: "2012 - 2015"
+    current: false
+    description: "Started career working on various web development projects and learning modern development practices."
+    responsibilities:
+      - "Assisted in developing web applications using PHP and MySQL"
+      - "Created basic frontend interfaces using HTML, CSS, and JavaScript"
+      - "Participated in requirement gathering and project planning"
+      - "Maintained and updated existing applications"
+    technologies:
+      - "PHP"
+      - "HTML"
+      - "CSS"
+      - "JavaScript"
+      - "MySQL"
+      - "Git"
+    achievements:
+      - "Successfully completed 3-month intensive training program"
+      - "Contributed to 10+ successful project deliveries"
+      - "Recognized as 'Most Improved Developer' in first year"
+
+education:
+  - id: 1
+    degree: "Master of Science in Project Management"
+    institution: "University of Management and Technology"
+    location: "Lahore, Pakistan"
+    period: "2017 - 2019"
+    description: "Specialized in IT project management, agile methodologies, and team leadership."
+    achievements:
+      - "Graduated with Distinction (CGPA: 3.8/4.0)"
+      - "Thesis: 'Agile Project Management in Software Development'"
+      - "Member of Project Management Society"
+
+  - id: 2
+    degree: "Bachelor of Science in Software Engineering"
+    institution: "University of Engineering and Technology"
+    location: "Lahore, Pakistan"
+    period: "2008 - 2012"
+    description: "Comprehensive study of software engineering principles, programming languages, and system design."
+    achievements:
+      - "Graduated Cum Laude (CGPA: 3.6/4.0)"
+      - "Final Year Project: E-commerce Platform using PHP/MySQL"
+      - "President of Software Engineering Society"
+
+certifications:
+  - id: 1
+    name: "AWS Certified Solutions Architect"
+    issuer: "Amazon Web Services"
+    date: "2023"
+    credentialId: "AWS-SAA-123456"
+    description: "Demonstrates expertise in designing distributed systems on AWS."
+
+  - id: 2
+    name: "Vue.js Certified Developer"
+    issuer: "Vue School"
+    date: "2022"
+    credentialId: "VUE-DEV-789012"
+    description: "Advanced certification in Vue.js ecosystem and best practices."
+
+  - id: 3
+    name: "Project Management Professional (PMP)"
+    issuer: "Project Management Institute"
+    date: "2021"
+    credentialId: "PMP-345678"
+    description: "Global standard for project management professionals."
+
+technologies:
+  languages:
+    - "Node.js"
+    - "TypeScript"
+    - "JavaScript"
+    - "PHP"
+    - "C#"
+    - "T-SQL"
+    - "Python"
+    - "Go"
+  frameworks:
+    - "Nuxt"
+    - "NestJS"
+    - "ExpressJS"
+    - "Laravel"
+    - "ASP.NET"
+    - "Fastify"
+  frontend:
+    - "Vue 3"
+    - "Nuxt"
+    - "React"
+    - "Next.js"
+    - "Tailwind CSS"
+    - "SCSS"
+    - "HTML"
+    - "Pug"
+    - "EJS"
+    - "Canvas"
+  testing:
+    - "Jest"
+    - "Vitest"
+    - "Playwright"
+    - "Selenium"
+    - "TDD"
+  databases:
+    - "PostgreSQL"
+    - "Supabase"
+    - "Firebase"
+    - "MongoDB"
+    - "Redis"
+    - "Memcached"
+    - "MySQL"
+    - "SQL Server"
+    - "SQLite"
+  devops:
+    - "Docker"
+    - "AWS"
+    - "Google Cloud"
+    - "Cloudflare"
+    - "GitHub Actions"
+    - "CircleCI"
+    - "Heroku"
+    - "Nginx"
+    - "Netlify"
+    - "Vercel"
+  automation:
+    - "Puppeteer"
+    - "Web Scraping"
+    - "Bash"
+    - "Git"
+    - "GitHub"
+    - "GitHub Actions"
+    - "VSCode"
+    - "Webstorm"
+  build:
+    - "Vite"
+    - "Webpack"
+    - "ESLint"
+    - "Prettier"
+    - "Storybook"
+    - "Prisma"
+  other:
+    - "Browser Extensions (MV2/MV3)"
+    - "REST APIs"
+    - "GraphQL"
+    - "Performance Optimization"
+    - "Accessibility"

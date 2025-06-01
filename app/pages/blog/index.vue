@@ -33,7 +33,6 @@ const { data: blogData } = await useAsyncData(
   },
 )
 
-const posts = computed(() => (blogData.value?.posts || []) as any[])
 const totalPosts = computed(() => blogData.value?.count || 0)
 const totalPages = computed(() => Math.ceil(totalPosts.value / itemsPerPage))
 
@@ -90,16 +89,14 @@ const getExcerpt = (content: any, maxLength = 150) => {
     <div class="space-y-24">
       <!-- Page Header -->
       <div class="text-center">
-        <h1
-          class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6"
-        >
-          Blog
-        </h1>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Blog</h1>
         <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
           Insights, tutorials, and thoughts on web development, technology, and
           more.
         </p>
       </div>
+
+      <FeaturedBlogPosts title="Featured Posts" />
 
       <!-- Loading State -->
       <div v-if="!blogData" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -107,96 +104,105 @@ const getExcerpt = (content: any, maxLength = 150) => {
       </div>
 
       <!-- Blog Posts Grid -->
-      <div v-else-if="posts.length > 0" class="space-y-8">
-        <div class="grid gap-8 md:grid-cols-2">
+      <div v-else-if="blogData.posts.length > 0" class="space-y-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold mb-8">All Posts</h2>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <article
-            v-for="post in posts"
+            v-for="post in blogData.posts"
             :key="post.id"
             class="group cursor-pointer"
           >
             <UCard
-              class="h-full transition-all duration-200 group-hover:scale-[1.02] overflow-hidden"
+              class="group cursor-pointer transition-all duration-300 hover:scale-[1.02] h-full overflow-hidden relative"
             >
-              <div class="p-6 flex flex-col h-full">
-                <!-- Featured Image (if available) -->
-                <div
-                  v-if="post.image"
-                  class="aspect-[16/9] bg-gray-100 dark:bg-gray-800 rounded-lg mb-4 overflow-hidden"
-                >
-                  <img
-                    :src="post.image"
-                    :alt="post.title"
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+              <!-- Featured Image (if available) -->
+              <div
+                v-if="post.image"
+                class="aspect-[16/9] bg-gray-100 dark:bg-gray-800 mb-4 overflow-hidden"
+              >
+                <img
+                  :src="post.image"
+                  :alt="post.title"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+                />
+              </div>
+              <!-- Blog post image placeholder -->
+              <div
+                v-else
+                class="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center mb-4"
+              >
+                <UIcon
+                  name="i-ph-article-duotone"
+                  class="w-8 h-8 text-gray-500 dark:text-gray-400"
+                />
+              </div>
+              <div class="flex flex-col h-full">
+                <!-- Removed p-6 from this wrapper -->
+                <!-- Title and First Tag (as category) -->
+                <div class="flex items-center justify-between mb-2">
+                  <h3
+                    class="text-lg font-semibold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors"
+                  >
+                    {{ post.title }}
+                  </h3>
+                  <UBadge
+                    v-if="post.tags && post.tags.length > 0"
+                    :label="post.tags[0]"
+                    variant="soft"
+                    size="sm"
                   />
                 </div>
 
-                <!-- Post Content -->
-                <!-- Title -->
-                <h2
-                  class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors"
-                >
-                  {{ post.title }}
-                </h2>
-
                 <!-- Description/Excerpt -->
                 <p
-                  class="text-gray-600 dark:text-gray-400 mb-4 flex-1 line-clamp-3"
+                  class="text-gray-600 dark:text-gray-400 text-sm line-clamp-3 mb-4 flex-1"
                 >
                   {{ post.description || getExcerpt(post.body) }}
                 </p>
 
-                <!-- Meta Information -->
+                <!-- Meta: Date and Read More button -->
                 <div
                   class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mt-auto"
                 >
-                  <div class="flex items-center space-x-4">
-                    <!-- Author -->
-                    <!-- <span v-if="post.author">
-                    by {{ post.author }}
-                  </span> -->
-
-                    <!-- Date -->
-                    <span v-if="post.date">
-                      {{ formatDate(post.date) }}
-                    </span>
-                  </div>
-
-                  <!-- Read More Link -->
-                  <UButton
-                    :to="post.path"
-                    variant="ghost"
-                    size="sm"
-                    trailing-icon="i-heroicons-arrow-right"
-                  >
-                    Read More
-                  </UButton>
+                  <span v-if="post.date" class="text-xs">
+                    {{ formatDate(post.date) }}
+                  </span>
+                  <UIcon
+                    name="i-ph-arrow-right"
+                    class="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform"
+                  />
                 </div>
 
-                <!-- Tags (if available) -->
+                <!-- Remaining Tags (styled like project technologies) -->
                 <div
-                  v-if="post.tags && post.tags.length > 0"
-                  class="flex flex-wrap gap-2 mt-3"
+                  v-if="post.tags && post.tags.length > 1"
+                  class="flex flex-wrap gap-1 mt-3"
                 >
                   <UBadge
-                    v-for="tag in post.tags.slice(0, 3)"
+                    v-for="tag in post.tags.slice(1, 4)"
                     :key="tag"
-                    variant="soft"
+                    :label="tag"
+                    variant="outline"
                     size="sm"
-                  >
-                    {{ tag }}
-                  </UBadge>
+                  />
                   <UBadge
-                    v-if="post.tags.length > 3"
+                    v-if="post.tags.length > 4"
+                    :label="`+${post.tags.length - 4}`"
                     variant="soft"
                     size="sm"
                     color="neutral"
-                  >
-                    +{{ post.tags.length - 3 }}
-                  </UBadge>
+                  />
                 </div>
-                <!-- Click overlay for navigation -->
-                <NuxtLink :to="post.path" aria-label="Read full post" />
               </div>
+              <!-- Click overlay for navigation -->
+              <ULink
+                :to="post.path"
+                class="absolute inset-0"
+                aria-label="Read full post"
+              />
             </UCard>
           </article>
         </div>
@@ -218,16 +224,14 @@ const getExcerpt = (content: any, maxLength = 150) => {
       <!-- Empty State -->
       <div v-else class="text-center py-16">
         <div
-          class="mx-auto w-24 h-24 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mb-6"
+          class="mx-auto w-24 h-24 bg-gray-100 dark:bg-gray-800 flex items-center justify-center mb-6"
         >
           <UIcon
             name="i-heroicons-document-text"
             class="w-12 h-12 text-gray-400"
           />
         </div>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-          No blog posts found
-        </h3>
+        <h3 class="text-xl font-semibold mb-2">No blog posts found</h3>
         <p class="text-gray-600 dark:text-gray-400">
           Check back soon for new content!
         </p>
@@ -235,7 +239,7 @@ const getExcerpt = (content: any, maxLength = 150) => {
 
       <!-- Posts Summary -->
       <div
-        v-if="posts.length > 0"
+        v-if="blogData?.posts?.length ?? 0"
         class="mt-8 text-center text-sm text-gray-500 dark:text-gray-400"
       >
         Showing {{ (currentPage - 1) * itemsPerPage + 1 }} to

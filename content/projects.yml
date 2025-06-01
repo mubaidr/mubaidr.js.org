@@ -1,0 +1,306 @@
+projects:
+  - id: 1
+    title: "Vue Color Avatar"
+    description: "A Vue.js component library for generating beautiful, customizable SVG avatars. Used by thousands of developers worldwide."
+    longDescription: "Vue Color Avatar is a comprehensive Vue.js component library that allows developers to generate beautiful, customizable SVG avatars programmatically. The library supports various customization options including colors, shapes, accessories, and facial features, making it perfect for user profile pictures, placeholder images, and design systems."
+    image: "/img/projects/vue-color-avatar.png"
+    technologies:
+      - "Vue.js"
+      - "TypeScript"
+      - "SVG"
+      - "Vite"
+      - "Pinia"
+      - "Tailwind CSS"
+    category: "Open Source"
+    featured: true
+    status: "active"
+    startDate: "2022-01-15"
+    endDate: null
+    links:
+      github: "https://github.com/mubaidr/vue-color-avatar"
+      demo: "https://vue-color-avatar.vercel.app/"
+      npm: "https://www.npmjs.com/package/vue-color-avatar"
+      documentation: "https://vue-color-avatar.vercel.app/docs"
+    stats:
+      stars: "1.2k"
+      downloads: "50k+"
+      forks: "180"
+      contributors: "12"
+    features:
+      - "50+ customizable avatar options"
+      - "TypeScript support"
+      - "Tree-shakable components"
+      - "SSR compatible"
+      - "Lightweight (< 20kb)"
+    challenges:
+      - "Creating scalable SVG generation system"
+      - "Implementing efficient randomization algorithms"
+      - "Ensuring cross-browser compatibility"
+    outcomes:
+      - "1.2k+ GitHub stars"
+      - "50k+ monthly NPM downloads"
+      - "Used by 500+ projects worldwide"
+
+  - id: 2
+    title: "Browser Extension Template"
+    description: "A modern template for building cross-browser extensions using Vue 3, TypeScript, and Manifest V3."
+    longDescription: "A comprehensive starter template for building modern browser extensions that work across Chrome, Firefox, Edge, and Safari. Built with Vue 3, TypeScript, and the latest Manifest V3 specifications, this template provides a solid foundation for extension development with hot reloading, automated building, and cross-browser compatibility."
+    image: "/img/projects/browser-extension.png"
+    technologies:
+      - "Vue 3"
+      - "TypeScript"
+      - "WebExtensions API"
+      - "Vite"
+      - "Manifest V3"
+      - "SCSS"
+    category: "Development Tools"
+    featured: true
+    status: "active"
+    startDate: "2021-08-10"
+    endDate: null
+    links:
+      github: "https://github.com/mubaidr/vue-browser-extension-template"
+      demo: "https://chrome.google.com/webstore/detail/example"
+      documentation: "https://github.com/mubaidr/vue-browser-extension-template#readme"
+    stats:
+      stars: "800"
+      users: "10k+"
+      forks: "120"
+      downloads: "25k+"
+    features:
+      - "Cross-browser compatibility"
+      - "Hot reload development"
+      - "TypeScript support"
+      - "Automated build process"
+      - "Manifest V3 ready"
+    challenges:
+      - "Cross-browser API differences"
+      - "Manifest V3 migration complexities"
+      - "Build optimization for extensions"
+    outcomes:
+      - "800+ GitHub stars"
+      - "10k+ active users"
+      - "Featured in Chrome Web Store"
+
+  - id: 3
+    title: "E-commerce Platform"
+    description: "Full-stack e-commerce solution with advanced features like real-time inventory, payment processing, and analytics."
+    longDescription: "A comprehensive e-commerce platform built for scalability and performance. Features include real-time inventory management, multiple payment gateway integration, advanced analytics dashboard, customer management system, and mobile-responsive design. Built with modern technologies to handle high traffic and transaction volumes."
+    image: "/img/projects/ecommerce.png"
+    technologies:
+      - "Nuxt.js"
+      - "Node.js"
+      - "PostgreSQL"
+      - "Stripe"
+      - "Redis"
+      - "Docker"
+    category: "Web Application"
+    featured: true
+    status: "completed"
+    startDate: "2023-03-01"
+    endDate: "2023-10-15"
+    links:
+      demo: "https://example-ecommerce.com"
+      case_study: "/case-studies/ecommerce-platform"
+    stats:
+      revenue: "$100k+"
+      orders: "5k+"
+      users: "15k+"
+      uptime: "99.9%"
+    features:
+      - "Multi-vendor marketplace"
+      - "Real-time inventory tracking"
+      - "Advanced analytics dashboard"
+      - "Mobile-responsive design"
+      - "Payment gateway integration"
+      - "Order management system"
+    challenges:
+      - "Handling high-volume transactions"
+      - "Real-time inventory synchronization"
+      - "Payment security implementation"
+    outcomes:
+      - "$100k+ in processed transactions"
+      - "5k+ successful orders"
+      - "15k+ registered users"
+      - "99.9% uptime achieved"
+
+  - id: 4
+    title: "Task Management SaaS"
+    description: "Cloud-based project management tool with team collaboration, time tracking, and reporting features."
+    longDescription: "A comprehensive SaaS solution for project and task management designed for teams of all sizes. Features real-time collaboration, advanced time tracking, custom reporting, integration with popular tools, and role-based access control. Built with scalability and user experience as primary focuses."
+    image: "/img/projects/task-management.png"
+    technologies:
+      - "React"
+      - "Express.js"
+      - "MongoDB"
+      - "Socket.io"
+      - "JWT"
+      - "AWS"
+    category: "SaaS"
+    featured: false
+    status: "active"
+    startDate: "2022-06-01"
+    endDate: null
+    links:
+      demo: "https://example-tasks.com"
+      case_study: "/case-studies/task-management-saas"
+    stats:
+      users: "2k+"
+      teams: "500+"
+      projects: "10k+"
+      retention: "85%"
+    features:
+      - "Real-time collaboration"
+      - "Time tracking & reporting"
+      - "Custom workflows"
+      - "Team management"
+      - "Third-party integrations"
+      - "Mobile applications"
+    challenges:
+      - "Real-time synchronization across users"
+      - "Scalable notification system"
+      - "Complex permission management"
+    outcomes:
+      - "2k+ active users"
+      - "500+ teams using the platform"
+      - "85% user retention rate"
+
+  - id: 5
+    title: "Developer Portfolio"
+    description: "Modern, responsive portfolio website built with Nuxt 3, featuring glass morphism design and smooth animations."
+    longDescription: "A cutting-edge portfolio website showcasing modern web development techniques. Features glass morphism design, smooth animations, dark/light mode, blog integration, contact forms, and optimized performance. Built with Nuxt 3 and deployed with modern DevOps practices."
+    image: "/img/projects/portfolio.png"
+    technologies:
+      - "Nuxt 3"
+      - "Tailwind CSS"
+      - "TypeScript"
+      - "Nuxt Content"
+      - "Nuxt UI"
+      - "Vercel"
+    category: "Portfolio"
+    featured: false
+    status: "active"
+    startDate: "2023-11-01"
+    endDate: "2024-01-15"
+    links:
+      github: "https://github.com/mubaidr/portfolio"
+      demo: "https://mubaidr.js.org"
+    stats:
+      lighthouse: "100"
+      visitors: "5k+"
+      bounce_rate: "25%"
+      load_time: "0.8s"
+    features:
+      - "Glass morphism design"
+      - "Dark/light mode toggle"
+      - "Blog integration"
+      - "Contact form"
+      - "SEO optimized"
+      - "Performance focused"
+    challenges:
+      - "Achieving perfect Lighthouse scores"
+      - "Cross-browser glass morphism compatibility"
+      - "Optimizing animations for performance"
+    outcomes:
+      - "100/100 Lighthouse score"
+      - "5k+ monthly visitors"
+      - "25% bounce rate"
+      - "0.8s average load time"
+
+  - id: 6
+    title: "API Documentation Tool"
+    description: "Interactive API documentation generator with live testing capabilities and beautiful UI."
+    longDescription: "A developer-focused tool for generating beautiful, interactive API documentation. Features live testing capabilities, code examples in multiple languages, authentication testing, and collaborative features. Designed to make API documentation both beautiful and functional."
+    image: "/img/projects/api-docs.png"
+    technologies:
+      - "Vue.js"
+      - "Express.js"
+      - "OpenAPI"
+      - "Prism.js"
+      - "MongoDB"
+      - "Docker"
+    category: "Development Tools"
+    featured: false
+    status: "completed"
+    startDate: "2022-01-10"
+    endDate: "2022-05-20"
+    links:
+      github: "https://github.com/mubaidr/api-docs-generator"
+      demo: "https://api-docs-example.com"
+    stats:
+      stars: "450"
+      downloads: "15k+"
+      users: "3k+"
+      apis_documented: "1k+"
+    features:
+      - "Interactive API testing"
+      - "Multiple language examples"
+      - "Authentication support"
+      - "Collaborative editing"
+      - "Custom branding"
+      - "Export capabilities"
+    challenges:
+      - "Supporting multiple API specifications"
+      - "Real-time collaboration implementation"
+      - "Code generation for multiple languages"
+    outcomes:
+      - "450+ GitHub stars"
+      - "15k+ downloads"
+      - "3k+ active users"
+      - "1k+ APIs documented"
+
+  - id: 7
+    title: "Real-time Chat Application"
+    description: "Scalable chat application with video calling, file sharing, and team channels."
+    longDescription: "Enterprise-grade chat application supporting real-time messaging, video calls, file sharing, and team collaboration. Built with modern technologies to support thousands of concurrent users with features like message encryption, custom emojis, and integration capabilities."
+    image: "/img/projects/chat-app.png"
+    technologies:
+      - "Vue.js"
+      - "Socket.io"
+      - "Node.js"
+      - "Redis"
+      - "WebRTC"
+      - "PostgreSQL"
+    category: "Web Application"
+    featured: false
+    status: "completed"
+    startDate: "2021-09-01"
+    endDate: "2022-02-28"
+    links:
+      demo: "https://example-chat.com"
+      case_study: "/case-studies/chat-application"
+    stats:
+      concurrent_users: "5k+"
+      messages_sent: "1M+"
+      uptime: "99.8%"
+      response_time: "50ms"
+    features:
+      - "Real-time messaging"
+      - "Video/audio calls"
+      - "File sharing"
+      - "Team channels"
+      - "Message encryption"
+      - "Mobile support"
+    challenges:
+      - "Scaling WebSocket connections"
+      - "Implementing end-to-end encryption"
+      - "Managing video call quality"
+    outcomes:
+      - "5k+ concurrent users supported"
+      - "1M+ messages processed"
+      - "99.8% uptime achieved"
+      - "50ms average response time"
+
+categories:
+  - name: "All"
+    count: 7
+  - name: "Open Source"
+    count: 1
+  - name: "Development Tools"
+    count: 2
+  - name: "Web Application"
+    count: 2
+  - name: "SaaS"
+    count: 1
+  - name: "Portfolio"
+    count: 1

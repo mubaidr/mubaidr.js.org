@@ -11,6 +11,7 @@ date: 2024-08-13T12:00:00.000Z
 dateUpdated: ""
 author: Muhammad Ubaid Raza
 authorUrl: /
+featured: true
 ---
 
 # Building Modern Browser Extensions: A Developer's Guide to Vite, Vue 3, and Manifest V3

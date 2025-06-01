@@ -1,0 +1,240 @@
+services:
+  - id: 1
+    title: "Full-Stack Development"
+    description: "End-to-end web application development using modern frameworks and technologies."
+    icon: "i-ph-code"
+    category: "Development"
+    featured: true
+    features:
+      - "Vue.js / Nuxt.js Applications"
+      - "React / Next.js Development"
+      - "Node.js Backend Services"
+      - "Database Design & Integration"
+      - "API Development & Integration"
+      - "Performance Optimization"
+    pricing:
+      hourly: 80
+      currency: "USD"
+      description: "From $80/hour"
+    timeline: "2-12 weeks"
+    suitable: "Startups, SMEs, Enterprise"
+    technologies:
+      - "Vue.js"
+      - "React"
+      - "Node.js"
+      - "TypeScript"
+      - "PostgreSQL"
+      - "MongoDB"
+
+  - id: 2
+    title: "Technical Consulting"
+    description: "Strategic technical guidance and architecture planning for your projects."
+    icon: "i-ph-lightbulb"
+    category: "Consulting"
+    featured: true
+    features:
+      - "Technology Stack Selection"
+      - "Architecture Design"
+      - "Code Review & Audit"
+      - "Performance Analysis"
+      - "Scalability Planning"
+      - "Best Practices Implementation"
+    pricing:
+      hourly: 120
+      currency: "USD"
+      description: "From $120/hour"
+    timeline: "1-4 weeks"
+    suitable: "All business sizes"
+    technologies:
+      - "System Architecture"
+      - "Performance Optimization"
+      - "Security Best Practices"
+      - "Scalability Solutions"
+
+  - id: 3
+    title: "Project Leadership"
+    description: "Lead and manage development teams to deliver successful projects."
+    icon: "i-ph-users"
+    category: "Management"
+    featured: true
+    features:
+      - "Team Management"
+      - "Project Planning"
+      - "Agile Methodologies"
+      - "Quality Assurance"
+      - "Risk Management"
+      - "Stakeholder Communication"
+    pricing:
+      hourly: null
+      currency: "USD"
+      description: "Custom pricing"
+    timeline: "Project-based"
+    suitable: "Medium to large teams"
+    technologies:
+      - "Agile/Scrum"
+      - "Project Management Tools"
+      - "Quality Assurance"
+      - "Team Coordination"
+
+  - id: 4
+    title: "Code Review & Mentoring"
+    description: "Improve code quality and mentor development teams."
+    icon: "i-ph-graduation-cap"
+    category: "Education"
+    featured: false
+    features:
+      - "Code Quality Assessment"
+      - "Security Review"
+      - "Performance Optimization"
+      - "Developer Mentoring"
+      - "Training Sessions"
+      - "Documentation Review"
+    pricing:
+      hourly: 100
+      currency: "USD"
+      description: "From $100/hour"
+    timeline: "Ongoing"
+    suitable: "Teams of all sizes"
+    technologies:
+      - "Code Analysis Tools"
+      - "Best Practices"
+      - "Security Patterns"
+      - "Performance Monitoring"
+
+  - id: 5
+    title: "Browser Extension Development"
+    description: "Custom browser extensions for Chrome, Firefox, and other browsers."
+    icon: "i-ph-puzzle-piece"
+    category: "Development"
+    featured: false
+    features:
+      - "Chrome Extension Development"
+      - "Firefox Add-on Development"
+      - "Cross-browser Compatibility"
+      - "Manifest V3 Migration"
+      - "API Integration"
+      - "User Interface Design"
+    pricing:
+      hourly: 90
+      currency: "USD"
+      description: "From $90/hour"
+    timeline: "2-6 weeks"
+    suitable: "Businesses, Startups"
+    technologies:
+      - "WebExtensions API"
+      - "Vue.js"
+      - "TypeScript"
+      - "Manifest V3"
+
+  - id: 6
+    title: "API Development & Integration"
+    description: "RESTful APIs, GraphQL endpoints, and third-party integrations."
+    icon: "i-ph-plugs-connected"
+    category: "Development"
+    featured: false
+    features:
+      - "RESTful API Design"
+      - "GraphQL Implementation"
+      - "Third-party Integrations"
+      - "API Documentation"
+      - "Authentication & Security"
+      - "Rate Limiting & Caching"
+    pricing:
+      hourly: 85
+      currency: "USD"
+      description: "From $85/hour"
+    timeline: "1-8 weeks"
+    suitable: "All business sizes"
+    technologies:
+      - "Node.js"
+      - "Express.js"
+      - "GraphQL"
+      - "OpenAPI"
+      - "JWT"
+      - "OAuth"
+
+process:
+  - step: 1
+    title: "Discovery"
+    description: "We discuss your project requirements, goals, and timeline."
+    icon: "i-ph-chat-circle"
+    details:
+      - "Initial consultation call"
+      - "Requirements gathering"
+      - "Goal definition"
+      - "Timeline estimation"
+
+  - step: 2
+    title: "Planning"
+    description: "I create a detailed project plan with milestones and deliverables."
+    icon: "i-ph-calendar"
+    details:
+      - "Technical architecture design"
+      - "Project roadmap creation"
+      - "Milestone definition"
+      - "Resource allocation"
+
+  - step: 3
+    title: "Development"
+    description: "Regular updates and iterative development with your feedback."
+    icon: "i-ph-code"
+    details:
+      - "Agile development approach"
+      - "Regular progress updates"
+      - "Continuous feedback integration"
+      - "Quality assurance testing"
+
+  - step: 4
+    title: "Delivery"
+    description: "Final testing, deployment, and handover with documentation."
+    icon: "i-ph-rocket"
+    details:
+      - "Comprehensive testing"
+      - "Production deployment"
+      - "Documentation handover"
+      - "Training and support"
+
+packages:
+  - name: "Consultation"
+    price: 120
+    currency: "USD"
+    period: "per hour"
+    description: "Perfect for getting expert advice on your project"
+    features:
+      - "Technical consultation"
+      - "Architecture review"
+      - "Technology recommendations"
+      - "Project planning"
+      - "Email support"
+    highlighted: false
+    category: "consulting"
+
+  - name: "Development"
+    price: 100
+    currency: "USD"
+    period: "per hour"
+    description: "Full-stack development services"
+    features:
+      - "Custom web applications"
+      - "Frontend & backend development"
+      - "Database design"
+      - "API development"
+      - "Testing & deployment"
+      - "Documentation"
+    highlighted: true
+    category: "development"
+
+  - name: "Project Leadership"
+    price: null
+    currency: "USD"
+    period: "custom pricing"
+    description: "Complete project management and leadership"
+    features:
+      - "Team management"
+      - "Project planning"
+      - "Quality assurance"
+      - "Risk management"
+      - "Stakeholder communication"
+      - "Delivery guarantee"
+    highlighted: false
+    category: "management"

@@ -15,6 +15,7 @@ socialImage:
   alt: Screenshot of VSCode with Minimal Mist theme in dark mode
   width: 1200
   height: 630
+featured: true
 ---
 
 # My VSCode Setup: A Journey to Minimal Perfection

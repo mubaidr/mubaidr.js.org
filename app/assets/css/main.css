@@ -10,10 +10,6 @@
   --ui-radius: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   overflow-y: scroll;
 }
