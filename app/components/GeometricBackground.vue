@@ -46,12 +46,12 @@ const generateParticles = () => {
   // Optimize particle count based on device capabilities
   const isMobile = window.innerWidth < 768
   const isLowEnd = navigator.hardwareConcurrency <= 4
-  let particleCount = 50 // Default for desktop
+  let particleCount = 45 // Default for desktop
 
   if (isMobile) {
-    particleCount = isLowEnd ? 20 : 30 // Fewer particles on mobile
+    particleCount = isLowEnd ? 15 : 30 // Fewer particles on mobile
   } else if (isLowEnd) {
-    particleCount = 35 // Reduced for low-end desktops
+    particleCount = 30 // Reduced for low-end desktops
   }
 
   particles.value = []
@@ -122,7 +122,10 @@ const drawConstellation = () => {
   const rect = canvas.getBoundingClientRect()
 
   // Only resize canvas if dimensions changed
-  if (lastCanvasSize.width !== rect.width || lastCanvasSize.height !== rect.height) {
+  if (
+    lastCanvasSize.width !== rect.width ||
+    lastCanvasSize.height !== rect.height
+  ) {
     canvas.width = rect.width
     canvas.height = rect.height
     lastCanvasSize.width = rect.width
@@ -145,8 +148,14 @@ const drawConstellation = () => {
   }))
 
   // Pre-calculate mouse position for line highlighting
-  const mouseX = isMouseInside.value && canvasRect ? mousePos.value.x - canvasRect.left : -1000
-  const mouseY = isMouseInside.value && canvasRect ? mousePos.value.y - canvasRect.top : -1000
+  const mouseX =
+    isMouseInside.value && canvasRect
+      ? mousePos.value.x - canvasRect.left
+      : -1000
+  const mouseY =
+    isMouseInside.value && canvasRect
+      ? mousePos.value.y - canvasRect.top
+      : -1000
 
   // Draw constellation lines with optimized distance calculations
   canvasContext.lineWidth = 0.5
@@ -168,17 +177,24 @@ const drawConstellation = () => {
         const distance = Math.sqrt(distanceSquared)
 
         // Base opacity
-        let opacity = Math.max(0, (maxLineDistance - distance) / maxLineDistance) * colors.lineOpacity
+        let opacity =
+          Math.max(0, (maxLineDistance - distance) / maxLineDistance) *
+          colors.lineOpacity
 
         // Add highlight effect when mouse is close to line
         if (isMouseInside.value) {
           const lineDistanceToMouse = distanceToLineSegment(
-            mouseX, mouseY, particle.x, particle.y, otherParticle.x, otherParticle.y
+            mouseX,
+            mouseY,
+            particle.x,
+            particle.y,
+            otherParticle.x,
+            otherParticle.y,
           )
 
           if (lineDistanceToMouse < 50) {
             const highlightFactor = Math.max(0, (50 - lineDistanceToMouse) / 50)
-            opacity = Math.min(1, opacity + highlightFactor * 0.4)
+            opacity = Math.min(0.25, opacity + highlightFactor * 0.125)
           }
         }
 
@@ -227,8 +243,10 @@ const handleMouseMove = (event) => {
 
   // Update cached mouse percentage when canvas rect is available
   if (canvasRect) {
-    mousePercent.x = ((event.clientX - canvasRect.left) / canvasRect.width) * 100
-    mousePercent.y = ((event.clientY - canvasRect.top) / canvasRect.height) * 100
+    mousePercent.x =
+      ((event.clientX - canvasRect.left) / canvasRect.width) * 100
+    mousePercent.y =
+      ((event.clientY - canvasRect.top) / canvasRect.height) * 100
   }
 }
 

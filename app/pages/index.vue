@@ -109,7 +109,7 @@ if (profile.value) {
 
         <!-- Action Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-          <UButton to="/contact" size="lg" variant="solid">
+          <UButton to="/contact" size="lg" variant="solid" class="glass-button">
             <UIcon name="i-ph-envelope" />
             Get In Touch
           </UButton>
@@ -247,5 +247,73 @@ if (profile.value) {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* Glass Button Animation */
+.glass-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transition: left 0.6s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.glass-button:hover::before {
+  left: 100%;
+}
+
+.glass-button:hover {
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+}
+
+/* Shimmer animation that runs continuously */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.glass-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%);
+  animation: shimmer 4s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ensure button content is above the effects */
+.glass-button :deep(*) {
+  position: relative;
+  z-index: 2;
 }
 </style>
