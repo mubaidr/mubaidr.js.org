@@ -61,6 +61,10 @@ export default defineNuxtConfig({
   experimental: {
     typedPages: true,
     buildCache: true,
+    headNext: true,
+    lazyHydration: true,
+    sharedPrerenderData: true,
+    viewTransition: true,
   },
 
   future: {
