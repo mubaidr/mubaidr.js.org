@@ -25,11 +25,11 @@ useHead({
 <template>
   <div>
     <div>
-      <!-- TODO: add FAQs -->
+      <NuxtLoadingIndicator />
       <NuxtLayout>
         <NuxtPage />
-        <NuxtRouteAnnouncer />
       </NuxtLayout>
+      <NuxtRouteAnnouncer />
     </div>
   </div>
 </template>
