@@ -3,7 +3,9 @@
 <template>
   <div class="min-h-screen relative overflow-hidden">
     <!-- Geometric Background -->
-    <GeometricBackground />
+    <ClientOnly>
+      <GeometricBackground />
+    </ClientOnly>
 
     <!-- Site Header -->
     <SiteHeader />
