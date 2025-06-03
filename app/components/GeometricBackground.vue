@@ -49,9 +49,9 @@ const generateParticles = () => {
   let particleCount = 45 // Default for desktop
 
   if (isMobile) {
-    particleCount = isLowEnd ? 15 : 30 // Fewer particles on mobile
+    particleCount = isLowEnd ? 15 : 25 // Fewer particles on mobile
   } else if (isLowEnd) {
-    particleCount = 30 // Reduced for low-end desktops
+    particleCount = 15 // Reduced for low-end desktops
   }
 
   particles.value = []
