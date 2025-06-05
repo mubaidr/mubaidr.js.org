@@ -1,32 +1,27 @@
-name: "Muhammad Ubaid R."
-title: "Senior Software Engineer | Full-Stack Developer | DevOps Enthusiast"
-avatar: "/mubaidr.png"
-description: "Delivering robust, scalable, and user-focused software solutions that drive business success."
-tagline: "I'm a Senior Software Engineer with over a decade of experience building scalable web applications, SaaS platforms, and advanced browser extensions. I hold a BS in Software Engineering (2012) and an MS in Project Management (2019)."
-
+name: Muhammad Ubaid R.
+title: Senior Software Engineer | Full-Stack Developer | DevOps Enthusiast
+avatar: /mubaidr.png
+description: Delivering robust, scalable, and user-focused software solutions that drive business success.
+tagline: I ship clean, scalable systems—from SaaS platforms to browser extensions—with a focus on developer ergonomics and velocity. 10+ years deep in the stack, currently exploring DevOps and infra. BS Software Engineering (2012) · MS Project Management (2019)
 social:
-  - name: "GitHub"
-    url: "https://github.com/mubaidr"
-  - name: "LinkedIn"
-    url: "https://www.linkedin.com/in/mubaidr"
-
+  - name: GitHub
+    url: https://github.com/mubaidr
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/mubaidr
 workApproach:
-  - "Architecting solutions and managing product lifecycles - optimizing performance, scalability, and security"
-  - "Leading agile teams and collaborating with clients - Ensuring clarity, timeliness, and adaptability in all project phases"
-  - "Automating workflows and ensuring code quality"
-
+  - Architecting solutions and managing product lifecycles - optimizing performance, scalability, and security
+  - Leading agile teams and collaborating with clients - Ensuring clarity, timeliness, and adaptability in all project phases
+  - Automating workflows and ensuring code quality
 currentFocus:
-  - "Infrastructure as Code (IaC)"
-  - "Cloud-native tooling and observability"
-  - "AI-assisted development workflows"
-
+  - Infrastructure as Code (IaC)
+  - Cloud-native tooling and observability
+  - AI-assisted development workflows
 availability:
-  description: "Open to freelance, consulting, and collaborative projects. Flexible with remote, async, and agile workflows. Comfortable working across time zones and with distributed teams."
+  description: Open to freelance, consulting, and collaborative projects. Flexible with remote, async, and agile workflows. Comfortable working across time zones and with distributed teams.
   cta:
-    text: "Email Now To Discuss Your Project Or Idea"
-    url: "mailto:mubaidr@gmail.com"
-  note: "I aim to reply as quickly as possible with the attention your message deserves."
-
+    text: Email Now To Discuss Your Project Or Idea
+    url: mailto:mubaidr@gmail.com
+  note: I aim to reply as quickly as possible with the attention your message deserves.
 footer:
-  message: "Thank you for your interest. I look forward to collaborating and building something exceptional together."
-  lastUpdated: "May 31, 2025"
+  message: Thank you for your interest. I look forward to collaborating and building something exceptional together.
+  lastUpdated: May 31, 2025
