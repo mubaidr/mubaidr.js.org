@@ -20,10 +20,24 @@ const { data: recentPosts } = await useAsyncData("recent-posts", async () => {
 <template>
   <div>
     <!-- Recent Blog Posts - Show 2 Most Recent -->
-    <section class="space-y-8">
-      <div class="text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">{{ title }}</h2>
-        <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+    <section class="space-y-12">
+      <div class="text-center space-y-6">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20"
+        >
+          <UIcon name="i-ph-article" class="w-4 h-4 text-primary" />
+          <span class="text-sm font-medium text-primary">Latest Articles</span>
+        </div>
+
+        <h2
+          class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-primary-600 to-gray-900 dark:from-white dark:via-primary-400 dark:to-white bg-clip-text text-transparent"
+        >
+          {{ title }}
+        </h2>
+
+        <p
+          class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
+        >
           Latest thoughts on development, technology, and best practices
         </p>
       </div>

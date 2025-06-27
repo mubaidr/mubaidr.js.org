@@ -1,4 +1,13 @@
 avatar: "https://www.freelancer.com/ppic/246986674/logo/20882715/profile_logo_20882715.jpg"
 name: "Guilherme R."
-quote: "Muhammad was very professional and went beyond what was asked initially. Recommended!"
+title: "Startup Founder"
+company: "Tech Startup"
+quote: "Muhammad delivered our MVP 2 weeks ahead of schedule and 20% under budget. His expertise in Vue.js helped us achieve 40% faster load times than our previous solution. Highly recommended!"
+project: "SaaS Platform MVP"
+results:
+  - "Delivered 2 weeks early"
+  - "20% under budget"
+  - "40% performance improvement"
+  - "Zero post-launch bugs"
 featured: true
+rating: 5

@@ -589,11 +589,17 @@ onUnmounted(() => {
 
 /* Enhanced theme transitions */
 .particle-light {
-  transition: background 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .particle-dark {
-  transition: background 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
 }
 
 /* Performance optimizations */

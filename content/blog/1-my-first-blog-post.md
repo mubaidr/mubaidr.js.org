@@ -36,27 +36,32 @@ This blog is my way of giving back to that community.
 I believe in learning by doing, so you'll find practical, hands-on content that you can apply immediately. Here's what I'll be covering:
 
 ### Web Development Deep Dives
+
 - **Frontend Technologies**: Vue.js, React, modern CSS techniques, and responsive design patterns
 - **Backend Development**: Node.js, Express.js, RESTful API design, and database integration
 - **Full-Stack Projects**: Complete tutorials showing how frontend and backend come together
 
 ### Developer Tools & Productivity
+
 - IDE setups and customizations that boost productivity
 - Development workflows that streamline your coding process
 - Testing strategies that save time and prevent bugs
 
 ### DevOps & Deployment
+
 - CI/CD pipelines for automated testing and deployment
 - Cloud platforms and hosting solutions
 - Database management and optimization techniques
 
 ### Freelancing & Remote Work
+
 - How to find and retain clients as a freelance developer
 - Project management techniques that work
 - Building a sustainable remote work routine
 - Pricing strategies and contract negotiations
 
 ### Open Source Contributions
+
 - How to get started with contributing to open-source projects
 - Creating and maintaining your own open-source libraries
 - Building a portfolio that stands out

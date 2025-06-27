@@ -17,7 +17,14 @@ currentFocus:
   - Cloud-native tooling and observability
   - AI-assisted development workflows
 availability:
+  status: available
+  statusText: Available for new projects
+  startDate: February 2025
+  startDateContext: "Next opening"
   description: Open to freelance, consulting, and collaborative projects. Flexible with remote, async, and agile workflows. Comfortable working across time zones and with distributed teams.
+  responseTime: 24h
+  slotsAvailable: 3
+  paymentTerms: "25% upfront, rest on milestones"
   cta:
     text: Email Now To Discuss Your Project Or Idea
     url: mailto:mubaidr@gmail.com

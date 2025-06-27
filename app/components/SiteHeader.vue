@@ -58,10 +58,15 @@
 
         <!-- Action Buttons & Mobile Menu -->
         <div class="flex items-center gap-3">
-          <!-- Contact CTA -->
-          <UButton to="/contact" variant="subtle" class="hidden lg:flex">
-            <UIcon name="i-ph-envelope" class="w-4 h-4" />
-            <span class="ml-2">Let's Talk</span>
+          <!-- Enhanced Contact CTA -->
+          <UButton
+            to="/contact"
+            variant="solid"
+            size="sm"
+            class="hidden lg:flex bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 transform hover:scale-105 transition-all duration-300"
+          >
+            <UIcon name="i-ph-rocket-launch" class="w-4 h-4" />
+            <span class="ml-2">Start Project</span>
           </UButton>
 
           <!-- Theme Switcher -->

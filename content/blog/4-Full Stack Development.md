@@ -25,27 +25,35 @@ After years of building applications with various technology stacks, I've found 
 Before diving into the technical details, let me explain why this combination has become my go-to choice for full stack development:
 
 ### JavaScript Everywhere
+
 Using Node.js for the backend and Vue.js for the frontend means you're writing JavaScript across your entire application. This unification brings several benefits:
+
 - **Reduced context switching** between different programming languages
 - **Shared code and utilities** between frontend and backend
 - **Consistent development patterns** across your entire stack
 - **Easier team collaboration** when everyone speaks the same language
 
 ### Modern Development Experience
+
 Both technologies embrace modern JavaScript features and development practices:
+
 - **ES6+ syntax** with async/await, destructuring, and modules
 - **NPM ecosystem** with access to millions of packages
 - **Hot reloading** for rapid development iteration
 - **Rich tooling** for debugging, testing, and deployment
 
 ### Scalability and Performance
+
 This stack is designed to handle growth:
+
 - **Node.js non-blocking I/O** handles concurrent requests efficiently
 - **Vue.js virtual DOM** ensures smooth user interfaces
 - **Microservices ready** architecture for scaling individual components
 
 ### Learning Curve and Productivity
+
 Perhaps most importantly, this stack is designed with developer experience in mind:
+
 - **Vue.js gentle learning curve** makes it accessible to developers of all levels
 - **Node.js familiar syntax** for anyone coming from frontend JavaScript
 - **Comprehensive documentation** and active communities for both technologies
@@ -78,6 +86,7 @@ my-fullstack-app/
 ```
 
 This separation of concerns allows you to:
+
 - **Develop independently** - Work on frontend and backend separately
 - **Deploy flexibly** - Host them on different servers if needed
 - **Scale independently** - Scale frontend and backend based on demand
@@ -166,11 +175,11 @@ First, let's create a robust backend API:
 
 ```javascript
 // server/app.js
-const express = require('express')
-const cors = require('cors')
-const helmet = require('helmet')
-const morgan = require('morgan')
-const compression = require('compression')
+const express = require("express")
+const cors = require("cors")
+const helmet = require("helmet")
+const morgan = require("morgan")
+const compression = require("compression")
 
 const app = express()
 const PORT = process.env.PORT || 3000
@@ -179,23 +188,23 @@ const PORT = process.env.PORT || 3000
 app.use(helmet()) // Security headers
 app.use(cors()) // Enable CORS for frontend
 app.use(compression()) // Gzip compression
-app.use(morgan('combined')) // Logging
+app.use(morgan("combined")) // Logging
 app.use(express.json()) // Parse JSON bodies
 app.use(express.urlencoded({ extended: true }))
 
 // Routes
-app.use('/api/tasks', require('./routes/tasks'))
-app.use('/api/auth', require('./routes/auth'))
+app.use("/api/tasks", require("./routes/tasks"))
+app.use("/api/auth", require("./routes/auth"))
 
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack)
-  res.status(500).json({ error: 'Something went wrong!' })
+  res.status(500).json({ error: "Something went wrong!" })
 })
 
 // Health check endpoint
-app.get('/health', (req, res) => {
-  res.json({ status: 'OK', timestamp: new Date().toISOString() })
+app.get("/health", (req, res) => {
+  res.json({ status: "OK", timestamp: new Date().toISOString() })
 })
 
 app.listen(PORT, () => {
@@ -209,32 +218,32 @@ module.exports = app
 
 ```javascript
 // server/routes/tasks.js
-const express = require('express')
+const express = require("express")
 const router = express.Router()
 
 // In-memory storage for demo (use a database in production)
 let tasks = [
-  { id: 1, title: 'Learn Node.js', completed: false, createdAt: new Date() },
-  { id: 2, title: 'Build Vue.js app', completed: false, createdAt: new Date() }
+  { id: 1, title: "Learn Node.js", completed: false, createdAt: new Date() },
+  { id: 2, title: "Build Vue.js app", completed: false, createdAt: new Date() },
 ]
 
 // GET /api/tasks - Retrieve all tasks
-router.get('/', (req, res) => {
+router.get("/", (req, res) => {
   res.json({
     success: true,
     data: tasks,
-    count: tasks.length
+    count: tasks.length,
   })
 })
 
 // POST /api/tasks - Create a new task
-router.post('/', (req, res) => {
+router.post("/", (req, res) => {
   const { title } = req.body
 
-  if (!title || title.trim() === '') {
+  if (!title || title.trim() === "") {
     return res.status(400).json({
       success: false,
-      error: 'Task title is required'
+      error: "Task title is required",
     })
   }
 
@@ -242,28 +251,28 @@ router.post('/', (req, res) => {
     id: Date.now(), // Simple ID generation
     title: title.trim(),
     completed: false,
-    createdAt: new Date()
+    createdAt: new Date(),
   }
 
   tasks.push(newTask)
 
   res.status(201).json({
     success: true,
-    data: newTask
+    data: newTask,
   })
 })
 
 // PUT /api/tasks/:id - Update a task
-router.put('/:id', (req, res) => {
+router.put("/:id", (req, res) => {
   const taskId = parseInt(req.params.id)
   const { title, completed } = req.body
 
-  const taskIndex = tasks.findIndex(task => task.id === taskId)
+  const taskIndex = tasks.findIndex((task) => task.id === taskId)
 
   if (taskIndex === -1) {
     return res.status(404).json({
       success: false,
-      error: 'Task not found'
+      error: "Task not found",
     })
   }
 
@@ -274,19 +283,19 @@ router.put('/:id', (req, res) => {
 
   res.json({
     success: true,
-    data: tasks[taskIndex]
+    data: tasks[taskIndex],
   })
 })
 
 // DELETE /api/tasks/:id - Delete a task
-router.delete('/:id', (req, res) => {
+router.delete("/:id", (req, res) => {
   const taskId = parseInt(req.params.id)
-  const taskIndex = tasks.findIndex(task => task.id === taskId)
+  const taskIndex = tasks.findIndex((task) => task.id === taskId)
 
   if (taskIndex === -1) {
     return res.status(404).json({
       success: false,
-      error: 'Task not found'
+      error: "Task not found",
     })
   }
 
@@ -294,7 +303,7 @@ router.delete('/:id', (req, res) => {
 
   res.json({
     success: true,
-    data: deletedTask
+    data: deletedTask,
   })
 })
 
@@ -326,21 +335,21 @@ Now let's create a clean, functional frontend:
 </template>
 
 <script>
-import TaskForm from './components/TaskForm.vue'
-import TaskList from './components/TaskList.vue'
-import { taskService } from './services/taskService'
+import TaskForm from "./components/TaskForm.vue"
+import TaskList from "./components/TaskList.vue"
+import { taskService } from "./services/taskService"
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     TaskForm,
-    TaskList
+    TaskList,
   },
   data() {
     return {
       tasks: [],
       loading: false,
-      error: null
+      error: null,
     }
   },
   async created() {
@@ -353,8 +362,8 @@ export default {
         const response = await taskService.getTasks()
         this.tasks = response.data
       } catch (error) {
-        this.error = 'Failed to load tasks'
-        console.error('Error loading tasks:', error)
+        this.error = "Failed to load tasks"
+        console.error("Error loading tasks:", error)
       } finally {
         this.loading = false
       }
@@ -365,31 +374,31 @@ export default {
         const response = await taskService.createTask(task)
         this.tasks.push(response.data)
       } catch (error) {
-        console.error('Error creating task:', error)
+        console.error("Error creating task:", error)
       }
     },
 
     async updateTask(task) {
       try {
         const response = await taskService.updateTask(task.id, task)
-        const index = this.tasks.findIndex(t => t.id === task.id)
+        const index = this.tasks.findIndex((t) => t.id === task.id)
         if (index !== -1) {
           this.tasks.splice(index, 1, response.data)
         }
       } catch (error) {
-        console.error('Error updating task:', error)
+        console.error("Error updating task:", error)
       }
     },
 
     async deleteTask(taskId) {
       try {
         await taskService.deleteTask(taskId)
-        this.tasks = this.tasks.filter(task => task.id !== taskId)
+        this.tasks = this.tasks.filter((task) => task.id !== taskId)
       } catch (error) {
-        console.error('Error deleting task:', error)
+        console.error("Error deleting task:", error)
       }
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -424,7 +433,7 @@ export default {
         required
       />
       <button type="submit" class="btn btn-primary" :disabled="loading">
-        {{ loading ? 'Adding...' : 'Add Task' }}
+        {{ loading ? "Adding..." : "Add Task" }}
       </button>
     </div>
   </form>
@@ -432,11 +441,11 @@ export default {
 
 <script>
 export default {
-  name: 'TaskForm',
+  name: "TaskForm",
   data() {
     return {
-      newTaskTitle: '',
-      loading: false
+      newTaskTitle: "",
+      loading: false,
     }
   },
   methods: {
@@ -445,15 +454,15 @@ export default {
 
       this.loading = true
       try {
-        await this.$emit('task-created', {
-          title: this.newTaskTitle.trim()
+        await this.$emit("task-created", {
+          title: this.newTaskTitle.trim(),
         })
-        this.newTaskTitle = ''
+        this.newTaskTitle = ""
       } finally {
         this.loading = false
       }
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -499,17 +508,17 @@ export default {
 
 ```javascript
 // client/src/services/taskService.js
-const API_BASE_URL = process.env.VUE_APP_API_URL || 'http://localhost:3000/api'
+const API_BASE_URL = process.env.VUE_APP_API_URL || "http://localhost:3000/api"
 
 class TaskService {
   async request(endpoint, options = {}) {
     const url = `${API_BASE_URL}${endpoint}`
     const config = {
       headers: {
-        'Content-Type': 'application/json',
-        ...options.headers
+        "Content-Type": "application/json",
+        ...options.headers,
       },
-      ...options
+      ...options,
     }
 
     const response = await fetch(url, config)
@@ -522,26 +531,26 @@ class TaskService {
   }
 
   async getTasks() {
-    return this.request('/tasks')
+    return this.request("/tasks")
   }
 
   async createTask(task) {
-    return this.request('/tasks', {
-      method: 'POST',
-      body: JSON.stringify(task)
+    return this.request("/tasks", {
+      method: "POST",
+      body: JSON.stringify(task),
     })
   }
 
   async updateTask(id, task) {
     return this.request(`/tasks/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify(task)
+      method: "PUT",
+      body: JSON.stringify(task),
     })
   }
 
   async deleteTask(id) {
     return this.request(`/tasks/${id}`, {
-      method: 'DELETE'
+      method: "DELETE",
     })
   }
 }
@@ -559,11 +568,11 @@ Now that we have a working application, let's explore some advanced patterns tha
 // server/config/database.js
 const config = {
   development: {
-    host: process.env.DB_HOST || 'localhost',
+    host: process.env.DB_HOST || "localhost",
     port: process.env.DB_PORT || 5432,
-    database: process.env.DB_NAME || 'myapp_dev',
-    username: process.env.DB_USER || 'postgres',
-    password: process.env.DB_PASS || 'password'
+    database: process.env.DB_NAME || "myapp_dev",
+    username: process.env.DB_USER || "postgres",
+    password: process.env.DB_PASS || "password",
   },
   production: {
     host: process.env.DB_HOST,
@@ -571,40 +580,40 @@ const config = {
     database: process.env.DB_NAME,
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
-    ssl: true
-  }
+    ssl: true,
+  },
 }
 
-module.exports = config[process.env.NODE_ENV || 'development']
+module.exports = config[process.env.NODE_ENV || "development"]
 ```
 
 ### Error Handling and Validation
 
 ```javascript
 // server/middleware/validation.js
-const { body, validationResult } = require('express-validator')
+const { body, validationResult } = require("express-validator")
 
 const validateTask = [
-  body('title')
+  body("title")
     .trim()
     .isLength({ min: 1, max: 255 })
-    .withMessage('Title must be between 1 and 255 characters'),
+    .withMessage("Title must be between 1 and 255 characters"),
 
-  body('completed')
+  body("completed")
     .optional()
     .isBoolean()
-    .withMessage('Completed must be a boolean'),
+    .withMessage("Completed must be a boolean"),
 
   (req, res, next) => {
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
       return res.status(400).json({
         success: false,
-        errors: errors.array()
+        errors: errors.array(),
       })
     }
     next()
-  }
+  },
 ]
 
 module.exports = { validateTask }
@@ -617,7 +626,7 @@ module.exports = { validateTask }
 const state = {
   tasks: [],
   loading: false,
-  error: null
+  error: null,
 }
 
 const mutations = {
@@ -634,34 +643,34 @@ const mutations = {
     state.tasks.push(task)
   },
   UPDATE_TASK(state, updatedTask) {
-    const index = state.tasks.findIndex(task => task.id === updatedTask.id)
+    const index = state.tasks.findIndex((task) => task.id === updatedTask.id)
     if (index !== -1) {
       state.tasks.splice(index, 1, updatedTask)
     }
   },
   DELETE_TASK(state, taskId) {
-    state.tasks = state.tasks.filter(task => task.id !== taskId)
-  }
+    state.tasks = state.tasks.filter((task) => task.id !== taskId)
+  },
 }
 
 const actions = {
   async fetchTasks({ commit }) {
-    commit('SET_LOADING', true)
+    commit("SET_LOADING", true)
     try {
       const response = await taskService.getTasks()
-      commit('SET_TASKS', response.data)
+      commit("SET_TASKS", response.data)
     } catch (error) {
-      commit('SET_ERROR', error.message)
+      commit("SET_ERROR", error.message)
     } finally {
-      commit('SET_LOADING', false)
+      commit("SET_LOADING", false)
     }
-  }
+  },
 }
 
 const getters = {
-  completedTasks: state => state.tasks.filter(task => task.completed),
-  pendingTasks: state => state.tasks.filter(task => !task.completed),
-  taskCount: state => state.tasks.length
+  completedTasks: (state) => state.tasks.filter((task) => task.completed),
+  pendingTasks: (state) => state.tasks.filter((task) => !task.completed),
+  taskCount: (state) => state.tasks.length,
 }
 
 export default {
@@ -669,7 +678,7 @@ export default {
   state,
   mutations,
   actions,
-  getters
+  getters,
 }
 ```
 
@@ -681,27 +690,25 @@ Testing is crucial for maintaining code quality and preventing bugs. Here's how 
 
 ```javascript
 // server/tests/routes/tasks.test.js
-const request = require('supertest')
-const app = require('../../app')
+const request = require("supertest")
+const app = require("../../app")
 
-describe('Tasks API', () => {
-  describe('GET /api/tasks', () => {
-    it('should return all tasks', async () => {
-      const response = await request(app)
-        .get('/api/tasks')
-        .expect(200)
+describe("Tasks API", () => {
+  describe("GET /api/tasks", () => {
+    it("should return all tasks", async () => {
+      const response = await request(app).get("/api/tasks").expect(200)
 
       expect(response.body.success).toBe(true)
       expect(Array.isArray(response.body.data)).toBe(true)
     })
   })
 
-  describe('POST /api/tasks', () => {
-    it('should create a new task', async () => {
-      const newTask = { title: 'Test task' }
+  describe("POST /api/tasks", () => {
+    it("should create a new task", async () => {
+      const newTask = { title: "Test task" }
 
       const response = await request(app)
-        .post('/api/tasks')
+        .post("/api/tasks")
         .send(newTask)
         .expect(201)
 
@@ -710,10 +717,10 @@ describe('Tasks API', () => {
       expect(response.body.data.completed).toBe(false)
     })
 
-    it('should return error for empty title', async () => {
+    it("should return error for empty title", async () => {
       const response = await request(app)
-        .post('/api/tasks')
-        .send({ title: '' })
+        .post("/api/tasks")
+        .send({ title: "" })
         .expect(400)
 
       expect(response.body.success).toBe(false)
@@ -726,32 +733,32 @@ describe('Tasks API', () => {
 
 ```javascript
 // client/tests/unit/TaskForm.spec.js
-import { shallowMount } from '@vue/test-utils'
-import TaskForm from '@/components/TaskForm.vue'
+import { shallowMount } from "@vue/test-utils"
+import TaskForm from "@/components/TaskForm.vue"
 
-describe('TaskForm.vue', () => {
-  it('emits task-created event when form is submitted', async () => {
+describe("TaskForm.vue", () => {
+  it("emits task-created event when form is submitted", async () => {
     const wrapper = shallowMount(TaskForm)
-    const input = wrapper.find('.form-input')
-    const form = wrapper.find('.task-form')
+    const input = wrapper.find(".form-input")
+    const form = wrapper.find(".task-form")
 
-    await input.setValue('New task')
-    await form.trigger('submit.prevent')
+    await input.setValue("New task")
+    await form.trigger("submit.prevent")
 
-    expect(wrapper.emitted('task-created')).toBeTruthy()
-    expect(wrapper.emitted('task-created')[0][0]).toEqual({
-      title: 'New task'
+    expect(wrapper.emitted("task-created")).toBeTruthy()
+    expect(wrapper.emitted("task-created")[0][0]).toEqual({
+      title: "New task",
     })
   })
 
-  it('clears input after successful submission', async () => {
+  it("clears input after successful submission", async () => {
     const wrapper = shallowMount(TaskForm)
-    const input = wrapper.find('.form-input')
+    const input = wrapper.find(".form-input")
 
-    await input.setValue('New task')
-    await wrapper.find('.task-form').trigger('submit.prevent')
+    await input.setValue("New task")
+    await wrapper.find(".task-form").trigger("submit.prevent")
 
-    expect(wrapper.vm.newTaskTitle).toBe('')
+    expect(wrapper.vm.newTaskTitle).toBe("")
   })
 })
 ```
@@ -820,6 +827,7 @@ CMD ["npm", "run", "start:prod"]
 Building full stack applications with Node.js and Vue.js offers a powerful, unified development experience. Here are the most important points to remember:
 
 ### What We've Covered
+
 1. **Unified JavaScript ecosystem** - One language across your entire stack
 2. **Modern development practices** - Hot reloading, component-based architecture, and RESTful APIs
 3. **Practical implementation** - Real code examples you can use immediately
@@ -827,6 +835,7 @@ Building full stack applications with Node.js and Vue.js offers a powerful, unif
 5. **Production deployment** - Environment management and containerization
 
 ### Best Practices to Follow
+
 - **Keep your code modular** - Separate concerns between frontend and backend
 - **Use environment variables** - Never hardcode configuration values
 - **Implement proper error handling** - Both on server and client sides
@@ -834,6 +843,7 @@ Building full stack applications with Node.js and Vue.js offers a powerful, unif
 - **Plan for scaling** - Use patterns that grow with your application
 
 ### Recommended Next Steps
+
 1. **Add a database** - Replace in-memory storage with PostgreSQL or MongoDB
 2. **Implement authentication** - Add user registration and login functionality
 3. **Add real-time features** - Use Socket.io for live updates

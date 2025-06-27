@@ -2,15 +2,16 @@
 
 A modern, high-performance personal portfolio and blog website built with **Nuxt 3**, showcasing professional experience, projects, services, and technical insights.
 
-![Screenshot](Screenshot_20250602_010110.png)
+<!-- ![Screenshot](Screenshot_20250602_010110.png) -->
 
-## 🌟 Live Demo
+## 🌟 Live
 
 [https://mubaidr.js.org](https://mubaidr.js.org)
 
 ## ✨ Features
 
 ### 🎨 **Modern Design & UX**
+
 - **Glass morphism design** with beautiful visual effects
 - **Dark/Light mode toggle** with system preference detection
 - **Fully responsive** design for all devices
@@ -18,6 +19,7 @@ A modern, high-performance personal portfolio and blog website built with **Nuxt
 - **Geometric background** patterns for visual appeal
 
 ### 📝 **Content Management**
+
 - **Blog system** with markdown support and syntax highlighting
 - **Project showcase** with detailed case studies
 - **Services portfolio** with pricing and packages
@@ -25,6 +27,7 @@ A modern, high-performance personal portfolio and blog website built with **Nuxt
 - **Contact forms** with email integration
 
 ### ⚡ **Performance & SEO**
+
 - **100/100 Lighthouse score** for performance
 - **Server-side rendering (SSR)** for optimal SEO
 - **Static site generation** for fast loading
@@ -33,6 +36,7 @@ A modern, high-performance personal portfolio and blog website built with **Nuxt
 - **Open Graph** and Twitter meta tags
 
 ### 🔧 **Developer Experience**
+
 - **TypeScript** support throughout the project
 - **ESLint & Prettier** for code quality
 - **Hot module replacement** for fast development
@@ -42,33 +46,39 @@ A modern, high-performance personal portfolio and blog website built with **Nuxt
 ## 🛠️ Tech Stack
 
 ### **Frontend Framework**
+
 - **[Nuxt 3](https://nuxt.com/)** - Vue.js meta-framework
 - **[Vue 3](https://vuejs.org/)** - Progressive JavaScript framework
 - **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript
 
 ### **UI & Styling**
+
 - **[Nuxt UI 3](https://ui3.nuxt.dev/)** - Beautiful and accessible UI components
 - **[Tailwind CSS 4](https://tailwindcss.com/)** - Utility-first CSS framework
 - **[Nuxt Icon](https://github.com/nuxt/icon)** - Icon management system
 - **[Nuxt Fonts](https://fonts.nuxt.com/)** - Web font optimization
 
 ### **Content Management**
+
 - **[Nuxt Content](https://content.nuxt.com/)** - File-based CMS with markdown support
 - **[MDC](https://content.nuxt.com/usage/markdown)** - Markdown components
 - **[@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin)** - Beautiful typography
 
 ### **SEO & Analytics**
+
 - **[Nuxt SEO](https://nuxtseo.com/)** - Complete SEO toolkit
 - **[nuxt-schema-org](https://nuxtseo.com/schema-org/getting-started/introduction)** - Structured data
 - **[@nuxtjs/color-mode](https://color-mode.nuxtjs.org/)** - Dark/light mode
 
 ### **Development Tools**
+
 - **[ESLint](https://eslint.org/)** - Code linting
 - **[Prettier](https://prettier.io/)** - Code formatting
 - **[Nuxt DevTools](https://devtools.nuxt.com/)** - Development experience
 - **[Nuxt Studio](https://nuxt.studio/)** - Content editing
 
 ### **Deployment & Hosting**
+
 - **[GitHub Pages](https://pages.github.com/)** - Static site hosting
 - **[GitHub Actions](https://github.com/features/actions)** - CI/CD pipeline
 - **Brotli & Gzip compression** for optimal loading
@@ -135,22 +145,26 @@ A modern, high-performance personal portfolio and blog website built with **Nuxt
 ### Installation
 
 1. **Clone the repository**
+
 ```bash
 git clone https://github.com/mubaidr/mubaidr.js.org.git
 cd mubaidr.js.org
 ```
 
 2. **Install dependencies**
+
 ```bash
 npm install
 ```
 
 3. **Start development server**
+
 ```bash
 npm run dev
 ```
 
 4. **Open in browser**
+
 ```
 http://localhost:3000
 ```
@@ -220,14 +234,14 @@ Modify [`content/services.yml`](./content/services.yml) to manage service offeri
 
 ## 🎯 Key Pages & Features
 
-| Page | Description | Features |
-|------|-------------|----------|
-| **[Home](/)** | Landing page with hero section | Profile showcase, featured content, CTA |
-| **[About](/about)** | Professional background | Journey timeline, skills, approach |
-| **[Projects](/projects)** | Portfolio showcase | Filterable grid, detailed project cards |
-| **[Blog](/blog)** | Technical articles | Pagination, search, categories |
-| **[Services](/services)** | Service offerings | Pricing packages, process workflow |
-| **[Contact](/contact)** | Get in touch | Contact form, social links |
+| Page                      | Description                    | Features                                |
+| ------------------------- | ------------------------------ | --------------------------------------- |
+| **[Home](/)**             | Landing page with hero section | Profile showcase, featured content, CTA |
+| **[About](/about)**       | Professional background        | Journey timeline, skills, approach      |
+| **[Projects](/projects)** | Portfolio showcase             | Filterable grid, detailed project cards |
+| **[Blog](/blog)**         | Technical articles             | Pagination, search, categories          |
+| **[Services](/services)** | Service offerings              | Pricing packages, process workflow      |
+| **[Contact](/contact)**   | Get in touch                   | Contact form, social links              |
 
 ## 📊 Performance Metrics
 
@@ -246,8 +260,8 @@ Update theme colors in [`app/app.config.ts`](./app/app.config.ts):
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: "emerald",    // Change primary color
-      neutral: "stone",      // Change neutral color
+      primary: "emerald", // Change primary color
+      neutral: "stone", // Change neutral color
     },
   },
 })
@@ -284,6 +298,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 👨‍💻 Author
 
 **Muhammad Ubaid Raza**
+
 - Website: [https://mubaidr.js.org](https://mubaidr.js.org)
 - GitHub: [@mubaidr](https://github.com/mubaidr)
 - LinkedIn: [Muhammad Ubaid Raza](https://linkedin.com/in/mubaidr)

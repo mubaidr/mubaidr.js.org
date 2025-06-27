@@ -1,3 +1,13 @@
 avatar: "https://www.freelancer.com/ppic/57102564/logo/3093471/profile_logo_3093471.jpg"
 name: "Mark B."
-quote: "5/5 Quality, 5/5 Communication, 5/5 Expertise, 5/5 Professionalism, and 100/100 to hire again! Raza has been excellent throughout the entire project. Thank you Raza! A+"
+title: "Product Manager"
+company: "E-commerce Agency"
+quote: "Perfect 5/5 across all metrics! Muhammad transformed our legacy system into a modern, scalable solution. Revenue increased by 35% within 3 months of launch. Outstanding work!"
+project: "E-commerce Platform Modernization"
+results:
+  - "35% revenue increase"
+  - "50% faster page loads"
+  - "Zero downtime migration"
+  - "100% client satisfaction"
+featured: true
+rating: 5
