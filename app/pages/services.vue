@@ -23,9 +23,7 @@ useHead({
 </script>
 
 <template>
-  <div
-    class="bg-gradient-to-b from-gray-50/50 to-white dark:from-gray-900/50 dark:to-gray-900"
-  >
+  <div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="space-y-32 py-16">
         <!-- Page Header -->

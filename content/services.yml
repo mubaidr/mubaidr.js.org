@@ -13,9 +13,9 @@ services:
       - "API Development & Integration"
       - "Performance Optimization"
     pricing:
-      hourly: 80
+      hourly: 100
       currency: "USD"
-      description: "From $80/hour"
+      description: "From $100/hour"
     timeline: "2-12 weeks"
     suitable: "Startups, SMEs, Enterprise"
     technologies:
@@ -115,9 +115,9 @@ services:
       - "API Integration"
       - "User Interface Design"
     pricing:
-      hourly: 90
+      hourly: 125
       currency: "USD"
-      description: "From $90/hour"
+      description: "From $125/hour"
     timeline: "2-6 weeks"
     suitable: "Businesses, Startups"
     technologies:
@@ -140,9 +140,9 @@ services:
       - "Authentication & Security"
       - "Rate Limiting & Caching"
     pricing:
-      hourly: 85
+      hourly: 125
       currency: "USD"
-      description: "From $85/hour"
+      description: "From $125/hour"
     timeline: "1-8 weeks"
     suitable: "All business sizes"
     technologies:

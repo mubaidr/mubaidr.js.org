@@ -106,63 +106,35 @@ if (profile.value) {
 
           <!-- Elegant Status Badge -->
           <div v-if="profile.availability" class="relative">
-            <!-- Main Status -->
-            <div
-              :class="[
-                'inline-flex items-center gap-2 px-4 py-2 rounded-full border backdrop-blur-sm transition-all duration-300 hover:scale-105',
-                profile.availability.status === 'available'
-                  ? 'bg-green-500/10 border-green-500/20 text-green-700 dark:text-green-400'
-                  : 'bg-orange-500/10 border-orange-500/20 text-orange-700 dark:text-orange-400',
-              ]"
-            >
-              <div
-                :class="[
-                  'w-2 h-2 rounded-full animate-pulse',
-                  profile.availability.status === 'available'
-                    ? 'bg-green-500'
-                    : 'bg-orange-500',
-                ]"
-              ></div>
-              <span class="text-sm font-medium">
-                {{
+            <div v-if="profile.availability" class="relative text-center">
+              <UBadge
+                :label="
                   profile.availability.statusText ||
-                  "Available for new projects"
-                }}
-              </span>
-            </div>
-
-            <!-- Smart Contextual Details -->
-            <div
-              v-if="profile.availability.status === 'available'"
-              class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-3 text-xs text-gray-500 dark:text-gray-400"
-            >
+                  'Available for new projects'
+                "
+                :color="
+                  profile.availability.status === 'available'
+                    ? 'green'
+                    : 'orange'
+                "
+                variant="subtle"
+                size="lg"
+                class="font-semibold"
+              />
               <div
-                v-if="profile.availability.startDate"
-                class="flex items-center gap-1"
+                v-if="profile.availability.status === 'available'"
+                class="mt-2 text-xs text-gray-500 dark:text-gray-400"
               >
-                <UIcon name="i-ph-calendar" class="w-3 h-3" />
-                <span
+                <span v-if="profile.availability.startDate"
                   >{{ profile.availability.startDateContext || "Starting" }}
                   {{ profile.availability.startDate }}</span
                 >
-              </div>
-              <div
-                v-if="profile.availability.slotsAvailable"
-                class="flex items-center gap-1"
-              >
-                <UIcon name="i-ph-users" class="w-3 h-3" />
-                <span
-                  >{{ profile.availability.slotsAvailable }} project slots
+                <span v-if="profile.availability.slotsAvailable"
+                  >, {{ profile.availability.slotsAvailable }} slots
                   remaining</span
                 >
-              </div>
-              <div
-                v-if="profile.availability.responseTime"
-                class="flex items-center gap-1"
-              >
-                <UIcon name="i-ph-clock" class="w-3 h-3" />
-                <span
-                  >{{ profile.availability.responseTime }} response time</span
+                <span v-if="profile.availability.responseTime"
+                  >, {{ profile.availability.responseTime }} response time</span
                 >
               </div>
             </div>
@@ -203,7 +175,7 @@ if (profile.value) {
             <div
               class="text-3xl md:text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300"
             >
-              50+
+              {{ profile?.projectsDelivered || "125" }}
             </div>
             <div class="text-sm text-gray-600 dark:text-gray-400">
               Projects Delivered
@@ -213,7 +185,7 @@ if (profile.value) {
             <div
               class="text-3xl md:text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300"
             >
-              100%
+              {{ profile?.clientSatisfaction || "100" }}%
             </div>
             <div class="text-sm text-gray-600 dark:text-gray-400">
               Client Satisfaction
@@ -223,7 +195,7 @@ if (profile.value) {
             <div
               class="text-3xl md:text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300"
             >
-              {{ profile?.availability?.responseTime || "24h" }}
+              {{ profile?.availability?.responseTime || "8h" }}
             </div>
             <div class="text-sm text-gray-600 dark:text-gray-400">
               Response Time
@@ -258,6 +230,22 @@ if (profile.value) {
           </UButton>
         </div>
 
+        <!-- Social Links -->
+        <div class="flex justify-center gap-4 mt-8">
+          <UButton
+            v-for="social in profile.social"
+            :key="social.name"
+            :to="social.url"
+            external
+            variant="ghost"
+            size="sm"
+            class="hover:scale-110 transition-transform duration-200"
+          >
+            <UIcon :name="social.icon" class="w-5 h-5" />
+            {{ social.name }}
+          </UButton>
+        </div>
+
         <!-- Trust Indicators -->
         <div
           class="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8 text-sm text-gray-500 dark:text-gray-400"
@@ -283,36 +271,11 @@ if (profile.value) {
             <span>100% satisfaction guarantee</span>
           </div>
         </div>
-
-        <!-- Social Links -->
-        <div class="flex justify-center gap-4 mt-8">
-          <UButton
-            v-for="social in profile.social"
-            :key="social.name"
-            :to="social.url"
-            external
-            variant="ghost"
-            size="sm"
-            class="hover:scale-110 transition-transform duration-200"
-          >
-            <UIcon
-              :name="
-                social.name === 'GitHub'
-                  ? 'i-ph-github-logo'
-                  : 'i-ph-linkedin-logo'
-              "
-              class="w-5 h-5"
-            />
-            {{ social.name }}
-          </UButton>
-        </div>
       </div>
     </section>
 
     <!-- Clear separation between hero and content sections -->
-    <div
-      class="bg-gradient-to-b from-gray-50/50 to-white dark:from-gray-900/50 dark:to-gray-900"
-    >
+    <div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="space-y-32 py-16">
           <!-- About Preview Section -->
@@ -684,13 +647,13 @@ if (profile.value) {
 
           <ServicesPreview />
 
-          <CaseStudyPreview />
+          <!-- <CaseStudyPreview /> -->
 
           <NewsletterSignup />
 
           <CallToAction />
 
-          <RecentBlogPosts />
+          <!-- <RecentBlogPosts /> -->
         </div>
       </div>
     </div>

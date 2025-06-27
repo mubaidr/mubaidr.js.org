@@ -14,38 +14,21 @@ const { data: profile } = await useAsyncData("profile", () => {
 <template>
   <div>
     <!-- Enhanced Call to Action -->
-    <section
-      class="text-center py-16 bg-gradient-to-br from-primary-50 via-blue-50 to-purple-50 dark:from-primary-900/20 dark:via-blue-900/20 dark:to-purple-900/20 relative overflow-hidden"
-    >
-      <!-- Background Pattern -->
-      <div class="absolute inset-0 opacity-10">
-        <div
-          class="absolute top-10 left-10 w-20 h-20 bg-primary rounded-full animate-pulse"
-        ></div>
-        <div
-          class="absolute bottom-10 right-10 w-16 h-16 bg-blue-500 rounded-full animate-pulse delay-1000"
-        ></div>
-        <div
-          class="absolute top-1/2 left-1/4 w-12 h-12 bg-purple-500 rounded-full animate-pulse delay-2000"
-        ></div>
-      </div>
+    <section class="text-center py-16 relative overflow-hidden">
+      
 
       <div class="max-w-4xl mx-auto space-y-8 relative z-10">
-        <!-- Dynamic Urgency Badge -->
-        <div v-if="profile?.availability" class="flex justify-center">
+        <div v-if="profile?.availability" class="flex justify-center mb-8">
           <UBadge
             :label="
               profile.availability.status === 'available'
                 ? `Limited Availability - ${profile.availability.startDate || 'Now'}`
                 : 'Currently Unavailable'
             "
-            variant="solid"
+            :color="profile.availability.status === 'available' ? 'orange' : 'gray'"
+            variant="subtle"
             size="lg"
-            :class="
-              profile.availability.status === 'available'
-                ? 'bg-gradient-to-r from-orange-500 to-red-500 animate-pulse'
-                : 'bg-gradient-to-r from-gray-500 to-gray-600'
-            "
+            class="font-semibold"
           />
         </div>
 
@@ -139,33 +122,13 @@ const { data: profile } = await useAsyncData("profile", () => {
           </UButton>
         </div>
 
-        <!-- Social Proof & Urgency -->
         <div
-          class="bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto"
+          class="text-sm text-gray-500 dark:text-gray-400 mt-8"
         >
-          <div
-            class="flex items-center justify-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-4"
-          >
-            <div class="flex items-center gap-1">
-              <UIcon name="i-ph-users" class="w-4 h-4 text-primary" />
-              <span>50+ Projects Completed</span>
-            </div>
-            <div class="flex items-center gap-1">
-              <UIcon name="i-ph-star-fill" class="w-4 h-4 text-yellow-400" />
-              <span>5.0 Average Rating</span>
-            </div>
-            <div class="flex items-center gap-1">
-              <UIcon name="i-ph-clock" class="w-4 h-4 text-green-500" />
-              <span
-                >{{ profile?.availability?.responseTime || "24h" }} Response
-                Time</span
-              >
-            </div>
-          </div>
-          <p class="text-sm text-gray-500 dark:text-gray-400">
+          <p>
             {{
               profile?.availability?.status === "available"
-                ? `Join the queue - Only ${profile?.availability?.slotsAvailable || 3} project slots available for ${profile?.availability?.startDate || "February 2025"}`
+                ? `Only ${profile?.availability?.slotsAvailable || 3} project slots available for ${profile?.availability?.startDate || "February 2025"}`
                 : profile?.availability?.note ||
                   "Currently not accepting new projects"
             }}

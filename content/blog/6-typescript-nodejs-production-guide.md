@@ -1,7 +1,7 @@
 ---
 title: "TypeScript + Node.js in Production: A Complete Guide"
 description: "Learn how to build, deploy, and maintain TypeScript Node.js applications in production environments with best practices and real-world examples."
-publishedAt: 2024-02-28
+publishedAt: 2024-02-28T12:00:00.000Z
 author: mubaidr
 tags: ["TypeScript", "Node.js", "Backend", "Production"]
 featured: true

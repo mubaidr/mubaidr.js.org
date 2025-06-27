@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue"
 
-const { count } = defineProps({
-  count: {
-    type: Number,
-    default: 6,
-  },
-})
+// const { count } = defineProps({
+//   count: {
+//     type: Number,
+//     default: -1,
+//   },
+// })
 
 const { data: testimonials } = await useAsyncData("testimonials-preview", () =>
   queryCollection("testimonials")
     .order("id", "ASC")
-    .where("featured", "=", true)
-    .limit(count)
+    // .where("featured", "=", true)
+    // .limit(count)
     .all(),
 )
 
@@ -262,28 +262,7 @@ onUnmounted(() => {
           </div>
         </div>
 
-        <!-- Navigation Arrows -->
-        <button
-          @click="prevSlide"
-          class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-full flex items-center justify-center hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl group"
-          :disabled="testimonials.length <= 1"
-        >
-          <UIcon
-            name="i-ph-caret-left"
-            class="w-5 h-5 text-gray-700 dark:text-gray-300 group-hover:text-primary transition-colors duration-300"
-          />
-        </button>
-
-        <button
-          @click="nextSlide"
-          class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-full flex items-center justify-center hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl group"
-          :disabled="testimonials.length <= 1"
-        >
-          <UIcon
-            name="i-ph-caret-right"
-            class="w-5 h-5 text-gray-700 dark:text-gray-300 group-hover:text-primary transition-colors duration-300"
-          />
-        </button>
+        
 
         <!-- Auto-play toggle -->
         <button
@@ -297,20 +276,47 @@ onUnmounted(() => {
           />
         </button>
 
-        <!-- Enhanced Dots Indicator -->
-        <div class="flex justify-center items-center gap-3 mt-8">
-          <button
-            v-for="(testimonial, index) in testimonials"
-            :key="`dot-${index}`"
-            @click="goToSlide(index)"
-            :class="[
-              'transition-all duration-300 rounded-full border-2',
-              currentSlide === index
-                ? 'w-4 h-4 bg-primary border-primary scale-125 shadow-lg'
-                : 'w-3 h-3 bg-gray-300 dark:bg-gray-600 border-gray-300 dark:border-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 hover:border-gray-400 dark:hover:border-gray-500 hover:scale-110',
-            ]"
-            :title="`View testimonial ${index + 1}`"
-          />
+        <!-- Enhanced Controls -->
+        <div class="flex flex-col items-center gap-4 mt-8">
+          <!-- Navigation and Dots -->
+          <div class="flex items-center gap-4">
+            <UButton
+              @click="prevSlide"
+              icon="i-ph-caret-left"
+              size="sm"
+              color="gray"
+              variant="ghost"
+              class="rounded-full hover:scale-110 transition-transform duration-300"
+              :disabled="testimonials.length <= 1"
+              aria-label="Previous testimonial"
+            />
+
+            <div class="flex items-center gap-3">
+              <button
+                v-for="(testimonial, index) in testimonials"
+                :key="`dot-${index}`"
+                @click="goToSlide(index)"
+                :class="[
+                  'transition-all duration-300 rounded-full border-2',
+                  currentSlide === index
+                    ? 'w-3 h-3 bg-primary border-primary scale-125 shadow-lg'
+                    : 'w-2.5 h-2.5 bg-gray-300 dark:bg-gray-600 border-gray-300 dark:border-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 hover:border-gray-400 dark:hover:border-gray-500 hover:scale-110',
+                ]"
+                :aria-label="`View testimonial ${index + 1}`"
+              />
+            </div>
+
+            <UButton
+              @click="nextSlide"
+              icon="i-ph-caret-right"
+              size="sm"
+              color="gray"
+              variant="ghost"
+              class="rounded-full hover:scale-110 transition-transform duration-300"
+              :disabled="testimonials.length <= 1"
+              aria-label="Next testimonial"
+            />
+          </div>
         </div>
 
         <!-- Progress indicator -->
@@ -349,12 +355,7 @@ onUnmounted(() => {
         </UCard>
       </div>
 
-      <div class="text-center">
-        <UButton to="/services?testimonials=true" variant="outline" size="lg">
-          <UIcon name="i-ph-stamp" />
-          View All Testimonials
-        </UButton>
-      </div>
+      
     </section>
   </div>
 </template>

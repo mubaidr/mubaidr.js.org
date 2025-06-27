@@ -77,10 +77,13 @@ export default defineContentConfig({
           z.object({
             name: z.string(),
             url: z.string().url(),
+            icon: z.string(),
           }),
         ),
         workApproach: z.array(z.string()),
         currentFocus: z.array(z.string()),
+        clientSatisfaction: z.number().min(0).max(100),
+        projectsDelivered: z.number().min(0),
         availability: z.object({
           description: z.string(),
           cta: z.object({

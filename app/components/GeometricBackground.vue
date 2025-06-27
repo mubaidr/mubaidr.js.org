@@ -23,8 +23,8 @@ const cachedColors = computed(() => {
       secondary: { r: 196, g: 181, b: 253 },
       accent: { r: 167, g: 243, b: 208 },
       tertiary: { r: 253, g: 230, b: 138 },
-      lineOpacity: 0.4,
-      particleOpacity: 0.8,
+      lineOpacity: 0.2,
+      particleOpacity: 0.4,
     }
   } else {
     return {
@@ -32,8 +32,8 @@ const cachedColors = computed(() => {
       secondary: { r: 91, g: 33, b: 182 },
       accent: { r: 21, g: 128, b: 61 },
       tertiary: { r: 180, g: 83, b: 9 },
-      lineOpacity: 0.4,
-      particleOpacity: 0.6,
+      lineOpacity: 0.2,
+      particleOpacity: 0.3,
     }
   }
 })
@@ -355,7 +355,7 @@ onUnmounted(() => {
   height: 3px;
   animation: shimmer infinite ease-in-out;
   transform: translate(-50%, -50%);
-  opacity: calc(var(--particle-intensity, 0.6));
+  opacity: calc(var(--particle-intensity, 0.3));
 }
 
 /* Dark theme particles */
@@ -511,16 +511,16 @@ onUnmounted(() => {
 /* Enhanced animation keyframes */
 @keyframes shimmer {
   0% {
-    opacity: calc(var(--particle-intensity, 0.6) * 0.4);
-    transform: translate(-50%, -50%) scale(0.8);
+    opacity: calc(var(--particle-intensity, 0.3) * 0.2);
+    transform: translate(-50%, -50%) scale(0.6);
   }
   50% {
-    opacity: calc(var(--particle-intensity, 0.6) * 1.2);
-    transform: translate(-50%, -50%) scale(1.3);
+    opacity: calc(var(--particle-intensity, 0.3) * 0.8);
+    transform: translate(-50%, -50%) scale(1.1);
   }
   100% {
-    opacity: calc(var(--particle-intensity, 0.6) * 0.4);
-    transform: translate(-50%, -50%) scale(0.8);
+    opacity: calc(var(--particle-intensity, 0.3) * 0.2);
+    transform: translate(-50%, -50%) scale(0.6);
   }
 }
 
