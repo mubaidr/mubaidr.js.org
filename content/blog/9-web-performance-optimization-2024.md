@@ -4,7 +4,7 @@ description: Master modern web performance optimization techniques, Core Web Vit
 headline: Ultimate Web Performance Guide 2024
 abstract: Learn cutting-edge web performance optimization techniques that will make your websites blazingly fast and improve user experience.
 date: 2024-01-20T09:15:00.000Z
-dateUpdated: ""
+dateUpdated: 2024-01-20T09:15:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:

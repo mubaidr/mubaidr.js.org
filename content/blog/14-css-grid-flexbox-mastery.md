@@ -4,7 +4,7 @@ description: Master CSS Grid and Flexbox with practical examples, responsive des
 headline: CSS Grid & Flexbox Complete Guide
 abstract: Learn advanced CSS Grid and Flexbox techniques to create responsive, flexible layouts that work perfectly across all devices and screen sizes.
 date: 2024-01-12T14:20:00.000Z
-dateUpdated: ""
+dateUpdated: 2024-01-12T14:20:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:

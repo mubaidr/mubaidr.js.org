@@ -4,7 +4,7 @@ description: Master GraphQL API design with advanced patterns, performance optim
 headline: GraphQL API Design Mastery
 abstract: Learn advanced GraphQL patterns for building scalable, secure, and performant APIs that deliver exceptional developer and user experiences.
 date: 2024-03-08T08:45:00.000Z
-dateUpdated: ""
+dateUpdated: 2024-03-08T08:45:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:

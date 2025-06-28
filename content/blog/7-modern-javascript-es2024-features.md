@@ -4,7 +4,7 @@ description: Explore the latest JavaScript ES2024 features including temporal AP
 headline: JavaScript ES2024 Features Guide
 abstract: Discover the cutting-edge JavaScript ES2024 features that are transforming how we write modern web applications.
 date: 2024-03-15T10:00:00.000Z
-dateUpdated: ""
+dateUpdated: 2024-03-15T10:00:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:

@@ -114,8 +114,8 @@ if (profile.value) {
                 "
                 :color="
                   profile.availability.status === 'available'
-                    ? 'green'
-                    : 'orange'
+                    ? 'success'
+                    : 'warning'
                 "
                 variant="subtle"
                 size="lg"

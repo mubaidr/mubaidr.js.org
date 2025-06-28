@@ -59,9 +59,14 @@ export default defineContentConfig({
       source: "testimonials/**/*.{json,yml,yaml}",
       schema: z.object({
         name: z.string(),
+        title: z.string(),
+        company: z.string(),
         quote: z.string(),
         avatar: z.string().url().optional(),
+        project: z.string(),
+        results: z.array(z.string()),
         featured: z.boolean().optional().default(false),
+        rating: z.number().min(0).max(5),
       }),
     }),
     profile: defineCollection({
@@ -85,7 +90,14 @@ export default defineContentConfig({
         clientSatisfaction: z.number().min(0).max(100),
         projectsDelivered: z.number().min(0),
         availability: z.object({
+          status: z.string(),
+          statusText: z.string(),
+          startDate: z.string(),
+          startDateContext: z.string(),
           description: z.string(),
+          responseTime: z.string(),
+          slotsAvailable: z.number(),
+          paymentTerms: z.string(),
           cta: z.object({
             text: z.string(),
             url: z.string(),
@@ -220,7 +232,7 @@ export default defineContentConfig({
               documentation: z.string().optional(),
               case_study: z.string().optional(),
             }),
-            stats: z.record(z.string()).optional(),
+            stats: z.record(z.union([z.string(), z.number()])).optional(),
             features: z.array(z.string()),
             challenges: z.array(z.string()),
             outcomes: z.array(z.string()),

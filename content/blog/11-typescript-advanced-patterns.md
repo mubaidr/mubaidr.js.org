@@ -4,7 +4,7 @@ description: Master advanced TypeScript patterns including conditional types, te
 headline: TypeScript Advanced Patterns Guide
 abstract: Explore sophisticated TypeScript patterns and techniques that will elevate your code quality and developer experience in large-scale applications.
 date: 2024-05-22T16:45:00.000Z
-dateUpdated: ""
+dateUpdated: 2024-05-22T16:45:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:

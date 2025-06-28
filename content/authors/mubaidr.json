@@ -1,5 +1,5 @@
-{
-  "mubaidr": {
+[
+  {
     "@context": "https://schema.org/author",
     "@id": "https://mubaidr.js.org",
     "@type": "Person",
@@ -12,4 +12,4 @@
     "sameAs": ["https://mubaidr.js.org"],
     "url": "https://mubaidr.js.org"
   }
-}
+]

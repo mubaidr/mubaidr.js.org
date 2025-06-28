@@ -21,7 +21,7 @@ currentFocus:
   - Infrastructure as Code (IaC)
   - Cloud-native tooling and observability
   - AI-assisted development workflows
-clientSatisfaction: 100%
+clientSatisfaction: 100
 projectsDelivered: 125
 availability:
   status: available
@@ -38,4 +38,4 @@ availability:
   note: I aim to reply as quickly as possible with the attention your message deserves.
 footer:
   message: Thank you for your interest. I look forward to collaborating and building something exceptional together.
-  lastUpdated: June 28, 2025
+  lastUpdated: 2025-06-28T12:00:00.000Z

@@ -46,9 +46,7 @@ const filteredProjects = computed(() => {
             class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20"
           >
             <UIcon name="i-ph-folder-open" class="w-4 h-4 text-primary" />
-            <span class="text-sm font-medium text-primary"
-              >My Portfolio</span
-            >
+            <span class="text-sm font-medium text-primary">My Portfolio</span>
           </div>
 
           <h1
@@ -75,9 +73,7 @@ const filteredProjects = computed(() => {
               class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20"
             >
               <UIcon name="i-ph-folders" class="w-4 h-4 text-primary" />
-              <span class="text-sm font-medium text-primary"
-                >All Projects</span
-              >
+              <span class="text-sm font-medium text-primary">All Projects</span>
             </div>
             <h2
               class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-primary-600 to-gray-900 dark:from-white dark:via-primary-400 dark:to-white bg-clip-text text-transparent"
@@ -188,7 +184,9 @@ const filteredProjects = computed(() => {
                   <div class="flex items-center justify-between text-xs">
                     <UBadge
                       :label="project.status"
-                      :color="project.status === 'active' ? 'green' : 'gray'"
+                      :color="
+                        project.status === 'active' ? 'success' : 'neutral'
+                      "
                       variant="soft"
                       size="sm"
                     />
@@ -216,7 +214,7 @@ const filteredProjects = computed(() => {
                       :to="project.links.github"
                       external
                       variant="ghost"
-                      color="gray"
+                      color="neutral"
                       size="sm"
                     >
                       <UIcon name="i-ph-github-logo" />
@@ -226,7 +224,7 @@ const filteredProjects = computed(() => {
                       v-if="project.links.case_study"
                       :to="project.links.case_study"
                       variant="ghost"
-                      color="gray"
+                      color="neutral"
                       size="sm"
                     >
                       <UIcon name="i-ph-article" />
@@ -247,9 +245,7 @@ const filteredProjects = computed(() => {
               class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-6"
             >
               <UIcon name="i-ph-github-logo" class="w-4 h-4 text-primary" />
-              <span class="text-sm font-medium text-primary"
-                >Explore More</span
-              >
+              <span class="text-sm font-medium text-primary">Explore More</span>
             </div>
             <h2
               class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-primary-600 to-gray-900 dark:from-white dark:via-primary-400 dark:to-white bg-clip-text text-transparent mb-4"

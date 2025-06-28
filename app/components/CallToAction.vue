@@ -15,8 +15,6 @@ const { data: profile } = await useAsyncData("profile", () => {
   <div>
     <!-- Enhanced Call to Action -->
     <section class="text-center py-16 relative overflow-hidden">
-      
-
       <div class="max-w-4xl mx-auto space-y-8 relative z-10">
         <div v-if="profile?.availability" class="flex justify-center mb-8">
           <UBadge
@@ -25,7 +23,11 @@ const { data: profile } = await useAsyncData("profile", () => {
                 ? `Limited Availability - ${profile.availability.startDate || 'Now'}`
                 : 'Currently Unavailable'
             "
-            :color="profile.availability.status === 'available' ? 'orange' : 'gray'"
+            :color="
+              profile.availability.status === 'available'
+                ? 'warning'
+                : 'neutral'
+            "
             variant="subtle"
             size="lg"
             class="font-semibold"
@@ -122,9 +124,7 @@ const { data: profile } = await useAsyncData("profile", () => {
           </UButton>
         </div>
 
-        <div
-          class="text-sm text-gray-500 dark:text-gray-400 mt-8"
-        >
+        <div class="text-sm text-gray-500 dark:text-gray-400 mt-8">
           <p>
             {{
               profile?.availability?.status === "available"

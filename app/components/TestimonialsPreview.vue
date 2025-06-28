@@ -262,8 +262,6 @@ onUnmounted(() => {
           </div>
         </div>
 
-        
-
         <!-- Auto-play toggle -->
         <button
           @click="toggleAutoPlay"
@@ -284,8 +282,8 @@ onUnmounted(() => {
               @click="prevSlide"
               icon="i-ph-caret-left"
               size="sm"
-              color="gray"
-              variant="ghost"
+              color="primary"
+              variant="soft"
               class="rounded-full hover:scale-110 transition-transform duration-300"
               :disabled="testimonials.length <= 1"
               aria-label="Previous testimonial"
@@ -310,8 +308,8 @@ onUnmounted(() => {
               @click="nextSlide"
               icon="i-ph-caret-right"
               size="sm"
-              color="gray"
-              variant="ghost"
+              color="primary"
+              variant="soft"
               class="rounded-full hover:scale-110 transition-transform duration-300"
               :disabled="testimonials.length <= 1"
               aria-label="Next testimonial"
@@ -354,8 +352,6 @@ onUnmounted(() => {
           </div>
         </UCard>
       </div>
-
-      
     </section>
   </div>
 </template>

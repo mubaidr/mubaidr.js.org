@@ -25,9 +25,7 @@ const formatDate = (date: string | Date) => {
 </script>
 
 <template>
-  <div
-    v-if="page"
-  >
+  <div v-if="page">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="space-y-16 py-16">
         <!-- Post Header -->
@@ -50,15 +48,11 @@ const formatDate = (date: string | Date) => {
           >
             <div class="flex items-center gap-2">
               <UIcon name="i-ph-user-circle" class="w-5 h-5" />
-              <span>{{ page.author?.name || "Admin" }}</span>
+              <span>{{ page.author }}</span>
             </div>
             <div class="flex items-center gap-2">
               <UIcon name="i-ph-calendar" class="w-5 h-5" />
               <span>{{ formatDate(page.date) }}</span>
-            </div>
-            <div v-if="page.readingTime" class="flex items-center gap-2">
-              <UIcon name="i-ph-clock" class="w-5 h-5" />
-              <span>{{ page.readingTime }}</span>
             </div>
           </div>
 

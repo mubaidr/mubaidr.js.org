@@ -4,7 +4,7 @@ description: Master React Server Components with practical examples, performance
 headline: React Server Components Complete Guide
 abstract: Learn how React Server Components are revolutionizing React architecture with server-side rendering and improved performance.
 date: 2024-02-28T14:30:00.000Z
-dateUpdated: ""
+dateUpdated: 2024-02-28T14:30:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:

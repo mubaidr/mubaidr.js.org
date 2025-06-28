@@ -67,6 +67,14 @@ export default defineNuxtConfig({
     viewTransition: true,
   },
 
+  eslint: {
+    checker: {
+      cache: true,
+      lintOnStart: false,
+      fix: true,
+    },
+  },
+
   future: {
     compatibilityVersion: 4,
   },
@@ -96,6 +104,7 @@ export default defineNuxtConfig({
     // "nuxt-feedme",
     "@nuxt/content",
     "nuxt-mcp",
+    "@nuxt/eslint",
   ],
 
   nitro: {

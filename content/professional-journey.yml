@@ -123,21 +123,21 @@ certifications:
   - id: 1
     name: "AWS Certified Solutions Architect"
     issuer: "Amazon Web Services"
-    date: "2023"
+    date: "2023-01-01T00:00:00.000Z"
     credentialId: "AWS-SAA-123456"
     description: "Demonstrates expertise in designing distributed systems on AWS."
 
   - id: 2
     name: "Vue.js Certified Developer"
     issuer: "Vue School"
-    date: "2022"
+    date: "2022-01-01T00:00:00.000Z"
     credentialId: "VUE-DEV-789012"
     description: "Advanced certification in Vue.js ecosystem and best practices."
 
   - id: 3
     name: "Project Management Professional (PMP)"
     issuer: "Project Management Institute"
-    date: "2021"
+    date: "2021-01-01T00:00:00.000Z"
     credentialId: "PMP-345678"
     description: "Global standard for project management professionals."
 

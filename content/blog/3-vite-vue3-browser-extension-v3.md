@@ -8,7 +8,7 @@ abstract: Our template is pre-packed with essential features, making it easier
   for you to focus on developing your extension rather than setting up the
   environment.
 date: 2024-08-13T12:00:00.000Z
-dateUpdated: ""
+dateUpdated: 2024-08-13T12:00:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 featured: true

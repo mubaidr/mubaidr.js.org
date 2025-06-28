@@ -9,7 +9,7 @@ abstract: Using Node.js and Vue.js gives you a powerful toolkit to build
   essentials of full stack development, offering practical insights into
   structuring and deploying your application.
 date: 2024-11-19T12:00:00.000Z
-dateUpdated: ""
+dateUpdated: 2024-11-19T12:00:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 ---

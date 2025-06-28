@@ -4,7 +4,7 @@ description: Master Docker containerization and microservices deployment with Ku
 headline: Docker Microservices Deployment Guide
 abstract: Learn production-ready Docker and microservices deployment strategies including orchestration, monitoring, and automated CI/CD pipelines.
 date: 2024-06-18T13:30:00.000Z
-dateUpdated: ""
+dateUpdated: 2024-06-18T13:30:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:

@@ -109,10 +109,10 @@ const submitForm = async () => {
               type="submit"
               size="lg"
               variant="solid"
-              color="white"
+              color="primary"
               :loading="isSubmitting"
               :disabled="isSubmitting"
-              class="whitespace-nowrap"
+              class="whitespace-nowrap bg-white text-primary-600 hover:bg-gray-100"
             >
               <UIcon name="i-ph-download" />
               Get Free Checklist

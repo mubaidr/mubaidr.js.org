@@ -4,7 +4,7 @@ description: Master Next.js 14 App Router with Server Components, streaming, cac
 headline: Next.js 14 App Router Mastery
 abstract: Learn everything about Next.js 14 App Router including Server Components, advanced routing, and performance optimization techniques.
 date: 2024-04-10T11:20:00.000Z
-dateUpdated: ""
+dateUpdated: 2024-04-10T11:20:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:

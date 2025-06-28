@@ -5,12 +5,12 @@ definePageMeta({
   description: "Read our latest blog posts and insights",
 })
 
+const itemsPerPage = 3
+
 // Pagination configuration
 const { data: blogData } = await useAsyncData("blog-posts", async () => {
   const [posts, count] = await Promise.all([
-    queryCollection("blog")
-      .order("date", "DESC")
-      .all(),
+    queryCollection("blog").order("date", "DESC").all(),
     queryCollection("blog").count(),
   ])
 
@@ -120,7 +120,11 @@ const getExcerpt = (content: any, maxLength = 150) => {
                 variant="soft"
                 class="relative h-full border border-gray-200/50 dark:border-gray-700/50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:shadow-2xl hover:border-primary/20 dark:hover:border-primary/30 transition-all duration-500 transform group-hover:-translate-y-1 overflow-hidden"
               >
-                <ULink :to="post.path" class="focus:outline-none" :aria-label="post.title">
+                <ULink
+                  :to="post.path"
+                  class="focus:outline-none"
+                  :aria-label="post.title"
+                >
                   <div class="space-y-4">
                     <!-- Featured Image -->
                     <div
@@ -187,8 +191,6 @@ const getExcerpt = (content: any, maxLength = 150) => {
               </UCard>
             </article>
           </div>
-
-          
         </section>
 
         <!-- Empty State -->
@@ -196,18 +198,13 @@ const getExcerpt = (content: any, maxLength = 150) => {
           <div
             class="mx-auto w-24 h-24 bg-gray-100 dark:bg-gray-800 flex items-center justify-center rounded-full mb-6"
           >
-            <UIcon
-              name="i-ph-newspaper"
-              class="w-12 h-12 text-gray-400"
-            />
+            <UIcon name="i-ph-newspaper" class="w-12 h-12 text-gray-400" />
           </div>
           <h3 class="text-2xl font-bold mb-2">No blog posts found</h3>
           <p class="text-gray-600 dark:text-gray-400">
             Check back soon for new content!
           </p>
         </div>
-
-        
       </div>
     </div>
   </div>
