@@ -12,7 +12,7 @@ social:
     icon: i-ph-linkedin-logo
   - name: X
     url: https://x.com/mubaidr
-    icon: i-ph-twitter-logo
+    icon: i-ph-x-logo
 workApproach:
   - Architecting solutions and managing product lifecycles - optimizing performance, scalability, and security
   - Leading agile teams and collaborating with clients - Ensuring clarity, timeliness, and adaptability in all project phases
@@ -23,6 +23,7 @@ currentFocus:
   - AI-assisted development workflows
 clientSatisfaction: 100
 projectsDelivered: 125
+experience: 12
 availability:
   status: available
   statusText: Available for new projects

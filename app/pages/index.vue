@@ -73,71 +73,35 @@ if (profile.value) {
     <section class="relative text-center min-h-screen">
       <div class="max-w-5xl mx-auto">
         <!-- Avatar with Integrated Status - Redesigned -->
-        <div class="flex flex-col items-center mb-8 space-y-6">
-          <div class="relative">
-            <!-- Larger, cleaner avatar without ring -->
-            <div class="relative w-32 h-32 md:w-40 md:h-40">
-              <UAvatar
-                :src="profile.avatar"
-                :alt="profile.name"
-                class="w-full h-full shadow-2xl border-4 border-white dark:border-gray-800"
-              />
-              <!-- Dynamic status dot - perfectly positioned -->
-              <div
-                v-if="profile.availability"
-                :class="[
-                  'absolute bottom-2 right-2 w-6 h-6 rounded-full border-3 border-white dark:border-gray-800 shadow-lg',
-                  profile.availability.status === 'available'
-                    ? 'bg-green-500'
-                    : 'bg-orange-500',
-                ]"
-              >
-                <div
-                  :class="[
-                    'w-full h-full rounded-full animate-pulse',
-                    profile.availability.status === 'available'
-                      ? 'bg-green-500'
-                      : 'bg-orange-500',
-                  ]"
-                ></div>
-              </div>
-            </div>
+        <div class="flex flex-col items-center mb-8 space-y-3">
+          <!-- Larger, cleaner avatar without ring -->
+          <div class="w-32 h-32 md:w-40 md:h-40">
+            <UAvatar
+              :src="profile.avatar"
+              :alt="profile.name"
+              class="w-full h-full shadow-2xl border-4 border-white dark:border-gray-800"
+            />
           </div>
-
-          <!-- Elegant Status Badge -->
-          <div v-if="profile.availability" class="relative">
-            <div v-if="profile.availability" class="relative text-center">
-              <UBadge
-                :label="
-                  profile.availability.statusText ||
-                  'Available for new projects'
-                "
-                :color="
-                  profile.availability.status === 'available'
-                    ? 'success'
-                    : 'warning'
-                "
-                variant="subtle"
-                size="lg"
-                class="font-semibold"
-              />
-              <div
-                v-if="profile.availability.status === 'available'"
-                class="mt-2 text-xs text-gray-500 dark:text-gray-400"
-              >
-                <span v-if="profile.availability.startDate"
-                  >{{ profile.availability.startDateContext || "Starting" }}
-                  {{ profile.availability.startDate }}</span
-                >
-                <span v-if="profile.availability.slotsAvailable"
-                  >, {{ profile.availability.slotsAvailable }} slots
-                  remaining</span
-                >
-                <span v-if="profile.availability.responseTime"
-                  >, {{ profile.availability.responseTime }} response time</span
-                >
-              </div>
-            </div>
+          <!-- Status badge on avatar - bottom right positioned -->
+          <div
+            v-if="profile.availability"
+            class="flex items-center gap-2 px-3 py-1.5 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm border border-gray-200 dark:border-gray-700"
+          >
+            <div
+              :class="[
+                'w-2 h-2 rounded-full',
+                profile.availability.status === 'available'
+                  ? 'bg-green-500 animate-pulse'
+                  : 'bg-orange-500',
+              ]"
+            ></div>
+            <span
+              class="text-xs font-medium text-gray-900 dark:text-gray-100 whitespace-nowrap"
+            >
+              {{
+                profile.availability.statusText || "Available for new projects"
+              }}
+            </span>
           </div>
         </div>
 
@@ -165,7 +129,7 @@ if (profile.value) {
             <div
               class="text-3xl md:text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300"
             >
-              10+
+              {{ profile?.experience || "12" }}+
             </div>
             <div class="text-sm text-gray-600 dark:text-gray-400">
               Years Experience
@@ -175,7 +139,7 @@ if (profile.value) {
             <div
               class="text-3xl md:text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300"
             >
-              {{ profile?.projectsDelivered || "125" }}
+              {{ profile?.projectsDelivered || "125" }}+
             </div>
             <div class="text-sm text-gray-600 dark:text-gray-400">
               Projects Delivered
@@ -222,8 +186,7 @@ if (profile.value) {
             href="https://cal.com/mubaidr"
             external
             size="xl"
-            variant="outline"
-            class="border-2 hover:border-primary-400 transition-all duration-300 hover:shadow-lg"
+            variant="subtle"
           >
             <UIcon name="i-ph-calendar-check" />
             Book Free Consultation
@@ -238,38 +201,10 @@ if (profile.value) {
             :to="social.url"
             external
             variant="ghost"
-            size="sm"
             class="hover:scale-110 transition-transform duration-200"
           >
             <UIcon :name="social.icon" class="w-5 h-5" />
-            {{ social.name }}
           </UButton>
-        </div>
-
-        <!-- Trust Indicators -->
-        <div
-          class="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8 text-sm text-gray-500 dark:text-gray-400"
-        >
-          <div
-            class="flex items-center gap-2 hover:text-green-600 dark:hover:text-green-400 transition-colors"
-          >
-            <UIcon name="i-ph-shield-check" class="text-green-500" />
-            <span>{{
-              profile?.availability?.paymentTerms || "Minimal upfront payment"
-            }}</span>
-          </div>
-          <div
-            class="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >
-            <UIcon name="i-ph-clock" class="text-blue-500" />
-            <span>Free project consultation</span>
-          </div>
-          <div
-            class="flex items-center gap-2 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-          >
-            <UIcon name="i-ph-handshake" class="text-purple-500" />
-            <span>100% satisfaction guarantee</span>
-          </div>
         </div>
       </div>
     </section>
@@ -290,8 +225,8 @@ if (profile.value) {
               ></div>
             </div>
 
-            <div class="relative space-y-12">
-              <!-- Header with Gradient -->
+            <div class="relative space-y-16">
+              <!-- Header -->
               <div class="text-center space-y-6">
                 <div
                   class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20"
@@ -315,312 +250,110 @@ if (profile.value) {
                 </p>
               </div>
 
-              <!-- Enhanced Cards Grid -->
-              <div class="grid gap-8 lg:grid-cols-3">
-                <!-- Work Approach Card -->
-                <div class="group relative">
-                  <div
-                    class="absolute inset-0 bg-gradient-to-r from-primary/5 to-blue/5 rounded-2xl transform group-hover:scale-[1.02] transition-all duration-500 opacity-0 group-hover:opacity-100"
-                  ></div>
-                  <UCard
-                    variant="soft"
-                    class="relative h-full border border-gray-200/50 dark:border-gray-700/50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:shadow-2xl hover:border-primary/20 dark:hover:border-primary/30 transition-all duration-500 transform group-hover:-translate-y-1"
-                  >
-                    <div class="space-y-6">
-                      <!-- Icon Header -->
-                      <div class="flex items-center gap-4">
-                        <div
-                          class="w-12 h-12 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-                        >
-                          <UIcon
-                            name="i-ph-strategy"
-                            class="w-6 h-6 text-primary"
-                          />
-                        </div>
-                        <h3
-                          class="text-xl font-bold text-gray-900 dark:text-gray-100"
-                        >
-                          My Approach
-                        </h3>
-                      </div>
-
-                      <!-- Content -->
-                      <div class="space-y-4">
-                        <p
-                          class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed"
-                        >
-                          Proven methodologies that deliver exceptional results
-                          for every project.
-                        </p>
-
-                        <ul class="space-y-3">
-                          <li
-                            v-for="(approach, index) in (
-                              profile.workApproach || []
-                            ).slice(0, 3)"
-                            :key="index"
-                            class="flex items-start gap-3 text-gray-600 dark:text-gray-400"
-                          >
-                            <div
-                              class="w-5 h-5 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0"
-                            >
-                              <UIcon
-                                name="i-ph-check"
-                                class="w-3 h-3 text-green-600"
-                              />
-                            </div>
-                            <span class="text-sm leading-relaxed">{{
-                              approach
-                            }}</span>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <!-- CTA -->
-                      <div class="pt-2">
-                        <UButton
-                          to="/about"
-                          variant="ghost"
-                          size="sm"
-                          class="w-full justify-center group/btn hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-700 dark:hover:text-primary-300 transition-all duration-300 border border-transparent hover:border-primary-200 dark:hover:border-primary-700"
-                        >
-                          <span
-                            class="group-hover/btn:translate-x-1 transition-transform duration-300"
-                            >Learn More</span
-                          >
-                          <UIcon
-                            name="i-ph-arrow-right"
-                            class="ml-2 group-hover/btn:translate-x-1 transition-transform duration-300"
-                          />
-                        </UButton>
-                      </div>
+              <!-- Value Proposition Cards -->
+              <div class="grid gap-8 lg:grid-cols-3 max-w-6xl mx-auto">
+                <!-- Technical Excellence -->
+                <UCard variant="subtle" class="text-center h-full">
+                  <div class="space-y-6">
+                    <div
+                      class="w-16 h-16 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300"
+                    >
+                      <UIcon name="i-ph-code" class="w-8 h-8 text-primary" />
                     </div>
-                  </UCard>
-                </div>
 
-                <!-- Current Focus Card -->
-                <div class="group relative">
-                  <div
-                    class="absolute inset-0 bg-gradient-to-r from-blue/5 to-purple/5 rounded-2xl transform group-hover:scale-[1.02] transition-all duration-500 opacity-0 group-hover:opacity-100"
-                  ></div>
-                  <UCard
-                    variant="soft"
-                    class="relative h-full border border-gray-200/50 dark:border-gray-700/50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:shadow-2xl hover:border-blue/20 dark:hover:border-blue/30 transition-all duration-500 transform group-hover:-translate-y-1"
-                  >
-                    <div class="space-y-6">
-                      <!-- Icon Header -->
-                      <div class="flex items-center gap-4">
-                        <div
-                          class="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-                        >
-                          <UIcon
-                            name="i-ph-target"
-                            class="w-6 h-6 text-blue-600"
-                          />
-                        </div>
-                        <h3
-                          class="text-xl font-bold text-gray-900 dark:text-gray-100"
-                        >
-                          Current Focus
-                        </h3>
-                      </div>
-
-                      <!-- Content -->
-                      <div class="space-y-4">
-                        <p
-                          class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed"
-                        >
-                          Staying ahead with cutting-edge technologies and
-                          industry best practices.
-                        </p>
-
-                        <ul class="space-y-3">
-                          <li
-                            v-for="(focus, index) in (
-                              profile.currentFocus || []
-                            ).slice(0, 3)"
-                            :key="index"
-                            class="flex items-start gap-3 text-gray-600 dark:text-gray-400"
-                          >
-                            <div
-                              class="w-5 h-5 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0"
-                            >
-                              <UIcon
-                                name="i-ph-check"
-                                class="w-3 h-3 text-blue-600"
-                              />
-                            </div>
-                            <span class="text-sm leading-relaxed">{{
-                              focus
-                            }}</span>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <!-- CTA -->
-                      <div class="pt-2">
-                        <UButton
-                          to="/about"
-                          variant="ghost"
-                          size="sm"
-                          class="w-full justify-center group/btn hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-300 border border-transparent hover:border-blue-200 dark:hover:border-blue-700"
-                        >
-                          <span
-                            class="group-hover/btn:translate-x-1 transition-transform duration-300"
-                            >View Journey</span
-                          >
-                          <UIcon
-                            name="i-ph-arrow-right"
-                            class="ml-2 group-hover/btn:translate-x-1 transition-transform duration-300"
-                          />
-                        </UButton>
-                      </div>
+                    <div class="space-y-3">
+                      <h3
+                        class="text-xl font-bold text-gray-900 dark:text-gray-100"
+                      >
+                        Technical Excellence
+                      </h3>
+                      <p
+                        class="text-gray-600 dark:text-gray-400 leading-relaxed"
+                      >
+                        {{ profile?.experience || "12" }}+ years of deep
+                        technical expertise across full-stack development,
+                        DevOps, and modern architectures.
+                      </p>
                     </div>
-                  </UCard>
-                </div>
+                  </div>
+                </UCard>
 
-                <!-- Why Choose Me Card -->
-                <div class="group relative">
-                  <div
-                    class="absolute inset-0 bg-gradient-to-r from-purple/5 to-primary/5 rounded-2xl transform group-hover:scale-[1.02] transition-all duration-500 opacity-0 group-hover:opacity-100"
-                  ></div>
-                  <UCard
-                    variant="soft"
-                    class="relative h-full border border-gray-200/50 dark:border-gray-700/50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:shadow-2xl hover:border-purple/20 dark:hover:border-purple/30 transition-all duration-500 transform group-hover:-translate-y-1"
-                  >
-                    <div class="space-y-6">
-                      <!-- Icon Header -->
-                      <div class="flex items-center gap-4">
-                        <div
-                          class="w-12 h-12 bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900 dark:to-purple-800 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-                        >
-                          <UIcon
-                            name="i-ph-star"
-                            class="w-6 h-6 text-purple-600"
-                          />
-                        </div>
-                        <h3
-                          class="text-xl font-bold text-gray-900 dark:text-gray-100"
-                        >
-                          Why Choose Me
-                        </h3>
-                      </div>
-
-                      <!-- Content -->
-                      <div class="space-y-4">
-                        <p
-                          class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed"
-                        >
-                          Proven track record of delivering exceptional results
-                          for clients worldwide.
-                        </p>
-
-                        <ul class="space-y-3">
-                          <li
-                            class="flex items-start gap-3 text-gray-600 dark:text-gray-400"
-                          >
-                            <div
-                              class="w-5 h-5 bg-purple-100 dark:bg-purple-900/20 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0"
-                            >
-                              <UIcon
-                                name="i-ph-check"
-                                class="w-3 h-3 text-purple-600"
-                              />
-                            </div>
-                            <span class="text-sm leading-relaxed"
-                              >10+ years of proven expertise</span
-                            >
-                          </li>
-                          <li
-                            class="flex items-start gap-3 text-gray-600 dark:text-gray-400"
-                          >
-                            <div
-                              class="w-5 h-5 bg-purple-100 dark:bg-purple-900/20 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0"
-                            >
-                              <UIcon
-                                name="i-ph-check"
-                                class="w-3 h-3 text-purple-600"
-                              />
-                            </div>
-                            <span class="text-sm leading-relaxed"
-                              >100% client satisfaction rate</span
-                            >
-                          </li>
-                          <li
-                            class="flex items-start gap-3 text-gray-600 dark:text-gray-400"
-                          >
-                            <div
-                              class="w-5 h-5 bg-purple-100 dark:bg-purple-900/20 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0"
-                            >
-                              <UIcon
-                                name="i-ph-check"
-                                class="w-3 h-3 text-purple-600"
-                              />
-                            </div>
-                            <span class="text-sm leading-relaxed"
-                              >{{
-                                profile?.availability?.responseTime || "24h"
-                              }}
-                              response guarantee</span
-                            >
-                          </li>
-                        </ul>
-                      </div>
-
-                      <!-- CTA -->
-                      <div class="pt-2">
-                        <UButton
-                          to="/contact"
-                          variant="solid"
-                          size="sm"
-                          class="w-full justify-center group/btn bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white border-0 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-                        >
-                          <UIcon
-                            name="i-ph-chat-circle"
-                            class="mr-2 group-hover/btn:scale-110 transition-transform duration-300"
-                          />
-                          <span
-                            class="group-hover/btn:translate-x-0.5 transition-transform duration-300"
-                            >Start Project</span
-                          >
-                        </UButton>
-                      </div>
+                <UCard variant="subtle" class="text-center h-full">
+                  <div class="space-y-6">
+                    <div
+                      class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300"
+                    >
+                      <UIcon
+                        name="i-ph-chart-line-up"
+                        class="w-8 h-8 text-blue-600"
+                      />
                     </div>
-                  </UCard>
-                </div>
+
+                    <div class="space-y-3">
+                      <h3
+                        class="text-xl font-bold text-gray-900 dark:text-gray-100"
+                      >
+                        Proven Results
+                      </h3>
+                      <p
+                        class="text-gray-600 dark:text-gray-400 leading-relaxed"
+                      >
+                        {{ profile?.projectsDelivered || "125" }}+ successful
+                        projects delivered with
+                        {{ profile?.clientSatisfaction || "100" }}% client
+                        satisfaction rate.
+                      </p>
+                    </div>
+                  </div>
+                </UCard>
+
+                <UCard variant="subtle" class="text-center h-full">
+                  <div class="space-y-6">
+                    <div
+                      class="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900 dark:to-purple-800 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300"
+                    >
+                      <UIcon
+                        name="i-ph-handshake"
+                        class="w-8 h-8 text-purple-600"
+                      />
+                    </div>
+
+                    <div class="space-y-3">
+                      <h3
+                        class="text-xl font-bold text-gray-900 dark:text-gray-100"
+                      >
+                        True Partnership
+                      </h3>
+                      <p
+                        class="text-gray-600 dark:text-gray-400 leading-relaxed"
+                      >
+                        {{ profile?.availability?.responseTime || "8h" }}
+                        response time guarantee with transparent communication
+                        and agile collaboration.
+                      </p>
+                    </div>
+                  </div>
+                </UCard>
               </div>
 
-              <!-- Enhanced CTA Section -->
+              <!-- Call to Action -->
               <div class="text-center space-y-6">
-                <div
-                  class="bg-gradient-to-r from-primary/5 via-blue/5 to-purple/5 rounded-2xl p-8 border border-primary/10"
-                >
+                <div class="max-w-3xl mx-auto">
                   <h3
                     class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4"
                   >
-                    Ready to Transform Your Ideas Into Reality?
+                    Ready to Build Something Exceptional?
                   </h3>
                   <p
-                    class="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto"
+                    class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed"
                   >
-                    Let's discuss your project and explore how my expertise can
-                    help you achieve your goals.
+                    From SaaS platforms to browser extensions, I help businesses
+                    ship scalable solutions that drive growth.
                   </p>
                   <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <UButton
-                      to="/about"
-                      variant="outline"
-                      size="lg"
-                      class="group/cta border-2 border-gray-300 dark:border-gray-600 hover:border-primary-400 dark:hover:border-primary-500 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-700 dark:hover:text-primary-300 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-                    >
-                      <UIcon
-                        name="i-ph-info"
-                        class="mr-2 group-hover/cta:scale-110 transition-transform duration-300"
-                      />
-                      <span
-                        class="group-hover/cta:translate-x-0.5 transition-transform duration-300"
-                        >View Full Profile</span
-                      >
+                    <UButton to="/about" variant="subtle" size="lg">
+                      <UIcon name="i-ph-user" class="mr-2" />
+                      <span>Learn More About Me</span>
                     </UButton>
                     <UButton
                       to="/contact"
@@ -628,14 +361,8 @@ if (profile.value) {
                       size="lg"
                       class="glass-button group/cta bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 border-0 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                     >
-                      <UIcon
-                        name="i-ph-rocket-launch"
-                        class="mr-2 group-hover/cta:scale-110 group-hover/cta:rotate-12 transition-transform duration-300"
-                      />
-                      <span
-                        class="group-hover/cta:translate-x-0.5 transition-transform duration-300"
-                        >Start Your Project</span
-                      >
+                      <UIcon name="i-ph-rocket-launch" class="mr-2" />
+                      <span>Start Your Project</span>
                     </UButton>
                   </div>
                 </div>
@@ -649,7 +376,7 @@ if (profile.value) {
 
           <!-- <CaseStudyPreview /> -->
 
-          <NewsletterSignup />
+          <!-- <NewsletterSignup /> -->
 
           <CallToAction />
 
@@ -664,6 +391,7 @@ if (profile.value) {
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -671,6 +399,7 @@ if (profile.value) {
 .line-clamp-3 {
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

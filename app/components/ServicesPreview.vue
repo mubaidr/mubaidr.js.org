@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-// Fetch services data
+// Fetch limited services data for preview
 const { data: servicesPreview } = await useAsyncData(
   "services-preview",
   async () => {
@@ -12,179 +12,177 @@ const { data: servicesPreview } = await useAsyncData(
 <template>
   <div>
     <!-- Services Preview Section -->
-    <section class="space-y-12">
+    <section class="space-y-16">
       <div class="text-center space-y-6">
         <div
           class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20"
         >
           <UIcon name="i-ph-briefcase" class="w-4 h-4 text-primary" />
-          <span class="text-sm font-medium text-primary"
-            >Services & Pricing</span
-          >
+          <span class="text-sm font-medium text-primary">Services</span>
         </div>
 
         <h2
           class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-primary-600 to-gray-900 dark:from-white dark:via-primary-400 dark:to-white bg-clip-text text-transparent"
         >
-          Professional Web Development Services
+          How I Can Help You
         </h2>
 
         <p
           class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
         >
-          Transparent pricing for professional web development services. No
-          hidden fees, no surprises.
+          From full-stack development to technical consulting, I deliver
+          solutions that drive business growth.
         </p>
       </div>
 
-      <div class="grid gap-6 md:grid-cols-3">
-        <UCard
+      <!-- Service Categories -->
+      <div class="grid gap-8 lg:grid-cols-3 max-w-6xl mx-auto">
+        <div
           v-for="service in servicesPreview"
           :key="service.title"
-          class="text-center h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group relative overflow-hidden"
-          variant="soft"
+          class="group relative"
         >
-          <!-- Popular Badge -->
-          <div v-if="service.featured" class="absolute top-4 right-4">
-            <UBadge
-              label="Most Popular"
-              variant="solid"
-              size="sm"
-              class="bg-gradient-to-r from-primary-500 to-primary-600"
-            />
-          </div>
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-primary/5 to-blue/5 rounded-2xl transform group-hover:scale-[1.02] transition-all duration-500 opacity-0 group-hover:opacity-100"
+          ></div>
 
-          <div class="space-y-4">
-            <div
-              class="w-16 h-16 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 flex items-center justify-center mx-auto rounded-xl group-hover:scale-110 transition-transform duration-300"
-            >
-              <UIcon :name="service.icon" class="w-8 h-8 text-primary" />
-            </div>
-            <h3 class="text-xl font-semibold">{{ service.title }}</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-              {{ service.description }}
-            </p>
-
-            <!-- Pricing Information -->
-            <div
-              v-if="service.pricing"
-              class="bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-900/20 dark:to-blue-900/20 rounded-lg p-4 space-y-2"
-            >
-              <div class="text-3xl font-bold text-primary">
-                ${{ service.pricing.hourly }}
-                <span
-                  class="text-sm font-normal text-gray-600 dark:text-gray-400"
-                  >/hour</span
+          <UCard variant="soft" class="text-center h-full relative">
+            <div class="space-y-6">
+              <!-- Icon & Title -->
+              <div class="space-y-4">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300"
                 >
-              </div>
-              <div class="text-sm text-gray-600 dark:text-gray-400">
-                {{ service.timeline }} | {{ service.suitable }}
-              </div>
-              <div
-                class="text-xs text-green-600 dark:text-green-400 font-medium"
-              >
-                Free consultation included
-              </div>
-            </div>
+                  <UIcon :name="service.icon" class="w-8 h-8 text-primary" />
+                </div>
 
-            <!-- Key Features -->
-            <div v-if="service.features" class="text-left space-y-2">
-              <h4
-                class="text-sm font-semibold text-gray-900 dark:text-gray-100 text-center"
-              >
-                What's Included:
-              </h4>
-              <ul class="space-y-1">
-                <li
-                  v-for="(feature, index) in service.features.slice(0, 3)"
-                  :key="index"
-                  class="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400"
-                >
-                  <UIcon
-                    name="i-ph-check"
-                    class="w-3 h-3 text-green-500 flex-shrink-0"
-                  />
-                  <span>{{ feature }}</span>
-                </li>
-              </ul>
-              <div v-if="service.features.length > 3" class="text-center">
-                <span
-                  class="text-xs text-primary cursor-pointer hover:underline"
-                  >+{{ service.features.length - 3 }} more features</span
-                >
+                <div class="space-y-3">
+                  <h3
+                    class="text-xl font-bold text-gray-900 dark:text-gray-100"
+                  >
+                    {{ service.title }}
+                  </h3>
+                  <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    {{ service.description }}
+                  </p>
+                </div>
+              </div>
+
+              <!-- Key Highlight -->
+              <div class="bg-primary/5 rounded-lg p-4">
+                <div class="text-sm text-primary font-medium">
+                  {{ service.suitable }}
+                </div>
               </div>
             </div>
-
-            <!-- CTA Button -->
-            <UButton
-              to="/contact"
-              variant="solid"
-              size="sm"
-              class="w-full group-hover:scale-105 transition-transform duration-300"
-            >
-              <UIcon name="i-ph-chat-circle" />
-              Get Free Quote
-            </UButton>
-
-            <!-- Additional Info -->
-            <div class="text-xs text-gray-500 dark:text-gray-400 space-y-1">
-              <div class="flex items-center justify-center gap-1">
-                <UIcon
-                  name="i-ph-shield-check"
-                  class="w-3 h-3 text-green-500"
-                />
-                <span>100% satisfaction guarantee</span>
-              </div>
-              <div class="flex items-center justify-center gap-1">
-                <UIcon name="i-ph-clock" class="w-3 h-3 text-blue-500" />
-                <span>24h response time</span>
-              </div>
-            </div>
-          </div>
-        </UCard>
-      </div>
-
-      <!-- Trust Indicators -->
-      <div
-        class="bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-xl p-6"
-      >
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          <div>
-            <div class="text-2xl font-bold text-primary mb-1">Low</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">
-              Upfront Payment
-            </div>
-          </div>
-          <div>
-            <div class="text-2xl font-bold text-primary mb-1">Free</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">
-              Consultation
-            </div>
-          </div>
-          <div>
-            <div class="text-2xl font-bold text-primary mb-1">24/7</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">Support</div>
-          </div>
-          <div>
-            <div class="text-2xl font-bold text-primary mb-1">100%</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">
-              Satisfaction
-            </div>
-          </div>
+          </UCard>
         </div>
       </div>
 
-      <div class="text-center">
-        <UButton
-          to="/services"
-          variant="outline"
-          size="lg"
-          class="hover:scale-105 transition-transform duration-300"
-        >
-          <UIcon name="i-ph-briefcase" />
-          View All Services & Packages
-        </UButton>
+      <!-- Strong CTA to Services Page -->
+      <div class="text-center space-y-6">
+        <div class="max-w-3xl mx-auto">
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+            Ready to Explore All Services?
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+            View detailed service offerings, pricing packages, and my proven
+            4-step process.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <UButton
+              to="/services"
+              variant="solid"
+              size="lg"
+              class="glass-button bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 border-0 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            >
+              <UIcon name="i-ph-list" class="mr-2" />
+              View All Services & Pricing
+            </UButton>
+            <UButton
+              to="/contact"
+              variant="outline"
+              size="lg"
+              class="border-2 border-gray-300 dark:border-gray-600 hover:border-primary-400 dark:hover:border-primary-500 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-700 dark:hover:text-primary-300 transition-all duration-300"
+            >
+              <UIcon name="i-ph-chat-circle" class="mr-2" />
+              Get Free Consultation
+            </UButton>
+          </div>
+        </div>
       </div>
     </section>
   </div>
 </template>
+
+<style scoped>
+/* Glass Button Animation */
+.glass-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.6s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.glass-button:hover::before {
+  left: 100%;
+}
+
+/* Ensure button content is above the effects */
+.glass-button :deep(*) {
+  position: relative;
+  z-index: 2;
+}
+</style>
+
+<style scoped>
+/* Glass Button Animation */
+.glass-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.6s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.glass-button:hover::before {
+  left: 100%;
+}
+
+/* Ensure button content is above the effects */
+.glass-button :deep(*) {
+  position: relative;
+  z-index: 2;
+}
+</style>

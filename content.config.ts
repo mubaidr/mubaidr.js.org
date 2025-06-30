@@ -89,6 +89,7 @@ export default defineContentConfig({
         currentFocus: z.array(z.string()),
         clientSatisfaction: z.number().min(0).max(100),
         projectsDelivered: z.number().min(0),
+        experience: z.number().min(0),
         availability: z.object({
           status: z.string(),
           statusText: z.string(),
