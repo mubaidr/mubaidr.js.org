@@ -108,7 +108,7 @@ const caseStudies = [
       <UCard
         v-for="study in caseStudies"
         :key="study.id"
-        class="h-full hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 group"
+        class="h-full card-interaction group"
         variant="soft"
       >
         <div class="space-y-6">

@@ -14,7 +14,7 @@ const { data: profile } = await useAsyncData("profile", () => {
   <section class="py-16">
     <UCard
       variant="solid"
-      class="text-center bg-neutral-700 dark:bg-neutral-200"
+      class="text-center bg-neutral-700 dark:bg-neutral-200 card-interaction"
     >
       <div class="space-y-8 py-8">
         <!-- Availability Badge -->

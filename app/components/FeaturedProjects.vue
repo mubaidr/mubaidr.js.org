@@ -40,7 +40,7 @@ const { data: featuredProjects } = await useAsyncData(
         <UCard
           v-for="project in featuredProjects"
           :key="project.id"
-          class="group cursor-pointer transition-all duration-300 hover:scale-[1.02] h-full"
+          class="group card-interaction cursor-pointer h-full"
           variant="soft"
         >
           <div class="space-y-4">

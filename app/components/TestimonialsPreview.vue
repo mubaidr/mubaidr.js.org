@@ -120,7 +120,7 @@ onUnmounted(() => {
               :key="testimonial.id"
               class="w-full flex-shrink-0 p-4"
             >
-              <UCard class="h-[500px]" variant="soft">
+              <UCard class="h-[500px] card-interaction" variant="soft">
                 <div class="h-full flex flex-col space-y-6">
                   <!-- Rating Stars -->
                   <div
@@ -339,7 +339,7 @@ onUnmounted(() => {
       </div>
 
       <div v-else class="text-center">
-        <UCard variant="soft" class="max-w-md mx-auto">
+        <UCard variant="soft" class="max-w-md mx-auto card-interaction">
           <div class="space-y-4 text-center">
             <UIcon
               name="i-ph-chat-circle"

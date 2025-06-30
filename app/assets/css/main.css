@@ -13,3 +13,19 @@
 body {
   overflow-y: scroll;
 }
+
+.card-interaction {
+  transition:
+    transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
+}
+
+.card-interaction:hover,
+.card-interaction:focus {
+  transform: scale(1.03) translateY(-2px);
+  box-shadow:
+    0 8px 32px 0 rgba(60, 60, 60, 0.1),
+    0 1.5px 6px 0 rgba(0, 0, 0, 0.04);
+  z-index: 2;
+}

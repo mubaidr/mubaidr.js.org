@@ -50,7 +50,7 @@ const { data: recentPosts } = await useAsyncData("recent-posts", async () => {
         <UCard
           v-for="(post, index) in recentPosts"
           :key="post.path || `post-${index}`"
-          class="group cursor-pointer transition-all duration-300 hover:scale-[1.02] h-full"
+          class="group card-interaction cursor-pointer h-full"
           variant="soft"
           @click="navigateTo(post.path || '/blog')"
         >
@@ -101,7 +101,7 @@ const { data: recentPosts } = await useAsyncData("recent-posts", async () => {
 
       <!-- Placeholder when no blog posts -->
       <div v-else class="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
-        <UCard class="h-full" variant="soft">
+        <UCard class="h-full card-interaction" variant="soft">
           <div class="space-y-4">
             <div
               class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 flex items-center justify-center"
@@ -126,7 +126,7 @@ const { data: recentPosts } = await useAsyncData("recent-posts", async () => {
           </div>
         </UCard>
 
-        <UCard class="h-full" variant="soft">
+        <UCard class="h-full card-interaction" variant="soft">
           <div class="space-y-4">
             <div
               class="aspect-video bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 flex items-center justify-center"
