@@ -380,7 +380,7 @@ useHead({
                   to="/contact"
                   size="xl"
                   variant="solid"
-                  class="bg-primary hover:bg-primary-600 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  class="shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                 >
                   <UIcon name="i-ph-chat-circle" />
                   Start Your Project

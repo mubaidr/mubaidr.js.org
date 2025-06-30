@@ -606,22 +606,35 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- Call to Action -->
-        <div
-          class="text-center py-8 bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-900/20 dark:to-blue-900/20"
-        >
-          <h3 class="text-xl font-semibold mb-4">
-            Questions About Your Privacy?
-          </h3>
-          <p class="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
-            I're committed to protecting your privacy and being transparent
-            about my data practices. Don't hesitate to reach out if you have any
-            concerns.
-          </p>
-          <UButton to="/contact" size="lg" variant="solid">
-            <UIcon name="i-ph-envelope" />
-            Contact me
-          </UButton>
-        </div>
+        <UCard variant="solid" class="text-center">
+          <div class="space-y-6">
+            <div class="space-y-3">
+              <UIcon
+                name="i-ph-shield-check"
+                class="w-12 h-12 text-white/80 mx-auto"
+              />
+              <h3 class="text-2xl font-bold text-white">
+                Questions About Your Privacy?
+              </h3>
+              <p class="text-white/80 max-w-2xl mx-auto leading-relaxed">
+                I'm committed to protecting your privacy and being transparent
+                about my data practices. Don't hesitate to reach out if you have
+                any concerns.
+              </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <UButton to="/contact" size="lg" variant="outline">
+                <UIcon name="i-ph-envelope" />
+                Contact Me
+              </UButton>
+              <UButton to="/" size="lg" variant="ghost">
+                <UIcon name="i-ph-house" />
+                Back to Home
+              </UButton>
+            </div>
+          </div>
+        </UCard>
       </div>
     </div>
   </div>

@@ -46,16 +46,15 @@ useHead({
           <h1
             class="text-3xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-primary-600 to-gray-900 dark:from-white dark:via-primary-400 dark:to-white bg-clip-text text-transparent"
           >
-            My Professional Journey
+            The Full Story
           </h1>
 
           <p
             class="text-xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed"
           >
-            {{
-              profile?.description ||
-              "Passionate software engineer with over a decade of experience building scalable applications and leading development teams."
-            }}
+            Here's the complete picture of my professional journey, from
+            education to expertise, and everything that drives my passion for
+            creating exceptional web experiences.
           </p>
         </div>
 
@@ -437,6 +436,38 @@ useHead({
               </UCard>
             </div>
           </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="space-y-12">
+          <UCard variant="solid" class="text-center">
+            <div class="space-y-6">
+              <div class="space-y-3">
+                <UIcon
+                  name="i-ph-handshake"
+                  class="w-12 h-12 text-white/80 mx-auto"
+                />
+                <h3 class="text-2xl font-bold text-white">
+                  Ready to Work Together?
+                </h3>
+                <p class="text-white/80 max-w-2xl mx-auto leading-relaxed">
+                  Now that you know my story, let's write the next chapter
+                  together. I'd love to help bring your ideas to life.
+                </p>
+              </div>
+
+              <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <UButton to="/services" size="lg" variant="outline">
+                  <UIcon name="i-ph-briefcase" />
+                  View Services
+                </UButton>
+                <UButton to="/contact" size="lg" variant="ghost">
+                  <UIcon name="i-ph-envelope" />
+                  Get In Touch
+                </UButton>
+              </div>
+            </div>
+          </UCard>
         </section>
       </div>
     </div>
