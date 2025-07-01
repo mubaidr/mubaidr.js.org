@@ -97,8 +97,8 @@ const filteredProjects = computed(() => {
                 selectedCategory === category.name ? 'solid' : 'outline'
               "
               size="sm"
-              @click="selectedCategory = category.name"
               class="transition-all duration-300 hover:scale-105"
+              @click="selectedCategory = category.name"
             >
               {{ category.name }}
               <UBadge
@@ -119,7 +119,7 @@ const filteredProjects = computed(() => {
             >
               <div
                 class="absolute inset-0 bg-gradient-to-r from-primary/5 to-blue/5 rounded-2xl transform group-hover:scale-[1.02] transition-all duration-500 opacity-0 group-hover:opacity-100"
-              ></div>
+              />
               <UCard
                 variant="soft"
                 class="relative h-full border border-gray-200/50 dark:border-gray-700/50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:shadow-2xl hover:border-primary/20 dark:hover:border-primary/30 transition-all duration-500 transform group-hover:-translate-y-1"
@@ -133,7 +133,7 @@ const filteredProjects = computed(() => {
                     :src="project.image"
                     :alt="project.title"
                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                  >
                   <UIcon
                     v-else
                     name="i-ph-folder-open"

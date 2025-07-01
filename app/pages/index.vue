@@ -94,7 +94,7 @@ if (profile.value) {
                   ? 'bg-green-500 animate-pulse'
                   : 'bg-orange-500',
               ]"
-            ></div>
+            />
             <span
               class="text-xs font-medium text-gray-900 dark:text-gray-100 whitespace-nowrap"
             >
@@ -179,7 +179,7 @@ if (profile.value) {
             Start Your Project Today
             <div
               class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"
-            ></div>
+            />
           </UButton>
 
           <UButton
@@ -219,10 +219,10 @@ if (profile.value) {
             <div class="absolute inset-0 opacity-5">
               <div
                 class="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full blur-3xl"
-              ></div>
+              />
               <div
                 class="absolute bottom-20 right-10 w-24 h-24 bg-blue-500 rounded-full blur-3xl"
-              ></div>
+              />
             </div>
 
             <div class="relative space-y-16">

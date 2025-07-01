@@ -2,7 +2,7 @@
 const gridCanvas = useTemplateRef("gridCanvas")
 let animationFrame = null
 let canvasContext = null
-let lastCanvasSize = { width: 0, height: 0 }
+const lastCanvasSize = { width: 0, height: 0 }
 
 // Color mode for theme-aware styling
 const colorMode = useColorMode()
@@ -10,7 +10,7 @@ const colorMode = useColorMode()
 // Mouse tracking
 const mousePos = ref({ x: 0, y: 0 })
 const isMouseInside = ref(false)
-let mousePercent = { x: 50, y: 50 }
+const mousePercent = { x: 50, y: 50 }
 let canvasRect = null
 
 // Grid configuration
@@ -233,7 +233,7 @@ onUnmounted(() => {
       ref="gridCanvas"
       class="absolute inset-0 w-full h-full transition-opacity duration-300"
       :class="colorMode === 'dark' ? 'opacity-50' : 'opacity-60'"
-    ></canvas>
+    />
   </div>
 </template>
 

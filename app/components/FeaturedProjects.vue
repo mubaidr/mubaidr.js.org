@@ -80,7 +80,7 @@ const { data: featuredProjects } = await useAsyncData(
         </UCard>
       </div>
 
-      <div class="text-center" v-if="!hideLink">
+      <div v-if="!hideLink" class="text-center">
         <UButton to="/projects" variant="outline" size="lg">
           <UIcon name="i-ph-folder-open" />
           View All Projects

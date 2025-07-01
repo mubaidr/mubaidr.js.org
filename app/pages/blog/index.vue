@@ -27,24 +27,45 @@ const formatDate = (date: string | Date) => {
 }
 
 // Extract excerpt from content
-const getExcerpt = (content: any, maxLength = 150) => {
+const getExcerpt = (content: unknown, maxLength = 150) => {
   if (!content) return ""
 
   // Handle different content structures
   let textContent = ""
   if (typeof content === "string") {
     textContent = content
-  } else if (content.children && Array.isArray(content.children)) {
+  } else if (
+    typeof content === "object" &&
+    content !== null &&
+    "children" in content &&
+    Array.isArray((content as { children: unknown[] }).children)
+  ) {
     // Extract text from nested content structure
-    const extractText = (node: any): string => {
+    const extractText = (node: unknown): string => {
       if (typeof node === "string") return node
-      if (node.value) return node.value
-      if (node.children && Array.isArray(node.children)) {
-        return node.children.map(extractText).join(" ")
+      if (
+        typeof node === "object" &&
+        node !== null &&
+        "value" in node &&
+        typeof (node as { value: unknown }).value === "string"
+      ) {
+        return (node as { value: string }).value
+      }
+      if (
+        typeof node === "object" &&
+        node !== null &&
+        "children" in node &&
+        Array.isArray((node as { children: unknown[] }).children)
+      ) {
+        return (node as { children: unknown[] }).children
+          .map(extractText)
+          .join(" ")
       }
       return ""
     }
-    textContent = content.children.map(extractText).join(" ")
+    textContent = (content as { children: unknown[] }).children
+      .map(extractText)
+      .join(" ")
   }
 
   // Remove HTML tags and trim
@@ -114,7 +135,7 @@ const getExcerpt = (content: any, maxLength = 150) => {
             >
               <div
                 class="absolute inset-0 bg-gradient-to-r from-primary/5 to-blue/5 rounded-2xl transform group-hover:scale-[1.02] transition-all duration-500 opacity-0 group-hover:opacity-100"
-              ></div>
+              />
               <UCard
                 as="div"
                 variant="soft"
@@ -135,7 +156,7 @@ const getExcerpt = (content: any, maxLength = 150) => {
                         :src="post.image"
                         :alt="post.title"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
+                      >
                       <div
                         v-else
                         class="flex items-center justify-center h-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700"

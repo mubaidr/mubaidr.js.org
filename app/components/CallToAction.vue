@@ -114,15 +114,12 @@ const { data: profile } = await useAsyncData("profile", () => {
         </div>
 
         <!-- Availability Note -->
-        <div
-          v-if="profile?.availability?.status === 'available'"
-          class="text-sm opacity-80"
-        >
-          <p>
-            {{ profile?.availability?.slotsAvailable || 3 }} project slots
+        <div v-if="profile?.availability?.status === 'available'">
+          <UBadge variant="soft" color="info">
+            Only {{ profile?.availability?.slotsAvailable || 3 }} project slots
             available for
             {{ profile?.availability?.startDate || "August 2025" }}
-          </p>
+          </UBadge>
         </div>
       </div>
     </UCard>

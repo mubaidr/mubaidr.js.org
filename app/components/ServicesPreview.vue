@@ -44,7 +44,7 @@ const { data: servicesPreview } = await useAsyncData(
         >
           <div
             class="absolute inset-0 bg-gradient-to-r from-primary/5 to-blue/5 rounded-2xl transform group-hover:scale-[1.02] transition-all duration-500 opacity-0 group-hover:opacity-100"
-          ></div>
+          />
 
           <UCard
             variant="soft"

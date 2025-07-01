@@ -74,13 +74,13 @@
 
           <!-- Mobile menu button -->
           <UButton
-            @click="toggleMobileMenu"
             variant="ghost"
             size="sm"
             class="lg:hidden p-2"
             :aria-expanded="mobileMenuOpen"
             aria-label="Toggle mobile menu"
             aria-controls="mobile-menu"
+            @click="toggleMobileMenu"
           >
             <UIcon
               :name="mobileMenuOpen ? 'i-ph-x' : 'i-ph-list'"
@@ -112,10 +112,10 @@
               v-for="(item, index) in navigationItems"
               :key="item.path"
               :to="item.path"
-              @click="closeMobileMenu"
               class="flex items-center gap-4 px-4 py-4 rounded-lg text-base font-medium hover:bg-primary-50 dark:hover:bg-primary-900/20 active:bg-primary-100 dark:active:bg-primary-900/30 transition-all duration-200 min-h-[44px]"
               :class="{ 'animate-fade-in-up': mobileMenuOpen }"
               :style="{ 'animation-delay': `${index * 50}ms` }"
+              @click="closeMobileMenu"
             >
               <UIcon
                 :name="item.icon"
@@ -129,13 +129,13 @@
             <!-- Divider -->
             <div
               class="border-t border-neutral-200/50 dark:border-neutral-700/50 my-4"
-            ></div>
+            />
 
             <!-- Mobile CTA with Enhanced Styling -->
             <ULink
               to="/contact"
-              @click="closeMobileMenu"
               class="flex items-center justify-center gap-3 px-6 py-4 bg-primary-600 hover:bg-primary-700 active:bg-primary-800 text-white rounded-lg font-semibold transition-all duration-200 min-h-[48px] shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98]"
+              @click="closeMobileMenu"
             >
               <UIcon name="i-ph-envelope" class="w-5 h-5" />
               <span>Let's Talk</span>
@@ -162,7 +162,7 @@
         @touchstart="handleTouchStart"
         @touchmove="handleTouchMove"
         @touchend="handleTouchEnd"
-      ></div>
+      />
     </Transition>
   </header>
 </template>

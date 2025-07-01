@@ -83,7 +83,7 @@ useHead({
             >
               <div
                 class="absolute inset-0 bg-gradient-to-r from-primary/5 to-blue/5 rounded-2xl transform group-hover:scale-[1.02] transition-all duration-500 opacity-0 group-hover:opacity-100"
-              ></div>
+              />
               <div class="relative p-6 h-full">
                 <!-- Step Number -->
                 <div
@@ -151,7 +151,7 @@ useHead({
             >
               <div
                 class="absolute inset-0 bg-gradient-to-r from-blue/5 to-purple/5 rounded-2xl transform group-hover:scale-[1.02] transition-all duration-500 opacity-0 group-hover:opacity-100"
-              ></div>
+              />
               <UCard
                 variant="soft"
                 class="relative h-full border border-gray-200/50 dark:border-gray-700/50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:shadow-2xl hover:border-blue/20 dark:hover:border-blue/30 transition-all duration-500 transform group-hover:-translate-y-1"
@@ -258,11 +258,11 @@ useHead({
               <div
                 v-if="pkg.highlighted"
                 class="absolute inset-0 bg-gradient-to-r from-primary/10 to-blue/10 rounded-2xl"
-              ></div>
+              />
               <div
                 v-else
                 class="absolute inset-0 bg-gradient-to-r from-purple/5 to-primary/5 rounded-2xl transform group-hover:scale-[1.02] transition-all duration-500 opacity-0 group-hover:opacity-100"
-              ></div>
+              />
 
               <UCard
                 :variant="pkg.highlighted ? 'outline' : 'soft'"
@@ -337,13 +337,13 @@ useHead({
             <!-- Background Elements -->
             <div
               class="absolute inset-0 bg-gradient-to-r from-primary/5 via-blue/5 to-purple/5 rounded-3xl"
-            ></div>
+            />
             <div
               class="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"
-            ></div>
+            />
             <div
               class="absolute bottom-10 right-10 w-24 h-24 bg-blue/10 rounded-full blur-3xl"
-            ></div>
+            />
 
             <div class="relative text-center space-y-8 py-16 px-8">
               <div class="space-y-6">

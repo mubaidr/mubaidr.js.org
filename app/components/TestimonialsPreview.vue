@@ -116,7 +116,7 @@ onUnmounted(() => {
             :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
           >
             <div
-              v-for="(testimonial, index) in testimonials"
+              v-for="testimonial in testimonials"
               :key="testimonial.id"
               class="w-full flex-shrink-0 p-4"
             >
@@ -168,11 +168,11 @@ onUnmounted(() => {
                     </h4>
                     <div class="grid grid-cols-2 gap-2">
                       <div
-                        v-for="(result, index) in testimonial.results.slice(
+                        v-for="(result, resultIndex) in testimonial.results.slice(
                           0,
                           4,
                         )"
-                        :key="index"
+                        :key="resultIndex"
                         class="flex items-center gap-2 text-sm"
                       >
                         <UIcon
@@ -219,7 +219,7 @@ onUnmounted(() => {
                             ((e.target as HTMLImageElement).style.display =
                               'none')
                         "
-                      />
+                      >
                       <UIcon
                         v-if="!testimonial.avatar"
                         name="i-ph-user"
@@ -263,9 +263,9 @@ onUnmounted(() => {
 
         <!-- Auto-play toggle -->
         <button
-          @click="toggleAutoPlay"
           class="absolute top-8 right-8 w-12 h-12 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-full flex items-center justify-center hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 hover:scale-110 shadow-lg group z-10"
           :title="isPaused ? 'Resume auto-play' : 'Pause auto-play'"
+          @click="toggleAutoPlay"
         >
           <UIcon
             :name="isPaused ? 'i-ph-play' : 'i-ph-pause'"
@@ -278,7 +278,6 @@ onUnmounted(() => {
           <!-- Navigation and Dots -->
           <div class="flex items-center gap-6">
             <UButton
-              @click="prevSlide"
               icon="i-ph-caret-left"
               size="lg"
               color="primary"
@@ -286,13 +285,13 @@ onUnmounted(() => {
               class="rounded-full hover:scale-110 transition-transform duration-300"
               :disabled="testimonials.length <= 1"
               aria-label="Previous testimonial"
+              @click="prevSlide"
             />
 
             <div class="flex items-center gap-2">
               <button
                 v-for="(testimonial, index) in testimonials"
                 :key="`dot-${index}`"
-                @click="goToSlide(index)"
                 :class="[
                   'transition-all duration-300 rounded-full border-2',
                   currentSlide === index
@@ -300,11 +299,11 @@ onUnmounted(() => {
                     : 'w-3 h-3 bg-gray-300 dark:bg-gray-600 border-gray-300 dark:border-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 hover:border-gray-400 dark:hover:border-gray-500 hover:scale-110',
                 ]"
                 :aria-label="`View testimonial ${index + 1}`"
+                @click="goToSlide(index)"
               />
             </div>
 
             <UButton
-              @click="nextSlide"
               icon="i-ph-caret-right"
               size="lg"
               color="primary"
@@ -312,6 +311,7 @@ onUnmounted(() => {
               class="rounded-full hover:scale-110 transition-transform duration-300"
               :disabled="testimonials.length <= 1"
               aria-label="Next testimonial"
+              @click="nextSlide"
             />
           </div>
         </div>

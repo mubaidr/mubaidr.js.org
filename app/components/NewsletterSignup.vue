@@ -26,7 +26,7 @@ const submitForm = async () => {
     setTimeout(() => {
       isSuccess.value = false
     }, 3000)
-  } catch (error) {
+  } catch {
     errorMessage.value = "Something went wrong. Please try again."
   } finally {
     isSubmitting.value = false
@@ -94,7 +94,7 @@ const submitForm = async () => {
 
       <!-- Newsletter Signup Form -->
       <div class="max-w-md mx-auto">
-        <form @submit.prevent="submitForm" class="space-y-4">
+        <form class="space-y-4" @submit.prevent="submitForm">
           <div class="flex flex-col sm:flex-row gap-3">
             <UInput
               v-model="email"

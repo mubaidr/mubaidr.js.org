@@ -1,8 +1,18 @@
 <script setup lang="ts">
+// Define weather data type
+interface WeatherData {
+  main: {
+    feels_like: number
+  }
+  weather: Array<{
+    description: string
+  }>
+}
+
 // Reactive time and weather variables
 let interval: number
 const currentTime = ref<string>("")
-const weatherData = ref<any>(null)
+const weatherData = ref<WeatherData | null>(null)
 
 // Update time every second
 async function updateTime() {
