@@ -15,11 +15,11 @@ let canvasRect = null
 
 // Grid configuration
 const gridConfig = {
-  size: 25, // Grid cell size
-  lineWidth: 0.5, // Line width for grid lines
-  maxDistance: 150, // Maximum distance for mouse interaction
-  baseOpacity: 0.05, // Base opacity for grid lines
-  highlightOpacity: 0.25, // Highlight opacity when mouse is near
+  size: 50, // Grid cell size
+  lineWidth: 0.125, // Line width for grid lines - optimized for subtlety
+  maxDistance: 150, // Maximum distance for mouse interaction - wider influence area
+  baseOpacity: 0.1, // Base opacity for grid lines - more subtle default state
+  highlightOpacity: 0.28, // Highlight opacity when mouse is near - balanced highlight effect
 }
 
 // Performance optimization: Cache theme colors
@@ -28,19 +28,19 @@ const cachedColors = computed(() => {
 
   if (isDark) {
     return {
-      primary: { r: 147, g: 197, b: 253 },
-      secondary: { r: 196, g: 181, b: 253 },
-      accent: { r: 167, g: 243, b: 208 },
-      baseOpacity: 0.05,
-      highlightOpacity: 0.25,
+      primary: { r: 147, g: 197, b: 253 }, // Softer blue for dark theme
+      secondary: { r: 196, g: 181, b: 253 }, // Soft purple
+      accent: { r: 167, g: 243, b: 208 }, // Soft green
+      baseOpacity: 0.125, // Slightly more visible in dark mode
+      highlightOpacity: 0.5, // Balanced highlight for dark theme
     }
   } else {
     return {
-      primary: { r: 59, g: 130, b: 246 },
-      secondary: { r: 139, g: 92, b: 246 },
-      accent: { r: 34, g: 197, b: 94 },
-      baseOpacity: 0.05,
-      highlightOpacity: 0.25,
+      primary: { r: 59, g: 130, b: 246 }, // More vibrant blue for light theme
+      secondary: { r: 139, g: 92, b: 246 }, // Vibrant purple
+      accent: { r: 34, g: 197, b: 94 }, // Vibrant green
+      baseOpacity: 0.25, // Very subtle for light mode to avoid visual clutter
+      highlightOpacity: 0.75, // Softer highlight to match light theme aesthetics
     }
   }
 })
@@ -103,7 +103,8 @@ const drawGrid = () => {
     let opacity = colors.baseOpacity
 
     if (isMouseInside.value && distanceToMouse < maxDistance) {
-      const factor = 1 - distanceToMouse / maxDistance
+      // Smoother easing function for more natural interaction
+      const factor = Math.pow(1 - distanceToMouse / maxDistance, 1.5)
       opacity =
         colors.baseOpacity +
         (colors.highlightOpacity - colors.baseOpacity) * factor
@@ -126,7 +127,8 @@ const drawGrid = () => {
     let opacity = colors.baseOpacity
 
     if (isMouseInside.value && distanceToMouse < maxDistance) {
-      const factor = 1 - distanceToMouse / maxDistance
+      // Smoother easing function for more natural interaction
+      const factor = Math.pow(1 - distanceToMouse / maxDistance, 1.5)
       opacity =
         colors.baseOpacity +
         (colors.highlightOpacity - colors.baseOpacity) * factor
@@ -229,34 +231,6 @@ onUnmounted(() => {
 <template>
   <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
     <!-- Grid Canvas -->
-    <canvas
-      ref="gridCanvas"
-      class="absolute inset-0 w-full h-full transition-opacity duration-300"
-      :class="colorMode === 'dark' ? 'opacity-50' : 'opacity-60'"
-    />
+    <canvas ref="gridCanvas" class="absolute inset-0 w-full h-full" />
   </div>
 </template>
-
-<style scoped>
-/* Grid background performance optimizations */
-canvas {
-  will-change: transform;
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
-
-/* Enhanced theme transitions */
-canvas {
-  transition: opacity 0.3s ease;
-}
-
-/* Responsive adjustments for grid size */
-@media (max-width: 768px) {
-  /* Mobile optimizations are handled in JavaScript */
-}
-
-/* Tablet adjustments */
-@media (max-width: 1024px) and (min-width: 769px) {
-  /* Tablet optimizations are handled in JavaScript */
-}
-</style>

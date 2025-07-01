@@ -84,20 +84,20 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
         <!-- Page Header -->
         <div class="text-center space-y-6">
           <div
-            class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20"
+            class="inline-flex items-center gap-2 px-4 py-2"
           >
-            <UIcon name="i-ph-newspaper" class="w-4 h-4 text-primary" />
-            <span class="text-sm font-medium text-primary">My Blog</span>
+            <UIcon name="i-ph-newspaper" class="w-4 h-4" />
+            <span >My Blog</span>
           </div>
 
           <h1
-            class="text-3xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-primary-600 to-gray-900 dark:from-white dark:via-primary-400 dark:to-white bg-clip-text text-transparent"
+            
           >
             Insights & Articles
           </h1>
 
           <p
-            class="text-xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed"
+            class="max-w-4xl mx-auto"
           >
             Insights, tutorials, and thoughts on web development, technology,
             and more.
@@ -115,13 +115,13 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
         <section v-else-if="blogData.posts.length > 0" class="space-y-12">
           <div class="text-center space-y-6">
             <div
-              class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20"
+              class="inline-flex items-center gap-2 px-4 py-2"
             >
-              <UIcon name="i-ph-article" class="w-4 h-4 text-primary" />
-              <span class="text-sm font-medium text-primary">All Posts</span>
+              <UIcon name="i-ph-article" class="w-4 h-4" />
+              <span >All Posts</span>
             </div>
             <h2
-              class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-primary-600 to-gray-900 dark:from-white dark:via-primary-400 dark:to-white bg-clip-text text-transparent"
+              
             >
               Explore My Latest Articles
             </h2>
@@ -131,15 +131,15 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
             <article
               v-for="post in blogData.posts"
               :key="post.id"
-              class="group relative"
+              class="relative"
             >
               <div
-                class="absolute inset-0 bg-gradient-to-r from-primary/5 to-blue/5 rounded-2xl transform group-hover:scale-[1.02] transition-all duration-500 opacity-0 group-hover:opacity-100"
+                class="absolute inset-0"
               />
               <UCard
                 as="div"
                 variant="soft"
-                class="relative h-full border border-gray-200/50 dark:border-gray-700/50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:shadow-2xl hover:border-primary/20 dark:hover:border-primary/30 transition-all duration-500 transform group-hover:-translate-y-1 overflow-hidden"
+                class="relative h-full overflow-hidden"
               >
                 <ULink
                   :to="post.path"
@@ -149,21 +149,21 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
                   <div class="space-y-4">
                     <!-- Featured Image -->
                     <div
-                      class="aspect-[16/9] bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden"
+                      class="aspect-[16/9] overflow-hidden"
                     >
                       <img
                         v-if="post.image"
                         :src="post.image"
                         :alt="post.title"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        class="w-full h-full object-cover"
                       >
                       <div
                         v-else
-                        class="flex items-center justify-center h-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700"
+                        class="flex items-center justify-center h-full"
                       >
                         <UIcon
                           name="i-ph-article-duotone"
-                          class="w-12 h-12 text-gray-400 dark:text-gray-500"
+                          class="w-12 h-12"
                         />
                       </div>
                     </div>
@@ -172,7 +172,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
                       <!-- Title and Category -->
                       <div class="flex items-center justify-between mb-2">
                         <h3
-                          class="text-lg font-bold group-hover:text-primary transition-colors duration-300 line-clamp-2"
+                          
                         >
                           {{ post.title }}
                         </h3>
@@ -186,14 +186,14 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
 
                       <!-- Excerpt -->
                       <p
-                        class="text-gray-600 dark:text-gray-400 text-sm line-clamp-3 mb-4"
+                        class="mb-4"
                       >
                         {{ post.description || getExcerpt(post.body) }}
                       </p>
 
                       <!-- Meta -->
                       <div
-                        class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 pt-2 border-t border-gray-200 dark:border-gray-700"
+                        class="flex items-center justify-between pt-2"
                       >
                         <span v-if="post.date">
                           {{ formatDate(post.date) }}
@@ -202,7 +202,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
                           <span>Read More</span>
                           <UIcon
                             name="i-ph-arrow-right"
-                            class="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300"
+                            class="w-3 h-3"
                           />
                         </div>
                       </div>
@@ -217,12 +217,12 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
         <!-- Empty State -->
         <div v-else class="text-center py-16">
           <div
-            class="mx-auto w-24 h-24 bg-gray-100 dark:bg-gray-800 flex items-center justify-center rounded-full mb-6"
+            class="mx-auto w-24 h-24 flex items-center justify-center mb-6"
           >
-            <UIcon name="i-ph-newspaper" class="w-12 h-12 text-gray-400" />
+            <UIcon name="i-ph-newspaper" class="w-12 h-12" />
           </div>
-          <h3 class="text-2xl font-bold mb-2">No blog posts found</h3>
-          <p class="text-gray-600 dark:text-gray-400">
+          <h3 class="mb-2">No blog posts found</h3>
+          <p >
             Check back soon for new content!
           </p>
         </div>
@@ -231,11 +231,3 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
   </div>
 </template>
 
-<style scoped>
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-</style>

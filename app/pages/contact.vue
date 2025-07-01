@@ -67,22 +67,9 @@ onMounted(() => {
       <div class="space-y-32 py-16">
         <!-- Page Header -->
         <div class="text-center space-y-6">
-          <div
-            class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20"
-          >
-            <UIcon name="i-ph-paper-plane-tilt" class="w-4 h-4 text-primary" />
-            <span class="text-sm font-medium text-primary">Contact Me</span>
-          </div>
+          <h1>Let's Work Together</h1>
 
-          <h1
-            class="text-3xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-primary-600 to-gray-900 dark:from-white dark:via-primary-400 dark:to-white bg-clip-text text-transparent"
-          >
-            Let's Work Together
-          </h1>
-
-          <p
-            class="text-xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed"
-          >
+          <p class="max-w-4xl mx-auto">
             Have a project in mind? I'd love to hear about it and discuss how we
             can bring your ideas to life.
           </p>
@@ -91,20 +78,12 @@ onMounted(() => {
         <!-- Contact Methods -->
         <section class="space-y-12">
           <div class="text-center space-y-6">
-            <div
-              class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20"
-            >
-              <UIcon name="i-ph-chats-circle" class="w-4 h-4 text-primary" />
-              <span class="text-sm font-medium text-primary">Get In Touch</span>
+            <div class="inline-flex items-center gap-2 px-4 py-2">
+              <UIcon name="i-ph-chats-circle" class="w-4 h-4" />
+              <span>Get In Touch</span>
             </div>
-            <h2
-              class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-primary-600 to-gray-900 dark:from-white dark:via-primary-400 dark:to-white bg-clip-text text-transparent"
-            >
-              Choose Your Preferred Method
-            </h2>
-            <p
-              class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
-            >
+            <h2>Choose Your Preferred Method</h2>
+            <p class="max-w-3xl mx-auto">
               Select the most convenient way to reach out, and I'll get back to
               you as soon as possible.
             </p>
@@ -114,30 +93,25 @@ onMounted(() => {
             <div
               v-for="method in contactMethods"
               :key="method.title"
-              class="group relative"
+              class="relative"
               @click="navigateTo(method.action, { external: true })"
             >
-              <div
-                class="absolute inset-0 bg-gradient-to-r from-primary/5 to-blue/5 rounded-2xl transform group-hover:scale-[1.02] transition-all duration-500 opacity-0 group-hover:opacity-100"
-              />
-              <UCard
-                variant="soft"
-                class="relative h-full text-center cursor-pointer border border-gray-200/50 dark:border-gray-700/50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:shadow-2xl hover:border-primary/20 dark:hover:border-primary/30 transition-all duration-500 transform group-hover:-translate-y-1"
-              >
+              <div class="absolute inset-0" />
+              <UCard variant="soft">
                 <div class="space-y-4 p-4">
                   <div
-                    class="w-16 h-16 bg-primary-100 dark:bg-primary-900 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300"
+                    class="w-16 h-16 flex items-center justify-center mx-auto"
                   >
-                    <UIcon :name="method.icon" class="w-8 h-8 text-primary" />
+                    <UIcon :name="method.icon" class="w-8 h-8" />
                   </div>
                   <div>
-                    <h3 class="text-lg font-bold mb-1">
+                    <h3 class="mb-1">
                       {{ method.title }}
                     </h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">
+                    <p class="mb-2">
                       {{ method.description }}
                     </p>
-                    <p class="text-primary font-medium text-sm">
+                    <p>
                       {{ method.value }}
                     </p>
                   </div>
@@ -154,22 +128,12 @@ onMounted(() => {
           class="space-y-12"
         >
           <div class="text-center space-y-6">
-            <div
-              class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20"
-            >
-              <UIcon name="i-ph-question" class="w-4 h-4 text-primary" />
-              <span class="text-sm font-medium text-primary"
-                >Have Questions?</span
-              >
+            <div class="inline-flex items-center gap-2 px-4 py-2">
+              <UIcon name="i-ph-question" class="w-4 h-4" />
+              <span>Have Questions?</span>
             </div>
-            <h2
-              class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-primary-600 to-gray-900 dark:from-white dark:via-primary-400 dark:to-white bg-clip-text text-transparent"
-            >
-              Frequently Asked Questions
-            </h2>
-            <p
-              class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
-            >
+            <h2>Frequently Asked Questions</h2>
+            <p class="max-w-3xl mx-auto">
               Find answers to common inquiries about my services and processes.
             </p>
           </div>

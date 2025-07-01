@@ -79,29 +79,13 @@ onUnmounted(() => {
   <div>
     <section class="space-y-12">
       <div class="text-center space-y-6">
-        <div
-          class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20"
-        >
-          <UIcon name="i-ph-chat-circle" class="w-4 h-4 text-primary" />
-          <span class="text-sm font-medium text-primary"
-            >Client Testimonials</span
-          >
-        </div>
+        <h2>What Clients Say About Working With Me</h2>
 
-        <h2
-          class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-primary-600 to-gray-900 dark:from-white dark:via-primary-400 dark:to-white bg-clip-text text-transparent"
-        >
-          What Clients Say About Working With Me
-        </h2>
-
-        <p
-          class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
-        >
+        <p class="max-w-3xl mx-auto">
           Real feedback from satisfied clients who've transformed their
           businesses with custom web solutions
         </p>
       </div>
-
       <!-- Carousel Container -->
       <div
         v-if="testimonials && testimonials.length > 0"
@@ -110,17 +94,14 @@ onUnmounted(() => {
         @mouseleave="startAutoPlay"
       >
         <!-- Main Carousel -->
-        <div class="overflow-hidden rounded-2xl">
-          <div
-            class="flex transition-transform duration-500 ease-in-out"
-            :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
-          >
+        <div class="overflow-hidden">
+          <div class="flex">
             <div
               v-for="testimonial in testimonials"
               :key="testimonial.id"
               class="w-full flex-shrink-0 p-4"
             >
-              <UCard class="h-[500px] card-interaction" variant="soft">
+              <UCard class="h-[500px]">
                 <div class="h-full flex flex-col space-y-6">
                   <!-- Rating Stars -->
                   <div
@@ -131,27 +112,18 @@ onUnmounted(() => {
                       v-for="star in 5"
                       :key="star"
                       name="i-ph-star-fill"
-                      :class="
-                        star <= testimonial.rating
-                          ? 'text-yellow-400'
-                          : 'text-gray-300 dark:text-gray-600'
-                      "
                       class="w-5 h-5"
                     />
-                    <span class="text-sm text-gray-500 ml-2"
-                      >{{ testimonial.rating }}/5</span
-                    >
+                    <span class="ml-2">{{ testimonial.rating }}/5</span>
                   </div>
 
                   <!-- Quote -->
                   <div class="relative flex-1">
                     <UIcon
                       name="i-ph-quotes"
-                      class="w-10 h-10 text-primary-300 dark:text-primary-700 absolute -top-2 -left-2"
+                      class="w-10 h-10 absolute -top-2 -left-2"
                     />
-                    <p
-                      class="text-lg text-gray-700 dark:text-gray-300 italic pl-8 leading-relaxed"
-                    >
+                    <p class="italic pl-8">
                       {{ testimonial.quote }}
                     </p>
                   </div>
@@ -161,59 +133,42 @@ onUnmounted(() => {
                     v-if="testimonial.results && testimonial.results.length > 0"
                     class="space-y-3"
                   >
-                    <h4
-                      class="text-sm font-semibold text-gray-900 dark:text-gray-100"
-                    >
-                      Key Results:
-                    </h4>
+                    <h4>Key Results:</h4>
                     <div class="grid grid-cols-2 gap-2">
                       <div
-                        v-for="(result, resultIndex) in testimonial.results.slice(
-                          0,
-                          4,
-                        )"
+                        v-for="(
+                          result, resultIndex
+                        ) in testimonial.results.slice(0, 4)"
                         :key="resultIndex"
-                        class="flex items-center gap-2 text-sm"
+                        class="flex items-center gap-2"
                       >
                         <UIcon
                           name="i-ph-check-circle"
-                          class="w-4 h-4 text-green-500 flex-shrink-0"
+                          class="w-4 h-4 flex-shrink-0"
                         />
-                        <span class="text-gray-600 dark:text-gray-400">{{
-                          result
-                        }}</span>
+                        <span>{{ result }}</span>
                       </div>
                     </div>
                   </div>
 
                   <!-- Project Info -->
-                  <div
-                    v-if="testimonial.project"
-                    class="bg-primary-50 dark:bg-primary-900/20 rounded-lg p-4"
-                  >
+                  <div v-if="testimonial.project" class="p-4">
                     <div class="flex items-center gap-2">
-                      <UIcon
-                        name="i-ph-briefcase"
-                        class="w-5 h-5 text-primary"
-                      />
-                      <span class="text-sm font-medium text-primary">{{
-                        testimonial.project
-                      }}</span>
+                      <UIcon name="i-ph-briefcase" class="w-5 h-5" />
+                      <span>{{ testimonial.project }}</span>
                     </div>
                   </div>
 
                   <!-- Author -->
-                  <div
-                    class="flex items-center space-x-4 pt-4 border-t border-gray-200/50 dark:border-gray-700/50 mt-auto"
-                  >
+                  <div class="flex items-center space-x-4 pt-4 mt-auto">
                     <div
                       v-if="testimonial.avatar"
-                      class="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 flex items-center justify-center overflow-hidden rounded-full flex-shrink-0"
+                      class="w-14 h-14 flex items-center justify-center overflow-hidden flex-shrink-0"
                     >
                       <img
                         :src="testimonial.avatar"
                         :alt="testimonial.name"
-                        class="w-full h-full object-cover rounded-full"
+                        class="w-full h-full object-cover"
                         @error="
                           (e) =>
                             ((e.target as HTMLImageElement).style.display =
@@ -223,36 +178,26 @@ onUnmounted(() => {
                       <UIcon
                         v-if="!testimonial.avatar"
                         name="i-ph-user"
-                        class="w-6 h-6 text-primary"
+                        class="w-6 h-6"
                       />
                     </div>
                     <div
                       v-else
-                      class="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 flex items-center justify-center rounded-full flex-shrink-0"
+                      class="w-14 h-14 flex items-center justify-center flex-shrink-0"
                     >
-                      <UIcon name="i-ph-user" class="w-6 h-6 text-primary" />
+                      <UIcon name="i-ph-user" class="w-6 h-6" />
                     </div>
                     <div class="flex-1 min-w-0">
-                      <p
-                        class="font-semibold text-gray-900 dark:text-gray-100 text-lg"
-                      >
+                      <p>
                         {{ testimonial.name }}
                       </p>
-                      <p
-                        v-if="testimonial.title"
-                        class="text-sm text-gray-600 dark:text-gray-400 truncate"
-                      >
+                      <p v-if="testimonial.title" class="truncate">
                         {{ testimonial.title }}
-                        <span v-if="testimonial.company" class="text-primary"
+                        <span v-if="testimonial.company"
                           >@ {{ testimonial.company }}</span
                         >
                       </p>
-                      <UBadge
-                        label="Verified Client"
-                        variant="soft"
-                        size="sm"
-                        class="mt-2"
-                      />
+                      <UBadge label="Verified Client" class="mt-2" />
                     </div>
                   </div>
                 </div>
@@ -263,13 +208,13 @@ onUnmounted(() => {
 
         <!-- Auto-play toggle -->
         <button
-          class="absolute top-8 right-8 w-12 h-12 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-full flex items-center justify-center hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 hover:scale-110 shadow-lg group z-10"
+          class="absolute top-8 right-8 w-12 h-12 flex items-center justify-center z-10"
           :title="isPaused ? 'Resume auto-play' : 'Pause auto-play'"
           @click="toggleAutoPlay"
         >
           <UIcon
             :name="isPaused ? 'i-ph-play' : 'i-ph-pause'"
-            class="w-5 h-5 text-gray-700 dark:text-gray-300 group-hover:text-primary transition-colors duration-300"
+            class="w-5 h-5"
           />
         </button>
 
@@ -279,10 +224,6 @@ onUnmounted(() => {
           <div class="flex items-center gap-6">
             <UButton
               icon="i-ph-caret-left"
-              size="lg"
-              color="primary"
-              variant="soft"
-              class="rounded-full hover:scale-110 transition-transform duration-300"
               :disabled="testimonials.length <= 1"
               aria-label="Previous testimonial"
               @click="prevSlide"
@@ -292,12 +233,7 @@ onUnmounted(() => {
               <button
                 v-for="(testimonial, index) in testimonials"
                 :key="`dot-${index}`"
-                :class="[
-                  'transition-all duration-300 rounded-full border-2',
-                  currentSlide === index
-                    ? 'w-4 h-4 bg-primary border-primary scale-125 shadow-lg'
-                    : 'w-3 h-3 bg-gray-300 dark:bg-gray-600 border-gray-300 dark:border-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 hover:border-gray-400 dark:hover:border-gray-500 hover:scale-110',
-                ]"
+                :class="[currentSlide === index ? 'w-4 h-4' : 'w-3 h-3']"
                 :aria-label="`View testimonial ${index + 1}`"
                 @click="goToSlide(index)"
               />
@@ -305,10 +241,6 @@ onUnmounted(() => {
 
             <UButton
               icon="i-ph-caret-right"
-              size="lg"
-              color="primary"
-              variant="soft"
-              class="rounded-full hover:scale-110 transition-transform duration-300"
               :disabled="testimonials.length <= 1"
               aria-label="Next testimonial"
               @click="nextSlide"
@@ -318,18 +250,16 @@ onUnmounted(() => {
 
         <!-- Progress indicator -->
         <div class="mt-6 max-w-sm mx-auto">
-          <div
-            class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-2"
-          >
+          <div class="flex justify-between mb-2">
             <span>{{ currentSlide + 1 }} of {{ testimonials.length }}</span>
             <span v-if="!isPaused" class="flex items-center gap-1">
               <UIcon name="i-ph-play" class="w-4 h-4" />
               Auto-playing
             </span>
           </div>
-          <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+          <div class="w-full h-2">
             <div
-              class="bg-primary h-2 rounded-full transition-all duration-300"
+              class="h-2 bg-gray-500"
               :style="{
                 width: `${((currentSlide + 1) / testimonials.length) * 100}%`,
               }"
@@ -339,15 +269,10 @@ onUnmounted(() => {
       </div>
 
       <div v-else class="text-center">
-        <UCard variant="soft" class="max-w-md mx-auto card-interaction">
+        <UCard class="max-w-md mx-auto">
           <div class="space-y-4 text-center">
-            <UIcon
-              name="i-ph-chat-circle"
-              class="w-12 h-12 text-gray-400 mx-auto"
-            />
-            <p class="text-gray-600 dark:text-gray-400">
-              No testimonials found.
-            </p>
+            <UIcon name="i-ph-chat-circle" class="w-12 h-12 mx-auto" />
+            <p>No testimonials found.</p>
           </div>
         </UCard>
       </div>

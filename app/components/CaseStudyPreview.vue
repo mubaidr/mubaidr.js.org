@@ -83,21 +83,13 @@ const caseStudies = [
 <template>
   <section class="space-y-12">
     <div class="text-center space-y-6">
-      <div
-        class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20"
-      >
-        <UIcon name="i-ph-chart-line-up" class="w-4 h-4 text-primary" />
-        <span class="text-sm font-medium text-primary">Success Stories</span>
-      </div>
-
       <h2
-        class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-primary-600 to-gray-900 dark:from-white dark:via-primary-400 dark:to-white bg-clip-text text-transparent"
       >
         Real Results from Real Clients
       </h2>
 
       <p
-        class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
+        class="max-w-3xl mx-auto"
       >
         See how custom web solutions transformed businesses and delivered
         measurable results.
@@ -108,24 +100,23 @@ const caseStudies = [
       <UCard
         v-for="study in caseStudies"
         :key="study.id"
-        class="h-full card-interaction group"
-        variant="soft"
+        class="h-full"
       >
         <div class="space-y-6">
           <!-- Header -->
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <UBadge :label="study.industry" variant="soft" size="sm" />
-              <span class="text-sm text-gray-500 dark:text-gray-400">{{
+              <UBadge :label="study.industry" />
+              <span >{{
                 study.timeline
               }}</span>
             </div>
             <h3
-              class="text-xl font-bold group-hover:text-primary transition-colors"
+              
             >
               {{ study.title }}
             </h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">
+            <p >
               {{ study.client }}
             </p>
           </div>
@@ -133,18 +124,18 @@ const caseStudies = [
           <!-- Challenge & Solution -->
           <div class="space-y-4">
             <div>
-              <h4 class="font-semibold text-red-600 dark:text-red-400 mb-2">
+              <h4 class="mb-2">
                 Challenge:
               </h4>
-              <p class="text-sm text-gray-600 dark:text-gray-400">
+              <p >
                 {{ study.challenge }}
               </p>
             </div>
             <div>
-              <h4 class="font-semibold text-green-600 dark:text-green-400 mb-2">
+              <h4 class="mb-2">
                 Solution:
               </h4>
-              <p class="text-sm text-gray-600 dark:text-gray-400">
+              <p >
                 {{ study.solution }}
               </p>
             </div>
@@ -152,9 +143,9 @@ const caseStudies = [
 
           <!-- Results Grid -->
           <div
-            class="bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-900/20 dark:to-blue-900/20 rounded-lg p-4"
+            class="p-4"
           >
-            <h4 class="font-semibold text-gray-900 dark:text-gray-100 mb-3">
+            <h4 class="mb-3">
               Key Results:
             </h4>
             <div class="grid grid-cols-2 gap-3">
@@ -163,14 +154,14 @@ const caseStudies = [
                 :key="index"
                 class="text-center"
               >
-                <div class="text-lg font-bold text-primary">
+                <div >
                   {{ result.after }}
                 </div>
-                <div class="text-xs text-gray-600 dark:text-gray-400">
+                <div >
                   {{ result.metric }}
                 </div>
                 <div
-                  class="text-xs text-green-600 dark:text-green-400 font-medium"
+                  
                 >
                   {{ result.improvement }}
                 </div>
@@ -181,7 +172,7 @@ const caseStudies = [
           <!-- Technologies -->
           <div>
             <h4
-              class="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-sm"
+              class="mb-2"
             >
               Technologies Used:
             </h4>
@@ -190,19 +181,15 @@ const caseStudies = [
                 v-for="tech in study.technologies"
                 :key="tech"
                 :label="tech"
-                variant="outline"
-                size="sm"
               />
             </div>
           </div>
 
           <!-- CTA -->
-          <div class="pt-4 border-t border-gray-200/50 dark:border-gray-700/50">
+          <div class="pt-4">
             <UButton
               to="/contact"
-              variant="ghost"
-              size="sm"
-              class="w-full group-hover:bg-primary group-hover:text-white transition-colors"
+              class="w-full"
             >
               <UIcon name="i-ph-chat-circle" />
               Discuss Your Similar Project
@@ -215,9 +202,7 @@ const caseStudies = [
     <div class="text-center">
       <UButton
         to="/projects"
-        variant="outline"
-        size="lg"
-        class="hover:scale-105 transition-transform duration-300"
+        
       >
         <UIcon name="i-ph-folder-open" />
         View All Case Studies

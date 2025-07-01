@@ -29,8 +29,8 @@ const { data: featuredProjects } = await useAsyncData(
   <div>
     <section class="space-y-8">
       <div class="text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">{{ title }}</h2>
-        <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+        <h2 class="mb-4">{{ title }}</h2>
+        <p class="max-w-3xl mx-auto">
           A selection of projects that showcase my expertise and passion for
           development
         </p>
@@ -40,28 +40,23 @@ const { data: featuredProjects } = await useAsyncData(
         <UCard
           v-for="project in featuredProjects"
           :key="project.id"
-          class="group card-interaction cursor-pointer h-full"
-          variant="soft"
+          class="cursor-pointer h-full"
         >
           <div class="space-y-4">
             <!-- Project Header -->
-            <div
-              class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 flex items-center justify-center"
-            >
-              <UIcon name="i-ph-code" class="w-8 h-8 text-primary" />
+            <div class="flex items-center justify-center">
+              <UIcon name="i-ph-code" class="w-8 h-8" />
             </div>
 
             <div class="space-y-3">
               <div class="flex items-center justify-between">
-                <h3
-                  class="text-lg font-semibold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors"
-                >
+                <h3>
                   {{ project.title }}
                 </h3>
-                <UBadge :label="project.category" variant="soft" size="sm" />
+                <UBadge :label="project.category" />
               </div>
 
-              <p class="text-gray-600 dark:text-gray-400 text-sm line-clamp-2">
+              <p>
                 {{ project.description }}
               </p>
 
@@ -71,8 +66,6 @@ const { data: featuredProjects } = await useAsyncData(
                   v-for="tech in project.technologies.slice(0, 3)"
                   :key="tech"
                   :label="tech"
-                  variant="outline"
-                  size="sm"
                 />
               </div>
             </div>
@@ -81,7 +74,7 @@ const { data: featuredProjects } = await useAsyncData(
       </div>
 
       <div v-if="!hideLink" class="text-center">
-        <UButton to="/projects" variant="outline" size="lg">
+        <UButton to="/projects">
           <UIcon name="i-ph-folder-open" />
           View All Projects
         </UButton>

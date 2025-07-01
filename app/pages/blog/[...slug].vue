@@ -31,20 +31,20 @@ const formatDate = (date: string | Date) => {
         <!-- Post Header -->
         <header class="text-center space-y-6">
           <div
-            class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20"
+            class="inline-flex items-center gap-2 px-4 py-2"
           >
-            <UIcon name="i-ph-newspaper" class="w-4 h-4 text-primary" />
-            <span class="text-sm font-medium text-primary">Blog Post</span>
+            <UIcon name="i-ph-newspaper" class="w-4 h-4" />
+            <span >Blog Post</span>
           </div>
 
           <h1
-            class="text-3xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-primary-600 to-gray-900 dark:from-white dark:via-primary-400 dark:to-white bg-clip-text text-transparent"
+            
           >
             {{ page.title }}
           </h1>
 
           <div
-            class="flex items-center justify-center gap-6 text-gray-600 dark:text-gray-400"
+            class="flex items-center justify-center gap-6"
           >
             <div class="flex items-center gap-2">
               <UIcon name="i-ph-user-circle" class="w-5 h-5" />
@@ -70,7 +70,7 @@ const formatDate = (date: string | Date) => {
         <!-- Featured Image -->
         <div
           v-if="page.image"
-          class="aspect-[16/9] bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg"
+          class="aspect-[16/9] overflow-hidden"
         >
           <img
             :src="page.image"
@@ -81,24 +81,24 @@ const formatDate = (date: string | Date) => {
 
         <!-- Post Content -->
         <article
-          class="prose prose-lg dark:prose-invert max-w-none mx-auto prose-headings:font-bold prose-a:text-primary hover:prose-a:underline prose-img:rounded-lg prose-img:shadow-md"
+          class="prose prose-lg max-w-none mx-auto"
         >
           <ContentRenderer :value="page" />
         </article>
 
         <!-- Back to Blog Link -->
         <div
-          class="text-center pt-8 border-t border-gray-200 dark:border-gray-700"
+          class="text-center pt-8"
         >
           <UButton
             to="/blog"
             variant="outline"
             size="lg"
-            class="group border-2 border-gray-300 dark:border-gray-600 hover:border-primary-400 dark:hover:border-primary-500 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-700 dark:hover:text-primary-300 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+            
           >
             <UIcon
               name="i-ph-arrow-left"
-              class="mr-2 group-hover:-translate-x-1 transition-transform duration-300"
+              class="mr-2"
             />
             <span>Back to Blog</span>
           </UButton>
@@ -107,8 +107,8 @@ const formatDate = (date: string | Date) => {
     </div>
   </div>
   <div v-else class="text-center py-24">
-    <h1 class="text-4xl font-bold">Post Not Found</h1>
-    <p class="text-gray-600 dark:text-gray-400 mt-4">
+    <h1 >Post Not Found</h1>
+    <p class="mt-4">
       The requested blog post could not be found.
     </p>
     <UButton to="/blog" class="mt-8">Back to Blog</UButton>

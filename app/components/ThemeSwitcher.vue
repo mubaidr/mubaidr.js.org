@@ -11,17 +11,15 @@ const toggleTheme = () => {
 <template>
   <ClientOnly>
     <UButton
-      variant="ghost"
-      color="neutral"
-      size="xs"
       :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+      variant="ghost"
       @click="toggleTheme"
     >
-      <UIcon v-if="isDark" name="i-ph-moon"/>
-      <UIcon v-if="!isDark" name="i-ph-sun"/>
+      <UIcon v-if="isDark" name="i-ph-moon" />
+      <UIcon v-if="!isDark" name="i-ph-sun" />
     </UButton>
     <template #fallback>
-      <div class="h-8 w-8"/>
+      <div class="h-8 w-8" />
     </template>
   </ClientOnly>
 </template>
