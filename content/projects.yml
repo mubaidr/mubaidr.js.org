@@ -15,7 +15,7 @@ projects:
     featured: true
     status: "active"
     startDate: "2022-01-15"
-    endDate: null
+    endDate: 9999-12-31
     links:
       github: "https://github.com/mubaidr/vue-color-avatar"
       demo: "https://vue-color-avatar.vercel.app/"
@@ -57,7 +57,7 @@ projects:
     featured: true
     status: "active"
     startDate: "2021-08-10"
-    endDate: null
+    endDate: 9999-12-31
     links:
       github: "https://github.com/mubaidr/vue-browser-extension-template"
       demo: "https://chrome.google.com/webstore/detail/example"
@@ -140,7 +140,7 @@ projects:
     featured: false
     status: "active"
     startDate: "2022-06-01"
-    endDate: null
+    endDate: 9999-12-31
     links:
       demo: "https://example-tasks.com"
       case_study: "/case-studies/task-management-saas"
@@ -181,7 +181,7 @@ projects:
     featured: false
     status: "active"
     startDate: "2023-11-01"
-    endDate: "2024-01-15"
+    endDate: "9999-12-31"
     links:
       github: "https://github.com/mubaidr/portfolio"
       demo: "https://mubaidr.js.org"

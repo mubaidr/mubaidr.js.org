@@ -1,8 +1,18 @@
 <script setup lang="ts">
+// Define weather data type
+interface WeatherData {
+  main: {
+    feels_like: number
+  }
+  weather: Array<{
+    description: string
+  }>
+}
+
 // Reactive time and weather variables
 let interval: number
 const currentTime = ref<string>("")
-const weatherData = ref<any>(null)
+const weatherData = ref<WeatherData | null>(null)
 
 // Update time every second
 async function updateTime() {
@@ -43,7 +53,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="text-sm font-light text-gray-500 dark:text-gray-400 text-center">
+  <div class="text-center">
     <ClientOnly>
       <div>
         <template v-if="weatherData">

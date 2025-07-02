@@ -19,11 +19,14 @@ const { data: recentPosts } = await useAsyncData("recent-posts", async () => {
 
 <template>
   <div>
-    <!-- Recent Blog Posts - Show 2 Most Recent -->
-    <section class="space-y-8">
-      <div class="text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">{{ title }}</h2>
-        <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+    <div class="space-y-16">
+      <!-- Recent Blog Posts - Show 2 Most Recent -->
+      <div class="text-center space-y-6">
+        <h2>
+          {{ title }}
+        </h2>
+
+        <p class="max-w-3xl mx-auto">
           Latest thoughts on development, technology, and best practices
         </p>
       </div>
@@ -36,35 +39,25 @@ const { data: recentPosts } = await useAsyncData("recent-posts", async () => {
         <UCard
           v-for="(post, index) in recentPosts"
           :key="post.path || `post-${index}`"
-          class="group cursor-pointer transition-all duration-300 hover:scale-[1.02] h-full"
-          variant="soft"
+          class="cursor-pointer h-full"
           @click="navigateTo(post.path || '/blog')"
+          variant="subtle"
         >
           <div class="space-y-4">
-            <!-- Blog post image placeholder -->
-            <div
-              class="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center"
-            >
-              <UIcon
-                name="i-ph-article"
-                class="w-8 h-8 text-gray-500 dark:text-gray-400"
-              />
-            </div>
-
             <div class="space-y-3">
-              <h3
-                class="text-xl font-semibold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors line-clamp-2"
-              >
+              <h3 class="text-xl font-semibold">
                 {{ post.title || "Blog Post Title" }}
               </h3>
-              <p class="text-gray-600 dark:text-gray-400 line-clamp-3">
+              <p class="text-gray-600 dark:text-gray-300">
                 {{
                   post.description ||
                   "Blog post description that provides a brief overview of the content and main topics covered in the article."
                 }}
               </p>
-              <div class="flex items-center justify-between text-sm">
-                <span class="text-gray-500 dark:text-gray-400">
+              <div
+                class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400"
+              >
+                <span>
                   {{
                     post.date
                       ? new Date(post.date).toLocaleDateString("en-US", {
@@ -75,64 +68,7 @@ const { data: recentPosts } = await useAsyncData("recent-posts", async () => {
                       : "Recent"
                   }}
                 </span>
-                <UIcon
-                  name="i-ph-arrow-right"
-                  class="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform"
-                />
-              </div>
-            </div>
-          </div>
-        </UCard>
-      </div>
-
-      <!-- Placeholder when no blog posts -->
-      <div v-else class="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
-        <UCard class="h-full" variant="soft">
-          <div class="space-y-4">
-            <div
-              class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 flex items-center justify-center"
-            >
-              <UIcon name="i-ph-article" class="w-8 h-8 text-primary" />
-            </div>
-            <div class="space-y-3">
-              <h3 class="text-xl font-semibold">
-                Building Modern Web Applications
-              </h3>
-              <p class="text-gray-600 dark:text-gray-400 line-clamp-3">
-                Exploring the latest trends and best practices in modern web
-                development, from framework selection to deployment strategies.
-              </p>
-              <div class="flex items-center justify-between text-sm">
-                <span class="text-gray-500 dark:text-gray-400"
-                  >Coming Soon</span
-                >
-                <UIcon name="i-ph-clock" class="w-4 h-4 text-primary" />
-              </div>
-            </div>
-          </div>
-        </UCard>
-
-        <UCard class="h-full" variant="soft">
-          <div class="space-y-4">
-            <div
-              class="aspect-video bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 flex items-center justify-center"
-            >
-              <UIcon
-                name="i-ph-code"
-                class="w-8 h-8 text-blue-600 dark:text-blue-400"
-              />
-            </div>
-            <div class="space-y-3">
-              <h3 class="text-xl font-semibold">TypeScript Tips & Tricks</h3>
-              <p class="text-gray-600 dark:text-gray-400 line-clamp-3">
-                Advanced TypeScript techniques and patterns that can help you
-                write more maintainable and type-safe code.
-              </p>
-              <div class="flex items-center justify-between text-sm">
-                <span class="text-gray-500 dark:text-gray-400"
-                  >Coming Soon</span
-                >
-                <UIcon name="i-ph-clock" class="w-4 h-4 text-primary" />
+                <UIcon name="i-ph-arrow-right" />
               </div>
             </div>
           </div>
@@ -140,11 +76,11 @@ const { data: recentPosts } = await useAsyncData("recent-posts", async () => {
       </div>
 
       <div class="text-center">
-        <UButton to="/blog" variant="outline" size="lg">
+        <UButton to="/blog" variant="outline" size="xl">
           <UIcon name="i-ph-article" />
           View All Posts
         </UButton>
       </div>
-    </section>
+    </div>
   </div>
 </template>

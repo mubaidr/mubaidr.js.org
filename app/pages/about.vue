@@ -14,7 +14,7 @@ const { data: professionalJourney } = await useAsyncData(
 )
 
 // Fetch profile journey data from Nuxt Content collection
-const { data: profile } = await useAsyncData("profile", () => {
+const { data: _profile } = await useAsyncData("profile", () => {
   return queryCollection("profile").first()
 })
 
@@ -32,268 +32,290 @@ useHead({
 
 <template>
   <div>
-    <div class="space-y-24">
+    <div class="space-y-32">
       <!-- Page Header -->
-      <div class="text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6">About Me</h1>
-        <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-          {{
-            profile?.description ||
-            "Passionate software engineer with over a decade of experience building scalable applications."
-          }}
+      <div class="text-center space-y-6">
+        <h1>The Full Story</h1>
+
+        <p class="max-w-4xl mx-auto">
+          Here's the complete picture of my professional journey, from education
+          to expertise, and everything that drives my passion for creating
+          exceptional web experiences.
         </p>
       </div>
 
       <!-- Professional Experience -->
-      <section class="space-y-8">
-        <h2 class="text-3xl font-bold text-center mb-8">
-          Professional Experience
-        </h2>
+      <section class="space-y-12">
+        <div class="text-center space-y-6">
+          <h2>Professional Experience</h2>
+
+          <p class="max-w-3xl mx-auto">
+            A decade of building innovative solutions and leading development
+            teams across various industries.
+          </p>
+        </div>
 
         <div class="space-y-8">
-          <UCard
+          <div
             v-for="experience in professionalJourney?.experiences"
             :key="experience.id"
-            variant="soft"
-            class="relative"
           >
-            <!-- Current position indicator -->
-            <div
-              v-if="experience.current"
-              class="absolute -top-2 -right-2 z-10"
-            >
-              <UBadge label="Current" variant="solid" color="primary" />
-            </div>
+            <div />
+            <UCard variant="subtle" class="relative">
+              <div class="space-y-6">
+                <!-- Experience Header -->
+                <div
+                  class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+                >
+                  <div>
+                    <h3 class="text-xl font-bold">{{ experience.title }}</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                      {{ experience.company }}
+                    </p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                      {{ experience.location }}
+                    </p>
+                  </div>
+                  <div class="text-right absolute top-0 right-0">
+                    <UBadge :label="experience.period" variant="soft" />
+                  </div>
+                </div>
 
-            <div class="space-y-6">
-              <!-- Experience Header -->
-              <div
-                class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
-              >
+                <!-- Description -->
+                <p>
+                  {{ experience.description }}
+                </p>
+
+                <!-- Responsibilities -->
                 <div>
-                  <h3 class="text-xl font-bold">{{ experience.title }}</h3>
-                  <p class="text-lg text-primary font-medium">
-                    {{ experience.company }}
-                  </p>
-                  <p class="text-gray-600 dark:text-gray-400">
-                    {{ experience.location }}
-                  </p>
+                  <h4 class="mb-3">Key Responsibilities:</h4>
+                  <ul class="space-y-2">
+                    <li
+                      v-for="(
+                        responsibility, respIndex
+                      ) in experience.responsibilities"
+                      :key="`resp-${experience.id}-${respIndex}`"
+                      class="flex items-start gap-2 align-baseline"
+                    >
+                      <UIcon
+                        name="i-ph-check-circle-duotone"
+                        class="text-primary-500 dark:text-primary-400"
+                      />
+                      {{ responsibility }}
+                    </li>
+                  </ul>
                 </div>
-                <div class="text-right">
-                  <UBadge
-                    :label="experience.period"
-                    variant="outline"
-                    size="lg"
-                  />
-                </div>
-              </div>
 
-              <!-- Description -->
-              <p class="text-gray-700 dark:text-gray-300">
-                {{ experience.description }}
-              </p>
-
-              <!-- Responsibilities -->
-              <div>
-                <h4 class="font-semibold mb-3 text-gray-900 dark:text-gray-100">
-                  Key Responsibilities:
-                </h4>
-                <ul class="space-y-2">
-                  <li
-                    v-for="(
-                      responsibility, respIndex
-                    ) in experience.responsibilities"
-                    :key="`resp-${experience.id}-${respIndex}`"
-                    class="flex items-start gap-2 text-gray-600 dark:text-gray-400 align-baseline"
-                  >
-                    <UIcon
-                      name="i-ph-check-circle-duotone"
-                      class="text-primary"
+                <!-- Technologies -->
+                <div>
+                  <h4 class="mb-3">Technologies Used:</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <UBadge
+                      v-for="tech in experience.technologies"
+                      :key="tech"
+                      :label="tech"
+                      variant="soft"
                     />
-                    {{ responsibility }}
-                  </li>
-                </ul>
-              </div>
+                  </div>
+                </div>
 
-              <!-- Technologies -->
-              <div>
-                <h4 class="font-semibold mb-3 text-gray-900 dark:text-gray-100">
-                  Technologies Used:
-                </h4>
-                <div class="flex flex-wrap gap-2">
-                  <UBadge
-                    v-for="tech in experience.technologies"
-                    :key="tech"
-                    :label="tech"
-                    variant="soft"
-                  />
+                <!-- Achievements -->
+                <div
+                  v-if="
+                    experience.achievements &&
+                    experience.achievements.length > 0
+                  "
+                >
+                  <h4 class="mb-3">Key Achievements:</h4>
+                  <ul class="space-y-2">
+                    <li
+                      v-for="(achievement, achIndex) in experience.achievements"
+                      :key="`ach-${experience.id}-${achIndex}`"
+                      class="flex items-start gap-2"
+                    >
+                      <UIcon
+                        name="i-ph-trophy-duotone"
+                        class="text-primary-500 dark:text-primary-400"
+                      />
+                      {{ achievement }}
+                    </li>
+                  </ul>
                 </div>
               </div>
-
-              <!-- Achievements -->
-              <div
-                v-if="
-                  experience.achievements && experience.achievements.length > 0
-                "
-              >
-                <h4 class="font-semibold mb-3 text-gray-900 dark:text-gray-100">
-                  Key Achievements:
-                </h4>
-                <ul class="space-y-2">
-                  <li
-                    v-for="(achievement, achIndex) in experience.achievements"
-                    :key="`ach-${experience.id}-${achIndex}`"
-                    class="flex items-start gap-2 text-gray-600 dark:text-gray-400"
-                  >
-                    <UIcon
-                      name="i-ph-trophy-duotone"
-                      class="text-yellow-500 dark:text-yellow-400"
-                    />
-                    {{ achievement }}
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </UCard>
+            </UCard>
+          </div>
         </div>
       </section>
 
       <!-- Education -->
-      <section class="space-y-8">
-        <h2 class="text-3xl font-bold text-center mb-8">Education</h2>
+      <section class="space-y-12">
+        <div class="text-center space-y-6">
+          <h2>Education & Learning</h2>
+
+          <p class="max-w-3xl mx-auto">
+            Strong academic foundation combined with continuous learning and
+            professional development.
+          </p>
+        </div>
 
         <div class="grid gap-6 md:grid-cols-2">
-          <UCard
+          <div
             v-for="edu in professionalJourney?.education"
             :key="edu.id"
-            variant="soft"
             class="h-full"
           >
-            <div class="space-y-4">
-              <div class="flex items-start gap-3">
-                <div
-                  class="w-12 h-12 bg-primary-100 dark:bg-primary-900 flex items-center justify-center flex-shrink-0"
-                >
-                  <UIcon
-                    name="i-ph-graduation-cap"
-                    class="w-6 h-6 text-primary"
-                  />
+            <div />
+            <UCard variant="subtle" class="">
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <div class="flex items-center justify-center flex-shrink-0">
+                    <UIcon name="i-ph-graduation-cap" />
+                  </div>
+                  <div class="flex-1 space-y-3">
+                    <h3>{{ edu.degree }}</h3>
+                    <p>
+                      {{ edu.institution }}
+                    </p>
+                    <p>
+                      {{ edu.location }}
+                    </p>
+                    <UBadge :label="edu.period" variant="soft" />
+                  </div>
                 </div>
-                <div class="flex-1">
-                  <h3 class="text-lg font-bold">{{ edu.degree }}</h3>
-                  <p class="text-primary font-medium">{{ edu.institution }}</p>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">
-                    {{ edu.location }}
-                  </p>
-                  <UBadge
-                    :label="edu.period"
-                    variant="outline"
-                    size="sm"
-                    class="mt-2"
-                  />
-                </div>
-              </div>
 
-              <p class="text-gray-600 dark:text-gray-400">
-                {{ edu.description }}
-              </p>
+                <p>
+                  {{ edu.description }}
+                </p>
 
-              <!-- <div>
-                <h4 class="font-semibold mb-2 text-sm">Achievements:</h4>
+                <!-- <div>
+                <h4 class="mb-2">Achievements:</h4>
                 <ul class="space-y-1">
                   <li
                     v-for="(achievement, index) in edu.achievements"
                     :key="index"
-                    class="flex items-start gap-2 text-gray-600 dark:text-gray-400"
+                    class="flex items-start gap-2"
                   >
                     <UIcon
                       name="i-ph-medal"
-                      class="w-3 h-3 text-yellow-500 mt-1 flex-shrink-0"
+                      class="w-3 h-3 mt-1 flex-shrink-0"
                     />
-                    <span class="text-xs">{{ achievement }}</span>
+                    <span >{{ achievement }}</span>
                   </li>
                 </ul>
               </div> -->
-            </div>
-          </UCard>
+              </div>
+            </UCard>
+          </div>
         </div>
       </section>
 
       <!-- Certifications -->
-      <section class="space-y-8">
-        <h2 class="text-3xl font-bold text-center mb-8">Certifications</h2>
+      <section class="space-y-12">
+        <div class="text-center space-y-6">
+          <h2>Certifications & Awards</h2>
+
+          <p class="max-w-3xl mx-auto">
+            Industry-recognized certifications and achievements that validate
+            expertise and commitment to excellence.
+          </p>
+        </div>
 
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <UCard
+          <div
             v-for="cert in professionalJourney?.certifications"
             :key="cert.id"
-            variant="soft"
-            class="text-center h-full"
+            class="h-full"
           >
-            <div class="space-y-4">
-              <div
-                class="w-16 h-16 bg-primary-100 dark:bg-primary-900 flex items-center justify-center mx-auto"
-              >
-                <UIcon name="i-ph-certificate" class="w-8 h-8 text-primary" />
-              </div>
+            <UCard variant="subtle" class="">
+              <div class="space-y-4">
+                <div class="w-16 h-16 flex items-center justify-center mx-auto">
+                  <UIcon name="i-ph-certificate" />
+                </div>
 
-              <div>
-                <h3 class="text-lg font-bold mb-2">{{ cert.name }}</h3>
-                <p class="text-primary font-medium">{{ cert.issuer }}</p>
-                <UBadge
-                  :label="cert.date"
-                  variant="outline"
-                  size="sm"
-                  class="mt-2"
-                />
-              </div>
+                <div class="space-y-3">
+                  <h3>{{ cert.name }}</h3>
+                  <p>{{ cert.issuer }}</p>
+                  <UBadge :label="cert.date" variant="soft" />
+                </div>
 
-              <p class="text-gray-600 dark:text-gray-400 text-sm">
-                {{ cert.description }}
-              </p>
+                <p>
+                  {{ cert.description }}
+                </p>
 
-              <div class="text-xs text-gray-500 dark:text-gray-400">
-                ID: {{ cert.credentialId }}
+                <div>ID: {{ cert.credentialId }}</div>
               </div>
-            </div>
-          </UCard>
+            </UCard>
+          </div>
         </div>
       </section>
 
       <!-- Technologies -->
-      <section class="space-y-8">
-        <h2 class="text-3xl font-bold text-center mb-8">Skills & Expertise</h2>
+      <section class="space-y-12">
+        <div class="text-center space-y-6">
+          <h2>Skills & Expertise</h2>
+
+          <p class="max-w-3xl mx-auto">
+            Comprehensive technical expertise across modern web technologies,
+            frameworks, and development practices.
+          </p>
+        </div>
 
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <UCard
+          <div
             v-for="(skills, category) in professionalJourney?.technologies"
             :key="category"
-            variant="soft"
             class="h-full"
           >
-            <div class="space-y-4">
-              <div class="flex items-center gap-3 mb-3">
-                <div
-                  class="w-12 h-12 bg-primary-100 dark:bg-primary-900 flex items-center justify-center flex-shrink-0"
-                >
-                  <UIcon name="i-ph-code" class="w-6 h-6 text-primary" />
+            <div />
+            <UCard variant="subtle" class="h-full">
+              <div class="space-y-4">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="flex items-center justify-center flex-shrink-0">
+                    <UIcon name="i-ph-code" class="w-6 h-6" />
+                  </div>
+                  <h3 class="capitalize">
+                    {{ category.replace(/([A-Z])/g, " $1") }}
+                  </h3>
                 </div>
-                <h3 class="text-lg font-bold capitalize">
-                  {{ category.replace(/([A-Z])/g, " $1") }}
-                </h3>
+                <div class="flex flex-wrap gap-2">
+                  <UBadge
+                    v-for="skill in skills"
+                    :key="skill"
+                    :label="skill"
+                    variant="outline"
+                  />
+                </div>
               </div>
-              <div class="flex flex-wrap gap-2">
-                <UBadge
-                  v-for="skill in skills"
-                  :key="skill"
-                  :label="skill"
-                  variant="soft"
-                  size="sm"
-                />
-              </div>
-            </div>
-          </UCard>
+            </UCard>
+          </div>
         </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="space-y-12">
+        <UCard variant="subtle" class="text-center">
+          <div class="space-y-6">
+            <div class="space-y-3">
+              <UIcon name="i-ph-handshake" class="mx-auto" />
+              <h3>Ready to Work Together?</h3>
+              <p class="max-w-2xl mx-auto">
+                Now that you know my story, let's write the next chapter
+                together. I'd love to help bring your ideas to life.
+              </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <UButton to="/services" size="lg" variant="outline">
+                <UIcon name="i-ph-briefcase" />
+                View Services
+              </UButton>
+              <UButton to="/contact" size="lg" variant="ghost">
+                <UIcon name="i-ph-envelope" />
+                Get In Touch
+              </UButton>
+            </div>
+          </div>
+        </UCard>
       </section>
     </div>
   </div>

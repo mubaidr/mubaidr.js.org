@@ -6,7 +6,7 @@ headline: My VSCode Setup
 abstract: Learn how the Minimal Mist theme and custom VSCode settings create a
   clean, focused, and accessible coding environment.
 date: 2024-07-17T12:00:00.000Z
-dateUpdated: ""
+dateUpdated: 2024-07-17T12:00:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:
@@ -29,6 +29,7 @@ Meet **Minimal Mist**, a theme I created that embodies everything I believe a co
 Before diving into the technical details, let me share the thinking behind this setup. I've always been drawn to minimalist design—not because it's trendy, but because it serves a purpose. When your environment is cluttered with unnecessary visual elements, your brain has to work harder to filter out the noise and focus on what matters: your code.
 
 I wanted to create a theme that would:
+
 - Reduce visual fatigue during long coding sessions
 - Minimize distractions while maintaining essential functionality
 - Provide excellent readability in both light and dark environments
@@ -57,6 +58,7 @@ Borders, when overused, can fragment the interface and make it feel cluttered. I
 ### 4. Thoughtful Color Choices
 
 The syntax highlighting in Minimal Mist uses a carefully curated palette that provides excellent contrast without being overwhelming. I chose colors that:
+
 - Maintain semantic meaning (keywords, strings, comments each have distinct, logical colors)
 - Work harmoniously together without creating visual chaos
 - Remain accessible for users with different types of color vision
@@ -153,6 +155,7 @@ Let me explain some of the most impactful settings:
 While the theme and settings create the visual foundation, these extensions complete my development environment:
 
 ### Productivity Extensions
+
 - **Vim** - For efficient text editing and navigation
 - **GitLens** - Supercharges Git capabilities within VSCode
 - **Auto Rename Tag** - Automatically renames paired HTML/XML tags
@@ -160,12 +163,14 @@ While the theme and settings create the visual foundation, these extensions comp
 - **Path Intellisense** - Autocompletes filenames in import statements
 
 ### Language Support
+
 - **ES7+ React/Redux/React-Native snippets** - Essential for React development
 - **Vetur** or **Volar** - Vue.js language support
 - **TypeScript Hero** - Organizes and manages TypeScript imports
 - **Prettier** - Code formatting that works seamlessly with the theme
 
 ### Quality of Life
+
 - **Material Icon Theme** - Provides clear, recognizable file icons
 - **Indent Rainbow** - Subtle indentation guides that work well with the minimal aesthetic
 - **Error Lens** - Inline error messages that don't clutter the interface
@@ -184,16 +189,19 @@ The right font can significantly impact your coding experience. Here are my top 
 While I love my current setup, I recognize that everyone's needs are different. Here are some variations you might consider:
 
 ### For Beginners
+
 - Keep the status bar visible: `"workbench.statusBar.visible": true`
 - Enable breadcrumbs: `"breadcrumbs.enabled": true`
 - Show the minimap: `"editor.minimap.enabled": true`
 
 ### For Vim Users
+
 - Install the Vim extension
 - Use relative line numbers: `"editor.lineNumbers": "relative"`
 - Consider adding custom keybindings for your workflow
 
 ### For Pair Programming
+
 - Increase font size: `"editor.fontSize": 16`
 - Enable word wrap: `"editor.wordWrap": "on"`
 - Show the minimap for easier navigation: `"editor.minimap.enabled": true`

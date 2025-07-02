@@ -6,10 +6,31 @@
   --font-sans: "Manrope", "Public Sans", sans-serif;
 }
 
-:root {
-  --ui-radius: 0;
-}
+/* :root {
+  --ui-radius: 1.5rem;
+} */
 
 body {
   overflow-y: scroll;
+}
+
+/* Typography */
+h1,
+.h1 {
+  @apply text-4xl md:text-5xl font-bold tracking-tighter;
+}
+
+h2,
+.h2 {
+  @apply text-3xl md:text-4xl font-bold tracking-tight;
+}
+
+h3,
+.h3 {
+  @apply text-2xl md:text-3xl font-bold;
+}
+
+h4,
+.h4 {
+  @apply text-xl md:text-2xl font-semibold;
 }

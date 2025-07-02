@@ -2,12 +2,17 @@ name: Muhammad Ubaid R.
 title: Senior Software Engineer | Full-Stack Developer | DevOps Enthusiast
 avatar: /mubaidr.png
 description: Delivering robust, scalable, and user-focused software solutions that drive business success.
-tagline: I ship clean, scalable systems—from SaaS platforms to browser extensions—with a focus on developer ergonomics and velocity. 10+ years deep in the stack, currently exploring DevOps and infra. BS Software Engineering (2012) · MS Project Management (2019)
+tagline: I ship clean, scalable systems—from SaaS platforms to browser extensions—with a focus on developer ergonomics and velocity. 12+ years deep in the stack, currently exploring DevOps and infra. BS Software Engineering (2012) · MS Project Management (2019)
 social:
   - name: GitHub
     url: https://github.com/mubaidr
+    icon: i-ph-github-logo
   - name: LinkedIn
     url: https://www.linkedin.com/in/mubaidr
+    icon: i-ph-linkedin-logo
+  - name: X
+    url: https://x.com/mubaidr
+    icon: i-ph-x-logo
 workApproach:
   - Architecting solutions and managing product lifecycles - optimizing performance, scalability, and security
   - Leading agile teams and collaborating with clients - Ensuring clarity, timeliness, and adaptability in all project phases
@@ -16,12 +21,22 @@ currentFocus:
   - Infrastructure as Code (IaC)
   - Cloud-native tooling and observability
   - AI-assisted development workflows
+clientSatisfaction: 100
+projectsDelivered: 125
+experience: 12
 availability:
+  status: available
+  statusText: Available for new projects
+  startDate: August 2025
+  startDateContext: "Next opening"
   description: Open to freelance, consulting, and collaborative projects. Flexible with remote, async, and agile workflows. Comfortable working across time zones and with distributed teams.
+  responseTime: 6h
+  slotsAvailable: 2
+  paymentTerms: "20% upfront, rest on milestones"
   cta:
     text: Email Now To Discuss Your Project Or Idea
     url: mailto:mubaidr@gmail.com
   note: I aim to reply as quickly as possible with the attention your message deserves.
 footer:
   message: Thank you for your interest. I look forward to collaborating and building something exceptional together.
-  lastUpdated: May 31, 2025
+  lastUpdated: 2025-06-28T12:00:00.000Z

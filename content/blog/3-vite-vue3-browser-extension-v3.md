@@ -8,7 +8,7 @@ abstract: Our template is pre-packed with essential features, making it easier
   for you to focus on developing your extension rather than setting up the
   environment.
 date: 2024-08-13T12:00:00.000Z
-dateUpdated: ""
+dateUpdated: 2024-08-13T12:00:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 featured: true
@@ -27,6 +27,7 @@ Before diving into the technical details, let's talk about why this matters. Bro
 ### The Manifest V3 Migration
 
 Google's introduction of Manifest V3 brought significant changes to how extensions work:
+
 - **Service Workers** replace background scripts
 - **Stricter security policies** limit code execution
 - **New APIs** for better performance and security
@@ -37,6 +38,7 @@ While these changes improve security and performance, they also mean that older 
 ### Modern JavaScript Framework Challenges
 
 Integrating modern frameworks like Vue.js or React with browser extensions isn't straightforward. You need to handle:
+
 - Multiple entry points (popup, options, content scripts, background)
 - Different execution contexts with varying capabilities
 - Hot module replacement for development efficiency
@@ -47,15 +49,19 @@ Integrating modern frameworks like Vue.js or React with browser extensions isn't
 After struggling with these challenges across multiple projects, I realized there was a need for a modern, comprehensive starter template. Here's what drove me to create it:
 
 ### 1. Development Speed
+
 Setting up a modern browser extension from scratch can take days. This template gets you started in minutes.
 
 ### 2. Best Practices Built-In
+
 The template incorporates years of learnings about extension architecture, security, and performance optimization.
 
 ### 3. Modern Tooling
+
 Leverage the latest development tools without spending time on configuration.
 
 ### 4. Cross-Browser Compatibility
+
 Write once, deploy everywhere (Chrome, Firefox, Edge, and other Chromium-based browsers).
 
 ## What Makes This Template Special
@@ -68,14 +74,14 @@ The template uses Vue 3's Composition API with `<script setup>` syntax, providin
 
 ```vue
 <script setup>
-import { ref, onMounted } from 'vue'
-import { sendMessage } from '@/utils/messaging'
+import { ref, onMounted } from "vue"
+import { sendMessage } from "@/utils/messaging"
 
 const isActive = ref(false)
 const userSettings = ref({})
 
 onMounted(async () => {
-  const response = await sendMessage({ type: 'GET_SETTINGS' })
+  const response = await sendMessage({ type: "GET_SETTINGS" })
   userSettings.value = response.data
 })
 </script>
@@ -86,6 +92,7 @@ This approach offers better TypeScript integration, improved performance, and a 
 ### Hot Module Replacement (HMR)
 
 One of the biggest pain points in extension development is the slow feedback loop. Traditional development requires:
+
 1. Making code changes
 2. Building the extension
 3. Reloading the extension in the browser
@@ -96,6 +103,7 @@ With HMR, changes in your popup, options page, and even content scripts are refl
 ### Comprehensive TypeScript Support
 
 The template includes full TypeScript support with:
+
 - Type definitions for all browser APIs
 - Proper typing for message passing between contexts
 - IntelliSense support for extension-specific functionality
@@ -104,11 +112,11 @@ The template includes full TypeScript support with:
 ```typescript
 // types/messages.ts
 export interface GetSettingsMessage {
-  type: 'GET_SETTINGS'
+  type: "GET_SETTINGS"
 }
 
 export interface SetSettingsMessage {
-  type: 'SET_SETTINGS'
+  type: "SET_SETTINGS"
   data: UserSettings
 }
 
@@ -118,6 +126,7 @@ export type Message = GetSettingsMessage | SetSettingsMessage
 ### Automated Build Process
 
 The template includes GitHub Actions workflows for:
+
 - **Automated testing** on pull requests
 - **Cross-browser builds** for Chrome and Firefox
 - **Release automation** with proper versioning
@@ -162,14 +171,14 @@ One of the most complex aspects of extension development is communication betwee
 
 ```typescript
 // In content script
-import { sendMessage } from 'webext-bridge/content-script'
+import { sendMessage } from "webext-bridge/content-script"
 
-const response = await sendMessage('get-user-data', { userId: 123 })
+const response = await sendMessage("get-user-data", { userId: 123 })
 
 // In background script
-import { onMessage } from 'webext-bridge/background'
+import { onMessage } from "webext-bridge/background"
 
-onMessage('get-user-data', async ({ data }) => {
+onMessage("get-user-data", async ({ data }) => {
   const userData = await fetchUserData(data.userId)
   return { success: true, userData }
 })
@@ -180,6 +189,7 @@ This abstraction handles all the complexity of browser APIs while providing a cl
 ### Advanced Features
 
 #### Offscreen Documents
+
 For capabilities that require DOM access but can't run in the service worker:
 
 ```typescript
@@ -188,28 +198,27 @@ export async function createOffscreenDocument() {
   if (await chrome.offscreen.hasDocument()) return
 
   await chrome.offscreen.createDocument({
-    url: 'offscreen.html',
-    reasons: ['AUDIO_PLAYBACK'],
-    justification: 'Playing notification sounds'
+    url: "offscreen.html",
+    reasons: ["AUDIO_PLAYBACK"],
+    justification: "Playing notification sounds",
   })
 }
 ```
 
 #### Content Script Component Injection
+
 Inject Vue components directly into web pages:
 
 ```vue
 <!-- content-script/components/FloatingWidget.vue -->
 <template>
   <div class="floating-widget">
-    <UButton @click="handleAction">
-      Take Action
-    </UButton>
+    <UButton @click="handleAction"> Take Action </UButton>
   </div>
 </template>
 
 <script setup>
-import { UButton } from '@/components/ui'
+import { UButton } from "@/components/ui"
 
 const handleAction = () => {
   // Interact with the page
@@ -239,14 +248,16 @@ Update `manifest.config.ts`:
 
 ```typescript
 export default {
-  name: 'Reading Time Calculator',
-  description: 'Calculate estimated reading time for any article',
-  version: '1.0.0',
-  permissions: ['activeTab', 'storage'],
-  content_scripts: [{
-    matches: ['<all_urls>'],
-    js: ['content-script/index.js']
-  }]
+  name: "Reading Time Calculator",
+  description: "Calculate estimated reading time for any article",
+  version: "1.0.0",
+  permissions: ["activeTab", "storage"],
+  content_scripts: [
+    {
+      matches: ["<all_urls>"],
+      js: ["content-script/index.js"],
+    },
+  ],
 }
 ```
 
@@ -254,8 +265,8 @@ export default {
 
 ```typescript
 // content-script/index.ts
-import { createApp } from 'vue'
-import ReadingTimeWidget from './components/ReadingTimeWidget.vue'
+import { createApp } from "vue"
+import ReadingTimeWidget from "./components/ReadingTimeWidget.vue"
 
 // Calculate reading time
 function calculateReadingTime(text: string): number {
@@ -269,16 +280,16 @@ function injectWidget() {
   const articleText = document.body.innerText
   const readingTime = calculateReadingTime(articleText)
 
-  const container = document.createElement('div')
-  container.id = 'reading-time-widget'
+  const container = document.createElement("div")
+  container.id = "reading-time-widget"
   document.body.appendChild(container)
 
   createApp(ReadingTimeWidget, { readingTime }).mount(container)
 }
 
 // Run when page is loaded
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', injectWidget)
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", injectWidget)
 } else {
   injectWidget()
 }
@@ -315,7 +326,7 @@ defineProps<Props>()
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 12px 16px;
   z-index: 10000;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .widget-content {
@@ -351,7 +362,7 @@ For complex extensions, you'll need shared state management:
 
 ```typescript
 // utils/storage.ts
-import { storage } from 'webext-bridge/background'
+import { storage } from "webext-bridge/background"
 
 export interface ExtensionState {
   settings: UserSettings
@@ -362,12 +373,12 @@ export interface ExtensionState {
 export const state = reactive<ExtensionState>({
   settings: {},
   cache: {},
-  statistics: {}
+  statistics: {},
 })
 
 // Sync with browser storage
 export async function loadState() {
-  const stored = await storage.get(['settings', 'cache', 'statistics'])
+  const stored = await storage.get(["settings", "cache", "statistics"])
   Object.assign(state, stored)
 }
 
@@ -398,8 +409,8 @@ export class ExtensionLogger {
 }
 
 // Usage in different contexts
-const logger = new ExtensionLogger('content-script')
-logger.info('Extension initialized')
+const logger = new ExtensionLogger("content-script")
+logger.info("Extension initialized")
 ```
 
 ### Performance Optimization
@@ -408,7 +419,7 @@ logger.info('Extension initialized')
 // utils/performance.ts
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
-  wait: number
+  wait: number,
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout
 
@@ -442,12 +453,12 @@ npm run build:submission
 
 ```typescript
 // tests/extension.test.ts
-import { describe, it, expect } from 'vitest'
-import { calculateReadingTime } from '../src/utils/reading-time'
+import { describe, it, expect } from "vitest"
+import { calculateReadingTime } from "../src/utils/reading-time"
 
-describe('Reading Time Calculator', () => {
-  it('calculates reading time correctly', () => {
-    const text = 'This is a sample text with exactly ten words here.'
+describe("Reading Time Calculator", () => {
+  it("calculates reading time correctly", () => {
+    const text = "This is a sample text with exactly ten words here."
     const time = calculateReadingTime(text)
     expect(time).toBe(1) // Should be 1 minute for 10 words
   })
@@ -470,7 +481,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
       - run: npm install
       - run: npm run test
       - run: npm run build
@@ -481,16 +492,19 @@ jobs:
 Let me share some successful extensions built with this template:
 
 ### 1. Productivity Tools
+
 - **Focus Timer**: Pomodoro technique implementation with website blocking
 - **Tab Manager**: Advanced tab organization and session management
 - **Note Taker**: Quick note-taking with synchronized storage
 
 ### 2. Developer Tools
+
 - **API Testing**: In-browser API testing and documentation
 - **Color Picker**: Advanced color picking with format conversion
 - **JSON Formatter**: Format and validate JSON on any page
 
 ### 3. Content Enhancement
+
 - **Reading Assistant**: Text-to-speech and reading comprehension tools
 - **Translation Helper**: Inline translation with multiple providers
 - **Accessibility Enhancer**: Improve web accessibility on-the-fly
@@ -500,11 +514,13 @@ Let me share some successful extensions built with this template:
 This template is open source, and I encourage contributions from the community. Here's how you can get involved:
 
 ### Feature Requests and Bug Reports
+
 - Use the [GitHub Issues](https://github.com/mubaidr/vite-vue3-browser-extension-v3/issues) for bug reports
 - Join our [Discord community](https://discord.gg/extensions) for discussions
 - Share your success stories and extensions built with the template
 
 ### Contributing Code
+
 - Check out the [contribution guidelines](https://github.com/mubaidr/vite-vue3-browser-extension-v3/blob/main/CONTRIBUTING.md)
 - Look for "good first issue" labels for beginner-friendly contributions
 - Help improve documentation and examples
@@ -514,12 +530,14 @@ This template is open source, and I encourage contributions from the community. 
 I'm continuously working on improving this template. Here's what's coming:
 
 ### Short Term (Next 3 months)
+
 - **React version** of the template
 - **Svelte support** for those who prefer it
 - **Enhanced testing utilities** with extension-specific helpers
 - **More comprehensive examples** for common use cases
 
 ### Long Term (6-12 months)
+
 - **Visual extension builder** for non-developers
 - **Extension analytics dashboard** for monitoring usage
 - **Automated store submission** workflow

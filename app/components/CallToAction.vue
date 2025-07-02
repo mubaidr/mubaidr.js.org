@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 defineProps<{
-  // Define any props if needed
   title?: string
   description?: string
 }>()
@@ -13,48 +12,94 @@ const { data: profile } = await useAsyncData("profile", () => {
 
 <template>
   <div>
-    <!-- Call to Action -->
-    <section
-      class="text-center py-16 bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-900/20 dark:to-blue-900/20"
-    >
-      <div class="max-w-3xl mx-auto space-y-6">
-        <h2 class="text-3xl md:text-4xl font-bold">
-          {{ title || "Let's Work Together" }}
-        </h2>
-        <p class="text-lg text-gray-600 dark:text-gray-400">
-          {{
-            profile?.availability?.description ||
-            "I'm always interested in new opportunities and challenging projects. Let's discuss how we can bring your ideas to life."
-          }}
-        </p>
+    <UCard variant="subtle" class="text-center">
+      <div class="space-y-8 py-8">
+        <!-- Main Heading -->
+        <div class="space-y-4">
+          <h2>
+            {{ title || "Ready to Start Your Next Project?" }}
+          </h2>
+          <p class="max-w-2xl mx-auto">
+            {{
+              description ||
+              profile?.availability?.description ||
+              "Let's discuss your project requirements and create something exceptional together."
+            }}
+          </p>
+        </div>
 
+        <!-- Value Points -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          <div class="flex items-center gap-3 justify-center">
+            <div class="w-10 h-10 flex items-center justify-center">
+              <UIcon name="i-ph-clock" />
+            </div>
+            <div class="text-left">
+              <div class="text-lg font-semibold">
+                {{ profile?.availability?.responseTime || "8h" }} Response
+              </div>
+              <div class="text-sm text-gray-500 dark:text-gray-400">
+                Quick turnaround
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 justify-center">
+            <div class="w-10 h-10 flex items-center justify-center">
+              <UIcon name="i-ph-shield-check" />
+            </div>
+            <div class="text-left">
+              <div class="text-lg font-semibold">100% Satisfaction</div>
+              <div class="text-sm text-gray-500 dark:text-gray-400">
+                Guaranteed results
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 justify-center">
+            <div class="w-10 h-10 flex items-center justify-center">
+              <UIcon name="i-ph-chat-circle" />
+            </div>
+            <div class="text-left">
+              <div class="text-lg font-semibold">Free Consultation</div>
+              <div class="text-sm text-gray-500 dark:text-gray-400">
+                No commitment
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <UButton
             :to="profile?.availability?.cta?.url || '/contact'"
-            size="lg"
-            variant="solid"
+            size="xl"
           >
-            <UIcon name="i-ph-envelope" />
-            {{ profile?.availability?.cta?.text || "Start a Project" }}
+            <UIcon name="i-ph-rocket-launch" />
+            {{ profile?.availability?.cta?.text || "Start Your Project" }}
           </UButton>
+          <!--
+              <UButton
+                href="https://cal.com/mubaidr"
+                external
+                size="xl"
+                variant="soft"
 
-          <UButton
-            href="https://cal.com/mubaidr"
-            external
-            size="lg"
-            variant="outline"
-          >
-            <UIcon name="i-ph-calendar" />
-            Schedule a Call
-          </UButton>
+              >
+                <UIcon name="i-ph-calendar-check" />
+                Book Free Consultation
+              </UButton> -->
         </div>
 
-        <p class="text-sm text-gray-500 dark:text-gray-400">
-          {{
-            profile?.availability?.note || "Usually responds within 24 hours"
-          }}
-        </p>
+        <!-- Availability Note -->
+        <div v-if="profile?.availability?.status === 'available'">
+          <UBadge variant="soft">
+            Only {{ profile?.availability?.slotsAvailable || 3 }} project slots
+            available for
+            {{ profile?.availability?.startDate || "August 2025" }}
+          </UBadge>
+        </div>
       </div>
-    </section>
+    </UCard>
   </div>
 </template>

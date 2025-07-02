@@ -1,109 +1,179 @@
 <script setup lang="ts">
-const { count } = defineProps({
-  count: {
-    type: Number,
-    default: 3,
-  },
-})
-
 const { data: testimonials } = await useAsyncData("testimonials-preview", () =>
-  queryCollection("testimonials")
-    .order("id", "ASC")
-    .where("featured", "=", true)
-    .limit(count)
-    .all(),
+  queryCollection("testimonials").order("id", "ASC").all(),
 )
+
+const isPaused = ref(false)
+
+function togglePause() {
+  isPaused.value = !isPaused.value
+}
 </script>
 
 <template>
   <div>
-    <section class="space-y-8">
-      <div class="text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">What Clients Say</h2>
-        <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-          Hear from satisfied clients about their experience working with me
+    <div class="space-y-6">
+      <div class="text-center space-y-6">
+        <h2>What Clients Say About Working With Me</h2>
+
+        <p class="max-w-3xl mx-auto">
+          Real feedback from satisfied clients who've transformed their
+          businesses with custom web solutions
         </p>
       </div>
 
-      <div
-        v-if="testimonials && testimonials.length > 0"
-        class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
-      >
-        <UCard
-          v-for="testimonial in testimonials"
-          :key="testimonial.id"
-          class="h-full"
+      <!-- Carousel Container using Nuxt UI UCarousel -->
+      <div v-if="testimonials && testimonials.length > 0" class="relative">
+        <UButton
+          class="absolute right-2 top-2 z-10"
+          :title="isPaused ? 'Resume auto-play' : 'Pause auto-play'"
+          @click="togglePause"
           variant="soft"
+          color="neutral"
         >
-          <div class="space-y-4">
-            <!-- Quote -->
-            <div class="relative">
-              <UIcon
-                name="i-ph-quotes"
-                class="w-8 h-8 text-primary-300 dark:text-primary-700 absolute -top-2 -left-2"
-              />
-              <p class="text-gray-700 dark:text-gray-300 italic pl-6">
-                {{ testimonial.quote }}
-              </p>
-            </div>
+          <UIcon :name="isPaused ? 'i-ph-play' : 'i-ph-pause'" />
+        </UButton>
 
-            <!-- Author -->
-            <div
-              class="flex items-center space-x-3 pt-4 border-t border-gray-200/50 dark:border-gray-700/50"
-            >
-              <div
-                v-if="testimonial.avatar"
-                class="w-10 h-10 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 flex items-center justify-center overflow-hidden"
-              >
-                <img
-                  :src="testimonial.avatar"
-                  :alt="testimonial.name"
-                  class="w-full h-full object-cover"
-                  @error="(e) => ((e.target as HTMLImageElement).style.display = 'none')"
-                />
-                <UIcon
-                  v-if="!testimonial.avatar"
-                  name="i-ph-user"
-                  class="w-5 h-5 text-primary"
-                />
-              </div>
-              <div
-                v-else
-                class="w-10 h-10 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 flex items-center justify-center"
-              >
-                <UIcon name="i-ph-user" class="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <p class="font-semibold text-gray-900 dark:text-gray-100">
-                  {{ testimonial.name }}
-                </p>
-                <UBadge label="Verified Client" variant="soft" size="sm" />
+        <UCard variant="subtle" class="p-8">
+          <UCarousel
+            v-slot="{ item: testimonial }"
+            :items="testimonials"
+            fade
+            arrows
+            dots
+            loop
+            :autoplay="isPaused ? false : true"
+            class="w-full"
+            :prev="{
+              variant: 'soft',
+            }"
+            :next="{
+              variant: 'soft',
+            }"
+          >
+            <div class="p-4">
+              <div class="h-full flex flex-col justify-between">
+                <div>
+                  <!-- Rating Stars -->
+                  <div
+                    v-if="testimonial.rating"
+                    class="flex items-center gap-1 mb-4"
+                  >
+                    <UIcon
+                      v-for="star in 5"
+                      :key="star"
+                      name="i-ph-star-fill"
+                    />
+                    <span class="ml-2 text-gray-600 dark:text-gray-300"
+                      >{{ testimonial.rating }}/5</span
+                    >
+                  </div>
+
+                  <!-- Quote -->
+                  <div class="relative mb-6">
+                    <p class="text-xl leading-relaxed">
+                      {{ testimonial.quote }}
+                    </p>
+                  </div>
+
+                  <!-- Project Results -->
+                  <div
+                    v-if="testimonial.results && testimonial.results.length > 0"
+                    class="space-y-3 mb-6"
+                  >
+                    <h4 class="text-lg font-semibold">Key Results:</h4>
+                    <div class="grid grid-cols-2 gap-3">
+                      <div
+                        v-for="(
+                          result, resultIndex
+                        ) in testimonial.results.slice(0, 4)"
+                        :key="resultIndex"
+                        class="flex items-center gap-2 text-gray-600 dark:text-gray-300"
+                      >
+                        <UIcon
+                          name="i-ph-check-circle"
+                          class="w-4 h-4 flex-shrink-0 text-primary-500"
+                        />
+                        <span class="text-base">{{ result }}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Project Info -->
+                  <div v-if="testimonial.project" class="mb-6">
+                    <div
+                      class="flex items-center gap-2 text-gray-600 dark:text-gray-300"
+                    >
+                      <UIcon
+                        name="i-ph-briefcase"
+                        class="w-5 h-5 text-primary-500"
+                      />
+                      <span class="text-base">{{ testimonial.project }}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Author -->
+                <div
+                  class="flex items-center space-x-4 pt-4 border-t border-gray-200 dark:border-gray-700 mt-auto"
+                >
+                  <div
+                    v-if="testimonial.avatar"
+                    class="w-14 h-14 flex items-center justify-center overflow-hidden rounded-full flex-shrink-0 shadow-sm"
+                  >
+                    <img
+                      :src="testimonial.avatar"
+                      :alt="testimonial.name"
+                      class="w-full h-full object-cover"
+                      @error="
+                        (e) =>
+                          ((e.target as HTMLImageElement).style.display =
+                            'none')
+                      "
+                    />
+                    <UIcon v-if="!testimonial.avatar" name="i-ph-user" />
+                  </div>
+                  <div
+                    v-else
+                    class="w-14 h-14 flex items-center justify-center rounded-full flex-shrink-0 bg-gray-100 dark:bg-gray-800 shadow-sm"
+                  >
+                    <UIcon name="i-ph-user" />
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <p class="font-semibold text-gray-900 dark:text-white">
+                      {{ testimonial.name }}
+                    </p>
+                    <p
+                      v-if="testimonial.title"
+                      class="truncate text-sm text-gray-500 dark:text-gray-400"
+                    >
+                      {{ testimonial.title }}
+                      <span v-if="testimonial.company"
+                        >@ {{ testimonial.company }}</span
+                      >
+                    </p>
+                    <UBadge
+                      label="Verified Client"
+                      class="mt-2"
+                      color="success"
+                      variant="subtle"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </UCarousel>
         </UCard>
       </div>
 
       <div v-else class="text-center">
-        <UCard variant="soft" class="max-w-md mx-auto">
+        <UCard variant="subtle" class="max-w-md mx-auto">
           <div class="space-y-4 text-center">
-            <UIcon
-              name="i-ph-chat-circle"
-              class="w-12 h-12 text-gray-400 mx-auto"
-            />
-            <p class="text-gray-600 dark:text-gray-400">
-              No testimonials found.
-            </p>
+            <UIcon name="i-ph-chat-circle" class="mx-auto" />
+            <p>No testimonials found.</p>
           </div>
         </UCard>
       </div>
-
-      <div class="text-center">
-        <UButton to="/services?testimonials=true" variant="outline" size="lg">
-          <UIcon name="i-ph-stamp" />
-          View All Testimonials
-        </UButton>
-      </div>
-    </section>
+    </div>
   </div>
 </template>

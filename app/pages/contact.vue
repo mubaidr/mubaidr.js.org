@@ -33,13 +33,6 @@ const contactMethods = ref([
     action: "https://linkedin.com/in/mubaidr",
   },
   {
-    icon: "i-ph-github-logo",
-    title: "GitHub",
-    description: "Check out my code",
-    value: "@mubaidr",
-    action: "https://github.com/mubaidr",
-  },
-  {
     icon: "i-ph-calendar",
     title: "Schedule a Call",
     description: "Book a 30-min consultation",
@@ -70,70 +63,70 @@ onMounted(() => {
 
 <template>
   <div>
-    <div class="space-y-24">
+    <div class="space-y-32">
       <!-- Page Header -->
-      <div class="text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6">Let's Work Together</h1>
-        <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+      <div class="text-center space-y-6">
+        <h1>Let's Work Together</h1>
+
+        <p class="max-w-4xl mx-auto">
           Have a project in mind? I'd love to hear about it and discuss how we
           can bring your ideas to life.
         </p>
       </div>
 
       <!-- Contact Methods -->
-      <section class="space-y-8">
-        <div class="text-center">
-          <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
-          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Choose the method that works best for you
+      <section class="space-y-12">
+        <div class="text-center space-y-6">
+          <h2>Choose Your Preferred Method</h2>
+          <p class="max-w-3xl mx-auto">
+            Select the most convenient way to reach out, and I'll get back to
+            you as soon as possible.
           </p>
         </div>
 
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <UCard
+        <div class="grid gap-6 md:grid-cols-3 lg:grid-cols-3">
+          <div
             v-for="method in contactMethods"
             :key="method.title"
-            class="text-center cursor-pointer transition-all duration-300 hover:scale-105"
-            variant="soft"
             @click="navigateTo(method.action, { external: true })"
           >
-            <div class="space-y-4 p-4">
-              <div
-                class="w-12 h-12 bg-primary-100 dark:bg-primary-900 flex items-center justify-center mx-auto"
-              >
-                <UIcon :name="method.icon" class="w-6 h-6 text-primary" />
+            <UCard variant="subtle" class="">
+              <div class="space-y-4 p-4">
+                <div class="w-16 h-16 flex items-center justify-center mx-auto">
+                  <UIcon :name="method.icon" />
+                </div>
+                <div>
+                  <h3 class="mb-1">
+                    {{ method.title }}
+                  </h3>
+                  <p class="mb-2">
+                    {{ method.description }}
+                  </p>
+                  <p>
+                    {{ method.value }}
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 class="text-lg font-semibold mb-1">
-                  {{ method.title }}
-                </h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">
-                  {{ method.description }}
-                </p>
-                <p class="text-primary font-medium text-sm">
-                  {{ method.value }}
-                </p>
-              </div>
-            </div>
-          </UCard>
+            </UCard>
+          </div>
         </div>
       </section>
 
       <!-- FAQ -->
       <section
-        class="space-y-8"
-        id="faqs"
         v-if="faqsData && faqsData.list.length > 0"
+        id="faqs"
+        class="space-y-12"
       >
-        <div class="text-center">
-          <h2 class="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Common questions about working together
+        <div class="text-center space-y-6">
+          <h2>Frequently Asked Questions</h2>
+          <p class="max-w-3xl mx-auto">
+            Find answers to common inquiries about my services and processes.
           </p>
         </div>
 
         <div class="max-w-4xl mx-auto">
-          <UAccordion :items="faqsData.list" />
+          <UAccordion :items="faqsData.list" variant="soft" size="lg" />
         </div>
       </section>
     </div>

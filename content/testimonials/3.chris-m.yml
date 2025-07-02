@@ -1,4 +1,13 @@
 avatar: "https://www.freelancer.com/ppic/205903495/logo/51131990/profile_logo_51131990.jpg"
 name: "Chris M."
-quote: "Muhammad, has been excellent. He has gone above and beyond with this project and delivered it on time and on budget. 100% would recommend and will be using again for future projects."
+title: "CTO"
+company: "FinTech Startup"
+quote: "Muhammad exceeded expectations! Delivered a complex financial dashboard on time and budget. The solution handles 10,000+ concurrent users with 99.9% uptime. Already planning our next project together!"
+project: "Real-time Financial Dashboard"
+results:
+  - "10,000+ concurrent users"
+  - "99.9% uptime achieved"
+  - "On time & budget delivery"
+  - "30% faster than competitors"
 featured: true
+rating: 5
