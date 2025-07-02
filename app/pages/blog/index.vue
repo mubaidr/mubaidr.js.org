@@ -101,6 +101,9 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
       <section v-else-if="blogData.posts.length > 0" class="space-y-12">
         <div class="text-center space-y-6">
           <h2>Explore My Latest Articles</h2>
+          <p>
+            Stay updated with the latest trends and insights in web development.
+          </p>
         </div>
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -122,7 +125,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
                       class="w-full h-full object-cover"
                     />
                     <div v-else class="flex items-center justify-center h-full">
-                      <UIcon name="i-ph-article-duotone" class="w-12 h-12" />
+                      <UIcon name="i-ph-article-duotone" />
                     </div>
                   </div>
 
@@ -132,17 +135,19 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
                       <h3>
                         {{ post.title }}
                       </h3>
-                      <UBadge
-                        v-if="post.tags && post.tags.length > 0"
-                        :label="post.tags[0]"
-                        variant="soft"
-                        size="sm"
-                      />
                     </div>
 
                     <!-- Excerpt -->
                     <p class="mb-4">
                       {{ post.description || getExcerpt(post.body) }}
+                    </p>
+
+                    <p>
+                      <UBadge
+                        v-if="post.tags && post.tags.length > 0"
+                        :label="post.tags[0]"
+                        variant="soft"
+                      />
                     </p>
 
                     <!-- Meta -->
@@ -152,7 +157,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
                       </span>
                       <div class="flex items-center gap-1">
                         <span>Read More</span>
-                        <UIcon name="i-ph-arrow-right" class="w-3 h-3" />
+                        <UIcon name="i-ph-arrow-right" />
                       </div>
                     </div>
                   </div>
@@ -165,9 +170,9 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
 
       <!-- Empty State -->
       <div v-else class="text-center py-16">
-        <div class="mx-auto w-24 h-24 flex items-center justify-center mb-6">
+        <!-- <div class="mx-auto w-24 h-24 flex items-center justify-center mb-6">
           <UIcon name="i-ph-newspaper" class="w-12 h-12" />
-        </div>
+        </div> -->
         <h3 class="mb-2">No blog posts found</h3>
         <p>Check back soon for new content!</p>
       </div>

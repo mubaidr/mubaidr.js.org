@@ -75,8 +75,6 @@ const filteredProjects = computed(() => {
               v-if="category.name !== 'All'"
               :label="category.count.toString()"
               variant="soft"
-              size="sm"
-              class="ml-1"
             />
           </UButton>
         </div>
@@ -84,7 +82,7 @@ const filteredProjects = computed(() => {
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div v-for="project in filteredProjects" :key="project.id">
             <div />
-            <UCard variant="subtle">
+            <UCard variant="subtle" class="">
               <!-- Project Image -->
               <div
                 class="mb-4 flex items-center justify-center overflow-hidden"
@@ -95,7 +93,7 @@ const filteredProjects = computed(() => {
                   :alt="project.title"
                   class="w-full h-full object-cover"
                 />
-                <UIcon v-else name="i-ph-folder-open" class="w-12 h-12" />
+                <UIcon v-else name="i-ph-folder-open" />
               </div>
 
               <!-- Project Content -->
@@ -105,11 +103,7 @@ const filteredProjects = computed(() => {
                     <h3>
                       {{ project.title }}
                     </h3>
-                    <UBadge
-                      :label="project.category"
-                      variant="soft"
-                      size="sm"
-                    />
+                    <UBadge :label="project.category" variant="soft" />
                   </div>
                   <p>
                     {{ project.description }}
@@ -123,13 +117,11 @@ const filteredProjects = computed(() => {
                     :key="tech"
                     :label="tech"
                     variant="outline"
-                    size="sm"
                   />
                   <UBadge
                     v-if="project.technologies.length > 4"
                     :label="`+${project.technologies.length - 4}`"
                     variant="soft"
-                    size="sm"
                   />
                 </div>
 
@@ -156,7 +148,7 @@ const filteredProjects = computed(() => {
                     size="sm"
                     class="flex-1 justify-center"
                   >
-                    <UIcon name="i-ph-eye" class="mr-1" />
+                    <UIcon name="i-ph-eye" />
                     Live Demo
                   </UButton>
 
@@ -197,10 +189,10 @@ const filteredProjects = computed(() => {
           <UButton
             to="https://github.com/mubaidr"
             external
-            size="lg"
+            size="xl"
             variant="solid"
           >
-            <UIcon name="i-ph-github-logo" class="mr-2" />
+            <UIcon name="i-ph-github-logo" />
             <span>View GitHub Profile</span>
           </UButton>
         </div>

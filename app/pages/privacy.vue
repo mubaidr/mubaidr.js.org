@@ -47,10 +47,10 @@ const lastUpdated = ref("December 1, 2024")
       <!-- Privacy Policy Content -->
       <div class="space-y-8">
         <!-- Introduction -->
-        <UCard variant="subtle">
+        <UCard variant="subtle" class="">
           <div class="space-y-4">
             <h2 class="flex items-center gap-3">
-              <UIcon name="i-ph-shield-check" class="w-6 h-6" />
+              <UIcon name="i-ph-shield-check" />
               Introduction
             </h2>
             <p>
@@ -69,10 +69,10 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- Information I Collect -->
-        <UCard variant="subtle">
+        <UCard variant="subtle" class="">
           <div class="space-y-6">
             <h2 class="flex items-center gap-3">
-              <UIcon name="i-ph-database" class="w-6 h-6" />
+              <UIcon name="i-ph-database" />
               Information I Collect
             </h2>
 
@@ -87,7 +87,7 @@ const lastUpdated = ref("December 1, 2024")
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
+                  <UIcon name="i-ph-check" />
                   <span
                     ><strong>Project Inquiries:</strong> Business information,
                     project requirements, and budget details you share</span
@@ -140,10 +140,10 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- How I Use Your Information -->
-        <UCard variant="subtle">
+        <UCard variant="subtle" class="">
           <div class="space-y-4">
             <h2 class="flex items-center gap-3">
-              <UIcon name="i-ph-gear" class="w-6 h-6" />
+              <UIcon name="i-ph-gear" />
               How I Use Your Information
             </h2>
             <p>I use the collected information for the following purposes:</p>
@@ -206,10 +206,10 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- Cookies and Tracking -->
-        <UCard variant="subtle">
+        <UCard variant="subtle" class="">
           <div class="space-y-4">
             <h2 class="flex items-center gap-3">
-              <UIcon name="i-ph-cookie" class="w-6 h-6" />
+              <UIcon name="i-ph-cookie" />
               Cookies and Tracking Technologies
             </h2>
             <p>
@@ -243,10 +243,10 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- Third-Party Services -->
-        <UCard variant="subtle">
+        <UCard variant="subtle" class="">
           <div class="space-y-4">
             <h2 class="flex items-center gap-3">
-              <UIcon name="i-ph-link" class="w-6 h-6" />
+              <UIcon name="i-ph-link" />
               Third-Party Services
             </h2>
             <p>
@@ -285,10 +285,10 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- Data Security -->
-        <UCard variant="subtle">
+        <UCard variant="subtle" class="">
           <div class="space-y-4">
             <h2 class="flex items-center gap-3">
-              <UIcon name="i-ph-lock" class="w-6 h-6" />
+              <UIcon name="i-ph-lock" />
               Data Security
             </h2>
             <p>
@@ -297,17 +297,17 @@ const lastUpdated = ref("December 1, 2024")
             </p>
             <div class="grid gap-4 md:grid-cols-3">
               <div class="text-center p-4">
-                <UIcon name="i-ph-shield-check" class="w-8 h-8 mx-auto mb-2" />
+                <UIcon name="i-ph-shield-check" />
                 <h3 class="mb-1">Encryption</h3>
                 <p>HTTPS encryption for all data transmission</p>
               </div>
               <div class="text-center p-4">
-                <UIcon name="i-ph-database" class="w-8 h-8 mx-auto mb-2" />
+                <UIcon name="i-ph-database" />
                 <h3 class="mb-1">Secure Storage</h3>
                 <p>Data stored on secure, encrypted servers</p>
               </div>
               <div class="text-center p-4">
-                <UIcon name="i-ph-users" class="w-8 h-8 mx-auto mb-2" />
+                <UIcon name="i-ph-users" />
                 <h3 class="mb-1">Access Control</h3>
                 <p>Limited access on need-to-know basis</p>
               </div>
@@ -316,10 +316,10 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- Your Rights -->
-        <UCard variant="subtle">
+        <UCard variant="subtle" class="">
           <div class="space-y-4">
             <h2 class="flex items-center gap-3">
-              <UIcon name="i-ph-scales" class="w-6 h-6" />
+              <UIcon name="i-ph-scales" />
               Your Rights and Choices
             </h2>
             <p>
@@ -328,24 +328,21 @@ const lastUpdated = ref("December 1, 2024")
             <div class="grid gap-4 md:grid-cols-2">
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
-                  <UIcon name="i-ph-eye" class="w-4 h-4 mt-1 flex-shrink-0" />
+                  <UIcon name="i-ph-eye" />
                   <span
                     ><strong>Access:</strong> Request a copy of personal data I
                     hold about you</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon
-                    name="i-ph-pencil"
-                    class="w-4 h-4 mt-1 flex-shrink-0"
-                  />
+                  <UIcon name="i-ph-pencil" />
                   <span
                     ><strong>Rectification:</strong> Request correction of
                     inaccurate information</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon name="i-ph-trash" class="w-4 h-4 mt-1 flex-shrink-0" />
+                  <UIcon name="i-ph-trash" />
                   <span
                     ><strong>Erasure:</strong> Request deletion of your personal
                     data</span
@@ -354,30 +351,21 @@ const lastUpdated = ref("December 1, 2024")
               </ul>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
-                  <UIcon
-                    name="i-ph-download"
-                    class="w-4 h-4 text-purple-500 mt-1 flex-shrink-0"
-                  />
+                  <UIcon name="i-ph-download" />
                   <span
                     ><strong>Portability:</strong> Request data in a
                     machine-readable format</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon
-                    name="i-ph-prohibit"
-                    class="w-4 h-4 mt-1 flex-shrink-0"
-                  />
+                  <UIcon name="i-ph-prohibit" />
                   <span
                     ><strong>Objection:</strong> Object to processing of your
                     personal data</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon
-                    name="i-ph-x-circle"
-                    class="w-4 h-4 mt-1 flex-shrink-0"
-                  />
+                  <UIcon name="i-ph-x-circle" />
                   <span
                     ><strong>Withdraw Consent:</strong> Withdraw consent for
                     marketing communications</span
@@ -483,7 +471,7 @@ const lastUpdated = ref("December 1, 2024")
         <UCard variant="subtle">
           <div class="space-y-4">
             <h2 class="flex items-center gap-3">
-              <UIcon name="i-ph-envelope" class="w-6 h-6" />
+              <UIcon name="i-ph-envelope" />
               Contact me
             </h2>
             <p>
@@ -492,21 +480,21 @@ const lastUpdated = ref("December 1, 2024")
             </p>
             <div class="grid gap-4 md:grid-cols-3">
               <div class="flex items-center gap-3 p-3">
-                <UIcon name="i-ph-envelope" class="w-5 h-5" />
+                <UIcon name="i-ph-envelope" />
                 <div>
                   <p>Email</p>
                   <p>hello@mubaidr.js.org</p>
                 </div>
               </div>
               <div class="flex items-center gap-3 p-3">
-                <UIcon name="i-ph-globe" class="w-5 h-5" />
+                <UIcon name="i-ph-globe" />
                 <div>
                   <p>Website</p>
                   <p>mubaidr.js.org</p>
                 </div>
               </div>
               <div class="flex items-center gap-3 p-3">
-                <UIcon name="i-ph-clock" class="w-5 h-5" />
+                <UIcon name="i-ph-clock" />
                 <div>
                   <p>Response Time</p>
                   <p>Within 30 days</p>
@@ -520,10 +508,7 @@ const lastUpdated = ref("December 1, 2024")
         <UCard variant="subtle" class="text-center">
           <div class="space-y-6">
             <div class="space-y-3">
-              <UIcon
-                name="i-ph-shield-check"
-                class="w-12 h-12 text-white/80 mx-auto"
-              />
+              <UIcon name="i-ph-shield-check" />
               <h3>Questions About Your Privacy?</h3>
               <p class="max-w-2xl mx-auto">
                 I'm committed to protecting your privacy and being transparent
@@ -533,11 +518,11 @@ const lastUpdated = ref("December 1, 2024")
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <UButton to="/contact" size="lg" variant="outline">
+              <UButton to="/contact" size="xl" variant="outline">
                 <UIcon name="i-ph-envelope" />
                 Contact Me
               </UButton>
-              <UButton to="/" size="lg" variant="ghost">
+              <UButton to="/" size="xl" variant="ghost">
                 <UIcon name="i-ph-house" />
                 Back to Home
               </UButton>

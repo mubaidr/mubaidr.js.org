@@ -61,32 +61,23 @@ useHead({
             :key="experience.id"
           >
             <div />
-            <UCard variant="subtle">
-              <!-- Current position indicator -->
-              <div v-if="experience.current">
-                <UBadge label="Current" variant="solid" color="primary" />
-              </div>
-
+            <UCard variant="subtle" class="relative">
               <div class="space-y-6">
                 <!-- Experience Header -->
                 <div
                   class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
                 >
                   <div>
-                    <h3>{{ experience.title }}</h3>
-                    <p>
+                    <h3 class="text-xl font-bold">{{ experience.title }}</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
                       {{ experience.company }}
                     </p>
-                    <p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">
                       {{ experience.location }}
                     </p>
                   </div>
-                  <div class="text-right">
-                    <UBadge
-                      :label="experience.period"
-                      variant="outline"
-                      size="lg"
-                    />
+                  <div class="text-right absolute top-0 right-0">
+                    <UBadge :label="experience.period" variant="soft" />
                   </div>
                 </div>
 
@@ -106,7 +97,10 @@ useHead({
                       :key="`resp-${experience.id}-${respIndex}`"
                       class="flex items-start gap-2 align-baseline"
                     >
-                      <UIcon name="i-ph-check-circle-duotone" />
+                      <UIcon
+                        name="i-ph-check-circle-duotone"
+                        class="text-primary-500 dark:text-primary-400"
+                      />
                       {{ responsibility }}
                     </li>
                   </ul>
@@ -139,7 +133,10 @@ useHead({
                       :key="`ach-${experience.id}-${achIndex}`"
                       class="flex items-start gap-2"
                     >
-                      <UIcon name="i-ph-trophy-duotone" />
+                      <UIcon
+                        name="i-ph-trophy-duotone"
+                        class="text-primary-500 dark:text-primary-400"
+                      />
                       {{ achievement }}
                     </li>
                   </ul>
@@ -153,11 +150,6 @@ useHead({
       <!-- Education -->
       <section class="space-y-12">
         <div class="text-center space-y-6">
-          <div class="inline-flex items-center gap-2 px-4 py-2">
-            <UIcon name="i-ph-graduation-cap" class="w-4 h-4" />
-            <span>Academic Background</span>
-          </div>
-
           <h2>Education & Learning</h2>
 
           <p class="max-w-3xl mx-auto">
@@ -173,15 +165,13 @@ useHead({
             class="h-full"
           >
             <div />
-            <UCard variant="subtle">
+            <UCard variant="subtle" class="">
               <div class="space-y-4">
                 <div class="flex items-start gap-3">
-                  <div
-                    class="w-12 h-12 flex items-center justify-center flex-shrink-0"
-                  >
-                    <UIcon name="i-ph-graduation-cap" class="w-6 h-6" />
+                  <div class="flex items-center justify-center flex-shrink-0">
+                    <UIcon name="i-ph-graduation-cap" />
                   </div>
-                  <div class="flex-1">
+                  <div class="flex-1 space-y-3">
                     <h3>{{ edu.degree }}</h3>
                     <p>
                       {{ edu.institution }}
@@ -189,12 +179,7 @@ useHead({
                     <p>
                       {{ edu.location }}
                     </p>
-                    <UBadge
-                      :label="edu.period"
-                      variant="outline"
-                      size="sm"
-                      class="mt-2"
-                    />
+                    <UBadge :label="edu.period" variant="soft" />
                   </div>
                 </div>
 
@@ -227,11 +212,6 @@ useHead({
       <!-- Certifications -->
       <section class="space-y-12">
         <div class="text-center space-y-6">
-          <div class="inline-flex items-center gap-2 px-4 py-2">
-            <UIcon name="i-ph-certificate" class="w-4 h-4" />
-            <span>Professional Credentials</span>
-          </div>
-
           <h2>Certifications & Awards</h2>
 
           <p class="max-w-3xl mx-auto">
@@ -246,22 +226,16 @@ useHead({
             :key="cert.id"
             class="h-full"
           >
-            <div />
-            <UCard variant="subtle">
+            <UCard variant="subtle" class="">
               <div class="space-y-4">
                 <div class="w-16 h-16 flex items-center justify-center mx-auto">
-                  <UIcon name="i-ph-certificate" class="w-8 h-8" />
+                  <UIcon name="i-ph-certificate" />
                 </div>
 
-                <div>
-                  <h3 class="mb-2">{{ cert.name }}</h3>
+                <div class="space-y-3">
+                  <h3>{{ cert.name }}</h3>
                   <p>{{ cert.issuer }}</p>
-                  <UBadge
-                    :label="cert.date"
-                    variant="outline"
-                    size="sm"
-                    class="mt-2"
-                  />
+                  <UBadge :label="cert.date" variant="soft" />
                 </div>
 
                 <p>
@@ -278,11 +252,6 @@ useHead({
       <!-- Technologies -->
       <section class="space-y-12">
         <div class="text-center space-y-6">
-          <div class="inline-flex items-center gap-2 px-4 py-2">
-            <UIcon name="i-ph-code" class="w-4 h-4" />
-            <span>Technical Skills</span>
-          </div>
-
           <h2>Skills & Expertise</h2>
 
           <p class="max-w-3xl mx-auto">
@@ -301,9 +270,7 @@ useHead({
             <UCard variant="subtle" class="h-full">
               <div class="space-y-4">
                 <div class="flex items-center gap-3 mb-3">
-                  <div
-                    class="w-12 h-12 flex items-center justify-center flex-shrink-0"
-                  >
+                  <div class="flex items-center justify-center flex-shrink-0">
                     <UIcon name="i-ph-code" class="w-6 h-6" />
                   </div>
                   <h3 class="capitalize">
@@ -315,8 +282,7 @@ useHead({
                     v-for="skill in skills"
                     :key="skill"
                     :label="skill"
-                    variant="soft"
-                    size="sm"
+                    variant="outline"
                   />
                 </div>
               </div>
@@ -330,7 +296,7 @@ useHead({
         <UCard variant="subtle" class="text-center">
           <div class="space-y-6">
             <div class="space-y-3">
-              <UIcon name="i-ph-handshake" class="w-12 h-12 mx-auto" />
+              <UIcon name="i-ph-handshake" class="mx-auto" />
               <h3>Ready to Work Together?</h3>
               <p class="max-w-2xl mx-auto">
                 Now that you know my story, let's write the next chapter

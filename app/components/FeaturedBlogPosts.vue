@@ -26,62 +26,69 @@ const { data: featuredPosts } = await useAsyncData(
 
 <template>
   <div v-if="featuredPosts && featuredPosts.length > 0">
-    <!-- Featured Blog Posts -->
-    <div class="text-center">
-      <h2 class="mb-4">
-        {{ title }}
-      </h2>
-      <!-- <p class="max-w-3xl mx-auto">
+    <div class="space-y-6">
+      <!-- Featured Blog Posts -->
+      <div class="text-center">
+        <h2 class="mb-4">
+          {{ title }}
+        </h2>
+        <p class="max-w-3xl mx-auto">
           Handpicked articles that highlight key insights, tutorials, and best
           practices in web development and technology.
-        </p> -->
-    </div>
+        </p>
+      </div>
 
-    <!-- Show blog posts if available, otherwise show placeholder -->
-    <div
-      v-if="featuredPosts && featuredPosts.length > 0"
-      class="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto"
-    >
-      <UCard
-        v-for="(post, index) in featuredPosts"
-        :key="post.path || `post-${index}`"
-        class="cursor-pointer h-full"
-        @click="navigateTo(post.path || '/blog')"
-        variant="subtle"
+      <!-- Show blog posts if available, otherwise show placeholder -->
+      <div
+        v-if="featuredPosts && featuredPosts.length > 0"
+        class="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto"
       >
-        <div class="space-y-4">
-          <!-- Blog post image placeholder -->
-          <div class="flex items-center justify-center">
-            <UIcon name="i-ph-article" class="w-8 h-8" />
-          </div>
+        <UCard
+          v-for="(post, index) in featuredPosts"
+          :key="post.path || `post-${index}`"
+          class="cursor-pointer h-full"
+          @click="navigateTo(post.path || '/blog')"
+          variant="subtle"
+        >
+          <div class="space-y-4">
+            <!-- Blog post image placeholder -->
+            <!-- <div class="flex items-center justify-center">
+            <UIcon name="i-ph-article" />
+          </div> -->
 
-          <div class="space-y-3">
-            <h3>
-              {{ post.title || "Blog Post Title" }}
-            </h3>
-            <p>
-              {{
-                post.description ||
-                "Blog post description that provides a brief overview of the content and main topics covered in the article."
-              }}
-            </p>
-            <div class="flex items-center justify-between">
-              <span>
+            <div class="space-y-3">
+              <h3 class="text-xl font-semibold">
+                {{ post.title || "Blog Post Title" }}
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300">
                 {{
-                  post.date
-                    ? new Date(post.date).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })
-                    : "Recent"
+                  post.description ||
+                  "Blog post description that provides a brief overview of the content and main topics covered in the article."
                 }}
-              </span>
-              <UIcon name="i-ph-arrow-right" class="w-4 h-4" />
+              </p>
+              <div
+                class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400"
+              >
+                <span>
+                  {{
+                    post.date
+                      ? new Date(post.date).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })
+                      : "Recent"
+                  }}
+                </span>
+                <div class="flex items-center gap-1">
+                  <span>Read More</span>
+                  <UIcon name="i-ph-arrow-right" />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </UCard>
+        </UCard>
+      </div>
     </div>
   </div>
 </template>

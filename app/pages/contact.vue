@@ -77,10 +77,6 @@ onMounted(() => {
       <!-- Contact Methods -->
       <section class="space-y-12">
         <div class="text-center space-y-6">
-          <div class="inline-flex items-center gap-2 px-4 py-2">
-            <UIcon name="i-ph-chats-circle" class="w-4 h-4" />
-            <span>Get In Touch</span>
-          </div>
           <h2>Choose Your Preferred Method</h2>
           <p class="max-w-3xl mx-auto">
             Select the most convenient way to reach out, and I'll get back to
@@ -94,10 +90,10 @@ onMounted(() => {
             :key="method.title"
             @click="navigateTo(method.action, { external: true })"
           >
-            <UCard variant="subtle">
+            <UCard variant="subtle" class="">
               <div class="space-y-4 p-4">
                 <div class="w-16 h-16 flex items-center justify-center mx-auto">
-                  <UIcon :name="method.icon" class="w-8 h-8" />
+                  <UIcon :name="method.icon" />
                 </div>
                 <div>
                   <h3 class="mb-1">
@@ -123,10 +119,6 @@ onMounted(() => {
         class="space-y-12"
       >
         <div class="text-center space-y-6">
-          <div class="inline-flex items-center gap-2 px-4 py-2">
-            <UIcon name="i-ph-question" class="w-4 h-4" />
-            <span>Have Questions?</span>
-          </div>
           <h2>Frequently Asked Questions</h2>
           <p class="max-w-3xl mx-auto">
             Find answers to common inquiries about my services and processes.

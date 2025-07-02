@@ -24,7 +24,7 @@ const { data: profile } = await useAsyncData("profile", () => {
           <div class="space-y-6">
             <div class="space-y-4">
               <div class="w-16 h-16 flex items-center justify-center mx-auto">
-                <UIcon name="i-ph-code" class="w-8 h-8" />
+                <UIcon name="i-ph-code" />
               </div>
               <div class="space-y-3">
                 <h3>Technical Excellence</h3>
@@ -43,7 +43,7 @@ const { data: profile } = await useAsyncData("profile", () => {
           <div class="space-y-6">
             <div class="space-y-4">
               <div class="w-16 h-16 flex items-center justify-center mx-auto">
-                <UIcon name="i-ph-chart-line-up" class="w-8 h-8" />
+                <UIcon name="i-ph-chart-line-up" />
               </div>
               <div class="space-y-3">
                 <h3>Proven Results</h3>
@@ -62,7 +62,7 @@ const { data: profile } = await useAsyncData("profile", () => {
           <div class="space-y-6">
             <div class="space-y-4">
               <div class="w-16 h-16 flex items-center justify-center mx-auto">
-                <UIcon name="i-ph-handshake" class="w-8 h-8" />
+                <UIcon name="i-ph-handshake" />
               </div>
               <div class="space-y-3">
                 <h3>True Partnership</h3>
@@ -86,12 +86,12 @@ const { data: profile } = await useAsyncData("profile", () => {
             scalable solutions that drive growth.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <UButton to="/about" variant="outline" size="lg">
-              <UIcon name="i-ph-user" class="mr-2" />
+            <UButton to="/about" variant="outline" size="xl">
+              <UIcon name="i-ph-user" />
               <span>Learn More About Me</span>
             </UButton>
-            <UButton to="/contact" variant="solid" size="lg">
-              <UIcon name="i-ph-rocket-launch" class="mr-2" />
+            <UButton to="/contact" variant="solid" size="xl">
+              <UIcon name="i-ph-rocket-launch" />
               <span>Start Your Project</span>
             </UButton>
           </div>

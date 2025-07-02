@@ -1,5 +1,7 @@
 <template>
-  <header class="fixed w-full z-40 top-0 left-0">
+  <header
+    class="fixed w-full z-40 top-0 left-0 border-b border-gray-100 dark:border-stone-800 bg-white/75 dark:bg-stone-900/75 backdrop-blur-lg"
+  >
     <div class="max-w-6xl mx-auto px-4 md:px-8">
       <nav
         class="flex justify-between items-center py-4"
@@ -20,19 +22,47 @@
 
         <!-- Desktop Navigation -->
         <div class="hidden lg:flex items-center gap-6">
-          <ULink to="/"> Home </ULink>
-          <ULink to="/about"> About </ULink>
-          <ULink to="/services"> Services </ULink>
-          <ULink to="/projects"> Projects </ULink>
-          <ULink to="/blog"> Blog </ULink>
+          <ULink
+            to="/"
+            class="hover:scale-110 transition-transform duration-300 ease-in-out"
+          >
+            Home
+          </ULink>
+          <ULink
+            to="/about"
+            class="hover:scale-110 transition-transform duration-300 ease-in-out"
+          >
+            About
+          </ULink>
+          <ULink
+            to="/services"
+            class="hover:scale-110 transition-transform duration-300 ease-in-out"
+          >
+            Services
+          </ULink>
+          <!-- <ULink
+            to="/projects"
+            class="hover:scale-110 transition-transform duration-300 ease-in-out"
+          >
+            Projects
+          </ULink> -->
+          <ULink
+            to="/blog"
+            class="hover:scale-110 transition-transform duration-300 ease-in-out"
+          >
+            Blog
+          </ULink>
         </div>
 
         <!-- Action Buttons & Mobile Menu -->
         <div class="flex items-center gap-3">
           <!-- Enhanced Contact CTA -->
-          <UButton to="/contact" class="hidden lg:flex">
+          <UButton
+            to="/contact"
+            class="hidden lg:flex hover:shadow transition-shadow duration-300 ease-in-out"
+          >
             <UIcon name="i-ph-rocket-launch" />
-            <span class="ml-2">Start Project</span>
+            <span>Start Project</span>
           </UButton>
 
           <!-- Theme Switcher -->
@@ -40,16 +70,13 @@
 
           <!-- Mobile menu button -->
           <UButton
-            class="lg:hidden p-2"
+            class="lg:hidden p-2 shadow hover:shadow-lg transition-shadow duration-300 ease-in-out"
             :aria-expanded="mobileMenuOpen"
             aria-label="Toggle mobile menu"
             aria-controls="mobile-menu"
             @click="toggleMobileMenu"
           >
-            <UIcon
-              :name="mobileMenuOpen ? 'i-ph-x' : 'i-ph-list'"
-              class="w-6 h-6"
-            />
+            <UIcon :name="mobileMenuOpen ? 'i-ph-x' : 'i-ph-list'" />
           </UButton>
         </div>
       </nav>
@@ -58,7 +85,7 @@
       <div
         v-show="mobileMenuOpen"
         id="mobile-menu"
-        class="lg:hidden mx-4 mb-4"
+        class="lg:hidden mx-4 mb-4 shadow-2xl rounded-lg"
         @click.stop
       >
         <nav class="flex flex-col py-6 px-4" aria-label="Mobile navigation">
@@ -67,10 +94,10 @@
             v-for="item in navigationItems"
             :key="item.path"
             :to="item.path"
-            class="flex items-center gap-4 px-4 py-4 min-h-[44px]"
+            class="flex items-center gap-4 px-4 py-4 min-h-[44px] hover:scale-105 transition-transform duration-300 ease-in-out"
             @click="closeMobileMenu"
           >
-            <UIcon :name="item.icon" class="w-5 h-5 flex-shrink-0" />
+            <UIcon :name="item.icon" />
             <span>{{ item.label }}</span>
           </ULink>
 
@@ -83,7 +110,7 @@
             class="flex items-center justify-center gap-3 px-6 py-4 min-h-[48px]"
             @click="closeMobileMenu"
           >
-            <UIcon name="i-ph-envelope" class="w-5 h-5" />
+            <UIcon name="i-ph-envelope" />
             <span>Let's Talk</span>
           </ULink>
         </nav>

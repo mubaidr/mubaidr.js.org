@@ -35,10 +35,12 @@ const { data: profile } = await useAsyncData("profile", () => {
               <UIcon name="i-ph-clock" />
             </div>
             <div class="text-left">
-              <div>
+              <div class="text-lg font-semibold">
                 {{ profile?.availability?.responseTime || "8h" }} Response
               </div>
-              <div>Quick turnaround</div>
+              <div class="text-sm text-gray-500 dark:text-gray-400">
+                Quick turnaround
+              </div>
             </div>
           </div>
 
@@ -47,8 +49,10 @@ const { data: profile } = await useAsyncData("profile", () => {
               <UIcon name="i-ph-shield-check" />
             </div>
             <div class="text-left">
-              <div>100% Satisfaction</div>
-              <div>Guaranteed results</div>
+              <div class="text-lg font-semibold">100% Satisfaction</div>
+              <div class="text-sm text-gray-500 dark:text-gray-400">
+                Guaranteed results
+              </div>
             </div>
           </div>
 
@@ -57,15 +61,20 @@ const { data: profile } = await useAsyncData("profile", () => {
               <UIcon name="i-ph-chat-circle" />
             </div>
             <div class="text-left">
-              <div>Free Consultation</div>
-              <div>No commitment</div>
+              <div class="text-lg font-semibold">Free Consultation</div>
+              <div class="text-sm text-gray-500 dark:text-gray-400">
+                No commitment
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Action Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <UButton :to="profile?.availability?.cta?.url || '/contact'">
+          <UButton
+            :to="profile?.availability?.cta?.url || '/contact'"
+            size="xl"
+          >
             <UIcon name="i-ph-rocket-launch" />
             {{ profile?.availability?.cta?.text || "Start Your Project" }}
           </UButton>
@@ -84,7 +93,7 @@ const { data: profile } = await useAsyncData("profile", () => {
 
         <!-- Availability Note -->
         <div v-if="profile?.availability?.status === 'available'">
-          <UBadge>
+          <UBadge variant="soft">
             Only {{ profile?.availability?.slotsAvailable || 3 }} project slots
             available for
             {{ profile?.availability?.startDate || "August 2025" }}

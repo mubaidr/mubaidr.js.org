@@ -76,59 +76,75 @@ if (profile.value) {
           <!-- Avatar with Integrated Status - Redesigned -->
           <div class="flex flex-col items-center mb-8 space-y-3">
             <!-- Larger, cleaner avatar without ring -->
-            <div class="w-32 h-32 md:w-40 md:h-40">
+            <div
+              class="w-32 h-32 md:w-40 md:h-40 shadow-md hover:shadow-lg transition-all duration-300 ease-in-out rounded-full"
+            >
               <UAvatar
                 :src="profile.avatar"
                 :alt="profile.name"
-                class="w-full h-full"
+                class="w-full h-full transform hover:scale-105 transition-all duration-300 ease-in-out shadow hover:shadow-lg"
               />
             </div>
             <!-- Status badge on avatar - bottom right positioned -->
-            <UBadge
+            <div
               v-if="profile.availability"
-              :color="
-                profile.availability.status === 'available'
-                  ? 'success'
-                  : 'warning'
-              "
-              variant="soft"
+              class="flex gap-2 items-center justify-center text-sm"
             >
-              {{
-                profile.availability.statusText || "Available for new projects"
-              }}
-            </UBadge>
+              <div
+                class="h-3 w-3 rounded-full"
+                :class="{
+                  'bg-primary': profile.availability.status === 'available',
+                  'bg-yellow-500': profile.availability.status !== 'available',
+                  'animate-pulse': true,
+                }"
+              />
+              <div>
+                {{
+                  profile.availability.statusText ||
+                  "Available for new projects"
+                }}
+              </div>
+            </div>
           </div>
 
           <div class="space-y-6">
             <h1>
               {{ profile.name }}
             </h1>
-            <p>
-              {{ profile.title }}
-            </p>
-            <p class="max-w-3xl mx-auto">
+            <p class="text-2xl">{{ profile.title }}</p>
+            <p class="text-xl max-w-3xl mx-auto">
               {{ profile.tagline }}
             </p>
           </div>
 
           <!-- Key Metrics -->
           <div
-            class="grid grid-cols-3 md:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto"
+            class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 mt-6 text-sm"
           >
-            <UCard variant="subtle" class="text-center">
-              <div class="mb-2">{{ profile?.experience || "12" }}+</div>
-              <div>Years Experience</div>
-            </UCard>
-            <UCard variant="subtle" class="text-center">
-              <div class="mb-2">{{ profile?.projectsDelivered || "125" }}+</div>
-              <div>Projects Delivered</div>
-            </UCard>
-            <UCard variant="subtle" class="text-center">
-              <div class="mb-2">
+            <div class="flex items-center gap-1">
+              <span class="text-xl font-semibold">
+                {{ profile?.experience || "12" }}+
+              </span>
+              <span>Years Experience</span>
+            </div>
+
+            <span class="hidden sm:inline">|</span>
+
+            <div class="flex items-center gap-1">
+              <span class="text-xl font-semibold">
+                {{ profile?.projectsDelivered || "125" }}+
+              </span>
+              <span>Projects Delivered</span>
+            </div>
+
+            <span class="hidden sm:inline">|</span>
+
+            <div class="flex items-center gap-1">
+              <span class="text-xl font-semibold">
                 {{ profile?.clientSatisfaction || "100" }}%
-              </div>
-              <div>Client Satisfaction</div>
-            </UCard>
+              </span>
+              <span>Client Satisfaction</span>
+            </div>
           </div>
 
           <!-- Enhanced Action Buttons -->
@@ -158,7 +174,7 @@ if (profile.value) {
               external
               variant="ghost"
             >
-              <UIcon :name="social.icon" class="w-5 h-5" />
+              <UIcon :name="social.icon" />
             </UButton>
           </div>
         </div>

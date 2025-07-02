@@ -45,18 +45,18 @@ const { data: featuredProjects } = await useAsyncData(
         <div class="space-y-4">
           <!-- Project Header -->
           <div class="flex items-center justify-center">
-            <UIcon name="i-ph-code" class="w-8 h-8" />
+            <UIcon name="i-ph-code" />
           </div>
 
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <h3>
+              <h3 class="text-xl font-semibold">
                 {{ project.title }}
               </h3>
               <UBadge :label="project.category" />
             </div>
 
-            <p>
+            <p class="text-gray-600 dark:text-gray-300">
               {{ project.description }}
             </p>
 

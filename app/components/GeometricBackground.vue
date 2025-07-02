@@ -32,7 +32,7 @@ const cachedColors = computed(() => {
       secondary: { r: 196, g: 181, b: 253 }, // Soft purple
       accent: { r: 167, g: 243, b: 208 }, // Soft green
       baseOpacity: 0.125, // Slightly more visible in dark mode
-      highlightOpacity: 0.5, // Balanced highlight for dark theme
+      highlightOpacity: 0.75, // Balanced highlight for dark theme
     }
   } else {
     return {
@@ -40,7 +40,7 @@ const cachedColors = computed(() => {
       secondary: { r: 139, g: 92, b: 246 }, // Vibrant purple
       accent: { r: 34, g: 197, b: 94 }, // Vibrant green
       baseOpacity: 0.25, // Very subtle for light mode to avoid visual clutter
-      highlightOpacity: 0.75, // Softer highlight to match light theme aesthetics
+      highlightOpacity: 1, // Softer highlight to match light theme aesthetics
     }
   }
 })

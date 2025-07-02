@@ -29,22 +29,23 @@ const formatDate = (date: string | Date) => {
     <div class="space-y-16 py-16">
       <!-- Post Header -->
       <header class="text-center space-y-6">
-        <div class="inline-flex items-center gap-2 px-4 py-2">
-          <UIcon name="i-ph-newspaper" class="w-4 h-4" />
-          <span>Blog Post</span>
-        </div>
-
         <h1>
           {{ page.title }}
         </h1>
 
         <div class="flex items-center justify-center gap-6">
           <div class="flex items-center gap-2">
-            <UIcon name="i-ph-user-circle" class="w-5 h-5" />
+            <UIcon
+              name="i-ph-user-circle"
+              class="w-5 h-5 text-primary-500 dark:text-primary-400"
+            />
             <span>{{ page.author }}</span>
           </div>
           <div class="flex items-center gap-2">
-            <UIcon name="i-ph-calendar" class="w-5 h-5" />
+            <UIcon
+              name="i-ph-calendar"
+              class="w-5 h-5 text-primary-500 dark:text-primary-400"
+            />
             <span>{{ formatDate(page.date) }}</span>
           </div>
         </div>
@@ -55,7 +56,6 @@ const formatDate = (date: string | Date) => {
             :key="tag"
             :label="tag"
             variant="soft"
-            size="sm"
           />
         </div>
       </header>
@@ -76,7 +76,7 @@ const formatDate = (date: string | Date) => {
 
       <!-- Back to Blog Link -->
       <div class="text-center pt-8">
-        <UButton to="/blog" variant="outline" size="lg">
+        <UButton to="/blog" variant="outline" class="">
           <UIcon name="i-ph-arrow-left" class="mr-2" />
           <span>Back to Blog</span>
         </UButton>

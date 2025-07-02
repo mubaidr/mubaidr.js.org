@@ -49,25 +49,15 @@ useHead({
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <UCard
             variant="subtle"
-            v-for="(step, index) in servicesData?.process"
+            v-for="step in servicesData?.process"
             :key="step.step"
             class="relative text-center"
           >
-            <div class="absolute inset-0" />
             <div class="relative p-6 h-full">
-              <!-- Step Number -->
-              <div
-                class="absolute -top-3 -left-3 w-8 h-8 flex items-center justify-center"
-              >
-                {{ index + 1 }}
-              </div>
-
               <!-- Icon -->
               <div class="relative mb-6">
-                <div
-                  class="w-16 h-16 flex items-center justify-center mx-auto mb-4"
-                >
-                  <UIcon :name="step.icon" class="w-8 h-8" />
+                <div class="flex items-center justify-center mx-auto">
+                  <UIcon :name="step.icon" />
                 </div>
               </div>
 
@@ -84,7 +74,7 @@ useHead({
       </section>
 
       <!-- Services Grid -->
-      <section class="space-y-12">
+      <!-- <section class="space-y-12">
         <div class="text-center space-y-6">
           <h2>What I Deliver</h2>
 
@@ -101,14 +91,16 @@ useHead({
             class="relative h-full"
           >
             <div class="absolute inset-0" />
-            <UCard variant="subtle" class="relative h-full">
+            <UCard
+              variant="subtle"
+              class="relative h-full "
+            >
               <div class="space-y-6">
-                <!-- Service Header -->
                 <div class="flex items-start gap-4">
                   <div
                     class="flex-shrink-0 w-12 h-12 flex items-center justify-center"
                   >
-                    <UIcon :name="service.icon" class="w-6 h-6" />
+                    <UIcon :name="service.icon"  />
                   </div>
                   <div class="flex-1">
                     <h3 class="mb-2">
@@ -120,7 +112,6 @@ useHead({
                   </div>
                 </div>
 
-                <!-- Key Features (simplified) -->
                 <div>
                   <h4 class="mb-3">Key Features:</h4>
                   <ul class="space-y-2">
@@ -131,16 +122,15 @@ useHead({
                     >
                       <UIcon
                         name="i-ph-check-circle"
-                        class="w-4 h-4 flex-shrink-0 mt-0.5"
+                        class="w-4 h-4 flex-shrink-0 mt-0.5 text-primary-500 dark:text-primary-400"
                       />
                       {{ feature }}
                     </li>
                   </ul>
                 </div>
 
-                <!-- Timeline (simplified) -->
                 <div class="flex items-center gap-2 pt-4">
-                  <UIcon name="i-ph-clock" class="w-4 h-4" />
+                  <UIcon name="i-ph-clock" />
                   <span>Timeline:</span>
                   <span>{{ service.timeline }}</span>
                 </div>
@@ -148,7 +138,7 @@ useHead({
             </UCard>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Pricing -->
       <section class="space-y-12">
@@ -165,13 +155,13 @@ useHead({
           <div
             v-for="pkg in servicesData?.packages"
             :key="pkg.name"
-            class="relative h-full"
-            :class="pkg.highlighted ? 'scale-105' : ''"
+            class="h-full"
+            :class="pkg.highlighted ? 'scale-110' : ''"
           >
-            <div v-if="pkg.highlighted" class="absolute inset-0" />
-            <div v-else class="absolute inset-0" />
-
-            <UCard :variant="pkg.highlighted ? 'solid' : 'subtle'">
+            <UCard
+              variant="subtle"
+              :class="pkg.highlighted ? 'ring-2 ring-primary' : ''"
+            >
               <div class="space-y-6">
                 <div class="pt-4">
                   <h3 class="mb-2">
@@ -190,7 +180,7 @@ useHead({
                   >
                     <UIcon
                       name="i-ph-check-circle"
-                      class="w-4 h-4 flex-shrink-0 mt-0.5"
+                      class="w-4 h-4 flex-shrink-0 mt-0.5 text-primary-500 dark:text-primary-400"
                     />
                     <span>{{ feature }}</span>
                   </li>
@@ -199,11 +189,11 @@ useHead({
                 <UButton
                   to="/contact"
                   :variant="pkg.highlighted ? 'solid' : 'outline'"
-                  size="lg"
+                  size="xl"
                   class="w-full"
                 >
                   Get Started
-                  <UIcon name="i-ph-arrow-right" class="ml-2" />
+                  <UIcon name="i-ph-arrow-right" />
                 </UButton>
               </div>
             </UCard>
@@ -213,12 +203,7 @@ useHead({
 
       <!-- Call to Action -->
       <section class="space-y-12">
-        <div class="overflow-hidden">
-          <!-- Background Elements -->
-          <div />
-          <div />
-          <div />
-
+        <UCard variant="subtle">
           <div class="text-center space-y-8 py-16 px-8">
             <div class="space-y-6">
               <h2>Let's Build Something Amazing</h2>
@@ -246,20 +231,20 @@ useHead({
             <!-- Trust Indicators -->
             <div class="flex flex-wrap justify-center items-center gap-8 pt-8">
               <div class="flex items-center gap-2">
-                <UIcon name="i-ph-check-circle" class="w-4 h-4" />
+                <UIcon name="i-ph-check-circle" />
                 <span>10+ Years Experience</span>
               </div>
               <div class="flex items-center gap-2">
-                <UIcon name="i-ph-check-circle" class="w-4 h-4" />
+                <UIcon name="i-ph-check-circle" />
                 <span>100% Client Satisfaction</span>
               </div>
               <div class="flex items-center gap-2">
-                <UIcon name="i-ph-check-circle" class="w-4 h-4" />
+                <UIcon name="i-ph-check-circle" />
                 <span>24h Response Time</span>
               </div>
             </div>
           </div>
-        </div>
+        </UCard>
       </section>
     </div>
   </div>

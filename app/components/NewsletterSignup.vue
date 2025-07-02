@@ -51,29 +51,35 @@ const submitForm = async () => {
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
       <UCard variant="subtle" class="flex items-center gap-3">
         <div class="w-10 h-10 flex items-center justify-center">
-          <UIcon name="i-ph-check-circle" class="w-5 h-5" />
+          <UIcon name="i-ph-check-circle" />
         </div>
         <div class="text-left">
-          <div>Pre-Launch Checklist</div>
-          <div>25 critical points</div>
+          <div class="text-lg font-semibold">Pre-Launch Checklist</div>
+          <div class="text-sm text-gray-500 dark:text-gray-400">
+            25 critical points
+          </div>
         </div>
       </UCard>
       <UCard variant="subtle" class="flex items-center gap-3">
         <div class="w-10 h-10 flex items-center justify-center">
-          <UIcon name="i-ph-rocket-launch" class="w-5 h-5" />
+          <UIcon name="i-ph-rocket-launch" />
         </div>
         <div class="text-left">
-          <div>Performance Guide</div>
-          <div>Speed optimization tips</div>
+          <div class="text-lg font-semibold">Performance Guide</div>
+          <div class="text-sm text-gray-500 dark:text-gray-400">
+            Speed optimization tips
+          </div>
         </div>
       </UCard>
       <UCard variant="subtle" class="flex items-center gap-3">
         <div class="w-10 h-10 flex items-center justify-center">
-          <UIcon name="i-ph-shield-check" class="w-5 h-5" />
+          <UIcon name="i-ph-shield-check" />
         </div>
         <div class="text-left">
-          <div>Security Essentials</div>
-          <div>Protect your users</div>
+          <div class="text-lg font-semibold">Security Essentials</div>
+          <div class="text-sm text-gray-500 dark:text-gray-400">
+            Protect your users
+          </div>
         </div>
       </UCard>
     </div>
@@ -86,13 +92,14 @@ const submitForm = async () => {
             v-model="email"
             type="email"
             placeholder="Enter your email address"
-            size="lg"
+            size="xl"
             class="flex-1"
             :disabled="isSubmitting"
             required
           />
           <UButton
             type="submit"
+            size="xl"
             :loading="isSubmitting"
             :disabled="isSubmitting"
             class="whitespace-nowrap"
@@ -120,15 +127,15 @@ const submitForm = async () => {
     <!-- Social Proof -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
       <UCard variant="subtle" class="flex items-center gap-2">
-        <UIcon name="i-ph-download" class="w-4 h-4" />
+        <UIcon name="i-ph-download" />
         <span>500+ Downloads</span>
       </UCard>
       <UCard variant="subtle" class="flex items-center gap-2">
-        <UIcon name="i-ph-star-fill" class="w-4 h-4" />
+        <UIcon name="i-ph-star-fill" />
         <span>4.9/5 Rating</span>
       </UCard>
       <UCard variant="subtle" class="flex items-center gap-2">
-        <UIcon name="i-ph-users" class="w-4 h-4" />
+        <UIcon name="i-ph-users" />
         <span>1,000+ Subscribers</span>
       </UCard>
     </div>
