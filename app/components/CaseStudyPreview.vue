@@ -92,12 +92,7 @@ const caseStudies = [
     </div>
 
     <div class="grid gap-8 lg:grid-cols-2">
-      <UCard
-        variant="subtle"
-        v-for="study in caseStudies"
-        :key="study.id"
-        class="h-full"
-      >
+      <UCard v-for="study in caseStudies" :key="study.id" class="h-full">
         <div class="space-y-6">
           <!-- Header -->
           <div class="space-y-3">
@@ -164,7 +159,7 @@ const caseStudies = [
           <!-- CTA -->
           <div class="pt-4">
             <UButton to="/contact" class="w-full">
-              <UIcon name="i-ph-chat-circle" />
+              <UIcon name="i-ph-chat-circle" size="3em" class="text-info" />
               Discuss Your Similar Project
             </UButton>
           </div>
@@ -174,7 +169,7 @@ const caseStudies = [
 
     <div class="text-center">
       <UButton to="/projects">
-        <UIcon name="i-ph-folder-open" />
+        <UIcon name="i-ph-folder-open" size="3em" class="text-info" />
         View All Case Studies
       </UButton>
     </div>

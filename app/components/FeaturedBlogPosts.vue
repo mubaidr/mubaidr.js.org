@@ -48,7 +48,6 @@ const { data: featuredPosts } = await useAsyncData(
           :key="post.path || `post-${index}`"
           class="cursor-pointer h-full"
           @click="navigateTo(post.path || '/blog')"
-          variant="subtle"
         >
           <div class="space-y-4">
             <!-- Blog post image placeholder -->

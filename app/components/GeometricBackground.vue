@@ -15,7 +15,7 @@ let canvasRect = null
 
 // Grid configuration
 const gridConfig = {
-  size: 50, // Grid cell size
+  size: 100, // Grid cell size
   lineWidth: 0.125, // Line width for grid lines - optimized for subtlety
   maxDistance: 150, // Maximum distance for mouse interaction - wider influence area
   baseOpacity: 0.1, // Base opacity for grid lines - more subtle default state

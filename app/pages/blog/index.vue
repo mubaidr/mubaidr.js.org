@@ -109,7 +109,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <article v-for="post in blogData.posts" :key="post.id">
             <div />
-            <UCard variant="subtle" as="div" class="h-full overflow-hidden">
+            <UCard as="div" class="h-full overflow-hidden">
               <ULink
                 :to="post.path"
                 class="focus:outline-none"

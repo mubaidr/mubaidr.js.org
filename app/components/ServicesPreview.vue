@@ -28,13 +28,12 @@ const { data: servicesPreview } = await useAsyncData(
           v-for="service in servicesPreview"
           :key="service.title"
           class="text-center h-full"
-          variant="subtle"
         >
           <div class="space-y-6">
             <!-- Icon & Title -->
             <div class="space-y-4">
               <div class="w-16 h-16 flex items-center justify-center mx-auto">
-                <UIcon :name="service.icon" />
+                <UIcon :name="service.icon" size="3em" class="text-info" />
               </div>
 
               <div class="space-y-3">

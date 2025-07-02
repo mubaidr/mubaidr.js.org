@@ -61,7 +61,7 @@ useHead({
             :key="experience.id"
           >
             <div />
-            <UCard variant="subtle" class="relative">
+            <UCard class="relative">
               <div class="space-y-6">
                 <!-- Experience Header -->
                 <div
@@ -165,11 +165,15 @@ useHead({
             class="h-full"
           >
             <div />
-            <UCard variant="subtle" class="">
+            <UCard class="">
               <div class="space-y-4">
-                <div class="flex items-start gap-3">
+                <div class="flex items-start gap-4">
                   <div class="flex items-center justify-center flex-shrink-0">
-                    <UIcon name="i-ph-graduation-cap" />
+                    <UIcon
+                      name="i-ph-graduation-cap"
+                      size="3em"
+                      class="text-info"
+                    />
                   </div>
                   <div class="flex-1 space-y-3">
                     <h3>{{ edu.degree }}</h3>
@@ -226,10 +230,10 @@ useHead({
             :key="cert.id"
             class="h-full"
           >
-            <UCard variant="subtle" class="">
+            <UCard class="">
               <div class="space-y-4">
                 <div class="w-16 h-16 flex items-center justify-center mx-auto">
-                  <UIcon name="i-ph-certificate" />
+                  <UIcon name="i-ph-certificate" size="3em" class="text-info" />
                 </div>
 
                 <div class="space-y-3">
@@ -267,7 +271,7 @@ useHead({
             class="h-full"
           >
             <div />
-            <UCard variant="subtle" class="h-full">
+            <UCard class="h-full">
               <div class="space-y-4">
                 <div class="flex items-center gap-3 mb-3">
                   <div class="flex items-center justify-center flex-shrink-0">
@@ -293,10 +297,9 @@ useHead({
 
       <!-- Call to Action -->
       <section class="space-y-12">
-        <UCard variant="subtle" class="text-center">
+        <UCard class="text-center ring-2 ring-primary">
           <div class="space-y-6">
             <div class="space-y-3">
-              <UIcon name="i-ph-handshake" class="mx-auto" />
               <h3>Ready to Work Together?</h3>
               <p class="max-w-2xl mx-auto">
                 Now that you know my story, let's write the next chapter

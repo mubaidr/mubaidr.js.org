@@ -71,7 +71,7 @@ if (profile.value) {
   <div>
     <div class="space-y-32">
       <!-- Enhanced Hero Section -->
-      <section class="text-center min-h-screen" v-if="profile">
+      <section v-if="profile" class="text-center min-h-screen">
         <div class="max-w-5xl mx-auto">
           <!-- Avatar with Integrated Status - Redesigned -->
           <div class="flex flex-col items-center mb-8 space-y-3">
@@ -173,6 +173,7 @@ if (profile.value) {
               :to="social.url"
               external
               variant="ghost"
+              :title="`Visit ${social.name} Profile`"
             >
               <UIcon :name="social.icon" />
             </UButton>

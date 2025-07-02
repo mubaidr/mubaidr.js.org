@@ -48,7 +48,6 @@ useHead({
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <UCard
-            variant="subtle"
             v-for="step in servicesData?.process"
             :key="step.step"
             class="relative text-center"
@@ -57,7 +56,7 @@ useHead({
               <!-- Icon -->
               <div class="relative mb-6">
                 <div class="flex items-center justify-center mx-auto">
-                  <UIcon :name="step.icon" />
+                  <UIcon :name="step.icon" size="3em" class="text-info" />
                 </div>
               </div>
 
@@ -92,7 +91,6 @@ useHead({
           >
             <div class="absolute inset-0" />
             <UCard
-              variant="subtle"
               class="relative h-full "
             >
               <div class="space-y-6">
@@ -158,10 +156,7 @@ useHead({
             class="h-full"
             :class="pkg.highlighted ? 'scale-110' : ''"
           >
-            <UCard
-              variant="subtle"
-              :class="pkg.highlighted ? 'ring-2 ring-primary' : ''"
-            >
+            <UCard :class="pkg.highlighted ? 'ring-2 ring-primary' : ''">
               <div class="space-y-6">
                 <div class="pt-4">
                   <h3 class="mb-2">
@@ -203,7 +198,7 @@ useHead({
 
       <!-- Call to Action -->
       <section class="space-y-12">
-        <UCard variant="subtle">
+        <UCard class="ring-2 ring-primary">
           <div class="text-center space-y-8 py-16 px-8">
             <div class="space-y-6">
               <h2>Let's Build Something Amazing</h2>

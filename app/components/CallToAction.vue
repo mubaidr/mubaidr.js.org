@@ -12,7 +12,7 @@ const { data: profile } = await useAsyncData("profile", () => {
 
 <template>
   <div>
-    <UCard variant="subtle" class="text-center">
+    <UCard class="text-center ring-2 ring-primary">
       <div class="space-y-8 py-8">
         <!-- Main Heading -->
         <div class="space-y-4">
@@ -32,7 +32,7 @@ const { data: profile } = await useAsyncData("profile", () => {
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
           <div class="flex items-center gap-3 justify-center">
             <div class="w-10 h-10 flex items-center justify-center">
-              <UIcon name="i-ph-clock" />
+              <UIcon name="i-ph-clock" size="3em" class="text-info" />
             </div>
             <div class="text-left">
               <div class="text-lg font-semibold">
@@ -46,7 +46,7 @@ const { data: profile } = await useAsyncData("profile", () => {
 
           <div class="flex items-center gap-3 justify-center">
             <div class="w-10 h-10 flex items-center justify-center">
-              <UIcon name="i-ph-shield-check" />
+              <UIcon name="i-ph-shield-check" size="3em" class="text-info" />
             </div>
             <div class="text-left">
               <div class="text-lg font-semibold">100% Satisfaction</div>
@@ -58,7 +58,7 @@ const { data: profile } = await useAsyncData("profile", () => {
 
           <div class="flex items-center gap-3 justify-center">
             <div class="w-10 h-10 flex items-center justify-center">
-              <UIcon name="i-ph-chat-circle" />
+              <UIcon name="i-ph-chat-circle" size="3em" class="text-info" />
             </div>
             <div class="text-left">
               <div class="text-lg font-semibold">Free Consultation</div>

@@ -3,8 +3,8 @@ title: Advanced TypeScript Patterns for Enterprise Applications
 description: Master advanced TypeScript patterns including conditional types, template literals, and design patterns for building robust enterprise applications.
 headline: TypeScript Advanced Patterns Guide
 abstract: Explore sophisticated TypeScript patterns and techniques that will elevate your code quality and developer experience in large-scale applications.
-date: 2024-05-22T16:45:00.000Z
-dateUpdated: 2024-05-22T16:45:00.000Z
+date: 2025-02-22T16:45:00.000Z
+dateUpdated: 2025-02-22T16:45:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:
