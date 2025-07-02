@@ -25,7 +25,7 @@ function togglePause() {
       <!-- Carousel Container using Nuxt UI UCarousel -->
       <div v-if="testimonials && testimonials.length > 0" class="relative">
         <UButton
-          class="absolute right-2 top-2 z-10"
+          class="absolute right-4 top-4 z-10"
           :title="isPaused ? 'Resume auto-play' : 'Pause auto-play'"
           @click="togglePause"
           variant="soft"
@@ -51,7 +51,7 @@ function togglePause() {
               variant: 'soft',
             }"
           >
-            <div class="p-4">
+            <div class="p-8">
               <div class="h-full flex flex-col justify-between">
                 <div>
                   <!-- Rating Stars -->

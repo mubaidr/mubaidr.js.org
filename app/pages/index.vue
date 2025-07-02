@@ -173,6 +173,7 @@ if (profile.value) {
               :to="social.url"
               external
               variant="ghost"
+              :title="`Visit ${social.name} Profile`"
             >
               <UIcon :name="social.icon" />
             </UButton>

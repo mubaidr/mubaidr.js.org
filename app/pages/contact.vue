@@ -85,30 +85,34 @@ onMounted(() => {
         </div>
 
         <div class="grid gap-6 md:grid-cols-3 lg:grid-cols-3">
-          <div
+          <UCard
             v-for="method in contactMethods"
             :key="method.title"
-            @click="navigateTo(method.action, { external: true })"
+            class="items-center text-center"
           >
-            <UCard>
-              <div class="space-y-4 p-4">
-                <div class="w-16 h-16 flex items-center justify-center mx-auto">
-                  <UIcon :name="method.icon" />
-                </div>
-                <div>
-                  <h3 class="mb-1">
-                    {{ method.title }}
-                  </h3>
-                  <p class="mb-2">
-                    {{ method.description }}
-                  </p>
-                  <p>
-                    {{ method.value }}
-                  </p>
-                </div>
+            <!-- Card content -->
+            <div class="space-y-4 p-4">
+              <div class="w-16 h-16 flex items-center justify-center mx-auto">
+                <UIcon :name="method.icon" size="3em" class="text-info" />
               </div>
-            </UCard>
-          </div>
+              <div>
+                <h3 class="mb-1">
+                  {{ method.title }}
+                </h3>
+                <p class="mb-2">
+                  {{ method.description }}
+                </p>
+
+                <UButton
+                  :title="method.title"
+                  @click="navigateTo(method.action, { external: true })"
+                  class="cursor-pointer mt-3"
+                >
+                  {{ method.value }}
+                </UButton>
+              </div>
+            </div>
+          </UCard>
         </div>
       </section>
 
@@ -125,7 +129,7 @@ onMounted(() => {
           </p>
         </div>
 
-        <div class="max-w-4xl mx-auto">
+        <div>
           <UAccordion :items="faqsData.list" variant="soft" size="lg" />
         </div>
       </section>

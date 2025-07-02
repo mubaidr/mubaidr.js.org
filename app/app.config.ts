@@ -22,10 +22,17 @@ export default defineAppConfig({
     },
     card: {
       slots: {
-        root: "shadow hover:shadow-lg transition-shadow duration-300 ease-in-out",
+        root: "shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out",
       },
       defaultVariants: {
-        variant: "soft",
+        variant: "outline",
+      },
+      variants: {
+        variant: {
+          outline: {
+            root: "backdrop-opacity-100",
+          },
+        },
       },
     },
   },
