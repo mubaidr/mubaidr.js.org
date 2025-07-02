@@ -63,86 +63,80 @@ onMounted(() => {
 
 <template>
   <div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="space-y-32 py-16">
-        <!-- Page Header -->
-        <div class="text-center space-y-6">
-          <h1>Let's Work Together</h1>
+    <div class="space-y-32">
+      <!-- Page Header -->
+      <div class="text-center space-y-6">
+        <h1>Let's Work Together</h1>
 
-          <p class="max-w-4xl mx-auto">
-            Have a project in mind? I'd love to hear about it and discuss how we
-            can bring your ideas to life.
+        <p class="max-w-4xl mx-auto">
+          Have a project in mind? I'd love to hear about it and discuss how we
+          can bring your ideas to life.
+        </p>
+      </div>
+
+      <!-- Contact Methods -->
+      <section class="space-y-12">
+        <div class="text-center space-y-6">
+          <div class="inline-flex items-center gap-2 px-4 py-2">
+            <UIcon name="i-ph-chats-circle" class="w-4 h-4" />
+            <span>Get In Touch</span>
+          </div>
+          <h2>Choose Your Preferred Method</h2>
+          <p class="max-w-3xl mx-auto">
+            Select the most convenient way to reach out, and I'll get back to
+            you as soon as possible.
           </p>
         </div>
 
-        <!-- Contact Methods -->
-        <section class="space-y-12">
-          <div class="text-center space-y-6">
-            <div class="inline-flex items-center gap-2 px-4 py-2">
-              <UIcon name="i-ph-chats-circle" class="w-4 h-4" />
-              <span>Get In Touch</span>
-            </div>
-            <h2>Choose Your Preferred Method</h2>
-            <p class="max-w-3xl mx-auto">
-              Select the most convenient way to reach out, and I'll get back to
-              you as soon as possible.
-            </p>
-          </div>
-
-          <div class="grid gap-6 md:grid-cols-3 lg:grid-cols-3">
-            <div
-              v-for="method in contactMethods"
-              :key="method.title"
-              class="relative"
-              @click="navigateTo(method.action, { external: true })"
-            >
-              <div class="absolute inset-0" />
-              <UCard variant="soft">
-                <div class="space-y-4 p-4">
-                  <div
-                    class="w-16 h-16 flex items-center justify-center mx-auto"
-                  >
-                    <UIcon :name="method.icon" class="w-8 h-8" />
-                  </div>
-                  <div>
-                    <h3 class="mb-1">
-                      {{ method.title }}
-                    </h3>
-                    <p class="mb-2">
-                      {{ method.description }}
-                    </p>
-                    <p>
-                      {{ method.value }}
-                    </p>
-                  </div>
+        <div class="grid gap-6 md:grid-cols-3 lg:grid-cols-3">
+          <div
+            v-for="method in contactMethods"
+            :key="method.title"
+            @click="navigateTo(method.action, { external: true })"
+          >
+            <UCard variant="subtle">
+              <div class="space-y-4 p-4">
+                <div class="w-16 h-16 flex items-center justify-center mx-auto">
+                  <UIcon :name="method.icon" class="w-8 h-8" />
                 </div>
-              </UCard>
-            </div>
+                <div>
+                  <h3 class="mb-1">
+                    {{ method.title }}
+                  </h3>
+                  <p class="mb-2">
+                    {{ method.description }}
+                  </p>
+                  <p>
+                    {{ method.value }}
+                  </p>
+                </div>
+              </div>
+            </UCard>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- FAQ -->
-        <section
-          v-if="faqsData && faqsData.list.length > 0"
-          id="faqs"
-          class="space-y-12"
-        >
-          <div class="text-center space-y-6">
-            <div class="inline-flex items-center gap-2 px-4 py-2">
-              <UIcon name="i-ph-question" class="w-4 h-4" />
-              <span>Have Questions?</span>
-            </div>
-            <h2>Frequently Asked Questions</h2>
-            <p class="max-w-3xl mx-auto">
-              Find answers to common inquiries about my services and processes.
-            </p>
+      <!-- FAQ -->
+      <section
+        v-if="faqsData && faqsData.list.length > 0"
+        id="faqs"
+        class="space-y-12"
+      >
+        <div class="text-center space-y-6">
+          <div class="inline-flex items-center gap-2 px-4 py-2">
+            <UIcon name="i-ph-question" class="w-4 h-4" />
+            <span>Have Questions?</span>
           </div>
+          <h2>Frequently Asked Questions</h2>
+          <p class="max-w-3xl mx-auto">
+            Find answers to common inquiries about my services and processes.
+          </p>
+        </div>
 
-          <div class="max-w-4xl mx-auto">
-            <UAccordion :items="faqsData.list" variant="soft" size="lg" />
-          </div>
-        </section>
-      </div>
+        <div class="max-w-4xl mx-auto">
+          <UAccordion :items="faqsData.list" variant="soft" size="lg" />
+        </div>
+      </section>
     </div>
   </div>
 </template>

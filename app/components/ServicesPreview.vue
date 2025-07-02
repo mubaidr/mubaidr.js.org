@@ -12,70 +12,65 @@ const { data: servicesPreview } = await useAsyncData(
 <template>
   <div>
     <!-- Services Preview Section -->
-    <section class="space-y-16">
-      <div class="text-center space-y-6">
-        <h2>How I Can Help You</h2>
+    <div class="text-center space-y-6">
+      <h2>How I Can Help You</h2>
 
-        <p class="max-w-3xl mx-auto">
-          From full-stack development to technical consulting, I deliver
-          solutions that drive business growth.
+      <p class="max-w-3xl mx-auto">
+        From full-stack development to technical consulting, I deliver solutions
+        that drive business growth.
+      </p>
+    </div>
+
+    <!-- Service Categories -->
+    <div class="grid gap-8 lg:grid-cols-3">
+      <UCard
+        v-for="service in servicesPreview"
+        :key="service.title"
+        class="text-center h-full"
+        variant="subtle"
+      >
+        <div class="space-y-6">
+          <!-- Icon & Title -->
+          <div class="space-y-4">
+            <div class="w-16 h-16 flex items-center justify-center mx-auto">
+              <UIcon :name="service.icon" class="w-8 h-8" />
+            </div>
+
+            <div class="space-y-3">
+              <h3>
+                {{ service.title }}
+              </h3>
+              <p>
+                {{ service.description }}
+              </p>
+            </div>
+          </div>
+
+          <!-- Key Highlight -->
+          <UBadge size="xl" variant="soft">{{ service.suitable }}</UBadge>
+        </div>
+      </UCard>
+    </div>
+
+    <!-- Strong CTA to Services Page -->
+    <div class="text-center space-y-6">
+      <div class="max-w-3xl mx-auto">
+        <h3 class="mb-4">Ready to Explore All Services?</h3>
+        <p class="mb-8">
+          View detailed service offerings, pricing packages, and my proven
+          4-step process.
         </p>
-      </div>
-
-      <!-- Service Categories -->
-      <div class="grid gap-8 lg:grid-cols-3 max-w-6xl mx-auto">
-        <UCard
-          v-for="service in servicesPreview"
-          :key="service.title"
-          class="text-center h-full"
-        >
-          <div class="space-y-6">
-            <!-- Icon & Title -->
-            <div class="space-y-4">
-              <div class="w-16 h-16 flex items-center justify-center mx-auto">
-                <UIcon :name="service.icon" class="w-8 h-8" />
-              </div>
-
-              <div class="space-y-3">
-                <h3>
-                  {{ service.title }}
-                </h3>
-                <p>
-                  {{ service.description }}
-                </p>
-              </div>
-            </div>
-
-            <!-- Key Highlight -->
-            <div class="p-4">
-              <div>
-                {{ service.suitable }}
-              </div>
-            </div>
-          </div>
-        </UCard>
-      </div>
-
-      <!-- Strong CTA to Services Page -->
-      <div class="text-center space-y-6">
-        <div class="max-w-3xl mx-auto">
-          <h3 class="mb-4">Ready to Explore All Services?</h3>
-          <p class="mb-8">
-            View detailed service offerings, pricing packages, and my proven
-            4-step process.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <UButton to="/services">
-              <UIcon name="i-ph-list" class="mr-2" />
-              View All Services & Pricing
-            </UButton>
-            <UButton to="/contact">
-              <UIcon name="i-ph-chat-circle" class="mr-2" />
-              Get Free Consultation
-            </UButton>
-          </div>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <UButton to="/services">
+            <UIcon name="i-ph-list" class="mr-2" />
+            View All Services & Pricing
+          </UButton>
+          <UButton to="/contact">
+            <UIcon name="i-ph-chat-circle" class="mr-2" />
+            Get Free Consultation
+          </UButton>
         </div>
       </div>
-    </section>
+    </div>
   </div>
 </template>

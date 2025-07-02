@@ -27,72 +27,61 @@ const { data: featuredPosts } = await useAsyncData(
 <template>
   <div v-if="featuredPosts && featuredPosts.length > 0">
     <!-- Featured Blog Posts -->
-    <section class="space-y-8">
-      <div class="text-center">
-        <h2 class="mb-4">
-          {{ title }}
-        </h2>
-        <!-- <p class="max-w-3xl mx-auto">
+    <div class="text-center">
+      <h2 class="mb-4">
+        {{ title }}
+      </h2>
+      <!-- <p class="max-w-3xl mx-auto">
           Handpicked articles that highlight key insights, tutorials, and best
           practices in web development and technology.
         </p> -->
-      </div>
+    </div>
 
-      <!-- Show blog posts if available, otherwise show placeholder -->
-      <div
-        v-if="featuredPosts && featuredPosts.length > 0"
-        class="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto"
+    <!-- Show blog posts if available, otherwise show placeholder -->
+    <div
+      v-if="featuredPosts && featuredPosts.length > 0"
+      class="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto"
+    >
+      <UCard
+        v-for="(post, index) in featuredPosts"
+        :key="post.path || `post-${index}`"
+        class="cursor-pointer h-full"
+        @click="navigateTo(post.path || '/blog')"
+        variant="subtle"
       >
-        <UCard
-          v-for="(post, index) in featuredPosts"
-          :key="post.path || `post-${index}`"
-          class="cursor-pointer h-full"
-          @click="navigateTo(post.path || '/blog')"
-        >
-          <div class="space-y-4">
-            <!-- Blog post image placeholder -->
-            <div
-              class="flex items-center justify-center"
-            >
-              <UIcon
-                name="i-ph-article"
-                class="w-8 h-8"
-              />
-            </div>
+        <div class="space-y-4">
+          <!-- Blog post image placeholder -->
+          <div class="flex items-center justify-center">
+            <UIcon name="i-ph-article" class="w-8 h-8" />
+          </div>
 
-            <div class="space-y-3">
-              <h3
-                
-              >
-                {{ post.title || "Blog Post Title" }}
-              </h3>
-              <p >
+          <div class="space-y-3">
+            <h3>
+              {{ post.title || "Blog Post Title" }}
+            </h3>
+            <p>
+              {{
+                post.description ||
+                "Blog post description that provides a brief overview of the content and main topics covered in the article."
+              }}
+            </p>
+            <div class="flex items-center justify-between">
+              <span>
                 {{
-                  post.description ||
-                  "Blog post description that provides a brief overview of the content and main topics covered in the article."
+                  post.date
+                    ? new Date(post.date).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })
+                    : "Recent"
                 }}
-              </p>
-              <div class="flex items-center justify-between">
-                <span >
-                  {{
-                    post.date
-                      ? new Date(post.date).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })
-                      : "Recent"
-                  }}
-                </span>
-                <UIcon
-                  name="i-ph-arrow-right"
-                  class="w-4 h-4"
-                />
-              </div>
+              </span>
+              <UIcon name="i-ph-arrow-right" class="w-4 h-4" />
             </div>
           </div>
-        </UCard>
-      </div>
-    </section>
+        </div>
+      </UCard>
+    </div>
   </div>
 </template>

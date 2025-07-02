@@ -67,13 +67,7 @@ export default defineNuxtConfig({
     viewTransition: true,
   },
 
-  eslint: {
-    checker: {
-      cache: true,
-      lintOnStart: false,
-      fix: true,
-    },
-  },
+  eslint: {},
 
   future: {
     compatibilityVersion: 4,

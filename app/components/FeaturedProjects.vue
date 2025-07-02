@@ -27,58 +27,57 @@ const { data: featuredProjects } = await useAsyncData(
 
 <template>
   <div>
-    <section class="space-y-8">
-      <div class="text-center">
-        <h2 class="mb-4">{{ title }}</h2>
-        <p class="max-w-3xl mx-auto">
-          A selection of projects that showcase my expertise and passion for
-          development
-        </p>
-      </div>
+    <div class="text-center">
+      <h2 class="mb-4">{{ title }}</h2>
+      <p class="max-w-3xl mx-auto">
+        A selection of projects that showcase my expertise and passion for
+        development
+      </p>
+    </div>
 
-      <div class="grid gap-6 md:grid-cols-2">
-        <UCard
-          v-for="project in featuredProjects"
-          :key="project.id"
-          class="cursor-pointer h-full"
-        >
-          <div class="space-y-4">
-            <!-- Project Header -->
-            <div class="flex items-center justify-center">
-              <UIcon name="i-ph-code" class="w-8 h-8" />
+    <div class="grid gap-6 md:grid-cols-2">
+      <UCard
+        v-for="project in featuredProjects"
+        :key="project.id"
+        class="cursor-pointer h-full"
+        variant="subtle"
+      >
+        <div class="space-y-4">
+          <!-- Project Header -->
+          <div class="flex items-center justify-center">
+            <UIcon name="i-ph-code" class="w-8 h-8" />
+          </div>
+
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <h3>
+                {{ project.title }}
+              </h3>
+              <UBadge :label="project.category" />
             </div>
 
-            <div class="space-y-3">
-              <div class="flex items-center justify-between">
-                <h3>
-                  {{ project.title }}
-                </h3>
-                <UBadge :label="project.category" />
-              </div>
+            <p>
+              {{ project.description }}
+            </p>
 
-              <p>
-                {{ project.description }}
-              </p>
-
-              <!-- Technologies -->
-              <div class="flex flex-wrap gap-1">
-                <UBadge
-                  v-for="tech in project.technologies.slice(0, 3)"
-                  :key="tech"
-                  :label="tech"
-                />
-              </div>
+            <!-- Technologies -->
+            <div class="flex flex-wrap gap-1">
+              <UBadge
+                v-for="tech in project.technologies.slice(0, 3)"
+                :key="tech"
+                :label="tech"
+              />
             </div>
           </div>
-        </UCard>
-      </div>
+        </div>
+      </UCard>
+    </div>
 
-      <div v-if="!hideLink" class="text-center">
-        <UButton to="/projects">
-          <UIcon name="i-ph-folder-open" />
-          View All Projects
-        </UButton>
-      </div>
-    </section>
+    <div v-if="!hideLink" class="text-center">
+      <UButton to="/projects">
+        <UIcon name="i-ph-folder-open" />
+        View All Projects
+      </UButton>
+    </div>
   </div>
 </template>

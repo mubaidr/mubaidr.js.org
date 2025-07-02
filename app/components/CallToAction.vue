@@ -11,8 +11,8 @@ const { data: profile } = await useAsyncData("profile", () => {
 </script>
 
 <template>
-  <section class="py-16">
-    <UCard class="text-center">
+  <div>
+    <UCard variant="subtle" class="text-center">
       <div class="space-y-8 py-8">
         <!-- Main Heading -->
         <div class="space-y-4">
@@ -92,5 +92,5 @@ const { data: profile } = await useAsyncData("profile", () => {
         </div>
       </div>
     </UCard>
-  </section>
+  </div>
 </template>

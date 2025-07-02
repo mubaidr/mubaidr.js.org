@@ -35,115 +35,102 @@ const submitForm = async () => {
 </script>
 
 <template>
-  <div class="py-16">
-    <div class="max-w-4xl mx-auto text-center space-y-8">
-      <!-- Lead Magnet Header -->
-      <div class="space-y-4">
-        <UBadge
-          label="FREE RESOURCE"
-          
-        />
-        <h2 >
-          Get the Ultimate Web Development Checklist
-        </h2>
-        <p class="max-w-2xl mx-auto">
-          Download my comprehensive 50-point checklist that ensures your web
-          project launches successfully. Used by 500+ developers and project
-          managers worldwide.
-        </p>
-      </div>
+  <div>
+    <!-- Lead Magnet Header -->
+    <div class="space-y-4">
+      <UBadge label="FREE RESOURCE" />
+      <h2>Get the Ultimate Web Development Checklist</h2>
+      <p class="max-w-2xl mx-auto">
+        Download my comprehensive 50-point checklist that ensures your web
+        project launches successfully. Used by 500+ developers and project
+        managers worldwide.
+      </p>
+    </div>
 
-      <!-- Benefits -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-        <div class="flex items-center gap-3">
-          <div
-            class="w-10 h-10 flex items-center justify-center"
+    <!-- Benefits -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+      <UCard variant="subtle" class="flex items-center gap-3">
+        <div class="w-10 h-10 flex items-center justify-center">
+          <UIcon name="i-ph-check-circle" class="w-5 h-5" />
+        </div>
+        <div class="text-left">
+          <div>Pre-Launch Checklist</div>
+          <div>25 critical points</div>
+        </div>
+      </UCard>
+      <UCard variant="subtle" class="flex items-center gap-3">
+        <div class="w-10 h-10 flex items-center justify-center">
+          <UIcon name="i-ph-rocket-launch" class="w-5 h-5" />
+        </div>
+        <div class="text-left">
+          <div>Performance Guide</div>
+          <div>Speed optimization tips</div>
+        </div>
+      </UCard>
+      <UCard variant="subtle" class="flex items-center gap-3">
+        <div class="w-10 h-10 flex items-center justify-center">
+          <UIcon name="i-ph-shield-check" class="w-5 h-5" />
+        </div>
+        <div class="text-left">
+          <div>Security Essentials</div>
+          <div>Protect your users</div>
+        </div>
+      </UCard>
+    </div>
+
+    <!-- Newsletter Signup Form -->
+    <div class="max-w-md mx-auto">
+      <form class="space-y-4" @submit.prevent="submitForm">
+        <div class="flex flex-col sm:flex-row gap-3">
+          <UInput
+            v-model="email"
+            type="email"
+            placeholder="Enter your email address"
+            size="lg"
+            class="flex-1"
+            :disabled="isSubmitting"
+            required
+          />
+          <UButton
+            type="submit"
+            :loading="isSubmitting"
+            :disabled="isSubmitting"
+            class="whitespace-nowrap"
           >
-            <UIcon name="i-ph-check-circle" class="w-5 h-5" />
-          </div>
-          <div class="text-left">
-            <div >Pre-Launch Checklist</div>
-            <div >25 critical points</div>
-          </div>
+            <UIcon name="i-ph-download" />
+            Get Free Checklist
+          </UButton>
         </div>
-        <div class="flex items-center gap-3">
-          <div
-            class="w-10 h-10 flex items-center justify-center"
-          >
-            <UIcon name="i-ph-rocket-launch" class="w-5 h-5" />
-          </div>
-          <div class="text-left">
-            <div >Performance Guide</div>
-            <div >Speed optimization tips</div>
-          </div>
-        </div>
-        <div class="flex items-center gap-3">
-          <div
-            class="w-10 h-10 flex items-center justify-center"
-          >
-            <UIcon name="i-ph-shield-check" class="w-5 h-5" />
-          </div>
-          <div class="text-left">
-            <div >Security Essentials</div>
-            <div >Protect your users</div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Newsletter Signup Form -->
-      <div class="max-w-md mx-auto">
-        <form class="space-y-4" @submit.prevent="submitForm">
-          <div class="flex flex-col sm:flex-row gap-3">
-            <UInput
-              v-model="email"
-              type="email"
-              placeholder="Enter your email address"
-              size="lg"
-              class="flex-1"
-              :disabled="isSubmitting"
-              required
-            />
-            <UButton
-              type="submit"
-              :loading="isSubmitting"
-              :disabled="isSubmitting"
-              class="whitespace-nowrap"
-            >
-              <UIcon name="i-ph-download" />
-              Get Free Checklist
-            </UButton>
-          </div>
-
-          <div v-if="errorMessage" >
-            {{ errorMessage }}
-          </div>
-
-          <div v-if="isSuccess" >
-            ✅ Success! Check your email for the download link.
-          </div>
-        </form>
-
-        <p class="mt-4">
-          No spam, ever. Unsubscribe anytime. Join 1,000+ developers getting
-          weekly tips.
-        </p>
-      </div>
-
-      <!-- Social Proof -->
-      <div class="flex items-center justify-center gap-8">
-        <div class="flex items-center gap-2">
-          <UIcon name="i-ph-download" class="w-4 h-4" />
-          <span>500+ Downloads</span>
+        <div v-if="errorMessage">
+          {{ errorMessage }}
         </div>
-        <div class="flex items-center gap-2">
-          <UIcon name="i-ph-star-fill" class="w-4 h-4" />
-          <span>4.9/5 Rating</span>
+
+        <div v-if="isSuccess">
+          ✅ Success! Check your email for the download link.
         </div>
-        <div class="flex items-center gap-2">
-          <UIcon name="i-ph-users" class="w-4 h-4" />
-          <span>1,000+ Subscribers</span>
-        </div>
-      </div>
+      </form>
+
+      <p class="mt-4">
+        No spam, ever. Unsubscribe anytime. Join 1,000+ developers getting
+        weekly tips.
+      </p>
+    </div>
+
+    <!-- Social Proof -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+      <UCard variant="subtle" class="flex items-center gap-2">
+        <UIcon name="i-ph-download" class="w-4 h-4" />
+        <span>500+ Downloads</span>
+      </UCard>
+      <UCard variant="subtle" class="flex items-center gap-2">
+        <UIcon name="i-ph-star-fill" class="w-4 h-4" />
+        <span>4.9/5 Rating</span>
+      </UCard>
+      <UCard variant="subtle" class="flex items-center gap-2">
+        <UIcon name="i-ph-users" class="w-4 h-4" />
+        <span>1,000+ Subscribers</span>
+      </UCard>
     </div>
   </div>
 </template>

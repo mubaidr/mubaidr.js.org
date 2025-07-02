@@ -81,16 +81,11 @@ const caseStudies = [
 </script>
 
 <template>
-  <section class="space-y-12">
+  <div>
     <div class="text-center space-y-6">
-      <h2
-      >
-        Real Results from Real Clients
-      </h2>
+      <h2>Real Results from Real Clients</h2>
 
-      <p
-        class="max-w-3xl mx-auto"
-      >
+      <p class="max-w-3xl mx-auto">
         See how custom web solutions transformed businesses and delivered
         measurable results.
       </p>
@@ -98,6 +93,7 @@ const caseStudies = [
 
     <div class="grid gap-8 lg:grid-cols-2">
       <UCard
+        variant="subtle"
         v-for="study in caseStudies"
         :key="study.id"
         class="h-full"
@@ -107,16 +103,12 @@ const caseStudies = [
           <div class="space-y-3">
             <div class="flex items-center justify-between">
               <UBadge :label="study.industry" />
-              <span >{{
-                study.timeline
-              }}</span>
+              <span>{{ study.timeline }}</span>
             </div>
-            <h3
-              
-            >
+            <h3>
               {{ study.title }}
             </h3>
-            <p >
+            <p>
               {{ study.client }}
             </p>
           </div>
@@ -124,45 +116,35 @@ const caseStudies = [
           <!-- Challenge & Solution -->
           <div class="space-y-4">
             <div>
-              <h4 class="mb-2">
-                Challenge:
-              </h4>
-              <p >
+              <h4 class="mb-2">Challenge:</h4>
+              <p>
                 {{ study.challenge }}
               </p>
             </div>
             <div>
-              <h4 class="mb-2">
-                Solution:
-              </h4>
-              <p >
+              <h4 class="mb-2">Solution:</h4>
+              <p>
                 {{ study.solution }}
               </p>
             </div>
           </div>
 
           <!-- Results Grid -->
-          <div
-            class="p-4"
-          >
-            <h4 class="mb-3">
-              Key Results:
-            </h4>
+          <div class="p-4">
+            <h4 class="mb-3">Key Results:</h4>
             <div class="grid grid-cols-2 gap-3">
               <div
                 v-for="(result, index) in study.results.slice(0, 4)"
                 :key="index"
                 class="text-center"
               >
-                <div >
+                <div>
                   {{ result.after }}
                 </div>
-                <div >
+                <div>
                   {{ result.metric }}
                 </div>
-                <div
-                  
-                >
+                <div>
                   {{ result.improvement }}
                 </div>
               </div>
@@ -171,11 +153,7 @@ const caseStudies = [
 
           <!-- Technologies -->
           <div>
-            <h4
-              class="mb-2"
-            >
-              Technologies Used:
-            </h4>
+            <h4 class="mb-2">Technologies Used:</h4>
             <div class="flex flex-wrap gap-2">
               <UBadge
                 v-for="tech in study.technologies"
@@ -187,10 +165,7 @@ const caseStudies = [
 
           <!-- CTA -->
           <div class="pt-4">
-            <UButton
-              to="/contact"
-              class="w-full"
-            >
+            <UButton to="/contact" class="w-full">
               <UIcon name="i-ph-chat-circle" />
               Discuss Your Similar Project
             </UButton>
@@ -200,13 +175,10 @@ const caseStudies = [
     </div>
 
     <div class="text-center">
-      <UButton
-        to="/projects"
-        
-      >
+      <UButton to="/projects">
         <UIcon name="i-ph-folder-open" />
         View All Case Studies
       </UButton>
     </div>
-  </section>
+  </div>
 </template>
