@@ -81,7 +81,7 @@ function togglePause() {
                     v-if="testimonial.results && testimonial.results.length > 0"
                     class="space-y-3 mb-6"
                   >
-                    <h4 class="text-lg font-semibold">Key Results:</h4>
+                    <h3 class="text-lg font-semibold">Key Results:</h3>
                     <div class="grid grid-cols-2 gap-3">
                       <div
                         v-for="(
