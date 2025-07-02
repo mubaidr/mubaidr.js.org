@@ -47,7 +47,7 @@ const lastUpdated = ref("December 1, 2024")
       <!-- Privacy Policy Content -->
       <div class="space-y-8">
         <!-- Introduction -->
-        <UCard variant="subtle" class="">
+        <UCard class="">
           <div class="space-y-4">
             <h2 class="flex items-center gap-3">
               <UIcon name="i-ph-shield-check" />
@@ -69,7 +69,7 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- Information I Collect -->
-        <UCard variant="subtle" class="">
+        <UCard class="">
           <div class="space-y-6">
             <h2 class="flex items-center gap-3">
               <UIcon name="i-ph-database" />
@@ -140,7 +140,7 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- How I Use Your Information -->
-        <UCard variant="subtle" class="">
+        <UCard class="">
           <div class="space-y-4">
             <h2 class="flex items-center gap-3">
               <UIcon name="i-ph-gear" />
@@ -206,7 +206,7 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- Cookies and Tracking -->
-        <UCard variant="subtle" class="">
+        <UCard class="">
           <div class="space-y-4">
             <h2 class="flex items-center gap-3">
               <UIcon name="i-ph-cookie" />
@@ -243,7 +243,7 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- Third-Party Services -->
-        <UCard variant="subtle" class="">
+        <UCard class="">
           <div class="space-y-4">
             <h2 class="flex items-center gap-3">
               <UIcon name="i-ph-link" />
@@ -285,7 +285,7 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- Data Security -->
-        <UCard variant="subtle" class="">
+        <UCard class="">
           <div class="space-y-4">
             <h2 class="flex items-center gap-3">
               <UIcon name="i-ph-lock" />
@@ -316,7 +316,7 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- Your Rights -->
-        <UCard variant="subtle" class="">
+        <UCard class="">
           <div class="space-y-4">
             <h2 class="flex items-center gap-3">
               <UIcon name="i-ph-scales" />
@@ -384,7 +384,7 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- Data Retention -->
-        <UCard variant="subtle">
+        <UCard>
           <div class="space-y-4">
             <h2 class="flex items-center gap-3">
               <UIcon name="i-ph-clock" class="w-6 h-6" />
@@ -416,7 +416,7 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- Children's Privacy -->
-        <UCard variant="subtle">
+        <UCard>
           <div class="space-y-4">
             <h2 class="flex items-center gap-3">
               <UIcon name="i-ph-baby" class="w-6 h-6" />
@@ -433,7 +433,7 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- Changes to Privacy Policy -->
-        <UCard variant="subtle">
+        <UCard>
           <div class="space-y-4">
             <h2 class="flex items-center gap-3">
               <UIcon name="i-ph-bell" class="w-6 h-6" />
@@ -468,7 +468,7 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- Contact Information -->
-        <UCard variant="subtle">
+        <UCard>
           <div class="space-y-4">
             <h2 class="flex items-center gap-3">
               <UIcon name="i-ph-envelope" />
@@ -505,7 +505,7 @@ const lastUpdated = ref("December 1, 2024")
         </UCard>
 
         <!-- Call to Action -->
-        <UCard variant="subtle" class="text-center">
+        <UCard class="text-center">
           <div class="space-y-6">
             <div class="space-y-3">
               <UIcon name="i-ph-shield-check" />

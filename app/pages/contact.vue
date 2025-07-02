@@ -90,7 +90,7 @@ onMounted(() => {
             :key="method.title"
             @click="navigateTo(method.action, { external: true })"
           >
-            <UCard variant="subtle" class="">
+            <UCard>
               <div class="space-y-4 p-4">
                 <div class="w-16 h-16 flex items-center justify-center mx-auto">
                   <UIcon :name="method.icon" />

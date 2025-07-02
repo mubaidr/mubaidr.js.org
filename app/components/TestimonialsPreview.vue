@@ -12,7 +12,7 @@ function togglePause() {
 
 <template>
   <div>
-    <div class="space-y-6">
+    <div class="space-y-12">
       <div class="text-center space-y-6">
         <h2>What Clients Say About Working With Me</h2>
 
@@ -34,7 +34,7 @@ function togglePause() {
           <UIcon :name="isPaused ? 'i-ph-play' : 'i-ph-pause'" />
         </UButton>
 
-        <UCard variant="subtle" class="p-8">
+        <UCard class="p-8">
           <UCarousel
             v-slot="{ item: testimonial }"
             :items="testimonials"
@@ -135,18 +135,15 @@ function togglePause() {
                   </div>
                   <div
                     v-else
-                    class="w-14 h-14 flex items-center justify-center rounded-full flex-shrink-0 bg-gray-100 dark:bg-gray-800 shadow-sm"
+                    class="w-14 h-14 flex items-center justify-center rounded-full flex-shrink-0 shadow-sm"
                   >
                     <UIcon name="i-ph-user" />
                   </div>
                   <div class="flex-1 min-w-0">
-                    <p class="font-semibold text-gray-900 dark:text-white">
+                    <p class="font-semibold">
                       {{ testimonial.name }}
                     </p>
-                    <p
-                      v-if="testimonial.title"
-                      class="truncate text-sm text-gray-500 dark:text-gray-400"
-                    >
+                    <p v-if="testimonial.title" class="truncate text-sm">
                       {{ testimonial.title }}
                       <span v-if="testimonial.company"
                         >@ {{ testimonial.company }}</span
@@ -156,7 +153,6 @@ function togglePause() {
                       label="Verified Client"
                       class="mt-2"
                       color="success"
-                      variant="subtle"
                     />
                   </div>
                 </div>
@@ -167,7 +163,7 @@ function togglePause() {
       </div>
 
       <div v-else class="text-center">
-        <UCard variant="subtle" class="max-w-md mx-auto">
+        <UCard class="max-w-md mx-auto">
           <div class="space-y-4 text-center">
             <UIcon name="i-ph-chat-circle" class="mx-auto" />
             <p>No testimonials found.</p>

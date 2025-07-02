@@ -40,7 +40,6 @@ const { data: featuredProjects } = await useAsyncData(
         v-for="project in featuredProjects"
         :key="project.id"
         class="cursor-pointer h-full"
-        variant="subtle"
       >
         <div class="space-y-4">
           <!-- Project Header -->

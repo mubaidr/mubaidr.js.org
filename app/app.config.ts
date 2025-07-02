@@ -25,7 +25,7 @@ export default defineAppConfig({
         root: "shadow hover:shadow-lg transition-shadow duration-300 ease-in-out",
       },
       defaultVariants: {
-        variant: "subtle",
+        variant: "soft",
       },
     },
   },
