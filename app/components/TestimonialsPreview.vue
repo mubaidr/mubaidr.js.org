@@ -27,9 +27,9 @@ function togglePause() {
         <UButton
           class="absolute right-4 top-4 z-10"
           :title="isPaused ? 'Resume auto-play' : 'Pause auto-play'"
-          @click="togglePause"
           variant="soft"
           color="neutral"
+          @click="togglePause"
         >
           <UIcon :name="isPaused ? 'i-ph-play' : 'i-ph-pause'" />
         </UButton>

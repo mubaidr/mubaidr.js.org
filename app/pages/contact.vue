@@ -105,8 +105,8 @@ onMounted(() => {
 
                 <UButton
                   :title="method.title"
-                  @click="navigateTo(method.action, { external: true })"
                   class="cursor-pointer mt-3"
+                  @click="navigateTo(method.action, { external: true })"
                 >
                   {{ method.value }}
                 </UButton>

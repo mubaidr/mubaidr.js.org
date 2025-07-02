@@ -7,7 +7,7 @@ const { data: profile } = await useAsyncData("profile", () => {
 
 <template>
   <div>
-    <div class="space-y-16" v-if="profile">
+    <div v-if="profile" class="space-y-16">
       <!-- Header -->
       <div class="text-center space-y-6">
         <h2>Building Digital Solutions That Drive Results</h2>
