@@ -28,14 +28,17 @@ export default defineNuxtConfig({
           },
         },
         highlight: {
+          // Theme used in all color schemes.
+          theme: 'github-light',
+          // OR
           theme: {
             // Default theme (same as single string)
-            default: "github-light",
+            default: 'github-light',
             // Theme used if `html.dark`
-            dark: "github-dark",
+            dark: 'github-dark',
             // Theme used if `html.sepia`
-            sepia: "monokai",
-          },
+            sepia: 'monokai'
+          }
         },
         toc: {
           depth: 2,
