@@ -14,7 +14,7 @@ export default defineAppConfig({
     },
     button: {
       slots: {
-        base: "rounded-full",
+        base: "rounded-full font-semibold",
       },
       defaultVariants: {
         variant: "solid",

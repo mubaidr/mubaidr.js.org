@@ -3,7 +3,7 @@
 @plugin "@tailwindcss/typography";
 
 @theme static {
-  --font-sans: "Manrope", "Public Sans", sans-serif;
+  --font-sans: "Public Sans", sans-serif;
 }
 
 /* :root {
