@@ -13,12 +13,15 @@ const isMouseInside = ref(false)
 const mousePercent = { x: 50, y: 50 }
 let canvasRect = null
 
+// Canvas visibility state for fade-in animation
+const canvasVisible = ref(false)
+
 // Grid configuration
 const gridConfig = {
   size: 100, // Grid cell size
   lineWidth: 0.125, // Line width for grid lines - optimized for subtlety
   maxDistance: 150, // Maximum distance for mouse interaction - wider influence area
-  baseOpacity: 0.1, // Base opacity for grid lines - more subtle default state
+  baseOpacity: 0.15, // Base opacity for grid lines - more subtle default state
   highlightOpacity: 0.28, // Highlight opacity when mouse is near - balanced highlight effect
 }
 
@@ -31,7 +34,7 @@ const cachedColors = computed(() => {
       primary: { r: 147, g: 197, b: 253 }, // Softer blue for dark theme
       secondary: { r: 196, g: 181, b: 253 }, // Soft purple
       accent: { r: 167, g: 243, b: 208 }, // Soft green
-      baseOpacity: 0.125, // Slightly more visible in dark mode
+      baseOpacity: 0.15, // Slightly more visible in dark mode
       highlightOpacity: 0.75, // Balanced highlight for dark theme
     }
   } else {
@@ -39,7 +42,7 @@ const cachedColors = computed(() => {
       primary: { r: 59, g: 130, b: 246 }, // More vibrant blue for light theme
       secondary: { r: 139, g: 92, b: 246 }, // Vibrant purple
       accent: { r: 34, g: 197, b: 94 }, // Vibrant green
-      baseOpacity: 0.25, // Very subtle for light mode to avoid visual clutter
+      baseOpacity: 0.33, // Very subtle for light mode to avoid visual clutter
       highlightOpacity: 1, // Softer highlight to match light theme aesthetics
     }
   }
@@ -196,10 +199,11 @@ const handleResize = () => {
 }
 
 onMounted(() => {
-  // Start animation after a brief delay to ensure DOM is ready
+  // Start animation after 1 second delay and trigger fade-in
   setTimeout(() => {
     animate()
-  }, 100)
+    canvasVisible.value = true
+  }, 1000)
 
   // Add global mouse event listeners for document-wide interaction
   document.addEventListener("mousemove", throttledMouseMove)
@@ -231,6 +235,10 @@ onUnmounted(() => {
 <template>
   <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
     <!-- Grid Canvas -->
-    <canvas ref="gridCanvas" class="absolute inset-0 w-full h-full" />
+    <canvas
+      ref="gridCanvas"
+      class="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-out"
+      :class="{ 'opacity-0': !canvasVisible, 'opacity-100': canvasVisible }"
+    />
   </div>
 </template>
