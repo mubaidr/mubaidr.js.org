@@ -15,7 +15,6 @@ function togglePause() {
     <div class="space-y-12">
       <div class="text-center space-y-6">
         <h2>What Clients Say About Working With Me</h2>
-
         <p class="max-w-3xl mx-auto">
           Real feedback from satisfied clients who've transformed their
           businesses with custom web solutions
@@ -25,7 +24,7 @@ function togglePause() {
       <!-- Carousel Container using Nuxt UI UCarousel -->
       <div v-if="testimonials && testimonials.length > 0" class="relative">
         <UButton
-          class="absolute right-4 top-4 z-10"
+          class="absolute right-2 top-2 z-10 md:right-4 md:top-4"
           :title="isPaused ? 'Resume auto-play' : 'Pause auto-play'"
           variant="soft"
           color="neutral"
@@ -34,7 +33,7 @@ function togglePause() {
           <UIcon :name="isPaused ? 'i-ph-play' : 'i-ph-pause'" />
         </UButton>
 
-        <UCard class="p-8">
+        <UCard class="p-4 sm:p-6 md:p-8">
           <UCarousel
             v-slot="{ item: testimonial }"
             :items="testimonials"
@@ -44,34 +43,32 @@ function togglePause() {
             loop
             :autoplay="isPaused ? false : true"
             class="w-full"
-            :prev="{
-              variant: 'soft',
-            }"
-            :next="{
-              variant: 'soft',
-            }"
+            :prev="{ variant: 'soft' }"
+            :next="{ variant: 'soft' }"
           >
-            <div class="p-8">
+            <div class="p-2 sm:p-4 md:p-8">
               <div class="h-full flex flex-col justify-between">
                 <div>
                   <!-- Rating Stars -->
                   <div
                     v-if="testimonial.rating"
-                    class="flex items-center gap-1 mb-4"
+                    class="flex items-center gap-1 mb-3 sm:mb-4"
                   >
                     <UIcon
                       v-for="star in 5"
                       :key="star"
                       name="i-ph-star-fill"
+                      class="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400"
                     />
-                    <span class="ml-2 text-gray-600 dark:text-gray-300"
+                    <span
+                      class="ml-2 text-gray-600 dark:text-gray-300 text-sm sm:text-base"
                       >{{ testimonial.rating }}/5</span
                     >
                   </div>
 
                   <!-- Quote -->
-                  <div class="relative mb-6">
-                    <p class="text-xl leading-relaxed">
+                  <div class="relative mb-4 sm:mb-6">
+                    <p class="text-lg sm:text-xl leading-relaxed">
                       {{ testimonial.quote }}
                     </p>
                   </div>
@@ -79,47 +76,49 @@ function togglePause() {
                   <!-- Project Results -->
                   <div
                     v-if="testimonial.results && testimonial.results.length > 0"
-                    class="space-y-3 mb-6"
+                    class="space-y-2 sm:space-y-3 mb-4 sm:mb-6"
                   >
-                    <h3 class="text-lg font-semibold">Key Results:</h3>
-                    <div class="grid grid-cols-2 gap-3">
+                    <h3 class="text-base sm:text-lg font-semibold">
+                      Key Results:
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                       <div
                         v-for="(
                           result, resultIndex
                         ) in testimonial.results.slice(0, 4)"
                         :key="resultIndex"
-                        class="flex items-center gap-2 text-gray-600 dark:text-gray-300"
+                        class="flex items-center gap-2 text-gray-600 dark:text-gray-300 text-sm sm:text-base"
                       >
                         <UIcon
                           name="i-ph-check-circle"
                           class="w-4 h-4 flex-shrink-0 text-primary-500"
                         />
-                        <span class="text-base">{{ result }}</span>
+                        <span>{{ result }}</span>
                       </div>
                     </div>
                   </div>
 
                   <!-- Project Info -->
-                  <div v-if="testimonial.project" class="mb-6">
+                  <div v-if="testimonial.project" class="mb-4 sm:mb-6">
                     <div
-                      class="flex items-center gap-2 text-gray-600 dark:text-gray-300"
+                      class="flex items-center gap-2 text-gray-600 dark:text-gray-300 text-sm sm:text-base"
                     >
                       <UIcon
                         name="i-ph-briefcase"
                         class="w-5 h-5 text-primary-500"
                       />
-                      <span class="text-base">{{ testimonial.project }}</span>
+                      <span>{{ testimonial.project }}</span>
                     </div>
                   </div>
                 </div>
 
                 <!-- Author -->
                 <div
-                  class="flex items-center space-x-4 pt-4 border-t border-gray-200 dark:border-gray-700 mt-auto"
+                  class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 pt-4 border-t border-gray-200 dark:border-gray-700 mt-auto"
                 >
                   <div
                     v-if="testimonial.avatar"
-                    class="w-14 h-14 flex items-center justify-center overflow-hidden rounded-full flex-shrink-0 shadow-sm"
+                    class="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center overflow-hidden rounded-full flex-shrink-0 shadow-sm mb-2 sm:mb-0"
                   >
                     <img
                       :src="testimonial.avatar"
@@ -135,15 +134,18 @@ function togglePause() {
                   </div>
                   <div
                     v-else
-                    class="w-14 h-14 flex items-center justify-center rounded-full flex-shrink-0 shadow-sm"
+                    class="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-full flex-shrink-0 shadow-sm mb-2 sm:mb-0"
                   >
                     <UIcon name="i-ph-user" />
                   </div>
-                  <div class="flex-1 min-w-0">
+                  <div class="flex-1 min-w-0 text-center sm:text-left">
                     <p class="font-semibold">
                       {{ testimonial.name }}
                     </p>
-                    <p v-if="testimonial.title" class="truncate text-sm">
+                    <p
+                      v-if="testimonial.title"
+                      class="truncate text-xs sm:text-sm"
+                    >
                       {{ testimonial.title }}
                       <span v-if="testimonial.company"
                         >@ {{ testimonial.company }}</span
