@@ -1,17 +1,18 @@
 <template>
   <header
-    class="fixed w-full z-40 top-0 left-0 border-b border-gray-100 dark:border-stone-800 bg-white/75 dark:bg-stone-900/75 backdrop-blur-lg"
+    class="fixed left-1/2 top-6 transform -translate-x-1/2 z-50 w-auto max-w-3xl bg-white/80 dark:bg-stone-900/80 shadow-md shadow-black/20 hover:shadow-xl rounded-2xl border border-gray-100 dark:border-stone-800 backdrop-blur-lg transition-all duration-300"
+    style="padding: 0"
   >
-    <div class="max-w-6xl mx-auto px-4 md:px-8">
+    <div class="flex justify-center items-center px-6 py-2">
       <nav
-        class="flex justify-between items-center py-4"
+        class="flex justify-center items-center gap-8 w-full"
         role="navigation"
         aria-label="Main navigation"
       >
         <!-- Logo/Brand -->
         <ULink
           to="/"
-          class="flex items-center gap-3"
+          class="flex items-center gap-2 justify-center"
           aria-label="Go to homepage"
         >
           <div class="w-8 h-8 flex items-center justify-center">
@@ -21,13 +22,7 @@
         </ULink>
 
         <!-- Desktop Navigation -->
-        <div class="hidden lg:flex items-center gap-6">
-          <ULink
-            to="/"
-            class="hover:scale-110 transition-transform duration-300 ease-in-out"
-          >
-            Home
-          </ULink>
+        <div class="hidden lg:flex items-center gap-3 justify-center">
           <ULink
             to="/about"
             class="hover:scale-110 transition-transform duration-300 ease-in-out"
@@ -55,15 +50,15 @@
         </div>
 
         <!-- Action Buttons & Mobile Menu -->
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3 justify-center">
           <!-- Enhanced Contact CTA -->
-          <UButton
+          <!-- <UButton
             to="/contact"
             class="hidden lg:flex hover:shadow transition-shadow duration-300 ease-in-out"
           >
             <UIcon name="i-ph-rocket-launch" />
             <span>Start Project</span>
-          </UButton>
+          </UButton> -->
 
           <!-- Theme Switcher -->
           <ThemeSwitcher />
@@ -136,7 +131,6 @@ const mobileMenuOpen = ref(false)
 
 // Navigation items configuration
 const navigationItems = [
-  { path: "/", label: "Home", icon: "i-ph-house" },
   { path: "/about", label: "About", icon: "i-ph-user" },
   { path: "/services", label: "Services", icon: "i-ph-briefcase" },
   { path: "/projects", label: "Projects", icon: "i-ph-folder-open" },

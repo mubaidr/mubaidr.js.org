@@ -27,7 +27,7 @@ const { data: servicesPreview } = await useAsyncData(
         <UCard
           v-for="service in servicesPreview"
           :key="service.title"
-          class="modern-card glass text-center h-full"
+          class="text-center h-full"
         >
           <div class="space-y-6">
             <!-- Icon & Title -->
@@ -37,7 +37,7 @@ const { data: servicesPreview } = await useAsyncData(
               </div>
 
               <div class="space-y-3">
-                <h3 class="text-lg font-semibold">
+                <h3 class="font-semibold">
                   {{ service.title }}
                 </h3>
                 <p class="text-gray-600 dark:text-gray-300">
@@ -50,27 +50,6 @@ const { data: servicesPreview } = await useAsyncData(
             <UBadge size="xl" variant="outline">{{ service.suitable }}</UBadge>
           </div>
         </UCard>
-      </div>
-
-      <!-- Strong CTA to Services Page -->
-      <div class="text-center space-y-6">
-        <div class="max-w-3xl mx-auto">
-          <h3 class="mb-4">Ready to Explore All Services?</h3>
-          <p class="mb-8">
-            View detailed service offerings, pricing packages, and my proven
-            4-step process.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <UButton to="/services">
-              <UIcon name="i-ph-list" />
-              View All Services & Pricing
-            </UButton>
-            <UButton to="/contact" variant="outline">
-              <UIcon name="i-ph-chat-circle" />
-              Get Free Consultation
-            </UButton>
-          </div>
-        </div>
       </div>
     </div>
   </div>

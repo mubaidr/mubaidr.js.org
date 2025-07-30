@@ -43,7 +43,7 @@ const lastUpdated = ref("December 1, 2024")
     <!-- Terms Content -->
     <div class="space-y-8">
       <!-- Introduction -->
-      <UCard class="modern-card glass">
+      <UCard class="">
         <div class="space-y-4">
           <h2 class="flex items-center gap-3">
             <UIcon name="i-ph-handshake" class="w-6 h-6" />
@@ -65,7 +65,7 @@ const lastUpdated = ref("December 1, 2024")
       </UCard>
 
       <!-- Website Usage -->
-      <UCard class="modern-card glass">
+      <UCard class="">
         <div class="space-y-4">
           <h2 class="flex items-center gap-3">
             <UIcon name="i-ph-globe" class="w-6 h-6" />
@@ -138,7 +138,7 @@ const lastUpdated = ref("December 1, 2024")
       </UCard>
 
       <!-- Service Terms -->
-      <UCard class="modern-card glass">
+      <UCard class="">
         <div class="space-y-6">
           <h2 class="flex items-center gap-3">
             <UIcon name="i-ph-briefcase" class="w-6 h-6" />
@@ -229,7 +229,7 @@ const lastUpdated = ref("December 1, 2024")
       </UCard>
 
       <!-- Payment & Billing -->
-      <UCard class="modern-card glass">
+      <UCard class="">
         <div class="space-y-4">
           <h2 class="flex items-center gap-3">
             <UIcon name="i-ph-credit-card" class="w-6 h-6" />
@@ -306,7 +306,7 @@ const lastUpdated = ref("December 1, 2024")
       </UCard>
 
       <!-- Intellectual Property -->
-      <UCard class="modern-card glass">
+      <UCard class="">
         <div class="space-y-4">
           <h2 class="flex items-center gap-3">
             <UIcon name="i-ph-copyright" class="w-6 h-6" />
@@ -354,7 +354,7 @@ const lastUpdated = ref("December 1, 2024")
       </UCard>
 
       <!-- Project Delivery & Support -->
-      <UCard class="modern-card glass">
+      <UCard class="">
         <div class="space-y-4">
           <h2 class="flex items-center gap-3">
             <UIcon name="i-ph-rocket-launch" class="w-6 h-6" />
@@ -388,7 +388,7 @@ const lastUpdated = ref("December 1, 2024")
                 <li class="flex items-start gap-2">
                   <UIcon
                     name="i-ph-clock"
-                    class="w-4 h-4 text-blue-500 mt-1 flex-shrink-0"
+                    class="w-4 h-4 text-primary-500 mt-1 flex-shrink-0"
                   />
                   <span class="text-gray-600 dark:text-gray-300"
                     ><strong>Final Delivery:</strong> Via agreed delivery
@@ -447,7 +447,7 @@ const lastUpdated = ref("December 1, 2024")
       </UCard>
 
       <!-- Liability & Warranties -->
-      <UCard class="modern-card glass">
+      <UCard class="">
         <div class="space-y-4">
           <h2 class="flex items-center gap-3">
             <UIcon name="i-ph-shield-warning" class="w-6 h-6" />
@@ -501,7 +501,7 @@ const lastUpdated = ref("December 1, 2024")
       </UCard>
 
       <!-- Termination -->
-      <UCard class="modern-card glass">
+      <UCard class="">
         <div class="space-y-4">
           <h2 class="flex items-center gap-3">
             <UIcon name="i-ph-x-circle" class="w-6 h-6" />
@@ -585,7 +585,7 @@ const lastUpdated = ref("December 1, 2024")
       </UCard>
 
       <!-- General Provisions -->
-      <UCard class="modern-card glass">
+      <UCard class="">
         <div class="space-y-4">
           <h2 class="flex items-center gap-3">
             <UIcon name="i-ph-gavel" class="w-6 h-6" />
@@ -658,7 +658,7 @@ const lastUpdated = ref("December 1, 2024")
       </UCard>
 
       <!-- Contact Information -->
-      <UCard class="modern-card glass">
+      <UCard class="">
         <div class="space-y-4">
           <h2 class="flex items-center gap-3">
             <UIcon name="i-ph-envelope" class="w-6 h-6" />

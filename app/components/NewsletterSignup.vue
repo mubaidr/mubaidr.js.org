@@ -49,34 +49,34 @@ const submitForm = async () => {
 
     <!-- Benefits -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-      <UCard class="modern-card glass flex items-center gap-3">
+      <UCard class="flex items-center gap-3">
         <div class="w-10 h-10 flex items-center justify-center">
           <UIcon name="i-ph-check-circle" />
         </div>
         <div class="text-left">
-          <div class="text-base font-semibold">Pre-Launch Checklist</div>
+          <div class="font-semibold">Pre-Launch Checklist</div>
           <div class="text-xs text-gray-500 dark:text-gray-400">
             25 critical points
           </div>
         </div>
       </UCard>
-      <UCard class="modern-card glass flex items-center gap-3">
+      <UCard class="flex items-center gap-3">
         <div class="w-10 h-10 flex items-center justify-center">
           <UIcon name="i-ph-rocket-launch" />
         </div>
         <div class="text-left">
-          <div class="text-base font-semibold">Performance Guide</div>
+          <div class="font-semibold">Performance Guide</div>
           <div class="text-xs text-gray-500 dark:text-gray-400">
             Speed optimization tips
           </div>
         </div>
       </UCard>
-      <UCard class="modern-card glass flex items-center gap-3">
+      <UCard class="flex items-center gap-3">
         <div class="w-10 h-10 flex items-center justify-center">
           <UIcon name="i-ph-shield-check" />
         </div>
         <div class="text-left">
-          <div class="text-base font-semibold">Security Essentials</div>
+          <div class="font-semibold">Security Essentials</div>
           <div class="text-xs text-gray-500 dark:text-gray-400">
             Protect your users
           </div>
@@ -126,15 +126,15 @@ const submitForm = async () => {
 
     <!-- Social Proof -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-      <UCard class="modern-card glass flex items-center gap-2">
+      <UCard class="flex items-center gap-2">
         <UIcon name="i-ph-download" />
         <span>500+ Downloads</span>
       </UCard>
-      <UCard class="modern-card glass flex items-center gap-2">
+      <UCard class="flex items-center gap-2">
         <UIcon name="i-ph-star-fill" />
         <span>4.9/5 Rating</span>
       </UCard>
-      <UCard class="modern-card glass flex items-center gap-2">
+      <UCard class="flex items-center gap-2">
         <UIcon name="i-ph-users" />
         <span>1,000+ Subscribers</span>
       </UCard>

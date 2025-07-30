@@ -39,12 +39,12 @@ const { data: recentPosts } = await useAsyncData("recent-posts", async () => {
         <UCard
           v-for="(post, index) in recentPosts"
           :key="post.path || `post-${index}`"
-          class="modern-card glass cursor-pointer h-full"
+          class="cursor-pointer h-full"
           @click="navigateTo(post.path || '/blog')"
         >
           <div class="space-y-4">
             <div class="space-y-3">
-              <h3 class="text-lg font-semibold">
+              <h3 class="font-semibold">
                 {{ post.title || "Blog Post Title" }}
               </h3>
               <p class="text-gray-600 dark:text-gray-300">

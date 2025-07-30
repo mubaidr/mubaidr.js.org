@@ -12,7 +12,7 @@ const { data: profile } = await useAsyncData("profile", () => {
 
 <template>
   <div>
-    <UCard class="modern-card glass text-center ring-2 ring-primary">
+    <UCard class="text-center ring-2 ring-primary">
       <div class="space-y-8 py-8">
         <!-- Main Heading -->
         <div class="space-y-4">
@@ -78,6 +78,10 @@ const { data: profile } = await useAsyncData("profile", () => {
             <UIcon name="i-ph-rocket-launch" />
             {{ profile?.availability?.cta?.text || "Start Your Project" }}
           </UButton>
+          <UButton to="/services" variant="subtle" size="xl">
+            <UIcon name="i-ph-list" />
+            View All Services & Pricing
+          </UButton>
           <!--
               <UButton
                 href="https://cal.com/mubaidr"
@@ -93,7 +97,7 @@ const { data: profile } = await useAsyncData("profile", () => {
 
         <!-- Availability Note -->
         <div v-if="profile?.availability?.status === 'available'">
-          <UBadge variant="soft">
+          <UBadge variant="outline" size="xl">
             Only {{ profile?.availability?.slotsAvailable || 3 }} project slots
             available for
             {{ profile?.availability?.startDate || "August 2025" }}

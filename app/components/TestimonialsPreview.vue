@@ -33,7 +33,7 @@ function togglePause() {
           <UIcon :name="isPaused ? 'i-ph-play' : 'i-ph-pause'" />
         </UButton>
 
-        <UCard class="modern-card glass p-4 sm:p-6 md:p-8">
+        <UCard class="p-4 sm:p-6 md:p-8">
           <UCarousel
             v-slot="{ item: testimonial }"
             :items="testimonials"
@@ -165,7 +165,7 @@ function togglePause() {
       </div>
 
       <div v-else class="text-center">
-        <UCard class="modern-card glass max-w-md mx-auto">
+        <UCard class="max-w-md mx-auto">
           <div class="space-y-4 text-center">
             <UIcon name="i-ph-chat-circle" class="mx-auto" />
             <p>No testimonials found.</p>

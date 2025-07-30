@@ -39,7 +39,7 @@ const { data: featuredProjects } = await useAsyncData(
       <UCard
         v-for="project in featuredProjects"
         :key="project.id"
-        class="modern-card glass cursor-pointer h-full"
+        class="cursor-pointer h-full"
       >
         <div class="space-y-4">
           <!-- Project Header -->

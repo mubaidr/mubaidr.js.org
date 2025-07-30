@@ -6,59 +6,56 @@
   --font-sans: "Poppins", "Public Sans", sans-serif;
 }
 
+:root {
+  --ui-radius: 0.75em;
+}
+
 body {
   overflow-y: scroll;
-  @apply bg-gradient-to-br from-white via-blue-50 to-purple-100 dark:from-neutral-950 dark:via-neutral-900 dark:to-indigo-950;
+  @apply bg-gradient-to-br from-neutral-50/20 via-neutral-950/5 to-neutral-50/10 dark:from-neutral-950/20 dark:via-neutral-50/5 dark:to-neutral-950/10;
   font-family: var(--font-sans);
 }
 
-/* Modern Glassmorphism Utility */
-.glass {
-  @apply bg-white/30 dark:bg-neutral-900/60 backdrop-blur-2xl border border-white/30 dark:border-neutral-800/60 rounded-2xl;
-}
-
-/* Modern Card Shadow */
-
-/* Modern Card Shadow - subtle by default, large on hover */
-.modern-card {
-  @apply shadow shadow-black/20 border border-white/20 dark:border-neutral-800/60 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black/30;
-}
-
-/* Modern Button */
-
-/* Modern Button - subtle shadow by default, large on hover */
-.modern-btn {
-  @apply bg-gradient-to-tr from-primary to-indigo-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-primary/20 transition-all duration-300;
-  @apply hover:from-indigo-500 hover:to-primary hover:scale-105 hover:shadow-2xl hover:shadow-primary/30 hover:brightness-105;
-  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2;
-  @apply active:scale-95 active:shadow-xl active:brightness-95;
-}
-
-/* Typography */
+/* Headings: all sizes decreased by one step */
 h1,
 .h1 {
-  @apply text-4xl md:text-5xl font-extrabold tracking-tighter bg-gradient-to-r from-primary to-indigo-500 bg-clip-text text-transparent;
+  @apply text-3xl md:text-4xl font-extrabold tracking-tighter;
 }
 
 h2,
 .h2 {
-  @apply text-3xl md:text-4xl font-bold tracking-tight text-primary dark:text-indigo-400;
+  @apply text-2xl md:text-3xl font-bold tracking-tight;
 }
 
 h3,
 .h3 {
-  @apply text-xl md:text-2xl font-bold text-neutral-800 dark:text-neutral-100;
+  @apply text-xl md:text-2xl font-bold;
+}
+
+.h4 {
+  @apply text-base md:text-lg font-semibold;
+}
+
+/* Paragraph and other text: decrease by one step */
+p,
+.prose p,
+.text-base {
+  @apply text-sm md:text-base;
+}
+
+.text-lg {
+  @apply text-base md:text-lg;
+}
+
+.text-xl {
+  @apply text-lg md:text-xl;
+}
+
+.text-2xl {
+  @apply text-xl md:text-2xl;
 }
 
 h4,
 .h4 {
-  @apply text-lg md:text-xl font-semibold text-neutral-700 dark:text-neutral-300;
-}
-
-/* Modernized Micro-interactions */
-.interactive {
-  @apply shadow-sm shadow-primary/5 transition-all duration-300 ease-in-out;
-  @apply hover:scale-105 hover:shadow-xl hover:shadow-primary/20 hover:bg-primary/5;
-  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2;
-  @apply active:scale-95 active:shadow-md active:bg-primary/10;
+  @apply text-lg md:text-xl font-semibold;
 }

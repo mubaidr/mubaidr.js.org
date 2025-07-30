@@ -1,5 +1,7 @@
 <template>
-  <footer class="glass shadow-2xl border-t-0">
+  <footer
+    class="bg-white/80 dark:bg-stone-900/80 shadow-md shadow-black/20 hover:shadow-xl border border-gray-100 dark:border-stone-800 backdrop-blur-lg transition-all duration-300"
+  >
     <div class="max-w-6xl mx-auto px-4 md:px-8 py-12">
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         <!-- Brand & Description -->
@@ -20,7 +22,6 @@
               to="https://github.com/mubaidr"
               external
               aria-label="GitHub Profile"
-              class="interactive"
               variant="ghost"
             >
               <UIcon name="i-ph-github-logo" />
@@ -29,7 +30,6 @@
               to="https://linkedin.com/in/mubaidr"
               external
               aria-label="LinkedIn Profile"
-              class="interactive"
               variant="ghost"
             >
               <UIcon name="i-ph-linkedin-logo" />
@@ -38,7 +38,6 @@
               to="https://twitter.com/mubaidr"
               external
               aria-label="Twitter Profile"
-              class="interactive"
               variant="ghost"
             >
               <UIcon name="i-ph-twitter-logo" />
@@ -51,16 +50,16 @@
           <h3 class="mb-4">Quick Links</h3>
           <ul class="space-y-3">
             <li>
-              <ULink to="/" class="interactive"> Home </ULink>
+              <ULink to="/"> Home </ULink>
             </li>
             <li>
-              <ULink to="/about" class="interactive"> About </ULink>
+              <ULink to="/about"> About </ULink>
             </li>
+            <!-- <li>
+              <ULink to="/projects"> Projects </ULink>
+            </li> -->
             <li>
-              <ULink to="/projects" class="interactive"> Projects </ULink>
-            </li>
-            <li>
-              <ULink to="/blog" class="interactive"> Blog </ULink>
+              <ULink to="/blog"> Blog </ULink>
             </li>
           </ul>
         </div>
@@ -70,21 +69,17 @@
           <h3 class="mb-4">Services</h3>
           <ul class="space-y-3">
             <li>
-              <ULink to="/services" class="interactive">
-                Web Development
-              </ULink>
+              <ULink to="/services"> Web Development </ULink>
             </li>
             <li>
-              <ULink to="/services" class="interactive">
-                Technical Consulting
-              </ULink>
+              <ULink to="/services"> Technical Consulting </ULink>
             </li>
             <li>
-              <ULink to="/services" class="interactive"> Code Review </ULink>
+              <ULink to="/services"> Code Review </ULink>
             </li>
-            <li>
-              <ULink to="/contact" class="interactive"> Get In Touch </ULink>
-            </li>
+            <!-- <li>
+              <ULink to="/contact"> Get In Touch </ULink>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -99,9 +94,9 @@
             reserved.
           </p>
           <div class="flex items-center gap-6">
-            <ULink to="/contact?faqs=1" class="interactive"> FAQs </ULink>
-            <ULink to="/privacy" class="interactive"> Privacy Policy </ULink>
-            <ULink to="/terms" class="interactive"> Terms of Service </ULink>
+            <ULink to="/contact?faqs=1"> FAQs </ULink>
+            <ULink to="/privacy"> Privacy Policy </ULink>
+            <ULink to="/terms"> Terms of Service </ULink>
           </div>
         </div>
       </div>

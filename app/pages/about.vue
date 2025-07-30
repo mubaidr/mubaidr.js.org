@@ -61,7 +61,7 @@ useHead({
             :key="experience.id"
           >
             <div />
-            <UCard class="modern-card glass relative">
+            <UCard class="relative">
               <div class="space-y-6">
                 <!-- Experience Header -->
                 <div
@@ -165,7 +165,7 @@ useHead({
             class="h-full"
           >
             <div />
-            <UCard class="modern-card glass">
+            <UCard class="">
               <div class="space-y-4">
                 <div class="flex items-start gap-4">
                   <div class="flex items-center justify-center flex-shrink-0">
@@ -228,12 +228,12 @@ useHead({
           <div
             v-for="cert in professionalJourney?.certifications"
             :key="cert.id"
-            class="h-full"
+            class="h-full text-center"
           >
-            <UCard class="modern-card glass">
+            <UCard class="">
               <div class="space-y-4">
                 <div class="w-16 h-16 flex items-center justify-center mx-auto">
-                  <UIcon name="i-ph-certificate" size="3em" class="text-info" />
+                  <UIcon name="i-ph-certificate" size="4em" class="text-info" />
                 </div>
 
                 <div class="space-y-3">
@@ -271,22 +271,31 @@ useHead({
             class="h-full"
           >
             <div />
-            <UCard class="modern-card glass h-full">
-              <div class="space-y-4">
-                <div class="flex items-center gap-3 mb-3">
+            <UCard class="h-full">
+              <div
+                class="space-y-4 text-center content-center items-center justify-center"
+              >
+                <div
+                  class="flex gap-2 mb-6 text-center content-center items-center justify-center"
+                >
                   <div class="flex items-center justify-center flex-shrink-0">
                     <UIcon name="i-ph-code" class="w-6 h-6" />
                   </div>
-                  <h3 class="capitalize">
+                  <h3
+                    class="capitalize text-center content-center items-center justify-center"
+                  >
                     {{ category.replace(/([A-Z])/g, " $1") }}
                   </h3>
                 </div>
-                <div class="flex flex-wrap gap-2">
+                <div
+                  class="flex flex-wrap gap-2 text-center content-center items-center justify-center"
+                >
                   <UBadge
                     v-for="skill in skills"
                     :key="skill"
                     :label="skill"
                     variant="outline"
+                    size="xl"
                   />
                 </div>
               </div>
@@ -297,7 +306,7 @@ useHead({
 
       <!-- Call to Action -->
       <section class="space-y-12">
-        <UCard class="modern-card glass text-center ring-2 ring-primary">
+        <UCard class="text-center ring-2 ring-primary">
           <div class="space-y-6">
             <div class="space-y-3">
               <h3>Ready to Work Together?</h3>

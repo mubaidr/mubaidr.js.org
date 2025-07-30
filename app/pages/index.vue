@@ -158,7 +158,7 @@ if (profile.value) {
               href="https://cal.com/mubaidr"
               external
               size="xl"
-              variant="outline"
+              variant="subtle"
             >
               <UIcon name="i-ph-calendar-check" />
               Book Free Consultation
