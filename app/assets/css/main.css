@@ -3,7 +3,7 @@
 @plugin "@tailwindcss/typography";
 
 @theme static {
-  --font-sans: "Public Sans", sans-serif;
+  --font-sans: "Inter", "Public Sans", sans-serif;
 }
 
 /* :root {
@@ -12,6 +12,7 @@
 
 body {
   overflow-y: scroll;
+  @apply bg-white dark:bg-neutral-950;
 }
 
 /* Typography */

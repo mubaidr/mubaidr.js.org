@@ -4,8 +4,8 @@ export default defineAppConfig({
   },
   ui: {
     colors: {
-      primary: "green",
-      neutral: "stone",
+      primary: "blue",
+      neutral: "zinc",
     },
     badge: {
       defaultVariants: {
@@ -22,7 +22,7 @@ export default defineAppConfig({
     },
     card: {
       slots: {
-        root: "shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out",
+        root: "shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out dark:bg-neutral-900/50",
       },
       defaultVariants: {
         variant: "outline",

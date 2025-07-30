@@ -1,25 +1,25 @@
 {
   "devDependencies": {
-    "@iconify-json/devicon": "^1.2.29",
+    "@iconify-json/devicon": "^1.2.35",
     "@iconify-json/ph": "^1.2.2",
     "@nuxt/content": "^3.6.3",
-    "@nuxt/eslint": "^1.5.2",
+    "@nuxt/eslint": "^1.7.1",
     "@nuxt/fonts": "^0.11.4",
     "@nuxt/icon": "^1.15.0",
-    "@nuxt/image": "^1.10.0",
-    "@nuxt/ui": "^3.2.0",
+    "@nuxt/image": "^1.11.0",
+    "@nuxt/ui": "^3.3.0",
     "@nuxthq/studio": "^2.2.1",
     "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/mdc": "0.17.0",
+    "@nuxtjs/mdc": "0.17.2",
     "@nuxtjs/seo": "^3.1.0",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.11",
-    "nuxt": "^3.17.6",
-    "vue-tsc": "^3.0.1",
+    "nuxt": "^4.0.2",
     "nuxt-feedme": "^1.0.1",
     "nuxt-mcp": "^0.2.3",
     "tailwindcss": "^4.1.11",
-    "vite-plugin-eslint2": "^5.0.4"
+    "vite-plugin-eslint2": "^5.0.4",
+    "vue-tsc": "^3.0.4"
   },
   "engines": {
     "node": ">=23",
@@ -37,5 +37,8 @@
     "lint": "eslint . --fix",
     "format": "prettier --write ."
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "better-sqlite3": "^12.2.0"
+  }
 }
