@@ -39,17 +39,17 @@ const { data: featuredProjects } = await useAsyncData(
       <UCard
         v-for="project in featuredProjects"
         :key="project.id"
-        class="cursor-pointer h-full"
+        class="modern-card glass cursor-pointer h-full"
       >
         <div class="space-y-4">
           <!-- Project Header -->
           <div class="flex items-center justify-center">
-            <UIcon name="i-ph-code" />
+            <UIcon name="i-ph-code" class="text-2xl text-primary" />
           </div>
 
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <h3 class="text-xl font-semibold">
+              <h3 class="text-lg font-semibold">
                 {{ project.title }}
               </h3>
               <UBadge :label="project.category" />
@@ -73,7 +73,7 @@ const { data: featuredProjects } = await useAsyncData(
     </div>
 
     <div v-if="!hideLink" class="text-center">
-      <UButton to="/projects">
+      <UButton to="/projects" class="modern-btn">
         <UIcon name="i-ph-folder-open" />
         View All Projects
       </UButton>

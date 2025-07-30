@@ -123,7 +123,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
                       :src="post.image"
                       :alt="post.title"
                       class="w-full h-full object-cover"
-                    />
+                    >
                     <div v-else class="flex items-center justify-center h-full">
                       <UIcon name="i-ph-article-duotone" />
                     </div>

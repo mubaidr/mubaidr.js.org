@@ -61,14 +61,14 @@ function togglePause() {
                       class="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400"
                     />
                     <span
-                      class="ml-2 text-gray-600 dark:text-gray-300 text-sm sm:text-base"
+                      class="ml-2 text-gray-600 dark:text-gray-300 text-xs sm:text-sm"
                       >{{ testimonial.rating }}/5</span
                     >
                   </div>
 
                   <!-- Quote -->
                   <div class="relative mb-4 sm:mb-6">
-                    <p class="text-lg sm:text-xl leading-relaxed">
+                    <p class="text-base sm:text-lg leading-relaxed">
                       {{ testimonial.quote }}
                     </p>
                   </div>
@@ -78,7 +78,7 @@ function togglePause() {
                     v-if="testimonial.results && testimonial.results.length > 0"
                     class="space-y-2 sm:space-y-3 mb-4 sm:mb-6"
                   >
-                    <h3 class="text-base sm:text-lg font-semibold">
+                    <h3 class="text-sm sm:text-base font-semibold">
                       Key Results:
                     </h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
@@ -87,7 +87,7 @@ function togglePause() {
                           result, resultIndex
                         ) in testimonial.results.slice(0, 4)"
                         :key="resultIndex"
-                        class="flex items-center gap-2 text-gray-600 dark:text-gray-300 text-sm sm:text-base"
+                        class="flex items-center gap-2 text-gray-600 dark:text-gray-300 text-xs sm:text-sm"
                       >
                         <UIcon
                           name="i-ph-check-circle"
@@ -101,7 +101,7 @@ function togglePause() {
                   <!-- Project Info -->
                   <div v-if="testimonial.project" class="mb-4 sm:mb-6">
                     <div
-                      class="flex items-center gap-2 text-gray-600 dark:text-gray-300 text-sm sm:text-base"
+                      class="flex items-center gap-2 text-gray-600 dark:text-gray-300 text-xs sm:text-sm"
                     >
                       <UIcon
                         name="i-ph-briefcase"
@@ -144,7 +144,7 @@ function togglePause() {
                     </p>
                     <p
                       v-if="testimonial.title"
-                      class="truncate text-xs sm:text-sm"
+                      class="truncate text-[10px] sm:text-xs"
                     >
                       {{ testimonial.title }}
                       <span v-if="testimonial.company"

@@ -92,7 +92,7 @@ const filteredProjects = computed(() => {
                   :src="project.image"
                   :alt="project.title"
                   class="w-full h-full object-cover"
-                />
+                >
                 <UIcon v-else name="i-ph-folder-open" />
               </div>
 

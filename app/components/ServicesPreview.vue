@@ -37,7 +37,7 @@ const { data: servicesPreview } = await useAsyncData(
               </div>
 
               <div class="space-y-3">
-                <h3 class="text-xl font-semibold">
+                <h3 class="text-lg font-semibold">
                   {{ service.title }}
                 </h3>
                 <p class="text-gray-600 dark:text-gray-300">

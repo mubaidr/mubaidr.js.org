@@ -54,8 +54,8 @@ const submitForm = async () => {
           <UIcon name="i-ph-check-circle" />
         </div>
         <div class="text-left">
-          <div class="text-lg font-semibold">Pre-Launch Checklist</div>
-          <div class="text-sm text-gray-500 dark:text-gray-400">
+          <div class="text-base font-semibold">Pre-Launch Checklist</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400">
             25 critical points
           </div>
         </div>
@@ -65,8 +65,8 @@ const submitForm = async () => {
           <UIcon name="i-ph-rocket-launch" />
         </div>
         <div class="text-left">
-          <div class="text-lg font-semibold">Performance Guide</div>
-          <div class="text-sm text-gray-500 dark:text-gray-400">
+          <div class="text-base font-semibold">Performance Guide</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400">
             Speed optimization tips
           </div>
         </div>
@@ -76,8 +76,8 @@ const submitForm = async () => {
           <UIcon name="i-ph-shield-check" />
         </div>
         <div class="text-left">
-          <div class="text-lg font-semibold">Security Essentials</div>
-          <div class="text-sm text-gray-500 dark:text-gray-400">
+          <div class="text-base font-semibold">Security Essentials</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400">
             Protect your users
           </div>
         </div>

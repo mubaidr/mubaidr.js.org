@@ -1,7 +1,5 @@
 <template>
-  <footer
-    class="border-t border-gray-200 dark:border-gray-800 bg-white/75 dark:bg-stone-900/75 backdrop-blur-lg"
-  >
+  <footer class="glass shadow-2xl border-t-0">
     <div class="max-w-6xl mx-auto px-4 md:px-8 py-12">
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         <!-- Brand & Description -->
@@ -22,7 +20,7 @@
               to="https://github.com/mubaidr"
               external
               aria-label="GitHub Profile"
-              class="hover:scale-110 transition-transform duration-300 ease-in-out"
+              class="interactive"
               variant="ghost"
             >
               <UIcon name="i-ph-github-logo" />
@@ -31,7 +29,7 @@
               to="https://linkedin.com/in/mubaidr"
               external
               aria-label="LinkedIn Profile"
-              class="hover:scale-110 transition-transform duration-300 ease-in-out"
+              class="interactive"
               variant="ghost"
             >
               <UIcon name="i-ph-linkedin-logo" />
@@ -40,7 +38,7 @@
               to="https://twitter.com/mubaidr"
               external
               aria-label="Twitter Profile"
-              class="hover:scale-110 transition-transform duration-300 ease-in-out"
+              class="interactive"
               variant="ghost"
             >
               <UIcon name="i-ph-twitter-logo" />
@@ -53,36 +51,16 @@
           <h3 class="mb-4">Quick Links</h3>
           <ul class="space-y-3">
             <li>
-              <ULink
-                to="/"
-                class="hover:text-primary transition-colors duration-300 ease-in-out"
-              >
-                Home
-              </ULink>
+              <ULink to="/" class="interactive"> Home </ULink>
             </li>
             <li>
-              <ULink
-                to="/about"
-                class="hover:text-primary transition-colors duration-300 ease-in-out"
-              >
-                About
-              </ULink>
+              <ULink to="/about" class="interactive"> About </ULink>
             </li>
             <li>
-              <ULink
-                to="/projects"
-                class="hover:text-primary transition-colors duration-300 ease-in-out"
-              >
-                Projects
-              </ULink>
+              <ULink to="/projects" class="interactive"> Projects </ULink>
             </li>
             <li>
-              <ULink
-                to="/blog"
-                class="hover:text-primary transition-colors duration-300 ease-in-out"
-              >
-                Blog
-              </ULink>
+              <ULink to="/blog" class="interactive"> Blog </ULink>
             </li>
           </ul>
         </div>
@@ -92,36 +70,20 @@
           <h3 class="mb-4">Services</h3>
           <ul class="space-y-3">
             <li>
-              <ULink
-                to="/services"
-                class="hover:text-primary transition-colors duration-300 ease-in-out"
-              >
+              <ULink to="/services" class="interactive">
                 Web Development
               </ULink>
             </li>
             <li>
-              <ULink
-                to="/services"
-                class="hover:text-primary transition-colors duration-300 ease-in-out"
-              >
+              <ULink to="/services" class="interactive">
                 Technical Consulting
               </ULink>
             </li>
             <li>
-              <ULink
-                to="/services"
-                class="hover:text-primary transition-colors duration-300 ease-in-out"
-              >
-                Code Review
-              </ULink>
+              <ULink to="/services" class="interactive"> Code Review </ULink>
             </li>
             <li>
-              <ULink
-                to="/contact"
-                class="hover:text-primary transition-colors duration-300 ease-in-out"
-              >
-                Get In Touch
-              </ULink>
+              <ULink to="/contact" class="interactive"> Get In Touch </ULink>
             </li>
           </ul>
         </div>
@@ -137,24 +99,9 @@
             reserved.
           </p>
           <div class="flex items-center gap-6">
-            <ULink
-              to="/contact?faqs=1"
-              class="hover:text-primary transition-colors duration-300 ease-in-out"
-            >
-              FAQs
-            </ULink>
-            <ULink
-              to="/privacy"
-              class="hover:text-primary transition-colors duration-300 ease-in-out"
-            >
-              Privacy Policy
-            </ULink>
-            <ULink
-              to="/terms"
-              class="hover:text-primary transition-colors duration-300 ease-in-out"
-            >
-              Terms of Service
-            </ULink>
+            <ULink to="/contact?faqs=1" class="interactive"> FAQs </ULink>
+            <ULink to="/privacy" class="interactive"> Privacy Policy </ULink>
+            <ULink to="/terms" class="interactive"> Terms of Service </ULink>
           </div>
         </div>
       </div>

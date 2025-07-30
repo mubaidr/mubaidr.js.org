@@ -44,7 +44,7 @@ const { data: recentPosts } = await useAsyncData("recent-posts", async () => {
         >
           <div class="space-y-4">
             <div class="space-y-3">
-              <h3 class="text-xl font-semibold">
+              <h3 class="text-lg font-semibold">
                 {{ post.title || "Blog Post Title" }}
               </h3>
               <p class="text-gray-600 dark:text-gray-300">
@@ -54,7 +54,7 @@ const { data: recentPosts } = await useAsyncData("recent-posts", async () => {
                 }}
               </p>
               <div
-                class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400"
+                class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400"
               >
                 <span>
                   {{

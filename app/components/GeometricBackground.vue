@@ -1,244 +1,113 @@
-<script setup>
-const gridCanvas = useTemplateRef("gridCanvas")
-let animationFrame = null
-let canvasContext = null
-const lastCanvasSize = { width: 0, height: 0 }
-
-// Color mode for theme-aware styling
+<script setup lang="ts">
+import { ref, computed, onMounted, onUnmounted } from "vue"
 const colorMode = useColorMode()
+const visible = ref(false)
+const parallax = ref({ x: 0, y: 0 })
 
-// Mouse tracking
-const mousePos = ref({ x: 0, y: 0 })
-const isMouseInside = ref(false)
-const mousePercent = { x: 50, y: 50 }
-let canvasRect = null
-
-// Canvas visibility state for fade-in animation
-const canvasVisible = ref(false)
-
-// Grid configuration
-const gridConfig = {
-  size: 100, // Grid cell size
-  lineWidth: 0.125, // Line width for grid lines - optimized for subtlety
-  maxDistance: 150, // Maximum distance for mouse interaction - wider influence area
-  baseOpacity: 0.15, // Base opacity for grid lines - more subtle default state
-  highlightOpacity: 0.28, // Highlight opacity when mouse is near - balanced highlight effect
-}
-
-// Performance optimization: Cache theme colors
-const cachedColors = computed(() => {
-  const isDark = colorMode.value === "dark"
-
-  if (isDark) {
+// Theme-aware color palette
+const palette = computed(() => {
+  if (colorMode.value === "dark") {
     return {
-      primary: { r: 147, g: 197, b: 253 }, // Softer blue for dark theme
-      secondary: { r: 196, g: 181, b: 253 }, // Soft purple
-      accent: { r: 167, g: 243, b: 208 }, // Soft green
-      baseOpacity: 0.15, // Slightly more visible in dark mode
-      highlightOpacity: 0.75, // Balanced highlight for dark theme
+      accent1: "#93c5fd", // blue
+      accent2: "#c4b5fd", // purple
+      accent3: "#a7f3d0", // green
+      glass: "rgba(24,25,38,0.7)",
+      gradient: "linear-gradient(135deg, #93c5fd 0%, #c4b5fd 100%)",
     }
   } else {
     return {
-      primary: { r: 59, g: 130, b: 246 }, // More vibrant blue for light theme
-      secondary: { r: 139, g: 92, b: 246 }, // Vibrant purple
-      accent: { r: 34, g: 197, b: 94 }, // Vibrant green
-      baseOpacity: 0.33, // Very subtle for light mode to avoid visual clutter
-      highlightOpacity: 1, // Softer highlight to match light theme aesthetics
+      accent1: "#3b82f6",
+      accent2: "#8b5cf6",
+      accent3: "#22c55e",
+      glass: "rgba(248,250,252,0.7)",
+      gradient: "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)",
     }
   }
 })
 
-// Optimized grid drawing with mouse interaction
-const drawGrid = () => {
-  if (!gridCanvas.value) return
-
-  const canvas = gridCanvas.value
-
-  // Cache canvas context
-  if (!canvasContext) {
-    canvasContext = canvas.getContext("2d")
-  }
-
-  const rect = canvas.getBoundingClientRect()
-
-  // Only resize canvas if dimensions changed
-  if (
-    lastCanvasSize.width !== rect.width ||
-    lastCanvasSize.height !== rect.height
-  ) {
-    canvas.width = rect.width
-    canvas.height = rect.height
-    lastCanvasSize.width = rect.width
-    lastCanvasSize.height = rect.height
-
-    // Update cached canvas rect for mouse calculations
-    canvasRect = rect
-  }
-
-  // Clear canvas
-  canvasContext.clearRect(0, 0, canvas.width, canvas.height)
-
-  const colors = cachedColors.value
-  const { size, lineWidth, maxDistance } = gridConfig
-
-  // Calculate grid lines
-  const cols = Math.ceil(canvas.width / size) + 1
-  const rows = Math.ceil(canvas.height / size) + 1
-
-  // Mouse position for highlighting
-  const mouseX =
-    isMouseInside.value && canvasRect
-      ? mousePos.value.x - canvasRect.left
-      : -1000
-  const mouseY =
-    isMouseInside.value && canvasRect
-      ? mousePos.value.y - canvasRect.top
-      : -1000
-
-  canvasContext.lineWidth = lineWidth
-
-  // Draw vertical lines
-  for (let i = 0; i <= cols; i++) {
-    const x = i * size
-
-    // Calculate distance from mouse to line
-    const distanceToMouse = Math.abs(x - mouseX)
-    let opacity = colors.baseOpacity
-
-    if (isMouseInside.value && distanceToMouse < maxDistance) {
-      // Smoother easing function for more natural interaction
-      const factor = Math.pow(1 - distanceToMouse / maxDistance, 1.5)
-      opacity =
-        colors.baseOpacity +
-        (colors.highlightOpacity - colors.baseOpacity) * factor
-    }
-
-    const { r, g, b } = colors.primary
-    canvasContext.strokeStyle = `rgba(${r}, ${g}, ${b}, ${opacity})`
-    canvasContext.beginPath()
-    canvasContext.moveTo(x, 0)
-    canvasContext.lineTo(x, canvas.height)
-    canvasContext.stroke()
-  }
-
-  // Draw horizontal lines
-  for (let i = 0; i <= rows; i++) {
-    const y = i * size
-
-    // Calculate distance from mouse to line
-    const distanceToMouse = Math.abs(y - mouseY)
-    let opacity = colors.baseOpacity
-
-    if (isMouseInside.value && distanceToMouse < maxDistance) {
-      // Smoother easing function for more natural interaction
-      const factor = Math.pow(1 - distanceToMouse / maxDistance, 1.5)
-      opacity =
-        colors.baseOpacity +
-        (colors.highlightOpacity - colors.baseOpacity) * factor
-    }
-
-    const { r, g, b } = colors.primary
-    canvasContext.strokeStyle = `rgba(${r}, ${g}, ${b}, ${opacity})`
-    canvasContext.beginPath()
-    canvasContext.moveTo(0, y)
-    canvasContext.lineTo(canvas.width, y)
-    canvasContext.stroke()
-  }
-}
-
-const animate = () => {
-  drawGrid()
-  animationFrame = requestAnimationFrame(animate)
-}
-
-// Optimized mouse event handlers
-const handleMouseMove = (event) => {
-  mousePos.value = { x: event.clientX, y: event.clientY }
-  isMouseInside.value = true
-
-  // Update cached mouse percentage when canvas rect is available
-  if (canvasRect) {
-    mousePercent.x =
-      ((event.clientX - canvasRect.left) / canvasRect.width) * 100
-    mousePercent.y =
-      ((event.clientY - canvasRect.top) / canvasRect.height) * 100
-  }
-}
-
-const handleMouseEnter = () => {
-  isMouseInside.value = true
-}
-
-const handleMouseLeave = () => {
-  isMouseInside.value = false
-}
-
-// Handle visibility change to pause interactions when tab is not active
-const handleVisibilityChange = () => {
-  if (document.hidden) {
-    isMouseInside.value = false
-  }
-}
-
-// Throttled mouse move handler for better performance
-let mouseThrottleTimeout = null
-const throttledMouseMove = (event) => {
-  if (mouseThrottleTimeout) return
-
-  mouseThrottleTimeout = setTimeout(() => {
-    handleMouseMove(event)
-    mouseThrottleTimeout = null
-  }, 16) // ~60fps throttling
-}
-
-// Handle resize to update cached canvas rect
-const handleResize = () => {
-  if (gridCanvas.value) {
-    canvasRect = gridCanvas.value.getBoundingClientRect()
-  }
+// Animate parallax on mouse move
+const handleMouseMove = (e: MouseEvent) => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 2
+  const y = (e.clientY / window.innerHeight - 0.5) * 2
+  parallax.value = { x, y }
 }
 
 onMounted(() => {
-  // Start animation after 1 second delay and trigger fade-in
   setTimeout(() => {
-    animate()
-    canvasVisible.value = true
-  }, 1000)
-
-  // Add global mouse event listeners for document-wide interaction
-  document.addEventListener("mousemove", throttledMouseMove)
-  document.addEventListener("mouseenter", handleMouseEnter)
-  document.addEventListener("mouseleave", handleMouseLeave)
-  document.addEventListener("visibilitychange", handleVisibilityChange)
-  window.addEventListener("resize", handleResize)
+    visible.value = true
+  }, 500)
+  window.addEventListener("mousemove", handleMouseMove)
 })
-
 onUnmounted(() => {
-  if (animationFrame) {
-    cancelAnimationFrame(animationFrame)
-  }
-
-  // Clear any pending throttle timeouts
-  if (mouseThrottleTimeout) {
-    clearTimeout(mouseThrottleTimeout)
-  }
-
-  // Clean up all event listeners
-  document.removeEventListener("mousemove", throttledMouseMove)
-  document.removeEventListener("mouseenter", handleMouseEnter)
-  document.removeEventListener("mouseleave", handleMouseLeave)
-  document.removeEventListener("visibilitychange", handleVisibilityChange)
-  window.removeEventListener("resize", handleResize)
+  window.removeEventListener("mousemove", handleMouseMove)
 })
 </script>
 
 <template>
-  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
-    <!-- Grid Canvas -->
-    <canvas
-      ref="gridCanvas"
+  <div class="fixed inset-0 pointer-events-none overflow-hidden -z-50">
+    <!-- Animated SVG geometric shapes -->
+    <svg
       class="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-out"
-      :class="{ 'opacity-0': !canvasVisible, 'opacity-100': canvasVisible }"
-    />
+      :class="{ 'opacity-0': !visible, 'opacity-100': visible }"
+      :style="{ filter: 'blur(0.5px)' }"
+      viewBox="0 0 1920 1080"
+      width="100%"
+      height="100%"
+      preserveAspectRatio="none"
+    >
+      <!-- Layered polygons with animated parallax -->
+      <polygon
+        :points="`
+          ${200 + parallax.x * 40},${200 + parallax.y * 40}
+          ${600 + parallax.x * 30},${180 + parallax.y * 60}
+          ${500 + parallax.x * 60},${500 + parallax.y * 30}
+          ${180 + parallax.x * 30},${400 + parallax.y * 50}
+        `"
+        :fill="palette.accent1"
+        fill-opacity="0.18"
+      />
+      <polygon
+        :points="`
+          ${1200 - parallax.x * 60},${300 - parallax.y * 40}
+          ${1700 - parallax.x * 40},${350 - parallax.y * 60}
+          ${1600 - parallax.x * 30},${700 - parallax.y * 30}
+          ${1300 - parallax.x * 50},${600 - parallax.y * 50}
+        `"
+        :fill="palette.accent2"
+        fill-opacity="0.13"
+      />
+      <circle
+        :cx="900 + parallax.x * 80"
+        :cy="800 + parallax.y * 60"
+        r="180"
+        :fill="palette.accent3"
+        fill-opacity="0.10"
+      />
+      <!-- Glassmorphism overlay -->
+      <rect
+        x="0"
+        y="0"
+        width="1920"
+        height="1080"
+        :fill="palette.glass"
+        style="backdrop-filter: blur(24px)"
+      />
+      <!-- Animated gradient overlay -->
+      <defs>
+        <linearGradient id="bg-gradient" x1="0" y1="0" x2="1" y2="1">
+          <stop
+            :offset="'0%'"
+            :stop-color="palette.accent1"
+            stop-opacity="0.05"
+          />
+          <stop
+            :offset="'100%'"
+            :stop-color="palette.accent2"
+            stop-opacity="0.05"
+          />
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="1920" height="1080" fill="url(#bg-gradient)" />
+    </svg>
   </div>
 </template>
