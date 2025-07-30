@@ -88,7 +88,7 @@ onMounted(() => {
           <UCard
             v-for="method in contactMethods"
             :key="method.title"
-            class="items-center text-center"
+            class="modern-card glass items-center text-center"
           >
             <!-- Card content -->
             <div class="space-y-4 p-4">

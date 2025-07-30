@@ -82,7 +82,7 @@ const filteredProjects = computed(() => {
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div v-for="project in filteredProjects" :key="project.id">
             <div />
-            <UCard class="">
+            <UCard class="modern-card glass">
               <!-- Project Image -->
               <div
                 class="mb-4 flex items-center justify-center overflow-hidden"
@@ -92,7 +92,7 @@ const filteredProjects = computed(() => {
                   :src="project.image"
                   :alt="project.title"
                   class="w-full h-full object-cover"
-                >
+                />
                 <UIcon v-else name="i-ph-folder-open" />
               </div>
 

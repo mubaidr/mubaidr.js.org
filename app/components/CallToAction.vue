@@ -12,7 +12,7 @@ const { data: profile } = await useAsyncData("profile", () => {
 
 <template>
   <div>
-    <UCard class="text-center ring-2 ring-primary">
+    <UCard class="modern-card glass text-center ring-2 ring-primary">
       <div class="space-y-8 py-8">
         <!-- Main Heading -->
         <div class="space-y-4">

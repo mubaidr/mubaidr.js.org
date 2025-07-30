@@ -27,7 +27,7 @@ const { data: servicesPreview } = await useAsyncData(
         <UCard
           v-for="service in servicesPreview"
           :key="service.title"
-          class="text-center h-full"
+          class="modern-card glass text-center h-full"
         >
           <div class="space-y-6">
             <!-- Icon & Title -->

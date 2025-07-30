@@ -61,7 +61,7 @@ useHead({
             :key="experience.id"
           >
             <div />
-            <UCard class="relative">
+            <UCard class="modern-card glass relative">
               <div class="space-y-6">
                 <!-- Experience Header -->
                 <div
@@ -165,7 +165,7 @@ useHead({
             class="h-full"
           >
             <div />
-            <UCard class="">
+            <UCard class="modern-card glass">
               <div class="space-y-4">
                 <div class="flex items-start gap-4">
                   <div class="flex items-center justify-center flex-shrink-0">
@@ -230,7 +230,7 @@ useHead({
             :key="cert.id"
             class="h-full"
           >
-            <UCard class="">
+            <UCard class="modern-card glass">
               <div class="space-y-4">
                 <div class="w-16 h-16 flex items-center justify-center mx-auto">
                   <UIcon name="i-ph-certificate" size="3em" class="text-info" />
@@ -271,7 +271,7 @@ useHead({
             class="h-full"
           >
             <div />
-            <UCard class="h-full">
+            <UCard class="modern-card glass h-full">
               <div class="space-y-4">
                 <div class="flex items-center gap-3 mb-3">
                   <div class="flex items-center justify-center flex-shrink-0">
@@ -297,7 +297,7 @@ useHead({
 
       <!-- Call to Action -->
       <section class="space-y-12">
-        <UCard class="text-center ring-2 ring-primary">
+        <UCard class="modern-card glass text-center ring-2 ring-primary">
           <div class="space-y-6">
             <div class="space-y-3">
               <h3>Ready to Work Together?</h3>

@@ -14,14 +14,14 @@ body {
 
 /* Modern Glassmorphism Utility */
 .glass {
-  @apply bg-white/60 dark:bg-neutral-900/60 backdrop-blur-2xl border border-white/30 dark:border-neutral-800/60 shadow-xl shadow-primary/10 rounded-2xl;
+  @apply bg-white/30 dark:bg-neutral-900/60 backdrop-blur-2xl border border-white/30 dark:border-neutral-800/60 rounded-2xl;
 }
 
 /* Modern Card Shadow */
 
 /* Modern Card Shadow - subtle by default, large on hover */
 .modern-card {
-  @apply shadow-lg shadow-primary/20 border border-white/20 dark:border-neutral-800/60 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/30;
+  @apply shadow shadow-black/20 border border-white/20 dark:border-neutral-800/60 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black/30;
 }
 
 /* Modern Button */

@@ -50,7 +50,7 @@ useHead({
           <UCard
             v-for="step in servicesData?.process"
             :key="step.step"
-            class="relative text-center"
+            class="modern-card glass relative text-center"
           >
             <div class="relative p-6 h-full">
               <!-- Icon -->
@@ -91,7 +91,7 @@ useHead({
           >
             <div class="absolute inset-0" />
             <UCard
-              class="relative h-full "
+              class="modern-card glass relative h-full "
             >
               <div class="space-y-6">
                 <div class="flex items-start gap-4">
@@ -156,7 +156,10 @@ useHead({
             class="h-full"
             :class="pkg.highlighted ? 'scale-110' : ''"
           >
-            <UCard :class="pkg.highlighted ? 'ring-2 ring-primary' : ''">
+            <UCard
+              class="modern-card glass"
+              :class="pkg.highlighted ? 'ring-2 ring-primary' : ''"
+            >
               <div class="space-y-6">
                 <div class="pt-4">
                   <h3 class="mb-2">
@@ -198,7 +201,7 @@ useHead({
 
       <!-- Call to Action -->
       <section class="space-y-12">
-        <UCard class="ring-2 ring-primary">
+        <UCard class="modern-card glass ring-2 ring-primary">
           <div class="text-center space-y-8 py-16 px-8">
             <div class="space-y-6">
               <h2>Let's Build Something Amazing</h2>

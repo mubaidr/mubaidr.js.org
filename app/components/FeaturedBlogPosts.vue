@@ -46,7 +46,7 @@ const { data: featuredPosts } = await useAsyncData(
         <UCard
           v-for="(post, index) in featuredPosts"
           :key="post.path || `post-${index}`"
-          class="cursor-pointer h-full"
+          class="modern-card glass cursor-pointer h-full"
           @click="navigateTo(post.path || '/blog')"
         >
           <div class="space-y-4">

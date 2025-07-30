@@ -98,16 +98,16 @@ onUnmounted(() => {
           <stop
             :offset="'0%'"
             :stop-color="palette.accent1"
-            stop-opacity="0.05"
+            stop-opacity="0.33"
           />
           <stop
             :offset="'100%'"
             :stop-color="palette.accent2"
-            stop-opacity="0.05"
+            stop-opacity="0.33"
           />
         </linearGradient>
       </defs>
-      <rect x="0" y="0" width="1920" height="1080" fill="url(#bg-gradient)" />
+      <!-- <rect x="0" y="0" width="1920" height="1080" fill="url(#bg-gradient)" /> -->
     </svg>
   </div>
 </template>

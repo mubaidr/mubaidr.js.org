@@ -109,7 +109,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <article v-for="post in blogData.posts" :key="post.id">
             <div />
-            <UCard as="div" class="h-full overflow-hidden">
+            <UCard as="div" class="modern-card glass h-full overflow-hidden">
               <ULink
                 :to="post.path"
                 class="focus:outline-none"
@@ -123,7 +123,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
                       :src="post.image"
                       :alt="post.title"
                       class="w-full h-full object-cover"
-                    >
+                    />
                     <div v-else class="flex items-center justify-center h-full">
                       <UIcon name="i-ph-article-duotone" />
                     </div>

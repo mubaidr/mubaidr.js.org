@@ -92,7 +92,11 @@ const caseStudies = [
     </div>
 
     <div class="grid gap-8 lg:grid-cols-2">
-      <UCard v-for="study in caseStudies" :key="study.id" class="h-full">
+      <UCard
+        v-for="study in caseStudies"
+        :key="study.id"
+        class="modern-card glass h-full"
+      >
         <div class="space-y-6">
           <!-- Header -->
           <div class="space-y-3">

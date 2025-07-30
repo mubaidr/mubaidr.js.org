@@ -20,7 +20,7 @@ const { data: profile } = await useAsyncData("profile", () => {
       <!-- Value Proposition Cards -->
       <div class="grid gap-8 lg:grid-cols-3">
         <!-- Technical Excellence -->
-        <UCard class="text-center h-full">
+        <UCard class="modern-card glass text-center h-full">
           <div class="space-y-6">
             <div class="space-y-4">
               <div class="w-16 h-16 flex items-center justify-center mx-auto">
@@ -39,7 +39,7 @@ const { data: profile } = await useAsyncData("profile", () => {
         </UCard>
 
         <!-- Proven Results -->
-        <UCard class="text-center h-full">
+        <UCard class="modern-card glass text-center h-full">
           <div class="space-y-6">
             <div class="space-y-4">
               <div class="w-16 h-16 flex items-center justify-center mx-auto">
@@ -58,18 +58,18 @@ const { data: profile } = await useAsyncData("profile", () => {
         </UCard>
 
         <!-- True Partnership -->
-        <UCard class="text-center h-full">
+        <UCard class="modern-card glass text-center h-full">
           <div class="space-y-6">
             <div class="space-y-4">
               <div class="w-16 h-16 flex items-center justify-center mx-auto">
-                <UIcon name="i-ph-handshake" size="3em" class="text-info" />
+                <UIcon name="i-ph-chart-line-up" size="3em" class="text-info" />
               </div>
               <div class="space-y-3">
-                <h3>True Partnership</h3>
+                <h3>Proven Results</h3>
                 <p>
-                  {{ profile?.availability?.responseTime || "8h" }}
-                  response time guarantee with transparent communication and
-                  agile collaboration.
+                  {{ profile?.projectsDelivered || "125" }}+ successful projects
+                  delivered with {{ profile?.clientSatisfaction || "100" }}%
+                  client satisfaction rate.
                 </p>
               </div>
             </div>
