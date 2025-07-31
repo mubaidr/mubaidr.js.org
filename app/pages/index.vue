@@ -88,7 +88,7 @@ if (profile.value) {
             <!-- Status badge on avatar - bottom right positioned -->
             <div
               v-if="profile.availability"
-              class="flex gap-2 items-center justify-center text-sm"
+              class="flex gap-2 items-center justify-center text-xs"
             >
               <div
                 class="h-3 w-3 rounded-full"
@@ -111,8 +111,8 @@ if (profile.value) {
             <h1>
               {{ profile.name }}
             </h1>
-            <p class="text-2xl">{{ profile.title }}</p>
-            <p class="text-xl max-w-3xl mx-auto">
+            <p class="text-xl">{{ profile.title }}</p>
+            <p class="text-lg max-w-3xl mx-auto">
               {{ profile.tagline }}
             </p>
           </div>

@@ -1,11 +1,14 @@
 <template>
   <header
-    class="fixed left-1/2 top-6 transform -translate-x-1/2 z-50 w-auto max-w-3xl bg-white/80 dark:bg-stone-900/80 shadow-md shadow-black/20 hover:shadow-xl rounded-2xl border border-gray-100 dark:border-stone-800 backdrop-blur-lg transition-all duration-300"
+    :class="[
+      'fixed left-1/2 top-6 transform -translate-x-1/2 z-50 w-auto max-w-3xl bg-white/80 dark:bg-stone-900/80 hover:shadow-xl rounded-2xl border border-gray-100 dark:border-stone-800 backdrop-blur-lg transition-all duration-300',
+      scrolled ? 'shadow-md shadow-black/20 scale-105' : '',
+    ]"
     style="padding: 0"
   >
     <div class="flex justify-center items-center px-6 py-2">
       <nav
-        class="flex justify-center items-center gap-8 w-full"
+        class="flex justify-center items-center gap-8 w-full text-sm"
         role="navigation"
         aria-label="Main navigation"
       >
@@ -137,6 +140,20 @@ const navigationItems = [
   { path: "/blog", label: "Blog", icon: "i-ph-article" },
 ]
 
+// Header shadow on scroll
+const scrolled = ref(false)
+const handleScroll = () => {
+  scrolled.value = window.scrollY > 8
+}
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll, { passive: true })
+  handleScroll()
+})
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll)
+  document.body.style.overflow = ""
+})
+
 // Touch gesture handling for swipe to close
 let touchStartY = 0
 let touchStartX = 0
@@ -237,10 +254,5 @@ onMounted(() => {
     // Clean up body overflow on unmount
     document.body.style.overflow = ""
   })
-})
-
-// Clean up on component unmount
-onBeforeUnmount(() => {
-  document.body.style.overflow = ""
 })
 </script>

@@ -72,7 +72,7 @@ const lastUpdated = ref("December 1, 2024")
             Website Usage
           </h2>
           <div class="space-y-4">
-            <h3><strong class="text-lg">Permitted Use</strong></h3>
+            <h3><strong class="text-base">Permitted Use</strong></h3>
             <ul class="space-y-2">
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
@@ -105,7 +105,7 @@ const lastUpdated = ref("December 1, 2024")
               </li>
             </ul>
 
-            <h3><strong class="text-lg">Prohibited Activities</strong></h3>
+            <h3><strong class="text-base">Prohibited Activities</strong></h3>
             <ul class="space-y-2">
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-x" class="w-4 h-4 mt-1 flex-shrink-0" />
@@ -146,7 +146,9 @@ const lastUpdated = ref("December 1, 2024")
           </h2>
 
           <div class="space-y-4">
-            <h3><strong class="text-lg">Service Scope & Agreements</strong></h3>
+            <h3>
+              <strong class="text-base">Service Scope & Agreements</strong>
+            </h3>
             <ul class="space-y-2">
               <li class="flex items-start gap-2">
                 <UIcon
@@ -193,7 +195,7 @@ const lastUpdated = ref("December 1, 2024")
           </div>
 
           <div class="space-y-4">
-            <h3><strong class="text-lg">Client Responsibilities</strong></h3>
+            <h3><strong class="text-base">Client Responsibilities</strong></h3>
             <ul class="space-y-2">
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-users" class="w-4 h-4 mt-1 flex-shrink-0" />
@@ -237,7 +239,7 @@ const lastUpdated = ref("December 1, 2024")
           </h2>
           <div class="grid gap-6 md:grid-cols-2">
             <div class="space-y-3">
-              <h3><strong class="text-lg">Payment Structure</strong></h3>
+              <h3><strong class="text-base">Payment Structure</strong></h3>
               <ul class="space-y-2">
                 <li class="flex items-center gap-2">
                   <UIcon name="i-ph-circle" class="w-2 h-2 text-primary" />
@@ -266,7 +268,7 @@ const lastUpdated = ref("December 1, 2024")
               </ul>
             </div>
             <div class="space-y-3">
-              <h3><strong class="text-lg">Payment Terms</strong></h3>
+              <h3><strong class="text-base">Payment Terms</strong></h3>
               <ul class="space-y-2">
                 <li class="flex items-center gap-2">
                   <UIcon name="i-ph-circle" class="w-2 h-2" />
@@ -313,7 +315,9 @@ const lastUpdated = ref("December 1, 2024")
             Intellectual Property Rights
           </h2>
           <div class="space-y-4">
-            <h3><strong class="text-lg">Client Work & Deliverables</strong></h3>
+            <h3>
+              <strong class="text-base">Client Work & Deliverables</strong>
+            </h3>
             <p class="text-gray-600 dark:text-gray-300">
               Upon full payment, clients receive ownership of custom code and
               designs created specifically for their project. However, I retain
@@ -343,7 +347,7 @@ const lastUpdated = ref("December 1, 2024")
               </li>
             </ul>
 
-            <h3><strong class="text-lg">Third-Party Resources</strong></h3>
+            <h3><strong class="text-base">Third-Party Resources</strong></h3>
             <p class="text-gray-600 dark:text-gray-300">
               Projects may incorporate third-party libraries, frameworks, and
               resources with their own licensing terms. Clients are responsible
@@ -362,7 +366,7 @@ const lastUpdated = ref("December 1, 2024")
           </h2>
           <div class="grid gap-6 md:grid-cols-2">
             <div class="space-y-3">
-              <h3><strong class="text-lg">Delivery Terms</strong></h3>
+              <h3><strong class="text-base">Delivery Terms</strong></h3>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-clock" class="w-4 h-4 mt-1 flex-shrink-0" />
@@ -398,7 +402,7 @@ const lastUpdated = ref("December 1, 2024")
               </ul>
             </div>
             <div class="space-y-3">
-              <h3><strong class="text-lg">Support & Maintenance</strong></h3>
+              <h3><strong class="text-base">Support & Maintenance</strong></h3>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
                   <UIcon
@@ -454,7 +458,7 @@ const lastUpdated = ref("December 1, 2024")
             Liability & Warranties
           </h2>
           <div class="space-y-4">
-            <h3><strong class="text-lg">Service Warranties</strong></h3>
+            <h3><strong class="text-base">Service Warranties</strong></h3>
             <p class="text-gray-600 dark:text-gray-300">
               I warrant that my services will be performed in a professional and
               workmanlike manner in accordance with industry standards. However,
@@ -489,7 +493,7 @@ const lastUpdated = ref("December 1, 2024")
               </li>
             </ul>
 
-            <h3><strong class="text-lg">Limitation of Liability</strong></h3>
+            <h3><strong class="text-base">Limitation of Liability</strong></h3>
             <p class="text-gray-600 dark:text-gray-300">
               my total liability for any claims arising from my services shall
               not exceed the total amount paid for the specific project in
@@ -510,7 +514,7 @@ const lastUpdated = ref("December 1, 2024")
           <div class="grid gap-6 md:grid-cols-2">
             <div class="space-y-3">
               <h3>
-                <strong class="text-lg">Client Termination Rights</strong>
+                <strong class="text-base">Client Termination Rights</strong>
               </h3>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
@@ -540,7 +544,7 @@ const lastUpdated = ref("December 1, 2024")
               </ul>
             </div>
             <div class="space-y-3">
-              <h3><strong class="text-lg">my Termination Rights</strong></h3>
+              <h3><strong class="text-base">my Termination Rights</strong></h3>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
                   <UIcon
@@ -593,7 +597,7 @@ const lastUpdated = ref("December 1, 2024")
           </h2>
           <div class="grid gap-6 md:grid-cols-2">
             <div class="space-y-3">
-              <h3><strong class="text-lg">Legal Framework</strong></h3>
+              <h3><strong class="text-base">Legal Framework</strong></h3>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
                   <UIcon
@@ -628,7 +632,7 @@ const lastUpdated = ref("December 1, 2024")
               </ul>
             </div>
             <div class="space-y-3">
-              <h3><strong class="text-lg">Modifications</strong></h3>
+              <h3><strong class="text-base">Modifications</strong></h3>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-bell" class="w-4 h-4 mt-1 flex-shrink-0" />

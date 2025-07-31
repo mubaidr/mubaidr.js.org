@@ -61,14 +61,14 @@ function togglePause() {
                       class="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400"
                     />
                     <span
-                      class="ml-2 text-gray-600 dark:text-gray-300 text-xs sm:text-sm"
+                      class="ml-2 text-gray-600 dark:text-gray-300 text-[10px] sm:text-xs"
                       >{{ testimonial.rating }}/5</span
                     >
                   </div>
 
                   <!-- Quote -->
                   <div class="relative mb-4 sm:mb-6">
-                    <p class="text-base sm:text-lg leading-relaxed">
+                    <p class="text-sm sm:text-base leading-relaxed">
                       {{ testimonial.quote }}
                     </p>
                   </div>

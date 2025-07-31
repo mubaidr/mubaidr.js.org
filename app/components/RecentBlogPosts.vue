@@ -54,7 +54,7 @@ const { data: recentPosts } = await useAsyncData("recent-posts", async () => {
                 }}
               </p>
               <div
-                class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400"
+                class="flex items-center justify-between text-[10px] text-gray-500 dark:text-gray-400"
               >
                 <span>
                   {{

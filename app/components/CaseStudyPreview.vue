@@ -133,8 +133,8 @@ const caseStudies = [
                 :key="index"
                 class="text-center"
               >
-                <div class="text-xl font-bold">{{ result.after }}</div>
-                <div class="text-xs text-gray-500 dark:text-gray-400">
+                <div class="text-lg font-bold">{{ result.after }}</div>
+                <div class="text-[10px] text-gray-500 dark:text-gray-400">
                   {{ result.metric }}
                 </div>
                 <div class="text-[10px] text-primary-500 dark:text-primary-400">

@@ -68,11 +68,11 @@ useHead({
                   class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
                 >
                   <div>
-                    <h3 class="text-xl font-bold">{{ experience.title }}</h3>
+                    <h3 class="text-lg font-bold">{{ experience.title }}</h3>
                     <p class="text-gray-600 dark:text-gray-300">
                       {{ experience.company }}
                     </p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                    <p class="text-xs text-gray-500 dark:text-gray-400">
                       {{ experience.location }}
                     </p>
                   </div>

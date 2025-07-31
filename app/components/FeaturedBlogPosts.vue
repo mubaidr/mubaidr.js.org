@@ -56,7 +56,7 @@ const { data: featuredPosts } = await useAsyncData(
           </div> -->
 
             <div class="space-y-3">
-              <h3 class="text-lg font-semibold">
+              <h3 class="text-base font-semibold">
                 {{ post.title || "Blog Post Title" }}
               </h3>
               <p class="text-gray-600 dark:text-gray-300">
@@ -66,7 +66,7 @@ const { data: featuredPosts } = await useAsyncData(
                 }}
               </p>
               <div
-                class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400"
+                class="flex items-center justify-between text-[10px] text-gray-500 dark:text-gray-400"
               >
                 <span>
                   {{

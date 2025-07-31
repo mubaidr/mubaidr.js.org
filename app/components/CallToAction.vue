@@ -35,10 +35,10 @@ const { data: profile } = await useAsyncData("profile", () => {
               <UIcon name="i-ph-clock" size="3em" class="text-info" />
             </div>
             <div class="text-left">
-              <div class="text-base font-semibold">
+              <div class="text-sm font-semibold">
                 {{ profile?.availability?.responseTime || "8h" }} Response
               </div>
-              <div class="text-xs text-gray-500 dark:text-gray-400">
+              <div class="text-[10px] text-gray-500 dark:text-gray-400">
                 Quick turnaround
               </div>
             </div>
@@ -49,8 +49,8 @@ const { data: profile } = await useAsyncData("profile", () => {
               <UIcon name="i-ph-shield-check" size="3em" class="text-info" />
             </div>
             <div class="text-left">
-              <div class="text-base font-semibold">100% Satisfaction</div>
-              <div class="text-xs text-gray-500 dark:text-gray-400">
+              <div class="text-sm font-semibold">100% Satisfaction</div>
+              <div class="text-[10px] text-gray-500 dark:text-gray-400">
                 Guaranteed results
               </div>
             </div>
@@ -61,8 +61,8 @@ const { data: profile } = await useAsyncData("profile", () => {
               <UIcon name="i-ph-chat-circle" size="3em" class="text-info" />
             </div>
             <div class="text-left">
-              <div class="text-base font-semibold">Free Consultation</div>
-              <div class="text-xs text-gray-500 dark:text-gray-400">
+              <div class="text-sm font-semibold">Free Consultation</div>
+              <div class="text-[10px] text-gray-500 dark:text-gray-400">
                 No commitment
               </div>
             </div>
