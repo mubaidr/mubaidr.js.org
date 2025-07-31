@@ -55,7 +55,7 @@ const { data: featuredProjects } = await useAsyncData(
               <UBadge :label="project.category" />
             </div>
 
-            <p class="text-gray-600 dark:text-gray-300">
+            <p class="text-neutral-600 dark:text-neutral-300">
               {{ project.description }}
             </p>
 

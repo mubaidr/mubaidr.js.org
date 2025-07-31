@@ -134,7 +134,7 @@ const caseStudies = [
                 class="text-center"
               >
                 <div class="text-lg font-bold">{{ result.after }}</div>
-                <div class="text-[10px] text-gray-500 dark:text-gray-400">
+                <div class="text-[10px] text-neutral-500 dark:text-neutral-400">
                   {{ result.metric }}
                 </div>
                 <div class="text-[10px] text-primary-500 dark:text-primary-400">

@@ -76,21 +76,21 @@ const lastUpdated = ref("December 1, 2024")
             <ul class="space-y-2">
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   >Browse my portfolio and read my content for legitimate
                   business purposes</span
                 >
               </li>
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   >Contact me for professional inquiries and project
                   discussions</span
                 >
               </li>
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   >Share my content with proper attribution and linking</span
                 >
               </li>
@@ -99,7 +99,7 @@ const lastUpdated = ref("December 1, 2024")
                   name="i-ph-check"
                   class="w-4 h-4 text-primary mt-1 flex-shrink-0"
                 />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   >Subscribe to my newsletter and updates</span
                 >
               </li>
@@ -109,26 +109,26 @@ const lastUpdated = ref("December 1, 2024")
             <ul class="space-y-2">
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-x" class="w-4 h-4 mt-1 flex-shrink-0" />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   >Reproduce, copy, or redistribute my content without
                   permission</span
                 >
               </li>
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-x" class="w-4 h-4 mt-1 flex-shrink-0" />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   >Use automated tools to scrape or download my content</span
                 >
               </li>
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-x" class="w-4 h-4 mt-1 flex-shrink-0" />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   >Attempt to gain unauthorized access to my systems</span
                 >
               </li>
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-x" class="w-4 h-4 mt-1 flex-shrink-0" />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   >Submit false or misleading information in contact forms</span
                 >
               </li>
@@ -155,7 +155,7 @@ const lastUpdated = ref("December 1, 2024")
                   name="i-ph-arrow-right"
                   class="w-4 h-4 mt-1 flex-shrink-0"
                 />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Written Agreements:</strong> All projects require a
                   signed written agreement before work begins</span
                 >
@@ -165,7 +165,7 @@ const lastUpdated = ref("December 1, 2024")
                   name="i-ph-arrow-right"
                   class="w-4 h-4 mt-1 flex-shrink-0"
                 />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Scope Definition:</strong> Project scope,
                   deliverables, and timelines must be clearly defined in
                   writing</span
@@ -176,7 +176,7 @@ const lastUpdated = ref("December 1, 2024")
                   name="i-ph-arrow-right"
                   class="w-4 h-4 mt-1 flex-shrink-0"
                 />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Change Requests:</strong> Any scope changes require
                   written approval and may affect timeline and cost</span
                 >
@@ -186,7 +186,7 @@ const lastUpdated = ref("December 1, 2024")
                   name="i-ph-arrow-right"
                   class="w-4 h-4 mt-1 flex-shrink-0"
                 />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Communication:</strong> Primary communication will be
                   conducted via email and scheduled meetings</span
                 >
@@ -199,28 +199,28 @@ const lastUpdated = ref("December 1, 2024")
             <ul class="space-y-2">
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-users" class="w-4 h-4 mt-1 flex-shrink-0" />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Timely Communication:</strong> Respond to
                   project-related communications within 48 hours</span
                 >
               </li>
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-users" class="w-4 h-4 mt-1 flex-shrink-0" />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Required Materials:</strong> Provide all necessary
                   content, assets, and access credentials promptly</span
                 >
               </li>
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-users" class="w-4 h-4 mt-1 flex-shrink-0" />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Review & Feedback:</strong> Provide constructive
                   feedback within agreed timeframes</span
                 >
               </li>
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-users" class="w-4 h-4 mt-1 flex-shrink-0" />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Payment Terms:</strong> Adhere to agreed payment
                   schedules and terms</span
                 >
@@ -243,25 +243,25 @@ const lastUpdated = ref("December 1, 2024")
               <ul class="space-y-2">
                 <li class="flex items-center gap-2">
                   <UIcon name="i-ph-circle" class="w-2 h-2 text-primary" />
-                  <span class="text-gray-600 dark:text-gray-300"
+                  <span class="text-neutral-600 dark:text-neutral-300"
                     >50% deposit required before project start</span
                   >
                 </li>
                 <li class="flex items-center gap-2">
                   <UIcon name="i-ph-circle" class="w-2 h-2" />
-                  <span class="text-gray-600 dark:text-gray-300"
+                  <span class="text-neutral-600 dark:text-neutral-300"
                     >Progress payments for larger projects</span
                   >
                 </li>
                 <li class="flex items-center gap-2">
                   <UIcon name="i-ph-circle" class="w-2 h-2" />
-                  <span class="text-gray-600 dark:text-gray-300"
+                  <span class="text-neutral-600 dark:text-neutral-300"
                     >Final payment due upon project completion</span
                   >
                 </li>
                 <li class="flex items-center gap-2">
                   <UIcon name="i-ph-circle" class="w-2 h-2" />
-                  <span class="text-gray-600 dark:text-gray-300"
+                  <span class="text-neutral-600 dark:text-neutral-300"
                     >Hourly billing for consulting services</span
                   >
                 </li>
@@ -272,25 +272,25 @@ const lastUpdated = ref("December 1, 2024")
               <ul class="space-y-2">
                 <li class="flex items-center gap-2">
                   <UIcon name="i-ph-circle" class="w-2 h-2" />
-                  <span class="text-gray-600 dark:text-gray-300"
+                  <span class="text-neutral-600 dark:text-neutral-300"
                     >Net 15 payment terms from invoice date</span
                   >
                 </li>
                 <li class="flex items-center gap-2">
                   <UIcon name="i-ph-circle" class="w-2 h-2" />
-                  <span class="text-gray-600 dark:text-gray-300"
+                  <span class="text-neutral-600 dark:text-neutral-300"
                     >Late fees apply after 30 days</span
                   >
                 </li>
                 <li class="flex items-center gap-2">
                   <UIcon name="i-ph-circle" class="w-2 h-2" />
-                  <span class="text-gray-600 dark:text-gray-300"
+                  <span class="text-neutral-600 dark:text-neutral-300"
                     >Work suspension after 45 days overdue</span
                   >
                 </li>
                 <li class="flex items-center gap-2">
                   <UIcon name="i-ph-circle" class="w-2 h-2" />
-                  <span class="text-gray-600 dark:text-gray-300"
+                  <span class="text-neutral-600 dark:text-neutral-300"
                     >Bank transfer or online payment accepted</span
                   >
                 </li>
@@ -318,7 +318,7 @@ const lastUpdated = ref("December 1, 2024")
             <h3>
               <strong class="text-base">Client Work & Deliverables</strong>
             </h3>
-            <p class="text-gray-600 dark:text-gray-300">
+            <p class="text-neutral-600 dark:text-neutral-300">
               Upon full payment, clients receive ownership of custom code and
               designs created specifically for their project. However, I retain
               the right to:
@@ -326,21 +326,21 @@ const lastUpdated = ref("December 1, 2024")
             <ul class="space-y-2">
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   >Use general methodologies, techniques, and know-how in future
                   projects</span
                 >
               </li>
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   >Display completed work in my portfolio (with client
                   permission)</span
                 >
               </li>
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
-                <span class="text-gray-600 dark:text-gray-300"
+                <span class="text-neutral-600 dark:text-neutral-300"
                   >Reuse generic code components and libraries in other
                   projects</span
                 >
@@ -348,7 +348,7 @@ const lastUpdated = ref("December 1, 2024")
             </ul>
 
             <h3><strong class="text-base">Third-Party Resources</strong></h3>
-            <p class="text-gray-600 dark:text-gray-300">
+            <p class="text-neutral-600 dark:text-neutral-300">
               Projects may incorporate third-party libraries, frameworks, and
               resources with their own licensing terms. Clients are responsible
               for compliance with all applicable licenses.
@@ -370,21 +370,21 @@ const lastUpdated = ref("December 1, 2024")
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-clock" class="w-4 h-4 mt-1 flex-shrink-0" />
-                  <span class="text-gray-600 dark:text-gray-300"
+                  <span class="text-neutral-600 dark:text-neutral-300"
                     ><strong>Timeline Estimates:</strong> Provided in good faith
                     but not guaranteed</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-clock" class="w-4 h-4 mt-1 flex-shrink-0" />
-                  <span class="text-gray-600 dark:text-gray-300"
+                  <span class="text-neutral-600 dark:text-neutral-300"
                     ><strong>Testing Period:</strong> 7-day testing period for
                     bug reports</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-clock" class="w-4 h-4 mt-1 flex-shrink-0" />
-                  <span class="text-gray-600 dark:text-gray-300"
+                  <span class="text-neutral-600 dark:text-neutral-300"
                     ><strong>Minor Revisions:</strong> Included within agreed
                     scope</span
                   >
@@ -394,7 +394,7 @@ const lastUpdated = ref("December 1, 2024")
                     name="i-ph-clock"
                     class="w-4 h-4 text-primary-500 mt-1 flex-shrink-0"
                   />
-                  <span class="text-gray-600 dark:text-gray-300"
+                  <span class="text-neutral-600 dark:text-neutral-300"
                     ><strong>Final Delivery:</strong> Via agreed delivery
                     method</span
                   >
@@ -409,7 +409,7 @@ const lastUpdated = ref("December 1, 2024")
                     name="i-ph-wrench"
                     class="w-4 h-4 mt-1 flex-shrink-0"
                   />
-                  <span class="text-gray-600 dark:text-gray-300"
+                  <span class="text-neutral-600 dark:text-neutral-300"
                     ><strong>Bug Fixes:</strong> 30-day warranty for
                     functionality issues</span
                   >
@@ -419,7 +419,7 @@ const lastUpdated = ref("December 1, 2024")
                     name="i-ph-wrench"
                     class="w-4 h-4 mt-1 flex-shrink-0"
                   />
-                  <span class="text-gray-600 dark:text-gray-300"
+                  <span class="text-neutral-600 dark:text-neutral-300"
                     ><strong>Documentation:</strong> Basic usage documentation
                     provided</span
                   >
@@ -459,7 +459,7 @@ const lastUpdated = ref("December 1, 2024")
           </h2>
           <div class="space-y-4">
             <h3><strong class="text-base">Service Warranties</strong></h3>
-            <p class="text-gray-600 dark:text-gray-300">
+            <p class="text-neutral-600 dark:text-neutral-300">
               I warrant that my services will be performed in a professional and
               workmanlike manner in accordance with industry standards. However,
               I make no warranties regarding:
@@ -494,7 +494,7 @@ const lastUpdated = ref("December 1, 2024")
             </ul>
 
             <h3><strong class="text-base">Limitation of Liability</strong></h3>
-            <p class="text-gray-600 dark:text-gray-300">
+            <p class="text-neutral-600 dark:text-neutral-300">
               my total liability for any claims arising from my services shall
               not exceed the total amount paid for the specific project in
               question. I are not liable for any indirect, incidental, or

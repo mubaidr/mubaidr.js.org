@@ -59,14 +59,14 @@ const { data: featuredPosts } = await useAsyncData(
               <h3 class="text-base font-semibold">
                 {{ post.title || "Blog Post Title" }}
               </h3>
-              <p class="text-gray-600 dark:text-gray-300">
+              <p class="text-neutral-600 dark:text-neutral-300">
                 {{
                   post.description ||
                   "Blog post description that provides a brief overview of the content and main topics covered in the article."
                 }}
               </p>
               <div
-                class="flex items-center justify-between text-[10px] text-gray-500 dark:text-gray-400"
+                class="flex items-center justify-between text-[10px] text-neutral-500 dark:text-neutral-400"
               >
                 <span>
                   {{

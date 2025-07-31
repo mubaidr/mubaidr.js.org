@@ -61,7 +61,7 @@ function togglePause() {
                       class="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400"
                     />
                     <span
-                      class="ml-2 text-gray-600 dark:text-gray-300 text-[10px] sm:text-xs"
+                      class="ml-2 text-neutral-600 dark:text-neutral-300 text-[10px] sm:text-xs"
                       >{{ testimonial.rating }}/5</span
                     >
                   </div>
@@ -87,7 +87,7 @@ function togglePause() {
                           result, resultIndex
                         ) in testimonial.results.slice(0, 4)"
                         :key="resultIndex"
-                        class="flex items-center gap-2 text-gray-600 dark:text-gray-300 text-xs sm:text-sm"
+                        class="flex items-center gap-2 text-neutral-600 dark:text-neutral-300 text-xs sm:text-sm"
                       >
                         <UIcon
                           name="i-ph-check-circle"
@@ -101,7 +101,7 @@ function togglePause() {
                   <!-- Project Info -->
                   <div v-if="testimonial.project" class="mb-4 sm:mb-6">
                     <div
-                      class="flex items-center gap-2 text-gray-600 dark:text-gray-300 text-xs sm:text-sm"
+                      class="flex items-center gap-2 text-neutral-600 dark:text-neutral-300 text-xs sm:text-sm"
                     >
                       <UIcon
                         name="i-ph-briefcase"

@@ -38,9 +38,7 @@ const { data: profile } = await useAsyncData("profile", () => {
               <div class="text-sm font-semibold">
                 {{ profile?.availability?.responseTime || "8h" }} Response
               </div>
-              <div class="text-[10px] text-gray-500 dark:text-gray-400">
-                Quick turnaround
-              </div>
+              <div class="text-[10px]">Quick turnaround</div>
             </div>
           </div>
 
@@ -50,9 +48,7 @@ const { data: profile } = await useAsyncData("profile", () => {
             </div>
             <div class="text-left">
               <div class="text-sm font-semibold">100% Satisfaction</div>
-              <div class="text-[10px] text-gray-500 dark:text-gray-400">
-                Guaranteed results
-              </div>
+              <div class="text-[10px]">Guaranteed results</div>
             </div>
           </div>
 
@@ -62,9 +58,7 @@ const { data: profile } = await useAsyncData("profile", () => {
             </div>
             <div class="text-left">
               <div class="text-sm font-semibold">Free Consultation</div>
-              <div class="text-[10px] text-gray-500 dark:text-gray-400">
-                No commitment
-              </div>
+              <div class="text-[10px]">No commitment</div>
             </div>
           </div>
         </div>

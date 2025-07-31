@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="bg-white/80 dark:bg-stone-900/80 shadow-md shadow-black/20 hover:shadow-xl border border-gray-100 dark:border-stone-800 backdrop-blur-lg transition-all duration-300"
+    class="bg-white/80 dark:bg-neutral-900/80 shadow-md shadow-black/20 hover:shadow-xl border-t border-gray-100 dark:border-stone-800 backdrop-blur-lg transition-all duration-300"
   >
     <div class="max-w-6xl mx-auto px-4 md:px-8 py-12">
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">

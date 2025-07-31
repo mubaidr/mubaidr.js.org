@@ -42,7 +42,7 @@ const palette = computed(() => {
             cy="4"
             r="2"
             :fill="palette.accent"
-            fill-opacity="0.04"
+            fill-opacity="0.05"
           />
         </pattern>
       </defs>

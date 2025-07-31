@@ -55,7 +55,7 @@ const submitForm = async () => {
         </div>
         <div class="text-left">
           <div class="font-semibold">Pre-Launch Checklist</div>
-          <div class="text-[10px] text-gray-500 dark:text-gray-400">
+          <div class="text-[10px] text-neutral-500 dark:text-neutral-400">
             25 critical points
           </div>
         </div>
@@ -66,7 +66,7 @@ const submitForm = async () => {
         </div>
         <div class="text-left">
           <div class="font-semibold">Performance Guide</div>
-          <div class="text-[10px] text-gray-500 dark:text-gray-400">
+          <div class="text-[10px] text-neutral-500 dark:text-neutral-400">
             Speed optimization tips
           </div>
         </div>
@@ -77,7 +77,7 @@ const submitForm = async () => {
         </div>
         <div class="text-left">
           <div class="font-semibold">Security Essentials</div>
-          <div class="text-[10px] text-gray-500 dark:text-gray-400">
+          <div class="text-[10px] text-neutral-500 dark:text-neutral-400">
             Protect your users
           </div>
         </div>

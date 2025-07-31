@@ -69,15 +69,15 @@ useHead({
                 >
                   <div>
                     <h3 class="text-lg font-bold">{{ experience.title }}</h3>
-                    <p class="text-gray-600 dark:text-gray-300">
+                    <p>
                       {{ experience.company }}
                     </p>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
+                    <p>
                       {{ experience.location }}
                     </p>
                   </div>
                   <div class="text-right absolute top-0 right-0">
-                    <UBadge :label="experience.period" variant="soft" />
+                    <UBadge :label="experience.period" variant="outline" />
                   </div>
                 </div>
 
@@ -97,10 +97,6 @@ useHead({
                       :key="`resp-${experience.id}-${respIndex}`"
                       class="flex items-start gap-2 align-baseline"
                     >
-                      <UIcon
-                        name="i-ph-check-circle-duotone"
-                        class="text-primary-500 dark:text-primary-400"
-                      />
                       {{ responsibility }}
                     </li>
                   </ul>
@@ -115,6 +111,7 @@ useHead({
                       :key="tech"
                       :label="tech"
                       variant="soft"
+                      size="xl"
                     />
                   </div>
                 </div>
@@ -133,10 +130,7 @@ useHead({
                       :key="`ach-${experience.id}-${achIndex}`"
                       class="flex items-start gap-2"
                     >
-                      <UIcon
-                        name="i-ph-trophy-duotone"
-                        class="text-primary-500 dark:text-primary-400"
-                      />
+                      <UIcon name="i-ph-trophy" />
                       {{ achievement }}
                     </li>
                   </ul>
@@ -317,11 +311,11 @@ useHead({
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <UButton to="/services" size="lg" variant="outline">
+              <UButton to="/services" size="lg" variant="solid">
                 <UIcon name="i-ph-briefcase" />
                 View Services
               </UButton>
-              <UButton to="/contact" size="lg" variant="ghost">
+              <UButton to="/contact" size="lg" variant="subtle">
                 <UIcon name="i-ph-envelope" />
                 Get In Touch
               </UButton>
