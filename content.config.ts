@@ -69,46 +69,17 @@ export default defineContentConfig({
         rating: z.number().min(0).max(5),
       }),
     }),
-    profile: defineCollection({
+    faqs: defineCollection({
       type: "data",
-      source: "profile.{json,yml,yaml}",
+      source: "faqs.{json,yml,yaml}", // Points to content/faqs.yml
       schema: z.object({
-        name: z.string(),
-        title: z.string(),
-        avatar: z.string(),
-        description: z.string(),
-        tagline: z.string(),
-        social: z.array(
+        list: z.array(
           z.object({
-            name: z.string(),
-            url: z.string().url(),
-            icon: z.string(),
+            label: z.string(),
+            content: z.string(),
+            // Add other fields if your FAQs have them, e.g., id, category
           }),
         ),
-        workApproach: z.array(z.string()),
-        currentFocus: z.array(z.string()),
-        clientSatisfaction: z.number().min(0).max(100),
-        projectsDelivered: z.number().min(0),
-        experience: z.number().min(0),
-        availability: z.object({
-          status: z.string(),
-          statusText: z.string(),
-          startDate: z.string(),
-          startDateContext: z.string(),
-          description: z.string(),
-          responseTime: z.string(),
-          slotsAvailable: z.number(),
-          paymentTerms: z.string(),
-          cta: z.object({
-            text: z.string(),
-            url: z.string(),
-          }),
-          note: z.string(),
-        }),
-        footer: z.object({
-          message: z.string(),
-          lastUpdated: z.string(),
-        }),
       }),
     }),
     professionalJourney: defineCollection({
@@ -163,6 +134,86 @@ export default defineContentConfig({
         }),
       }),
     }),
+    profile: defineCollection({
+      type: "data",
+      source: "profile.{json,yml,yaml}",
+      schema: z.object({
+        name: z.string(),
+        title: z.string(),
+        avatar: z.string(),
+        description: z.string(),
+        tagline: z.string(),
+        social: z.array(
+          z.object({
+            name: z.string(),
+            url: z.string().url(),
+            icon: z.string(),
+          }),
+        ),
+        workApproach: z.array(z.string()),
+        currentFocus: z.array(z.string()),
+        clientSatisfaction: z.number().min(0).max(100),
+        projectsDelivered: z.number().min(0),
+        experience: z.number().min(0),
+        availability: z.object({
+          status: z.string(),
+          statusText: z.string(),
+          startDate: z.string(),
+          startDateContext: z.string(),
+          description: z.string(),
+          responseTime: z.string(),
+          slotsAvailable: z.number(),
+          paymentTerms: z.string(),
+          cta: z.object({
+            text: z.string(),
+            url: z.string(),
+          }),
+          note: z.string(),
+        }),
+        footer: z.object({
+          message: z.string(),
+          lastUpdated: z.string(),
+        }),
+      }),
+    }),
+    projects: defineCollection({
+      type: "data",
+      source: "projects.{json,yml,yaml}",
+      schema: z.object({
+        projects: z.array(
+          z.object({
+            id: z.number(),
+            title: z.string(),
+            description: z.string(),
+            longDescription: z.string(),
+            image: z.string(),
+            technologies: z.array(z.string()),
+            category: z.string(),
+            featured: z.boolean(),
+            status: z.string(),
+            startDate: z.string(),
+            endDate: z.string().nullable(),
+            links: z.object({
+              github: z.string().optional(),
+              demo: z.string().optional(),
+              npm: z.string().optional(),
+              documentation: z.string().optional(),
+              case_study: z.string().optional(),
+            }),
+            stats: z.record(z.union([z.string(), z.number()])).optional(),
+            features: z.array(z.string()),
+            challenges: z.array(z.string()),
+            outcomes: z.array(z.string()),
+          }),
+        ),
+        categories: z.array(
+          z.object({
+            name: z.string(),
+            count: z.number(),
+          }),
+        ),
+      }),
+    }),
     services: defineCollection({
       type: "data",
       source: "services.{json,yml,yaml}",
@@ -209,53 +260,14 @@ export default defineContentConfig({
         ),
       }),
     }),
-    projects: defineCollection({
+    techStack: defineCollection({
       type: "data",
-      source: "projects.{json,yml,yaml}",
+      source: "tech-stack.{json,yml,yaml}",
       schema: z.object({
-        projects: z.array(
-          z.object({
-            id: z.number(),
-            title: z.string(),
-            description: z.string(),
-            longDescription: z.string(),
-            image: z.string(),
-            technologies: z.array(z.string()),
-            category: z.string(),
-            featured: z.boolean(),
-            status: z.string(),
-            startDate: z.string(),
-            endDate: z.string().nullable(),
-            links: z.object({
-              github: z.string().optional(),
-              demo: z.string().optional(),
-              npm: z.string().optional(),
-              documentation: z.string().optional(),
-              case_study: z.string().optional(),
-            }),
-            stats: z.record(z.union([z.string(), z.number()])).optional(),
-            features: z.array(z.string()),
-            challenges: z.array(z.string()),
-            outcomes: z.array(z.string()),
-          }),
-        ),
         categories: z.array(
           z.object({
-            name: z.string(),
-            count: z.number(),
-          }),
-        ),
-      }),
-    }),
-    faqs: defineCollection({
-      type: "data",
-      source: "faqs.{json,yml,yaml}", // Points to content/faqs.yml
-      schema: z.object({
-        list: z.array(
-          z.object({
-            label: z.string(),
-            content: z.string(),
-            // Add other fields if your FAQs have them, e.g., id, category
+            title: z.string(),
+            items: z.array(z.string()),
           }),
         ),
       }),

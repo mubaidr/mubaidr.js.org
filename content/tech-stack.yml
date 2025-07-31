@@ -1,0 +1,29 @@
+# Technical stack for homepage display
+categories:
+  - title: Frontend Frameworks
+    items:
+      - Nuxt 3
+      - Vue 3 (Composition API)
+      - Nuxt UI
+      - Tailwind CSS 4
+  - title: Content & Data
+    items:
+      - Nuxt Content (Markdown/YAML/JSON)
+      - TypeScript (strict)
+  - title: Tooling & DevOps
+    items:
+      - Vite
+      - ESLint
+      - Prettier
+      - GitHub Actions
+      - Static Generation (SSG)
+  - title: Deployment & Hosting
+    items:
+      - GitHub Pages
+      - Nitro (SSR/Prerender)
+  - title: SEO & Analytics
+    items:
+      - Nuxt SEO
+      - Schema.org
+      - OpenGraph/Twitter Cards
+      - Nuxt Studio

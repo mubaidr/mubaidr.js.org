@@ -33,19 +33,3 @@ h4,
 .h4 {
   @apply text-base md:text-lg font-semibold;
 }
-
-/* Paragraph and other text: decrease by one step */
-p,
-.prose p,
-.text-base {
-  @apply text-xs md:text-sm;
-}
-.text-lg {
-  @apply text-sm md:text-base;
-}
-.text-xl {
-  @apply text-base md:text-lg;
-}
-.text-2xl {
-  @apply text-lg md:text-xl;
-}

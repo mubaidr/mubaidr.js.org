@@ -247,57 +247,6 @@ useHead({
         </div>
       </section>
 
-      <!-- Technologies -->
-      <section class="space-y-12">
-        <div class="text-center space-y-6">
-          <h2>Skills & Expertise</h2>
-
-          <p class="max-w-3xl mx-auto">
-            Comprehensive technical expertise across modern web technologies,
-            frameworks, and development practices.
-          </p>
-        </div>
-
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <div
-            v-for="(skills, category) in professionalJourney?.technologies"
-            :key="category"
-            class="h-full"
-          >
-            <div />
-            <UCard class="h-full">
-              <div
-                class="space-y-4 text-center content-center items-center justify-center"
-              >
-                <div
-                  class="flex gap-2 mb-6 text-center content-center items-center justify-center"
-                >
-                  <div class="flex items-center justify-center flex-shrink-0">
-                    <UIcon name="i-ph-code" class="w-6 h-6" />
-                  </div>
-                  <h3
-                    class="capitalize text-center content-center items-center justify-center"
-                  >
-                    {{ category.replace(/([A-Z])/g, " $1") }}
-                  </h3>
-                </div>
-                <div
-                  class="flex flex-wrap gap-2 text-center content-center items-center justify-center"
-                >
-                  <UBadge
-                    v-for="skill in skills"
-                    :key="skill"
-                    :label="skill"
-                    variant="outline"
-                    size="xl"
-                  />
-                </div>
-              </div>
-            </UCard>
-          </div>
-        </div>
-      </section>
-
       <!-- Call to Action -->
       <section class="space-y-12">
         <UCard class="text-center ring-2 ring-primary">

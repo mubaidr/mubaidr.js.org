@@ -62,14 +62,13 @@ const { data: profile } = await useAsyncData("profile", () => {
           <div class="space-y-6">
             <div class="space-y-4">
               <div class="w-16 h-16 flex items-center justify-center mx-auto">
-                <UIcon name="i-ph-chart-line-up" size="3em" class="text-info" />
+                <UIcon name="i-ph-handshake" size="3em" class="text-info" />
               </div>
               <div class="space-y-3">
-                <h3>Proven Results</h3>
+                <h3>True Partnership</h3>
                 <p>
-                  {{ profile?.projectsDelivered || "125" }}+ successful projects
-                  delivered with {{ profile?.clientSatisfaction || "100" }}%
-                  client satisfaction rate.
+                  I work closely with clients to understand their unique needs,
+                  ensuring solutions that truly fit their business.
                 </p>
               </div>
             </div>
