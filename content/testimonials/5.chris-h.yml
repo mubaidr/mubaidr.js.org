@@ -3,7 +3,10 @@ name: "Chris H."
 title: "Client"
 company: ""
 quote: "mubaidr did a great job and delivered exactly what we were expecting. He followed our request very well and was patient to work through all of our requests."
-project: ""
-results: []
 featured: false
 rating: 5
+project: "E-commerce Website Redesign"
+results:
+  - "Met all feature requests"
+  - "Smooth communication throughout"
+  - "Improved user experience"

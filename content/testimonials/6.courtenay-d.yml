@@ -3,7 +3,10 @@ name: "Courtenay D."
 title: "Client"
 company: ""
 quote: "Good - I could not do this stuff - required someone of his skills!"
-project: ""
-results: []
 featured: false
 rating: 5
+project: "WordPress Plugin Development"
+results:
+  - "Delivered custom plugin as specified"
+  - "Provided clear documentation"
+  - "Enabled new business workflow"
