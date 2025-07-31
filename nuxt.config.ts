@@ -6,14 +6,14 @@ const IS_DEV = import.meta.dev
 
 export default defineNuxtConfig({
   colorMode: {
-    preference: "dark",
-    fallback: "dark",
+    preference: "system",
+    fallback: "light",
     classSuffix: "",
   },
 
   css: ["./app/assets/css/main.css"],
 
-  compatibilityDate: "2025-06-01",
+  compatibilityDate: "2025-07-31",
 
   content: {
     renderer: {
@@ -63,15 +63,10 @@ export default defineNuxtConfig({
     buildCache: true,
     headNext: true,
     lazyHydration: true,
-    sharedPrerenderData: true,
     viewTransition: true,
   },
 
   eslint: {},
-
-  future: {
-    compatibilityVersion: 4,
-  },
 
   // fonts: {},
 
