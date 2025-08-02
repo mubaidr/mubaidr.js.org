@@ -14,7 +14,7 @@ export default defineAppConfig({
     },
     card: {
       slots: {
-        root: "shadow shadow-black/20 transition-all duration-300 hover:scale-101 hover:shadow-xl backdrop-blur bg-white/50 dark:bg-black/25",
+        root: "shadow shadow-black/20 transition-all duration-300 hover:scale-101 hover:shadow-xl backdrop-blur bg-white/33 dark:bg-black/33",
       },
       variants: {
         variant: {

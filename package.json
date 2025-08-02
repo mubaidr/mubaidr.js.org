@@ -16,10 +16,10 @@
     "@tailwindcss/vite": "^4.1.11",
     "nuxt": "^4.0.2",
     "nuxt-feedme": "^1.0.1",
-    "nuxt-mcp": "^0.2.3",
+    "nuxt-mcp": "^0.2.4",
     "tailwindcss": "^4.1.11",
     "vite-plugin-eslint2": "^5.0.4",
-    "vue-tsc": "^3.0.4"
+    "vue-tsc": "^3.0.5"
   },
   "engines": {
     "node": ">=23",
