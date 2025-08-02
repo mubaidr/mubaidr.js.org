@@ -6,56 +6,57 @@
     ]"
     style="padding: 0"
   >
-    <div class="flex justify-center items-center px-6 py-2">
-      <nav
-        class="flex justify-center items-center gap-8 w-full text-sm"
-        role="navigation"
-        aria-label="Main navigation"
-      >
-        <!-- Logo/Brand -->
-        <ULink
-          to="/"
-          class="flex items-center gap-2 justify-center"
-          aria-label="Go to homepage"
+    <div class="relative">
+      <div class="flex justify-center items-center px-6 py-2">
+        <nav
+          class="flex justify-center items-center gap-8 w-full text-sm"
+          role="navigation"
+          aria-label="Main navigation"
         >
-          <div class="w-8 h-8 flex items-center justify-center">
-            <UIcon name="i-ph-code" />
-          </div>
-          <span class="hidden sm:inline">mubaidr</span>
-        </ULink>
+          <!-- Logo/Brand -->
+          <ULink
+            to="/"
+            class="flex items-center gap-2 justify-center"
+            aria-label="Go to homepage"
+          >
+            <div class="w-8 h-8 flex items-center justify-center">
+              <UIcon name="i-ph-code" />
+            </div>
+            <span class="hidden sm:inline">mubaidr</span>
+          </ULink>
 
-        <!-- Desktop Navigation -->
-        <div class="hidden lg:flex items-center gap-3 justify-center">
-          <ULink
-            to="/about"
-            class="hover:scale-110 transition-transform duration-300 ease-in-out"
-          >
-            About
-          </ULink>
-          <ULink
-            to="/services"
-            class="hover:scale-110 transition-transform duration-300 ease-in-out"
-          >
-            Services
-          </ULink>
-          <!-- <ULink
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:flex items-center gap-3 justify-center">
+            <ULink
+              to="/about"
+              class="hover:scale-110 transition-transform duration-300 ease-in-out"
+            >
+              About
+            </ULink>
+            <ULink
+              to="/services"
+              class="hover:scale-110 transition-transform duration-300 ease-in-out"
+            >
+              Services
+            </ULink>
+            <!-- <ULink
             to="/projects"
             class="hover:scale-110 transition-transform duration-300 ease-in-out"
           >
             Projects
           </ULink> -->
-          <ULink
-            to="/blog"
-            class="hover:scale-110 transition-transform duration-300 ease-in-out"
-          >
-            Blog
-          </ULink>
-        </div>
+            <ULink
+              to="/blog"
+              class="hover:scale-110 transition-transform duration-300 ease-in-out"
+            >
+              Blog
+            </ULink>
+          </div>
 
-        <!-- Action Buttons & Mobile Menu -->
-        <div class="flex items-center gap-3 justify-center">
-          <!-- Enhanced Contact CTA -->
-          <!-- <UButton
+          <!-- Action Buttons & Mobile Menu -->
+          <div class="flex items-center gap-3 justify-center">
+            <!-- Enhanced Contact CTA -->
+            <!-- <UButton
             to="/contact"
             class="hidden lg:flex hover:shadow transition-shadow duration-300 ease-in-out"
           >
@@ -63,68 +64,63 @@
             <span>Start Project</span>
           </UButton> -->
 
-          <!-- Theme Switcher -->
-          <ThemeSwitcher />
+            <!-- Theme Switcher -->
+            <ThemeSwitcher />
 
-          <!-- Mobile menu button -->
-          <UButton
-            class="lg:hidden p-2 shadow hover:shadow-lg transition-shadow duration-300 ease-in-out"
-            :aria-expanded="mobileMenuOpen"
-            aria-label="Toggle mobile menu"
-            aria-controls="mobile-menu"
-            @click="toggleMobileMenu"
-          >
-            <UIcon :name="mobileMenuOpen ? 'i-ph-x' : 'i-ph-list'" />
-          </UButton>
-        </div>
-      </nav>
-
-      <!-- Mobile Menu -->
-      <div
-        v-show="mobileMenuOpen"
-        id="mobile-menu"
-        class="lg:hidden mx-4 mb-4 shadow-2xl rounded-lg"
-        @click.stop
-      >
-        <nav class="flex flex-col py-6 px-4" aria-label="Mobile navigation">
-          <!-- Navigation Links with Enhanced Touch Targets -->
-          <ULink
-            v-for="item in navigationItems"
-            :key="item.path"
-            :to="item.path"
-            class="flex items-center gap-4 px-4 py-4 min-h-[44px] hover:scale-105 transition-transform duration-300 ease-in-out"
-            @click="closeMobileMenu"
-          >
-            <UIcon :name="item.icon" />
-            <span>{{ item.label }}</span>
-          </ULink>
-
-          <!-- Divider -->
-          <div class="my-4" />
-
-          <!-- Mobile CTA with Enhanced Styling -->
-          <ULink
-            to="/contact"
-            class="flex items-center justify-center gap-3 px-6 py-4 min-h-[48px]"
-            @click="closeMobileMenu"
-          >
-            <UIcon name="i-ph-envelope" />
-            <span>Let's Talk</span>
-          </ULink>
+            <!-- Mobile menu button -->
+            <UButton
+              class="lg:hidden p-2 shadow hover:shadow-lg transition-shadow duration-300 ease-in-out"
+              :aria-expanded="mobileMenuOpen"
+              aria-label="Toggle mobile menu"
+              aria-controls="mobile-menu"
+              @click="toggleMobileMenu"
+            >
+              <UIcon :name="mobileMenuOpen ? 'i-ph-x' : 'i-ph-list'" />
+            </UButton>
+          </div>
         </nav>
       </div>
     </div>
-
-    <!-- Mobile Menu Backdrop -->
+    <!-- Mobile Menu -->
     <div
-      v-if="mobileMenuOpen"
-      class="fixed inset-0 lg:hidden"
-      style="z-index: -1"
-      @click="closeMobileMenu"
-      @touchstart="handleTouchStart"
-      @touchmove="handleTouchMove"
-      @touchend="handleTouchEnd"
-    />
+      v-show="mobileMenuOpen"
+      id="mobile-menu"
+      class="lg:hidden h-auto min-h-screen absolute left-0 top-full w-screen max-w-none overflow-hidden"
+      style="margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%)"
+      @click.stop
+    >
+      <div class="m-4" @click="toggleMobileMenu">
+        <div
+          class="backdrop-blur bg-white/95 dark:bg-neutral-900/95 rounded-lg border border-neutral-200/60 dark:border-neutral-800/80 overflow-hidden shadow-2xl"
+        >
+          <nav class="flex flex-col py-6 px-4" aria-label="Mobile navigation">
+            <!-- Navigation Links with Enhanced Touch Targets -->
+            <ULink
+              v-for="item in navigationItems"
+              :key="item.path"
+              :to="item.path"
+              class="flex items-center gap-4 px-4 py-4 min-h-[44px] hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg transition-all duration-300 ease-in-out"
+              @click="closeMobileMenu"
+            >
+              <UIcon :name="item.icon" />
+              <span>{{ item.label }}</span>
+            </ULink>
+
+            <br />
+
+            <!-- Mobile CTA with Enhanced Styling -->
+            <ULink
+              to="/contact"
+              class="flex items-center justify-center gap-3 px-6 py-4 min-h-[48px] bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors duration-300"
+              @click="closeMobileMenu"
+            >
+              <UIcon name="i-ph-envelope" />
+              <span>Let's Talk</span>
+            </ULink>
+          </nav>
+        </div>
+      </div>
+    </div>
   </header>
 </template>
 
