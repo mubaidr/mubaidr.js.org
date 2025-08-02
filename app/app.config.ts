@@ -1,6 +1,6 @@
 export default defineAppConfig({
   icon: {
-    size: "24px",
+    size: "20px",
   },
   ui: {
     colors: {
@@ -14,7 +14,7 @@ export default defineAppConfig({
     },
     card: {
       slots: {
-        root: "shadow shadow-black/20 transition-all duration-300 hover:scale-101 hover:shadow-xl backdrop-blur bg-white/33 dark:bg-black/33",
+        root: "shadow shadow-black/10 transition-all duration-300 hover:scale-101 hover:shadow-xl backdrop-blur bg-white/33 dark:bg-black/33",
       },
       variants: {
         variant: {

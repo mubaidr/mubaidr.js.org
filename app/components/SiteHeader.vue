@@ -1,7 +1,7 @@
 <template>
   <header
     :class="[
-      'fixed left-1/2 top-6 transform -translate-x-1/2 z-50 w-auto max-w-3xl bg-white/80 dark:bg-neutral-900/80 hover:shadow-xl rounded-2xl backdrop-blur-lg transition-all duration-300 border-b border-neutral-200/60 dark:border-neutral-800/80',
+      'fixed left-1/2 top-4 transform -translate-x-1/2 z-50 w-auto max-w-3xl bg-white/80 dark:bg-neutral-900/80 hover:shadow-xl rounded-2xl backdrop-blur-lg transition-all duration-300 border-b border-neutral-200/60 dark:border-neutral-800/80',
       scrolled ? 'shadow-md shadow-black/20 scale-105' : '',
     ]"
     style="padding: 0"

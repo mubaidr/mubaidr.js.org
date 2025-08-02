@@ -13,17 +13,29 @@ const palette = computed(() => {
     }
   }
 })
+
+// Fade-in effect after 1 second
+const showBg = ref(false)
+
+onMounted(() => {
+  setTimeout(() => {
+    showBg.value = true
+  }, 1000)
+})
 </script>
 
 <template>
-  <div class="fixed inset-0 pointer-events-none overflow-hidden -z-50">
+  <div
+    class="fixed inset-0 sm:inset-0 pointer-events-none overflow-hidden -z-50 min-h-screen w-full h-full transition-opacity duration-1000"
+    :class="showBg ? 'opacity-100' : 'opacity-0'"
+  >
     <!-- Dotted SVG pattern background -->
     <svg
-      class="absolute inset-0 w-full h-full"
+      class="absolute inset-0 w-full h-full max-w-full max-h-full"
       width="100%"
       height="100%"
       viewBox="0 0 1920 1080"
-      preserveAspectRatio="none"
+      preserveAspectRatio="xMidYMid slice"
       aria-hidden="true"
       style="z-index: 0"
     >

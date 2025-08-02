@@ -19,7 +19,7 @@ const toggleTheme = () => {
       <UIcon v-if="!isDark" name="i-ph-sun" />
     </UButton>
     <template #fallback>
-      <div class="h-8 w-8" />
+      <div class="h-6 w-6" />
     </template>
   </ClientOnly>
 </template>
