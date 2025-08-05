@@ -181,7 +181,7 @@ if (profile.value) {
             size="xl"
             :title="`Visit ${social.name} Profile`"
           >
-            <UIcon :name="social.icon" />
+            <UIcon :name="social.icon" /> {{ social.name }}
           </UButton>
         </div>
       </div>
