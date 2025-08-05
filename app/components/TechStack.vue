@@ -34,7 +34,7 @@ const { data: techStack } = await useAsyncData("tech-stack", () => {
                   v-for="item in category.items"
                   :key="item"
                   variant="outline"
-                  size="xl"
+                  size="lg"
                 >
                   {{ item }}
                 </UBadge>

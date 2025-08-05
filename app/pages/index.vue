@@ -77,118 +77,117 @@ if (profile.value) {
 
 <template>
   <div>
-    <div class="space-y-32">
-      <section v-if="profile" class="text-center">
-        <div class="max-w-5xl mx-auto">
-          <!-- Avatar with Integrated Status - Redesigned -->
-          <div class="flex flex-col items-center mb-8 space-y-3">
-            <!-- Larger, cleaner avatar without ring -->
-            <div
-              class="w-32 h-32 md:w-40 md:h-40 shadow-md hover:shadow-lg transition-all duration-300 ease-in-out rounded-full"
-            >
-              <UAvatar
-                :src="profile.avatar"
-                :alt="profile.name"
-                class="w-full h-full transform hover:scale-105 transition-all duration-300 ease-in-out shadow hover:shadow-lg"
-              />
-            </div>
-            <!-- Status badge on avatar - bottom right positioned -->
-            <div
-              v-if="profile.availability"
-              class="flex gap-2 items-center justify-center text-xs"
-            >
-              <div
-                class="h-3 w-3 rounded-full"
-                :class="{
-                  'bg-primary': profile.availability.status === 'available',
-                  'bg-yellow-500': profile.availability.status !== 'available',
-                  'animate-pulse': true,
-                }"
-              />
-              <div>
-                {{
-                  profile.availability.statusText ||
-                  "Available for new projects"
-                }}
-              </div>
-            </div>
-          </div>
-
-          <div class="space-y-6">
-            <h1>
-              {{ profile.name }}
-            </h1>
-            <p class="text-xl">{{ profile.title }}</p>
-            <p class="text-lg max-w-3xl mx-auto">
-              {{ profile.tagline }}
-            </p>
-          </div>
-
-          <!-- Key Metrics -->
+    <section v-if="profile" class="text-center">
+      <div class="max-w-5xl mx-auto h-screen">
+        <!-- Avatar with Integrated Status - Redesigned -->
+        <div class="flex flex-col items-center mb-8 space-y-3">
+          <!-- Larger, cleaner avatar without ring -->
           <div
-            class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 mt-6 text-sm"
+            class="w-32 h-32 md:w-40 md:h-40 shadow-md hover:shadow-lg transition-all duration-300 ease-in-out rounded-full"
           >
-            <div class="flex items-center gap-1">
-              <span class="text-xl font-semibold">
-                {{ profile?.experience || "12" }}+
-              </span>
-              <span>Years Experience</span>
-            </div>
-
-            <span class="hidden sm:inline">|</span>
-
-            <div class="flex items-center gap-1">
-              <span class="text-xl font-semibold">
-                {{ profile?.projectsDelivered || "125" }}+
-              </span>
-              <span>Projects Delivered</span>
-            </div>
-
-            <span class="hidden sm:inline">|</span>
-
-            <div class="flex items-center gap-1">
-              <span class="text-xl font-semibold">
-                {{ profile?.clientSatisfaction || "100" }}%
-              </span>
-              <span>Client Satisfaction</span>
-            </div>
+            <UAvatar
+              :src="profile.avatar"
+              :alt="profile.name"
+              class="w-full h-full transform hover:scale-105 transition-all duration-300 ease-in-out shadow hover:shadow-lg"
+            />
           </div>
-
-          <!-- Enhanced Action Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-            <UButton to="/contact" size="xl" variant="solid">
-              <UIcon name="i-ph-rocket-launch" />
-              Start Your Project Today
-            </UButton>
-
-            <UButton
-              href="https://cal.com/mubaidr"
-              external
-              size="xl"
-              variant="subtle"
-            >
-              <UIcon name="i-ph-calendar-check" />
-              Book Free Consultation
-            </UButton>
-          </div>
-
-          <!-- Social Links -->
-          <div class="flex justify-center gap-4 mt-8">
-            <UButton
-              v-for="social in profile.social"
-              :key="social.name"
-              :to="social.url"
-              external
-              variant="ghost"
-              size="xl"
-              :title="`Visit ${social.name} Profile`"
-            >
-              <UIcon :name="social.icon" />
-            </UButton>
+          <!-- Status badge on avatar - bottom right positioned -->
+          <div
+            v-if="profile.availability"
+            class="flex gap-2 items-center justify-center text-xs"
+          >
+            <div
+              class="h-3 w-3 rounded-full"
+              :class="{
+                'bg-primary': profile.availability.status === 'available',
+                'bg-yellow-500': profile.availability.status !== 'available',
+                'animate-pulse': true,
+              }"
+            />
+            <div>
+              {{
+                profile.availability.statusText || "Available for new projects"
+              }}
+            </div>
           </div>
         </div>
-      </section>
 
+        <div class="space-y-6">
+          <h1>
+            {{ profile.name }}
+          </h1>
+          <p class="text-xl">{{ profile.title }}</p>
+          <p class="text-lg max-w-3xl mx-auto">
+            {{ profile.tagline }}
+          </p>
+        </div>
+
+        <!-- Key Metrics -->
+        <div
+          class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 mt-6 text-sm"
+        >
+          <div class="flex items-center gap-1">
+            <span class="text-xl font-semibold">
+              {{ profile?.experience || "12" }}+
+            </span>
+            <span>Years Experience</span>
+          </div>
+
+          <span class="hidden sm:inline">|</span>
+
+          <div class="flex items-center gap-1">
+            <span class="text-xl font-semibold">
+              {{ profile?.projectsDelivered || "125" }}+
+            </span>
+            <span>Projects Delivered</span>
+          </div>
+
+          <span class="hidden sm:inline">|</span>
+
+          <div class="flex items-center gap-1">
+            <span class="text-xl font-semibold">
+              {{ profile?.clientSatisfaction || "100" }}%
+            </span>
+            <span>Client Satisfaction</span>
+          </div>
+        </div>
+
+        <!-- Enhanced Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+          <UButton to="/contact" size="xl" variant="solid">
+            <UIcon name="i-ph-rocket-launch" />
+            Start Your Project Today
+          </UButton>
+
+          <UButton
+            href="https://cal.com/mubaidr"
+            external
+            size="xl"
+            variant="subtle"
+          >
+            <UIcon name="i-ph-calendar-check" />
+            Book Free Consultation
+          </UButton>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex justify-center gap-4 mt-8">
+          <UButton
+            v-for="social in profile.social"
+            :key="social.name"
+            :to="social.url"
+            external
+            variant="ghost"
+            size="xl"
+            :title="`Visit ${social.name} Profile`"
+          >
+            <UIcon :name="social.icon" />
+          </UButton>
+        </div>
+      </div>
+    </section>
+
+    <div class="space-y-32">
       <AboutPreview />
 
       <!-- Technologies -->
