@@ -34,7 +34,20 @@ const ringCount = Math.ceil(maxRadius / ringSpacing) // enough rings to fill cor
 const dotsPerRing = (ring: number) =>
   Math.max(10, Math.round((2 * Math.PI * ring * ringSpacing) / 28))
 
-// Generate dot positions for all rings
+// Theme-aware min/max opacity for dots
+const minDotOpacity = computed(() => (colorMode.value === "dark" ? 0.01 : 0.02))
+const maxDotOpacity = computed(() => (colorMode.value === "dark" ? 0.05 : 0.09))
+
+// Helper to map distance to opacity
+function getDotOpacity(distance: number) {
+  // Linear interpolation: center = min, edge = max
+  return (
+    minDotOpacity.value +
+    (maxDotOpacity.value - minDotOpacity.value) * (distance / maxRadius)
+  )
+}
+
+// Generate dot positions and opacity for all rings
 const circularDots = computed(() => {
   const dots = []
   for (let ring = 1; ring <= ringCount; ring++) {
@@ -46,17 +59,20 @@ const circularDots = computed(() => {
       const y = centerY + radius * Math.sin(angle)
       // Only add dots within the SVG bounds
       if (x >= 0 && x <= svgWidth && y >= 0 && y <= svgHeight) {
-        dots.push({ x, y, r: 1.7 - 0.012 * ring })
+        const distance = Math.sqrt((x - centerX) ** 2 + (y - centerY) ** 2)
+        dots.push({
+          x,
+          y,
+          r: 1.7 - 0.012 * ring,
+          opacity: getDotOpacity(distance),
+        })
       }
     }
   }
   // Add center dot
-  dots.push({ x: centerX, y: centerY, r: 2 })
+  dots.push({ x: centerX, y: centerY, r: 2, opacity: minDotOpacity.value })
   return dots
 })
-
-// Theme-aware opacity for dots
-const dotOpacity = computed(() => (colorMode.value === "dark" ? 0.05 : 0.09))
 </script>
 
 <template>
@@ -82,7 +98,7 @@ const dotOpacity = computed(() => (colorMode.value === "dark" ? 0.05 : 0.09))
           :cy="dot.y"
           :r="dot.r"
           :fill="palette.accent"
-          :fill-opacity="dotOpacity"
+          :fill-opacity="dot.opacity"
         />
       </g>
     </svg>
