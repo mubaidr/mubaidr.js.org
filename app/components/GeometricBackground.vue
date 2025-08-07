@@ -47,8 +47,8 @@ function getDotOpacity(distance: number) {
   )
 }
 
-// Generate dot positions and opacity for all rings
-const circularDots = computed(() => {
+// Generate static dot positions and opacity for all rings
+const staticDots = computed(() => {
   const dots = []
   for (let ring = 1; ring <= ringCount; ring++) {
     const radius = ring * ringSpacing
@@ -57,7 +57,6 @@ const circularDots = computed(() => {
       const angle = (2 * Math.PI * i) / count
       const x = centerX + radius * Math.cos(angle)
       const y = centerY + radius * Math.sin(angle)
-      // Only add dots within the SVG bounds
       if (x >= 0 && x <= svgWidth && y >= 0 && y <= svgHeight) {
         const distance = Math.sqrt((x - centerX) ** 2 + (y - centerY) ** 2)
         dots.push({
@@ -65,13 +64,70 @@ const circularDots = computed(() => {
           y,
           r: 1.7 - 0.012 * ring,
           opacity: getDotOpacity(distance),
+          distance,
         })
       }
     }
   }
-  // Add center dot
-  dots.push({ x: centerX, y: centerY, r: 2, opacity: minDotOpacity.value })
+  dots.push({
+    x: centerX,
+    y: centerY,
+    r: 2,
+    opacity: minDotOpacity.value,
+    distance: 0,
+  })
   return dots
+})
+
+// Animated dots state
+const animatedDots = ref([])
+
+// Animation parameters
+const amplitude = 4 // px max movement
+const opacityAmp = 0.015 // max opacity change
+const minSpeed = 0.12,
+  maxSpeed = 0.32 // radians/sec
+
+function animateDots(time) {
+  const t = time / 1000 // seconds
+  if (!animatedDots.value.length) return
+  for (let i = 0; i < animatedDots.value.length; i++) {
+    const dot = animatedDots.value[i]
+    // Animate position with sine/cosine
+    dot.x = dot.baseX + amplitude * Math.sin(t * dot.speed + dot.phase)
+    dot.y = dot.baseY + amplitude * Math.cos(t * dot.speed + dot.phase)
+    // Animate opacity with sine
+    dot.opacity =
+      dot.baseOpacity +
+      opacityAmp * Math.sin(t * dot.speed * 0.7 + dot.phase * 1.3)
+    // Clamp opacity
+    dot.opacity = Math.max(
+      minDotOpacity.value,
+      Math.min(maxDotOpacity.value, dot.opacity),
+    )
+  }
+  requestAnimationFrame(animateDots)
+}
+
+onMounted(() => {
+  setTimeout(() => {
+    showBg.value = true
+  }, 1500)
+
+  // Initialize animated dots
+  const base = staticDots.value
+  animatedDots.value = base.map((dot) => ({
+    baseX: dot.x,
+    baseY: dot.y,
+    baseOpacity: dot.opacity,
+    x: dot.x,
+    y: dot.y,
+    r: dot.r,
+    opacity: dot.opacity,
+    speed: minSpeed + Math.random() * (maxSpeed - minSpeed),
+    phase: Math.random() * Math.PI * 2,
+  }))
+  requestAnimationFrame(animateDots)
 })
 </script>
 
@@ -92,7 +148,7 @@ const circularDots = computed(() => {
     >
       <g>
         <circle
-          v-for="(dot, i) in circularDots"
+          v-for="(dot, i) in animatedDots"
           :key="i"
           :cx="dot.x"
           :cy="dot.y"
