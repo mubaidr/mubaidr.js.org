@@ -1,8 +1,8 @@
 <template>
   <header
     :class="[
-      'fixed left-1/2 top-4 md:top-8 transform -translate-x-1/2 z-50 w-auto max-w-3xl bg-white/80 dark:bg-neutral-900/80 hover:shadow-xl rounded-2xl backdrop-blur-lg transition-all duration-300 border-b border-neutral-200/60 dark:border-neutral-800/80',
-      scrolled ? 'shadow-md shadow-black/20 scale-105' : '',
+      'fixed left-1/2 top-4 md:top-8 transform -translate-x-1/2 z-50 w-auto max-w-3xl bg-white/80 dark:bg-neutral-900/80 hover:shadow-lg rounded-2xl backdrop-blur-lg transition-all duration-300 border-b-2 border-neutral-300/80 dark:border-neutral-800/80',
+      scrolled ? 'shadow-lg scale-103' : '',
     ]"
     style="padding: 0"
   >
