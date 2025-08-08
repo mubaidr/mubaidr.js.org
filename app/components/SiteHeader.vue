@@ -29,25 +29,25 @@
           <div class="hidden lg:flex items-center gap-3 justify-center">
             <ULink
               to="/about"
-              class="hover:scale-110 transition-transform duration-300 ease-in-out"
+              class="hover:scale-105 transition-transform duration-200 ease-in-out"
             >
               About
             </ULink>
             <ULink
               to="/services"
-              class="hover:scale-110 transition-transform duration-300 ease-in-out"
+              class="hover:scale-105 transition-transform duration-200 ease-in-out"
             >
               Services
             </ULink>
             <!-- <ULink
             to="/projects"
-            class="hover:scale-110 transition-transform duration-300 ease-in-out"
+            class="hover:scale-105 transition-transform duration-200 ease-in-out"
           >
             Projects
           </ULink> -->
             <ULink
               to="/blog"
-              class="hover:scale-110 transition-transform duration-300 ease-in-out"
+              class="hover:scale-105 transition-transform duration-200 ease-in-out"
             >
               Blog
             </ULink>
@@ -69,7 +69,7 @@
 
             <!-- Mobile menu button -->
             <UButton
-              class="lg:hidden p-2 shadow hover:shadow-lg transition-shadow duration-300 ease-in-out"
+              class="lg:hidden p-2 shadow hover:shadow-lg transition-shadow duration-300 ease-in-out hover:scale-105"
               :aria-expanded="mobileMenuOpen"
               aria-label="Toggle mobile menu"
               aria-controls="mobile-menu"

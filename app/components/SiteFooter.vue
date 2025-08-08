@@ -23,6 +23,7 @@
               external
               aria-label="GitHub Profile"
               variant="ghost"
+              class="transition-transform duration-200 ease-in-out hover:scale-105"
             >
               <UIcon name="i-ph-github-logo" />
             </UButton>
@@ -31,6 +32,7 @@
               external
               aria-label="LinkedIn Profile"
               variant="ghost"
+              class="transition-transform duration-200 ease-in-out hover:scale-105"
             >
               <UIcon name="i-ph-linkedin-logo" />
             </UButton>
@@ -39,6 +41,7 @@
               external
               aria-label="Twitter Profile"
               variant="ghost"
+              class="transition-transform duration-200 ease-in-out hover:scale-105"
             >
               <UIcon name="i-ph-twitter-logo" />
             </UButton>
