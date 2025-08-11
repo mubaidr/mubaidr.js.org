@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@iconify-json/devicon": "^1.2.36",
+    "@iconify-json/devicon": "^1.2.40",
     "@iconify-json/ph": "^1.2.2",
     "@nuxt/content": "^3.6.3",
     "@nuxt/eslint": "^1.8.0",
