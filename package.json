@@ -1,25 +1,25 @@
 {
   "devDependencies": {
-    "@iconify-json/devicon": "^1.2.40",
+    "@iconify-json/devicon": "^1.2.52",
     "@iconify-json/ph": "^1.2.2",
-    "@nuxt/content": "^3.6.3",
-    "@nuxt/eslint": "^1.8.0",
-    "@nuxt/fonts": "^0.11.4",
-    "@nuxt/icon": "^1.15.0",
-    "@nuxt/image": "^1.11.0",
-    "@nuxt/ui": "^3.3.0",
+    "@nuxt/content": "^3.9.0",
+    "@nuxt/eslint": "^1.12.1",
+    "@nuxt/fonts": "^0.12.1",
+    "@nuxt/icon": "^2.1.0",
+    "@nuxt/image": "^2.0.0",
+    "@nuxt/ui": "^4.2.1",
     "@nuxthq/studio": "^2.2.1",
-    "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/mdc": "0.17.2",
-    "@nuxtjs/seo": "^3.1.0",
-    "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.1.11",
-    "nuxt": "^4.0.3",
-    "nuxt-feedme": "^1.0.1",
-    "nuxt-mcp": "^0.2.4",
-    "tailwindcss": "^4.1.11",
+    "@nuxtjs/color-mode": "^4.0.0",
+    "@nuxtjs/mdc": "0.19.1",
+    "@nuxtjs/seo": "^3.2.2",
+    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "^4.1.17",
+    "nuxt": "^4.2.2",
+    "nuxt-feedme": "^2.1.0",
+    "nuxt-mcp-dev": "^0.3.1",
+    "tailwindcss": "^4.1.17",
     "vite-plugin-eslint2": "^5.0.4",
-    "vue-tsc": "^3.0.5"
+    "vue-tsc": "^3.1.8"
   },
   "engines": {
     "node": ">=23",
@@ -39,6 +39,6 @@
   },
   "type": "module",
   "dependencies": {
-    "better-sqlite3": "^12.2.0"
+    "better-sqlite3": "^12.5.0"
   }
 }

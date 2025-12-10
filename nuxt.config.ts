@@ -6,14 +6,13 @@ const IS_DEV = import.meta.dev
 
 export default defineNuxtConfig({
   colorMode: {
-    preference: "system",
-    fallback: "light",
+    preference: "dark",
     classSuffix: "",
   },
 
   css: ["./app/assets/css/main.css"],
 
-  compatibilityDate: "2025-07-31",
+  compatibilityDate: "2025-12-01",
 
   content: {
     renderer: {
@@ -64,6 +63,7 @@ export default defineNuxtConfig({
     headNext: true,
     lazyHydration: true,
     viewTransition: true,
+    typescriptPlugin: true,
   },
 
   eslint: {},
@@ -88,7 +88,7 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     // "nuxt-feedme",
     "@nuxt/content",
-    "nuxt-mcp",
+    "nuxt-mcp-dev",
     "@nuxt/eslint",
   ],
 

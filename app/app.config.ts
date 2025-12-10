@@ -1,10 +1,7 @@
 export default defineAppConfig({
-  icon: {
-    size: "20px",
-  },
   ui: {
     colors: {
-      primary: "blue",
+      primary: "green",
       neutral: "stone",
     },
     badge: {
