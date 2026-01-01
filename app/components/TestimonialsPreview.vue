@@ -1,7 +1,6 @@
 <script setup lang="ts">
-const { data: testimonials } = await useAsyncData("testimonials-preview", () =>
-  queryCollection("testimonials").order("id", "ASC").all(),
-)
+// Fetch testimonials using composable
+const { data: testimonialsData } = await useTestimonialsData()
 
 const isPaused = ref(false)
 
@@ -22,7 +21,10 @@ function togglePause() {
       </div>
 
       <!-- Carousel Container using Nuxt UI UCarousel -->
-      <div v-if="testimonials && testimonials.length > 0" class="relative">
+      <div
+        v-if="testimonialsData && testimonialsData.length > 0"
+        class="relative"
+      >
         <UButton
           class="absolute right-2 top-2 z-10 md:right-4 md:top-4"
           :title="isPaused ? 'Resume auto-play' : 'Pause auto-play'"
@@ -36,7 +38,7 @@ function togglePause() {
         <UCard class="p-4 sm:p-6 md:p-8">
           <UCarousel
             v-slot="{ item: testimonial }"
-            :items="testimonials"
+            :items="testimonialsData"
             fade
             arrows
             dots
@@ -91,7 +93,7 @@ function togglePause() {
                       >
                         <UIcon
                           name="i-ph-check-circle"
-                          class="w-4 h-4 flex-shrink-0 text-primary-500"
+                          class="w-4 h-4 shrink-0 text-primary-500"
                         />
                         <span>{{ result }}</span>
                       </div>
@@ -114,37 +116,38 @@ function togglePause() {
 
                 <!-- Author -->
                 <div
-                  class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 pt-4 border-t border-gray-200 dark:border-gray-700 mt-auto"
+                  class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 pt-6 border-t border-neutral-100 dark:border-neutral-800 mt-auto"
                 >
                   <div
                     v-if="testimonial.avatar"
-                    class="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center overflow-hidden rounded-full flex-shrink-0 shadow-sm mb-2 sm:mb-0"
+                    class="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center overflow-hidden rounded-full shrink-0 shadow-sm mb-2 sm:mb-0 border border-neutral-200 dark:border-neutral-800"
                   >
-                    <img
+                    <NuxtImg
                       :src="testimonial.avatar"
                       :alt="testimonial.name"
+                      width="56"
+                      height="56"
                       class="w-full h-full object-cover"
-                      @error="
-                        (e) =>
-                          ((e.target as HTMLImageElement).style.display =
-                            'none')
-                      "
+                      placeholder
+                      format="webp"
                     />
-                    <UIcon v-if="!testimonial.avatar" name="i-ph-user" />
                   </div>
                   <div
                     v-else
-                    class="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-full flex-shrink-0 shadow-sm mb-2 sm:mb-0"
+                    class="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-full shrink-0 shadow-sm mb-2 sm:mb-0 bg-neutral-100 dark:bg-neutral-800"
                   >
-                    <UIcon name="i-ph-user" />
+                    <UIcon
+                      name="i-ph-user-bold"
+                      class="w-6 h-6 text-neutral-400"
+                    />
                   </div>
                   <div class="flex-1 min-w-0 text-center sm:text-left">
-                    <p class="font-semibold">
+                    <p class="font-bold text-neutral-900 dark:text-white">
                       {{ testimonial.name }}
                     </p>
                     <p
                       v-if="testimonial.title"
-                      class="truncate text-[10px] sm:text-xs"
+                      class="truncate text-[10px] sm:text-xs text-neutral-500 dark:text-neutral-400"
                     >
                       {{ testimonial.title }}
                       <span v-if="testimonial.company"
@@ -155,6 +158,8 @@ function togglePause() {
                       label="Verified Client"
                       class="mt-2"
                       color="success"
+                      variant="subtle"
+                      size="xs"
                     />
                   </div>
                 </div>

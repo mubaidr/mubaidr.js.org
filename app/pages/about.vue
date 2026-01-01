@@ -5,18 +5,8 @@ definePageMeta({
     "Learn about my professional journey, experience, education, and skills in web development.",
 })
 
-// Fetch professional journey data from Nuxt Content collection
-const { data: professionalJourney } = await useAsyncData(
-  "professional-journey",
-  () => {
-    return queryCollection("professionalJourney").first()
-  },
-)
-
-// Fetch profile journey data from Nuxt Content collection
-const { data: _profile } = await useAsyncData("profile", () => {
-  return queryCollection("profile").first()
-})
+// Fetch data using composables
+const { data: professionalJourneyData } = await useProfessionalJourneyData()
 
 useHead({
   title: "About - Muhammad Ubaid Raza",
@@ -57,7 +47,7 @@ useHead({
 
         <div class="space-y-8">
           <div
-            v-for="experience in professionalJourney?.experiences"
+            v-for="experience in professionalJourneyData?.experiences"
             :key="experience.id"
           >
             <div />
@@ -154,53 +144,42 @@ useHead({
 
         <div class="grid gap-6 md:grid-cols-2">
           <div
-            v-for="edu in professionalJourney?.education"
+            v-for="edu in professionalJourneyData?.education"
             :key="edu.id"
             class="h-full"
           >
-            <div />
-            <UCard class="">
+            <UCard class="h-full">
               <div class="space-y-4">
                 <div class="flex items-start gap-4">
-                  <div class="flex items-center justify-center flex-shrink-0">
+                  <div class="flex items-center justify-center shrink-0">
                     <UIcon
-                      name="i-ph-graduation-cap"
+                      name="i-ph-graduation-cap-bold"
                       size="3em"
-                      class="text-info"
+                      class="text-primary-500"
                     />
                   </div>
-                  <div class="flex-1 space-y-3">
-                    <h3>{{ edu.degree }}</h3>
-                    <p>
+                  <div class="flex-1 space-y-1">
+                    <h3 class="text-xl font-bold">{{ edu.degree }}</h3>
+                    <p class="text-neutral-600 dark:text-neutral-400">
                       {{ edu.institution }}
                     </p>
-                    <p>
+                    <p class="text-sm text-neutral-500">
                       {{ edu.location }}
                     </p>
-                    <UBadge :label="edu.period" variant="soft" />
+                    <UBadge
+                      :label="edu.period"
+                      variant="subtle"
+                      color="neutral"
+                      class="mt-2"
+                    />
                   </div>
                 </div>
 
-                <p>
+                <p
+                  class="text-neutral-600 dark:text-neutral-400 leading-relaxed"
+                >
                   {{ edu.description }}
                 </p>
-
-                <!-- <div>
-                <h4 class="mb-2">Achievements:</h4>
-                <ul class="space-y-1">
-                  <li
-                    v-for="(achievement, index) in edu.achievements"
-                    :key="index"
-                    class="flex items-start gap-2"
-                  >
-                    <UIcon
-                      name="i-ph-medal"
-                      class="w-3 h-3 mt-1 flex-shrink-0"
-                    />
-                    <span >{{ achievement }}</span>
-                  </li>
-                </ul>
-              </div> -->
               </div>
             </UCard>
           </div>
@@ -220,27 +199,37 @@ useHead({
 
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <div
-            v-for="cert in professionalJourney?.certifications"
+            v-for="cert in professionalJourneyData?.certifications"
             :key="cert.id"
             class="h-full text-center"
           >
-            <UCard class="">
+            <UCard class="h-full">
               <div class="space-y-4">
                 <div class="w-16 h-16 flex items-center justify-center mx-auto">
-                  <UIcon name="i-ph-certificate" size="4em" class="text-info" />
+                  <UIcon
+                    name="i-ph-certificate-bold"
+                    size="4em"
+                    class="text-primary-500"
+                  />
                 </div>
 
-                <div class="space-y-3">
-                  <h3>{{ cert.name }}</h3>
-                  <p>{{ cert.issuer }}</p>
-                  <UBadge :label="cert.date" variant="soft" />
+                <div class="space-y-2">
+                  <h3 class="text-lg font-bold">{{ cert.name }}</h3>
+                  <p class="text-neutral-600 dark:text-neutral-400">
+                    {{ cert.issuer }}
+                  </p>
+                  <UBadge :label="cert.date" variant="subtle" color="neutral" />
                 </div>
 
-                <p>
+                <p class="text-sm text-neutral-500 leading-relaxed">
                   {{ cert.description }}
                 </p>
 
-                <div>ID: {{ cert.credentialId }}</div>
+                <div
+                  class="text-[10px] uppercase tracking-widest text-neutral-400"
+                >
+                  ID: {{ cert.credentialId }}
+                </div>
               </div>
             </UCard>
           </div>
@@ -249,23 +238,34 @@ useHead({
 
       <!-- Call to Action -->
       <section class="space-y-12">
-        <UCard class="text-center ring-2 ring-primary">
-          <div class="space-y-6">
-            <div class="space-y-3">
-              <h3>Ready to Work Together?</h3>
-              <p class="max-w-2xl mx-auto">
+        <UCard class="text-center">
+          <div class="space-y-8 py-12">
+            <div class="space-y-4">
+              <h2 class="text-3xl font-bold">Ready to Work Together?</h2>
+              <p
+                class="max-w-2xl mx-auto text-neutral-600 dark:text-neutral-400 text-lg"
+              >
                 Now that you know my story, let's write the next chapter
                 together. I'd love to help bring your ideas to life.
               </p>
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <UButton to="/services" size="lg" variant="solid">
-                <UIcon name="i-ph-briefcase" />
+              <UButton
+                to="/services"
+                size="xl"
+                icon="i-ph-briefcase-bold"
+                class="px-8"
+              >
                 View Services
               </UButton>
-              <UButton to="/contact" size="lg" variant="subtle">
-                <UIcon name="i-ph-envelope" />
+              <UButton
+                to="/contact"
+                size="xl"
+                variant="outline"
+                icon="i-ph-envelope-bold"
+                class="px-8"
+              >
                 Get In Touch
               </UButton>
             </div>

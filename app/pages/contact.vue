@@ -41,10 +41,8 @@ const contactMethods = ref([
   },
 ])
 
-// Fetch FAQs from Nuxt Content using queryCollection
-const { data: faqsData } = await useAsyncData("faqs", () => {
-  return queryCollection("faqs").first()
-})
+// Fetch FAQs using composable
+const { data: faqsData } = await useFaqsData()
 
 // If the page was accessed via a link with `?faqs=true`, scroll to FAQs section
 onMounted(() => {
@@ -84,28 +82,34 @@ onMounted(() => {
           </p>
         </div>
 
-        <div class="grid gap-6 md:grid-cols-3 lg:grid-cols-3">
+        <div class="grid gap-8 md:grid-cols-3">
           <UCard
             v-for="method in contactMethods"
             :key="method.title"
-            class="items-center text-center"
+            class="text-center h-full"
           >
-            <!-- Card content -->
-            <div class="space-y-4 p-4">
-              <div class="w-16 h-16 flex items-center justify-center mx-auto">
-                <UIcon :name="method.icon" size="3em" class="text-info" />
+            <div class="p-6 space-y-6">
+              <div class="flex items-center justify-center mx-auto">
+                <UIcon
+                  :name="method.icon"
+                  size="3em"
+                  class="text-primary-500"
+                />
               </div>
-              <div>
-                <h3 class="mb-1">
-                  {{ method.title }}
-                </h3>
-                <p class="mb-2">
-                  {{ method.description }}
-                </p>
+              <div class="space-y-4">
+                <div class="space-y-1">
+                  <h3 class="text-xl font-bold">
+                    {{ method.title }}
+                  </h3>
+                  <p class="text-neutral-600 dark:text-neutral-400 text-sm">
+                    {{ method.description }}
+                  </p>
+                </div>
 
                 <UButton
-                  :title="method.title"
-                  class="cursor-pointer mt-3"
+                  variant="outline"
+                  color="neutral"
+                  class="w-full justify-center"
                   @click="navigateTo(method.action, { external: true })"
                 >
                   {{ method.value }}

@@ -2,23 +2,21 @@
 const route = useRoute()
 const site = useSiteConfig()
 
-const { data: page } = await useAsyncData(`page-${route.path}`, () => {
-  return queryCollection("blog").path(route.path).first()
-})
+const { data: blogPostData } = await useBlogPost(route.path)
 
-if (!page.value) {
+if (!blogPostData.value) {
   navigateTo("/404")
 }
 
 // SEO: page meta, canonical, OG/Twitter, and BlogPosting schema
-if (page.value) {
+if (blogPostData.value) {
   const url = new URL(route.fullPath, site.url).toString()
-  const title = page.value.title || site.name
-  const description = page.value.description || site.description
-  const image = page.value.image || page.value.socialImage?.src
-  const publishedTime = page.value.date
-  const modifiedTime = page.value.dateUpdated || page.value.date
-  const authorName = page.value.author || site.name
+  const title = blogPostData.value.title || site.name
+  const description = blogPostData.value.description || site.description
+  const image = blogPostData.value.image || blogPostData.value.socialImage?.src
+  const publishedTime = blogPostData.value.date
+  const modifiedTime = blogPostData.value.dateUpdated || blogPostData.value.date
+  const authorName = blogPostData.value.author || site.name
 
   useSeoMeta({
     title,
@@ -40,7 +38,7 @@ if (page.value) {
     link: [{ rel: "canonical", href: url }],
   })
 
-  defineOgImage(page.value.ogImage)
+  defineOgImage(blogPostData.value.ogImage)
   defineOgImageComponent("NuxtSeo")
 
   // Register BlogPosting JSON-LD via Nuxt SEO
@@ -80,12 +78,12 @@ const formatDate = (date: string | Date) => {
 </script>
 
 <template>
-  <div v-if="page">
+  <div v-if="blogPostData">
     <div class="space-y-16 py-16">
       <!-- Post Header -->
       <header class="text-center space-y-6">
         <h1>
-          {{ page.title }}
+          {{ blogPostData.title }}
         </h1>
 
         <div class="flex items-center justify-center gap-6">
@@ -94,20 +92,23 @@ const formatDate = (date: string | Date) => {
               name="i-ph-user-circle"
               class="w-5 h-5 text-primary-500 dark:text-primary-400"
             />
-            <span>{{ page.author }}</span>
+            <span>{{ blogPostData.author }}</span>
           </div>
           <div class="flex items-center gap-2">
             <UIcon
               name="i-ph-calendar"
               class="w-5 h-5 text-primary-500 dark:text-primary-400"
             />
-            <span>{{ formatDate(page.date) }}</span>
+            <span>{{ formatDate(blogPostData.date) }}</span>
           </div>
         </div>
 
-        <div v-if="page.tags" class="flex justify-center flex-wrap gap-2">
+        <div
+          v-if="blogPostData.tags"
+          class="flex justify-center flex-wrap gap-2"
+        >
           <UBadge
-            v-for="tag in page.tags"
+            v-for="tag in blogPostData.tags"
             :key="tag"
             :label="tag"
             variant="soft"
@@ -116,17 +117,22 @@ const formatDate = (date: string | Date) => {
       </header>
 
       <!-- Featured Image -->
-      <div v-if="page.image" class="aspect-[16/9] overflow-hidden">
-        <img
-          :src="page.image"
-          :alt="page.title"
+      <div
+        v-if="blogPostData.image"
+        class="aspect-video overflow-hidden rounded-2xl shadow-lg"
+      >
+        <NuxtImg
+          :src="blogPostData.image"
+          :alt="blogPostData.title"
           class="w-full h-full object-cover"
+          placeholder
+          format="webp"
         />
       </div>
 
       <!-- Post Content -->
       <article class="prose prose-lg max-w-none mx-auto">
-        <ContentRenderer :value="page" />
+        <ContentRenderer :value="blogPostData" />
       </article>
 
       <!-- Back to Blog Link -->

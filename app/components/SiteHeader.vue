@@ -1,82 +1,60 @@
 <template>
   <header
     :class="[
-      'fixed left-1/2 top-4 md:top-8 transform -translate-x-1/2 z-50 w-auto max-w-3xl bg-white/80 dark:bg-neutral-900/80 hover:shadow-lg rounded-2xl backdrop-blur-lg transition-all duration-300 border-b-2 border-neutral-300/80 dark:border-neutral-800/80',
-      scrolled ? 'shadow-lg scale-103' : '',
+      'fixed left-1/2 top-4 md:top-6 transform -translate-x-1/2 z-50 w-auto max-w-4xl bg-white/90 dark:bg-neutral-900/90 rounded-full backdrop-blur-md transition-all duration-300 border border-neutral-200 dark:border-neutral-800 shadow-sm',
+      scrolled ? 'shadow-md' : '',
     ]"
     style="padding: 0"
   >
     <div class="relative">
-      <div class="flex justify-center items-center px-6 py-2">
+      <div class="flex justify-center items-center px-4 py-1.5">
         <nav
-          class="flex justify-center items-center gap-8 w-full text-sm"
+          class="flex justify-center items-center gap-6 w-full text-sm font-medium"
           role="navigation"
           aria-label="Main navigation"
         >
           <!-- Logo/Brand -->
           <ULink
             to="/"
-            class="flex items-center gap-2 justify-center"
+            class="flex items-center gap-2 px-2 py-1 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
             aria-label="Go to homepage"
           >
-            <div class="w-8 h-8 flex items-center justify-center">
-              <UIcon name="i-ph-code" />
-            </div>
-            <span class="hidden sm:inline">mubaidr</span>
+            <UIcon
+              name="i-ph-code-bold"
+              class="w-5 h-5 text-primary-600 dark:text-primary-400"
+            />
+            <span class="hidden sm:inline font-bold tracking-tight"
+              >mubaidr</span
+            >
           </ULink>
 
           <!-- Desktop Navigation -->
-          <div class="hidden lg:flex items-center gap-3 justify-center">
+          <div class="hidden lg:flex items-center gap-1">
             <ULink
-              to="/about"
-              class="hover:scale-105 transition-transform duration-200 ease-in-out"
+              v-for="item in navigationItems"
+              :key="item.path"
+              :to="item.path"
+              class="px-3 py-1.5 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+              active-class="text-primary-600 dark:text-primary-400"
             >
-              About
-            </ULink>
-            <ULink
-              to="/services"
-              class="hover:scale-105 transition-transform duration-200 ease-in-out"
-            >
-              Services
-            </ULink>
-            <!-- <ULink
-            to="/projects"
-            class="hover:scale-105 transition-transform duration-200 ease-in-out"
-          >
-            Projects
-          </ULink> -->
-            <ULink
-              to="/blog"
-              class="hover:scale-105 transition-transform duration-200 ease-in-out"
-            >
-              Blog
+              {{ item.label }}
             </ULink>
           </div>
 
           <!-- Action Buttons & Mobile Menu -->
-          <div class="flex items-center gap-3 justify-center">
-            <!-- Enhanced Contact CTA -->
-            <!-- <UButton
-            to="/contact"
-            class="hidden lg:flex hover:shadow transition-shadow duration-300 ease-in-out"
-          >
-            <UIcon name="i-ph-rocket-launch" />
-            <span>Start Project</span>
-          </UButton> -->
-
-            <!-- Theme Switcher -->
+          <div class="flex items-center gap-2">
             <ThemeSwitcher />
 
             <!-- Mobile menu button -->
             <UButton
-              class="lg:hidden p-2 shadow hover:shadow-lg transition-shadow duration-300 ease-in-out hover:scale-105"
+              class="lg:hidden"
+              variant="ghost"
+              color="neutral"
+              :icon="mobileMenuOpen ? 'i-ph-x' : 'i-ph-list'"
               :aria-expanded="mobileMenuOpen"
               aria-label="Toggle mobile menu"
-              aria-controls="mobile-menu"
               @click="toggleMobileMenu"
-            >
-              <UIcon :name="mobileMenuOpen ? 'i-ph-x' : 'i-ph-list'" />
-            </UButton>
+            />
           </div>
         </nav>
       </div>
@@ -106,7 +84,7 @@
               <span>{{ item.label }}</span>
             </ULink>
 
-            <br />
+            <br >
 
             <!-- Mobile CTA with Enhanced Styling -->
             <ULink
@@ -149,38 +127,6 @@ onBeforeUnmount(() => {
   window.removeEventListener("scroll", handleScroll)
   document.body.style.overflow = ""
 })
-
-// Touch gesture handling for swipe to close
-let touchStartY = 0
-let touchStartX = 0
-
-const handleTouchStart = (e: TouchEvent) => {
-  if (e.touches[0]) {
-    touchStartY = e.touches[0].clientY
-    touchStartX = e.touches[0].clientX
-  }
-}
-
-const handleTouchMove = (e: TouchEvent) => {
-  // Prevent background scrolling when menu is open
-  if (mobileMenuOpen.value) {
-    e.preventDefault()
-  }
-}
-
-const handleTouchEnd = (e: TouchEvent) => {
-  if (e.changedTouches[0]) {
-    const touchEndY = e.changedTouches[0].clientY
-    const touchEndX = e.changedTouches[0].clientX
-    const deltaY = touchStartY - touchEndY
-    const deltaX = Math.abs(touchStartX - touchEndX)
-
-    // Swipe up to close (with minimum distance and not too much horizontal movement)
-    if (deltaY > 50 && deltaX < 100) {
-      closeMobileMenu()
-    }
-  }
-}
 
 // Close mobile menu when route changes
 const route = useRoute()

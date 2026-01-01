@@ -11,21 +11,12 @@ const { count, title } = defineProps({
   },
 })
 
-// Fetch recent blog posts - limit to 2 most recent
-const { data: featuredPosts } = await useAsyncData(
-  "featured-posts",
-  async () => {
-    return queryCollection("blog")
-      .where("featured", "=", true)
-      .order("date", "DESC")
-      .limit(count)
-      .all()
-  },
-)
+// Fetch featured blog posts using composable
+const { data: featuredPostsData } = await useFeaturedBlogPosts(count)
 </script>
 
 <template>
-  <div v-if="featuredPosts && featuredPosts.length > 0">
+  <div v-if="featuredPostsData && featuredPostsData.length > 0">
     <div class="space-y-6">
       <!-- Featured Blog Posts -->
       <div class="text-center">
@@ -40,48 +31,64 @@ const { data: featuredPosts } = await useAsyncData(
 
       <!-- Show blog posts if available, otherwise show placeholder -->
       <div
-        v-if="featuredPosts && featuredPosts.length > 0"
-        class="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto"
+        v-if="featuredPostsData && featuredPostsData.length > 0"
+        class="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto"
       >
         <UCard
-          v-for="(post, index) in featuredPosts"
+          v-for="(post, index) in featuredPostsData"
           :key="post.path || `post-${index}`"
-          class="cursor-pointer h-full"
+          class="group cursor-pointer h-full overflow-hidden"
           @click="navigateTo(post.path || '/blog')"
         >
-          <div class="space-y-4">
-            <!-- Blog post image placeholder -->
-            <!-- <div class="flex items-center justify-center">
-            <UIcon name="i-ph-article" />
-          </div> -->
-
+          <div class="space-y-6">
+            <div
+              v-if="post.image"
+              class="aspect-video -mx-6 -mt-6 mb-4 overflow-hidden"
+            >
+              <NuxtImg
+                :src="post.image"
+                :alt="post.title"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                placeholder
+                format="webp"
+              />
+            </div>
             <div class="space-y-3">
-              <h3 class="text-base font-semibold">
+              <h3
+                class="text-xl font-bold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors"
+              >
                 {{ post.title || "Blog Post Title" }}
               </h3>
-              <p class="text-neutral-600 dark:text-neutral-300">
+              <p
+                class="text-neutral-600 dark:text-neutral-400 line-clamp-3 leading-relaxed"
+              >
                 {{
                   post.description ||
                   "Blog post description that provides a brief overview of the content and main topics covered in the article."
                 }}
               </p>
               <div
-                class="flex items-center justify-between text-[10px] text-neutral-500 dark:text-neutral-400"
+                class="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-xs font-medium text-neutral-500"
               >
-                <span>
-                  {{
-                    post.date
-                      ? new Date(post.date).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })
-                      : "Recent"
-                  }}
-                </span>
-                <div class="flex items-center gap-1">
+                <div class="flex items-center gap-2">
+                  <UIcon name="i-ph-calendar-blank-bold" />
+                  <span>
+                    {{
+                      post.date
+                        ? new Date(post.date).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          })
+                        : "Recent"
+                    }}
+                  </span>
+                </div>
+                <div
+                  class="flex items-center gap-1 text-primary-600 dark:text-primary-400"
+                >
                   <span>Read More</span>
-                  <UIcon name="i-ph-arrow-right" />
+                  <UIcon name="i-ph-arrow-right-bold" />
                 </div>
               </div>
             </div>

@@ -5,10 +5,8 @@ definePageMeta({
     "Professional web development services including full-stack development, consulting, and technical leadership.",
 })
 
-// Fetch services data from Nuxt Content collection
-const { data: servicesData } = await useAsyncData("services", () => {
-  return queryCollection("services").first()
-})
+// Fetch services data using composable
+const { data: servicesData } = await useServicesData()
 
 useHead({
   title: "Services - Muhammad Ubaid Raza",
@@ -50,23 +48,25 @@ useHead({
           <UCard
             v-for="step in servicesData?.process"
             :key="step.step"
-            class="relative text-center"
+            class="text-center h-full"
           >
-            <div class="relative p-6 h-full">
+            <div class="p-6 space-y-6">
               <!-- Icon -->
-              <div class="relative mb-6">
-                <div class="flex items-center justify-center mx-auto">
-                  <UIcon :name="step.icon" size="3em" class="text-info" />
-                </div>
+              <div class="flex items-center justify-center mx-auto">
+                <UIcon :name="step.icon" size="3em" class="text-primary-500" />
               </div>
 
               <!-- Content -->
-              <h3 class="mb-3">
-                {{ step.title }}
-              </h3>
-              <p>
-                {{ step.description }}
-              </p>
+              <div class="space-y-3">
+                <h3 class="text-xl font-bold">
+                  {{ step.title }}
+                </h3>
+                <p
+                  class="text-neutral-600 dark:text-neutral-400 leading-relaxed"
+                >
+                  {{ step.description }}
+                </p>
+              </div>
             </div>
           </UCard>
         </div>
@@ -153,34 +153,34 @@ useHead({
           <div
             v-for="pkg in servicesData?.packages"
             :key="pkg.name"
-            class="h-full"
-            :class="pkg.highlighted ? 'scale-110' : ''"
+            class="h-full transition-transform duration-300"
+            :class="pkg.highlighted ? 'md:scale-105 z-10' : ''"
           >
             <UCard
-              class=""
-              :class="pkg.highlighted ? 'ring-2 ring-primary' : ''"
+              class="h-full"
+              :class="pkg.highlighted ? 'ring-2 ring-primary-500' : ''"
             >
-              <div class="space-y-6">
-                <div class="pt-4">
-                  <h3 class="mb-2">
+              <div class="space-y-8 py-4">
+                <div class="space-y-2">
+                  <h3 class="text-2xl font-bold">
                     {{ pkg.name }}
                   </h3>
-                  <p>
+                  <p class="text-neutral-600 dark:text-neutral-400">
                     {{ pkg.description }}
                   </p>
                 </div>
 
-                <ul class="space-y-3 text-left">
+                <ul class="space-y-4 text-left">
                   <li
                     v-for="feature in pkg.features"
                     :key="feature"
-                    class="flex items-start gap-2"
+                    class="flex items-start gap-3"
                   >
                     <UIcon
-                      name="i-ph-check-circle"
-                      class="w-4 h-4 flex-shrink-0 mt-0.5 text-primary-500 dark:text-primary-400"
+                      name="i-ph-check-circle-bold"
+                      class="w-5 h-5 shrink-0 text-primary-500"
                     />
-                    <span>{{ feature }}</span>
+                    <span class="text-sm">{{ feature }}</span>
                   </li>
                 </ul>
 
@@ -188,10 +188,11 @@ useHead({
                   to="/contact"
                   :variant="pkg.highlighted ? 'solid' : 'outline'"
                   size="xl"
-                  class="w-full"
+                  class="w-full justify-center"
+                  icon="i-ph-arrow-right-bold"
+                  trailing
                 >
                   Get Started
-                  <UIcon name="i-ph-arrow-right" />
                 </UButton>
               </div>
             </UCard>
@@ -201,12 +202,16 @@ useHead({
 
       <!-- Call to Action -->
       <section class="space-y-12">
-        <UCard class="ring-2 ring-primary">
-          <div class="text-center space-y-8 py-16 px-8">
-            <div class="space-y-6">
-              <h2>Let's Build Something Amazing</h2>
+        <UCard>
+          <div class="text-center space-y-10 py-16 px-8">
+            <div class="space-y-4">
+              <h2 class="text-3xl md:text-4xl font-bold">
+                Let's Build Something Amazing
+              </h2>
 
-              <p class="max-w-3xl mx-auto">
+              <p
+                class="max-w-2xl mx-auto text-neutral-600 dark:text-neutral-400 text-lg"
+              >
                 Ready to transform your ideas into reality? Let's discuss your
                 project and create something extraordinary together.
               </p>
@@ -215,29 +220,46 @@ useHead({
             <div
               class="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <UButton to="/contact" size="xl" variant="solid">
-                <UIcon name="i-ph-chat-circle" />
+              <UButton
+                to="/contact"
+                size="xl"
+                icon="i-ph-chat-circle-bold"
+                class="px-8"
+              >
                 Start Your Project
               </UButton>
 
-              <UButton to="/#testimonials" size="xl" variant="outline">
-                <UIcon name="i-ph-users" />
+              <UButton
+                to="/#testimonials"
+                size="xl"
+                variant="outline"
+                icon="i-ph-users-bold"
+                class="px-8"
+              >
                 See Client Reviews
               </UButton>
             </div>
 
             <!-- Trust Indicators -->
-            <div class="flex flex-wrap justify-center items-center gap-8 pt-8">
-              <div class="flex items-center gap-2">
-                <UIcon name="i-ph-check-circle" />
+            <div
+              class="flex flex-wrap justify-center items-center gap-8 pt-8 border-t border-neutral-100 dark:border-neutral-800"
+            >
+              <div
+                class="flex items-center gap-2 text-sm font-medium text-neutral-600 dark:text-neutral-400"
+              >
+                <UIcon name="i-ph-check-circle-bold" class="text-primary-500" />
                 <span>10+ Years Experience</span>
               </div>
-              <div class="flex items-center gap-2">
-                <UIcon name="i-ph-check-circle" />
-                <span>100% Client Satisfaction</span>
+              <div
+                class="flex items-center gap-2 text-sm font-medium text-neutral-600 dark:text-neutral-400"
+              >
+                <UIcon name="i-ph-check-circle-bold" class="text-primary-500" />
+                <span>100% Satisfaction</span>
               </div>
-              <div class="flex items-center gap-2">
-                <UIcon name="i-ph-check-circle" />
+              <div
+                class="flex items-center gap-2 text-sm font-medium text-neutral-600 dark:text-neutral-400"
+              >
+                <UIcon name="i-ph-check-circle-bold" class="text-primary-500" />
                 <span>24h Response Time</span>
               </div>
             </div>

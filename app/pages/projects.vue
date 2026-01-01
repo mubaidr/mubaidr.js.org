@@ -5,10 +5,8 @@ definePageMeta({
     "Explore my portfolio of web applications, browser extensions, and open source contributions.",
 })
 
-// Fetch projects data from Nuxt Content collection
-const { data: projects } = await useAsyncData("projects", async () => {
-  return queryCollection("projects").first()
-})
+// Fetch projects data using composable
+const { data: projectsData } = await useProjectsData()
 
 useHead({
   title: "Projects - Muhammad Ubaid Raza",
@@ -25,11 +23,11 @@ const selectedCategory = ref("All")
 
 const filteredProjects = computed(() => {
   if (selectedCategory.value === "All") {
-    return projects.value?.projects || []
+    return projectsData.value?.projects || []
   }
 
   return (
-    projects.value?.projects.filter(
+    projectsData.value?.projects.filter(
       (p) => p.category === selectedCategory.value,
     ) || []
   )
@@ -65,7 +63,7 @@ const filteredProjects = computed(() => {
         <!-- Category Filter -->
         <div class="flex flex-wrap justify-center gap-2 mb-8">
           <UButton
-            v-for="category in projects?.categories"
+            v-for="category in projectsData?.categories"
             :key="category.name"
             :variant="selectedCategory === category.name ? 'solid' : 'outline'"
             @click="selectedCategory = category.name"
@@ -85,27 +83,36 @@ const filteredProjects = computed(() => {
             <UCard class="">
               <!-- Project Image -->
               <div
-                class="mb-4 flex items-center justify-center overflow-hidden"
+                class="mb-4 flex items-center justify-center overflow-hidden aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg"
               >
-                <img
+                <NuxtImg
                   v-if="project.image"
                   :src="project.image"
                   :alt="project.title"
                   class="w-full h-full object-cover"
+                  placeholder
+                  format="webp"
                 />
-                <UIcon v-else name="i-ph-folder-open" />
+                <UIcon
+                  v-else
+                  name="i-ph-folder-open"
+                  size="3em"
+                  class="text-neutral-400"
+                />
               </div>
 
               <!-- Project Content -->
               <div class="space-y-4">
                 <div>
                   <div class="flex items-center justify-between mb-2">
-                    <h3>
+                    <h3 class="text-lg font-bold">
                       {{ project.title }}
                     </h3>
                     <UBadge :label="project.category" variant="soft" />
                   </div>
-                  <p>
+                  <p
+                    class="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2"
+                  >
                     {{ project.description }}
                   </p>
                 </div>
@@ -117,23 +124,25 @@ const filteredProjects = computed(() => {
                     :key="tech"
                     :label="tech"
                     variant="outline"
+                    size="sm"
                   />
                   <UBadge
                     v-if="project.technologies.length > 4"
                     :label="`+${project.technologies.length - 4}`"
                     variant="soft"
+                    size="sm"
                   />
                 </div>
 
                 <!-- Status and Date -->
-                <div class="flex items-center justify-between">
+                <div class="flex items-center justify-between text-xs">
                   <UBadge
                     :label="project.status"
                     :color="project.status === 'active' ? 'success' : 'neutral'"
                     variant="soft"
                     size="sm"
                   />
-                  <span>
+                  <span class="text-neutral-500">
                     {{ new Date(project.startDate).getFullYear() }}
                   </span>
                 </div>
@@ -160,15 +169,6 @@ const filteredProjects = computed(() => {
                     size="sm"
                   >
                     <UIcon name="i-ph-github-logo" />
-                  </UButton>
-
-                  <UButton
-                    v-if="project.links.case_study"
-                    :to="project.links.case_study"
-                    variant="outline"
-                    size="sm"
-                  >
-                    <UIcon name="i-ph-article" />
                   </UButton>
                 </div>
               </div>

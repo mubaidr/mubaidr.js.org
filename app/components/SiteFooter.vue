@@ -1,50 +1,50 @@
 <template>
   <footer
-    class="bg-white/80 dark:bg-neutral-900/80 shadow-md shadow-black/20 hover:shadow-xl border-t border-gray-100 dark:border-stone-800 backdrop-blur-lg transition-all duration-300"
+    class="bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800"
   >
-    <div class="max-w-6xl mx-auto px-4 md:px-8 py-12">
-      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 py-16">
+      <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <!-- Brand & Description -->
-        <div class="lg:col-span-2">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-8 h-8 flex items-center justify-center">
-              <UIcon name="i-ph-code" />
-            </div>
-            <span>mubaidr</span>
+        <div class="lg:col-span-2 space-y-6">
+          <div class="flex items-center gap-3">
+            <UIcon
+              name="i-ph-code-bold"
+              class="w-6 h-6 text-primary-600 dark:text-primary-400"
+            />
+            <span class="text-xl font-bold tracking-tight">mubaidr</span>
           </div>
-          <p class="mb-6 max-w-md">
-            Full-stack developer passionate about creating exceptional web
-            experiences. Specializing in Vue.js, Nuxt.js, and modern web
-            technologies.
+          <p
+            class="text-neutral-600 dark:text-neutral-400 max-w-md leading-relaxed"
+          >
+            Senior Software Engineer specializing in modern web technologies.
+            Crafting scalable web applications and browser extensions for
+            startups and founders.
           </p>
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2">
             <UButton
               to="https://github.com/mubaidr"
               external
-              aria-label="GitHub Profile"
               variant="ghost"
-              class="transition-transform duration-200 ease-in-out hover:scale-105"
-            >
-              <UIcon name="i-ph-github-logo" />
-            </UButton>
+              color="neutral"
+              icon="i-ph-github-logo"
+              aria-label="GitHub"
+            />
             <UButton
               to="https://linkedin.com/in/mubaidr"
               external
-              aria-label="LinkedIn Profile"
               variant="ghost"
-              class="transition-transform duration-200 ease-in-out hover:scale-105"
-            >
-              <UIcon name="i-ph-linkedin-logo" />
-            </UButton>
+              color="neutral"
+              icon="i-ph-linkedin-logo"
+              aria-label="LinkedIn"
+            />
             <UButton
               to="https://twitter.com/mubaidr"
               external
-              aria-label="Twitter Profile"
               variant="ghost"
-              class="transition-transform duration-200 ease-in-out hover:scale-105"
-            >
-              <UIcon name="i-ph-twitter-logo" />
-            </UButton>
+              color="neutral"
+              icon="i-ph-twitter-logo"
+              aria-label="Twitter"
+            />
           </div>
         </div>
 

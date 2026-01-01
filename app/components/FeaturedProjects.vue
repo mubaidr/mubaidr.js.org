@@ -15,14 +15,8 @@ const { count, title, hideLink } = defineProps({
   },
 })
 
-// Fetch projects data
-const { data: featuredProjects } = await useAsyncData(
-  "featured-projects",
-  async () => {
-    const data = await queryCollection("projects").first()
-    return data?.projects.filter((p) => p.featured).slice(0, count)
-  },
-)
+// Fetch featured projects using composable
+const { data: featuredProjectsData } = await useFeaturedProjects(count)
 </script>
 
 <template>
@@ -37,7 +31,7 @@ const { data: featuredProjects } = await useAsyncData(
 
     <div class="grid gap-6 md:grid-cols-2">
       <UCard
-        v-for="project in featuredProjects"
+        v-for="project in featuredProjectsData"
         :key="project.id"
         class="cursor-pointer h-full"
       >

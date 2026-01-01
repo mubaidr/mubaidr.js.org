@@ -68,7 +68,11 @@ export default defineNuxtConfig({
 
   eslint: {},
 
-  // fonts: {},
+  fonts: {
+    families: [
+      { name: "Inter", provider: "google", weights: [400, 500, 600, 700] },
+    ],
+  },
 
   icon: {
     clientBundle: {
@@ -76,14 +80,16 @@ export default defineNuxtConfig({
     },
   },
 
-  // image: {},
+  image: {
+    format: ["webp", "avif"],
+  },
 
   modules: [
     "@nuxtjs/color-mode",
     "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/ui",
-    // "@nuxt/image",
+    "@nuxt/image",
     // "@nuxtjs/mdc",
     "@nuxtjs/seo",
     // "nuxt-feedme",

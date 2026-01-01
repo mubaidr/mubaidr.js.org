@@ -1,12 +1,6 @@
 <script lang="ts" setup>
-// Fetch limited services data for preview
-const { data: servicesPreview } = await useAsyncData(
-  "services-preview",
-  async () => {
-    const data = await queryCollection("services").first()
-    return data?.services.slice(0, 3)
-  },
-)
+// Fetch limited services data for preview using composable
+const { data: servicesData } = await useServicesPreview(3)
 </script>
 
 <template>
@@ -25,7 +19,7 @@ const { data: servicesPreview } = await useAsyncData(
       <!-- Service Categories -->
       <div class="grid gap-8 lg:grid-cols-3">
         <UCard
-          v-for="service in servicesPreview"
+          v-for="service in servicesData"
           :key="service.title"
           class="text-center h-full"
         >
@@ -33,21 +27,27 @@ const { data: servicesPreview } = await useAsyncData(
             <!-- Icon & Title -->
             <div class="space-y-4">
               <div class="w-16 h-16 flex items-center justify-center mx-auto">
-                <UIcon :name="service.icon" size="3em" class="text-info" />
+                <UIcon
+                  :name="service.icon"
+                  size="3em"
+                  class="text-primary-500"
+                />
               </div>
 
               <div class="space-y-3">
-                <h3 class="font-semibold">
+                <h3 class="font-bold">
                   {{ service.title }}
                 </h3>
-                <p class="text-neutral-600 dark:text-neutral-300">
+                <p class="text-neutral-600 dark:text-neutral-400">
                   {{ service.description }}
                 </p>
               </div>
             </div>
 
             <!-- Key Highlight -->
-            <UBadge size="xl" variant="outline">{{ service.suitable }}</UBadge>
+            <UBadge size="lg" variant="subtle" color="neutral">{{
+              service.suitable
+            }}</UBadge>
           </div>
         </UCard>
       </div>

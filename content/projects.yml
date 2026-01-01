@@ -3,7 +3,7 @@ projects:
     title: "Vue Color Avatar"
     description: "A Vue.js component library for generating beautiful, customizable SVG avatars. Used by thousands of developers worldwide."
     longDescription: "Vue Color Avatar is a comprehensive Vue.js component library that allows developers to generate beautiful, customizable SVG avatars programmatically. The library supports various customization options including colors, shapes, accessories, and facial features, making it perfect for user profile pictures, placeholder images, and design systems."
-    image: "/img/projects/vue-color-avatar.png"
+    image: "https://placehold.co/600x400/000000/FFFFFF/png?text=Vue+Color+Avatar"
     technologies:
       - "Vue.js"
       - "TypeScript"
@@ -45,7 +45,7 @@ projects:
     title: "Browser Extension Template"
     description: "A modern template for building cross-browser extensions using Vue 3, TypeScript, and Manifest V3."
     longDescription: "A comprehensive starter template for building modern browser extensions that work across Chrome, Firefox, Edge, and Safari. Built with Vue 3, TypeScript, and the latest Manifest V3 specifications, this template provides a solid foundation for extension development with hot reloading, automated building, and cross-browser compatibility."
-    image: "/img/projects/browser-extension.png"
+    image: "https://placehold.co/600x400/000000/FFFFFF/png?text=Browser+Extension"
     technologies:
       - "Vue 3"
       - "TypeScript"
@@ -86,7 +86,7 @@ projects:
     title: "E-commerce Platform"
     description: "Full-stack e-commerce solution with advanced features like real-time inventory, payment processing, and analytics."
     longDescription: "A comprehensive e-commerce platform built for scalability and performance. Features include real-time inventory management, multiple payment gateway integration, advanced analytics dashboard, customer management system, and mobile-responsive design. Built with modern technologies to handle high traffic and transaction volumes."
-    image: "/img/projects/ecommerce.png"
+    image: "https://placehold.co/600x400/000000/FFFFFF/png?text=E-commerce+Platform"
     technologies:
       - "Nuxt.js"
       - "Node.js"
@@ -101,7 +101,6 @@ projects:
     endDate: "2023-10-15"
     links:
       demo: "https://example-ecommerce.com"
-      case_study: "/case-studies/ecommerce-platform"
     stats:
       revenue: "$100k+"
       orders: "5k+"
@@ -128,7 +127,7 @@ projects:
     title: "Task Management SaaS"
     description: "Cloud-based project management tool with team collaboration, time tracking, and reporting features."
     longDescription: "A comprehensive SaaS solution for project and task management designed for teams of all sizes. Features real-time collaboration, advanced time tracking, custom reporting, integration with popular tools, and role-based access control. Built with scalability and user experience as primary focuses."
-    image: "/img/projects/task-management.png"
+    image: "https://placehold.co/600x400/000000/FFFFFF/png?text=Task+Management"
     technologies:
       - "React"
       - "Express.js"
@@ -143,7 +142,6 @@ projects:
     endDate: 9999-12-31
     links:
       demo: "https://example-tasks.com"
-      case_study: "/case-studies/task-management-saas"
     stats:
       users: "2k+"
       teams: "500+"
@@ -169,7 +167,7 @@ projects:
     title: "Developer Portfolio"
     description: "Modern, responsive portfolio website built with Nuxt 3, featuring glass morphism design and smooth animations."
     longDescription: "A cutting-edge portfolio website showcasing modern web development techniques. Features glass morphism design, smooth animations, dark/light mode, blog integration, contact forms, and optimized performance. Built with Nuxt 3 and deployed with modern DevOps practices."
-    image: "/img/projects/portfolio.png"
+    image: "https://placehold.co/600x400/000000/FFFFFF/png?text=Developer+Portfolio"
     technologies:
       - "Nuxt 3"
       - "Tailwind CSS"
@@ -211,7 +209,7 @@ projects:
     title: "API Documentation Tool"
     description: "Interactive API documentation generator with live testing capabilities and beautiful UI."
     longDescription: "A developer-focused tool for generating beautiful, interactive API documentation. Features live testing capabilities, code examples in multiple languages, authentication testing, and collaborative features. Designed to make API documentation both beautiful and functional."
-    image: "/img/projects/api-docs.png"
+    image: "https://placehold.co/600x400/000000/FFFFFF/png?text=API+Documentation"
     technologies:
       - "Vue.js"
       - "Express.js"
@@ -253,7 +251,7 @@ projects:
     title: "Real-time Chat Application"
     description: "Scalable chat application with video calling, file sharing, and team channels."
     longDescription: "Enterprise-grade chat application supporting real-time messaging, video calls, file sharing, and team collaboration. Built with modern technologies to support thousands of concurrent users with features like message encryption, custom emojis, and integration capabilities."
-    image: "/img/projects/chat-app.png"
+    image: "https://placehold.co/600x400/000000/FFFFFF/png?text=Real-time+Chat"
     technologies:
       - "Vue.js"
       - "Socket.io"
@@ -268,7 +266,6 @@ projects:
     endDate: "2022-02-28"
     links:
       demo: "https://example-chat.com"
-      case_study: "/case-studies/chat-application"
     stats:
       concurrent_users: "5k+"
       messages_sent: "1M+"
