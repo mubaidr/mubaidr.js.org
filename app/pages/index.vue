@@ -68,7 +68,7 @@ if (profileData.value) {
 
 <template>
   <div>
-    <section v-if="profileData" class="py-12 md:py-20">
+    <section v-if="profileData" class="py-8 md:py-16">
       <div class="max-w-5xl mx-auto px-4">
         <div class="flex flex-col items-center text-center space-y-8">
           <!-- Avatar with Integrated Status -->
