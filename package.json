@@ -3,7 +3,7 @@
     "@iconify-json/devicon": "^1.2.58",
     "@iconify-json/ph": "^1.2.2",
     "@nuxt/content": "^3.11.2",
-    "@nuxt/eslint": "^1.14.0",
+    "@nuxt/eslint": "^1.15.1",
     "@nuxt/fonts": "^0.13.0",
     "@nuxt/icon": "^2.2.1",
     "@nuxt/image": "^2.0.0",
@@ -14,11 +14,11 @@
     "@nuxtjs/seo": "^3.4.0",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",
-    "nuxt": "^4.3.0",
+    "nuxt": "^4.3.1",
     "nuxt-feedme": "^2.1.0",
     "nuxt-mcp-dev": "^0.3.2",
     "tailwindcss": "^4.1.18",
-    "vite-plugin-eslint2": "^5.0.4",
+    "vite-plugin-eslint2": "^5.0.5",
     "vue-tsc": "^3.2.4"
   },
   "engines": {
