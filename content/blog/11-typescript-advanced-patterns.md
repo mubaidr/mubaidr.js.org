@@ -15,7 +15,7 @@ socialImage:
   height: 630
 ---
 
-# Advanced TypeScript Patterns for Enterprise Applications
+## Advanced TypeScript Patterns for Enterprise Applications
 
 TypeScript has evolved far beyond simple type annotations. In enterprise applications, advanced TypeScript patterns can provide incredible type safety, better developer experience, and more maintainable code. After working with TypeScript in large-scale applications for several years, I'm sharing the most powerful patterns that have transformed how I write and maintain complex codebases.
 

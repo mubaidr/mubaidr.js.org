@@ -42,12 +42,12 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
         >
           <div class="space-y-6">
             <div
-              v-if="post.image"
+              v-if="post.socialImage?.src || post.image"
               class="aspect-video -mx-6 -mt-6 mb-4 overflow-hidden"
             >
               <NuxtImg
-                :src="post.image"
-                :alt="post.title"
+                :src="post.socialImage?.src || post.image"
+                :alt="post.socialImage?.alt || post.title"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 placeholder
                 format="webp"
@@ -57,32 +57,19 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
               <h3
                 class="text-xl font-bold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors"
               >
-                {{ post.title || "Blog Post Title" }}
+                {{ post.title }}
               </h3>
               <p
                 class="text-neutral-600 dark:text-neutral-400 line-clamp-3 leading-relaxed"
               >
-                {{
-                  post.description ||
-                  "Blog post description that provides a brief overview of the content and main topics covered in the article."
-                }}
+                {{ post.description }}
               </p>
               <div
                 class="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-xs font-medium text-neutral-500 dark:text-neutral-500"
               >
                 <div class="flex items-center gap-2">
                   <UIcon name="i-ph-calendar-blank-bold" />
-                  <span>
-                    {{
-                      post.date
-                        ? new Date(post.date).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
-                          })
-                        : "Recent"
-                    }}
-                  </span>
+                  <span>{{ $formatDate(post.date) }}</span>
                 </div>
                 <div
                   class="flex items-center gap-1 text-primary-600 dark:text-primary-400"

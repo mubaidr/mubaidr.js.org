@@ -15,7 +15,7 @@ socialImage:
   height: 630
 ---
 
-# Docker and Microservices Deployment: Production-Ready Strategies
+## Docker and Microservices Deployment: Production-Ready Strategies
 
 Containerization and microservices have revolutionized how we build and deploy applications. After deploying dozens of microservices architectures in production, I'm sharing the battle-tested strategies, patterns, and tools that ensure reliable, scalable deployments.
 

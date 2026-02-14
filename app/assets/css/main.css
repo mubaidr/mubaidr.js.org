@@ -3,7 +3,7 @@
 @plugin "@tailwindcss/typography";
 
 @theme static {
-  --font-sans: "Poppins", "Public Sans", sans-serif;
+  --font-family: "Poppins", "Public Sans", sans-serif;
 }
 
 :root {
@@ -12,24 +12,5 @@
 
 body {
   overflow-y: scroll;
-  @apply bg-gradient-to-br from-neutral-50/20 via-neutral-950/5 to-neutral-50/10 dark:from-neutral-950/20 dark:via-neutral-50/5 dark:to-neutral-950/10;
-  font-family: var(--font-sans);
-}
-
-/* Headings: all sizes decreased by one step */
-h1,
-.h1 {
-  @apply text-3xl md:text-4xl font-extrabold tracking-tighter;
-}
-h2,
-.h2 {
-  @apply text-2xl md:text-3xl font-bold tracking-tight;
-}
-h3,
-.h3 {
-  @apply text-xl md:text-2xl font-bold;
-}
-h4,
-.h4 {
-  @apply text-lg md:text-xl font-semibold;
+  @apply bg-linear-to-br from-neutral-50/20 via-neutral-950/5 to-neutral-50/10 dark:from-neutral-950/20 dark:via-neutral-50/5 dark:to-neutral-950/10;
 }

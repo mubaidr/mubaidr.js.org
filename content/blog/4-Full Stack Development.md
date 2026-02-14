@@ -14,7 +14,7 @@ author: Muhammad Ubaid Raza
 authorUrl: /
 ---
 
-# Full Stack Development with Node.js and Vue.js: A Complete Guide
+## Full Stack Development with Node.js and Vue.js: A Complete Guide
 
 Full stack development can feel overwhelming when you're just starting out. With so many technologies, frameworks, and best practices to consider, it's easy to get lost in the complexity. But here's the thing—once you understand the core concepts and have a solid foundation, building full stack applications becomes not just manageable, but genuinely enjoyable.
 
@@ -63,7 +63,7 @@ Perhaps most importantly, this stack is designed with developer experience in mi
 
 Let me break down how a typical Node.js + Vue.js application is structured:
 
-```
+```bash
 my-fullstack-app/
 ├── client/                 # Vue.js frontend
 │   ├── src/

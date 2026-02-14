@@ -18,6 +18,26 @@ if (blogPostData.value) {
   const modifiedTime = blogPostData.value.dateUpdated || blogPostData.value.date
   const authorName = blogPostData.value.author || site.name
 
+  // Resolve author URL with fallback chain: frontmatter -> authors collection -> /about
+  let authorUrl: string | undefined = blogPostData.value.authorUrl
+  if (authorUrl && !authorUrl.startsWith("http")) {
+    authorUrl = new URL(authorUrl, site.url).toString()
+  }
+
+  if (!authorUrl && authorName) {
+    const authors = await queryCollection("authors").all()
+    const author = authors.find(
+      (a) => a.alternateName === authorName || a.name === authorName,
+    )
+    if (author?.url) {
+      authorUrl = author.url
+    }
+  }
+
+  if (!authorUrl) {
+    authorUrl = `${site.url}/about`
+  }
+
   useSeoMeta({
     title,
     description,
@@ -54,7 +74,7 @@ if (blogPostData.value) {
       ? {
           "@type": "Person",
           name: authorName,
-          url: site.url,
+          url: authorUrl,
         }
       : undefined,
     publisher: {
@@ -65,14 +85,6 @@ if (blogPostData.value) {
         url: new URL("/favicon.png", site.url).toString(),
       },
     },
-  })
-}
-
-const formatDate = (date: string | Date) => {
-  return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
   })
 }
 </script>
@@ -99,7 +111,7 @@ const formatDate = (date: string | Date) => {
               name="i-ph-calendar"
               class="w-5 h-5 text-primary-500 dark:text-primary-400"
             />
-            <span>{{ formatDate(blogPostData.date) }}</span>
+            <span>{{ $formatDate(blogPostData.date) }}</span>
           </div>
         </div>
 
@@ -118,12 +130,12 @@ const formatDate = (date: string | Date) => {
 
       <!-- Featured Image -->
       <div
-        v-if="blogPostData.image"
+        v-if="blogPostData.socialImage?.src || blogPostData.image"
         class="aspect-video overflow-hidden rounded-2xl shadow-lg"
       >
         <NuxtImg
-          :src="blogPostData.image"
-          :alt="blogPostData.title"
+          :src="blogPostData.socialImage?.src || blogPostData.image"
+          :alt="blogPostData.socialImage?.alt || blogPostData.title"
           class="w-full h-full object-cover"
           placeholder
           format="webp"

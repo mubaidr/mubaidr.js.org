@@ -20,11 +20,7 @@ const { data: profileData } = await useProfileData()
           <p
             class="max-w-2xl mx-auto text-neutral-600 dark:text-neutral-400 text-lg"
           >
-            {{
-              description ||
-              profileData?.availability?.description ||
-              "Let's discuss your project requirements and create something exceptional together."
-            }}
+            {{ description || profileData?.availability?.description }}
           </p>
         </div>
 
@@ -40,7 +36,7 @@ const { data: profileData } = await useProfileData()
             />
             <div class="text-left">
               <div class="text-sm font-bold">
-                {{ profileData?.availability?.responseTime || "8h" }} Response
+                {{ profileData?.availability?.responseTime }} Response
               </div>
               <div class="text-xs text-neutral-500">Quick turnaround</div>
             </div>
@@ -74,12 +70,12 @@ const { data: profileData } = await useProfileData()
         <!-- Action Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
           <UButton
-            :to="profileData?.availability?.cta?.url || '/contact'"
+            :to="profileData?.availability?.cta?.url"
             size="xl"
             icon="i-ph-rocket-launch"
             class="px-8"
           >
-            {{ profileData?.availability?.cta?.text || "Start Your Project" }}
+            {{ profileData?.availability?.cta?.text }}
           </UButton>
           <UButton
             to="/services"
@@ -95,9 +91,9 @@ const { data: profileData } = await useProfileData()
         <!-- Availability Note -->
         <div v-if="profileData?.availability?.status === 'available'">
           <UBadge variant="outline" size="xl">
-            Only {{ profileData?.availability?.slotsAvailable || 3 }} project
-            slots available for
-            {{ profileData?.availability?.startDate || "August 2025" }}
+            Only {{ profileData?.availability?.slotsAvailable }} project slots
+            available for
+            {{ profileData?.availability?.startDate }}
           </UBadge>
         </div>
       </div>

@@ -27,12 +27,14 @@ export default defineContentConfig({
         schema: z.object({
           title: z.string(),
           description: z.string(),
+          excerpt: z.string().optional(),
           headline: z.string().optional(),
           abstract: z.string().optional(),
           date: z.string().datetime(),
           dateUpdated: z.string().datetime().optional(),
           author: z.string(),
           authorUrl: z.string().optional(),
+          // Preferred: socialImage provides richer data (src, alt, dimensions)
           socialImage: z
             .object({
               src: z.string(),
@@ -42,6 +44,7 @@ export default defineContentConfig({
               height: z.number(),
             })
             .optional(),
+          // Fallback: simple string URL (legacy support)
           image: z.string().optional(),
           tags: z.array(z.string()).optional(),
           featured: z.boolean().optional().default(false),

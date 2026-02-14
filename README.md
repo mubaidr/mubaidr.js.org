@@ -89,7 +89,6 @@ A modern, high-performance personal portfolio and blog website built with **Nuxt
 ├── app/                      # Application source code
 │   ├── components/          # Vue components
 │   │   ├── CallToAction.vue
-│   │   ├── CurrentTime.vue
 │   │   ├── FeaturedBlogPosts.vue
 │   │   ├── FeaturedProjects.vue
 │   │   ├── GeometricBackground.vue

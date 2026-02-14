@@ -15,7 +15,7 @@ socialImage:
   height: 630
 ---
 
-# Modern JavaScript ES2024 Features Every Developer Should Know
+## Modern JavaScript ES2024 Features Every Developer Should Know
 
 JavaScript continues to evolve at a rapid pace, and ES2024 brings some exciting new features that promise to make our code more expressive, performant, and maintainable. As a full-stack developer who's been working with JavaScript for over a decade, I'm excited to share the most impactful features that are already changing how we write modern applications.
 

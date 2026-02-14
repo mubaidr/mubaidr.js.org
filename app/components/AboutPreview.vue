@@ -31,7 +31,7 @@ const { data: profileData } = await useProfileData()
               <div class="space-y-3">
                 <h3 class="font-bold">Technical Excellence</h3>
                 <p class="text-neutral-600 dark:text-neutral-400">
-                  {{ profileData?.experience || "12" }}+ years of deep technical
+                  {{ profileData.experience }}+ years of deep technical
                   expertise across full-stack development, DevOps, and modern
                   architectures.
                 </p>
@@ -54,9 +54,8 @@ const { data: profileData } = await useProfileData()
               <div class="space-y-3">
                 <h3 class="font-bold">Proven Results</h3>
                 <p class="text-neutral-600 dark:text-neutral-400">
-                  {{ profileData?.projectsDelivered || "125" }}+ successful
-                  projects delivered with
-                  {{ profileData?.clientSatisfaction || "100" }}% client
+                  {{ profileData.projectsDelivered }}+ successful projects
+                  delivered with {{ profileData.clientSatisfaction }}% client
                   satisfaction rate.
                 </p>
               </div>

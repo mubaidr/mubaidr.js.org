@@ -50,7 +50,6 @@ useHead({
             v-for="experience in professionalJourneyData?.experiences"
             :key="experience.id"
           >
-            <div />
             <UCard class="relative">
               <div class="space-y-6">
                 <!-- Experience Header -->

@@ -79,7 +79,6 @@ const filteredProjects = computed(() => {
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div v-for="project in filteredProjects" :key="project.id">
-            <div />
             <UCard class="">
               <!-- Project Image -->
               <div

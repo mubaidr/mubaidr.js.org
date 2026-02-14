@@ -14,7 +14,7 @@ authorUrl: /
 featured: true
 ---
 
-# Building Modern Browser Extensions: A Developer's Guide to Vite, Vue 3, and Manifest V3
+## Building Modern Browser Extensions: A Developer's Guide to Vite, Vue 3, and Manifest V3
 
 Browser extensions have become an integral part of our daily web experience, from password managers to productivity tools. However, developing them can be challenging, especially when you want to use modern web technologies and maintain compatibility across different browsers.
 
@@ -138,7 +138,7 @@ Let me show you how the template is structured and why each part matters:
 
 ### Directory Structure
 
-```
+```bash
 src/
 ├── background/          # Service worker scripts
 │   ├── index.ts

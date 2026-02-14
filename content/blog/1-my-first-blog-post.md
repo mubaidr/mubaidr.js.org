@@ -17,7 +17,7 @@ socialImage:
   height: 630
 ---
 
-# My Journey into Tech Blogging
+## My Journey into Tech Blogging
 
 Welcome to my corner of the internet! I'm Muhammad Ubaid Raza, a passionate software engineer with over 8 years of experience navigating the ever-evolving world of technology. After years of learning, building, and problem-solving, I've decided to create this blog as a way to share my knowledge, experiences, and insights with fellow developers and tech enthusiasts.
 

@@ -18,7 +18,7 @@ socialImage:
 featured: true
 ---
 
-# My VSCode Setup: A Journey to Minimal Perfection
+## My VSCode Setup: A Journey to Minimal Perfection
 
 As developers, we spend countless hours staring at our code editors. The environment we work in significantly impacts our productivity, focus, and even our well-being. After years of experimenting with different themes, extensions, and configurations, I've finally crafted a VSCode setup that I absolutely love—and I'm excited to share it with you.
 

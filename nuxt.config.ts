@@ -23,7 +23,7 @@ export default defineNuxtConfig({
         rehypePlugins: {
           "rehype-external-links": {
             target: "_blank",
-            rel: "noopener noreferer",
+            rel: "noopener noreferrer",
           },
         },
         highlight: {
@@ -139,6 +139,7 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    // @ts-expect-error - Tailwind CSS Vite plugin type compatibility
     plugins: [tailwindcss()],
   },
 

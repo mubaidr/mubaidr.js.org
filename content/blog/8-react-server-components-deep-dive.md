@@ -15,7 +15,7 @@ socialImage:
   height: 630
 ---
 
-# React Server Components Deep Dive: The Future of React Architecture
+## React Server Components Deep Dive: The Future of React Architecture
 
 React Server Components (RSC) represent one of the most significant architectural shifts in React since hooks. After implementing RSC in several production applications, I want to share the insights, patterns, and practical considerations that will help you understand and adopt this powerful paradigm.
 

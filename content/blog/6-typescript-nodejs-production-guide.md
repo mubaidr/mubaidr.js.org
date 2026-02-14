@@ -9,7 +9,7 @@ featured: true
 image: /img/blog/sample.webp
 ---
 
-# TypeScript + Node.js in Production: A Complete Guide
+## TypeScript + Node.js in Production: A Complete Guide
 
 Running TypeScript in production requires careful consideration of build processes, performance, and maintainability. After deploying dozens of TypeScript Node.js applications, here's everything you need to know.
 

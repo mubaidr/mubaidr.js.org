@@ -1,6 +1,7 @@
 ---
 title: Introducing the gem-team Repository
 description: Discover how the gem-team repository enhances AI development workflows with powerful tools and best practices.
+excerpt: The gem-team repository provides tools, configurations, and best practices to enhance AI-assisted development workflows, improving productivity and code quality for teams using GitHub Copilot.
 date: 2025-02-14T00:00:00.000Z
 author: mubaidr
 featured: true

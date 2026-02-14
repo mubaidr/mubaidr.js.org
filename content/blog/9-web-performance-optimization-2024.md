@@ -15,7 +15,7 @@ socialImage:
   height: 630
 ---
 
-# Web Performance Optimization in 2024: Complete Guide to Core Web Vitals
+## Web Performance Optimization in 2024: Complete Guide to Core Web Vitals
 
 Web performance has never been more critical. With Google's Page Experience update and the increasing focus on Core Web Vitals, optimizing your website's performance directly impacts search rankings, user experience, and conversion rates. After optimizing hundreds of websites and achieving consistent 90+ Lighthouse scores, I'm sharing the most effective strategies that work in 2024.
 
@@ -51,7 +51,7 @@ LCP measures when the largest content element becomes visible. Target: **under 2
 
 #### Advanced LCP Optimization Techniques
 
-**1. Resource Hints for Critical Assets**
+1. **Resource Hints for Critical Assets**
 
 ```html
 <!-- Preload critical resources -->
@@ -69,7 +69,7 @@ LCP measures when the largest content element becomes visible. Target: **under 2
 <link rel="dns-prefetch" href="//analytics.google.com" />
 ```
 
-**2. Critical CSS Inlining**
+2. **Critical CSS Inlining**
 
 ```html
 <style>
@@ -102,7 +102,7 @@ FID is being replaced by INP in 2024. INP measures responsiveness throughout the
 
 #### JavaScript Optimization Strategies
 
-**1. Code Splitting and Lazy Loading**
+1. **Code Splitting and Lazy Loading**
 
 ```javascript
 // ❌ Loading everything upfront
@@ -135,7 +135,7 @@ document.addEventListener(
 )
 ```
 
-**2. Web Workers for Heavy Computations**
+2. **Web Workers for Heavy Computations**
 
 ```javascript
 // main.js
@@ -161,7 +161,7 @@ self.onmessage = function (e) {
 }
 ```
 
-**3. Optimizing Event Handlers**
+3. **Optimizing Event Handlers**
 
 ```javascript
 // ❌ Blocking event handlers
@@ -193,7 +193,7 @@ CLS measures unexpected layout shifts. Target: **under 0.1**.
 
 #### Preventing Layout Shifts
 
-**1. Reserve Space for Dynamic Content**
+1. **Reserve Space for Dynamic Content**
 
 ```css
 /* ❌ No space reserved for images */
@@ -215,7 +215,7 @@ CLS measures unexpected layout shifts. Target: **under 0.1**.
 }
 ```
 
-**2. Font Loading Optimization**
+2. **Font Loading Optimization**
 
 ```css
 /* ✅ Prevent font swap layout shifts */
@@ -238,7 +238,7 @@ body {
 }
 ```
 
-**3. Skeleton Screens for Loading States**
+3. **Skeleton Screens for Loading States**
 
 ```jsx
 // ✅ Skeleton that matches final content dimensions

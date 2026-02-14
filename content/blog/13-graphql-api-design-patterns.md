@@ -15,7 +15,7 @@ socialImage:
   height: 630
 ---
 
-# GraphQL API Design Patterns: Building Scalable and Efficient APIs
+## GraphQL API Design Patterns: Building Scalable and Efficient APIs
 
 GraphQL has revolutionized how we think about API design, offering unprecedented flexibility and efficiency. After building and scaling GraphQL APIs serving millions of requests, I'm sharing the patterns, optimizations, and best practices that ensure your GraphQL implementation is both powerful and performant.
 

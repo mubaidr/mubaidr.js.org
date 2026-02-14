@@ -3,48 +3,19 @@
 const { data: profileData } = await useProfileData()
 const { data: professionalJourneyData } = await useProfessionalJourneyData()
 
-// SEO Meta
+// SEO Meta using reactive composables
 if (profileData.value) {
-  useHead({
+  useSeoMeta({
     title: `${profileData.value.name} - ${profileData.value.title}`,
-    meta: [
-      {
-        name: "description",
-        content: profileData.value.description,
-      },
-      {
-        property: "og:title",
-        content: `${profileData.value.name} - ${profileData.value.title}`,
-      },
-      {
-        property: "og:description",
-        content: profileData.value.description,
-      },
-      {
-        property: "og:image",
-        content: profileData.value.avatar,
-      },
-      {
-        property: "og:type",
-        content: "profile",
-      },
-      {
-        name: "twitter:card",
-        content: "summary_large_image",
-      },
-      {
-        name: "twitter:title",
-        content: `${profileData.value.name} - ${profileData.value.title}`,
-      },
-      {
-        name: "twitter:description",
-        content: profileData.value.description,
-      },
-      {
-        name: "twitter:image",
-        content: profileData.value.avatar,
-      },
-    ],
+    description: profileData.value.description,
+    ogTitle: `${profileData.value.name} - ${profileData.value.title}`,
+    ogDescription: profileData.value.description,
+    ogImage: profileData.value.avatar,
+    ogType: "profile",
+    twitterCard: "summary_large_image",
+    twitterTitle: `${profileData.value.name} - ${profileData.value.title}`,
+    twitterDescription: profileData.value.description,
+    twitterImage: profileData.value.avatar,
   })
 
   // Structured data for SEO

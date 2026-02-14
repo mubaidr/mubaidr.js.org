@@ -4,12 +4,13 @@
     "@iconify-json/ph": "^1.2.2",
     "@nuxt/content": "^3.11.2",
     "@nuxt/eslint": "^1.15.1",
-    "@nuxt/fonts": "^0.13.0",
+    "@nuxt/fonts": "^0.14.0",
     "@nuxt/icon": "^2.2.1",
     "@nuxt/image": "^2.0.0",
     "@nuxt/ui": "^4.4.0",
     "@nuxthq/studio": "^2.2.1",
     "@nuxtjs/color-mode": "^4.0.0",
+    "prettier": "^3.8.1",
     "@nuxtjs/mdc": "0.20.1",
     "@nuxtjs/seo": "^3.4.0",
     "@tailwindcss/typography": "^0.5.19",
@@ -33,9 +34,9 @@
     "generate": "nuxt generate",
     "postinstall": "nuxt prepare",
     "preview": "nuxt preview",
-    "type-check": "nuxt typecheck",
-    "lint": "eslint . --fix",
-    "format": "prettier --write ."
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint . --fix --cache",
+    "format": "prettier --write --cache ."
   },
   "type": "module",
   "dependencies": {

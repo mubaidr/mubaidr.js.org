@@ -15,7 +15,7 @@ socialImage:
   height: 630
 ---
 
-# Next.js 14 App Router Complete Guide: Server Components and Beyond
+## Next.js 14 App Router Complete Guide: Server Components and Beyond
 
 Next.js 14's App Router represents the future of React development, bringing Server Components, improved performance, and a more intuitive developer experience. After migrating multiple production applications to the App Router, I'm sharing the comprehensive guide that covers everything from basic concepts to advanced patterns.
 
@@ -23,7 +23,7 @@ Next.js 14's App Router represents the future of React development, bringing Ser
 
 The App Router introduces a file-system based routing that's more powerful and flexible than the Pages Router:
 
-```
+```bash
 app/
 ├── layout.js          # Root layout
 ├── page.js           # Home page
@@ -126,7 +126,7 @@ export default function SearchBox({ onSearch }) {
 
 ### Dynamic Routes and Route Groups
 
-```
+```bash
 app/
 ├── (marketing)/          # Route group (doesn't affect URL)
 │   ├── layout.js        # Marketing layout

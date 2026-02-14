@@ -77,19 +77,19 @@
               v-for="item in navigationItems"
               :key="item.path"
               :to="item.path"
-              class="flex items-center gap-4 px-4 py-4 min-h-[44px] hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg transition-all duration-300 ease-in-out"
+              class="flex items-center gap-4 px-4 py-4 min-h-11 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg transition-all duration-300 ease-in-out"
               @click="closeMobileMenu"
             >
               <UIcon :name="item.icon" />
               <span>{{ item.label }}</span>
             </ULink>
 
-            <br >
+            <br />
 
             <!-- Mobile CTA with Enhanced Styling -->
             <ULink
               to="/contact"
-              class="flex items-center justify-center gap-3 px-6 py-4 min-h-[48px] bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors duration-300"
+              class="flex items-center justify-center gap-3 px-6 py-4 min-h-12 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors duration-300"
               @click="closeMobileMenu"
             >
               <UIcon name="i-ph-envelope" />

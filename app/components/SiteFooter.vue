@@ -58,9 +58,7 @@
             <li>
               <ULink to="/about"> About </ULink>
             </li>
-            <!-- <li>
-              <ULink to="/projects"> Projects </ULink>
-            </li> -->
+
             <li>
               <ULink to="/blog"> Blog </ULink>
             </li>
@@ -80,9 +78,6 @@
             <li>
               <ULink to="/services"> Code Review </ULink>
             </li>
-            <!-- <li>
-              <ULink to="/contact"> Get In Touch </ULink>
-            </li> -->
           </ul>
         </div>
       </div>

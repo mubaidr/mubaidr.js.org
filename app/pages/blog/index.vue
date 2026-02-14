@@ -15,15 +15,6 @@ const blogData = computed(() => ({
   count: blogPosts.value?.length || 0,
 }))
 
-// Format date helper
-const formatDate = (date: string | Date) => {
-  return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  })
-}
-
 // Extract excerpt from content
 const getExcerpt = (content: unknown, maxLength = 150) => {
   if (!content) return ""
@@ -105,7 +96,11 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
         </div>
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <article v-for="post in blogData.posts" :key="post.id" class="h-full">
+          <article
+            v-for="post in blogData.posts"
+            :key="post.path"
+            class="h-full"
+          >
             <UCard
               as="div"
               class="group h-full overflow-hidden cursor-pointer"
@@ -115,9 +110,9 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
                 <!-- Featured Image -->
                 <div class="aspect-video -mx-6 -mt-6 overflow-hidden">
                   <NuxtImg
-                    v-if="post.image"
-                    :src="post.image"
-                    :alt="post.title"
+                    v-if="post.socialImage?.src || post.image"
+                    :src="post.socialImage?.src || post.image"
+                    :alt="post.socialImage?.alt || post.title"
                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     placeholder
                     format="webp"
@@ -164,7 +159,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
                   >
                     <div class="flex items-center gap-2">
                       <UIcon name="i-ph-calendar-blank-bold" />
-                      <span>{{ formatDate(post.date) }}</span>
+                      <span>{{ $formatDate(post.date) }}</span>
                     </div>
                     <div
                       class="flex items-center gap-1 text-primary-600 dark:text-primary-400"

@@ -23,7 +23,7 @@ const contactMethods = ref([
     title: "Email",
     description: "Send me an email anytime",
     value: "mubaidr@gmail.com",
-    action: "mailto:hello@mubaidr.com",
+    action: "mailto:mubaidr@gmail.com",
   },
   {
     icon: "i-ph-linkedin-logo",

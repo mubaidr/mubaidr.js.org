@@ -9,7 +9,7 @@ featured: true
 image: /img/blog/sample.webp
 ---
 
-# Vue 3 Composition API: Best Practices for Modern Development
+## Vue 3 Composition API: Best Practices for Modern Development
 
 The Vue 3 Composition API has revolutionized how we write Vue applications, offering better logic reuse, improved TypeScript support, and more flexible component organization. After working with it in production for over two years, here are the essential best practices I've discovered.
 
