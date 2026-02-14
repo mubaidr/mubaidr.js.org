@@ -44,32 +44,48 @@ useHead({
           </p>
         </div>
 
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <UCard
-            v-for="step in servicesData?.process"
-            :key="step.step"
-            class="text-center h-full"
-          >
-            <div class="p-6 space-y-6">
-              <!-- Icon -->
-              <div class="flex items-center justify-center mx-auto">
-                <UIcon :name="step.icon" size="3em" class="text-primary-500" />
-              </div>
-
-              <!-- Content -->
-              <div class="space-y-3">
-                <h3 class="text-xl font-bold">
-                  {{ step.title }}
-                </h3>
-                <p
-                  class="text-neutral-600 dark:text-neutral-400 leading-relaxed"
-                >
-                  {{ step.description }}
-                </p>
-              </div>
+        <UStepper
+          :items="
+            servicesData?.process.map((p) => ({
+              value: p.step,
+              title: p.title,
+              description: p.description,
+              icon: p.icon,
+              details: p.details,
+            })) ?? []
+          "
+          value-key="value"
+          :default-value="-1"
+          :disabled="true"
+        >
+          <template #indicator="{ item }">
+            <div class="flex items-center justify-center">
+              <UIcon :name="item.icon" size="3em" class="text-primary-500" />
             </div>
-          </UCard>
-        </div>
+          </template>
+
+          <template #title="{ item }">
+            <h3 class="text-lg font-bold">
+              {{ item.title }}
+            </h3>
+          </template>
+
+          <template #description="{ item }">
+            <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              {{ item.description }}
+            </p>
+          </template>
+
+          <!-- <template #content="{ item }">
+            <ul v-if="item.details?.length" class="mt-4 space-y-2">
+              <li v-for="(detail, idx) in item.details" :key="idx"
+                class="flex items-start gap-2 text-sm text-neutral-600 dark:text-neutral-400">
+                <UIcon name="i-ph-check-circle" class="w-4 h-4 shrink-0 mt-0.5 text-primary-500" />
+                <span>{{ detail }}</span>
+              </li>
+            </ul>
+          </template> -->
+        </UStepper>
       </section>
 
       <!-- Pricing -->
@@ -132,73 +148,6 @@ useHead({
             </UCard>
           </div>
         </div>
-      </section>
-
-      <!-- Call to Action -->
-      <section class="space-y-12">
-        <UCard>
-          <div class="text-center space-y-10 py-16 px-8">
-            <div class="space-y-4">
-              <h2 class="text-3xl md:text-4xl font-bold">
-                Let's Build Something Amazing
-              </h2>
-
-              <p
-                class="max-w-2xl mx-auto text-neutral-600 dark:text-neutral-400 text-lg"
-              >
-                Ready to transform your ideas into reality? Let's discuss your
-                project and create something extraordinary together.
-              </p>
-            </div>
-
-            <div
-              class="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            >
-              <UButton
-                to="/contact"
-                size="xl"
-                icon="i-ph-chat-circle-bold"
-                class="px-8"
-              >
-                Start Your Project
-              </UButton>
-
-              <UButton
-                to="/#testimonials"
-                size="xl"
-                variant="outline"
-                icon="i-ph-users-bold"
-                class="px-8"
-              >
-                See Client Reviews
-              </UButton>
-            </div>
-
-            <!-- Trust Indicators -->
-            <div
-              class="flex flex-wrap justify-center items-center gap-8 pt-8 border-t border-neutral-100 dark:border-neutral-800"
-            >
-              <div
-                class="flex items-center gap-2 text-sm font-medium text-neutral-600 dark:text-neutral-400"
-              >
-                <UIcon name="i-ph-check-circle-bold" class="text-primary-500" />
-                <span>10+ Years Experience</span>
-              </div>
-              <div
-                class="flex items-center gap-2 text-sm font-medium text-neutral-600 dark:text-neutral-400"
-              >
-                <UIcon name="i-ph-check-circle-bold" class="text-primary-500" />
-                <span>100% Satisfaction</span>
-              </div>
-              <div
-                class="flex items-center gap-2 text-sm font-medium text-neutral-600 dark:text-neutral-400"
-              >
-                <UIcon name="i-ph-check-circle-bold" class="text-primary-500" />
-                <span>24h Response Time</span>
-              </div>
-            </div>
-          </div>
-        </UCard>
       </section>
     </div>
   </div>

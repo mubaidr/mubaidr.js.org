@@ -1,8 +1,8 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: "teal",
-      neutral: "stone",
+      primary: "emerald",
+      neutral: "slate",
     },
     badge: {
       defaultVariants: {
@@ -11,7 +11,7 @@ export default defineAppConfig({
     },
     card: {
       slots: {
-        root: "shadow-sm border border-neutral-200 dark:border-neutral-800 transition-all duration-300 hover:shadow-md bg-white dark:bg-neutral-900",
+        root: "shadow-xs border border-neutral-200 dark:border-neutral-800 transition-all duration-300 hover:shadow-md bg-white dark:bg-neutral-900",
       },
       variants: {
         variant: {

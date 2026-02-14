@@ -26,7 +26,7 @@ const { data: profileData } = await useProfileData()
 
         <!-- Value Points -->
         <div
-          class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto py-4"
+          class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto py-4"
         >
           <div class="flex items-center gap-4 justify-center">
             <UIcon
@@ -39,18 +39,6 @@ const { data: profileData } = await useProfileData()
                 {{ profileData?.availability?.responseTime }} Response
               </div>
               <div class="text-xs text-neutral-500">Quick turnaround</div>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-4 justify-center">
-            <UIcon
-              name="i-ph-shield-check-bold"
-              size="2.5em"
-              class="text-primary-500"
-            />
-            <div class="text-left">
-              <div class="text-sm font-bold">100% Satisfaction</div>
-              <div class="text-xs text-neutral-500">Guaranteed results</div>
             </div>
           </div>
 

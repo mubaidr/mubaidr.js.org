@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 // Fetch data using composables
 const { data: profileData } = await useProfileData()
-const { data: professionalJourneyData } = await useProfessionalJourneyData()
+// const { data: professionalJourneyData } = await useProfessionalJourneyData()
 
 // SEO Meta using reactive composables
 if (profileData.value) {
@@ -39,7 +39,7 @@ if (profileData.value) {
 
 <template>
   <div>
-    <section v-if="profileData" class="py-8 md:py-16">
+    <section v-if="profileData" class="py-12 md:py-24">
       <div class="max-w-5xl mx-auto px-4">
         <div class="flex flex-col items-center text-center space-y-8">
           <!-- Avatar with Integrated Status -->
@@ -92,42 +92,6 @@ if (profileData.value) {
             </p>
           </div>
 
-          <!-- Key Metrics -->
-          <div
-            class="flex flex-wrap justify-center gap-8 md:gap-12 py-8 border-y border-neutral-100 dark:border-neutral-800 w-full max-w-4xl"
-          >
-            <div class="text-center">
-              <div class="text-3xl font-bold text-neutral-900 dark:text-white">
-                {{ profileData?.experience || "12" }}+
-              </div>
-              <div
-                class="text-sm text-neutral-500 dark:text-neutral-500 uppercase tracking-widest"
-              >
-                Years Exp.
-              </div>
-            </div>
-            <div class="text-center">
-              <div class="text-3xl font-bold text-neutral-900 dark:text-white">
-                {{ profileData?.projectsDelivered || "125" }}+
-              </div>
-              <div
-                class="text-sm text-neutral-500 dark:text-neutral-500 uppercase tracking-widest"
-              >
-                Projects
-              </div>
-            </div>
-            <div class="text-center">
-              <div class="text-3xl font-bold text-neutral-900 dark:text-white">
-                {{ profileData?.clientSatisfaction || "100" }}%
-              </div>
-              <div
-                class="text-sm text-neutral-500 dark:text-neutral-500 uppercase tracking-widest"
-              >
-                Satisfaction
-              </div>
-            </div>
-          </div>
-
           <!-- Action Buttons -->
           <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <UButton
@@ -137,16 +101,6 @@ if (profileData.value) {
               class="px-8"
             >
               Start Your Project
-            </UButton>
-            <UButton
-              href="https://cal.com/mubaidr"
-              external
-              size="xl"
-              variant="outline"
-              icon="i-ph-calendar-check"
-              class="px-8"
-            >
-              Book Consultation
             </UButton>
           </div>
 
@@ -159,7 +113,7 @@ if (profileData.value) {
               external
               variant="ghost"
               color="neutral"
-              size="lg"
+              size="xl"
               :icon="social.icon"
               :title="social.name"
             />
@@ -170,47 +124,9 @@ if (profileData.value) {
 
     <div class="space-y-32 pb-20">
       <AboutPreview />
-
-      <!-- Skills & Expertise -->
-      <section class="max-w-6xl mx-auto px-4 space-y-12">
-        <div class="text-center space-y-4">
-          <h2 class="text-3xl md:text-4xl font-bold">Skills & Expertise</h2>
-          <p class="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
-            Comprehensive technical expertise across modern web technologies and
-            development practices.
-          </p>
-        </div>
-
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <UCard
-            v-for="(skills, category) in professionalJourneyData?.technologies"
-            :key="category"
-            class="flex flex-col"
-          >
-            <template #header>
-              <div class="flex items-center gap-3">
-                <UIcon name="i-ph-code-bold" class="w-5 h-5 text-primary-500" />
-                <h3 class="font-bold capitalize">
-                  {{ category.replace(/([A-Z])/g, " $1") }}
-                </h3>
-              </div>
-            </template>
-            <div class="flex flex-wrap gap-2">
-              <UBadge
-                v-for="skill in skills"
-                :key="skill"
-                :label="skill"
-                variant="subtle"
-                color="neutral"
-              />
-            </div>
-          </UCard>
-        </div>
-      </section>
-
       <TestimonialsPreview />
-      <ServicesPreview />
-      <CallToAction />
+      <!-- <ServicesPreview /> -->
+      <!-- <CallToAction /> -->
       <RecentBlogPosts />
     </div>
   </div>

@@ -1,10 +1,12 @@
 <template>
   <header
     :class="[
-      'fixed left-1/2 top-4 md:top-6 transform -translate-x-1/2 z-50 w-auto max-w-4xl bg-white/90 dark:bg-neutral-900/90 rounded-full backdrop-blur-md transition-all duration-300 border border-neutral-200 dark:border-neutral-800 shadow-sm',
-      scrolled ? 'shadow-md' : '',
+      'fixed left-1/2 top-4 md:top-6 transform -translate-x-1/2 z-50 w-auto max-w-4xl bg-white/90 dark:bg-neutral-900/90 rounded-md backdrop-blur-md transition-shadow duration-300',
+      scrolled
+        ? 'shadow-md border border-neutral-200 dark:border-neutral-800'
+        : '',
     ]"
-    style="padding: 0"
+    class="p-0"
   >
     <div class="relative">
       <div class="flex justify-center items-center px-4 py-1.5">
@@ -63,8 +65,7 @@
     <div
       v-show="mobileMenuOpen"
       id="mobile-menu"
-      class="lg:hidden h-auto min-h-screen absolute left-0 top-full w-screen max-w-none overflow-hidden"
-      style="margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%)"
+      class="lg:hidden h-auto min-h-screen absolute left-0 top-full w-screen max-w-none overflow-hidden -mx-[calc(50vw-50%)]"
       @click.stop
     >
       <div class="m-4" @click="toggleMobileMenu">
@@ -110,7 +111,7 @@ const mobileMenuOpen = ref(false)
 const navigationItems = [
   { path: "/about", label: "About", icon: "i-ph-user" },
   { path: "/services", label: "Services", icon: "i-ph-briefcase" },
-  { path: "/projects", label: "Projects", icon: "i-ph-folder-open" },
+  // { path: "/projects", label: "Projects", icon: "i-ph-folder-open" },
   { path: "/blog", label: "Blog", icon: "i-ph-article" },
 ]
 

@@ -6,11 +6,27 @@
   --font-family: "Poppins", "Public Sans", sans-serif;
 }
 
-:root {
-  --ui-radius: 0.75rem;
+/* Typography - Heading Levels */
+h1 {
+  @apply text-4xl font-bold text-neutral-900 dark:text-neutral-50 tracking-tight mt-8 mb-4 leading-tight;
 }
 
-body {
-  overflow-y: scroll;
-  @apply bg-linear-to-br from-neutral-50/20 via-neutral-950/5 to-neutral-50/10 dark:from-neutral-950/20 dark:via-neutral-50/5 dark:to-neutral-950/10;
+h2 {
+  @apply text-3xl font-semibold text-neutral-900 dark:text-neutral-50 mt-8 mb-4 leading-tight;
+}
+
+h3 {
+  @apply text-2xl font-semibold text-neutral-900 dark:text-neutral-50 mt-6 mb-3 leading-tight;
+}
+
+h4 {
+  @apply text-xl font-medium text-neutral-900 dark:text-neutral-50 mt-4 mb-2 leading-tight;
+}
+
+h5 {
+  @apply text-lg font-medium text-neutral-900 dark:text-neutral-50 mt-3 mb-2 leading-tight;
+}
+
+h6 {
+  @apply text-base font-medium text-neutral-800 dark:text-neutral-200 uppercase tracking-wider mt-2 mb-2;
 }

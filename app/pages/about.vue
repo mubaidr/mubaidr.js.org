@@ -65,7 +65,7 @@ useHead({
                       {{ experience.location }}
                     </p>
                   </div>
-                  <div class="text-right absolute top-0 right-0">
+                  <div class="text-right absolute top-2 right-2">
                     <UBadge :label="experience.period" variant="outline" />
                   </div>
                 </div>
@@ -92,7 +92,7 @@ useHead({
                 </div>
 
                 <!-- Technologies -->
-                <div>
+                <!-- <div>
                   <h4 class="mb-3">Technologies Used:</h4>
                   <div class="flex flex-wrap gap-2">
                     <UBadge
@@ -103,7 +103,7 @@ useHead({
                       size="xl"
                     />
                   </div>
-                </div>
+                </div> -->
 
                 <!-- Achievements -->
                 <div
@@ -149,7 +149,7 @@ useHead({
           >
             <UCard class="h-full">
               <div class="space-y-4">
-                <div class="flex items-start gap-4">
+                <div class="flex items-center gap-4">
                   <div class="flex items-center justify-center shrink-0">
                     <UIcon
                       name="i-ph-graduation-cap-bold"
@@ -173,12 +173,10 @@ useHead({
                     />
                   </div>
                 </div>
-
-                <p
-                  class="text-neutral-600 dark:text-neutral-400 leading-relaxed"
-                >
+                <!--
+                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
                   {{ edu.description }}
-                </p>
+                </p> -->
               </div>
             </UCard>
           </div>
@@ -207,7 +205,7 @@ useHead({
                 <div class="w-16 h-16 flex items-center justify-center mx-auto">
                   <UIcon
                     name="i-ph-certificate-bold"
-                    size="4em"
+                    size="3em"
                     class="text-primary-500"
                   />
                 </div>
@@ -217,60 +215,34 @@ useHead({
                   <p class="text-neutral-600 dark:text-neutral-400">
                     {{ cert.issuer }}
                   </p>
-                  <UBadge :label="cert.date" variant="subtle" color="neutral" />
+                  <!-- <UBadge :label="cert.date" variant="subtle" color="neutral" /> -->
                 </div>
 
                 <p class="text-sm text-neutral-500 leading-relaxed">
                   {{ cert.description }}
                 </p>
 
-                <div
-                  class="text-[10px] uppercase tracking-widest text-neutral-400"
-                >
+                <!-- <div class="text-[10px] uppercase tracking-widest text-neutral-400">
                   ID: {{ cert.credentialId }}
-                </div>
+                </div> -->
               </div>
             </UCard>
           </div>
         </div>
       </section>
 
-      <!-- Call to Action -->
-      <section class="space-y-12">
-        <UCard class="text-center">
-          <div class="space-y-8 py-12">
-            <div class="space-y-4">
-              <h2 class="text-3xl font-bold">Ready to Work Together?</h2>
-              <p
-                class="max-w-2xl mx-auto text-neutral-600 dark:text-neutral-400 text-lg"
-              >
-                Now that you know my story, let's write the next chapter
-                together. I'd love to help bring your ideas to life.
-              </p>
-            </div>
+      <!-- Skills & Expertise -->
+      <!-- <section class="max-w-4xl mx-auto px-4 space-y-6">
+        <div class="text-center space-y-4">
+          <h2 class="text-3xl md:text-4xl font-bold">Skills & Expertise</h2>
+        </div>
 
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <UButton
-                to="/services"
-                size="xl"
-                icon="i-ph-briefcase-bold"
-                class="px-8"
-              >
-                View Services
-              </UButton>
-              <UButton
-                to="/contact"
-                size="xl"
-                variant="outline"
-                icon="i-ph-envelope-bold"
-                class="px-8"
-              >
-                Get In Touch
-              </UButton>
-            </div>
-          </div>
-        </UCard>
-      </section>
+        <div v-if="professionalJourneyData?.technologies" class="flex flex-wrap gap-2 text-center justify-center">
+          <template v-for="(skills, category) in professionalJourneyData.technologies" :key="category">
+            <UBadge v-for="skill in skills" :key="category + '-' + skill" :label="skill" variant="soft" size="lg" />
+          </template>
+</div>
+</section> -->
     </div>
   </div>
 </template>

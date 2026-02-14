@@ -23,15 +23,16 @@ export default defineContentConfig({
     blog: defineCollection(
       asOgImageCollection({
         type: "page",
-        source: "blog/*.md",
+        source: "blog/**/*.md",
         schema: z.object({
-          title: z.string(),
-          description: z.string(),
+          // Note: title and description are auto-generated for type: 'page'
+          // We can add custom fields without redefining them
           excerpt: z.string().optional(),
           headline: z.string().optional(),
           abstract: z.string().optional(),
-          date: z.string().datetime(),
-          dateUpdated: z.string().datetime().optional(),
+          // Use z.date() for proper date parsing as per Nuxt Content docs
+          date: z.date(),
+          dateUpdated: z.date().optional(),
           author: z.string(),
           authorUrl: z.string().optional(),
           // Preferred: socialImage provides richer data (src, alt, dimensions)

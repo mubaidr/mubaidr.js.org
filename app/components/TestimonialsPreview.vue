@@ -1,12 +1,6 @@
 <script setup lang="ts">
 // Fetch testimonials using composable
 const { data: testimonialsData } = await useTestimonialsData()
-
-const isPaused = ref(false)
-
-function togglePause() {
-  isPaused.value = !isPaused.value
-}
 </script>
 
 <template>
@@ -20,152 +14,121 @@ function togglePause() {
         </p>
       </div>
 
-      <!-- Carousel Container using Nuxt UI UCarousel -->
+      <!-- Testimonials Grid -->
       <div
         v-if="testimonialsData && testimonialsData.length > 0"
-        class="relative"
+        class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
       >
-        <UButton
-          class="absolute right-2 top-2 z-10 md:right-4 md:top-4"
-          :title="isPaused ? 'Resume auto-play' : 'Pause auto-play'"
-          variant="soft"
-          color="neutral"
-          @click="togglePause"
+        <UCard
+          v-for="testimonial in testimonialsData"
+          :key="testimonial.name"
+          class="h-full"
         >
-          <UIcon :name="isPaused ? 'i-ph-play' : 'i-ph-pause'" />
-        </UButton>
+          <div class="flex flex-col h-full space-y-4">
+            <!-- Header: Rating and Quote -->
+            <div class="space-y-3">
+              <!-- Rating -->
+              <!-- <div class="flex justify-center pb-4">
+              <div v-if="testimonial.rating" class="flex items-center gap-1">
+                <UIcon v-for="star in 5" :key="star" name="i-ph-star-fill" class="w-5 h-5 text-yellow-400" />
+              </div>
+              </div> -->
 
-        <UCard class="p-4 sm:p-6 md:p-8">
-          <UCarousel
-            v-slot="{ item: testimonial }"
-            :items="testimonialsData"
-            fade
-            arrows
-            dots
-            loop
-            :autoplay="isPaused ? false : true"
-            class="w-full"
-            :prev="{ variant: 'soft' }"
-            :next="{ variant: 'soft' }"
-          >
-            <div class="p-2 sm:p-4 md:p-8">
-              <div class="h-full flex flex-col justify-between">
-                <div>
-                  <!-- Rating Stars -->
-                  <div
-                    v-if="testimonial.rating"
-                    class="flex items-center gap-1 mb-3 sm:mb-4"
-                  >
-                    <UIcon
-                      v-for="star in 5"
-                      :key="star"
-                      name="i-ph-star-fill"
-                      class="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400"
-                    />
-                    <span
-                      class="ml-2 text-neutral-600 dark:text-neutral-300 text-[10px] sm:text-xs"
-                      >{{ testimonial.rating }}/5</span
-                    >
-                  </div>
+              <!-- Quote -->
+              <p
+                class="text-base leading-relaxed text-neutral-700 dark:text-neutral-200"
+              >
+                "{{ testimonial.quote }}"
+              </p>
+            </div>
 
-                  <!-- Quote -->
-                  <div class="relative mb-4 sm:mb-6">
-                    <p class="text-sm sm:text-base leading-relaxed">
-                      {{ testimonial.quote }}
-                    </p>
-                  </div>
+            <!-- Results as Badges -->
+            <div
+              v-if="testimonial.results && testimonial.results.length > 0"
+              class="flex flex-wrap gap-2"
+            >
+              <UBadge
+                v-for="(result, index) in testimonial.results.slice(0, 3)"
+                :key="index"
+                :label="result"
+                variant="subtle"
+                color="primary"
+                size="sm"
+              />
+              <UBadge
+                v-if="testimonial.results.length > 3"
+                :label="`+${testimonial.results.length - 3} more`"
+                variant="soft"
+                color="neutral"
+                size="sm"
+              />
+            </div>
 
-                  <!-- Project Results -->
-                  <div
-                    v-if="testimonial.results && testimonial.results.length > 0"
-                    class="space-y-2 sm:space-y-3 mb-4 sm:mb-6"
-                  >
-                    <h3 class="text-sm sm:text-base font-semibold">
-                      Key Results:
-                    </h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
-                      <div
-                        v-for="(
-                          result, resultIndex
-                        ) in testimonial.results.slice(0, 4)"
-                        :key="resultIndex"
-                        class="flex items-center gap-2 text-neutral-600 dark:text-neutral-300 text-xs sm:text-sm"
-                      >
-                        <UIcon
-                          name="i-ph-check-circle"
-                          class="w-4 h-4 shrink-0 text-primary-500"
-                        />
-                        <span>{{ result }}</span>
-                      </div>
-                    </div>
-                  </div>
+            <!-- Project Info -->
+            <div
+              v-if="testimonial.project"
+              class="flex items-center gap-2 text-sm"
+            >
+              <UIcon name="i-ph-briefcase" class="w-4 h-4 text-primary-500" />
+              <span class="text-neutral-600 dark:text-neutral-300">{{
+                testimonial.project
+              }}</span>
+            </div>
 
-                  <!-- Project Info -->
-                  <div v-if="testimonial.project" class="mb-4 sm:mb-6">
-                    <div
-                      class="flex items-center gap-2 text-neutral-600 dark:text-neutral-300 text-xs sm:text-sm"
-                    >
-                      <UIcon
-                        name="i-ph-briefcase"
-                        class="w-5 h-5 text-primary-500"
-                      />
-                      <span>{{ testimonial.project }}</span>
-                    </div>
-                  </div>
-                </div>
+            <!-- Spacer -->
+            <div class="flex-1" />
 
-                <!-- Author -->
-                <div
-                  class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 pt-6 border-t border-neutral-100 dark:border-neutral-800 mt-auto"
+            <!-- Author Section -->
+            <div
+              class="flex items-start gap-3 pt-4 border-t border-neutral-100 dark:border-neutral-800"
+            >
+              <div
+                v-if="testimonial.avatar"
+                class="w-10 h-10 flex items-center justify-center overflow-hidden rounded-full shrink-0 border border-neutral-200 dark:border-neutral-800"
+              >
+                <NuxtImg
+                  :src="testimonial.avatar"
+                  :alt="testimonial.name"
+                  width="40"
+                  height="40"
+                  class="w-full h-full object-cover"
+                  placeholder
+                  format="webp"
+                />
+              </div>
+              <div
+                v-else
+                class="w-10 h-10 flex items-center justify-center rounded-full shrink-0 bg-neutral-100 dark:bg-neutral-800"
+              >
+                <UIcon name="i-ph-user-bold" class="w-5 h-5 text-neutral-400" />
+              </div>
+              <div class="flex-1 min-w-0">
+                <p
+                  class="font-semibold text-sm text-neutral-900 dark:text-white"
                 >
-                  <div
-                    v-if="testimonial.avatar"
-                    class="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center overflow-hidden rounded-full shrink-0 shadow-sm mb-2 sm:mb-0 border border-neutral-200 dark:border-neutral-800"
+                  {{ testimonial.name }}
+                </p>
+                <p
+                  v-if="testimonial.title"
+                  class="text-xs text-neutral-500 dark:text-neutral-400 truncate"
+                >
+                  {{ testimonial.title }}
+                  <span v-if="testimonial.company">
+                    @ {{ testimonial.company }}</span
                   >
-                    <NuxtImg
-                      :src="testimonial.avatar"
-                      :alt="testimonial.name"
-                      width="56"
-                      height="56"
-                      class="w-full h-full object-cover"
-                      placeholder
-                      format="webp"
-                    />
-                  </div>
-                  <div
-                    v-else
-                    class="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-full shrink-0 shadow-sm mb-2 sm:mb-0 bg-neutral-100 dark:bg-neutral-800"
-                  >
-                    <UIcon
-                      name="i-ph-user-bold"
-                      class="w-6 h-6 text-neutral-400"
-                    />
-                  </div>
-                  <div class="flex-1 min-w-0 text-center sm:text-left">
-                    <p class="font-bold text-neutral-900 dark:text-white">
-                      {{ testimonial.name }}
-                    </p>
-                    <p
-                      v-if="testimonial.title"
-                      class="truncate text-[10px] sm:text-xs text-neutral-500 dark:text-neutral-400"
-                    >
-                      {{ testimonial.title }}
-                      <span v-if="testimonial.company"
-                        >@ {{ testimonial.company }}</span
-                      >
-                    </p>
-                    <UBadge
-                      label="Verified Client"
-                      class="mt-2"
-                      color="success"
-                      variant="subtle"
-                      size="xs"
-                    />
-                  </div>
-                </div>
+                </p>
+              </div>
+              <div class="shrink-0">
+                <UBadge
+                  icon="i-ph-check-circle"
+                  label="Verified"
+                  color="success"
+                  variant="subtle"
+                  size="xs"
+                />
               </div>
             </div>
-          </UCarousel>
+          </div>
         </UCard>
       </div>
 
