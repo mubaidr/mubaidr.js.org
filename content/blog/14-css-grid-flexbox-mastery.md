@@ -9,8 +9,8 @@ dateUpdated: 2024-01-12T14:20:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:
-  src: /img/blog/sample.webp
-  mime: webp
+  src: /img/blog/14-css-grid-flexbox-mastery/banner.svg
+  mime: svg
   alt: CSS Grid and Flexbox layout examples
   width: 1200
   height: 630

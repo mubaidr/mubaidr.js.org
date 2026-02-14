@@ -8,8 +8,8 @@ dateUpdated: 2024-01-20T09:15:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:
-  src: /img/blog/sample.webp
-  mime: webp
+  src: /img/blog/9-web-performance-optimization-2024/banner.svg
+  mime: svg
   alt: Web performance optimization metrics dashboard
   width: 1200
   height: 630

@@ -10,9 +10,9 @@ dateUpdated: 2024-07-16T12:00:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:
-  src: /img/blog/2-my-vscode-setup/typescript-dark.png
-  mime: png
-  alt: Mountain landscape with code editor
+  src: /img/blog/1-my-first-blog-post/banner.svg
+  mime: svg
+  alt: Code editor with mountain landscape - Starting a tech blog journey
   width: 1200
   height: 630
 ---

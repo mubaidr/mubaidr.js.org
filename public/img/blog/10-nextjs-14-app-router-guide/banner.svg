@@ -1,0 +1,60 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg10" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg10)"/>
+
+  <!-- Next.js logo stylized -->
+  <g transform="translate(800, 150)">
+    <circle cx="100" cy="100" r="100" fill="none" stroke="white" stroke-width="4"/>
+    <text x="100" y="120" font-family="system-ui, sans-serif" font-size="80" font-weight="bold" fill="white" text-anchor="middle">N</text>
+    <path d="M 60 180 L 140 20" stroke="white" stroke-width="8"/>
+  </g>
+
+  <!-- App Router diagram -->
+  <g transform="translate(100, 150)">
+    <rect width="550" height="350" rx="15" fill="rgba(255,255,255,0.05)"/>
+    <text x="275" y="40" font-family="system-ui, sans-serif" font-size="24" fill="white" text-anchor="middle">App Router</text>
+
+    <!-- File tree -->
+    <rect x="30" y="70" width="120" height="40" rx="5" fill="rgba(255,255,255,0.15)"/>
+    <text x="90" y="97" font-family="monospace" font-size="14" fill="white" text-anchor="middle">app/</text>
+
+    <rect x="60" y="130" width="100" height="35" rx="5" fill="rgba(255,255,255,0.1)"/>
+    <text x="110" y="153" font-family="monospace" font-size="12" fill="white" text-anchor="middle">layout.js</text>
+
+    <rect x="60" y="175" width="100" height="35" rx="5" fill="rgba(255,255,255,0.1)"/>
+    <text x="110" y="198" font-family="monospace" font-size="12" fill="white" text-anchor="middle">page.js</text>
+
+    <rect x="60" y="220" width="100" height="35" rx="5" fill="rgba(255,255,255,0.1)"/>
+    <text x="110" y="243" font-family="monospace" font-size="12" fill="white" text-anchor="middle">loading.js</text>
+
+    <rect x="60" y="265" width="100" height="35" rx="5" fill="rgba(255,255,255,0.1)"/>
+    <text x="110" y="288" font-family="monospace" font-size="12" fill="white" text-anchor="middle">error.js</text>
+
+    <!-- Features -->
+    <rect x="200" y="130" width="150" height="35" rx="5" fill="rgba(255,255,255,0.1)"/>
+    <text x="275" y="153" font-family="system-ui, sans-serif" font-size="12" fill="white" text-anchor="middle">Server Components</text>
+
+    <rect x="200" y="175" width="150" height="35" rx="5" fill="rgba(255,255,255,0.1)"/>
+    <text x="275" y="198" font-family="system-ui, sans-serif" font-size="12" fill="white" text-anchor="middle">Streaming</text>
+
+    <rect x="200" y="220" width="150" height="35" rx="5" fill="rgba(255,255,255,0.1)"/>
+    <text x="275" y="243" font-family="system-ui, sans-serif" font-size="12" fill="white" text-anchor="middle">Data Fetching</text>
+
+    <rect x="380" y="130" width="150" height="35" rx="5" fill="rgba(255,255,255,0.1)"/>
+    <text x="455" y="153" font-family="system-ui, sans-serif" font-size="12" fill="white" text-anchor="middle">Caching</text>
+
+    <rect x="380" y="175" width="150" height="35" rx="5" fill="rgba(255,255,255,0.1)"/>
+    <text x="455" y="198" font-family="system-ui, sans-serif" font-size="12" fill="white" text-anchor="middle">Server Actions</text>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="540" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="bold" fill="white" text-anchor="middle">Next.js 14 App Router</text>
+  <text x="600" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="middle">Complete Guide with Server Components</text>
+</svg>

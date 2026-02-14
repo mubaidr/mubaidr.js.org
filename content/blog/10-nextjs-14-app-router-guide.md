@@ -8,8 +8,8 @@ dateUpdated: 2024-04-10T11:20:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:
-  src: /img/blog/sample.webp
-  mime: webp
+  src: /img/blog/10-nextjs-14-app-router-guide/banner.svg
+  mime: svg
   alt: Next.js 14 App Router architecture diagram
   width: 1200
   height: 630

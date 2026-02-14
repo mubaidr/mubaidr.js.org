@@ -6,7 +6,7 @@ dateUpdated: 2024-12-12T12:00:00.000Z
 author: mubaidr
 tags: ["Vue.js", "JavaScript", "Frontend", "Composition API"]
 featured: true
-image: /img/blog/sample.webp
+image: /img/blog/5-vue-3-composition-api-best-practices/banner.svg
 ---
 
 ## Vue 3 Composition API: Best Practices for Modern Development

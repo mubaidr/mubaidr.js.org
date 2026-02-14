@@ -8,8 +8,8 @@ dateUpdated: 2024-06-18T13:30:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:
-  src: /img/blog/sample.webp
-  mime: webp
+  src: /img/blog/12-docker-microservices-deployment/banner.svg
+  mime: svg
   alt: Docker microservices architecture diagram
   width: 1200
   height: 630

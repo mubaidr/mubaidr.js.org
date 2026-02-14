@@ -9,7 +9,7 @@ tags:
   - Copilot
   - AI
   - Open Source
-image: /img/blog/sample.webp
+image: /img/blog/15-gem-team-repository/banner.svg
 ---
 
 The gem-team repository represents a significant step forward in streamlining AI-assisted development workflows. This open-source initiative provides developers with a comprehensive set of tools, configurations, and best practices that maximize productivity when working with AI coding assistants like GitHub Copilot.

@@ -8,8 +8,8 @@ dateUpdated: 2024-03-08T08:45:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:
-  src: /img/blog/sample.webp
-  mime: webp
+  src: /img/blog/13-graphql-api-design-patterns/banner.svg
+  mime: svg
   alt: GraphQL API architecture and design patterns
   width: 1200
   height: 630
@@ -275,20 +275,20 @@ class AuthDirective extends SchemaDirectiveVisitor {
 // Schema with directives
 const typeDefs = `
   directive @auth(requires: Role = USER) on FIELD_DEFINITION
-  
+
   enum Role {
     USER
     ADMIN
     MODERATOR
   }
-  
+
   type User {
     id: ID!
     email: String! @auth
     profile: UserProfile!
     adminNotes: String @auth(requires: ADMIN)
   }
-  
+
   type Mutation {
     deleteUser(id: ID!): Boolean! @auth(requires: ADMIN)
     updateProfile(input: UpdateProfileInput!): User! @auth

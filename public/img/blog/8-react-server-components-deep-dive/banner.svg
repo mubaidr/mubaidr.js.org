@@ -1,0 +1,49 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#61dafb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#282c34;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg8)"/>
+
+  <!-- React atom logo -->
+  <g transform="translate(800, 100)">
+    <ellipse cx="100" cy="150" rx="150" ry="50" fill="none" stroke="rgba(97, 218, 251, 0.3)" stroke-width="3" transform="rotate(-30, 100, 150)"/>
+    <ellipse cx="100" cy="150" rx="150" ry="50" fill="none" stroke="rgba(97, 218, 251, 0.3)" stroke-width="3" transform="rotate(30, 100, 150)"/>
+    <ellipse cx="100" cy="150" rx="150" ry="50" fill="none" stroke="rgba(97, 218, 251, 0.3)" stroke-width="3"/>
+    <circle cx="100" cy="150" r="20" fill="#61dafb"/>
+  </g>
+
+  <!-- Server/Client split illustration -->
+  <g transform="translate(100, 180)">
+    <!-- Server side -->
+    <rect width="250" height="280" rx="15" fill="rgba(255,255,255,0.1)"/>
+    <text x="125" y="40" font-family="system-ui, sans-serif" font-size="20" fill="white" text-anchor="middle">Server</text>
+    <rect x="25" y="70" width="200" height="30" rx="5" fill="rgba(97, 218, 251, 0.3)"/>
+    <rect x="25" y="110" width="200" height="30" rx="5" fill="rgba(97, 218, 251, 0.3)"/>
+    <rect x="25" y="150" width="200" height="30" rx="5" fill="rgba(97, 218, 251, 0.3)"/>
+    <text x="125" y="220" font-family="monospace" font-size="14" fill="rgba(255,255,255,0.7)" text-anchor="middle">async function</text>
+  </g>
+
+  <!-- Arrow -->
+  <g transform="translate(380, 280)">
+    <polygon points="0,20 40,0 40,15 100,15 100,25 40,25 40,40" fill="rgba(97, 218, 251, 0.5)"/>
+  </g>
+
+  <!-- Client side -->
+  <g transform="translate(500, 180)">
+    <rect width="250" height="280" rx="15" fill="rgba(255,255,255,0.15)"/>
+    <text x="125" y="40" font-family="system-ui, sans-serif" font-size="20" fill="white" text-anchor="middle">Client</text>
+    <rect x="25" y="70" width="200" height="30" rx="5" fill="rgba(97, 218, 251, 0.4)"/>
+    <rect x="25" y="110" width="200" height="30" rx="5" fill="rgba(97, 218, 251, 0.4)"/>
+    <text x="125" y="180" font-family="monospace" font-size="14" fill="rgba(255,255,255,0.7)" text-anchor="middle">'use client'</text>
+    <text x="125" y="210" font-family="monospace" font-size="14" fill="rgba(255,255,255,0.7)" text-anchor="middle">useState()</text>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="530" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="bold" fill="white" text-anchor="middle">React Server Components</text>
+  <text x="600" y="580" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="middle">The Future of React Architecture</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg11" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3178c6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#235a97;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg11)"/>
+
+  <!-- TypeScript logo -->
+  <g transform="translate(850, 120)">
+    <rect width="200" height="200" rx="20" fill="white"/>
+    <text x="100" y="150" font-family="system-ui, sans-serif" font-size="120" font-weight="bold" fill="#3178c6" text-anchor="middle">TS</text>
+  </g>
+
+  <!-- Advanced patterns diagram -->
+  <g transform="translate(100, 150)">
+    <rect width="650" height="350" rx="15" fill="rgba(255,255,255,0.1)"/>
+
+    <!-- Conditional Types -->
+    <rect x="30" y="30" width="180" height="90" rx="10" fill="rgba(255,255,255,0.15)"/>
+    <text x="120" y="60" font-family="monospace" font-size="14" fill="white" text-anchor="middle">Conditional</text>
+    <text x="120" y="85" font-family="monospace" font-size="14" fill="white" text-anchor="middle">Types</text>
+    <text x="120" y="105" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.7)" text-anchor="middle">T extends U ? X : Y</text>
+
+    <!-- Template Literals -->
+    <rect x="230" y="30" width="180" height="90" rx="10" fill="rgba(255,255,255,0.15)"/>
+    <text x="320" y="60" font-family="monospace" font-size="14" fill="white" text-anchor="middle">Template</text>
+    <text x="320" y="85" font-family="monospace" font-size="14" fill="white" text-anchor="middle">Literals</text>
+    <text x="320" y="105" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.7)" text-anchor="middle">`on${Event}`</text>
+
+    <!-- Mapped Types -->
+    <rect x="430" y="30" width="180" height="90" rx="10" fill="rgba(255,255,255,0.15)"/>
+    <text x="520" y="60" font-family="monospace" font-size="14" fill="white" text-anchor="middle">Mapped</text>
+    <text x="520" y="85" font-family="monospace" font-size="14" fill="white" text-anchor="middle">Types</text>
+    <text x="520" y="105" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.7)" text-anchor="middle">{[K in keyof T]: X}</text>
+
+    <!-- Generic Constraints -->
+    <rect x="30" y="140" width="180" height="90" rx="10" fill="rgba(255,255,255,0.15)"/>
+    <text x="120" y="170" font-family="monospace" font-size="14" fill="white" text-anchor="middle">Generic</text>
+    <text x="120" y="195" font-family="monospace" font-size="14" fill="white" text-anchor="middle">Constraints</text>
+    <text x="120" y="215" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.7)" text-anchor="middle">T extends Base</text>
+
+    <!-- Utility Types -->
+    <rect x="230" y="140" width="180" height="90" rx="10" fill="rgba(255,255,255,0.15)"/>
+    <text x="320" y="170" font-family="monospace" font-size="14" fill="white" text-anchor="middle">Utility</text>
+    <text x="320" y="195" font-family="monospace" font-size="14" fill="white" text-anchor="middle">Types</text>
+    <text x="320" y="215" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.7)" text-anchor="middle">Partial&lt;T&gt;</text>
+
+    <!-- Design Patterns -->
+    <rect x="430" y="140" width="180" height="90" rx="10" fill="rgba(255,255,255,0.15)"/>
+    <text x="520" y="170" font-family="monospace" font-size="14" fill="white" text-anchor="middle">Design</text>
+    <text x="520" y="195" font-family="monospace" font-size="14" fill="white" text-anchor="middle">Patterns</text>
+    <text x="520" y="215" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.7)" text-anchor="middle">Builder, Factory</text>
+
+    <!-- Type-level Programming -->
+    <rect x="130" y="250" width="400" height="80" rx="10" fill="rgba(255,255,255,0.2)"/>
+    <text x="330" y="295" font-family="monospace" font-size="16" fill="white" text-anchor="middle">Type-Level Programming</text>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="540" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="bold" fill="white" text-anchor="middle">Advanced TypeScript Patterns</text>
+  <text x="600" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="middle">For Enterprise Applications</text>
+</svg>

@@ -8,8 +8,8 @@ dateUpdated: 2025-02-22T16:45:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:
-  src: /img/blog/sample.webp
-  mime: webp
+  src: /img/blog/11-typescript-advanced-patterns/banner.svg
+  mime: svg
   alt: Advanced TypeScript patterns code examples
   width: 1200
   height: 630

@@ -4,6 +4,7 @@ description: Master full stack development with Node.js and Vue.js. Learn
   project structuring, environment setup, and best practices for building
   scalable web applications.
 headline: Getting Started with Full Stack Development
+image: /img/blog/4-full-stack-development/banner.svg
 abstract: Using Node.js and Vue.js gives you a powerful toolkit to build
   efficient and scalable solutions. This guide is here to help you navigate the
   essentials of full stack development, offering practical insights into

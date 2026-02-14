@@ -6,7 +6,7 @@ dateUpdated: 2024-02-28T12:00:00.000Z
 author: mubaidr
 tags: ["TypeScript", "Node.js", "Backend", "Production"]
 featured: true
-image: /img/blog/sample.webp
+image: /img/blog/6-typescript-nodejs-production-guide/banner.svg
 ---
 
 ## TypeScript + Node.js in Production: A Complete Guide

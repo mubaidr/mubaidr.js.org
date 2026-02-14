@@ -1,0 +1,66 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg12" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2496ed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d63ed;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg12)"/>
+
+  <!-- Docker whale -->
+  <g transform="translate(800, 120)">
+    <ellipse cx="100" cy="150" rx="120" ry="80" fill="white" opacity="0.9"/>
+    <rect x="20" y="90" width="160" height="60" rx="10" fill="white"/>
+    <!-- Containers on whale -->
+    <rect x="30" y="60" width="35" height="30" rx="3" fill="#2496ed"/>
+    <rect x="70" y="60" width="35" height="30" rx="3" fill="#1d63ed"/>
+    <rect x="110" y="60" width="35" height="30" rx="3" fill="#2496ed"/>
+    <rect x="50" y="30" width="35" height="30" rx="3" fill="#1d63ed"/>
+    <rect x="90" y="30" width="35" height="30" rx="3" fill="#2496ed"/>
+  </g>
+
+  <!-- Microservices architecture -->
+  <g transform="translate(100, 150)">
+    <rect width="600" height="350" rx="15" fill="rgba(255,255,255,0.1)"/>
+
+    <!-- API Gateway -->
+    <rect x="200" y="30" width="200" height="60" rx="10" fill="rgba(255,255,255,0.2)"/>
+    <text x="300" y="68" font-family="system-ui, sans-serif" font-size="16" fill="white" text-anchor="middle">API Gateway</text>
+
+    <!-- Services -->
+    <rect x="30" y="130" width="150" height="80" rx="10" fill="rgba(255,255,255,0.15)"/>
+    <text x="105" y="175" font-family="monospace" font-size="14" fill="white" text-anchor="middle">User Service</text>
+
+    <rect x="220" y="130" width="150" height="80" rx="10" fill="rgba(255,255,255,0.15)"/>
+    <text x="295" y="175" font-family="monospace" font-size="14" fill="white" text-anchor="middle">Product Service</text>
+
+    <rect x="410" y="130" width="150" height="80" rx="10" fill="rgba(255,255,255,0.15)"/>
+    <text x="485" y="175" font-family="monospace" font-size="14" fill="white" text-anchor="middle">Order Service</text>
+
+    <!-- Databases -->
+    <ellipse cx="105" cy="280" rx="50" ry="25" fill="rgba(255,255,255,0.2)"/>
+    <text x="105" y="285" font-family="monospace" font-size="12" fill="white" text-anchor="middle">PostgreSQL</text>
+
+    <ellipse cx="295" cy="280" rx="50" ry="25" fill="rgba(255,255,255,0.2)"/>
+    <text x="295" y="285" font-family="monospace" font-size="12" fill="white" text-anchor="middle">MongoDB</text>
+
+    <ellipse cx="485" cy="280" rx="50" ry="25" fill="rgba(255,255,255,0.2)"/>
+    <text x="485" y="285" font-family="monospace" font-size="12" fill="white" text-anchor="middle">Redis</text>
+
+    <!-- Connections -->
+    <line x1="105" y1="210" x2="105" y2="255" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+    <line x1="295" y1="210" x2="295" y2="255" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+    <line x1="485" y1="210" x2="485" y2="255" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  </g>
+
+  <!-- Kubernetes logo hint -->
+  <g transform="translate(100, 500)">
+    <text font-family="system-ui, sans-serif" font-size="18" fill="rgba(255,255,255,0.7)">Kubernetes • Docker • CI/CD • Monitoring</text>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="540" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="bold" fill="white" text-anchor="middle">Docker &amp; Microservices</text>
+  <text x="600" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="middle">Production-Ready Deployment Strategies</text>
+</svg>

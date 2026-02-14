@@ -8,8 +8,8 @@ dateUpdated: 2024-02-28T14:30:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:
-  src: /img/blog/sample.webp
-  mime: webp
+  src: /img/blog/8-react-server-components-deep-dive/banner.svg
+  mime: svg
   alt: React Server Components architecture diagram
   width: 1200
   height: 630

@@ -8,8 +8,8 @@ dateUpdated: 2024-03-15T10:00:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 socialImage:
-  src: /img/blog/sample.webp
-  mime: webp
+  src: /img/blog/7-modern-javascript-es2024-features/banner.svg
+  mime: svg
   alt: Modern JavaScript ES2024 features code examples
   width: 1200
   height: 630
