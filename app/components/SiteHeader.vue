@@ -76,7 +76,7 @@ const mobileMenuOpen = ref(false)
 // Navigation items configuration
 const navigationItems = [
   { path: "/about", label: "About", icon: "i-ph-user" },
-  { path: "/services", label: "Services", icon: "i-ph-briefcase" },
+  { path: "/consulting", label: "Consulting", icon: "i-ph-lightbulb" },
   // { path: "/projects", label: "Projects", icon: "i-ph-folder-open" },
   { path: "/blog", label: "Blog", icon: "i-ph-article" },
 ]
