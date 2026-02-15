@@ -18,7 +18,6 @@ projects:
     endDate: 9999-12-31
     links:
       github: "https://github.com/mubaidr/vue-color-avatar"
-      demo: "https://vue-color-avatar.vercel.app/"
       npm: "https://www.npmjs.com/package/vue-color-avatar"
       documentation: "https://vue-color-avatar.vercel.app/docs"
     stats:
@@ -42,9 +41,9 @@ projects:
       - "Used by 500+ projects worldwide"
 
   - id: 2
-    title: "Browser Extension Template"
-    description: "A modern template for building cross-browser extensions using Vue 3, TypeScript, and Manifest V3."
-    longDescription: "A comprehensive starter template for building modern browser extensions that work across Chrome, Firefox, Edge, and Safari. Built with Vue 3, TypeScript, and the latest Manifest V3 specifications, this template provides a solid foundation for extension development with hot reloading, automated building, and cross-browser compatibility."
+    title: "Vite Vue3 Browser Extension V3"
+    description: "A modern template for building cross-browser extensions using Vue 3, TypeScript, Vite, and Manifest V3."
+    longDescription: "A comprehensive starter template for building modern browser extensions that work across Chrome, Firefox, Edge, and Safari. Built with Vue 3, TypeScript, Vite for lightning-fast builds, and the latest Manifest V3 specifications, this template provides a solid foundation for extension development with hot reloading, automated building, and cross-browser compatibility."
     image: "https://placehold.co/600x400/000000/FFFFFF/png?text=Browser+Extension"
     technologies:
       - "Vue 3"
@@ -60,7 +59,6 @@ projects:
     endDate: 9999-12-31
     links:
       github: "https://github.com/mubaidr/vue-browser-extension-template"
-      demo: "https://chrome.google.com/webstore/detail/example"
       documentation: "https://github.com/mubaidr/vue-browser-extension-template#readme"
     stats:
       stars: "800"
@@ -99,8 +97,7 @@ projects:
     status: "completed"
     startDate: "2023-03-01"
     endDate: "2023-10-15"
-    links:
-      demo: "https://example-ecommerce.com"
+    links: {}
     stats:
       revenue: "$100k+"
       orders: "5k+"
@@ -140,8 +137,7 @@ projects:
     status: "active"
     startDate: "2022-06-01"
     endDate: 9999-12-31
-    links:
-      demo: "https://example-tasks.com"
+    links: {}
     stats:
       users: "2k+"
       teams: "500+"
@@ -182,7 +178,6 @@ projects:
     endDate: "9999-12-31"
     links:
       github: "https://github.com/mubaidr/portfolio"
-      demo: "https://mubaidr.js.org"
     stats:
       lighthouse: "100"
       visitors: "5k+"
@@ -224,7 +219,6 @@ projects:
     endDate: "2022-05-20"
     links:
       github: "https://github.com/mubaidr/api-docs-generator"
-      demo: "https://api-docs-example.com"
     stats:
       stars: "450"
       downloads: "15k+"
@@ -248,6 +242,89 @@ projects:
       - "1k+ APIs documented"
 
   - id: 7
+    title: "Next Generation Property & Rental Platform"
+    description: "Comprehensive rental property management platform with tenant screening, lease management, and automated payments."
+    longDescription: "A next-generation property and rental management platform designed for landlords and property managers. Features include automated tenant screening, digital lease management, online rent collection, maintenance request tracking, financial reporting, and property analytics. Built with modern technologies to streamline property management operations and improve tenant experience."
+    image: "https://placehold.co/600x400/000000/FFFFFF/png?text=Property+Platform"
+    technologies:
+      - "Nuxt.js"
+      - "Node.js"
+      - "PostgreSQL"
+      - "Stripe"
+      - "AWS S3"
+      - "Twilio"
+    category: "Web Application"
+    featured: true
+    status: "active"
+    startDate: "2024-01-15"
+    endDate: 9999-12-31
+    links: {}
+    stats:
+      properties: "500+"
+      tenants: "2k+"
+      rent_collected: "$5M+"
+      satisfaction: "4.8/5"
+    features:
+      - "Automated tenant screening"
+      - "Digital lease management"
+      - "Online rent payments"
+      - "Maintenance request tracking"
+      - "Financial reporting"
+      - "Property analytics dashboard"
+      - "Mobile app for tenants"
+    challenges:
+      - "Implementing secure payment processing"
+      - "Building scalable multi-tenant architecture"
+      - "Compliance with rental regulations"
+    outcomes:
+      - "500+ properties managed"
+      - "2k+ active tenants"
+      - "$5M+ in rent processed"
+      - "4.8/5 tenant satisfaction rating"
+
+  - id: 8
+    title: "Online Recruitment System"
+    description: "Modern recruitment platform for companies hiring with AI-powered candidate matching and automated workflows."
+    longDescription: "A comprehensive online recruitment system designed to streamline the hiring process for companies of all sizes. Features include AI-powered candidate matching, automated job posting, applicant tracking system (ATS), interview scheduling, candidate assessments, and detailed analytics. Built to reduce time-to-hire and improve recruitment efficiency."
+    image: "https://placehold.co/600x400/000000/FFFFFF/png?text=Recruitment+System"
+    technologies:
+      - "React"
+      - "Node.js"
+      - "MongoDB"
+      - "OpenAI API"
+      - "SendGrid"
+      - "AWS"
+    category: "SaaS"
+    featured: true
+    status: "active"
+    startDate: "2024-03-01"
+    endDate: 9999-12-31
+    links: {}
+    stats:
+      companies: "100+"
+      jobs_posted: "5k+"
+      candidates: "50k+"
+      hires_made: "2k+"
+    features:
+      - "AI-powered candidate matching"
+      - "Automated job posting to multiple boards"
+      - "Applicant tracking system (ATS)"
+      - "Interview scheduling automation"
+      - "Candidate assessments"
+      - "Recruitment analytics dashboard"
+      - "Email & SMS notifications"
+    challenges:
+      - "Implementing accurate AI candidate matching"
+      - "Handling high-volume candidate data"
+      - "Ensuring data privacy compliance (GDPR)"
+    outcomes:
+      - "100+ companies using the platform"
+      - "5k+ jobs posted"
+      - "50k+ registered candidates"
+      - "2k+ successful hires made"
+      - "40% reduction in time-to-hire"
+
+  - id: 9
     title: "Real-time Chat Application"
     description: "Scalable chat application with video calling, file sharing, and team channels."
     longDescription: "Enterprise-grade chat application supporting real-time messaging, video calls, file sharing, and team collaboration. Built with modern technologies to support thousands of concurrent users with features like message encryption, custom emojis, and integration capabilities."
@@ -264,8 +341,7 @@ projects:
     status: "completed"
     startDate: "2021-09-01"
     endDate: "2022-02-28"
-    links:
-      demo: "https://example-chat.com"
+    links: {}
     stats:
       concurrent_users: "5k+"
       messages_sent: "1M+"
@@ -290,14 +366,14 @@ projects:
 
 categories:
   - name: "All"
-    count: 7
+    count: 9
   - name: "Open Source"
     count: 1
   - name: "Development Tools"
     count: 2
   - name: "Web Application"
-    count: 2
+    count: 3
   - name: "SaaS"
-    count: 1
+    count: 2
   - name: "Portfolio"
     count: 1

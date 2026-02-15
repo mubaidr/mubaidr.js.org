@@ -36,138 +36,67 @@ const filteredProjects = computed(() => {
 
 <template>
   <div>
-    <div class="space-y-32">
+    <div class="space-y-24">
       <!-- Page Header -->
-      <div class="text-center space-y-6">
-        <h1>My Projects</h1>
-
-        <p class="max-w-4xl mx-auto">
-          A showcase of web applications, open source contributions, and
-          development tools I've built
+      <section class="max-w-3xl mx-auto text-center space-y-6">
+        <h1>Projects</h1>
+        <p class="text-lg text-neutral-600 dark:text-neutral-400">
+          A selection of web applications, open source tools, and developer
+          projects I've built
         </p>
-      </div>
+      </section>
 
-      <!-- Featured Projects -->
-      <FeaturedProjects :hide-link="true" />
-
-      <!-- All Projects -->
-      <section class="space-y-12">
-        <div class="text-center space-y-6">
-          <h2>Explore My Work</h2>
-          <p class="max-w-3xl mx-auto">
-            Browse through a diverse range of projects, from web apps to open
-            source tools.
-          </p>
-        </div>
-
-        <!-- Category Filter -->
-        <div class="flex flex-wrap justify-center gap-2 mb-8">
-          <UButton
-            v-for="category in projectsData?.categories"
-            :key="category.name"
+      <!-- Category Filter -->
+      <section class="flex justify-center">
+        <div class="flex flex-wrap justify-center gap-2">
+          <UButton v-for="category in projectsData?.categories" :key="category.name"
             :variant="selectedCategory === category.name ? 'solid' : 'outline'"
-            @click="selectedCategory = category.name"
-          >
+            @click="selectedCategory = category.name" size="sm">
             {{ category.name }}
-            <UBadge
-              v-if="category.name !== 'All'"
-              :label="category.count.toString()"
-              variant="soft"
-            />
           </UButton>
         </div>
+      </section>
 
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Projects Grid -->
+      <section class="max-w-6xl mx-auto px-4">
+        <div class="grid gap-6 md:grid-cols-2">
           <div v-for="project in filteredProjects" :key="project.id">
-            <UCard class="">
-              <!-- Project Image -->
-              <div
-                class="mb-4 flex items-center justify-center overflow-hidden aspect-video bg-neutral-100 dark:bg-neutral-800 rounded-lg"
-              >
-                <NuxtImg
-                  v-if="project.image"
-                  :src="project.image"
-                  :alt="project.title"
-                  class="w-full h-full object-cover"
-                  placeholder
-                  format="webp"
-                />
-                <UIcon
-                  v-else
-                  name="i-ph-folder-open"
-                  size="3em"
-                  class="text-neutral-400"
-                />
-              </div>
-
-              <!-- Project Content -->
+            <UCard class="h-full group hover:shadow-lg transition-shadow">
               <div class="space-y-4">
-                <div>
-                  <div class="flex items-center justify-between mb-2">
-                    <h3 class="text-lg font-bold">
+                <!-- Project Header -->
+                <div class="flex items-start justify-between gap-4">
+                  <div class="flex-1">
+                    <h3 class="text-lg font-semibold mb-2">
                       {{ project.title }}
                     </h3>
-                    <UBadge :label="project.category" variant="soft" />
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                      {{ project.description }}
+                    </p>
                   </div>
-                  <p
-                    class="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2"
-                  >
-                    {{ project.description }}
-                  </p>
+                  <UBadge :label="project.category" variant="soft" size="sm" />
                 </div>
 
                 <!-- Technologies -->
                 <div class="flex flex-wrap gap-1.5">
-                  <UBadge
-                    v-for="tech in project.technologies.slice(0, 4)"
-                    :key="tech"
-                    :label="tech"
-                    variant="outline"
-                    size="sm"
-                  />
-                  <UBadge
-                    v-if="project.technologies.length > 4"
-                    :label="`+${project.technologies.length - 4}`"
-                    variant="soft"
-                    size="sm"
-                  />
-                </div>
-
-                <!-- Status and Date -->
-                <div class="flex items-center justify-between text-xs">
-                  <UBadge
-                    :label="project.status"
-                    :color="project.status === 'active' ? 'success' : 'neutral'"
-                    variant="soft"
-                    size="sm"
-                  />
-                  <span class="text-neutral-500">
-                    {{ new Date(project.startDate).getFullYear() }}
-                  </span>
+                  <UBadge v-for="tech in project.technologies.slice(0, 4)" :key="tech" :label="tech" variant="outline"
+                    size="sm" />
+                  <UBadge v-if="project.technologies.length > 4" :label="`+${project.technologies.length - 4}`"
+                    variant="subtle" size="sm" />
                 </div>
 
                 <!-- Links -->
-                <div class="flex items-center gap-2 pt-2">
-                  <UButton
-                    v-if="project.links.demo"
-                    :to="project.links.demo"
-                    external
-                    variant="solid"
-                    size="sm"
-                    class="flex-1 justify-center"
-                  >
-                    <UIcon name="i-ph-eye" />
-                    Live Demo
+                <div v-if="Object.keys(project.links).length > 0" class="flex flex-wrap items-center gap-2 pt-2">
+                  <UButton v-if="project.links.github" :to="project.links.github" external variant="outline" size="sm"
+                    icon="i-ph-github-logo" trailing>
+                    GitHub
                   </UButton>
-
-                  <UButton
-                    v-if="project.links.github"
-                    :to="project.links.github"
-                    external
-                    variant="outline"
-                    size="sm"
-                  >
-                    <UIcon name="i-ph-github-logo" />
+                  <UButton v-if="project.links.npm" :to="project.links.npm" external variant="outline" size="sm"
+                    icon="i-ph-package" trailing>
+                    npm
+                  </UButton>
+                  <UButton v-if="project.links.documentation" :to="project.links.documentation" external
+                    variant="outline" size="sm" icon="i-ph-book-open" trailing>
+                    Docs
                   </UButton>
                 </div>
               </div>
@@ -176,25 +105,14 @@ const filteredProjects = computed(() => {
         </div>
       </section>
 
-      <!-- GitHub Integration -->
-      <section class="text-center py-16">
-        <div class="p-8">
-          <h2 class="mb-4">More on GitHub</h2>
-          <p class="mb-8 max-w-3xl mx-auto">
-            Explore my complete portfolio of open source projects,
-            contributions, and experiments on GitHub.
-          </p>
-
-          <UButton
-            to="https://github.com/mubaidr"
-            external
-            size="xl"
-            variant="solid"
-          >
-            <UIcon name="i-ph-github-logo" />
-            <span>View GitHub Profile</span>
-          </UButton>
-        </div>
+      <!-- GitHub CTA -->
+      <section class="text-center">
+        <p class="text-neutral-600 dark:text-neutral-400 mb-6">
+          Explore my complete open source portfolio on GitHub
+        </p>
+        <UButton to="https://github.com/mubaidr" external icon="i-ph-github-logo" variant="outline" size="lg">
+          View GitHub Profile
+        </UButton>
       </section>
     </div>
   </div>
