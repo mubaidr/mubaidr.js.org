@@ -30,50 +30,29 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
       </div>
 
       <!-- Show blog posts if available, otherwise show placeholder -->
-      <div
-        v-if="recentPostsData && recentPostsData.length > 0"
-        class="grid gap-8 md:grid-cols-2"
-      >
-        <UCard
-          v-for="(post, index) in recentPostsData"
-          :key="post.path || `post-${index}`"
-          class="group cursor-pointer h-full overflow-hidden"
-          @click="navigateTo(post.path || '/blog')"
-        >
+      <div v-if="recentPostsData && recentPostsData.length > 0" class="grid gap-8 md:grid-cols-2">
+        <UCard v-for="(post, index) in recentPostsData" :key="post.path || `post-${index}`"
+          class="group cursor-pointer h-full overflow-hidden" @click="navigateTo(post.path || '/blog')">
           <div class="space-y-6">
-            <div
-              v-if="post.socialImage?.src || post.image"
-              class="aspect-video -mx-6 -mt-6 mb-4 overflow-hidden"
-            >
-              <NuxtImg
-                :src="post.socialImage?.src || post.image"
-                :alt="post.socialImage?.alt || post.title"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                placeholder
-                format="webp"
-              />
+            <div v-if="post.socialImage?.src || post.image" class="aspect-video -mx-6 -mt-6 mb-4 overflow-hidden">
+              <img :src="post.socialImage?.src || post.image" :alt="post.socialImage?.alt || post.title"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
             </div>
             <div class="space-y-3">
               <h3
-                class="text-xl font-bold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors"
-              >
+                class="text-xl font-bold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                 {{ post.title }}
               </h3>
-              <p
-                class="text-neutral-600 dark:text-neutral-400 line-clamp-3 leading-relaxed"
-              >
+              <p class="text-neutral-600 dark:text-neutral-400 line-clamp-3 leading-relaxed">
                 {{ post.description }}
               </p>
               <div
-                class="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-xs font-medium text-neutral-500 dark:text-neutral-500"
-              >
+                class="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-xs font-medium text-neutral-500 dark:text-neutral-500">
                 <div class="flex items-center gap-2">
                   <UIcon name="i-ph-calendar-blank-bold" />
                   <span>{{ $formatDate(post.date) }}</span>
                 </div>
-                <div
-                  class="flex items-center gap-1 text-primary-600 dark:text-primary-400"
-                >
+                <div class="flex items-center gap-1 text-primary-600 dark:text-primary-400">
                   <span>Read More</span>
                   <UIcon name="i-ph-arrow-right-bold" />
                 </div>

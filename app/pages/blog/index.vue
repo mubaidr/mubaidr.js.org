@@ -96,74 +96,43 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
         </div>
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <article
-            v-for="post in blogData.posts"
-            :key="post.path"
-            class="h-full"
-          >
-            <UCard
-              as="div"
-              class="group h-full overflow-hidden cursor-pointer"
-              @click="navigateTo(post.path)"
-            >
+          <article v-for="post in blogData.posts" :key="post.path" class="h-full">
+            <UCard as="div" class="group h-full overflow-hidden cursor-pointer" @click="navigateTo(post.path)">
               <div class="space-y-6">
                 <!-- Featured Image -->
                 <div class="aspect-video -mx-6 -mt-6 overflow-hidden">
-                  <NuxtImg
-                    v-if="post.socialImage?.src || post.image"
-                    :src="post.socialImage?.src || post.image"
+                  <img v-if="post.socialImage?.src || post.image" :src="post.socialImage?.src || post.image"
                     :alt="post.socialImage?.alt || post.title"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    placeholder
-                    format="webp"
-                  />
-                  <div
-                    v-else
-                    class="flex items-center justify-center h-full bg-neutral-100 dark:bg-neutral-800"
-                  >
-                    <UIcon
-                      name="i-ph-article-bold"
-                      class="w-12 h-12 text-neutral-400"
-                    />
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div v-else class="flex items-center justify-center h-full bg-neutral-100 dark:bg-neutral-800">
+                    <UIcon name="i-ph-article-bold" class="w-12 h-12 text-neutral-400" />
                   </div>
                 </div>
 
                 <div class="space-y-4">
                   <div class="space-y-2">
                     <h3
-                      class="text-xl font-bold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors"
-                    >
+                      class="text-xl font-bold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                       {{ post.title }}
                     </h3>
-                    <p
-                      class="text-neutral-600 dark:text-neutral-400 line-clamp-3 text-sm leading-relaxed"
-                    >
+                    <p class="text-neutral-600 dark:text-neutral-400 line-clamp-3 text-sm leading-relaxed">
                       {{ post.description || getExcerpt(post.body) }}
                     </p>
                   </div>
 
                   <div class="flex flex-wrap gap-2">
-                    <UBadge
-                      v-for="tag in post.tags?.slice(0, 2)"
-                      :key="tag"
-                      :label="tag"
-                      variant="subtle"
-                      color="neutral"
-                      size="xs"
-                    />
+                    <UBadge v-for="tag in post.tags?.slice(0, 2)" :key="tag" :label="tag" variant="subtle"
+                      color="neutral" size="xs" />
                   </div>
 
                   <!-- Meta -->
                   <div
-                    class="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-xs font-medium text-neutral-500"
-                  >
+                    class="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-xs font-medium text-neutral-500">
                     <div class="flex items-center gap-2">
                       <UIcon name="i-ph-calendar-blank-bold" />
                       <span>{{ $formatDate(post.date) }}</span>
                     </div>
-                    <div
-                      class="flex items-center gap-1 text-primary-600 dark:text-primary-400"
-                    >
+                    <div class="flex items-center gap-1 text-primary-600 dark:text-primary-400">
                       <span>Read More</span>
                       <UIcon name="i-ph-arrow-right-bold" />
                     </div>
