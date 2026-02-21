@@ -7,6 +7,7 @@ date: 2024-03-08T08:45:00.000Z
 dateUpdated: 2024-03-08T08:45:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
+featured: false
 socialImage:
   src: /img/blog/13-graphql-api-design-patterns/banner.svg
   mime: svg

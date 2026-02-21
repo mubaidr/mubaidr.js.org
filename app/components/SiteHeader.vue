@@ -1,5 +1,6 @@
 <template>
-  <header :class="[
+  <header
+:class="[
     'fixed left-1/2 top-4 md:top-6 transform -translate-x-1/2 z-50 w-auto max-w-4xl rounded-md backdrop-blur-md transition-shadow duration-300',
     scrolled
       ? 'shadow-md border border-neutral-200 dark:border-neutral-800'
@@ -7,10 +8,12 @@
   ]" class="p-0">
     <div class="relative">
       <div class="flex justify-center items-center px-4 py-1.5">
-        <nav class="flex justify-center items-center gap-6 w-full text-sm font-medium" role="navigation"
+        <nav
+class="flex justify-center items-center gap-6 w-full text-sm font-medium" role="navigation"
           aria-label="Main navigation">
           <!-- Logo/Brand -->
-          <ULink to="/"
+          <ULink
+to="/"
             class="flex items-center gap-2 px-2 py-1 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
             aria-label="Go to homepage">
             <UIcon name="i-ph-code-bold" class="w-5 h-5 text-primary-600 dark:text-primary-400" />
@@ -19,7 +22,8 @@
 
           <!-- Desktop Navigation -->
           <div class="hidden lg:flex items-center gap-1">
-            <ULink v-for="item in navigationItems" :key="item.path" :to="item.path"
+            <ULink
+v-for="item in navigationItems" :key="item.path" :to="item.path"
               class="px-3 py-1.5 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
               active-class="text-primary-600 dark:text-primary-400">
               {{ item.label }}
@@ -31,14 +35,16 @@
             <ThemeSwitcher />
 
             <!-- Mobile menu button -->
-            <UButton class="lg:hidden" variant="ghost" color="neutral" :icon="mobileMenuOpen ? 'i-ph-x' : 'i-ph-list'"
+            <UButton
+class="lg:hidden" variant="ghost" color="neutral" :icon="mobileMenuOpen ? 'i-ph-x' : 'i-ph-list'"
               :aria-expanded="mobileMenuOpen" aria-label="Toggle mobile menu" @click="toggleMobileMenu" />
           </div>
         </nav>
       </div>
     </div>
     <!-- Mobile Menu -->
-    <div v-show="mobileMenuOpen" id="mobile-menu"
+    <div
+v-show="mobileMenuOpen" id="mobile-menu"
       class="lg:hidden h-auto min-h-screen absolute left-0 top-full w-screen max-w-none overflow-hidden -mx-[calc(50vw-50%)]"
       @click.stop>
       <div class="m-4" @click="toggleMobileMenu">
@@ -46,17 +52,19 @@
           class="backdrop-blur bg-white/95 dark:bg-neutral-900/95 rounded-lg border border-neutral-200/60 dark:border-neutral-800/80 overflow-hidden shadow-2xl">
           <nav class="flex flex-col py-6 px-4" aria-label="Mobile navigation">
             <!-- Navigation Links with Enhanced Touch Targets -->
-            <ULink v-for="item in navigationItems" :key="item.path" :to="item.path"
+            <ULink
+v-for="item in navigationItems" :key="item.path" :to="item.path"
               class="flex items-center gap-4 px-4 py-4 min-h-11 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg transition-all duration-300 ease-in-out"
               @click="closeMobileMenu">
               <UIcon :name="item.icon" />
               <span>{{ item.label }}</span>
             </ULink>
 
-            <br />
+            <br >
 
             <!-- Mobile CTA with Enhanced Styling -->
-            <ULink to="/contact"
+            <ULink
+to="/contact"
               class="flex items-center justify-center gap-3 px-6 py-4 min-h-12 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors duration-300"
               @click="closeMobileMenu">
               <UIcon name="i-ph-envelope" />

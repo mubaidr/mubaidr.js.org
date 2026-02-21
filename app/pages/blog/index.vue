@@ -101,9 +101,10 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
               <div class="space-y-6">
                 <!-- Featured Image -->
                 <div class="aspect-video -mx-6 -mt-6 overflow-hidden">
-                  <img v-if="post.socialImage?.src || post.image" :src="post.socialImage?.src || post.image"
+                  <img
+v-if="post.socialImage?.src || post.image" :src="post.socialImage?.src || post.image"
                     :alt="post.socialImage?.alt || post.title"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" >
                   <div v-else class="flex items-center justify-center h-full bg-neutral-100 dark:bg-neutral-800">
                     <UIcon name="i-ph-article-bold" class="w-12 h-12 text-neutral-400" />
                   </div>
@@ -121,7 +122,8 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
                   </div>
 
                   <div class="flex flex-wrap gap-2">
-                    <UBadge v-for="tag in post.tags?.slice(0, 2)" :key="tag" :label="tag" variant="subtle"
+                    <UBadge
+v-for="tag in post.tags?.slice(0, 2)" :key="tag" :label="tag" variant="subtle"
                       color="neutral" size="xs" />
                   </div>
 

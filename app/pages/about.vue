@@ -24,7 +24,7 @@ useHead({
   <div>
     <div class="space-y-24">
       <!-- Brief Intro -->
-      <section class="max-w-3xl mx-auto text-center space-y-6">
+      <section>
         <h1>About Me</h1>
         <p class="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed">
           I'm a senior software engineer with 12+ years of experience building
@@ -34,7 +34,7 @@ useHead({
       </section>
 
       <!-- Current Focus -->
-      <section class="max-w-5xl mx-auto px-4">
+      <section>
         <div class="text-center space-y-4 mb-12">
           <h2>Current Focus</h2>
           <p class="text-neutral-600 dark:text-neutral-400">
@@ -53,7 +53,7 @@ useHead({
       </section>
 
       <!-- Key Expertise -->
-      <section class="max-w-4xl mx-auto px-4">
+      <section>
         <div class="text-center space-y-4 mb-8">
           <h2>Expertise</h2>
         </div>

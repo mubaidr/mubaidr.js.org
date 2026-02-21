@@ -115,10 +115,12 @@ if (blogPostData.value) {
       </header>
 
       <!-- Featured Image -->
-      <div v-if="blogPostData.socialImage?.src || blogPostData.image"
+      <div
+v-if="blogPostData.socialImage?.src || blogPostData.image"
         class="aspect-video overflow-hidden rounded-2xl shadow-lg">
-        <img :src="blogPostData.socialImage?.src || blogPostData.image"
-          :alt="blogPostData.socialImage?.alt || blogPostData.title" class="w-full h-full object-cover" />
+        <img
+:src="blogPostData.socialImage?.src || blogPostData.image"
+          :alt="blogPostData.socialImage?.alt || blogPostData.title" class="w-full h-full object-cover" >
       </div>
 
       <!-- Post Content -->

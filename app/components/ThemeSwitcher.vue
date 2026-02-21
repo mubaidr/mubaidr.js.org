@@ -10,9 +10,10 @@ const toggleTheme = () => {
 
 <template>
   <ClientOnly>
-    <UButton :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'" variant="ghost"
-      class="transition-transform duration-200 ease-in-out active:scale-95 hover:scale-105" @click="toggleTheme"
-      color="neutral">
+    <UButton
+:aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'" variant="ghost"
+      class="transition-transform duration-200 ease-in-out active:scale-95 hover:scale-105" color="neutral"
+      @click="toggleTheme">
       <UIcon v-if="isDark" name="i-ph-moon" />
       <UIcon v-if="!isDark" name="i-ph-sun" />
     </UButton>

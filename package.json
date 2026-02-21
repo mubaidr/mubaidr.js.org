@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@iconify-json/devicon": "^1.2.58",
+    "@iconify-json/devicon": "^1.2.59",
     "@iconify-json/ph": "^1.2.2",
     "@nuxt/content": "^3.11.2",
     "@nuxt/eslint": "^1.15.1",
@@ -14,13 +14,13 @@
     "@nuxtjs/mdc": "0.20.1",
     "@nuxtjs/seo": "^3.4.0",
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.1.18",
+    "@tailwindcss/vite": "^4.2.0",
     "nuxt": "^4.3.1",
     "nuxt-feedme": "^2.1.0",
     "nuxt-mcp-dev": "^0.3.2",
-    "tailwindcss": "^4.1.18",
+    "tailwindcss": "^4.2.0",
     "vite-plugin-eslint2": "^5.0.5",
-    "vue-tsc": "^3.2.4"
+    "vue-tsc": "^3.2.5"
   },
   "engines": {
     "node": ">=23",

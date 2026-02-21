@@ -24,5 +24,10 @@ export default defineAppConfig({
         },
       },
     },
+    pageCard: {
+      slots: {
+        wrapper: "flex flex-col flex-1 items-center text-center",
+      },
+    },
   },
 })

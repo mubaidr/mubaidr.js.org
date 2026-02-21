@@ -36,6 +36,27 @@ const consultingAreas = [
     icon: "i-ph-users-three",
   },
 ]
+
+const approachSteps = [
+  {
+    title: "Discover",
+    description:
+      "Work closely with your team to understand unique challenges, context, and goals for the project.",
+    icon: "i-ph-magnifying-glass",
+  },
+  {
+    title: "Analyze",
+    description:
+      "Evaluate systems and provide practical, actionable guidance that helps you make better technical decisions today.",
+    icon: "i-ph-chart-line-up",
+  },
+  {
+    title: "Deliver",
+    description:
+      "Apply deep technical expertise with a pragmatic approach to set you up for long-term success.",
+    icon: "i-ph-rocket-launch",
+  },
+]
 </script>
 
 <template>
@@ -52,48 +73,28 @@ const consultingAreas = [
       </div>
 
       <!-- Consulting Areas -->
-      <section class="max-w-5xl mx-auto px-4">
-        <div class="grid gap-8 md:grid-cols-3">
-          <UCard v-for="area in consultingAreas" :key="area.title" class="h-full">
-            <div class="text-center space-y-4">
-              <div
-                class="w-12 h-12 mx-auto flex items-center justify-center rounded-lg bg-primary-50 dark:bg-primary-900/20">
-                <UIcon :name="area.icon" size="1.5rem" class="text-primary-600 dark:text-primary-400" />
-              </div>
-
-              <h3 class="text-lg font-semibold">{{ area.title }}</h3>
-
-              <p class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
-                {{ area.description }}
-              </p>
-            </div>
-          </UCard>
+      <section>
+        <div class="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <UPageCard v-for="area in consultingAreas" :key="area.title" :title="area.title"
+            :description="area.description" :spotlight="true" />
         </div>
       </section>
 
       <!-- Approach -->
-      <section class="max-w-3xl mx-auto px-4">
+      <section>
         <div class="text-center space-y-6 mb-12">
           <h2>My Approach</h2>
         </div>
 
-        <UCard>
-          <div class="space-y-6">
-            <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              I work closely with your team to understand your unique challenges
-              and context. My focus is on practical, actionable guidance that
-              helps you make better technical decisions today while setting you
-              up for success tomorrow.
-            </p>
+        <div class="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-8">
+          <UPageCard v-for="(step, index) in approachSteps" :key="step.title" :title="step.title"
+            :description="step.description" :icon="step.icon" :spotlight="true" />
+        </div>
 
-            <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              With 12+ years of experience building scalable systems and
-              maintaining open source projects used by thousands of developers,
-              I bring deep technical expertise and a pragmatic approach to every
-              engagement.
-            </p>
-          </div>
-        </UCard>
+        <p class="text-center text-neutral-600 dark:text-neutral-400 leading-relaxed">
+          With 12+ years of experience building scalable systems and maintaining open source projects used by thousands
+          of developers, I bring deep technical expertise to every engagement.
+        </p>
       </section>
 
       <!-- CTA -->

@@ -7,6 +7,7 @@ date: 2025-02-22T16:45:00.000Z
 dateUpdated: 2025-02-22T16:45:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
+featured: false
 socialImage:
   src: /img/blog/11-typescript-advanced-patterns/banner.svg
   mime: svg

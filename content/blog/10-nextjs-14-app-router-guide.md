@@ -7,6 +7,7 @@ date: 2024-04-10T11:20:00.000Z
 dateUpdated: 2024-04-10T11:20:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
+featured: false
 socialImage:
   src: /img/blog/10-nextjs-14-app-router-guide/banner.svg
   mime: svg

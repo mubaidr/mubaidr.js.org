@@ -65,7 +65,8 @@ if (profileData.value) {
 
           <!-- Social Links (Subtle) -->
           <div class="flex gap-3 text-neutral-500">
-            <ULink v-for="social in profileData.social" :key="social.name" :to="social.url" external
+            <ULink
+v-for="social in profileData.social" :key="social.name" :to="social.url" external
               :title="social.name" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
               <UIcon :name="social.icon" size="1.5em" />
             </ULink>

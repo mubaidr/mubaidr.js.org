@@ -7,6 +7,7 @@ date: 2024-03-15T10:00:00.000Z
 dateUpdated: 2024-03-15T10:00:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
+featured: false
 socialImage:
   src: /img/blog/7-modern-javascript-es2024-features/banner.svg
   mime: svg

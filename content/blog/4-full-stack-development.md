@@ -13,6 +13,7 @@ date: 2024-11-19T12:00:00.000Z
 dateUpdated: 2024-11-19T12:00:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
+featured: false
 ---
 
 ## Full Stack Development with Node.js and Vue.js: A Complete Guide

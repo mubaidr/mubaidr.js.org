@@ -14,7 +14,7 @@ const openSourceProjects = [
 </script>
 
 <template>
-  <section class="py-16 md:py-24">
+  <section>
     <div class="max-w-4xl mx-auto px-4">
       <UCard>
         <div class="space-y-6">
@@ -38,7 +38,8 @@ const openSourceProjects = [
           </div>
 
           <div class="text-center pt-4 border-t border-neutral-200 dark:border-neutral-800">
-            <UButton v-if="profileData?.social" :to="profileData.social.find((s) => s.name === 'GitHub')?.url" external
+            <UButton
+v-if="profileData?.social" :to="profileData.social.find((s) => s.name === 'GitHub')?.url" external
               icon="i-ph-github-logo" variant="outline">
               View All on GitHub
             </UButton>

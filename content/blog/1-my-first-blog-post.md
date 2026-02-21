@@ -9,6 +9,7 @@ date: 2024-07-16T12:00:00.000Z
 dateUpdated: 2024-07-16T12:00:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
+featured: false
 socialImage:
   src: /img/blog/1-my-first-blog-post/banner.svg
   mime: svg
