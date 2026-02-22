@@ -9,7 +9,7 @@ featured: true
 socialImage:
   src: /img/blog/16-nuxt-4-ssr-performance-optimization/banner.svg
   mime: svg
-  alt: Nuxt 4 SSR Performance Optimization - Lightning-fast page loads with speedometer and lightning bolt icons on green gradient background
+  alt: "Nuxt 4 SSR Performance Optimization - Lightning-fast page loads with speedometer and lightning bolt icons on green gradient background"
   width: 1200
   height: 630
 ---

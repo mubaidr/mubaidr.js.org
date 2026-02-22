@@ -1,4 +1,233 @@
 projects:
+  - id: 12
+    title: Midnight Run
+    description: Community outreach platform organizing weekly street runs to provide food, clothing, and companionship to homeless individuals in New York City.
+    longDescription: Midnight Run is a digital platform supporting a 40+ year community outreach movement in New York City. The platform coordinates weekly volunteer runs where community members distribute food, clothing, and provide companionship to neighbors experiencing homelessness. Features include a public run calendar with event scheduling, volunteer registration and authentication, detailed run information for registered users, community feedback collection, and newsletter subscription. The platform bridges civic groups, churches, and individuals to create a network of mutual support, making it easy for volunteers to get involved through food preparation, direct outreach, and community building activities.
+    technologies:
+      - Nuxt.js
+      - Vue 3
+      - TypeScript
+      - Tailwind CSS
+      - Node.js
+      - PostgreSQL
+    category: Web Application
+    featured: true
+    status: active
+    startDate: '2024-01-01'
+    endDate: null
+    links:
+      demo: https://midnightrun.com
+    stats:
+      years_of_service: 40+
+      community_members: 1000+
+      weekly_runs: 15+
+      days_with_runs: 14
+    features:
+      - Public run calendar with event scheduling
+      - Volunteer registration and authentication
+      - Detailed run information for logged-in users
+      - Community feedback and voice collection
+      - Newsletter subscription system
+      - Mobile-responsive design
+      - User role management (volunteers, organizers, admins)
+      - Event tracking and analytics
+    challenges:
+      - Building accessible interface for diverse volunteer base
+      - Managing real-time event updates and scheduling
+      - Creating secure user authentication and authorization
+      - Designing intuitive calendar interface
+      - Ensuring mobile accessibility for on-the-go volunteers
+    outcomes:
+      - Successfully digitized 40+ year community outreach process
+      - Streamlined volunteer coordination and scheduling
+      - Improved community engagement and participation
+      - Enabled efficient tracking of outreach activities
+    businessImpact:
+      communityImpact: Supporting 40+ year NYC outreach tradition
+      volunteerEngagement: 1000+ community members engaged
+      operationalEfficiency: Digitized volunteer coordination
+      socialImpact: Regular weekly runs serving homeless community
+    myRole: Lead Full-Stack Developer
+    teamSize: 2
+    client:
+      name: Midnight Run NYC
+      industry: Non-profit & Community Service
+    type: Client Project
+  - id: 10
+    title: ParagonRentals.ai
+    description: Comprehensive vacation rental marketplace platform connecting property owners with guests, featuring real-time communication, secure payments, and advanced analytics.
+    longDescription: ParagonRentals.ai is a next-generation vacation rental marketplace that connects property owners with guests worldwide. The platform features real-time messaging, secure payment processing with multi-currency support, advanced fraud detection, and comprehensive analytics. Built with modern technologies including WebSocket for real-time updates, Laravel for backend authentication, and Nuxt with Vue 3 for a responsive frontend. The platform serves dual user bases with distinct feature sets for guests (searching, booking, messaging) and hosts (listing, calendar management, analytics dashboard).
+    technologies:
+      - WebSocket
+      - Laravel
+      - Nuxt
+      - Vue 3
+      - 3D Secure
+      - Multi-currency
+      - i18n
+    category: Web Application
+    featured: true
+    status: active
+    startDate: '2024-06-01'
+    endDate: null
+    links:
+      demo: https://paragonrentals.ai
+    stats:
+      properties: 10k+
+      guests: 50k+
+      uptime: 99.9%
+      support: 24/7
+    features:
+      - Real-time chat and messaging
+      - Secure payment processing
+      - Advanced fraud detection
+      - Dispute resolution system
+      - Analytics dashboard
+      - Calendar integration
+      - Multi-currency support
+      - Internationalization (i18n)
+      - Property listing management
+      - Booking and reservation system
+    challenges:
+      - Implementing real-time WebSocket communication at scale
+      - Building secure payment processing with 3D Secure
+      - Creating effective fraud detection algorithms
+      - Designing fair dispute resolution mechanisms
+      - Managing multi-currency transactions
+      - Ensuring 99.9% uptime availability
+    outcomes:
+      - 10K+ properties listed on platform
+      - 50K+ happy guests served
+      - 99.9% uptime achieved
+      - 24/7 support system established
+      - Successful dual-user platform (guests and hosts)
+    businessImpact:
+      scale: 10K+ properties, 50K+ guests
+      reliability: 99.9% uptime maintained
+      trust: Advanced fraud detection protecting users
+      support: 24/7 customer support system
+    myRole: Lead Full-Stack Developer
+    teamSize: 5
+    client:
+      name: ParagonRentals.ai
+      industry: Travel & Hospitality
+    type: Client Project
+  - id: 11
+    title: ParagonSquare.ai
+    description: Next-generation multi-marketplace platform offering 0% commission through subscription model, combining auctions, products, services, and future vacation rentals.
+    longDescription: >-
+      ParagonSquare.ai is a revolutionary multi-marketplace platform that bridges B2B, B2C,
+      and C2C transactions through a unified ecosystem. The platform features four distinct
+      marketplaces: online auctions for goods, flat-price product sales, services marketplace
+      with 43+ categories, and upcoming vacation rentals. Its innovative subscription-based
+      model eliminates traditional 10-25% commission fees, offering VIP subscriptions that
+      reduce commissions to 0%. Key features include 72-hour funds release policy, 3-way chat
+      dispute resolution, and comprehensive KYC verification for sellers. The platform has
+      achieved significant traction with 28,000+ sign-ups and 600,000+ unique visitors across
+      5 countries, with plans to IPO on the Bahamas Stock Exchange (BISX).
+    technologies:
+      - Custom Framework
+      - Stripe
+      - NOWPayments
+      - Font Awesome
+      - Termly.io
+    category: SaaS
+    featured: true
+    status: active
+    startDate: '2024-01-01'
+    endDate: null
+    links:
+      demo: https://paragonsquare.ai
+    stats:
+      signups: 28k+
+      visitors: 600k+
+      raised: $18,696
+      countries: 5
+    features:
+      - Multi-marketplace platform (auctions, products, services, rentals)
+      - 0% commission model through VIP subscriptions
+      - 72-hour funds release policy
+      - 3-way chat dispute resolution system
+      - KYC verification for sellers
+      - 43+ service categories
+      - 50+ product categories
+      - Multi-currency payment support (Stripe + crypto via NOWPayments)
+      - Cookie consent management (GDPR compliant)
+    challenges:
+      - Building multi-marketplace architecture supporting diverse transaction types
+      - Implementing secure payment processing with 72-hour hold period
+      - Creating effective 3-way dispute resolution chat system
+      - Managing KYC verification workflow for sellers
+      - Scaling to handle 600K+ visitors across 5 countries
+    outcomes:
+      - 28,000+ user sign-ups achieved
+      - 600,000+ unique visitors across 5 countries
+      - $18,696 raised in Regulation CF offering
+      - Planning IPO on Bahamas Stock Exchange (BISX)
+      - Subsidiary Paris Realty established for vacation rental segment
+    businessImpact:
+      userGrowth: 28K+ sign-ups, 600K+ unique visitors
+      marketReach: Operating across 5 countries
+      funding: $18,696 raised, targeting $600K total
+      innovation: 0% commission model disrupting traditional 10-25% fees
+      futureGrowth: IPO planned on Bahamas Stock Exchange (BISX)
+    myRole: Lead Full-Stack Developer
+    teamSize: 3
+    client:
+      name: ParagonSquare.ai
+      industry: E-commerce & Marketplace
+    type: Client Project
+  - id: 8
+    title: Online Recruitment System
+    description: Modern recruitment platform for companies hiring with AI-powered candidate matching and automated workflows.
+    longDescription: A comprehensive online recruitment system designed to streamline the hiring process for companies of all sizes. Features include AI-powered candidate matching, automated job posting, applicant tracking system (ATS), interview scheduling, candidate assessments, and detailed analytics. Built to reduce time-to-hire and improve recruitment efficiency.
+    technologies:
+      - React
+      - Node.js
+      - MongoDB
+      - OpenAI API
+      - SendGrid
+      - AWS
+    category: SaaS
+    featured: true
+    status: active
+    startDate: '2024-03-01'
+    endDate: null
+    links: {}
+    stats:
+      companies: 100+
+      jobs_posted: 5k+
+      candidates: 50k+
+      hires_made: 2k+
+    features:
+      - AI-powered candidate matching
+      - Automated job posting to multiple boards
+      - Applicant tracking system (ATS)
+      - Interview scheduling automation
+      - Candidate assessments
+      - Recruitment analytics dashboard
+      - Email & SMS notifications
+    challenges:
+      - Implementing accurate AI candidate matching
+      - Handling high-volume candidate data
+      - Ensuring data privacy compliance (GDPR)
+    outcomes:
+      - 100+ companies using the platform
+      - 5k+ jobs posted
+      - 50k+ registered candidates
+      - 2k+ successful hires made
+      - 40% reduction in time-to-hire
+    businessImpact:
+      efficiency: 40% reduction in time-to-hire
+      scale: 100+ companies, 50K+ candidates
+      automation: Automated 80% of manual recruitment tasks
+      roi: Saved companies 500+ hours/month on average
+    myRole: Lead Developer & AI Integration Specialist
+    teamSize: 5
+    client:
+      name: HR Tech Startup
+      industry: Human Resources
+    type: Client Project
   - id: 15
     title: AI Document Chat Platform
     description: Interactive web application with document repository and AI-based chat portal that responds to queries based on uploaded PDF and Word documents, including scanned copies with OCR support.
@@ -242,235 +471,6 @@ projects:
     client:
       name: Prosfinity
       industry: Cybersecurity
-    type: Client Project
-  - id: 12
-    title: Midnight Run
-    description: Community outreach platform organizing weekly street runs to provide food, clothing, and companionship to homeless individuals in New York City.
-    longDescription: Midnight Run is a digital platform supporting a 40+ year community outreach movement in New York City. The platform coordinates weekly volunteer runs where community members distribute food, clothing, and provide companionship to neighbors experiencing homelessness. Features include a public run calendar with event scheduling, volunteer registration and authentication, detailed run information for registered users, community feedback collection, and newsletter subscription. The platform bridges civic groups, churches, and individuals to create a network of mutual support, making it easy for volunteers to get involved through food preparation, direct outreach, and community building activities.
-    technologies:
-      - Nuxt.js
-      - Vue 3
-      - TypeScript
-      - Tailwind CSS
-      - Node.js
-      - PostgreSQL
-    category: Web Application
-    featured: true
-    status: active
-    startDate: '2024-01-01'
-    endDate: null
-    links:
-      demo: https://midnightrun.com
-    stats:
-      years_of_service: 40+
-      community_members: 1000+
-      weekly_runs: 15+
-      days_with_runs: 14
-    features:
-      - Public run calendar with event scheduling
-      - Volunteer registration and authentication
-      - Detailed run information for logged-in users
-      - Community feedback and voice collection
-      - Newsletter subscription system
-      - Mobile-responsive design
-      - User role management (volunteers, organizers, admins)
-      - Event tracking and analytics
-    challenges:
-      - Building accessible interface for diverse volunteer base
-      - Managing real-time event updates and scheduling
-      - Creating secure user authentication and authorization
-      - Designing intuitive calendar interface
-      - Ensuring mobile accessibility for on-the-go volunteers
-    outcomes:
-      - Successfully digitized 40+ year community outreach process
-      - Streamlined volunteer coordination and scheduling
-      - Improved community engagement and participation
-      - Enabled efficient tracking of outreach activities
-    businessImpact:
-      communityImpact: Supporting 40+ year NYC outreach tradition
-      volunteerEngagement: 1000+ community members engaged
-      operationalEfficiency: Digitized volunteer coordination
-      socialImpact: Regular weekly runs serving homeless community
-    myRole: Lead Full-Stack Developer
-    teamSize: 2
-    client:
-      name: Midnight Run NYC
-      industry: Non-profit & Community Service
-    type: Client Project
-  - id: 10
-    title: ParagonRentals.ai
-    description: Comprehensive vacation rental marketplace platform connecting property owners with guests, featuring real-time communication, secure payments, and advanced analytics.
-    longDescription: ParagonRentals.ai is a next-generation vacation rental marketplace that connects property owners with guests worldwide. The platform features real-time messaging, secure payment processing with multi-currency support, advanced fraud detection, and comprehensive analytics. Built with modern technologies including WebSocket for real-time updates, Laravel for backend authentication, and Nuxt with Vue 3 for a responsive frontend. The platform serves dual user bases with distinct feature sets for guests (searching, booking, messaging) and hosts (listing, calendar management, analytics dashboard).
-    technologies:
-      - WebSocket
-      - Laravel
-      - Nuxt
-      - Vue 3
-      - 3D Secure
-      - Multi-currency
-      - i18n
-    category: Web Application
-    featured: true
-    status: active
-    startDate: '2024-06-01'
-    endDate: null
-    links:
-      demo: https://paragonrentals.ai
-    stats:
-      properties: 10k+
-      guests: 50k+
-      uptime: 99.9%
-      support: 24/7
-    features:
-      - Real-time chat and messaging
-      - Secure payment processing
-      - Advanced fraud detection
-      - Dispute resolution system
-      - Analytics dashboard
-      - Calendar integration
-      - Multi-currency support
-      - Internationalization (i18n)
-      - Property listing management
-      - Booking and reservation system
-    challenges:
-      - Implementing real-time WebSocket communication at scale
-      - Building secure payment processing with 3D Secure
-      - Creating effective fraud detection algorithms
-      - Designing fair dispute resolution mechanisms
-      - Managing multi-currency transactions
-      - Ensuring 99.9% uptime availability
-    outcomes:
-      - 10K+ properties listed on platform
-      - 50K+ happy guests served
-      - 99.9% uptime achieved
-      - 24/7 support system established
-      - Successful dual-user platform (guests and hosts)
-    businessImpact:
-      scale: 10K+ properties, 50K+ guests
-      reliability: 99.9% uptime maintained
-      trust: Advanced fraud detection protecting users
-      support: 24/7 customer support system
-    myRole: Lead Full-Stack Developer
-    teamSize: 5
-    client:
-      name: ParagonRentals.ai
-      industry: Travel & Hospitality
-    type: Client Project
-  - id: 11
-    title: ParagonSquare.ai
-    description: Next-generation multi-marketplace platform offering 0% commission through subscription model, combining auctions, products, services, and future vacation rentals.
-    longDescription: >-
-      ParagonSquare.ai is a revolutionary multi-marketplace platform that bridges B2B, B2C,
-      and C2C transactions through a unified ecosystem. The platform features four distinct
-      marketplaces: online auctions for goods, flat-price product sales, services marketplace
-      with 43+ categories, and upcoming vacation rentals. Its innovative subscription-based
-      model eliminates traditional 10-25% commission fees, offering VIP subscriptions that
-      reduce commissions to 0%. Key features include 72-hour funds release policy, 3-way chat
-      dispute resolution, and comprehensive KYC verification for sellers. The platform has
-      achieved significant traction with 28,000+ sign-ups and 600,000+ unique visitors across
-      5 countries, with plans to IPO on the Bahamas Stock Exchange (BISX).
-    technologies:
-      - Custom Framework
-      - Stripe
-      - NOWPayments
-      - Font Awesome
-      - Termly.io
-    category: SaaS
-    featured: true
-    status: active
-    startDate: '2024-01-01'
-    endDate: null
-    links:
-      demo: https://paragonsquare.ai
-    stats:
-      signups: 28k+
-      visitors: 600k+
-      raised: $18,696
-      countries: 5
-    features:
-      - Multi-marketplace platform (auctions, products, services, rentals)
-      - 0% commission model through VIP subscriptions
-      - 72-hour funds release policy
-      - 3-way chat dispute resolution system
-      - KYC verification for sellers
-      - 43+ service categories
-      - 50+ product categories
-      - Multi-currency payment support (Stripe + crypto via NOWPayments)
-      - Cookie consent management (GDPR compliant)
-    challenges:
-      - Building multi-marketplace architecture supporting diverse transaction types
-      - Implementing secure payment processing with 72-hour hold period
-      - Creating effective 3-way dispute resolution chat system
-      - Managing KYC verification workflow for sellers
-      - Scaling to handle 600K+ visitors across 5 countries
-    outcomes:
-      - 28,000+ user sign-ups achieved
-      - 600,000+ unique visitors across 5 countries
-      - $18,696 raised in Regulation CF offering
-      - Planning IPO on Bahamas Stock Exchange (BISX)
-      - Subsidiary Paris Realty established for vacation rental segment
-    businessImpact:
-      userGrowth: 28K+ sign-ups, 600K+ unique visitors
-      marketReach: Operating across 5 countries
-      funding: $18,696 raised, targeting $600K total
-      innovation: 0% commission model disrupting traditional 10-25% fees
-      futureGrowth: IPO planned on Bahamas Stock Exchange (BISX)
-    myRole: Lead Full-Stack Developer
-    teamSize: 3
-    client:
-      name: ParagonSquare.ai
-      industry: E-commerce & Marketplace
-    type: Client Project
-  - id: 8
-    title: Online Recruitment System
-    description: Modern recruitment platform for companies hiring with AI-powered candidate matching and automated workflows.
-    longDescription: A comprehensive online recruitment system designed to streamline the hiring process for companies of all sizes. Features include AI-powered candidate matching, automated job posting, applicant tracking system (ATS), interview scheduling, candidate assessments, and detailed analytics. Built to reduce time-to-hire and improve recruitment efficiency.
-    technologies:
-      - React
-      - Node.js
-      - MongoDB
-      - OpenAI API
-      - SendGrid
-      - AWS
-    category: SaaS
-    featured: true
-    status: active
-    startDate: '2024-03-01'
-    endDate: null
-    links: {}
-    stats:
-      companies: 100+
-      jobs_posted: 5k+
-      candidates: 50k+
-      hires_made: 2k+
-    features:
-      - AI-powered candidate matching
-      - Automated job posting to multiple boards
-      - Applicant tracking system (ATS)
-      - Interview scheduling automation
-      - Candidate assessments
-      - Recruitment analytics dashboard
-      - Email & SMS notifications
-    challenges:
-      - Implementing accurate AI candidate matching
-      - Handling high-volume candidate data
-      - Ensuring data privacy compliance (GDPR)
-    outcomes:
-      - 100+ companies using the platform
-      - 5k+ jobs posted
-      - 50k+ registered candidates
-      - 2k+ successful hires made
-      - 40% reduction in time-to-hire
-    businessImpact:
-      efficiency: 40% reduction in time-to-hire
-      scale: 100+ companies, 50K+ candidates
-      automation: Automated 80% of manual recruitment tasks
-      roi: Saved companies 500+ hours/month on average
-    myRole: Lead Developer & AI Integration Specialist
-    teamSize: 5
-    client:
-      name: HR Tech Startup
-      industry: Human Resources
     type: Client Project
   - id: 2
     title: Vite Vue3 Browser Extension V3

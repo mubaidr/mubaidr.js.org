@@ -85,7 +85,7 @@ const mobileMenuOpen = ref(false)
 const navigationItems = [
   // { path: "/about", label: "About", icon: "i-ph-user" },
   { path: "/consulting", label: "Consulting", icon: "i-ph-lightbulb" },
-  { path: "/projects", label: "Projects", icon: "i-ph-folder-open" },
+  { path: "/projects", label: "Portfolio", icon: "i-ph-folder-open" },
   { path: "/blog", label: "Blog", icon: "i-ph-article" },
 ]
 
