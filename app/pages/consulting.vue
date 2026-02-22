@@ -75,7 +75,8 @@ const approachSteps = [
       <!-- Consulting Areas -->
       <section>
         <div class="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <UPageCard v-for="area in consultingAreas" :key="area.title" :title="area.title"
+          <UPageCard
+v-for="area in consultingAreas" :key="area.title" :title="area.title"
             :description="area.description" :spotlight="true" />
         </div>
       </section>
@@ -87,7 +88,8 @@ const approachSteps = [
         </div>
 
         <div class="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-8">
-          <UPageCard v-for="(step, index) in approachSteps" :key="step.title" :title="step.title"
+          <UPageCard
+v-for="(step, index) in approachSteps" :key="step.title" :title="step.title"
             :description="step.description" :icon="step.icon" :spotlight="true" />
         </div>
 

@@ -1,0 +1,558 @@
+plan_id: blog-seo-research
+objective: Research blog content structure and current SEO implementation patterns
+focus_area: Blog and SEO patterns
+created_at: 2026-02-22
+created_by: gem-researcher
+status: completed
+
+tldr: |
+  - Blog schema uses Zod validation with required fields (title, description, date, author) and optional fields (tags, featured, socialImage, image, dateUpdated)
+  - Two image patterns: socialImage (preferred with src, mime, alt, width, height) and image (simple string fallback)
+  - SEO implementation uses Nuxt SEO toolkit: useSeoMeta for meta tags, defineOgImage for OG images, useSchemaOrg for structured data
+  - BlogPosting schema.org includes headline, description, image, datePublished, dateModified, mainEntityOfPage, author, publisher
+  - Images stored in /public/img/blog/{post-name}/ with standardized dimensions (1200x630 for social images)
+  - Global site configuration in nuxt.config.ts with schema.org identity (Person type)
+  - Featured flag for highlighting posts in components
+
+research_metadata:
+  methodology: Hybrid retrieval: semantic_search + grep_search, relationship discovery, file reading (content.config.ts, blog posts, page components, nuxt.config.ts), sequential thinking for complex analysis
+  tools_used:
+    - semantic_search
+    - grep_search
+    - read_file
+    - sequentialthinking
+  scope: Blog content schema, SEO implementation patterns, image handling, page-level SEO configurations, global SEO settings
+  confidence: high
+  coverage: 95% of relevant files examined
+
+files_analyzed:
+  - file: content.config.ts
+    path: /projects/mubaidr.js.org/content.config.ts
+    purpose: Defines blog content schema with Zod validation and OG image collection
+    key_elements:
+      - element: blog collection schema
+        type: schema
+        location: content.config.ts:29-52
+        description: Zod schema defining blog post frontmatter fields with validation
+      - element: socialImage object
+        type: pattern
+        location: content.config.ts:40-47
+        description: Preferred image format with rich metadata (src, mime, alt, width, height)
+      - element: image fallback
+        type: pattern
+        location: content.config.ts:49
+        description: Simple string URL for legacy image support
+      - element: asOgImageCollection
+        type: configuration
+        location: content.config.ts:28
+        description: Enables automatic OG image generation for blog posts
+    language: TypeScript
+    lines: 201
+
+  - file: app/pages/blog/[...slug].vue
+    path: /projects/mubaidr.js.org/app/pages/blog/[...slug].vue
+    purpose: Individual blog post page with comprehensive SEO implementation
+    key_elements:
+      - element: useSeoMeta
+        type: function
+        location: app/pages/blog/[...slug].vue:41-57
+        description: Sets page title, description, OG tags, Twitter cards, article timestamps
+      - element: useHead canonical
+        type: function
+        location: app/pages/blog/[...slug].vue:59-61
+        description: Sets canonical URL for SEO
+      - element: defineOgImage
+        type: function
+        location: app/pages/blog/[...slug].vue:61
+        description: Defines OG image from blog post data
+      - element: useSchemaOrg BlogPosting
+        type: function
+        location: app/pages/blog/[...slug].vue:65-85
+        description: Registers BlogPosting JSON-LD structured data
+      - element: Author URL fallback chain
+        type: pattern
+        location: app/pages/blog/[...slug].vue:23-39
+        description: Resolves author URL from frontmatter -> authors collection -> /about
+    language: Vue
+    lines: 201
+
+  - file: content/blog/1-my-first-blog-post.md
+    path: /projects/mubaidr.js.org/content/blog/1-my-first-blog-post.md
+    purpose: Example blog post with complete frontmatter
+    key_elements:
+      - element: title
+        type: field
+        location: content/blog/1-my-first-blog-post.md:2
+        description: Post title with optional suffix
+      - element: description
+        type: field
+        location: content/blog/1-my-first-blog-post.md:3-4
+        description: Multi-line description for SEO
+      - element: headline and abstract
+        type: field
+        location: content/blog/1-my-first-blog-post.md:5-8
+        description: Optional custom fields for display
+      - element: date and dateUpdated
+        type: field
+        location: content/blog/1-my-first-blog-post.md:9-10
+        description: ISO 8601 timestamp format
+      - element: socialImage
+        type: field
+        location: content/blog/1-my-first-blog-post.md:13-18
+        description: Rich image metadata with src, mime, alt, width, height
+    language: Markdown
+    lines: 201
+
+  - file: content/blog/5-vue-3-composition-api-best-practices.md
+    path: /projects/mubaidr.js.org/content/blog/5-vue-3-composition-api-best-practices.md
+    purpose: Example blog post with tags and featured flag
+    key_elements:
+      - element: tags array
+        type: field
+        location: content/blog/5-vue-3-composition-api-best-practices.md:7
+        description: Array of tag strings for categorization
+      - element: featured flag
+        type: field
+        location: content/blog/5-vue-3-composition-api-best-practices.md:8
+        description: Boolean flag for highlighting posts
+      - element: image fallback
+        type: field
+        location: content/blog/5-vue-3-composition-api-best-practices.md:9
+        description: Simple string URL instead of socialImage object
+    language: Markdown
+    lines: 201
+
+  - file: nuxt.config.ts
+    path: /projects/mubaidr.js.org/nuxt.config.ts
+    purpose: Global Nuxt configuration with SEO settings
+    key_elements:
+      - element: site configuration
+        type: configuration
+        location: nuxt.config.ts:103-111
+        description: Site URL, name, description, indexing settings
+      - element: schemaOrg identity
+        type: configuration
+        location: nuxt.config.ts:130-153
+        description: Global Person schema.org identity with social links
+      - element: @nuxtjs/seo module
+        type: dependency
+        location: nuxt.config.ts:92
+        description: SEO toolkit module for meta tags and structured data
+      - element: nitro prerender
+        type: configuration
+        location: nuxt.config.ts:86-95
+        description: Static site generation with link crawling
+    language: TypeScript
+    lines: 201
+
+  - file: app/pages/index.vue
+    path: /projects/mubaidr.js.org/app/pages/index.vue
+    purpose: Homepage with dynamic SEO from profile data
+    key_elements:
+      - element: useSeoMeta with profile data
+        type: function
+        location: app/pages/index.vue:8-21
+        description: Dynamic meta tags from profile collection
+      - element: useSchemaOrg WebSite
+        type: function
+        location: app/pages/index.vue:24-28
+        description: WebSite structured data
+      - element: useSchemaOrg Person
+        type: function
+        location: app/pages/index.vue:29-35
+        description: Person structured data with social links
+    language: Vue
+    lines: 201
+
+  - file: app/pages/about.vue
+    path: /projects/mubaidr.js.org/app/pages/about.vue
+    purpose: About page with basic SEO
+    key_elements:
+      - element: definePageMeta
+        type: function
+        location: app/pages/about.vue:2-5
+        description: Page title and description
+      - element: useHead
+        type: function
+        location: app/pages/about.vue:10-15
+        description: Manual head configuration with meta tags
+    language: Vue
+    lines: 201
+
+  - file: app/pages/privacy.vue
+    path: /projects/mubaidr.js.org/app/pages/privacy.vue
+    purpose: Privacy policy page with OG tags
+    key_elements:
+      - element: useHead with OG tags
+        type: function
+        location: app/pages/privacy.vue:2-19
+        description: Title, description, og:title, og:description, robots
+    language: Vue
+    lines: 201
+
+  - file: app/pages/terms.vue
+    path: /projects/mubaidr.js.org/app/pages/terms.vue
+    purpose: Terms of service page with OG tags
+    key_elements:
+      - element: useHead with OG tags
+        type: function
+        location: app/pages/terms.vue:2-19
+        description: Title, description, og:title, og:description, robots
+    language: Vue
+    lines: 201
+
+  - file: app/app.vue
+    path: /projects/mubaidr.js.org/app/app.vue
+    purpose: Global app configuration with verification meta tags
+    key_elements:
+      - element: useHead htmlAttrs
+        type: function
+        location: app/app.vue:3-5
+        description: Sets HTML lang attribute
+      - element: verification meta tags
+        type: meta
+        location: app/app.vue:13-21
+        description: Google and Bing site verification codes
+    language: Vue
+    lines: 201
+
+  - file: app/composables/useBlogData.ts
+    path: /projects/mubaidr.js.org/app/composables/useBlogData.ts
+    purpose: Blog data fetching utilities
+    key_elements:
+      - element: useBlogPosts
+        type: function
+        location: app/composables/useBlogData.ts:1-4
+        description: Fetches all blog posts ordered by date DESC
+      - element: useRecentBlogPosts
+        type: function
+        location: app/composables/useBlogData.ts:6-10
+        description: Fetches recent posts with limit parameter
+      - element: useFeaturedBlogPosts
+        type: function
+        location: app/composables/useBlogData.ts:12-18
+        description: Fetches posts where featured=true
+      - element: useBlogPost
+        type: function
+        location: app/composables/useBlogData.ts:20-23
+        description: Fetches single post by path
+    language: TypeScript
+    lines: 23
+
+patterns_found:
+  - category: naming
+    pattern: Blog post frontmatter field naming
+    description: Consistent field naming using camelCase for custom fields (dateUpdated, socialImage, authorUrl) and lowercase for standard fields (title, description, date, author, tags, featured)
+    examples:
+      - file: content/blog/1-my-first-blog-post.md
+        location: content/blog/1-my-first-blog-post.md:2-18
+        snippet: |
+          ---
+          title: My First Blog Post | Blog
+          description: Welcome to my tech blog!
+          date: 2024-07-16T12:00:00.000Z
+          dateUpdated: 2024-07-16T12:00:00.000Z
+          author: Muhammad Ubaid Raza
+          authorUrl: /
+          socialImage:
+            src: /img/blog/1-my-first-blog-post/banner.svg
+            alt: Code editor with mountain landscape
+          ---
+    prevalence: common
+
+  - category: structure
+    pattern: Blog post frontmatter structure
+    description: YAML frontmatter with required fields (title, description, date, author) and optional fields (dateUpdated, authorUrl, socialImage, image, tags, featured, headline, abstract)
+    examples:
+      - file: content/blog/5-vue-3-composition-api-best-practices.md
+        location: content/blog/5-vue-3-composition-api-best-practices.md:1-9
+        snippet: |
+          ---
+          title: "Vue 3 Composition API: Best Practices for Modern Development"
+          description: "Discover the most effective patterns..."
+          date: 2024-12-12T12:00:00.000Z
+          dateUpdated: 2024-12-12T12:00:00.000Z
+          author: mubaidr
+          tags: ["Vue.js", "JavaScript", "Frontend", "Composition API"]
+          featured: true
+          image: /img/blog/5-vue-3-composition-api-best-practices/banner.svg
+          ---
+    prevalence: common
+
+  - category: architecture
+    pattern: SEO implementation in blog pages
+    description: Three-tier SEO approach: useSeoMeta for meta tags, defineOgImage for OG image generation, useSchemaOrg for structured data (BlogPosting type)
+    examples:
+      - file: app/pages/blog/[...slug].vue
+        location: app/pages/blog/[...slug].vue:41-85
+        snippet: |
+          useSeoMeta({
+            title, description,
+            ogTitle: title, ogDescription: description,
+            ogType: "article", ogUrl: url,
+            ogImage: image ? [{ url: image }] : undefined,
+            twitterCard: image ? "summary_large_image" : "summary",
+            articlePublishedTime: publishedTime,
+            articleModifiedTime: modifiedTime,
+          })
+          defineOgImage(blogPostData.value.ogImage)
+          useSchemaOrg({
+            "@type": "BlogPosting",
+            headline: title, description, image,
+            datePublished: publishedTime,
+            dateModified: modifiedTime,
+            mainEntityOfPage: url,
+            author, publisher
+          })
+    prevalence: common
+
+  - category: architecture
+    pattern: Image handling with fallback
+    description: Two-tier image system: preferred socialImage object with metadata, fallback to simple image string URL
+    examples:
+      - file: app/pages/blog/[...slug].vue
+        location: app/pages/blog/[...slug].vue:13
+        snippet: const image = blogPostData.value.image || blogPostData.value.socialImage?.src
+      - file: app/components/RecentBlogPosts.vue
+        location: app/components/RecentBlogPosts.vue:38
+        snippet: :src="post.socialImage?.src || post.image"
+    prevalence: common
+
+  - category: structure
+    pattern: Image storage organization
+    description: Images stored in /public/img/blog/{post-name}/ directory with standardized naming (banner.svg, banner.png, typescript-light.png, etc.)
+    examples:
+      - file: content/blog/1-my-first-blog-post.md
+        location: content/blog/1-my-first-blog-post.md:14
+        snippet: src: /img/blog/1-my-first-blog-post/banner.svg
+      - file: content/blog/2-my-vscode-setup.md
+        location: content/blog/2-my-vscode-setup.md:13
+        snippet: src: /img/blog/2-my-vscode-setup/typescript-dark.png
+    prevalence: common
+
+  - category: naming
+    pattern: Social image dimensions
+    description: Standardized OG image dimensions of 1200x630 pixels for optimal social media display
+    examples:
+      - file: content/blog/1-my-first-blog-post.md
+        location: content/blog/1-my-first-blog-post.md:17-18
+        snippet: |
+          width: 1200
+          height: 630
+      - file: content/blog/8-react-server-components-deep-dive.md
+        location: content/blog/8-react-server-components-deep-dive.md:16-17
+        snippet: |
+          width: 1200
+          height: 630
+    prevalence: common
+
+  - category: architecture
+    pattern: Author URL resolution chain
+    description: Three-step fallback: frontmatter authorUrl -> authors collection lookup by name/alternateName -> default to /about
+    examples:
+      - file: app/pages/blog/[...slug].vue
+        location: app/pages/blog/[...slug].vue:24-39
+        snippet: |
+          let authorUrl = blogPostData.value.authorUrl
+          if (authorUrl && !authorUrl.startsWith("http")) {
+            authorUrl = new URL(authorUrl, site.url).toString()
+          }
+          if (!authorUrl && authorName) {
+            const authors = await queryCollection("authors").all()
+            const author = authors.find(
+              (a) => a.alternateName === authorName || a.name === authorName,
+            )
+            if (author?.url) { authorUrl = author.url }
+          }
+          if (!authorUrl) { authorUrl = `${site.url}/about` }
+    prevalence: common
+
+  - category: error_handling
+    pattern: Blog post not found handling
+    description: Navigate to /404 if blogPostData is undefined
+    examples:
+      - file: app/pages/blog/[...slug].vue
+        location: app/pages/blog/[...slug].vue:11-13
+        snippet: |
+          if (!blogPostData.value) {
+            navigateTo("/404")
+          }
+    prevalence: common
+
+  - category: architecture
+    pattern: Global schema.org identity
+    description: Person schema.org identity defined in nuxt.config.ts with name, jobTitle, description, image, email, url, sameAs, worksFor
+    examples:
+      - file: nuxt.config.ts
+        location: nuxt.config.ts:130-153
+        snippet: |
+          schemaOrg: {
+            identity: definePerson({
+              name: "Muhammad Ubaid Raza",
+              jobTitle: "Senior Software Engineer | Full-Stack Developer",
+              image: "/mubaidr.png",
+              email: "mubaidr@gmail.com",
+              url: "https://mubaidr.js.org",
+              sameAs: ["https://twitter.com/mubaidr", "https://github.com/mubaidr"],
+              worksFor: { "@type": "Organization", name: "Paragon Square Inc." }
+            })
+          }
+    prevalence: common
+
+related_architecture:
+  components_relevant_to_domain:
+    - component: Blog post pages
+      responsibility: Display individual blog posts with SEO
+      location: app/pages/blog/[...slug].vue
+      relationship_to_domain: domain depends on this component for SEO implementation
+    - component: Blog listing page
+      responsibility: Display all blog posts with pagination
+      location: app/pages/blog/index.vue
+      relationship_to_domain: this uses domain outputs for displaying posts
+    - component: Blog composables
+      responsibility: Fetch and query blog data
+      location: app/composables/useBlogData.ts
+      relationship_to_domain: domain depends on this for data access
+    - component: Blog preview components
+      responsibility: Display recent/featured blog posts on homepage
+      location: app/components/RecentBlogPosts.vue, app/components/FeaturedBlogPosts.vue
+      relationship_to_domain: this uses domain outputs for display
+  interfaces_used_by_domain:
+    - interface: useSeoMeta
+      location: @nuxtjs/seo module
+      usage_pattern: Sets meta tags, OG tags, Twitter cards, article timestamps
+    - interface: defineOgImage
+      location: @nuxtjs/seo module
+      usage_pattern: Defines OG image for social media sharing
+    - interface: useSchemaOrg
+      location: @nuxtjs/seo module
+      usage_pattern: Registers structured data (BlogPosting, WebSite, Person)
+    - interface: definePageMeta
+      location: Nuxt core
+      usage_pattern: Sets page title and description metadata
+    - interface: useHead
+      location: Nuxt core
+      usage_pattern: Sets head elements including canonical links and meta tags
+  data_flow_involving_domain:
+    Blog posts created in content/blog/*.md with YAML frontmatter -> Zod validation in content.config.ts -> queryCollection() fetches data -> useBlogPost() retrieves single post -> blog/[...slug].vue displays with SEO meta tags and structured data
+  key_relationships_to_domain:
+    - from: content.config.ts
+      to: blog collection schema
+      relationship: defines
+    - from: app/pages/blog/[...slug].vue
+      to: app/composables/useBlogData.ts
+      relationship: imports and calls
+    - from: app/composables/useBlogData.ts
+      to: @nuxt/content queryCollection
+      relationship: uses
+    - from: app/pages/blog/[...slug].vue
+      to: @nuxtjs/seo (useSeoMeta, defineOgImage, useSchemaOrg)
+      relationship: uses
+    - from: nuxt.config.ts
+      to: schema.org identity
+      relationship: configures
+
+related_technology_stack:
+  languages_used_in_domain:
+    - TypeScript
+    - Vue 3
+    - Markdown
+    - YAML
+  frameworks_used_in_domain:
+    - name: Nuxt 4
+      usage_in_domain: SSR framework with content module and SEO module
+    - name: @nuxt/content
+      usage_in_domain: File-based CMS for blog posts
+    - name: @nuxtjs/seo
+      usage_in_domain: SEO toolkit for meta tags and structured data
+    - name: nuxt-og-image
+      usage_in_domain: OG image generation from content
+  libraries_used_in_domain:
+    - name: Zod
+      purpose_in_domain: Schema validation for blog frontmatter
+    - name: Tailwind CSS
+      purpose_in_domain: Styling for blog post display
+    - name: Nuxt UI
+      purpose_in_domain: UI components (UCard, UBadge, UButton, UIcon)
+  external_apis_used_in_domain: []
+
+related_conventions:
+  naming_patterns_in_domain: |
+    - Blog post files: numbered prefix with kebab-case (e.g., 1-my-first-blog-post.md)
+    - Frontmatter fields: camelCase for custom fields (dateUpdated, socialImage, authorUrl)
+    - Image directories: /public/img/blog/{post-name}/
+    - Image files: banner.svg, banner.png, or descriptive names (typescript-light.png)
+  structure_of_domain: |
+    - Blog posts in content/blog/*.md with YAML frontmatter
+    - Schema validation in content.config.ts
+    - Composables in app/composables/useBlogData.ts for data fetching
+    - Pages in app/pages/blog/ for routing
+    - Components in app/components/ for reusable blog post previews
+    - Images in /public/img/blog/{post-name}/
+  error_handling_in_domain: |
+    - Navigate to /404 if blog post not found
+    - Fallback chains for author URL resolution
+    - Fallback chains for image resolution (socialImage -> image)
+    - Fallback for missing description (use site.description)
+    - Fallback for missing title (use site.name)
+  testing_in_domain: No testing patterns found for blog/SEO domain
+  documentation_in_domain: |
+    - README.md contains blog post creation instructions
+    - Inline comments in content.config.ts explain schema fields
+    - No dedicated SEO documentation found
+
+related_dependencies:
+  internal:
+    - component: authors collection
+      relationship_to_domain: Provides author data for blog posts
+      direction: inbound
+    - component: profile collection
+      relationship_to_domain: Provides site identity for homepage SEO
+      direction: inbound
+    - component: site configuration
+      relationship_to_domain: Provides fallback values for SEO meta tags
+      direction: inbound
+  external:
+    - name: @nuxtjs/seo
+      purpose_for_domain: Provides useSeoMeta, defineOgImage, useSchemaOrg functions
+    - name: @nuxt/content
+      purpose_for_domain: Provides queryCollection for fetching blog posts
+    - name: nuxt-og-image/content
+      purpose_for_domain: Provides asOgImageCollection for automatic OG image generation
+    - name: zod
+      purpose_for_domain: Provides schema validation for blog frontmatter
+
+domain_security_considerations: []
+  # Blog and SEO domain does not handle sensitive data, authentication, or validation
+
+testing_patterns: []
+  # No testing patterns found for blog/SEO domain
+
+open_questions:
+  - question: Are there automated tests for blog post schema validation?
+    context: content.config.ts uses Zod validation but no test files were found for verifying blog post frontmatter
+  - question: What is the OG image generation strategy when socialImage is not provided?
+    context: defineOgImage(blogPostData.value.ogImage) is called but ogImage field is not defined in the blog schema
+  - question: Are there any SEO performance monitoring or analytics integration?
+    context: No analytics or monitoring code found in the research
+  - question: How are blog post sitemaps generated for search engines?
+    context: Nitro prerender is configured but no sitemap-specific configuration found
+  - question: What is the strategy for handling blog post updates and redirects?
+    context: dateUpdated field exists but no redirect or versioning strategy documented
+
+gaps:
+  - area: OG image generation
+    description: defineOgImage is called with blogPostData.value.ogImage but this field is not defined in the blog schema
+    impact: Unclear how OG images are generated when socialImage is not provided
+  - area: Testing coverage
+    description: No test files found for blog schema validation, SEO meta tag generation, or structured data
+    impact: Unknown if SEO implementation is tested for correctness
+  - area: Sitemap generation
+    description: No sitemap configuration found despite having static site generation
+    impact: May impact search engine discoverability
+  - area: Image optimization
+    description: No evidence of automatic image optimization or format conversion despite @nuxt/image module being installed
+    impact: May affect page load performance
+  - area: SEO monitoring
+    description: No analytics or SEO performance monitoring integration found
+    impact: Cannot measure SEO effectiveness

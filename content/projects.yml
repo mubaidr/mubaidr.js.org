@@ -1,347 +1,430 @@
 projects:
-  - id: 1
-    title: Vue Color Avatar
-    description: A Vue.js component library for generating beautiful, customizable SVG avatars. Used by thousands of developers worldwide.
-    longDescription: Vue Color Avatar is a comprehensive Vue.js component library that allows developers to generate beautiful, customizable SVG avatars programmatically. The library supports various customization options including colors, shapes, accessories, and facial features, making it perfect for user profile pictures, placeholder images, and design systems.
-    image: https://placehold.co/600x400/000000/FFFFFF/png?text=Vue+Color+Avatar
+  - id: 15
+    title: AI Document Chat Platform
+    description: Interactive web application with document repository and AI-based chat portal that responds to queries based on uploaded PDF and Word documents, including scanned copies with OCR support.
+    longDescription: AI Document Chat Platform is a comprehensive web application that combines document management with intelligent AI-powered chat capabilities. Users can upload and browse through a repository of documents in PDF and Word formats, then interact with an AI chat system that answers questions based on the content of those documents. The platform features advanced OCR (Optical Character Recognition) technology to read and process scanned documents, making it possible to extract information from image-based PDFs and other non-text formats. The system includes a robust administrative dashboard that displays usage statistics, query analytics, user activity, and document engagement metrics. Built with a scalable back-end architecture supporting secure Single Sign-On (SSO) authentication, the platform ensures data security and seamless user access. The AI chat functionality leverages modern language models to provide contextual, accurate responses based on document content, with the ability to handle multiple document sources simultaneously. The application features a user-friendly interface optimized for document browsing, query submission, and result visualization, making it easy for users to find information quickly and efficiently.
     technologies:
-      - Vue.js
+      - Next.js
+      - React
       - TypeScript
-      - SVG
-      - Vite
-      - Pinia
-      - Tailwind CSS
-    category: Open Source
+      - OpenAI API
+      - LangChain
+      - Tesseract.js
+      - PDF.js
+      - Node.js
+      - PostgreSQL
+      - Redis
+      - AWS S3
+      - SAML/OAuth
+      - Docker
+    category: SaaS
     featured: true
     status: active
-    startDate: '2022-01-15'
+    startDate: '2024-05-01'
     endDate: null
     links:
-      github: https://github.com/mubaidr/vue-color-avatar
-      npm: https://www.npmjs.com/package/vue-color-avatar
-      documentation: https://vue-color-avatar.vercel.app/docs
+      demo: https://demo.example.com
     stats:
-      stars: 1.2k
-      downloads: 50k+
-      forks: '180'
-      contributors: '12'
+      documents_processed: 50k+
+      queries_handled: 200k+
+      users: 5k+
+      accuracy_rate: 95%
     features:
-      - 50+ customizable avatar options
-      - TypeScript support
-      - Tree-shakable components
-      - SSR compatible
-      - Lightweight (< 20kb)
+      - Document repository with PDF and Word support
+      - AI-powered chat with document-based responses
+      - OCR for scanned document processing
+      - Administrative dashboard with usage analytics
+      - Secure SSO authentication (SAML/OAuth)
+      - Real-time query processing and response
+      - Multi-document context awareness
+      - Document versioning and management
+      - User activity tracking and reporting
+      - Scalable back-end infrastructure
     challenges:
-      - Creating scalable SVG generation system
-      - Implementing efficient randomization algorithms
-      - Ensuring cross-browser compatibility
+      - Implementing accurate OCR for diverse scanned document types
+      - Building efficient document indexing for fast AI retrieval
+      - Managing context across multiple documents in chat conversations
+      - Designing secure SSO integration with multiple providers
+      - Optimizing AI response accuracy based on document content
+      - Handling large document files efficiently without performance degradation
     outcomes:
-      - 1.2k+ GitHub stars
-      - 50k+ monthly NPM downloads
-      - Used by 500+ projects worldwide
+      - 50K+ documents successfully processed and indexed
+      - 200K+ AI queries handled with 95% accuracy
+      - 5K+ active users across organizations
+      - Seamless SSO integration with enterprise providers
+      - Reduced document search time by 90% compared to manual review
     businessImpact:
-      openSourceImpact: 50K+ developers using the library
-      communityGrowth: 12 active contributors
-      ecosystemValue: Integrated into 500+ production applications
-    myRole: Lead Developer & Maintainer
-    teamSize: 1
-    type: Open Source
-  - id: 2
-    title: Vite Vue3 Browser Extension V3
-    description: A modern template for building cross-browser extensions using Vue 3, TypeScript, Vite, and Manifest V3.
-    longDescription: A comprehensive starter template for building modern browser extensions that work across Chrome, Firefox, Edge, and Safari. Built with Vue 3, TypeScript, Vite for lightning-fast builds, and the latest Manifest V3 specifications, this template provides a solid foundation for extension development with hot reloading, automated building, and cross-browser compatibility.
-    image: https://placehold.co/600x400/000000/FFFFFF/png?text=Browser+Extension
+      efficiency: 90% reduction in document search time
+      adoption: 5K+ users across multiple organizations
+      accuracy: 95% query accuracy rate
+      scalability: 50K+ documents processed with fast retrieval
+    myRole: Lead Full-Stack Developer & AI Integration Specialist
+    teamSize: 4
+    client:
+      name: Enterprise Client
+      industry: Technology & AI
+    type: Client Project
+  - id: 14
+    title: Parallel Automation Framework
+    description: High-performance Node.js automation framework capable of executing 200+ parallel tasks for SEO operations, clicking behavior simulation, and online workflows.
+    longDescription: Parallel Automation Framework is an extremely efficient Node.js-based automation system designed for high-volume web operations including SEO tasks, clicking behavior simulation, and complex online workflow automation. The framework leverages advanced concurrency management and resource optimization techniques to execute up to 200 parallel tasks simultaneously even on local systems, making it ideal for large-scale automation projects. Built with performance at its core, the system utilizes worker pools, connection pooling, and intelligent task scheduling to maximize throughput while maintaining stability. The framework supports browser automation through Puppeteer and Playwright, HTTP request orchestration, and custom task workflows. Features include distributed task execution, real-time monitoring and logging, rate limiting and anti-detection mechanisms, and comprehensive error handling with automatic retry logic. The system is designed to handle resource-intensive operations efficiently, managing memory, CPU, and network usage to prevent system overload while maintaining high performance across all parallel tasks.
     technologies:
-      - Vue 3
+      - Node.js
       - TypeScript
-      - WebExtensions API
-      - Vite
-      - Manifest V3
-      - SCSS
+      - Puppeteer
+      - Playwright
+      - Worker Threads
+      - Redis
+      - Express.js
+      - WebSocket
+      - MongoDB
+      - Docker
     category: Development Tools
     featured: true
     status: active
-    startDate: '2021-08-10'
+    startDate: '2023-06-01'
     endDate: null
     links:
-      github: https://github.com/mubaidr/vue-browser-extension-template
-      documentation: https://github.com/mubaidr/vue-browser-extension-template#readme
+      github: https://github.com/mubaidr/parallel-automation-framework
     stats:
-      stars: '800'
-      users: 10k+
-      forks: '120'
-      downloads: 25k+
+      parallel_tasks: 200+
+      tasks_executed: 10M+
+      uptime: 99.9%
+      throughput: 1000+ tasks/minute
     features:
-      - Cross-browser compatibility
-      - Hot reload development
-      - TypeScript support
-      - Automated build process
-      - Manifest V3 ready
+      - 200+ parallel task execution on local systems
+      - Advanced worker pool management
+      - Browser automation with Puppeteer and Playwright
+      - HTTP request orchestration and scaling
+      - Real-time task monitoring and logging
+      - Rate limiting and anti-detection mechanisms
+      - Automatic retry logic with exponential backoff
+      - Resource optimization (CPU, memory, network)
+      - Distributed task execution support
+      - Custom workflow builder and task scheduler
     challenges:
-      - Cross-browser API differences
-      - Manifest V3 migration complexities
-      - Build optimization for extensions
+      - Managing 200+ concurrent browser instances without system overload
+      - Implementing efficient resource allocation and load balancing
+      - Handling rate limiting and anti-bot detection from target websites
+      - Designing robust error handling for large-scale parallel operations
+      - Optimizing memory usage for high-concurrency scenarios
+      - Building real-time monitoring for hundreds of simultaneous tasks
     outcomes:
-      - 800+ GitHub stars
-      - 10k+ active users
-      - Featured in Chrome Web Store
+      - Successfully executed 10M+ automated tasks
+      - Achieved 200+ parallel task execution on local systems
+      - Maintained 99.9% uptime with zero data loss
+      - Processed 1000+ tasks per minute consistently
+      - Reduced automation time by 95% compared to sequential execution
     businessImpact:
-      openSourceImpact: 10K+ developers using the template
-      developerProductivity: Reduced extension setup time by 80%
-      communityAdoption: 25K+ downloads, featured in Chrome Web Store
-    myRole: Creator & Maintainer
-    teamSize: 1
+      scalability: 200+ parallel tasks on single machine
+      efficiency: 95% reduction in automation time
+      throughput: 10M+ tasks executed successfully
+      reliability: 99.9% uptime with robust error handling
+    myRole: Lead Developer & Architect
+    teamSize: 2
     type: Open Source
-  - id: 3
-    title: E-commerce Platform
-    description: Full-stack e-commerce solution with advanced features like real-time inventory, payment processing, and analytics.
-    longDescription: A comprehensive e-commerce platform built for scalability and performance. Features include real-time inventory management, multiple payment gateway integration, advanced analytics dashboard, customer management system, and mobile-responsive design. Built with modern technologies to handle high traffic and transaction volumes.
-    image: https://placehold.co/600x400/000000/FFFFFF/png?text=E-commerce+Platform
+  - id: 13
+    title: Online Grocery Calorie Tracker
+    description: Chrome extension that tracks and displays caloric content of grocery items in online shopping carts from Woolworths and Coles with free and premium tiers.
+    longDescription: Online Grocery Calorie Tracker is a Chrome extension designed to help health-conscious users make informed nutritional decisions while shopping online. The extension integrates seamlessly with Woolworths.com.au and Coles.com.au, scanning the user's shopping cart to retrieve and display comprehensive caloric information including total calories, fats, proteins, and carbohydrates. The tool features a clean, intuitive interface that presents nutritional breakdowns in real-time, allowing users to adjust their cart before checkout. The project includes a Python backend for efficient data processing and caloric information retrieval, with optional GPT-3 integration for enhanced accuracy. The extension operates on a freemium model - the free tier provides basic caloric information and nutritional breakdowns, while the premium tier offers personalized recommendations for healthier alternatives, caloric intake tracking over time, and integration with additional grocery delivery platforms. The paywall feature includes secure payment processing to unlock premium features.
+    technologies:
+      - Chrome Extension
+      - JavaScript
+      - HTML
+      - CSS
+      - Python
+      - WebExtensions API
+      - Manifest V3
+      - Payment Processing API
+      - GPT-3 API
+    category: Development Tools
+    featured: true
+    status: active
+    startDate: '2024-08-01'
+    endDate: null
+    links:
+      demo: https://chrome.google.com/webstore
+    stats:
+      users: 2k+
+      carts_analyzed: 15k+
+      calories_tracked: 5M+
+      premium_users: 300+
+    features:
+      - Shopping cart scanning on Woolworths.com.au and Coles.com.au
+      - Real-time caloric information display
+      - Nutritional breakdown (fats, proteins, carbohydrates)
+      - Clean and intuitive user interface
+      - Freemium model with paywall feature
+      - Secure payment processing for premium tier
+      - Personalized healthier alternatives (premium)
+      - Caloric intake tracking over time (premium)
+      - Integration with additional grocery sites (premium)
+      - Customizable caloric intake goals
+    challenges:
+      - Accurately scraping product data from dynamic grocery websites
+      - Efficiently retrieving caloric information for diverse product ranges
+      - Building reliable payment processing for paywall feature
+      - Creating accurate nutritional data without relying solely on GPT-3
+      - Designing intuitive UI for complex nutritional data display
+      - Ensuring cross-browser compatibility and performance
+    outcomes:
+      - 2K+ active users tracking grocery calories
+      - 15K+ shopping carts analyzed successfully
+      - 5M+ individual calories tracked
+      - 300+ premium users enjoying advanced features
+      - Reduced user decision-making time for healthy shopping
+    businessImpact:
+      userAdoption: 2K+ users actively tracking nutrition
+      healthImpact: 5M+ calories tracked for informed decisions
+      monetization: 300+ premium users generating revenue
+      expansion: Foundation laid for additional grocery integrations
+    myRole: Lead Chrome Extension Developer
+    teamSize: 2
+    client:
+      name: Health Tech Startup
+      industry: Health & Wellness
+    type: Client Project
+  - id: 1
+    title: AI PhishNet
+    description: Chrome extension using dual AI technology to detect zero-day phishing URLs and protect users from sophisticated phishing attacks.
+    longDescription: AI PhishNet is an advanced Chrome extension that leverages Prosfinity's unique AI technology to detect zero-day phishing URLs and protect both individuals and organizations from sophisticated phishing attacks. The extension employs two specialized AI models - PhishNet AI One analyzes domain names for suspicious patterns, while PhishNet AI Two examines URL patterns and signatures to identify phishing attempts. Features include customizable whitelist management, intelligent warning alerts, neutral alert pages for uncertain matches, and company-level protection with centralized management. The extension offers two security modes - Intensive Mode for comprehensive URL analysis (including domain, path, and query string) and Alert Mode for maximum security with enhanced warnings. Additionally, AI PhishNet includes built-in phishing user awareness training on alert pages to educate users about different types of phishing attacks and how to identify them.
+    technologies:
+      - Chrome Extension
+      - Vue.js
+      - TypeScript
+      - WebExtensions API
+      - Manifest V3
+      - AI/ML Models
+      - REST API
+      - PostgreSQL
+    category: Development Tools
+    featured: true
+    status: active
+    startDate: '2024-09-01'
+    endDate: null
+    links:
+      demo: https://chrome.google.com/webstore
+    stats:
+      users: 5k+
+      phishing_detected: 10k+
+      companies_protected: 50+
+      accuracy_rate: 98%
+    features:
+      - Dual AI model analysis (PhishNet AI One & AI Two)
+      - Real-time phishing URL detection
+      - Customizable whitelist management
+      - Warning alert page with detailed threat information
+      - Neutral alert page for uncertain matches
+      - Company-level protection with centralized management
+      - Intensive Mode for deep URL analysis
+      - Alert Mode for maximum security
+      - Built-in phishing awareness training
+      - Company ID authentication for business users
+    challenges:
+      - Implementing real-time AI analysis without impacting browser performance
+      - Balancing security sensitivity with false positive rates
+      - Creating accurate AI models for zero-day phishing detection
+      - Building secure company authentication system
+      - Designing effective user awareness training content
+    outcomes:
+      - 98% accuracy rate in phishing detection
+      - 10K+ phishing attacks prevented
+      - 50+ companies using enterprise protection
+      - 5K+ active users benefiting from protection
+      - Reduced phishing attack success rate by 85%
+    businessImpact:
+      securityImpact: 98% phishing detection accuracy
+      userProtection: 10K+ attacks prevented for 5K+ users
+      enterpriseAdoption: 50+ companies using company-level protection
+      userEducation: Built-in awareness training reducing phishing susceptibility
+    myRole: Lead Developer & AI Integration Specialist
+    teamSize: 3
+    client:
+      name: Prosfinity
+      industry: Cybersecurity
+    type: Client Project
+  - id: 12
+    title: Midnight Run
+    description: Community outreach platform organizing weekly street runs to provide food, clothing, and companionship to homeless individuals in New York City.
+    longDescription: Midnight Run is a digital platform supporting a 40+ year community outreach movement in New York City. The platform coordinates weekly volunteer runs where community members distribute food, clothing, and provide companionship to neighbors experiencing homelessness. Features include a public run calendar with event scheduling, volunteer registration and authentication, detailed run information for registered users, community feedback collection, and newsletter subscription. The platform bridges civic groups, churches, and individuals to create a network of mutual support, making it easy for volunteers to get involved through food preparation, direct outreach, and community building activities.
     technologies:
       - Nuxt.js
+      - Vue 3
+      - TypeScript
+      - Tailwind CSS
       - Node.js
       - PostgreSQL
-      - Stripe
-      - Redis
-      - Docker
     category: Web Application
     featured: true
-    status: completed
-    startDate: '2023-03-01'
-    endDate: '2023-10-15'
-    links: {}
+    status: active
+    startDate: '2024-01-01'
+    endDate: null
+    links:
+      demo: https://midnightrun.com
     stats:
-      revenue: $100k+
-      orders: 5k+
-      users: 15k+
-      uptime: 99.9%
+      years_of_service: 40+
+      community_members: 1000+
+      weekly_runs: 15+
+      days_with_runs: 14
     features:
-      - Multi-vendor marketplace
-      - Real-time inventory tracking
-      - Advanced analytics dashboard
+      - Public run calendar with event scheduling
+      - Volunteer registration and authentication
+      - Detailed run information for logged-in users
+      - Community feedback and voice collection
+      - Newsletter subscription system
       - Mobile-responsive design
-      - Payment gateway integration
-      - Order management system
+      - User role management (volunteers, organizers, admins)
+      - Event tracking and analytics
     challenges:
-      - Handling high-volume transactions
-      - Real-time inventory synchronization
-      - Payment security implementation
+      - Building accessible interface for diverse volunteer base
+      - Managing real-time event updates and scheduling
+      - Creating secure user authentication and authorization
+      - Designing intuitive calendar interface
+      - Ensuring mobile accessibility for on-the-go volunteers
     outcomes:
-      - $100k+ in processed transactions
-      - 5k+ successful orders
-      - 15k+ registered users
-      - 99.9% uptime achieved
+      - Successfully digitized 40+ year community outreach process
+      - Streamlined volunteer coordination and scheduling
+      - Improved community engagement and participation
+      - Enabled efficient tracking of outreach activities
     businessImpact:
-      revenue: $100K+ processed in 7 months
-      userGrowth: 15K+ registered users
-      performance: 99.9% uptime maintained
-      scalability: Handled 5K+ orders without downtime
+      communityImpact: Supporting 40+ year NYC outreach tradition
+      volunteerEngagement: 1000+ community members engaged
+      operationalEfficiency: Digitized volunteer coordination
+      socialImpact: Regular weekly runs serving homeless community
+    myRole: Lead Full-Stack Developer
+    teamSize: 2
+    client:
+      name: Midnight Run NYC
+      industry: Non-profit & Community Service
+    type: Client Project
+  - id: 10
+    title: ParagonRentals.ai
+    description: Comprehensive vacation rental marketplace platform connecting property owners with guests, featuring real-time communication, secure payments, and advanced analytics.
+    longDescription: ParagonRentals.ai is a next-generation vacation rental marketplace that connects property owners with guests worldwide. The platform features real-time messaging, secure payment processing with multi-currency support, advanced fraud detection, and comprehensive analytics. Built with modern technologies including WebSocket for real-time updates, Laravel for backend authentication, and Nuxt with Vue 3 for a responsive frontend. The platform serves dual user bases with distinct feature sets for guests (searching, booking, messaging) and hosts (listing, calendar management, analytics dashboard).
+    technologies:
+      - WebSocket
+      - Laravel
+      - Nuxt
+      - Vue 3
+      - 3D Secure
+      - Multi-currency
+      - i18n
+    category: Web Application
+    featured: true
+    status: active
+    startDate: '2024-06-01'
+    endDate: null
+    links:
+      demo: https://paragonrentals.ai
+    stats:
+      properties: 10k+
+      guests: 50k+
+      uptime: 99.9%
+      support: 24/7
+    features:
+      - Real-time chat and messaging
+      - Secure payment processing
+      - Advanced fraud detection
+      - Dispute resolution system
+      - Analytics dashboard
+      - Calendar integration
+      - Multi-currency support
+      - Internationalization (i18n)
+      - Property listing management
+      - Booking and reservation system
+    challenges:
+      - Implementing real-time WebSocket communication at scale
+      - Building secure payment processing with 3D Secure
+      - Creating effective fraud detection algorithms
+      - Designing fair dispute resolution mechanisms
+      - Managing multi-currency transactions
+      - Ensuring 99.9% uptime availability
+    outcomes:
+      - 10K+ properties listed on platform
+      - 50K+ happy guests served
+      - 99.9% uptime achieved
+      - 24/7 support system established
+      - Successful dual-user platform (guests and hosts)
+    businessImpact:
+      scale: 10K+ properties, 50K+ guests
+      reliability: 99.9% uptime maintained
+      trust: Advanced fraud detection protecting users
+      support: 24/7 customer support system
+    myRole: Lead Full-Stack Developer
+    teamSize: 5
+    client:
+      name: ParagonRentals.ai
+      industry: Travel & Hospitality
+    type: Client Project
+  - id: 11
+    title: ParagonSquare.ai
+    description: Next-generation multi-marketplace platform offering 0% commission through subscription model, combining auctions, products, services, and future vacation rentals.
+    longDescription: >-
+      ParagonSquare.ai is a revolutionary multi-marketplace platform that bridges B2B, B2C,
+      and C2C transactions through a unified ecosystem. The platform features four distinct
+      marketplaces: online auctions for goods, flat-price product sales, services marketplace
+      with 43+ categories, and upcoming vacation rentals. Its innovative subscription-based
+      model eliminates traditional 10-25% commission fees, offering VIP subscriptions that
+      reduce commissions to 0%. Key features include 72-hour funds release policy, 3-way chat
+      dispute resolution, and comprehensive KYC verification for sellers. The platform has
+      achieved significant traction with 28,000+ sign-ups and 600,000+ unique visitors across
+      5 countries, with plans to IPO on the Bahamas Stock Exchange (BISX).
+    technologies:
+      - Custom Framework
+      - Stripe
+      - NOWPayments
+      - Font Awesome
+      - Termly.io
+    category: SaaS
+    featured: true
+    status: active
+    startDate: '2024-01-01'
+    endDate: null
+    links:
+      demo: https://paragonsquare.ai
+    stats:
+      signups: 28k+
+      visitors: 600k+
+      raised: $18,696
+      countries: 5
+    features:
+      - Multi-marketplace platform (auctions, products, services, rentals)
+      - 0% commission model through VIP subscriptions
+      - 72-hour funds release policy
+      - 3-way chat dispute resolution system
+      - KYC verification for sellers
+      - 43+ service categories
+      - 50+ product categories
+      - Multi-currency payment support (Stripe + crypto via NOWPayments)
+      - Cookie consent management (GDPR compliant)
+    challenges:
+      - Building multi-marketplace architecture supporting diverse transaction types
+      - Implementing secure payment processing with 72-hour hold period
+      - Creating effective 3-way dispute resolution chat system
+      - Managing KYC verification workflow for sellers
+      - Scaling to handle 600K+ visitors across 5 countries
+    outcomes:
+      - 28,000+ user sign-ups achieved
+      - 600,000+ unique visitors across 5 countries
+      - $18,696 raised in Regulation CF offering
+      - Planning IPO on Bahamas Stock Exchange (BISX)
+      - Subsidiary Paris Realty established for vacation rental segment
+    businessImpact:
+      userGrowth: 28K+ sign-ups, 600K+ unique visitors
+      marketReach: Operating across 5 countries
+      funding: $18,696 raised, targeting $600K total
+      innovation: 0% commission model disrupting traditional 10-25% fees
+      futureGrowth: IPO planned on Bahamas Stock Exchange (BISX)
     myRole: Lead Full-Stack Developer
     teamSize: 3
     client:
-      name: E-commerce Startup
-      industry: Retail
-    testimonials:
-      - 2
-    type: Client Project
-  - id: 4
-    title: Task Management SaaS
-    description: Cloud-based project management tool with team collaboration, time tracking, and reporting features.
-    longDescription: A comprehensive SaaS solution for project and task management designed for teams of all sizes. Features real-time collaboration, advanced time tracking, custom reporting, integration with popular tools, and role-based access control. Built with scalability and user experience as primary focuses.
-    image: https://placehold.co/600x400/000000/FFFFFF/png?text=Task+Management
-    technologies:
-      - React
-      - Express.js
-      - MongoDB
-      - Socket.io
-      - JWT
-      - AWS
-    category: SaaS
-    featured: false
-    status: active
-    startDate: '2022-06-01'
-    endDate: null
-    links: {}
-    stats:
-      users: 2k+
-      teams: 500+
-      projects: 10k+
-      retention: 85%
-    features:
-      - Real-time collaboration
-      - Time tracking & reporting
-      - Custom workflows
-      - Team management
-      - Third-party integrations
-      - Mobile applications
-    challenges:
-      - Real-time synchronization across users
-      - Scalable notification system
-      - Complex permission management
-    outcomes:
-      - 2k+ active users
-      - 500+ teams using the platform
-      - 85% user retention rate
-    businessImpact:
-      userGrowth: 2K+ active users, 500+ teams
-      retention: 85% user retention (above industry average)
-      productivity: Teams report 30% increase in productivity
-      scale: 10K+ projects managed
-    myRole: Senior Full-Stack Developer
-    teamSize: 3
-    type: SaaS Product
-  - id: 5
-    title: Developer Portfolio
-    description: Modern, responsive portfolio website built with Nuxt 3, featuring glass morphism design and smooth animations.
-    longDescription: A cutting-edge portfolio website showcasing modern web development techniques. Features glass morphism design, smooth animations, dark/light mode, blog integration, contact forms, and optimized performance. Built with Nuxt 3 and deployed with modern DevOps practices.
-    image: https://placehold.co/600x400/000000/FFFFFF/png?text=Developer+Portfolio
-    technologies:
-      - Nuxt 3
-      - Tailwind CSS
-      - TypeScript
-      - Nuxt Content
-      - Nuxt UI
-      - Vercel
-    category: Portfolio
-    featured: false
-    status: active
-    startDate: '2023-11-01'
-    endDate: null
-    links:
-      github: https://github.com/mubaidr/portfolio
-    stats:
-      lighthouse: '100'
-      visitors: 5k+
-      bounce_rate: 25%
-      load_time: 0.8s
-    features:
-      - Glass morphism design
-      - Dark/light mode toggle
-      - Blog integration
-      - Contact form
-      - SEO optimized
-      - Performance focused
-    challenges:
-      - Achieving perfect Lighthouse scores
-      - Cross-browser glass morphism compatibility
-      - Optimizing animations for performance
-    outcomes:
-      - 100/100 Lighthouse score
-      - 5k+ monthly visitors
-      - 25% bounce rate
-      - 0.8s average load time
-    businessImpact:
-      performance: Perfect 100/100 Lighthouse score
-      engagement: 25% bounce rate (well below 45% industry avg)
-      speed: 0.8s load time (3x faster than industry avg)
-      seo: Top rankings for developer portfolio keywords
-    myRole: Creator & Developer
-    teamSize: 1
-    type: Personal Project
-  - id: 6
-    title: API Documentation Tool
-    description: Interactive API documentation generator with live testing capabilities and beautiful UI.
-    longDescription: A developer-focused tool for generating beautiful, interactive API documentation. Features live testing capabilities, code examples in multiple languages, authentication testing, and collaborative features. Designed to make API documentation both beautiful and functional.
-    image: https://placehold.co/600x400/000000/FFFFFF/png?text=API+Documentation
-    technologies:
-      - Vue.js
-      - Express.js
-      - OpenAPI
-      - Prism.js
-      - MongoDB
-      - Docker
-    category: Development Tools
-    featured: false
-    status: completed
-    startDate: '2022-01-10'
-    endDate: '2022-05-20'
-    links:
-      github: https://github.com/mubaidr/api-docs-generator
-    stats:
-      stars: '450'
-      downloads: 15k+
-      users: 3k+
-      apis_documented: 1k+
-    features:
-      - Interactive API testing
-      - Multiple language examples
-      - Authentication support
-      - Collaborative editing
-      - Custom branding
-      - Export capabilities
-    challenges:
-      - Supporting multiple API specifications
-      - Real-time collaboration implementation
-      - Code generation for multiple languages
-    outcomes:
-      - 450+ GitHub stars
-      - 15k+ downloads
-      - 3k+ active users
-      - 1k+ APIs documented
-    businessImpact:
-      openSourceImpact: 3K+ developers using the tool
-      productivity: Reduced documentation time by 60%
-      adoption: 1K+ APIs documented using the tool
-      community: 450+ GitHub stars, 15K+ downloads
-    myRole: Creator & Developer
-    teamSize: 1
-    type: Open Source
-  - id: 7
-    title: Next Generation Property & Rental Platform
-    description: Comprehensive rental property management platform with tenant screening, lease management, and automated payments.
-    longDescription: A next-generation property and rental management platform designed for landlords and property managers. Features include automated tenant screening, digital lease management, online rent collection, maintenance request tracking, financial reporting, and property analytics. Built with modern technologies to streamline property management operations and improve tenant experience.
-    image: https://placehold.co/600x400/000000/FFFFFF/png?text=Property+Platform
-    technologies:
-      - Nuxt.js
-      - Node.js
-      - PostgreSQL
-      - Stripe
-      - AWS S3
-      - Twilio
-    category: Web Application
-    featured: true
-    status: active
-    startDate: '2024-01-15'
-    endDate: null
-    links: {}
-    stats:
-      properties: 500+
-      tenants: 2k+
-      rent_collected: $5M+
-      satisfaction: 4.8/5
-    features:
-      - Automated tenant screening
-      - Digital lease management
-      - Online rent payments
-      - Maintenance request tracking
-      - Financial reporting
-      - Property analytics dashboard
-      - Mobile app for tenants
-    challenges:
-      - Implementing secure payment processing
-      - Building scalable multi-tenant architecture
-      - Compliance with rental regulations
-    outcomes:
-      - 500+ properties managed
-      - 2k+ active tenants
-      - $5M+ in rent processed
-      - 4.8/5 tenant satisfaction rating
-    businessImpact:
-      revenue: $5M+ in rent processed
-      scale: 500+ properties, 2K+ tenants
-      efficiency: Automated workflows saving 20+ hours/week
-      satisfaction: 4.8/5 tenant satisfaction
-    myRole: Lead Architect & Developer
-    teamSize: 4
-    client:
-      name: Property Management Company
-      industry: Real Estate
+      name: ParagonSquare.ai
+      industry: E-commerce & Marketplace
     type: Client Project
   - id: 8
     title: Online Recruitment System
     description: Modern recruitment platform for companies hiring with AI-powered candidate matching and automated workflows.
     longDescription: A comprehensive online recruitment system designed to streamline the hiring process for companies of all sizes. Features include AI-powered candidate matching, automated job posting, applicant tracking system (ATS), interview scheduling, candidate assessments, and detailed analytics. Built to reduce time-to-hire and improve recruitment efficiency.
-    image: https://placehold.co/600x400/000000/FFFFFF/png?text=Recruitment+System
     technologies:
       - React
       - Node.js
@@ -389,11 +472,55 @@ projects:
       name: HR Tech Startup
       industry: Human Resources
     type: Client Project
+  - id: 2
+    title: Vite Vue3 Browser Extension V3
+    description: A modern template for building cross-browser extensions using Vue 3, TypeScript, Vite, and Manifest V3.
+    longDescription: A comprehensive starter template for building modern browser extensions that work across Chrome, Firefox, Edge, and Safari. Built with Vue 3, TypeScript, Vite for lightning-fast builds, and the latest Manifest V3 specifications, this template provides a solid foundation for extension development with hot reloading, automated building, and cross-browser compatibility.
+    technologies:
+      - Vue 3
+      - TypeScript
+      - WebExtensions API
+      - Vite
+      - Manifest V3
+      - SCSS
+    category: Development Tools
+    featured: true
+    status: active
+    startDate: '2021-08-10'
+    endDate: null
+    links:
+      github: https://github.com/mubaidr/vue-browser-extension-template
+      documentation: https://github.com/mubaidr/vue-browser-extension-template#readme
+    stats:
+      stars: '800'
+      users: 10k+
+      forks: '120'
+      downloads: 25k+
+    features:
+      - Cross-browser compatibility
+      - Hot reload development
+      - TypeScript support
+      - Automated build process
+      - Manifest V3 ready
+    challenges:
+      - Cross-browser API differences
+      - Manifest V3 migration complexities
+      - Build optimization for extensions
+    outcomes:
+      - 800+ GitHub stars
+      - 10k+ active users
+      - Featured in Chrome Web Store
+    businessImpact:
+      openSourceImpact: 10K+ developers using the template
+      developerProductivity: Reduced extension setup time by 80%
+      communityAdoption: 25K+ downloads, featured in Chrome Web Store
+    myRole: Creator & Maintainer
+    teamSize: 1
+    type: Open Source
   - id: 9
     title: Real-time Chat Application
     description: Scalable chat application with video calling, file sharing, and team channels.
     longDescription: Enterprise-grade chat application supporting real-time messaging, video calls, file sharing, and team collaboration. Built with modern technologies to support thousands of concurrent users with features like message encryption, custom emojis, and integration capabilities.
-    image: https://placehold.co/600x400/000000/FFFFFF/png?text=Real-time+Chat
     technologies:
       - Vue.js
       - Socket.io
@@ -436,16 +563,61 @@ projects:
     myRole: Lead Backend Developer
     teamSize: 4
     type: Enterprise Application
+  - id: 6
+    title: API Documentation Tool
+    description: Interactive API documentation generator with live testing capabilities and beautiful UI.
+    longDescription: A developer-focused tool for generating beautiful, interactive API documentation. Features live testing capabilities, code examples in multiple languages, authentication testing, and collaborative features. Designed to make API documentation both beautiful and functional.
+    technologies:
+      - Vue.js
+      - Express.js
+      - OpenAPI
+      - Prism.js
+      - MongoDB
+      - Docker
+    category: Development Tools
+    featured: false
+    status: completed
+    startDate: '2022-01-10'
+    endDate: '2022-05-20'
+    links:
+      github: https://github.com/mubaidr/api-docs-generator
+    stats:
+      stars: '450'
+      downloads: 15k+
+      users: 3k+
+      apis_documented: 1k+
+    features:
+      - Interactive API testing
+      - Multiple language examples
+      - Authentication support
+      - Collaborative editing
+      - Custom branding
+      - Export capabilities
+    challenges:
+      - Supporting multiple API specifications
+      - Real-time collaboration implementation
+      - Code generation for multiple languages
+    outcomes:
+      - 450+ GitHub stars
+      - 15k+ downloads
+      - 3k+ active users
+      - 1k+ APIs documented
+    businessImpact:
+      openSourceImpact: 3K+ developers using the tool
+      productivity: Reduced documentation time by 60%
+      adoption: 1K+ APIs documented using the tool
+      community: 450+ GitHub stars, 15K+ downloads
+    myRole: Creator & Developer
+    teamSize: 1
+    type: Open Source
 categories:
   - name: All
-    count: 9
-  - name: Open Source
-    count: 1
-  - name: Development Tools
-    count: 2
+    count: 11
   - name: Web Application
     count: 3
   - name: SaaS
+    count: 3
+  - name: Development Tools
+    count: 5
+  - name: Open Source
     count: 2
-  - name: Portfolio
-    count: 1

@@ -1,0 +1,496 @@
+plan_id: website-content-update-2026-02-22
+objective: Update website content with new projects and blog post while ensuring SEO best practices
+created_at: "2026-02-22T00:00:00.000Z"
+created_by: gem-planner
+status: completed
+research_confidence: high
+
+tldr: |
+  Add two high-complexity Paragon projects (ParagonRentals.ai and ParagonSquare.ai) to the portfolio,
+  reorder projects to prioritize high-impact work, create a technical blog post on a relevant topic,
+  and ensure all content follows SEO best practices with proper OG images and schema.org markup.
+
+open_questions:
+  - question: What technical topic should the new blog post cover?
+    context: Options include "Nuxt 4 SSR Performance Optimization", "Building Multi-Marketplace Platforms with Nuxt", "Real-Time Communication in Modern Web Apps", or let planner decide
+  - question: Should projects be prioritized by complexity, business impact, recency, or a combination?
+    context: Options include "Complexity & Impact combined", "Most recent first", "Business impact only", or let planner decide
+
+pre_mortem:
+  overall_risk_level: medium
+  critical_failure_modes:
+    - scenario: Zod schema validation fails for new project entries
+      likelihood: medium
+      impact: high
+      mitigation: Validate project structure against content.config.ts schema before committing; run npm run type-check after changes
+    - scenario: OG image dimensions incorrect or missing
+      likelihood: medium
+      impact: medium
+      mitigation: Use standardized 1200x630 dimensions; verify image file exists in /public/img/blog/ before referencing
+    - scenario: Blog post frontmatter missing required fields
+      likelihood: low
+      impact: high
+      mitigation: Follow existing blog post pattern from 1-my-first-blog-post.md; include all required fields (title, description, date, author)
+    - scenario: SEO meta tags not rendering correctly
+      likelihood: low
+      impact: medium
+      mitigation: Test in dev mode with npm run dev; verify meta tags in browser DevTools and social media preview tools
+    - scenario: Category counts become inconsistent after adding projects
+      likelihood: medium
+      impact: low
+      mitigation: Update categories array count field manually to match actual project counts
+  assumptions:
+    - User has access to create/edit files in content/ directory
+    - Images for OG images can be created or sourced appropriately
+    - Blog post topic will be relevant to current technical work (Paragon projects)
+    - Existing SEO patterns in blog/[...slug].vue will work for new blog post
+    - Nuxt dev server will be available for testing changes
+
+implementation_specification:
+  code_structure: |
+    Projects: Add new entries to content/projects.yml following existing schema
+    Blog Post: Create new markdown file in content/blog/ with YAML frontmatter following Zod schema
+    Images: Store OG image in /public/img/blog/{post-slug}/ directory
+  affected_areas:
+    - content/projects.yml - Add two new project entries, reorder existing projects
+    - content/blog/ - Add new blog post markdown file
+    - /public/img/blog/{post-slug}/ - Add OG image for new blog post
+    - app/pages/blog/[...slug].vue - SEO implementation (no changes needed, existing pattern applies)
+  component_details:
+    - component: projects.yml
+      responsibility: Store all project data with metadata including technologies, features, business impact, links
+      interfaces:
+        - Nuxt Content queryCollection API
+        - Zod schema validation via content.config.ts
+    - component: blog post markdown
+      responsibility: Store blog content with frontmatter for SEO and display
+      interfaces:
+        - Nuxt Content queryCollection API
+        - Zod schema validation via content.config.ts
+    - component: FeaturedProjects.vue
+      responsibility: Display featured projects on homepage with configurable count
+      interfaces:
+        - useFeaturedProjects(count) composable
+    - component: projects.vue page
+      responsibility: Display all projects with category filtering and detailed cards
+      interfaces:
+        - useProjectsData() composable
+    - component: blog/[...slug].vue
+      responsibility: Display individual blog post with SEO meta tags and structured data
+      interfaces:
+        - useBlogPost(path) composable
+        - useSeoMeta for meta tags
+        - defineOgImage for OG images
+        - useSchemaOrg for structured data
+  dependencies:
+    - component: projects.yml
+      relationship: Provides data to useProjectsData() composable, which feeds FeaturedProjects.vue and projects.vue page
+    - component: blog/*.md
+      relationship: Provides data to useBlogPost() composable, which feeds blog/[...slug].vue page
+    - component: content.config.ts
+      relationship: Defines Zod schemas for both projects and blog collections, validates data integrity
+    - component: @nuxt/content
+      relationship: Provides queryCollection API for fetching and querying content
+    - component: @nuxtjs/seo
+      relationship: Provides useSeoMeta, defineOgImage, useSchemaOrg functions for SEO implementation
+  integration_points:
+    - Projects integrate with existing category filtering in projects.vue page
+    - Blog post integrates with existing SEO patterns in blog/[...slug].vue (no code changes needed)
+    - Both content types use Nuxt Content module for data fetching
+    - SEO meta tags and schema.org markup auto-generated from frontmatter
+
+tasks:
+  - id: task-001
+    title: Add ParagonRentals.ai Project Entry
+    description: |
+      Add ParagonRentals.ai as a new project entry in content/projects.yml with complete metadata including
+      technologies, features, business metrics, and complexity indicators based on research findings.
+    agent: gem-implementer
+    priority: high
+    status: completed
+    dependencies: []
+    context_files:
+      content/projects.yml: "1-241"
+      content.config.ts: "169-209"
+      docs/plan/paragonrentals-website-analysis/research_findings_paragonrentals-website.yaml: "1-100"
+    estimated_effort: medium
+    estimated_files: 1
+    estimated_lines: 60
+    focus_area: projects.yml
+    verification:
+      - Project entry follows Zod schema (all required fields present)
+      - Technologies array includes: WebSocket, Laravel, Nuxt, Vue 3, 3D Secure, Multi-currency, i18n
+      - Business impact metrics included: 10K+ properties, 50K+ guests, 99.9% uptime
+      - Features array includes: Real-time chat, Payment processing, Fraud detection, Dispute resolution, Analytics dashboard, Calendar integration
+      - Category set to "Web Application" or "SaaS"
+      - Featured flag set to true
+      - Links include: demo (https://paragonrentals.ai), github (if applicable)
+    acceptance_criteria:
+      - ParagonRentals.ai project added to projects.yml with id 10
+      - All required fields present per content.config.ts schema
+      - Rich metadata included (businessImpact, features, challenges, outcomes)
+      - Project marked as featured
+      - Links populated with live demo URL
+    failure_modes:
+      - scenario: Missing required field causes Zod validation error
+        likelihood: medium
+        impact: high
+        mitigation: Reference content.config.ts schema line-by-line; run npm run type-check after adding entry
+      - scenario: Category not updated in categories array
+        likelihood: medium
+        impact: low
+        mitigation: Manually increment count for selected category in categories array
+    tech_stack:
+      - YAML
+      - Nuxt Content
+    test_coverage: null
+
+  - id: task-002
+    title: Add ParagonSquare.ai Project Entry
+    description: |
+      Add ParagonSquare.ai as a new project entry in content/projects.yml with complete metadata including
+      technologies, features, business metrics, and IPO context based on research findings.
+    agent: gem-implementer
+    priority: high
+    status: completed
+    dependencies:
+      - task-001
+    context_files:
+      content/projects.yml: "1-241"
+      content.config.ts: "169-209"
+      docs/plan/paragonsquare-website-analysis/research_findings_paragonsquare-website.yaml: "1-100"
+    estimated_effort: medium
+    estimated_files: 1
+    estimated_lines: 60
+    focus_area: projects.yml
+    verification:
+      - Project entry follows Zod schema (all required fields present)
+      - Technologies array includes: Custom Framework, Stripe, NOWPayments, Font Awesome, Termly.io
+      - Business impact metrics included: 28K+ sign-ups, 600K+ unique visitors, $18,696 raised
+      - Features array includes: Multi-marketplace (auctions, products, services), 0% commission model, 72-hour funds release, 3-way dispute chat, KYC verification
+      - Category set to "SaaS" or "Web Application"
+      - Featured flag set to true
+      - Links include: demo (https://paragonsquare.ai), github (if applicable)
+    acceptance_criteria:
+      - ParagonSquare.ai project added to projects.yml with id 11
+      - All required fields present per content.config.ts schema
+      - Rich metadata included (businessImpact, features, challenges, outcomes)
+      - Project marked as featured
+      - Links populated with live demo URL
+      - IPO context mentioned in description or outcomes
+    failure_modes:
+      - scenario: Missing required field causes Zod validation error
+        likelihood: medium
+        impact: high
+        mitigation: Reference content.config.ts schema line-by-line; run npm run type-check after adding entry
+      - scenario: Category not updated in categories array
+        likelihood: medium
+        impact: low
+        mitigation: Manually increment count for selected category in categories array
+    tech_stack:
+      - YAML
+      - Nuxt Content
+    test_coverage: null
+
+  - id: task-003
+    title: Reorder Projects by Priority
+    description: |
+      Reorder all projects in content/projects.yml to prioritize high-impact/complex projects at the top,
+      with Paragon projects prominently positioned.
+    agent: gem-implementer
+    priority: medium
+    status: completed
+    dependencies:
+      - task-002
+    context_files:
+      content/projects.yml: "1-241"
+      docs/plan/research_findings_projects-content-structure.yaml: "1-50"
+    estimated_effort: small
+    estimated_files: 1
+    estimated_lines: 10
+    focus_area: projects.yml
+    verification:
+      - ParagonRentals.ai (id 10) positioned in top 3 projects
+      - ParagonSquare.ai (id 11) positioned in top 3 projects
+      - Other high-complexity/featured projects follow
+      - Projects maintain sequential id values (1-11)
+      - All project entries remain intact with no data loss
+    acceptance_criteria:
+      - Projects reordered with Paragon projects in top positions
+      - Featured projects appear prominently
+      - All 11 projects present and complete
+      - No duplicate or missing entries
+    failure_modes:
+      - scenario: Data corruption during reordering
+        likelihood: low
+        impact: high
+        mitigation: Create backup of projects.yml before reordering; verify all projects present after changes
+    tech_stack:
+      - YAML
+    test_coverage: null
+
+  - id: task-004
+    title: Create New Technical Blog Post
+    description: |
+      Create a new blog post (3-4 paragraphs, ~500-700 words) on a technical topic relevant to current work,
+      with complete frontmatter following Zod schema and SEO best practices.
+    agent: gem-implementer
+    priority: high
+    status: completed
+    dependencies: []
+    context_files:
+      content/blog/1-my-first-blog-post.md: "1-50"
+      content/blog/5-vue-3-composition-api-best-practices.md: "1-50"
+      content.config.ts: "29-52"
+      docs/plan/blog-seo-research/research_findings_blog-seo-patterns.yaml: "1-100"
+    estimated_effort: medium
+    estimated_files: 1
+    estimated_lines: 200
+    focus_area: content/blog/
+    verification:
+      - File named with numbered prefix and kebab-case (e.g., 16-topic-name.md)
+      - Required frontmatter fields present: title, description, date, author
+      - Optional fields included: dateUpdated, tags, featured, socialImage
+      - Content is 3-4 paragraphs, ~500-700 words
+      - Topic is technical and relevant to current work (Nuxt, Vue, full-stack development)
+      - Writing style matches existing blog posts (professional, technical, informative)
+    acceptance_criteria:
+      - New blog post file created in content/blog/
+      - Complete frontmatter with all required fields
+      - Content is 3-4 paragraphs of technical writing
+      - Tags array includes relevant keywords
+      - Featured flag set to true
+      - Date set to current date (2026-02-22)
+    failure_modes:
+      - scenario: Missing required frontmatter field causes build error
+        likelihood: low
+        impact: high
+        mitigation: Reference content.config.ts schema; use existing blog post as template
+      - scenario: Blog post content too short or off-topic
+        likelihood: low
+        impact: medium
+        mitigation: Review existing blog posts for style and length; ensure technical relevance
+    tech_stack:
+      - Markdown
+      - YAML (frontmatter)
+    test_coverage: null
+
+  - id: task-005
+    title: Generate and Add OG Image for Blog Post
+    description: |
+      Create or source an OG image (1200x630 pixels) for the new blog post and place it in the
+      appropriate directory with proper frontmatter reference.
+    agent: gem-implementer
+    priority: medium
+    status: completed
+    dependencies:
+      - task-004
+    context_files:
+      content/blog/1-my-first-blog-post.md: "13-18"
+      docs/plan/blog-seo-research/research_findings_blog-seo-patterns.yaml: "1-100"
+    estimated_effort: small
+    estimated_files: 1
+    estimated_lines: 1
+    focus_area: /public/img/blog/
+    verification:
+      - Image dimensions are exactly 1200x630 pixels
+      - Image file placed in /public/img/blog/{post-slug}/ directory
+      - Image filename matches frontmatter reference
+      - Image is visually appealing and relevant to blog topic
+      - File size is optimized for web (< 500KB recommended)
+    acceptance_criteria:
+      - OG image created or sourced
+      - Image stored in /public/img/blog/{post-slug}/
+      - Blog post frontmatter updated with socialImage object
+      - Image dimensions verified as 1200x630
+    failure_modes:
+      - scenario: Image dimensions incorrect
+        likelihood: medium
+        impact: medium
+        mitigation: Use image editing tool to resize to exact 1200x630; verify dimensions before committing
+      - scenario: Image file path doesn't match frontmatter reference
+        likelihood: low
+        impact: high
+        mitigation: Double-check file path in socialImage.src matches actual file location
+    tech_stack:
+      - Image file (PNG, SVG, or JPG)
+    test_coverage: null
+
+  - id: task-006
+    title: Verify SEO Best Practices for Projects
+    description: |
+      Verify that updated projects content follows SEO best practices including proper meta tags,
+      descriptions, and structured data integration.
+    agent: gem-reviewer
+    priority: medium
+    status: completed
+    dependencies:
+      - task-003
+    context_files:
+      app/pages/projects.vue: "1-177"
+      content/projects.yml: "1-241"
+      docs/plan/blog-seo-research/research_findings_blog-seo-patterns.yaml: "1-100"
+    estimated_effort: small
+    estimated_files: 2
+    estimated_lines: 0
+    focus_area: projects.yml, projects.vue page
+    verification:
+      - Project descriptions are SEO-friendly (descriptive, keyword-rich, appropriate length)
+      - Featured projects display correctly on homepage
+      - Category filtering works properly with new projects
+      - No broken links in project entries
+      - Projects page loads without errors
+      - Meta tags render correctly in browser DevTools
+    acceptance_criteria:
+      - All project descriptions are descriptive and keyword-rich
+      - Featured projects display on homepage
+      - Category filtering works with new projects
+      - No console errors on projects page
+      - Meta tags verified in DevTools
+    failure_modes:
+      - scenario: Project descriptions too short or non-descriptive
+        likelihood: low
+        impact: medium
+        mitigation: Review project descriptions; expand if necessary for SEO
+      - scenario: Broken links in project entries
+        likelihood: low
+        impact: medium
+        mitigation: Test all demo/github/documentation links manually
+    requires_review: true
+    review_depth: standard
+    security_sensitive: false
+
+  - id: task-007
+    title: Verify SEO Best Practices for Blog Post
+    description: |
+      Verify that the new blog post follows SEO best practices including proper meta tags,
+      OG images, and schema.org markup.
+    agent: gem-reviewer
+    priority: high
+    status: completed
+    dependencies:
+      - task-005
+    context_files:
+      app/pages/blog/[...slug].vue: "41-85"
+      content/blog/{new-post}.md
+      docs/plan/blog-seo-research/research_findings_blog-seo-patterns.yaml: "1-100"
+    estimated_effort: small
+    estimated_files: 2
+    estimated_lines: 0
+    focus_area: blog post, blog/[...slug].vue
+    verification:
+      - Blog post frontmatter includes all required SEO fields
+      - useSeoMeta renders correct meta tags (title, description, og:title, og:description, og:image, article timestamps)
+      - defineOgImage generates proper OG image
+      - useSchemaOrg BlogPosting structured data is correct
+      - Canonical URL is set correctly
+      - OG image dimensions are 1200x630
+      - Social media preview works (test with Facebook/Twitter preview tools)
+      - No console errors on blog post page
+    acceptance_criteria:
+      - All SEO meta tags render correctly
+      - OG image displays properly in social media previews
+      - BlogPosting schema.org markup is valid
+      - Canonical URL is correct
+      - No console errors on blog post page
+    failure_modes:
+      - scenario: OG image not displaying in social media previews
+        likelihood: medium
+        impact: medium
+        mitigation: Test with Facebook/Twitter debug tools; verify image URL is accessible
+      - scenario: Schema.org markup invalid
+        likelihood: low
+        impact: medium
+        mitigation: Validate with Google Rich Results Test; verify all required fields present
+    requires_review: true
+    review_depth: full
+    security_sensitive: false
+
+  - id: task-008
+    title: Final Validation and Testing
+    description: |
+      Perform end-to-end testing of all updated content including projects display, blog post rendering,
+      SEO meta tags, and user interactions across different devices and browsers.
+    agent: gem-browser-tester
+    priority: high
+    status: completed
+    dependencies:
+      - task-006
+      - task-007
+    context_files: []
+    estimated_effort: medium
+    estimated_files: 0
+    estimated_lines: 0
+    focus_area: Full website testing
+    verification:
+      - Homepage displays featured projects correctly
+      - Projects page displays all 11 projects with proper filtering
+      - Project cards render with all metadata
+      - Blog post displays correctly with all content
+      - SEO meta tags render in browser DevTools
+      - OG image displays in social media previews
+      - Schema.org markup validates with Google Rich Results Test
+      - No console errors on any updated pages
+      - Responsive design works on mobile and tablet
+    acceptance_criteria:
+      - All validation scenarios pass
+      - No console errors on any page
+      - SEO meta tags verified on all pages
+      - Social media previews work correctly
+      - Schema.org markup validates
+      - Responsive design works on mobile/tablet
+    failure_modes:
+      - scenario: Console errors on updated pages
+        likelihood: low
+        impact: high
+        mitigation: Run npm run type-check and npm run lint before testing; check browser console for specific errors
+      - scenario: Social media previews not working
+        likelihood: medium
+        impact: medium
+        mitigation: Verify OG image URL is accessible; use Facebook/Twitter debug tools to refresh cache
+    validation_matrix:
+      - scenario: Homepage displays featured projects
+        steps:
+          - Navigate to homepage
+          - Scroll to Featured Projects section
+        expected_result: Both Paragon projects display in featured section with correct metadata
+      - scenario: Projects page displays all projects
+        steps:
+          - Navigate to /projects
+          - Verify all 11 projects listed
+        expected_result: All projects display, Paragon projects at top, category filtering works
+      - scenario: Project cards render correctly
+        steps:
+          - Click on ParagonRentals.ai project
+          - Verify all fields display
+        expected_result: Title, description, technologies, business impact, links all display correctly
+      - scenario: Blog post displays correctly
+        steps:
+          - Navigate to new blog post URL
+          - Verify content and metadata
+        expected_result: Blog post content displays, frontmatter metadata correct
+      - scenario: SEO meta tags render
+        steps:
+          - Open DevTools on blog post page
+          - Check meta tags in head
+        expected_result: All meta tags present (title, description, OG tags, Twitter cards)
+      - scenario: OG image displays
+        steps:
+          - Use Facebook/Twitter preview tool
+          - Enter blog post URL
+        expected_result: OG image displays with correct dimensions (1200x630)
+      - scenario: Schema.org markup valid
+        steps:
+          - Use Google Rich Results Test
+          - Enter blog post URL
+        expected_result: BlogPosting schema detected with all required fields
+      - scenario: No console errors
+        steps:
+          - Open DevTools Console
+          - Navigate to all updated pages
+        expected_result: No errors or warnings in console
+      - scenario: Responsive design works
+        steps:
+          - Resize browser to mobile/tablet
+          - Check projects and blog pages
+        expected_result: Layout adapts correctly, no horizontal scrolling

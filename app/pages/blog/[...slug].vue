@@ -58,7 +58,7 @@ if (blogPostData.value) {
     link: [{ rel: "canonical", href: url }],
   })
 
-  defineOgImage(blogPostData.value.ogImage)
+  defineOgImage(blogPostData.value.ogImage || blogPostData.value.socialImage)
   defineOgImageComponent("NuxtSeo")
 
   // Register BlogPosting JSON-LD via Nuxt SEO

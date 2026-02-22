@@ -5,20 +5,46 @@ definePageMeta({
     "Explore my portfolio of web applications, browser extensions, and open source contributions.",
 })
 
+const site = useSiteConfig()
+
 // Fetch projects data using composable
 const { data: projectsData } = await useProjectsData()
 const { data: testimonialsData } = await useTestimonialsData()
 
-useHead({
-  title: "Projects - Muhammad Ubaid Raza",
-  meta: [
-    {
-      name: "description",
-      content:
-        "Explore my portfolio of web applications, browser extensions, and open source contributions.",
-    },
-  ],
+// SEO Meta
+const url = `${site.url}/projects`
+const title = "Projects - Muhammad Ubaid Raza"
+const description = "Explore my portfolio of web applications, browser extensions, and open source contributions."
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogType: "website",
+  ogUrl: url,
+  ogImage: site.url + "/img/og-image.jpg",
+  twitterCard: "summary_large_image",
+  twitterTitle: title,
+  twitterDescription: description,
+  twitterImage: site.url + "/img/og-image.jpg",
 })
+
+useHead({
+  link: [{ rel: "canonical", href: url }],
+})
+
+// Structured data for SEO
+useSchemaOrg([
+  defineWebPage({
+    name: title,
+    description,
+    url,
+  }),
+  defineWebSite({
+    name: site.name,
+  }),
+])
 
 const selectedCategory = ref("All")
 
@@ -37,7 +63,10 @@ const filteredProjects = computed(() => {
 // Get testimonials for a specific project
 const getProjectTestimonials = (project: { testimonials?: number[] }) => {
   if (!project.testimonials || !Array.isArray(project.testimonials)) return []
-  return testimonialsData.value?.filter((t) => project.testimonials?.includes(t.id)) || []
+  return testimonialsData.value?.filter((t) => {
+    const testimonialId = typeof t.id === 'number' ? t.id : parseInt(t.id, 10)
+    return project.testimonials?.includes(testimonialId)
+  }) || []
 }
 </script>
 

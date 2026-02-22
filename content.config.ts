@@ -62,7 +62,7 @@ export default defineContentConfig({
       type: "data",
       source: "testimonials/**/*.{json,yml,yaml}",
       schema: z.object({
-        id: z.string(),
+        id: z.union([z.string(), z.number()]),
         name: z.string(),
         title: z.string(),
         company: z.string(),
@@ -192,7 +192,7 @@ export default defineContentConfig({
             title: z.string(),
             description: z.string(),
             longDescription: z.string(),
-            image: z.string(),
+            image: z.string().optional(),
             technologies: z.array(z.string()),
             category: z.string(),
             featured: z.boolean(),

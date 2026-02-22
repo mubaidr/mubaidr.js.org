@@ -1,0 +1,404 @@
+plan_id: projects-content-structure-2026-02-22
+objective: Research the current projects structure and content in this Nuxt 4 website
+focus_area: Projects content structure
+created_at: 2026-02-22
+created_by: gem-researcher
+status: completed
+
+tldr: |
+  - Projects stored in `content/projects.yml` with Zod schema validation in `content.config.ts`
+  - 9 projects total across 5 categories (Open Source, Development Tools, Web Application, SaaS, Portfolio)
+  - Featured projects filtered by `featured: true` flag and displayed via `FeaturedProjects.vue` component
+  - Projects support rich metadata: businessImpact, testimonials, client info, stats, features, challenges, outcomes
+  - No explicit Paragon-related projects found in current data
+  - Projects queried via `useProjectsData()` composable using Nuxt Content's `queryCollection()`
+  - Category filtering implemented in `/projects` page with computed `filteredProjects`
+  - Projects ordered by file sequence (id field), no explicit sorting in composables
+
+research_metadata:
+  methodology: Hybrid retrieval: semantic_search + grep_search + file reading
+  tools_used:
+    - semantic_search
+    - grep_search
+    - read_file
+    - file_search
+  scope: Complete analysis of projects.yml structure, schema definition, composables, and display components
+  confidence: high
+  coverage: 100% of relevant files examined
+
+files_analyzed:
+  - file: content/projects.yml
+    path: /projects/mubaidr.js.org/content/projects.yml
+    purpose: Source data file containing all project entries and category definitions
+    key_elements:
+      - element: projects array
+        type: array
+        location: content/projects.yml:1
+        description: Contains 9 project objects with full metadata
+      - element: categories array
+        type: array
+        location: content/projects.yml:242
+        description: Defines 6 categories with name and count
+      - element: project.id
+        type: number
+        location: content/projects.yml:2
+        description: Sequential identifier (1-9)
+      - element: project.featured
+        type: boolean
+        location: content/projects.yml:17
+        description: Flag for featured projects display (5 featured, 4 not)
+      - element: project.businessImpact
+        type: object
+        location: content/projects.yml:38
+        description: Key-value pairs of business metrics
+      - element: project.testimonials
+        type: array
+        location: content/projects.yml:42
+        description: Array of testimonial IDs linking to testimonials collection
+    language: YAML
+    lines: 247
+
+  - file: content.config.ts
+    path: /projects/mubaidr.js.org/content.config.ts
+    purpose: Zod schema definition for projects collection validation
+    key_elements:
+      - element: projects collection schema
+        type: z.object
+        location: content.config.ts:169
+        description: Defines structure and validation rules for projects data
+      - element: id, title, description, longDescription
+        type: z.string | z.number
+        location: content.config.ts:172-175
+        description: Required basic project fields
+      - element: technologies array
+        type: z.array(z.string)
+        location: content.config.ts:177
+        description: Array of technology stack strings
+      - element: featured, status, startDate, endDate
+        type: z.boolean | z.string
+        location: content.config.ts:179-182
+        description: Project metadata fields
+      - element: links object
+        type: z.object
+        location: content.config.ts:183-190
+        description: Optional links: github, demo, npm, documentation, case_study
+      - element: stats, features, challenges, outcomes
+        type: z.array | z.record
+        location: content.config.ts:191-194
+        description: Project details arrays
+      - element: type, myRole, teamSize
+        type: z.string | z.number
+        location: content.config.ts:196-198
+        description: Senior-level project metadata
+      - element: client object
+        type: z.object
+        location: content.config.ts:199-202
+        description: Optional client info with name and industry
+      - element: businessImpact, testimonials
+        type: z.record | z.array
+        location: content.config.ts:203-204
+        description: Business metrics and testimonial references
+      - element: categories array
+        type: z.array(z.object)
+        location: content.config.ts:206-209
+        description: Category definitions with name and count
+    language: TypeScript
+    lines: 45
+
+  - file: app/composables/useProjectsData.ts
+    path: /projects/mubaidr.js.org/app/composables/useProjectsData.ts
+    purpose: Composable functions for querying projects data
+    key_elements:
+      - element: useProjectsData()
+        type: function
+        location: app/composables/useProjectsData.ts:1-4
+        description: Fetches entire projects collection via queryCollection("projects").first()
+      - element: useFeaturedProjects(count)
+        type: function
+        location: app/composables/useProjectsData.ts:6-11
+        description: Filters projects by featured=true and limits to count
+    language: TypeScript
+    lines: 11
+
+  - file: app/components/FeaturedProjects.vue
+    path: /projects/mubaidr.js.org/app/components/FeaturedProjects.vue
+    purpose: Component for displaying featured projects on homepage
+    key_elements:
+      - element: count prop
+        type: number
+        location: app/components/FeaturedProjects.vue:4-6
+        description: Number of featured projects to display (default: 2)
+      - element: title prop
+        type: string
+        location: app/components/FeaturedProjects.vue:7-10
+        description: Section title (default: "Featured Projects")
+      - element: hideLink prop
+        type: boolean
+        location: app/components/FeaturedProjects.vue:11-13
+        description: Controls visibility of "View All Projects" link
+      - element: featuredProjectsData
+        type: ref
+        location: app/components/FeaturedProjects.vue:19
+        description: Data fetched via useFeaturedProjects(count)
+      - element: project display loop
+        type: v-for
+        location: app/components/FeaturedProjects.vue:34
+        description: Iterates over featured projects to render cards
+      - element: technologies display
+        type: v-for
+        location: app/components/FeaturedProjects.vue:51
+        description: Shows first 3 technologies as badges
+    language: Vue
+    lines: 75
+
+  - file: app/pages/projects.vue
+    path: /projects/mubaidr.js.org/app/pages/projects.vue
+    purpose: Main projects listing page with category filtering
+    key_elements:
+      - element: selectedCategory ref
+        type: ref
+        location: app/pages/projects.vue:26
+        description: Currently selected category filter (default: "All")
+      - element: filteredProjects computed
+        type: computed
+        location: app/pages/projects.vue:29-37
+        description: Filters projects by selected category
+      - element: getProjectTestimonials()
+        type: function
+        location: app/pages/projects.vue:40-43
+        description: Retrieves testimonials for a project by ID matching
+      - element: category filter buttons
+        type: v-for
+        location: app/pages/projects.vue:52
+        description: Renders category buttons from projectsData.categories
+      - element: projects grid
+        type: v-for
+        location: app/pages/projects.vue:62
+        description: Renders all filtered projects in 2-column grid
+      - element: project type badge
+        type: UBadge
+        location: app/pages/projects.vue:67
+        description: Shows project.type if present
+      - element: businessImpact display
+        type: v-for
+        location: app/pages/projects.vue:92
+        description: Renders business impact metrics in 2-column grid
+      - element: technologies display
+        type: v-for
+        location: app/pages/projects.vue:128
+        description: Shows first 4 technologies, shows "+N" for remaining
+      - element: links rendering
+        type: conditional
+        location: app/pages/projects.vue:135-152
+        description: Renders GitHub, npm, documentation buttons if links exist
+    language: Vue
+    lines: 177
+
+patterns_found:
+  - category: structure
+    pattern: Projects data structure
+    description: Projects stored as array in YAML file with nested metadata objects
+    examples:
+      - file: content/projects.yml
+        location: content/projects.yml:1-241
+        snippet: |-
+          projects:
+            - id: 1
+              title: Vue Color Avatar
+              description: A Vue.js component library...
+              technologies: [Vue.js, TypeScript, SVG]
+              category: Open Source
+              featured: true
+              businessImpact:
+                openSourceImpact: 50K+ developers
+    prevalence: common
+
+  - category: naming
+    pattern: Project field naming conventions
+    description: camelCase for nested objects (businessImpact, myRole), kebab-case for display labels
+    examples:
+      - file: content/projects.yml
+        location: content/projects.yml:38-40
+        snippet: |-
+          businessImpact:
+            openSourceImpact: 50K+ developers using the library
+            communityGrowth: 12 active contributors
+      - file: app/pages/projects.vue
+        location: app/pages/projects.vue:95
+        snippet: key.replace(/([A-Z])/g, ' $1').trim()
+    prevalence: common
+
+  - category: architecture
+    pattern: Content-driven data fetching
+    description: Using Nuxt Content's queryCollection() with useAsyncData for type-safe data fetching
+    examples:
+      - file: app/composables/useProjectsData.ts
+        location: app/composables/useProjectsData.ts:1-4
+        snippet: |-
+          export const useProjectsData = () => {
+            return useAsyncData("projects-data", () => {
+              return queryCollection("projects").first()
+            })
+          }
+    prevalence: common
+
+  - category: display
+    pattern: Featured content filtering
+    description: Featured projects filtered by boolean flag in component logic
+    examples:
+      - file: app/composables/useProjectsData.ts
+        location: app/composables/useProjectsData.ts:8-10
+        snippet: return data?.projects.filter((p) => p.featured).slice(0, count)
+      - file: app/components/FeaturedProjects.vue
+        location: app/components/FeaturedProjects.vue:19
+        snippet: const { data: featuredProjectsData } = await useFeaturedProjects(count)
+    prevalence: common
+
+  - category: display
+    pattern: Category-based filtering
+    description: Client-side filtering using computed properties and category metadata
+    examples:
+      - file: app/pages/projects.vue
+        location: app/pages/projects.vue:29-37
+        snippet: |-
+          const filteredProjects = computed(() => {
+            if (selectedCategory.value === "All") {
+              return projectsData.value?.projects || []
+            }
+            return projectsData.value?.projects.filter(
+              (p) => p.category === selectedCategory.value
+            ) || []
+          })
+    prevalence: common
+
+  - category: structure
+    pattern: Rich metadata support
+    description: Projects support optional senior-level fields for detailed case studies
+    examples:
+      - file: content/projects.yml
+        location: content/projects.yml:33-42
+        snippet: |-
+          myRole: Lead Developer & Maintainer
+          teamSize: 1
+          type: Open Source
+          client:
+            name: E-commerce Startup
+            industry: Retail
+          testimonials:
+            - 2
+    prevalence: occasional
+
+  - category: display
+    pattern: Truncated content display
+    description: Technologies and list items truncated with "+N" indicators
+    examples:
+      - file: app/pages/projects.vue
+        location: app/pages/projects.vue:128-132
+        snippet: |-
+          <UBadge v-for="tech in project.technologies.slice(0, 4)" :key="tech" />
+          <UBadge v-if="project.technologies.length > 4" :label="`+${project.technologies.length - 4}`" />
+    prevalence: common
+
+related_architecture:
+  components_relevant_to_domain:
+    - component: FeaturedProjects.vue
+      responsibility: Displays featured projects on homepage with configurable count
+      location: app/components/FeaturedProjects.vue
+      relationship_to_domain: domain provides data structure, component consumes it
+    - component: projects.vue page
+      responsibility: Main projects listing with category filtering and detailed cards
+      location: app/pages/projects.vue
+      relationship_to_domain: domain provides complete data structure, page renders all projects
+    - component: useProjectsData composable
+      responsibility: Data fetching abstraction for projects collection
+      location: app/composables/useProjectsData.ts
+      relationship_to_domain: domain defines collection schema, composable queries it
+    - component: useCaseStudiesData composable
+      responsibility: Filters projects for case study display
+      location: app/composables/useCaseStudiesData.ts
+      relationship_to_domain: domain provides projects data, composable filters by case_study/featured
+  interfaces_used_by_domain:
+    - interface: Nuxt Content queryCollection API
+      location: @nuxt/content
+      usage_pattern: queryCollection("projects").first() for single document, .filter() for arrays
+    - interface: Nuxt useAsyncData
+      location: @nuxt/app
+      usage_pattern: useAsyncData(key, () => queryCollection(...)) for reactive data fetching
+  data_flow_involving_domain:
+    Data flows from content/projects.yml → Nuxt Content processing → useProjectsData/useFeaturedProjects composables → FeaturedProjects.vue and projects.vue page → rendered project cards
+  key_relationships_to_domain:
+    - from: projects collection
+      to: testimonials collection
+      relationship: references via testimonial IDs in project.testimonials array
+    - from: projects collection
+      to: categories metadata
+      relationship: projects categorized by project.category field, counts in categories array
+    - from: FeaturedProjects component
+      to: useFeaturedProjects composable
+      relationship: consumes filtered featured projects data
+    - from: projects page
+      to: useProjectsData composable
+      relationship: consumes all projects data for filtering and display
+
+related_technology_stack:
+  languages_used_in_domain:
+    - TypeScript (composables, schemas)
+    - Vue.js (components, pages)
+    - YAML (data storage)
+  frameworks_used_in_domain:
+    - name: Nuxt 4
+      usage_in_domain: Framework providing Content module, composables, and page routing
+    - name: Nuxt Content
+      usage_in_domain: Content management system for querying and validating projects.yml
+    - name: Nuxt UI
+      usage_in_domain: UI component library (UCard, UBadge, UButton, UIcon)
+  libraries_used_in_domain:
+    - name: Zod
+      purpose_in_domain: Schema validation for projects collection in content.config.ts
+    - name: VueUse
+      purpose_in_domain: Reactive utilities (ref, computed) used in components
+
+related_conventions:
+  naming_patterns_in_domain: camelCase for object keys (businessImpact, myRole), PascalCase for components, kebab-case for file names
+  structure_of_domain: Single YAML file with projects array and categories metadata, schema defined separately in content.config.ts
+  error_handling_in_domain: Optional chaining (?.) for safe access to nested data, null checks for optional fields
+  testing_in_domain: No testing patterns observed for projects domain
+  documentation_in_domain: Schema documentation in content.config.ts, field usage examples in README.md
+
+related_dependencies:
+  internal:
+    - component: testimonials collection
+      relationship_to_domain: Projects reference testimonial IDs for client feedback display
+      direction: outbound (projects → testimonials)
+    - component: profile collection
+      relationship_to_domain: Used by OpenSourceImpact component, not directly by projects
+      direction: none
+  external: []
+
+domain_security_considerations: []
+
+testing_patterns: []
+
+open_questions:
+  - question: How are projects ordered when displayed? No explicit sorting found in composables.
+    context: useProjectsData() and useFeaturedProjects() do not apply .order() or .sort(), projects appear in file sequence order
+  - question: What is the purpose of the "type" field (Open Source, Client Project, SaaS Product, etc.)?
+    context: type field exists in schema and data (e.g., "Open Source", "Client Project") but only used as a small badge in projects page
+  - question: How are category counts maintained in the categories array?
+    context: categories array has count field that should match actual project counts, but no validation or automation found
+  - question: Are there plans to add Paragon-related projects?
+    context: Paragon Square Inc. mentioned in nuxt.config.ts as employer, but no Paragon projects exist in current projects.yml
+
+gaps:
+  - area: Project sorting/ordering mechanism
+    description: No explicit sorting logic found in composables or components
+    impact: Cannot determine if projects are intentionally ordered or appear in file sequence
+  - area: Case study integration
+    description: case_study link field exists in schema but no projects have case_study links populated
+    impact: CaseStudyPreview component may not display any content
+  - area: Category count validation
+    description: No mechanism to ensure categories.count matches actual project counts
+    impact: Category counts may become inconsistent if projects are added/removed without updating counts
+  - area: Paragon projects
+    description: Paragon Square Inc. listed as employer but no Paragon-related projects in portfolio
+    impact: Missing opportunity to showcase current work experience
