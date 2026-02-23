@@ -81,7 +81,7 @@ v-for="social in profileData.social" :key="social.name" :to="social.url" externa
       <TestimonialsPreview />
       <!-- <ServicesPreview /> -->
       <!-- <CallToAction /> -->
-      <FeaturedProjects :count="2" />
+      <!-- <FeaturedProjects :count="2" /> -->
       <RecentBlogPosts />
     </div>
   </div>
