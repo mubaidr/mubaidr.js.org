@@ -144,7 +144,7 @@ if (blogPostData.value) {
           :src="blogPostData.socialImage?.src || blogPostData.image"
           :alt="blogPostData.socialImage?.alt || blogPostData.title"
           class="w-full h-full object-cover"
-        />
+        >
       </div>
 
       <!-- Post Content -->

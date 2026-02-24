@@ -1,0 +1,103 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- Blue-purple gradient for edge computing -->
+    <linearGradient id="bg-gradient-19" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0EA5E9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Secondary gradient -->
+    <linearGradient id="secondary-gradient-19" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#38BDF8;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#A78BFA;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <!-- Network pattern -->
+    <pattern id="network-pattern-19" x="0" y="0" width="150" height="150" patternUnits="userSpaceOnUse">
+      <circle cx="75" cy="75" r="4" fill="rgba(255,255,255,0.15)" />
+      <circle cx="0" cy="0" r="3" fill="rgba(255,255,255,0.1)" />
+      <circle cx="150" cy="0" r="3" fill="rgba(255,255,255,0.1)" />
+      <circle cx="0" cy="150" r="3" fill="rgba(255,255,255,0.1)" />
+      <circle cx="150" cy="150" r="3" fill="rgba(255,255,255,0.1)" />
+      <line x1="75" y1="75" x2="0" y2="0" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      <line x1="75" y1="75" x2="150" y2="0" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      <line x1="75" y1="75" x2="0" y2="150" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      <line x1="75" y1="75" x2="150" y2="150" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+    </pattern>
+    
+    <!-- Glow effect -->
+    <filter id="glow-19">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-gradient-19)" />
+  
+  <!-- Network pattern overlay -->
+  <rect width="1200" height="630" fill="url(#network-pattern-19)" />
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="150" fill="url(#secondary-gradient-19)" />
+  <circle cx="1100" cy="530" r="200" fill="url(#secondary-gradient-19)" />
+  
+  <!-- Cloud/edge icon -->
+  <g transform="translate(900, 280)" filter="url(#glow-19)">
+    <!-- Cloud shape -->
+    <ellipse cx="60" cy="60" rx="50" ry="35" fill="rgba(255,255,255,0.2)" />
+    <circle cx="40" cy="60" r="25" fill="rgba(255,255,255,0.2)" />
+    <circle cx="80" cy="60" r="25" fill="rgba(255,255,255,0.2)" />
+    <circle cx="60" cy="45" r="30" fill="rgba(255,255,255,0.2)" />
+    
+    <!-- Connection nodes -->
+    <circle cx="20" cy="80" r="6" fill="rgba(255,255,255,0.6)" />
+    <circle cx="100" cy="80" r="6" fill="rgba(255,255,255,0.6)" />
+    <circle cx="60" cy="90" r="6" fill="rgba(255,255,255,0.6)" />
+    
+    <!-- Connection lines -->
+    <line x1="60" y1="60" x2="20" y2="80" stroke="rgba(255,255,255,0.4)" stroke-width="2" />
+    <line x1="60" y1="60" x2="100" y2="80" stroke="rgba(255,255,255,0.4)" stroke-width="2" />
+    <line x1="60" y1="60" x2="60" y2="90" stroke="rgba(255,255,255,0.4)" stroke-width="2" />
+  </g>
+  
+  <!-- Globe outline -->
+  <g transform="translate(150, 350)" opacity="0.2">
+    <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2" />
+    <ellipse cx="100" cy="100" rx="80" ry="30" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+    <ellipse cx="100" cy="100" rx="30" ry="80" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+  </g>
+  
+  <!-- Main title text -->
+  <text x="600" y="260" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="800" fill="#ffffff" filter="url(#glow-19)">
+    Edge Computing
+  </text>
+  <text x="600" y="325" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="800" fill="#ffffff" filter="url(#glow-19)">
+    &amp; Serverless
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="385" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="400" fill="rgba(255,255,255,0.9)">
+    The Future of Deployment
+  </text>
+  
+  <!-- Year badge -->
+  <g transform="translate(550, 435)">
+    <rect x="0" y="0" width="100" height="40" rx="20" fill="rgba(255,255,255,0.2)" />
+    <text x="50" y="26" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#ffffff">2026</text>
+  </g>
+  
+  <!-- Tagline -->
+  <text x="600" y="580" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="500" fill="rgba(255,255,255,0.7)">
+    mubaidr.js.org
+  </text>
+  
+  <!-- Decorative dots -->
+  <circle cx="100" cy="550" r="4" fill="rgba(255,255,255,0.4)" />
+  <circle cx="120" cy="560" r="3" fill="rgba(255,255,255,0.3)" />
+  <circle cx="1080" cy="100" r="4" fill="rgba(255,255,255,0.4)" />
+  <circle cx="1100" cy="90" r="3" fill="rgba(255,255,255,0.3)" />
+</svg>

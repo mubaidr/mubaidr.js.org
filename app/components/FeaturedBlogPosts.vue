@@ -49,7 +49,7 @@ const { data: featuredPostsData } = await useFeaturedBlogPosts(count)
                 :src="post.socialImage?.src || post.image"
                 :alt="post.socialImage?.alt || post.title"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+              >
             </div>
             <div class="space-y-3">
               <h3

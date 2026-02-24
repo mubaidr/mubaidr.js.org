@@ -223,7 +223,7 @@ const getProjectTestimonials = (project: { testimonials?: number[] }) => {
                             :src="testimonial.avatar"
                             :alt="testimonial.name"
                             class="w-full h-full object-cover"
-                          />
+                          >
                         </div>
                         <div class="text-xs">
                           <div class="font-medium">{{ testimonial.name }}</div>

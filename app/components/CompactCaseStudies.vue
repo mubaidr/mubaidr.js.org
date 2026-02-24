@@ -34,10 +34,12 @@ withDefaults(defineProps<Props>(), {
     </div>
 
     <!-- Case Studies -->
-    <div v-else-if="
+    <div
+v-else-if="
       caseStudiesData?.caseStudies && caseStudiesData.caseStudies.length > 0
     " class="grid gap-6 md:grid-cols-3">
-      <UCard v-for="study in caseStudiesData.caseStudies.slice(0, count)" :key="study.id"
+      <UCard
+v-for="study in caseStudiesData.caseStudies.slice(0, count)" :key="study.id"
         class="h-full hover:shadow-lg transition-shadow">
         <div class="space-y-4">
           <!-- Problem -->
