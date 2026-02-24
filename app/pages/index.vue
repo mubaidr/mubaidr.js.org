@@ -48,13 +48,13 @@ if (profileData.value) {
           </h1>
 
           <!-- Tagline as Subheading -->
-          <p v-if="profileData.heroHeadline" class="text-2xl">
+          <p v-if="profileData.heroHeadline" class="text-3xl">
             {{ profileData.heroHeadline }}
           </p>
 
           <!-- Results-Focused Headline -->
           <div class="max-w-4xl mx-auto text-center">
-            <UAlert color="secondary" variant="subtle" size="xl" :title="profileData.tagline">{{ profileData.tagline }}
+            <UAlert color="secondary" variant="soft" size="xl" :title="profileData.tagline">{{ profileData.tagline }}
             </UAlert>
           </div>
 

@@ -59,10 +59,7 @@ export default defineNuxtConfig({
 
   experimental: {
     typedPages: true,
-    buildCache: true,
     headNext: true,
-    lazyHydration: true,
-    viewTransition: true,
     typescriptPlugin: true,
   },
 
@@ -70,7 +67,7 @@ export default defineNuxtConfig({
 
   fonts: {
     families: [
-      { name: "Inter", provider: "google", weights: [400, 500, 600, 700] },
+      { name: "Public Sans", provider: "google", weights: [400, 500, 600, 700] },
     ],
   },
 
@@ -80,16 +77,16 @@ export default defineNuxtConfig({
     },
   },
 
-  image: {
-    format: ["webp", "avif"],
-  },
+  // image: {
+  //   format: ["webp", "avif"],
+  // },
 
   modules: [
     "@nuxtjs/color-mode",
     "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/ui",
-    "@nuxt/image",
+    // "@nuxt/image",
     // "@nuxtjs/mdc",
     "@nuxtjs/seo",
     // "nuxt-feedme",
