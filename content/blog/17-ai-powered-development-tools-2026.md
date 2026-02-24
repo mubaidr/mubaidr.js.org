@@ -21,6 +21,18 @@ socialImage:
 series: "Modern Development"
 seriesOrder: 1
 seriesDescription: "Exploring cutting-edge development practices and tools"
+# AI/LLM optimization fields
+keywords:
+  - AI development tools 2026
+  - GitHub Copilot X
+  - automated testing AI
+  - code generation
+  - AI pair programming
+  - developer productivity
+  - machine learning for developers
+  - AI code review
+  - intelligent code completion
+  - software development automation
 ---
 
 ## AI-Powered Development Tools in 2026: A Complete Guide
