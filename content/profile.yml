@@ -2,6 +2,7 @@ name: Muhammad Ubaid R.
 title: Senior Software Engineer | Full-Stack Developer | DevOps Enthusiast
 avatar: /mubaidr.png
 description: Delivering robust, scalable, and user-focused software solutions that drive business success.
+heroHeadline: Delivered 125+ projects with 100% client satisfaction — 13 years building scalable systems
 tagline: Senior Software Engineer building scalable systems and developer tools. Open source maintainer.
 social:
   - name: GitHub
@@ -31,12 +32,47 @@ availability:
   startDateContext: "Next opening"
   description: Open to freelance, consulting, and collaborative projects. Flexible with remote, async, and agile workflows. Comfortable working across time zones and with distributed teams.
   responseTime: 6h
+  timezone: UTC+5 (Pakistan Standard Time)
   slotsAvailable: 3
   paymentTerms: "20% upfront, rest on milestones"
   cta:
     text: Email Now To Discuss Your Project Or Idea
     url: mailto:mubaidr@gmail.com
   note: I aim to reply as quickly as possible with the attention your message deserves.
+whoIWorkWith:
+  - name: Startups
+    icon: i-ph-rocket-launch
+    description: Early-stage companies building MVPs and scaling products
+  - name: SMEs
+    icon: i-ph-buildings
+    description: Small to medium enterprises optimizing and modernizing systems
+  - name: Enterprise
+    icon: i-ph-buildings
+    description: Large organizations requiring architecture and performance expertise
+  - name: Agencies
+    icon: i-ph-users-three
+    description: Digital agencies needing technical leadership and delivery support
+  - name: Individual Founders
+    icon: i-ph-user
+    description: Solo founders turning ideas into production-ready applications
+
+pricingRanges:
+  mvp:
+    min: 5000
+    max: 15000
+    currency: USD
+    description: Full-stack MVP development
+  architectureAudit:
+    min: 1500
+    max: 3000
+    currency: USD
+    description: System architecture review and recommendations
+  hourly:
+    min: 100
+    max: 125
+    currency: USD
+    description: Hourly consulting and development
+
 footer:
   message: Thank you for your interest. I look forward to collaborating and building something exceptional together.
   lastUpdated: 2025-06-28T12:00:00.000Z

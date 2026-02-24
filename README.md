@@ -43,7 +43,46 @@ A modern, high-performance personal portfolio and blog website built with **Nuxt
 - **Automated deployment** to GitHub Pages
 - **Content-driven** architecture with YAML/Markdown
 
-## 🛠️ Tech Stack
+## � Website Optimization (2026-02-24)
+
+The website has been optimized for trust, conversion, and performance with results-focused content and transparent communication.
+
+### Key Enhancements
+
+- **Results-Focused Hero:** Headline showcasing tangible outcomes (125+ projects, 100% client satisfaction, 13 years experience)
+- **Compact Case Studies:** Problem → Solution → Metric format highlighting real project impact
+- **"Who I Work With" Section:** Target audiences (Startups, SMEs, Enterprise, Agencies, Founders) with transparent pricing ranges
+- **Availability Display:** Timezone (UTC+5) and response time (6h) for clear communication expectations
+- **Performance Optimized:** Lazy loading for below-fold components, loading skeletons, and optimized bundle size
+
+### New Components
+
+- **CompactCaseStudies.vue:** Displays 3 case studies with visual hierarchy and metrics
+- **WhoIWorkWith.vue:** Shows target audiences and pricing cards (MVP, Architecture Audit, Hourly)
+- **AvailabilityInfo.vue:** Compact timezone and response time display
+
+### Content Collections
+
+- **case-studies.yml:** New collection for compact, results-focused case studies
+- **profile.yml (extended):** Added `heroHeadline`, `whoIWorkWith`, `pricingRanges`, and `availability.timezone` fields
+
+### Documentation
+
+For detailed documentation of all optimization changes, including configuration options and update instructions, see [`docs/website-optimization.md`](./docs/website-optimization.md).
+
+### Quick Update Guide
+
+All content is managed in YAML files—no code changes needed:
+
+- **Update hero headline:** Edit `heroHeadline` in `content/profile.yml`
+- **Add case studies:** Add entries to `caseStudies` array in `content/case-studies.yml`
+- **Change timezone:** Edit `availability.timezone` in `content/profile.yml`
+- **Adjust pricing:** Update `pricingRanges` object in `content/profile.yml`
+- **Modify audiences:** Edit `whoIWorkWith` array in `content/profile.yml`
+
+All changes automatically reflect on the homepage after save.
+
+## �🛠️ Tech Stack
 
 ### **Frontend Framework**
 
@@ -150,19 +189,19 @@ git clone https://github.com/mubaidr/mubaidr.js.org.git
 cd mubaidr.js.org
 ```
 
-2. **Install dependencies**
+1. **Install dependencies**
 
 ```bash
 npm install
 ```
 
-3. **Start development server**
+1. **Start development server**
 
 ```bash
 npm run dev
 ```
 
-4. **Open in browser**
+1. **Open in browser**
 
 ```
 http://localhost:3000

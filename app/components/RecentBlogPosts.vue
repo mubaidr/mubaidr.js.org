@@ -11,8 +11,8 @@ const { count, title } = defineProps({
   },
 })
 
-// Fetch recent blog posts using composable
-const { data: recentPostsData } = await useRecentBlogPosts(count)
+// Fetch recent blog posts using composable with loading state
+const { data: recentPostsData, pending: isLoading } = await useRecentBlogPosts(count)
 </script>
 
 <template>
@@ -30,15 +30,25 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
       </div>
 
       <!-- Show blog posts if available, otherwise show placeholder -->
-      <div v-if="recentPostsData && recentPostsData.length > 0" class="grid gap-8 md:grid-cols-2">
+      <!-- Loading Skeleton -->
+      <div v-if="isLoading" class="grid gap-8 md:grid-cols-2">
+        <USkeleton v-for="i in count" :key="i" class="h-96 w-full" />
+      </div>
+
+      <div v-else-if="recentPostsData && recentPostsData.length > 0" class="grid gap-8 md:grid-cols-2">
         <UCard
 v-for="(post, index) in recentPostsData" :key="post.path || `post-${index}`"
           class="group cursor-pointer h-full overflow-hidden" @click="navigateTo(post.path || '/blog')">
           <div class="space-y-6">
             <div v-if="post.socialImage?.src || post.image" class="aspect-video -mx-6 -mt-6 mb-4 overflow-hidden">
-              <img
-:src="post.socialImage?.src || post.image" :alt="post.socialImage?.alt || post.title"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" >
+              <NuxtImg
+                :src="post.socialImage?.src || post.image"
+                :alt="post.socialImage?.alt || post.title"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+                format="webp"
+                quality="80"
+              />
             </div>
             <div class="space-y-3">
               <h3

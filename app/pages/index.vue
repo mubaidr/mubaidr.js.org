@@ -48,6 +48,13 @@ if (profileData.value) {
             {{ profileData.name }}
           </h1>
 
+          <!-- Results-Focused Headline -->
+          <p
+            v-if="profileData.heroHeadline"
+            class="text-2xl md:text-3xl lg:text-4xl font-semibold text-primary-600 dark:text-primary-400 max-w-3xl leading-relaxed">
+            {{ profileData.heroHeadline }}
+          </p>
+
           <!-- Tagline as Subheading -->
           <p class="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
             {{ profileData.tagline }}
@@ -71,18 +78,19 @@ v-for="social in profileData.social" :key="social.name" :to="social.url" externa
               <UIcon :name="social.icon" size="1.5em" />
             </ULink>
           </div>
+
+          <!-- Availability Info -->
+          <AvailabilityInfo />
         </div>
       </div>
     </section>
 
     <div class="space-y-32 pb-20">
-      <!-- <OpenSourceImpact /> -->
-      <AboutPreview />
+      <LazyCompactCaseStudies />
+      <LazyWhoIWorkWith />
       <TestimonialsPreview />
-      <!-- <ServicesPreview /> -->
-      <!-- <CallToAction /> -->
-      <!-- <FeaturedProjects :count="2" /> -->
-      <RecentBlogPosts />
+      <CallToAction />
+      <LazyRecentBlogPosts />
     </div>
   </div>
 </template>

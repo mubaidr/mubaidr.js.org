@@ -148,6 +148,7 @@ export default defineContentConfig({
         title: z.string(),
         avatar: z.string(),
         description: z.string(),
+        heroHeadline: z.string().optional(),
         tagline: z.string(),
         social: z.array(
           z.object({
@@ -168,6 +169,7 @@ export default defineContentConfig({
           startDateContext: z.string(),
           description: z.string(),
           responseTime: z.string(),
+          timezone: z.string(),
           slotsAvailable: z.number(),
           paymentTerms: z.string(),
           cta: z.object({
@@ -180,6 +182,33 @@ export default defineContentConfig({
           message: z.string(),
           lastUpdated: z.string(),
         }),
+        whoIWorkWith: z.array(
+          z.object({
+            name: z.string(),
+            icon: z.string(),
+            description: z.string(),
+          }),
+        ).optional(),
+        pricingRanges: z.object({
+          mvp: z.object({
+            min: z.number(),
+            max: z.number(),
+            currency: z.string(),
+            description: z.string(),
+          }),
+          architectureAudit: z.object({
+            min: z.number(),
+            max: z.number(),
+            currency: z.string(),
+            description: z.string(),
+          }),
+          hourly: z.object({
+            min: z.number(),
+            max: z.number(),
+            currency: z.string(),
+            description: z.string(),
+          }),
+        }).optional(),
       }),
     }),
     projects: defineCollection({
@@ -284,6 +313,22 @@ export default defineContentConfig({
           z.object({
             title: z.string(),
             items: z.array(z.string()),
+          }),
+        ),
+      }),
+    }),
+    caseStudies: defineCollection({
+      type: "data",
+      source: "case-studies.{json,yml,yaml}",
+      schema: z.object({
+        caseStudies: z.array(
+          z.object({
+            id: z.number(),
+            problem: z.string().max(150),
+            solution: z.string().max(150),
+            metric: z.string().max(150),
+            link: z.string(),
+            projectRef: z.number().optional(),
           }),
         ),
       }),

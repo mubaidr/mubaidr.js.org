@@ -66,13 +66,13 @@ const { data: profileData } = await useProfileData()
             {{ profileData?.availability?.cta?.text }}
           </UButton>
           <UButton
-            to="/services"
+            to="/projects"
             variant="outline"
             size="xl"
             icon="i-ph-list"
             class="px-8"
           >
-            View Services
+            View Projects
           </UButton>
         </div>
 
@@ -83,6 +83,11 @@ const { data: profileData } = await useProfileData()
             available for
             {{ profileData?.availability?.startDate }}
           </UBadge>
+        </div>
+
+        <!-- Timezone Display -->
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          Working from {{ profileData?.availability?.timezone }}
         </div>
       </div>
     </UCard>
