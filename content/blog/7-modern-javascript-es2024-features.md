@@ -8,6 +8,11 @@ dateUpdated: 2024-03-15T10:00:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 featured: false
+tags:
+  - JavaScript
+  - ES2024
+  - Modern JavaScript
+readingTime: "10 min read"
 socialImage:
   src: /img/blog/7-modern-javascript-es2024-features/banner.svg
   mime: svg
@@ -18,7 +23,7 @@ socialImage:
 
 ## Modern JavaScript ES2024 Features Every Developer Should Know
 
-JavaScript continues to evolve at a rapid pace, and ES2024 brings some exciting new features that promise to make our code more expressive, performant, and maintainable. As a full-stack developer who's been working with JavaScript for over a decade, I'm excited to share the most impactful features that are already changing how we write modern applications.
+JavaScript continues to evolve at a rapid pace, and ES2024 brings some exciting new features that promise to make our code more expressive, performant, and maintainable. As a full-stack developer who's been working with JavaScript for 13+ years, I'm excited to share the most impactful features that are already changing how we write modern applications.
 
 ## The Temporal API: Finally, Proper Date Handling
 

@@ -2,8 +2,8 @@ name: Muhammad Ubaid R.
 title: Senior Software Engineer | Full-Stack Developer | DevOps Enthusiast
 avatar: /mubaidr.png
 description: Delivering robust, scalable, and user-focused software solutions that drive business success.
-heroHeadline: Delivered 125+ projects with 100% client satisfaction — 13 years building scalable systems
-tagline: Senior Software Engineer building scalable systems and developer tools. Open source maintainer.
+heroHeadline: Senior Software Engineer building scalable systems and developer tools. Open source maintainer
+tagline: Delivered 125+ projects with 100% client satisfaction. 13 years building scalable systems.
 social:
   - name: GitHub
     url: https://github.com/mubaidr
@@ -31,8 +31,8 @@ availability:
   startDate: April 2025
   startDateContext: "Next opening"
   description: Open to freelance, consulting, and collaborative projects. Flexible with remote, async, and agile workflows. Comfortable working across time zones and with distributed teams.
-  responseTime: 6h
-  timezone: UTC+5 (Pakistan Standard Time)
+  responseTime: 3h
+  timezone: GMT+5
   slotsAvailable: 3
   paymentTerms: "20% upfront, rest on milestones"
   cta:

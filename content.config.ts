@@ -49,6 +49,10 @@ export default defineContentConfig({
           image: z.string().optional(),
           tags: z.array(z.string()).optional(),
           featured: z.boolean().optional().default(false),
+          // Series fields for content organization
+          series: z.string().optional(),
+          seriesOrder: z.number().optional(),
+          seriesDescription: z.string().optional(),
         }),
       }),
     ),
@@ -182,33 +186,37 @@ export default defineContentConfig({
           message: z.string(),
           lastUpdated: z.string(),
         }),
-        whoIWorkWith: z.array(
-          z.object({
-            name: z.string(),
-            icon: z.string(),
-            description: z.string(),
-          }),
-        ).optional(),
-        pricingRanges: z.object({
-          mvp: z.object({
-            min: z.number(),
-            max: z.number(),
-            currency: z.string(),
-            description: z.string(),
-          }),
-          architectureAudit: z.object({
-            min: z.number(),
-            max: z.number(),
-            currency: z.string(),
-            description: z.string(),
-          }),
-          hourly: z.object({
-            min: z.number(),
-            max: z.number(),
-            currency: z.string(),
-            description: z.string(),
-          }),
-        }).optional(),
+        whoIWorkWith: z
+          .array(
+            z.object({
+              name: z.string(),
+              icon: z.string(),
+              description: z.string(),
+            }),
+          )
+          .optional(),
+        pricingRanges: z
+          .object({
+            mvp: z.object({
+              min: z.number(),
+              max: z.number(),
+              currency: z.string(),
+              description: z.string(),
+            }),
+            architectureAudit: z.object({
+              min: z.number(),
+              max: z.number(),
+              currency: z.string(),
+              description: z.string(),
+            }),
+            hourly: z.object({
+              min: z.number(),
+              max: z.number(),
+              currency: z.string(),
+              description: z.string(),
+            }),
+          })
+          .optional(),
       }),
     }),
     projects: defineCollection({
@@ -243,10 +251,12 @@ export default defineContentConfig({
             type: z.string().optional(),
             myRole: z.string().optional(),
             teamSize: z.number().optional(),
-            client: z.object({
-              name: z.string(),
-              industry: z.string().optional(),
-            }).optional(),
+            client: z
+              .object({
+                name: z.string(),
+                industry: z.string().optional(),
+              })
+              .optional(),
             businessImpact: z.record(z.string()).optional(),
             testimonials: z.array(z.number()).optional(),
           }),

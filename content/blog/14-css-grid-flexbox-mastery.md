@@ -9,6 +9,11 @@ dateUpdated: 2024-01-12T14:20:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 featured: false
+tags:
+  - CSS
+  - Grid
+  - Flexbox
+readingTime: "14 min read"
 socialImage:
   src: /img/blog/14-css-grid-flexbox-mastery/banner.svg
   mime: svg

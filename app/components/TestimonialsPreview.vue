@@ -17,7 +17,11 @@ const { data: testimonialsData } = await useTestimonialsData()
       <div v-if="testimonialsData && testimonialsData.length > 0">
         <UCard>
           <div class="grid gap-6 md:grid-cols-2">
-            <div v-for="testimonial in testimonialsData" :key="testimonial.name" class="space-y-2">
+            <div
+              v-for="testimonial in testimonialsData"
+              :key="testimonial.name"
+              class="space-y-2"
+            >
               <p class="text-neutral-700 dark:text-neutral-300 leading-relaxed">
                 "{{ testimonial.quote }}"
               </p>

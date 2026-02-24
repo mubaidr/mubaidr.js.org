@@ -4,29 +4,17 @@ const { data: profileData } = await useProfileData()
 </script>
 
 <template>
-  <div v-if="profileData?.availability" class="flex flex-wrap items-center justify-center gap-4">
+  <div v-if="profileData?.availability" class="flex flex-wrap items-center justify-center gap-4 text-sm text-neutral">
     <!-- Timezone -->
     <div class="flex items-center gap-2">
-      <UIcon
-        name="i-ph-globe"
-        size="1.25em"
-        class="text-primary-500"
-      />
-      <UBadge variant="subtle" size="md">
-        {{ profileData.availability.timezone }}
-      </UBadge>
+      <UIcon name="i-ph-globe" />
+      {{ profileData.availability.timezone }}
     </div>
 
     <!-- Response Time -->
     <div class="flex items-center gap-2">
-      <UIcon
-        name="i-ph-clock"
-        size="1.25em"
-        class="text-primary-500"
-      />
-      <UBadge variant="subtle" size="md">
-        {{ profileData.availability.responseTime }} Response
-      </UBadge>
+      <UIcon name="i-ph-clock" />
+      {{ profileData.availability.responseTime }} Response
     </div>
   </div>
 </template>

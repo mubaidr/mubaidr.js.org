@@ -8,6 +8,11 @@ dateUpdated: 2024-01-20T09:15:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 featured: false
+tags:
+  - Performance
+  - Web Vitals
+  - Optimization
+readingTime: "20 min read"
 socialImage:
   src: /img/blog/9-web-performance-optimization-2024/banner.svg
   mime: svg

@@ -39,44 +39,43 @@ if (profileData.value) {
 
 <template>
   <div>
-    <section v-if="profileData" class="py-36 md:py-48">
-      <div class="max-w-4xl mx-auto px-4">
-        <div class="flex flex-col items-center text-center space-y-8">
+    <section v-if="profileData" class="py-24 md:py-48">
+      <div class="max-w-4xl mx-auto px-4 space-y-12">
+        <div class="flex flex-col items-center text-center space-y-6">
           <!-- Name as Hero -->
-          <h1
-            class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 dark:text-white leading-tight">
+          <h1>
             {{ profileData.name }}
           </h1>
 
-          <!-- Results-Focused Headline -->
-          <p
-            v-if="profileData.heroHeadline"
-            class="text-2xl md:text-3xl lg:text-4xl font-semibold text-primary-600 dark:text-primary-400 max-w-3xl leading-relaxed">
+          <!-- Tagline as Subheading -->
+          <p v-if="profileData.heroHeadline" class="text-2xl">
             {{ profileData.heroHeadline }}
           </p>
 
-          <!-- Tagline as Subheading -->
-          <p class="text-xl md:text-2xl text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
-            {{ profileData.tagline }}
-          </p>
-
-          <!-- Action Buttons -->
-          <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-            <UButton to="/contact" size="lg" icon="i-ph-envelope">
-              Let's Talk
-            </UButton>
-            <UButton to="/projects" variant="outline" size="lg" icon="i-ph-folder-open">
-              View Projects
-            </UButton>
+          <!-- Results-Focused Headline -->
+          <div class="max-w-4xl mx-auto text-center">
+            <UAlert color="secondary" variant="subtle" size="xl" :title="profileData.tagline">{{ profileData.tagline }}
+            </UAlert>
           </div>
 
           <!-- Social Links (Subtle) -->
-          <div class="flex gap-3 text-neutral-500">
-            <ULink
-v-for="social in profileData.social" :key="social.name" :to="social.url" external
-              :title="social.name" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+          <div class="flex gap-3 items-center justify-center">
+            <ULink v-for="social in profileData.social" :key="social.name" :to="social.url" external
+              :title="social.name" class="hover:text-primary dark:hover:text-primary transition-colors">
               <UIcon :name="social.icon" size="1.5em" />
             </ULink>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center text-center space-y-6">
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+            <UButton to="/contact" size="xl" icon="i-ph-envelope" class="px-6">
+              Let's Talk
+            </UButton>
+            <!-- <UButton to="/projects" variant="outline" size="lg" icon="i-ph-folder-open">
+              View Projects
+            </UButton> -->
           </div>
 
           <!-- Availability Info -->
@@ -87,7 +86,7 @@ v-for="social in profileData.social" :key="social.name" :to="social.url" externa
 
     <div class="space-y-32 pb-20">
       <LazyCompactCaseStudies />
-      <LazyWhoIWorkWith />
+      <!-- <LazyWhoIWorkWith /> -->
       <TestimonialsPreview />
       <CallToAction />
       <LazyRecentBlogPosts />

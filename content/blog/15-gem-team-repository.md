@@ -9,6 +9,7 @@ tags:
   - Copilot
   - AI
   - Open Source
+readingTime: "2 min read"
 image: /img/blog/15-gem-team-repository/banner.svg
 ---
 

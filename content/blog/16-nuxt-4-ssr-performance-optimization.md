@@ -4,7 +4,13 @@ description: "Discover proven strategies to optimize server-side rendering perfo
 date: 2026-02-22T12:00:00.000Z
 dateUpdated: 2026-02-22T12:00:00.000Z
 author: mubaidr
-tags: ["Nuxt", "Vue.js", "SSR", "Performance", "Optimization"]
+tags:
+  - Nuxt
+  - Vue.js
+  - SSR
+  - Performance
+  - Optimization
+readingTime: "8 min read"
 featured: true
 socialImage:
   src: /img/blog/16-nuxt-4-ssr-performance-optimization/banner.svg
@@ -12,6 +18,9 @@ socialImage:
   alt: "Nuxt 4 SSR Performance Optimization - Lightning-fast page loads with speedometer and lightning bolt icons on green gradient background"
   width: 1200
   height: 630
+series: "Vue.js Mastery"
+seriesOrder: 3
+seriesDescription: "Master Vue 3 from composition API to advanced patterns"
 ---
 
 ## Nuxt 4 SSR Performance Optimization
@@ -34,10 +43,13 @@ Caching is the most impactful optimization technique. Nuxt 4 provides multiple c
 // In nuxt.config.ts
 export default defineNuxtConfig({
   routeRules: {
-    '/blog/**': { isr: 86400 }, // 24 hours
-    '/': { isr: 300 }, // 5 minutes
-    '/api/**': { cors: true, headers: { 'Cache-Control': 'public, max-age=3600' } }
-  }
+    "/blog/**": { isr: 86400 }, // 24 hours
+    "/": { isr: 300 }, // 5 minutes
+    "/api/**": {
+      cors: true,
+      headers: { "Cache-Control": "public, max-age=3600" },
+    },
+  },
 })
 ```
 

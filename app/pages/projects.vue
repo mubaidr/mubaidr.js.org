@@ -14,7 +14,8 @@ const { data: testimonialsData } = await useTestimonialsData()
 // SEO Meta
 const url = `${site.url}/projects`
 const title = "Projects - Muhammad Ubaid Raza"
-const description = "Explore my portfolio of web applications, browser extensions, and open source contributions."
+const description =
+  "Explore my portfolio of web applications, browser extensions, and open source contributions."
 
 useSeoMeta({
   title,
@@ -63,10 +64,12 @@ const filteredProjects = computed(() => {
 // Get testimonials for a specific project
 const getProjectTestimonials = (project: { testimonials?: number[] }) => {
   if (!project.testimonials || !Array.isArray(project.testimonials)) return []
-  return testimonialsData.value?.filter((t) => {
-    const testimonialId = typeof t.id === 'number' ? t.id : parseInt(t.id, 10)
-    return project.testimonials?.includes(testimonialId)
-  }) || []
+  return (
+    testimonialsData.value?.filter((t) => {
+      const testimonialId = typeof t.id === "number" ? t.id : parseInt(t.id, 10)
+      return project.testimonials?.includes(testimonialId)
+    }) || []
+  )
 }
 </script>
 
@@ -86,9 +89,12 @@ const getProjectTestimonials = (project: { testimonials?: number[] }) => {
       <section class="flex justify-center">
         <div class="flex flex-wrap justify-center gap-2">
           <UButton
-v-for="category in projectsData?.categories" :key="category.name"
-            :variant="selectedCategory === category.name ? 'solid' : 'outline'" size="sm"
-            @click="selectedCategory = category.name">
+            v-for="category in projectsData?.categories"
+            :key="category.name"
+            :variant="selectedCategory === category.name ? 'solid' : 'outline'"
+            size="sm"
+            @click="selectedCategory = category.name"
+          >
             {{ category.name }}
           </UButton>
         </div>
@@ -107,7 +113,12 @@ v-for="category in projectsData?.categories" :key="category.name"
                       <h3 class="text-lg font-semibold">
                         {{ project.title }}
                       </h3>
-                      <UBadge v-if="project.type" :label="project.type" variant="subtle" size="xs" />
+                      <UBadge
+                        v-if="project.type"
+                        :label="project.type"
+                        variant="subtle"
+                        size="xs"
+                      />
                     </div>
                     <p class="text-sm text-neutral-600 dark:text-neutral-400">
                       {{ project.description }}
@@ -118,59 +129,106 @@ v-for="category in projectsData?.categories" :key="category.name"
 
                 <!-- Role & Team -->
                 <div
-v-if="project.myRole"
-                  class="flex items-center gap-3 text-xs text-neutral-600 dark:text-neutral-400">
+                  v-if="project.myRole"
+                  class="flex items-center gap-3 text-xs text-neutral-600 dark:text-neutral-400"
+                >
                   <span class="flex items-center gap-1">
                     <UIcon name="i-ph-user" />
                     {{ project.myRole }}
                   </span>
                   <span v-if="project.teamSize" class="flex items-center gap-1">
                     <UIcon name="i-ph-users" />
-                    {{ project.teamSize }} {{ project.teamSize === 1 ? 'person' : 'people' }}
+                    {{ project.teamSize }}
+                    {{ project.teamSize === 1 ? "person" : "people" }}
                   </span>
                 </div>
 
                 <!-- Client Info -->
-                <div v-if="project.client" class="p-3 bg-neutral-50 dark:bg-neutral-800/50 rounded-lg">
-                  <div class="text-xs text-neutral-600 dark:text-neutral-400 mb-1">Client</div>
+                <div
+                  v-if="project.client"
+                  class="p-3 bg-neutral-50 dark:bg-neutral-800/50 rounded-lg"
+                >
+                  <div
+                    class="text-xs text-neutral-600 dark:text-neutral-400 mb-1"
+                  >
+                    Client
+                  </div>
                   <div class="font-medium">{{ project.client.name }}</div>
-                  <div v-if="project.client.industry" class="text-xs text-neutral-500 dark:text-neutral-500">
+                  <div
+                    v-if="project.client.industry"
+                    class="text-xs text-neutral-500 dark:text-neutral-500"
+                  >
                     {{ project.client.industry }}
                   </div>
                 </div>
 
                 <!-- Business Impact Metrics -->
                 <div v-if="project.businessImpact" class="space-y-2">
-                  <div class="text-xs font-medium text-neutral-700 dark:text-neutral-300">Business Impact</div>
+                  <div
+                    class="text-xs font-medium text-neutral-700 dark:text-neutral-300"
+                  >
+                    Business Impact
+                  </div>
                   <div class="grid grid-cols-2 gap-2">
                     <div
-v-for="(value, key) in project.businessImpact" :key="key"
-                      class="p-2 bg-primary-50 dark:bg-primary-950/30 rounded">
-                      <div class="text-[10px] text-neutral-600 dark:text-neutral-400 capitalize">
-                        {{ key.replace(/([A-Z])/g, ' $1').trim() }}
+                      v-for="(value, key) in project.businessImpact"
+                      :key="key"
+                      class="p-2 bg-primary-50 dark:bg-primary-950/30 rounded"
+                    >
+                      <div
+                        class="text-[10px] text-neutral-600 dark:text-neutral-400 capitalize"
+                      >
+                        {{ key.replace(/([A-Z])/g, " $1").trim() }}
                       </div>
-                      <div class="text-sm font-semibold text-primary-700 dark:text-primary-300">{{ value }}</div>
+                      <div
+                        class="text-sm font-semibold text-primary-700 dark:text-primary-300"
+                      >
+                        {{ value }}
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <!-- Client Testimonials -->
-                <div v-if="getProjectTestimonials(project).length > 0" class="space-y-2">
-                  <div class="text-xs font-medium text-neutral-700 dark:text-neutral-300">Client Feedback</div>
-                  <div class="p-3 bg-neutral-50 dark:bg-neutral-800/50 rounded-lg">
+                <div
+                  v-if="getProjectTestimonials(project).length > 0"
+                  class="space-y-2"
+                >
+                  <div
+                    class="text-xs font-medium text-neutral-700 dark:text-neutral-300"
+                  >
+                    Client Feedback
+                  </div>
+                  <div
+                    class="p-3 bg-neutral-50 dark:bg-neutral-800/50 rounded-lg"
+                  >
                     <div
-v-for="testimonial in getProjectTestimonials(project).slice(0, 1)" :key="testimonial.id"
-                      class="space-y-2">
-                      <p class="text-sm italic text-neutral-600 dark:text-neutral-400">
+                      v-for="testimonial in getProjectTestimonials(
+                        project,
+                      ).slice(0, 1)"
+                      :key="testimonial.id"
+                      class="space-y-2"
+                    >
+                      <p
+                        class="text-sm italic text-neutral-600 dark:text-neutral-400"
+                      >
                         "{{ testimonial.quote }}"
                       </p>
                       <div class="flex items-center gap-2">
-                        <div v-if="testimonial.avatar" class="w-6 h-6 rounded-full overflow-hidden">
-                          <img :src="testimonial.avatar" :alt="testimonial.name" class="w-full h-full object-cover">
+                        <div
+                          v-if="testimonial.avatar"
+                          class="w-6 h-6 rounded-full overflow-hidden"
+                        >
+                          <img
+                            :src="testimonial.avatar"
+                            :alt="testimonial.name"
+                            class="w-full h-full object-cover"
+                          />
                         </div>
                         <div class="text-xs">
                           <div class="font-medium">{{ testimonial.name }}</div>
-                          <div class="text-neutral-500 dark:text-neutral-500">{{ testimonial.title }},
+                          <div class="text-neutral-500 dark:text-neutral-500">
+                            {{ testimonial.title }},
                             {{ testimonial.company }}
                           </div>
                         </div>
@@ -182,28 +240,56 @@ v-for="testimonial in getProjectTestimonials(project).slice(0, 1)" :key="testimo
                 <!-- Technologies -->
                 <div class="flex flex-wrap gap-1.5">
                   <UBadge
-v-for="tech in project.technologies.slice(0, 4)" :key="tech" :label="tech" variant="outline"
-                    size="sm" />
+                    v-for="tech in project.technologies.slice(0, 4)"
+                    :key="tech"
+                    :label="tech"
+                    variant="outline"
+                    size="sm"
+                  />
                   <UBadge
-v-if="project.technologies.length > 4" :label="`+${project.technologies.length - 4}`"
-                    variant="subtle" size="sm" />
+                    v-if="project.technologies.length > 4"
+                    :label="`+${project.technologies.length - 4}`"
+                    variant="subtle"
+                    size="sm"
+                  />
                 </div>
 
                 <!-- Links -->
-                <div v-if="Object.keys(project.links).length > 0" class="flex flex-wrap items-center gap-2 pt-2">
+                <div
+                  v-if="Object.keys(project.links).length > 0"
+                  class="flex flex-wrap items-center gap-2 pt-2"
+                >
                   <UButton
-v-if="project.links.github" :to="project.links.github" external variant="outline" size="sm"
-                    icon="i-ph-github-logo" trailing>
+                    v-if="project.links.github"
+                    :to="project.links.github"
+                    external
+                    variant="outline"
+                    size="sm"
+                    icon="i-ph-github-logo"
+                    trailing
+                  >
                     GitHub
                   </UButton>
                   <UButton
-v-if="project.links.npm" :to="project.links.npm" external variant="outline" size="sm"
-                    icon="i-ph-package" trailing>
+                    v-if="project.links.npm"
+                    :to="project.links.npm"
+                    external
+                    variant="outline"
+                    size="sm"
+                    icon="i-ph-package"
+                    trailing
+                  >
                     npm
                   </UButton>
                   <UButton
-v-if="project.links.documentation" :to="project.links.documentation" external
-                    variant="outline" size="sm" icon="i-ph-book-open" trailing>
+                    v-if="project.links.documentation"
+                    :to="project.links.documentation"
+                    external
+                    variant="outline"
+                    size="sm"
+                    icon="i-ph-book-open"
+                    trailing
+                  >
                     Docs
                   </UButton>
                 </div>
@@ -218,7 +304,13 @@ v-if="project.links.documentation" :to="project.links.documentation" external
         <p class="text-neutral-600 dark:text-neutral-400 mb-6">
           Explore my complete open source portfolio on GitHub
         </p>
-        <UButton to="https://github.com/mubaidr" external icon="i-ph-github-logo" variant="outline" size="lg">
+        <UButton
+          to="https://github.com/mubaidr"
+          external
+          icon="i-ph-github-logo"
+          variant="outline"
+          size="lg"
+        >
           View GitHub Profile
         </UButton>
       </section>

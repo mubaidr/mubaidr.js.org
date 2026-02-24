@@ -4,9 +4,17 @@ description: "Discover the most effective patterns and practices for using Vue 3
 date: 2024-12-12T12:00:00.000Z
 dateUpdated: 2024-12-12T12:00:00.000Z
 author: mubaidr
-tags: ["Vue.js", "JavaScript", "Frontend", "Composition API"]
+tags:
+  - Vue.js
+  - JavaScript
+  - Frontend
+  - Composition API
+readingTime: "10 min read"
 featured: true
 image: /img/blog/5-vue-3-composition-api-best-practices/banner.svg
+series: "Vue.js Mastery"
+seriesOrder: 2
+seriesDescription: "Master Vue 3 from composition API to advanced patterns"
 ---
 
 ## Vue 3 Composition API: Best Practices for Modern Development

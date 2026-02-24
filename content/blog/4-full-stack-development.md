@@ -14,6 +14,11 @@ dateUpdated: 2024-11-19T12:00:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 featured: false
+tags:
+  - Node.js
+  - Vue.js
+  - Full Stack
+readingTime: "25 min read"
 ---
 
 ## Full Stack Development with Node.js and Vue.js: A Complete Guide

@@ -26,7 +26,9 @@ useHead({
       <!-- Brief Intro -->
       <section>
         <h1>About Me</h1>
-        <p class="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed">
+        <p
+          class="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed"
+        >
           I'm a senior software engineer with 12+ years of experience building
           scalable systems and developer tools. I'm passionate about clean code,
           developer ergonomics, and open source.
@@ -43,9 +45,16 @@ useHead({
         </div>
 
         <div v-if="profileData?.currentFocus" class="grid gap-6 md:grid-cols-3">
-          <UCard v-for="(focus, index) in profileData.currentFocus" :key="index" class="h-full">
+          <UCard
+            v-for="(focus, index) in profileData.currentFocus"
+            :key="index"
+            class="h-full"
+          >
             <div class="space-y-3">
-              <UIcon name="i-ph-target" class="text-2xl text-primary-600 dark:text-primary-400" />
+              <UIcon
+                name="i-ph-target"
+                class="text-2xl text-primary-600 dark:text-primary-400"
+              />
               <h3 class="font-semibold">{{ focus }}</h3>
             </div>
           </UCard>
@@ -86,7 +95,13 @@ useHead({
         <p class="text-neutral-600 dark:text-neutral-400 mb-6">
           Want to see my complete professional history?
         </p>
-        <UButton to="/cv.pdf" external icon="i-ph-download-simple" variant="outline" size="lg">
+        <UButton
+          to="/cv.pdf"
+          external
+          icon="i-ph-download-simple"
+          variant="outline"
+          size="lg"
+        >
           Download My Full CV
         </UButton>
       </section>

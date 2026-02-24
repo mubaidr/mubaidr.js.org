@@ -1,6 +1,7 @@
 <script setup lang="ts">
 // Fetch case studies data using composable with loading state
-const { data: caseStudiesData, pending: isLoading } = await useCompactCaseStudies()
+const { data: caseStudiesData, pending: isLoading } =
+  await useCompactCaseStudies()
 
 // Optional props for customization
 interface Props {
@@ -33,17 +34,17 @@ withDefaults(defineProps<Props>(), {
     </div>
 
     <!-- Case Studies -->
-    <div v-else-if="caseStudiesData?.caseStudies && caseStudiesData.caseStudies.length > 0" class="grid gap-6 md:grid-cols-3">
-      <UCard
-        v-for="study in caseStudiesData.caseStudies.slice(0, count)"
-        :key="study.id"
-        class="h-full hover:shadow-lg transition-shadow"
-      >
+    <div v-else-if="
+      caseStudiesData?.caseStudies && caseStudiesData.caseStudies.length > 0
+    " class="grid gap-6 md:grid-cols-3">
+      <UCard v-for="study in caseStudiesData.caseStudies.slice(0, count)" :key="study.id"
+        class="h-full hover:shadow-lg transition-shadow">
         <div class="space-y-4">
           <!-- Problem -->
           <div class="flex items-start gap-3">
-            <div class="shrink-0 w-8 h-8 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
-              <UIcon name="i-ph-warning-circle" class="text-red-600 dark:text-red-400" size="1.25em" />
+            <div
+              class="shrink-0 w-8 h-8 rounded-full bg-warning-100 dark:bg-warning-900/30 flex items-center justify-center">
+              <UIcon name="i-ph-warning-circle" class="text-warning-600 dark:text-warning-400" size="1.25em" />
             </div>
             <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
               {{ study.problem }}
@@ -66,7 +67,7 @@ withDefaults(defineProps<Props>(), {
           </div>
 
           <!-- Metric -->
-          <div class="p-4 bg-primary-50 dark:bg-primary-950/30 rounded-lg">
+          <div class="p-4 bg-primary-50 dark:bg-primary-950/30 rounded-lg mt-12">
             <div class="flex items-center gap-2">
               <UIcon name="i-ph-chart-line-up" class="text-primary-600 dark:text-primary-400" size="1.5em" />
               <span class="font-semibold text-primary-700 dark:text-primary-300">

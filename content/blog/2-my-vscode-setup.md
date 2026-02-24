@@ -16,6 +16,14 @@ socialImage:
   width: 1200
   height: 630
 featured: true
+tags:
+  - VSCode
+  - Productivity
+  - Tools
+readingTime: "12 min read"
+series: "TypeScript Mastery"
+seriesOrder: 1
+seriesDescription: "Master TypeScript from development setup to advanced enterprise patterns"
 ---
 
 ## My VSCode Setup: A Journey to Minimal Perfection
@@ -228,3 +236,13 @@ I encourage you to try this setup and then customize it to fit your specific nee
 What aspects of your development environment matter most to you? I'd love to hear about your own setup and any improvements you make to this one.
 
 Happy coding, and may your development environment bring you as much joy as it brings me!
+
+---
+
+## Continue Your TypeScript Journey
+
+This post is part 1 of the **TypeScript Mastery** series. Continue learning:
+
+1. **[My VSCode Setup](/blog/2-my-vscode-setup)** _(You are here)_ - Development environment setup
+2. **[TypeScript + Node.js in Production](/blog/6-typescript-nodejs-production-guide)** - Building production-ready TypeScript applications
+3. **[Advanced TypeScript Patterns](/blog/11-typescript-advanced-patterns)** - Enterprise-level TypeScript patterns and techniques

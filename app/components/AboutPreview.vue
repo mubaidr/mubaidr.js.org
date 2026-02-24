@@ -10,7 +10,9 @@ const { data: profileData } = await useProfileData()
         <h2 class="text-3xl md:text-4xl font-bold mb-6">
           Building Digital Solutions That Drive Results
         </h2>
-        <p class="text-lg md:text-xl text-neutral-600 dark:text-neutral-300 leading-relaxed">
+        <p
+          class="text-lg md:text-xl text-neutral-600 dark:text-neutral-300 leading-relaxed"
+        >
           {{ profileData.description }}
         </p>
       </div>
@@ -19,45 +21,67 @@ const { data: profileData } = await useProfileData()
       <div class="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <!-- Technical Excellence -->
         <UPageCard
-title="Technical Excellence"
+          title="Technical Excellence"
           description="Deep technical expertise across full-stack development, DevOps, and modern architectures."
-          icon="i-ph-code-bold" :spotlight="true" :ui="{
-            root: 'text-center'
-          }">
+          icon="i-ph-code-bold"
+          :spotlight="true"
+          :ui="{
+            root: 'text-center',
+          }"
+        >
           <template #footer>
             <div>
-              <div class="text-xl font-bold mb-1">{{ profileData.experience }}+</div>
-              <div class="text-xs uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-semibold">Years
-                Experience</div>
+              <div class="text-xl font-bold mb-1">
+                {{ profileData.experience }}+
+              </div>
+              <div
+                class="text-xs uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-semibold"
+              >
+                Years Experience
+              </div>
             </div>
           </template>
         </UPageCard>
 
         <!-- Proven Results -->
         <UPageCard
-title="Proven Results"
+          title="Proven Results"
           description="Successful projects delivered with exceptional outcomes and measurable impact."
-          icon="i-ph-chart-line-up-bold" :spotlight="true">
+          icon="i-ph-chart-line-up-bold"
+          :spotlight="true"
+        >
           <template #footer>
             <div>
-              <div class="text-xl font-bold mb-1">{{ profileData.projectsDelivered }}+</div>
-              <div class="text-xs uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-semibold">
-                Projects
-                Delivered</div>
+              <div class="text-xl font-bold mb-1">
+                {{ profileData.projectsDelivered }}+
+              </div>
+              <div
+                class="text-xs uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-semibold"
+              >
+                Projects Delivered
+              </div>
             </div>
           </template>
         </UPageCard>
 
         <!-- True Partnership -->
         <UPageCard
-title="True Partnership"
+          title="True Partnership"
           description="I work closely with clients to understand unique needs, ensuring solutions that truly fit their business."
-          icon="i-ph-handshake-bold" :spotlight="true" class="text-center">
+          icon="i-ph-handshake-bold"
+          :spotlight="true"
+          class="text-center"
+        >
           <template #footer>
             <div>
-              <div class="text-xl font-bold mb-1">{{ profileData.clientSatisfaction }}%</div>
-              <div class="text-xs uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-semibold">Client
-                Satisfaction</div>
+              <div class="text-xl font-bold mb-1">
+                {{ profileData.clientSatisfaction }}%
+              </div>
+              <div
+                class="text-xs uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-semibold"
+              >
+                Client Satisfaction
+              </div>
             </div>
           </template>
         </UPageCard>

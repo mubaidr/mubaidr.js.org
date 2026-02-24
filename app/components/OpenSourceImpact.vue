@@ -26,7 +26,11 @@ const openSourceProjects = [
           </div>
 
           <div class="grid gap-4 md:grid-cols-2">
-            <div v-for="project in openSourceProjects" :key="project.name" class="flex items-start gap-3">
+            <div
+              v-for="project in openSourceProjects"
+              :key="project.name"
+              class="flex items-start gap-3"
+            >
               <UIcon name="i-ph-github-logo" class="text-neutral-400 mt-0.5" />
               <div class="flex-1">
                 <h3 class="font-semibold mb-1">{{ project.name }}</h3>
@@ -37,10 +41,16 @@ const openSourceProjects = [
             </div>
           </div>
 
-          <div class="text-center pt-4 border-t border-neutral-200 dark:border-neutral-800">
+          <div
+            class="text-center pt-4 border-t border-neutral-200 dark:border-neutral-800"
+          >
             <UButton
-v-if="profileData?.social" :to="profileData.social.find((s) => s.name === 'GitHub')?.url" external
-              icon="i-ph-github-logo" variant="outline">
+              v-if="profileData?.social"
+              :to="profileData.social.find((s) => s.name === 'GitHub')?.url"
+              external
+              icon="i-ph-github-logo"
+              variant="outline"
+            >
               View All on GitHub
             </UButton>
           </div>

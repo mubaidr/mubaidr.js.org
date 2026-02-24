@@ -8,6 +8,11 @@ dateUpdated: 2024-02-28T14:30:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 featured: false
+tags:
+  - React
+  - Server Components
+  - Performance
+readingTime: "14 min read"
 socialImage:
   src: /img/blog/8-react-server-components-deep-dive/banner.svg
   mime: svg

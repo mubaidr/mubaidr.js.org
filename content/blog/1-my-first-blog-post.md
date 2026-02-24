@@ -10,6 +10,11 @@ dateUpdated: 2024-07-16T12:00:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 featured: false
+tags:
+  - Web Development
+  - Freelancing
+  - Community
+readingTime: "6 min read"
 socialImage:
   src: /img/blog/1-my-first-blog-post/banner.svg
   mime: svg
@@ -20,7 +25,7 @@ socialImage:
 
 ## My Journey into Tech Blogging
 
-Welcome to my corner of the internet! I'm Muhammad Ubaid Raza, a passionate software engineer with over 8 years of experience navigating the ever-evolving world of technology. After years of learning, building, and problem-solving, I've decided to create this blog as a way to share my knowledge, experiences, and insights with fellow developers and tech enthusiasts.
+Welcome to my corner of the internet! I'm Muhammad Ubaid Raza, a passionate software engineer with 13+ years of experience navigating the ever-evolving world of technology. After years of learning, building, and problem-solving, I've decided to create this blog as a way to share my knowledge, experiences, and insights with fellow developers and tech enthusiasts.
 
 ## The Story Behind This Blog
 

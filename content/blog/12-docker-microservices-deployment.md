@@ -8,6 +8,11 @@ dateUpdated: 2024-06-18T13:30:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 featured: false
+tags:
+  - Docker
+  - Microservices
+  - DevOps
+readingTime: "18 min read"
 socialImage:
   src: /img/blog/12-docker-microservices-deployment/banner.svg
   mime: svg

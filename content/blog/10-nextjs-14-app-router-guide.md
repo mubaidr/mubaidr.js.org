@@ -8,6 +8,11 @@ dateUpdated: 2024-04-10T11:20:00.000Z
 author: Muhammad Ubaid Raza
 authorUrl: /
 featured: false
+tags:
+  - Next.js
+  - React
+  - App Router
+readingTime: "16 min read"
 socialImage:
   src: /img/blog/10-nextjs-14-app-router-guide/banner.svg
   mime: svg

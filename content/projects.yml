@@ -13,7 +13,7 @@ projects:
     category: Web Application
     featured: true
     status: active
-    startDate: '2024-01-01'
+    startDate: "2024-01-01"
     endDate: null
     links:
       demo: https://midnightrun.com
@@ -68,7 +68,7 @@ projects:
     category: Web Application
     featured: true
     status: active
-    startDate: '2024-06-01'
+    startDate: "2024-06-01"
     endDate: null
     links:
       demo: https://paragonrentals.ai
@@ -134,7 +134,7 @@ projects:
     category: SaaS
     featured: true
     status: active
-    startDate: '2024-01-01'
+    startDate: "2024-01-01"
     endDate: null
     links:
       demo: https://paragonsquare.ai
@@ -191,7 +191,7 @@ projects:
     category: SaaS
     featured: true
     status: active
-    startDate: '2024-03-01'
+    startDate: "2024-03-01"
     endDate: null
     links: {}
     stats:
@@ -249,7 +249,7 @@ projects:
     category: SaaS
     featured: true
     status: active
-    startDate: '2024-05-01'
+    startDate: "2024-05-01"
     endDate: null
     links:
       demo: https://demo.example.com
@@ -311,7 +311,7 @@ projects:
     category: Development Tools
     featured: true
     status: active
-    startDate: '2023-06-01'
+    startDate: "2023-06-01"
     endDate: null
     links:
       github: https://github.com/mubaidr/parallel-automation-framework
@@ -369,7 +369,7 @@ projects:
     category: Development Tools
     featured: true
     status: active
-    startDate: '2024-08-01'
+    startDate: "2024-08-01"
     endDate: null
     links:
       demo: https://chrome.google.com/webstore
@@ -429,7 +429,7 @@ projects:
     category: Development Tools
     featured: true
     status: active
-    startDate: '2024-09-01'
+    startDate: "2024-09-01"
     endDate: null
     links:
       demo: https://chrome.google.com/webstore
@@ -486,15 +486,15 @@ projects:
     category: Development Tools
     featured: true
     status: active
-    startDate: '2021-08-10'
+    startDate: "2021-08-10"
     endDate: null
     links:
       github: https://github.com/mubaidr/vue-browser-extension-template
       documentation: https://github.com/mubaidr/vue-browser-extension-template#readme
     stats:
-      stars: '800'
+      stars: "800"
       users: 10k+
-      forks: '120'
+      forks: "120"
       downloads: 25k+
     features:
       - Cross-browser compatibility
@@ -531,8 +531,8 @@ projects:
     category: Web Application
     featured: false
     status: completed
-    startDate: '2021-09-01'
-    endDate: '2022-02-28'
+    startDate: "2021-09-01"
+    endDate: "2022-02-28"
     links: {}
     stats:
       concurrent_users: 5k+
@@ -577,12 +577,12 @@ projects:
     category: Development Tools
     featured: false
     status: completed
-    startDate: '2022-01-10'
-    endDate: '2022-05-20'
+    startDate: "2022-01-10"
+    endDate: "2022-05-20"
     links:
       github: https://github.com/mubaidr/api-docs-generator
     stats:
-      stars: '450'
+      stars: "450"
       downloads: 15k+
       users: 3k+
       apis_documented: 1k+

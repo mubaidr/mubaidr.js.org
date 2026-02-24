@@ -17,23 +17,15 @@ const { data: profileData } = await useProfileData()
           <h2 class="text-3xl md:text-4xl font-bold">
             {{ title || "Ready to Start Your Next Project?" }}
           </h2>
-          <p
-            class="max-w-2xl mx-auto text-neutral-600 dark:text-neutral-400 text-lg"
-          >
+          <p class="max-w-2xl mx-auto text-neutral-600 dark:text-neutral-400 text-lg">
             {{ description || profileData?.availability?.description }}
           </p>
         </div>
 
         <!-- Value Points -->
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto py-4"
-        >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto py-4">
           <div class="flex items-center gap-4 justify-center">
-            <UIcon
-              name="i-ph-clock-bold"
-              size="2.5em"
-              class="text-primary-500"
-            />
+            <UIcon name="i-ph-clock" size="2.5em" />
             <div class="text-left">
               <div class="text-sm font-bold">
                 {{ profileData?.availability?.responseTime }} Response
@@ -43,11 +35,7 @@ const { data: profileData } = await useProfileData()
           </div>
 
           <div class="flex items-center gap-4 justify-center">
-            <UIcon
-              name="i-ph-chat-circle-bold"
-              size="2.5em"
-              class="text-primary-500"
-            />
+            <UIcon name="i-ph-chat-circle" size="2.5em" />
             <div class="text-left">
               <div class="text-sm font-bold">Free Consultation</div>
               <div class="text-xs text-neutral-500">No commitment</div>
@@ -57,37 +45,21 @@ const { data: profileData } = await useProfileData()
 
         <!-- Action Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-          <UButton
-            :to="profileData?.availability?.cta?.url"
-            size="xl"
-            icon="i-ph-rocket-launch"
-            class="px-8"
-          >
+          <UButton :to="profileData?.availability?.cta?.url" size="xl" icon="i-ph-rocket-launch" class="px-8">
             {{ profileData?.availability?.cta?.text }}
           </UButton>
-          <UButton
-            to="/projects"
-            variant="outline"
-            size="xl"
-            icon="i-ph-list"
-            class="px-8"
-          >
+          <UButton to="/projects" variant="outline" size="xl" icon="i-ph-list" class="px-8">
             View Projects
           </UButton>
         </div>
 
         <!-- Availability Note -->
         <div v-if="profileData?.availability?.status === 'available'">
-          <UBadge variant="outline" size="xl">
+          <UBadge variant="soft" size="lg" color="neutral">
             Only {{ profileData?.availability?.slotsAvailable }} project slots
             available for
             {{ profileData?.availability?.startDate }}
           </UBadge>
-        </div>
-
-        <!-- Timezone Display -->
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-          Working from {{ profileData?.availability?.timezone }}
         </div>
       </div>
     </UCard>

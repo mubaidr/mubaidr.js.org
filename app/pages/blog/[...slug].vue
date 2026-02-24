@@ -72,10 +72,10 @@ if (blogPostData.value) {
     mainEntityOfPage: url,
     author: authorName
       ? {
-        "@type": "Person",
-        name: authorName,
-        url: authorUrl,
-      }
+          "@type": "Person",
+          name: authorName,
+          url: authorUrl,
+        }
       : undefined,
     publisher: {
       "@type": "Person",
@@ -100,27 +100,51 @@ if (blogPostData.value) {
 
         <div class="flex items-center justify-center gap-6">
           <div class="flex items-center gap-2">
-            <UIcon name="i-ph-user-circle" class="w-5 h-5 text-primary-500 dark:text-primary-400" />
+            <UIcon
+              name="i-ph-user-circle"
+              class="w-5 h-5 text-primary-500 dark:text-primary-400"
+            />
             <span>{{ blogPostData.author }}</span>
           </div>
           <div class="flex items-center gap-2">
-            <UIcon name="i-ph-calendar" class="w-5 h-5 text-primary-500 dark:text-primary-400" />
+            <UIcon
+              name="i-ph-calendar"
+              class="w-5 h-5 text-primary-500 dark:text-primary-400"
+            />
             <span>{{ $formatDate(blogPostData.date) }}</span>
           </div>
         </div>
 
-        <div v-if="blogPostData.tags" class="flex justify-center flex-wrap gap-2">
-          <UBadge v-for="tag in blogPostData.tags" :key="tag" :label="tag" variant="soft" />
+        <div
+          v-if="blogPostData.tags"
+          class="flex justify-center flex-wrap gap-2"
+        >
+          <UBadge
+            v-for="tag in blogPostData.tags"
+            :key="tag"
+            :label="tag"
+            variant="soft"
+          />
         </div>
       </header>
 
+      <!-- Series Navigation -->
+      <SeriesNavigation
+        v-if="blogPostData.series && blogPostData.seriesOrder"
+        :series="blogPostData.series"
+        :current-order="blogPostData.seriesOrder"
+      />
+
       <!-- Featured Image -->
       <div
-v-if="blogPostData.socialImage?.src || blogPostData.image"
-        class="aspect-video overflow-hidden rounded-2xl shadow-lg">
+        v-if="blogPostData.socialImage?.src || blogPostData.image"
+        class="aspect-video overflow-hidden rounded-2xl shadow-lg"
+      >
         <img
-:src="blogPostData.socialImage?.src || blogPostData.image"
-          :alt="blogPostData.socialImage?.alt || blogPostData.title" class="w-full h-full object-cover" >
+          :src="blogPostData.socialImage?.src || blogPostData.image"
+          :alt="blogPostData.socialImage?.alt || blogPostData.title"
+          class="w-full h-full object-cover"
+        />
       </div>
 
       <!-- Post Content -->
@@ -135,6 +159,13 @@ v-if="blogPostData.socialImage?.src || blogPostData.image"
           <span>Back to Blog</span>
         </UButton>
       </div>
+
+      <!-- Related Posts -->
+      <RelatedPosts
+        v-if="blogPostData?.tags"
+        :current-path="route.path"
+        :tags="blogPostData.tags"
+      />
     </div>
   </div>
   <div v-else class="text-center py-24">

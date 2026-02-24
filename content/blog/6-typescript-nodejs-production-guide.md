@@ -4,9 +4,17 @@ description: "Learn how to build, deploy, and maintain TypeScript Node.js applic
 date: 2024-02-28T12:00:00.000Z
 dateUpdated: 2024-02-28T12:00:00.000Z
 author: mubaidr
-tags: ["TypeScript", "Node.js", "Backend", "Production"]
+tags:
+  - TypeScript
+  - Node.js
+  - Backend
+  - Production
+readingTime: "18 min read"
 featured: true
 image: /img/blog/6-typescript-nodejs-production-guide/banner.svg
+series: "TypeScript Mastery"
+seriesOrder: 2
+seriesDescription: "Master TypeScript from development setup to advanced enterprise patterns"
 ---
 
 ## TypeScript + Node.js in Production: A Complete Guide
@@ -420,3 +428,13 @@ Key takeaways:
 - Maintain comprehensive testing coverage
 
 With these practices, you'll build robust, scalable Node.js applications that are a joy to maintain and extend.
+
+---
+
+## Continue Your TypeScript Journey
+
+This post is part 2 of the **TypeScript Mastery** series. Continue learning:
+
+1. **[My VSCode Setup](/blog/2-my-vscode-setup)** - Development environment setup
+2. **[TypeScript + Node.js in Production](/blog/6-typescript-nodejs-production-guide)** _(You are here)_ - Building production-ready TypeScript applications
+3. **[Advanced TypeScript Patterns](/blog/11-typescript-advanced-patterns)** - Enterprise-level TypeScript patterns and techniques
