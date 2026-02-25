@@ -34,20 +34,15 @@ withDefaults(defineProps<Props>(), {
     </div>
 
     <!-- Case Studies -->
-    <div
-v-else-if="
+    <div v-else-if="
       caseStudiesData?.caseStudies && caseStudiesData.caseStudies.length > 0
     " class="grid gap-6 md:grid-cols-3">
-      <UCard
-v-for="study in caseStudiesData.caseStudies.slice(0, count)" :key="study.id"
+      <UCard v-for="study in caseStudiesData.caseStudies.slice(0, count)" :key="study.id"
         class="h-full hover:shadow-lg transition-shadow">
         <div class="space-y-4">
           <!-- Problem -->
           <div class="flex items-start gap-3">
-            <div
-              class="shrink-0 w-8 h-8 rounded-full bg-warning-100 dark:bg-warning-900/30 flex items-center justify-center">
-              <UIcon name="i-ph-warning-circle" class="text-warning-600 dark:text-warning-400" size="1.25em" />
-            </div>
+            <UIcon name="i-ph-warning-circle" class="text-warning-600 dark:text-warning-400" size="3em" />
             <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
               {{ study.problem }}
             </p>
@@ -60,9 +55,7 @@ v-for="study in caseStudiesData.caseStudies.slice(0, count)" :key="study.id"
 
           <!-- Solution -->
           <div class="flex items-start gap-3">
-            <div class="shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
-              <UIcon name="i-ph-lightbulb" class="text-blue-600 dark:text-blue-400" size="1.25em" />
-            </div>
+            <UIcon name="i-ph-lightbulb" class="text-blue-600 dark:text-blue-400" size="3em" />
             <p class="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
               {{ study.solution }}
             </p>

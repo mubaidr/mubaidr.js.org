@@ -64,7 +64,8 @@ if (profileData.value) {
         <div class="flex flex-col items-center text-center space-y-6">
           <!-- Action Buttons -->
           <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-            <UButton to="/contact" size="xl" icon="i-ph-paper-plane-tilt" class="px-6">
+            <UButton to="/contact" size="xl" icon="i-ph-paper-plane-tilt"
+              class="px-6 transition-all duration-300 shadow hover:shadow-md hover:-translate-y-0.5 active:translate-0 active:shadow">
               Let's Talk
             </UButton>
             <!-- <UButton to="/projects" variant="outline" size="lg" icon="i-ph-folder-open">
@@ -78,7 +79,7 @@ if (profileData.value) {
 
         <!-- Results-Focused Headline -->
         <div class="flex justify-center w-full py-16">
-          <UAlert color="secondary" variant="subtle" size="xl" class="text-center w-auto inline-flex text-xl"
+          <UAlert color="neutral" variant="subtle" size="xl" class="text-center w-auto inline-flex text-xl"
             icon="i-ph-check-circle" :title="profileData.tagline">
             {{ profileData.tagline }}
           </UAlert>
