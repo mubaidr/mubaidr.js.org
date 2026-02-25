@@ -16,7 +16,7 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <div>
+  <div class="space-y-16">
     <!-- Section Header -->
     <div class="text-center space-y-4 mb-12">
       <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">
@@ -37,47 +37,39 @@ withDefaults(defineProps<Props>(), {
     <div v-else-if="
       caseStudiesData?.caseStudies && caseStudiesData.caseStudies.length > 0
     " class="grid gap-6 md:grid-cols-3">
-      <UCard v-for="study in caseStudiesData.caseStudies.slice(0, count)" :key="study.id"
-        class="h-full hover:shadow-lg transition-shadow">
-        <div class="space-y-4">
+      <UPageCard v-for="study in caseStudiesData.caseStudies.slice(0, count)" :key="study.id" :spotlight="true"
+        spotlight-color="info">
+        <div class="space-y-8 text-center">
           <!-- Problem -->
-          <div class="flex items-start gap-3">
-            <UIcon name="i-ph-warning-circle" class="text-warning-600 dark:text-warning-400" size="3em" />
-            <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+          <div>
+            <p>
               {{ study.problem }}
             </p>
           </div>
 
           <!-- Arrow -->
-          <div class="flex justify-center">
+          <div>
             <UIcon name="i-ph-arrow-down" class="text-neutral-400" size="1.5em" />
           </div>
 
           <!-- Solution -->
-          <div class="flex items-start gap-3">
-            <UIcon name="i-ph-lightbulb" class="text-blue-600 dark:text-blue-400" size="3em" />
-            <p class="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+          <div>
+            <p>
               {{ study.solution }}
             </p>
           </div>
 
-          <!-- Metric -->
-          <div class="p-4 bg-primary-50 dark:bg-primary-950/30 rounded-lg mt-12">
-            <div class="flex items-center gap-2">
-              <UIcon name="i-ph-chart-line-up" class="text-primary-600 dark:text-primary-400" size="1.5em" />
-              <span class="font-semibold text-primary-700 dark:text-primary-300">
-                {{ study.metric }}
-              </span>
-            </div>
-          </div>
-
-          <!-- CTA Link -->
-          <UButton :to="study.link" variant="ghost" size="sm" class="w-full justify-center">
-            View Project
-            <UIcon name="i-ph-arrow-right" size="1em" class="ml-1" />
-          </UButton>
+          <UAlert :title="study.metric" variant="soft" color="info"></UAlert>
         </div>
-      </UCard>
+      </UPageCard>
+    </div>
+
+    <!-- CTA Link -->
+    <div class="text-center">
+      <UButton to="/projects" variant="outline" size="xl">
+        <UIcon name="i-ph-article" />
+        View All Projects
+      </UButton>
     </div>
   </div>
 </template>

@@ -10,7 +10,7 @@ const { data: profileData } = await useProfileData()
 
 <template>
   <div>
-    <UCard class="text-center">
+    <UPageCard class="text-center" :spotlight="true" :highlight="true">
       <div class="space-y-8 py-12">
         <!-- Main Heading -->
         <div class="space-y-4">
@@ -20,27 +20,6 @@ const { data: profileData } = await useProfileData()
           <p class="max-w-2xl mx-auto text-neutral-600 dark:text-neutral-400 text-lg">
             {{ description || profileData?.availability?.description }}
           </p>
-        </div>
-
-        <!-- Value Points -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto py-4">
-          <div class="flex items-center gap-4 justify-center">
-            <UIcon name="i-ph-clock" size="2.5em" />
-            <div class="text-left">
-              <div class="text-sm font-bold">
-                {{ profileData?.availability?.responseTime }} Response
-              </div>
-              <div class="text-xs text-neutral-500">Quick turnaround</div>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-4 justify-center">
-            <UIcon name="i-ph-chat-circle" size="2.5em" />
-            <div class="text-left">
-              <div class="text-sm font-bold">Free Consultation</div>
-              <div class="text-xs text-neutral-500">No commitment</div>
-            </div>
-          </div>
         </div>
 
         <!-- Action Buttons -->
@@ -55,13 +34,13 @@ const { data: profileData } = await useProfileData()
 
         <!-- Availability Note -->
         <div v-if="profileData?.availability?.status === 'available'">
-          <UBadge variant="soft" size="lg" color="neutral">
+          <UBadge variant="soft" color="info">
             Only {{ profileData?.availability?.slotsAvailable }} project slots
             available for
             {{ profileData?.availability?.startDate }}
           </UBadge>
         </div>
       </div>
-    </UCard>
+    </UPageCard>
   </div>
 </template>

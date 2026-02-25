@@ -75,13 +75,8 @@ const approachSteps = [
       <!-- Consulting Areas -->
       <section>
         <div class="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <UPageCard
-            v-for="area in consultingAreas"
-            :key="area.title"
-            :title="area.title"
-            :description="area.description"
-            :spotlight="true"
-          />
+          <UPageCard v-for="area in consultingAreas" :key="area.title" :title="area.title"
+            :description="area.description" :spotlight="true" />
         </div>
       </section>
 
@@ -92,19 +87,11 @@ const approachSteps = [
         </div>
 
         <div class="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-8">
-          <UPageCard
-            v-for="step in approachSteps"
-            :key="step.title"
-            :title="step.title"
-            :description="step.description"
-            :icon="step.icon"
-            :spotlight="true"
-          />
+          <UPageCard v-for="step in approachSteps" :key="step.title" :title="step.title" :description="step.description"
+            :icon="step.icon" :spotlight="true" />
         </div>
 
-        <p
-          class="text-center text-neutral-600 dark:text-neutral-400 leading-relaxed"
-        >
+        <p class="text-center text-neutral-600 dark:text-neutral-400 leading-relaxed">
           With 12+ years of experience building scalable systems and maintaining
           open source projects used by thousands of developers, I bring deep
           technical expertise to every engagement.

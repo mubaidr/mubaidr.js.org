@@ -39,7 +39,7 @@ if (profileData.value) {
 
 <template>
   <div>
-    <section v-if="profileData" class="py-24 md:py-32">
+    <section v-if="profileData" class="md:py-32">
       <div class="max-w-4xl mx-auto px-4 space-y-12">
         <div class="flex flex-col items-center text-center space-y-6">
           <!-- Name as Hero -->
@@ -78,8 +78,8 @@ if (profileData.value) {
         </div>
 
         <!-- Results-Focused Headline -->
-        <div class="flex justify-center w-full py-16">
-          <UAlert color="neutral" variant="subtle" size="xl" class="text-center w-auto inline-flex text-xl"
+        <div class="flex justify-center w-full py-8 md:py-16">
+          <UAlert color="info" variant="subtle" size="xl" class="text-center w-auto inline-flex text-xl"
             icon="i-ph-check-circle" :title="profileData.tagline">
             {{ profileData.tagline }}
           </UAlert>
@@ -88,11 +88,11 @@ if (profileData.value) {
     </section>
 
     <div class="space-y-32 pb-20">
-      <LazyCompactCaseStudies />
-      <!-- <LazyWhoIWorkWith /> -->
+      <CompactCaseStudies />
+      <!-- <WhoIWorkWith /> -->
       <TestimonialsPreview />
       <CallToAction />
-      <LazyRecentBlogPosts />
+      <RecentBlogPosts />
     </div>
   </div>
 </template>
