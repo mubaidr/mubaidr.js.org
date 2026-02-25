@@ -1,0 +1,66 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#064e3b"/>
+      <stop offset="100%" style="stop-color:#065f46"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34d399"/>
+      <stop offset="100%" style="stop-color:#10b981"/>
+    </linearGradient>
+    <linearGradient id="accessibility" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22d3ee"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Accessibility icon (wheelchair symbol) -->
+  <g transform="translate(900, 150)" fill="none" stroke="url(--accessibility)" stroke-width="3">
+    <circle cx="60" cy="40" r="15" stroke-width="3"/>
+    <path d="M60 55 L60 85" stroke-width="3" stroke-linecap="round"/>
+    <path d="M60 85 L30 120" stroke-width="3" stroke-linecap="round"/>
+    <path d="M60 85 L90 120" stroke-width="3" stroke-linecap="round"/>
+    <path d="M60 70 L30 85" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="30" cy="125" r="8" stroke-width="2"/>
+    <circle cx="90" cy="125" r="8" stroke-width="2"/>
+  </g>
+
+  <!-- WCAG levels -->
+  <g transform="translate(150, 200)" fill="none" stroke="url(--accent)" stroke-width="2">
+    <!-- Level A -->
+    <rect x="0" y="0" width="120" height="60" rx="8" stroke-width="2"/>
+    <text x="60" y="35" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="url(--accent)">A</text>
+
+    <!-- Level AA -->
+    <rect x="140" y="0" width="120" height="60" rx="8" stroke-width="2"/>
+    <text x="200" y="35" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="url(--accent)">AA</text>
+
+    <!-- Level AAA -->
+    <rect x="280" y="0" width="120" height="60" rx="8" stroke-width="2"/>
+    <text x="340" y="35" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="url(--accent)">AAA</text>
+  </g>
+
+  <!-- Screen reader icon -->
+  <g transform="translate(200, 300)" fill="none" stroke="url(--accessibility)" stroke-width="2">
+    <rect x="0" y="0" width="100" height="70" rx="8" stroke-width="2"/>
+    <text x="15" y="25" font-family="monospace" font-size="10" fill="#94a3b8">&lt;h1&gt;Title&lt;/h1&gt;</text>
+    <text x="15" y="45" font-family="monospace" font-size="10" fill="#94a3b8">&lt;p&gt;Content&lt;/p&gt;</text>
+    <text x="15" y="60" font-family="monospace" font-size="10" fill="#94a3b8">&lt;button&gt;Click&lt;/button&gt;</text>
+  </g>
+
+  <!-- Title text -->
+  <text x="100" y="480" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="bold" fill="white">
+    Web Accessibility WCAG 2026
+  </text>
+  <text x="100" y="530" font-family="system-ui, -apple-system, sans-serif" font-size="30" fill="url(--accent)" font-weight="600">
+    Complete Compliance Guide
+  </text>
+
+  <!-- Author info -->
+  <text x="100" y="580" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#94a3b8">
+    By Mubaidr • 11 min read
+  </text>
+</svg>

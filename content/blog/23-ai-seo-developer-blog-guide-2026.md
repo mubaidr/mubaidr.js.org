@@ -13,7 +13,7 @@ tags:
 readingTime: "12 min read"
 featured: true
 socialImage:
-  src: /img/blog/23-ai-seo-developer-blog/banner.svg
+  src: /img/blog/23-ai-seo-developer-blog-guide-2026/banner.svg
   mime: svg
   alt: "AI Search Engine Optimization - Developer blog content being cited by ChatGPT, Gemini, and Perplexity"
   width: 1200

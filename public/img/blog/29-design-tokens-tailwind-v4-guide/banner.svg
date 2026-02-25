@@ -1,0 +1,57 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b"/>
+      <stop offset="100%" style="stop-color:#312e81"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa"/>
+      <stop offset="100%" style="stop-color:#f472b6"/>
+    </linearGradient>
+    <linearGradient id="token" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#22d3ee"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Design token cards -->
+  <g transform="translate(150, 150)">
+    <!-- Color token -->
+    <rect x="0" y="0" width="280" height="100" rx="12" fill="rgba(255,255,255,0.05)" stroke="url(#token)" stroke-width="2"/>
+    <text x="20" y="35" font-family="monospace" font-size="14" fill="#a78bfa">--color-primary</text>
+    <rect x="20" y="50" width="60" height="30" rx="4" fill="url(#token)"/>
+    <text x="100" y="70" font-family="monospace" font-size="12" fill="#94a3b8">#3B82F6</text>
+
+    <!-- Spacing token -->
+    <rect x="320" y="0" width="280" height="100" rx="12" fill="rgba(255,255,255,0.05)" stroke="url(--token)" stroke-width="2"/>
+    <text x="340" y="35" font-family="monospace" font-size="14" fill="#a78bfa">--spacing-4</text>
+    <text x="340" y="70" font-family="monospace" font-size="12" fill="#94a3b8">1rem (16px)</text>
+
+    <!-- Typography token -->
+    <rect x="640" y="0" width="280" height="100" rx="12" fill="rgba(255,255,255,0.05)" stroke="url(--token)" stroke-width="2"/>
+    <text x="660" y="35" font-family="monospace" font-size="14" fill="#a78bfa">--font-size-lg</text>
+    <text x="660" y="70" font-family="monospace" font-size="12" fill="#94a3b8">1.125rem</text>
+  </g>
+
+  <!-- Tailwind v4 logo representation -->
+  <g transform="translate(900, 200)" fill="none" stroke="url(--token)" stroke-width="3">
+    <circle cx="60" cy="60" r="50" stroke-width="3"/>
+    <path d="M40 60 L60 40 L80 60 L60 80 Z" stroke-width="2"/>
+  </g>
+
+  <!-- Title text -->
+  <text x="100" y="450" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="bold" fill="white">
+    Design Tokens &amp; Tailwind v4
+  </text>
+  <text x="100" y="500" font-family="system-ui, -apple-system, sans-serif" font-size="30" fill="url(--accent)" font-weight="600">
+    The Complete Guide
+  </text>
+
+  <!-- Author info -->
+  <text x="100" y="560" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#94a3b8">
+    By Mubaidr • 9 min read
+  </text>
+</svg>

@@ -13,7 +13,7 @@ tags:
 readingTime: "15 min read"
 featured: true
 socialImage:
-  src: /img/blog/22-nuxt-3-to-4-migration/banner.svg
+  src: /img/blog/22-nuxt-3-to-4-migration-guide-2026/banner.svg
   mime: svg
   alt: "Nuxt 3 to Nuxt 4 Migration Guide - Upgrade path diagram with before and after code examples"
   width: 1200
