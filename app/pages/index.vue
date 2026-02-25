@@ -39,7 +39,7 @@ if (profileData.value) {
 
 <template>
   <div>
-    <section v-if="profileData" class="py-24 md:py-48">
+    <section v-if="profileData" class="py-24 md:py-32">
       <div class="max-w-4xl mx-auto px-4 space-y-12">
         <div class="flex flex-col items-center text-center space-y-6">
           <!-- Name as Hero -->
@@ -52,16 +52,9 @@ if (profileData.value) {
             {{ profileData.heroHeadline }}
           </p>
 
-          <!-- Results-Focused Headline -->
-          <div class="max-w-4xl mx-auto text-center">
-            <UAlert color="secondary" variant="soft" size="xl" :title="profileData.tagline">{{ profileData.tagline }}
-            </UAlert>
-          </div>
-
           <!-- Social Links (Subtle) -->
           <div class="flex gap-3 items-center justify-center">
-            <ULink
-v-for="social in profileData.social" :key="social.name" :to="social.url" external
+            <ULink v-for="social in profileData.social" :key="social.name" :to="social.url" external
               :title="social.name" class="hover:text-primary dark:hover:text-primary transition-colors">
               <UIcon :name="social.icon" size="1.5em" />
             </ULink>
@@ -71,7 +64,7 @@ v-for="social in profileData.social" :key="social.name" :to="social.url" externa
         <div class="flex flex-col items-center text-center space-y-6">
           <!-- Action Buttons -->
           <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-            <UButton to="/contact" size="xl" icon="i-ph-envelope" class="px-6">
+            <UButton to="/contact" size="xl" icon="i-ph-paper-plane-tilt" class="px-6">
               Let's Talk
             </UButton>
             <!-- <UButton to="/projects" variant="outline" size="lg" icon="i-ph-folder-open">
@@ -81,6 +74,14 @@ v-for="social in profileData.social" :key="social.name" :to="social.url" externa
 
           <!-- Availability Info -->
           <AvailabilityInfo />
+        </div>
+
+        <!-- Results-Focused Headline -->
+        <div class="flex justify-center w-full py-16">
+          <UAlert color="secondary" variant="subtle" size="xl" class="text-center w-auto inline-flex text-xl"
+            icon="i-ph-check-circle" :title="profileData.tagline">
+            {{ profileData.tagline }}
+          </UAlert>
         </div>
       </div>
     </section>
