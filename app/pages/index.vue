@@ -79,7 +79,7 @@ if (profileData.value) {
 
         <!-- Results-Focused Headline -->
         <div class="flex justify-center w-full py-8 md:py-16">
-          <UAlert color="info" variant="subtle" size="xl" class="text-center w-auto inline-flex text-xl"
+          <UAlert color="secondary" variant="soft" size="xl" class="text-center w-auto inline-flex text-xl"
             icon="i-ph-check-circle" :title="profileData.tagline">
             {{ profileData.tagline }}
           </UAlert>

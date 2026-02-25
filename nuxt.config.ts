@@ -10,9 +10,9 @@ export default defineNuxtConfig({
     classSuffix: "",
   },
 
-  css: ["./app/assets/css/main.css"],
+  css: ["~/assets/css/main.css"],
 
-  compatibilityDate: "2025-12-01",
+  compatibilityDate: "2026-01-01",
 
   content: {
     renderer: {
