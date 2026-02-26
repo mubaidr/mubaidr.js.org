@@ -4,7 +4,8 @@ const { data: profileData } = await useProfileData()
 </script>
 
 <template>
-  <div v-if="profileData?.availability"
+  <div
+v-if="profileData?.availability"
     class="flex flex-wrap items-center justify-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
     <!-- Timezone -->
     <div class="flex items-center gap-2">

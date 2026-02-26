@@ -9,6 +9,16 @@ if (!blogPostData.value) {
   navigateTo("/404")
 }
 
+// Generate breadcrumb items
+const breadcrumbItems = computed(() => {
+  if (!blogPostData.value) return []
+  return [
+    { label: 'Home', path: '/' },
+    { label: 'Blog', path: '/blog' },
+    { label: blogPostData.value.title, path: route.path },
+  ]
+})
+
 // SEO: page meta, canonical, OG/Twitter, and BlogPosting schema
 if (blogPostData.value) {
   const url = new URL(route.fullPath, site.url).toString()
@@ -42,14 +52,10 @@ if (blogPostData.value) {
   useSeoMeta({
     title,
     description,
-    ogTitle: title,
-    ogDescription: description,
     ogType: "article",
     ogUrl: url,
     ogImage: image ? [{ url: image }] : undefined,
     twitterCard: image ? "summary_large_image" : "summary",
-    twitterTitle: title,
-    twitterDescription: description,
     twitterImage: image,
     articlePublishedTime: publishedTime,
     articleModifiedTime: modifiedTime,
@@ -93,6 +99,9 @@ if (blogPostData.value) {
 <template>
   <div v-if="blogPostData">
     <div class="space-y-16 py-16">
+      <!-- Breadcrumb Navigation -->
+      <Breadcrumb :items="breadcrumbItems" />
+
       <!-- Post Header -->
       <header class="text-center space-y-6">
         <h1>
@@ -116,13 +125,16 @@ if (blogPostData.value) {
       </header>
 
       <!-- Series Navigation -->
-      <SeriesNavigation v-if="blogPostData.series && blogPostData.seriesOrder" :series="blogPostData.series"
+      <SeriesNavigation
+v-if="blogPostData.series && blogPostData.seriesOrder" :series="blogPostData.series"
         :current-order="blogPostData.seriesOrder" />
 
       <!-- Featured Image -->
-      <div v-if="blogPostData.socialImage?.src || blogPostData.image"
+      <div
+v-if="blogPostData.socialImage?.src || blogPostData.image"
         class="aspect-video overflow-hidden rounded-2xl shadow-lg">
-        <img :src="blogPostData.socialImage?.src || blogPostData.image"
+        <img
+:src="blogPostData.socialImage?.src || blogPostData.image"
           :alt="blogPostData.socialImage?.alt || blogPostData.title" class="w-full h-full object-cover">
       </div>
 
@@ -140,9 +152,10 @@ if (blogPostData.value) {
       </div>
 
       <!-- Comments -->
-      <Giscuss id="comments" repo="mubaidr/mubaidr.js.org" repoId="R_kgDOMTcs7A" category="General"
-        categoryId="DIC_kwDOMTcs7M4Cq7vl" mapping="pathname" term="Welcome!" reactionsEnabled="1" emitMetadata="1"
-        inputPosition="top" theme="preferred_color_scheme" lang="en" loading="lazy" />
+      <Giscuss
+id="comments" repo="mubaidr/mubaidr.js.org" repo-id="R_kgDOMTcs7A" category="General"
+        category-id="DIC_kwDOMTcs7M4Cq7vl" mapping="pathname" term="Welcome!" reactions-enabled="1" emit-metadata="1"
+        input-position="top" theme="preferred_color_scheme" lang="en" loading="lazy" />
 
       <!-- Related Posts -->
       <RelatedPosts v-if="blogPostData?.tags" :current-path="route.path" :tags="blogPostData.tags" />

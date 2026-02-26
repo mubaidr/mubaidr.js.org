@@ -61,9 +61,9 @@ const approachSteps = [
 
 <template>
   <div>
-    <div class="space-y-32">
+    <div class="space-y-24">
       <!-- Page Header -->
-      <div class="text-center space-y-6">
+      <div class="text-center space-y-4">
         <h1>Technical Consulting</h1>
 
         <p class="max-w-3xl mx-auto text-lg">
@@ -74,20 +74,22 @@ const approachSteps = [
 
       <!-- Consulting Areas -->
       <section>
-        <div class="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <UPageCard v-for="area in consultingAreas" :key="area.title" :title="area.title"
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <UPageCard
+v-for="area in consultingAreas" :key="area.title" :title="area.title"
             :description="area.description" :spotlight="true" />
         </div>
       </section>
 
       <!-- Approach -->
       <section>
-        <div class="text-center space-y-6 mb-12">
+        <div class="text-center space-y-4 mb-8">
           <h2>My Approach</h2>
         </div>
 
-        <div class="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-8">
-          <UPageCard v-for="step in approachSteps" :key="step.title" :title="step.title" :description="step.description"
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-8">
+          <UPageCard
+v-for="step in approachSteps" :key="step.title" :title="step.title" :description="step.description"
             :icon="step.icon" :spotlight="true" />
         </div>
 
@@ -99,7 +101,7 @@ const approachSteps = [
       </section>
 
       <!-- CTA -->
-      <section class="text-center space-y-6">
+      <section class="text-center space-y-4">
         <p class="max-w-2xl mx-auto text-lg">
           Let's discuss how I can help your team build better software.
         </p>

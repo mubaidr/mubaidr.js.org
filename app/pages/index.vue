@@ -40,8 +40,8 @@ if (profileData.value) {
 <template>
   <div>
     <section v-if="profileData" class="md:py-32">
-      <div class="max-w-4xl mx-auto px-4 space-y-12">
-        <div class="flex flex-col items-center text-center space-y-6">
+      <div class="max-w-4xl mx-auto px-4 space-y-8">
+        <div class="flex flex-col items-center text-center space-y-4">
           <!-- Name as Hero -->
           <h1>
             {{ profileData.name }}
@@ -53,7 +53,7 @@ if (profileData.value) {
           </p>
 
           <!-- Social Links (Subtle) -->
-          <div class="flex gap-3 items-center justify-center">
+          <div class="flex gap-4 items-center justify-center">
             <ULink v-for="social in profileData.social" :key="social.name" :to="social.url" external
               :title="social.name" class="hover:text-primary dark:hover:text-primary transition-colors">
               <UIcon :name="social.icon" size="1.5em" />
@@ -61,9 +61,9 @@ if (profileData.value) {
           </div>
         </div>
 
-        <div class="flex flex-col items-center text-center space-y-6">
+        <div class="flex flex-col items-center text-center space-y-4">
           <!-- Action Buttons -->
-          <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+          <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <UButton to="/contact" size="xl" icon="i-ph-paper-plane-tilt"
               class="px-6 transition-all duration-300 shadow hover:shadow-md hover:-translate-y-0.5 active:translate-0 active:shadow">
               Let's Talk
@@ -78,7 +78,7 @@ if (profileData.value) {
         </div>
 
         <!-- Results-Focused Headline -->
-        <div class="flex justify-center w-full py-8 md:py-16">
+        <div class="flex justify-center w-full py-12">
           <UAlert color="secondary" variant="soft" size="xl" class="text-center w-auto inline-flex text-xl"
             icon="i-ph-check-circle" :title="profileData.tagline">
             {{ profileData.tagline }}
@@ -87,7 +87,7 @@ if (profileData.value) {
       </div>
     </section>
 
-    <div class="space-y-32 pb-20">
+    <div class="space-y-24 pb-16">
       <CompactCaseStudies />
       <!-- <WhoIWorkWith /> -->
       <TestimonialsPreview />

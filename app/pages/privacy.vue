@@ -1,4 +1,9 @@
 <script setup lang="ts">
+interface BreadcrumbItem {
+  label: string
+  path: string
+}
+
 // SEO Meta
 useHead({
   title: "Privacy Policy - Muhammad Ubaid Raza",
@@ -26,12 +31,18 @@ useHead({
 
 // Last updated date
 const lastUpdated = ref("December 1, 2024")
+
+// Breadcrumb items
+const breadcrumbItems: BreadcrumbItem[] = [
+  { label: "Home", path: "/" },
+  { label: "Privacy Policy", path: "/privacy" }
+]
 </script>
 
 <template>
   <div>
     <!-- Breadcrumb -->
-    <Breadcrumb />
+    <Breadcrumb :items="breadcrumbItems" />
 
     <div class="max-w-4xl mx-auto py-16 px-4 md:px-8 space-y-8">
       <!-- Header -->
@@ -57,7 +68,7 @@ const lastUpdated = ref("December 1, 2024")
               Welcome to mubaidr.js.org ("I," "my," or "me"). This privacy
               policy explains how Muhammad Ubaid Raza collects, uses, and
               protects your personal information when you visit my website or
-              use my services. I are committed to protecting your privacy and
+              use my services. I am committed to protecting your privacy and
               ensuring transparency about my data practices.
             </p>
             <p>
@@ -81,24 +92,18 @@ const lastUpdated = ref("December 1, 2024")
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
-                  <span
-                    ><strong>Contact Information:</strong> Name, email address,
-                    and message content when you use my contact form</span
-                  >
+                  <span><strong>Contact Information:</strong> Name, email address,
+                    and message content when you use my contact form</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-check" />
-                  <span
-                    ><strong>Project Inquiries:</strong> Business information,
-                    project requirements, and budget details you share</span
-                  >
+                  <span><strong>Project Inquiries:</strong> Business information,
+                    project requirements, and budget details you share</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
-                  <span
-                    ><strong>Newsletter Subscription:</strong> Email address if
-                    you subscribe to my newsletter or updates</span
-                  >
+                  <span><strong>Newsletter Subscription:</strong> Email address if
+                    you subscribe to my newsletter or updates</span>
                 </li>
               </ul>
             </div>
@@ -108,31 +113,23 @@ const lastUpdated = ref("December 1, 2024")
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
-                  <span
-                    ><strong>Usage Data:</strong> Pages visited, time spent on
-                    site, click patterns, and navigation paths</span
-                  >
+                  <span><strong>Usage Data:</strong> Pages visited, time spent on
+                    site, click patterns, and navigation paths</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
-                  <span
-                    ><strong>Device Information:</strong> Browser type,
-                    operating system, device type, and screen resolution</span
-                  >
+                  <span><strong>Device Information:</strong> Browser type,
+                    operating system, device type, and screen resolution</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
-                  <span
-                    ><strong>Location Data:</strong> General geographic location
-                    based on IP address</span
-                  >
+                  <span><strong>Location Data:</strong> General geographic location
+                    based on IP address</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
-                  <span
-                    ><strong>Referral Information:</strong> Website or search
-                    engine that referred you to my site</span
-                  >
+                  <span><strong>Referral Information:</strong> Website or search
+                    engine that referred you to my site</span>
                 </li>
               </ul>
             </div>
@@ -149,57 +146,32 @@ const lastUpdated = ref("December 1, 2024")
             <p>I use the collected information for the following purposes:</p>
             <ul class="space-y-2">
               <li class="flex items-start gap-2">
-                <UIcon
-                  name="i-ph-arrow-right"
-                  class="w-4 h-4 mt-1 flex-shrink-0"
-                />
-                <span
-                  ><strong>Communication:</strong> Respond to your inquiries,
+                <UIcon name="i-ph-arrow-right" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <span><strong>Communication:</strong> Respond to your inquiries,
                   provide project quotes, and maintain professional
-                  correspondence</span
-                >
+                  correspondence</span>
               </li>
               <li class="flex items-start gap-2">
-                <UIcon
-                  name="i-ph-arrow-right"
-                  class="w-4 h-4 mt-1 flex-shrink-0"
-                />
-                <span
-                  ><strong>Website Improvement:</strong> Analyze usage patterns
-                  to enhance user experience and optimize content</span
-                >
+                <UIcon name="i-ph-arrow-right" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <span><strong>Website Improvement:</strong> Analyze usage patterns
+                  to enhance user experience and optimize content</span>
               </li>
               <li class="flex items-start gap-2">
-                <UIcon
-                  name="i-ph-arrow-right"
-                  class="w-4 h-4 mt-1 flex-shrink-0"
-                />
-                <span
-                  ><strong>Marketing:</strong> Send relevant updates about
+                <UIcon name="i-ph-arrow-right" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <span><strong>Marketing:</strong> Send relevant updates about
                   services, blog posts, and industry insights (with your
-                  consent)</span
-                >
+                  consent)</span>
               </li>
               <li class="flex items-start gap-2">
-                <UIcon
-                  name="i-ph-arrow-right"
-                  class="w-4 h-4 mt-1 flex-shrink-0"
-                />
-                <span
-                  ><strong>Legal Compliance:</strong> Maintain records as
+                <UIcon name="i-ph-arrow-right" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <span><strong>Legal Compliance:</strong> Maintain records as
                   required by law and protect against fraudulent
-                  activities</span
-                >
+                  activities</span>
               </li>
               <li class="flex items-start gap-2">
-                <UIcon
-                  name="i-ph-arrow-right"
-                  class="w-4 h-4 mt-1 flex-shrink-0"
-                />
-                <span
-                  ><strong>Service Delivery:</strong> Manage projects, deliver
-                  contracted services, and provide technical support</span
-                >
+                <UIcon name="i-ph-arrow-right" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <span><strong>Service Delivery:</strong> Manage projects, deliver
+                  contracted services, and provide technical support</span>
               </li>
             </ul>
           </div>
@@ -232,13 +204,8 @@ const lastUpdated = ref("December 1, 2024")
                 </p>
               </div>
             </div>
-            <UAlert
-              icon="i-ph-info"
-              color="primary"
-              variant="soft"
-              title="Cookie Management"
-              description="You can control cookie preferences through your browser settings. Note that disabling certain cookies may affect website functionality."
-            />
+            <UAlert icon="i-ph-info" color="primary" variant="soft" title="Cookie Management"
+              description="You can control cookie preferences through your browser settings. Note that disabling certain cookies may affect website functionality." />
           </div>
         </UCard>
 
@@ -260,12 +227,7 @@ const lastUpdated = ref("December 1, 2024")
                   I may use Google Analytics or similar services to track
                   website usage and performance.
                 </p>
-                <UButton
-                  to="https://policies.google.com/privacy"
-                  external
-                  variant="ghost"
-                  size="xs"
-                >
+                <UButton to="https://policies.google.com/privacy" external variant="ghost" size="xs">
                   Google Privacy Policy
                   <UIcon name="i-ph-arrow-square-out" />
                 </UButton>
@@ -329,57 +291,40 @@ const lastUpdated = ref("December 1, 2024")
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-eye" />
-                  <span
-                    ><strong>Access:</strong> Request a copy of personal data I
-                    hold about you</span
-                  >
+                  <span><strong>Access:</strong> Request a copy of personal data I
+                    hold about you</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-pencil" />
-                  <span
-                    ><strong>Rectification:</strong> Request correction of
-                    inaccurate information</span
-                  >
+                  <span><strong>Rectification:</strong> Request correction of
+                    inaccurate information</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-trash" />
-                  <span
-                    ><strong>Erasure:</strong> Request deletion of your personal
-                    data</span
-                  >
+                  <span><strong>Erasure:</strong> Request deletion of your personal
+                    data</span>
                 </li>
               </ul>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-download" />
-                  <span
-                    ><strong>Portability:</strong> Request data in a
-                    machine-readable format</span
-                  >
+                  <span><strong>Portability:</strong> Request data in a
+                    machine-readable format</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-prohibit" />
-                  <span
-                    ><strong>Objection:</strong> Object to processing of your
-                    personal data</span
-                  >
+                  <span><strong>Objection:</strong> Object to processing of your
+                    personal data</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <UIcon name="i-ph-x-circle" />
-                  <span
-                    ><strong>Withdraw Consent:</strong> Withdraw consent for
-                    marketing communications</span
-                  >
+                  <span><strong>Withdraw Consent:</strong> Withdraw consent for
+                    marketing communications</span>
                 </li>
               </ul>
             </div>
-            <UAlert
-              icon="i-ph-envelope"
-              color="primary"
-              variant="soft"
-              title="Exercise Your Rights"
-              description="To exercise any of these rights, please contact me at hello@mubaidr.js.org. I will respond within 30 days."
-            />
+            <UAlert icon="i-ph-envelope" color="primary" variant="soft" title="Exercise Your Rights"
+              description="To exercise any of these rights, please contact me at hello@mubaidr.js.org. I will respond within 30 days." />
           </div>
         </UCard>
 
@@ -447,17 +392,13 @@ const lastUpdated = ref("December 1, 2024")
             <ul class="space-y-2">
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
-                <span
-                  >Posting the updated policy on this page with a new "Last
-                  Updated" date</span
-                >
+                <span>Posting the updated policy on this page with a new "Last
+                  Updated" date</span>
               </li>
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
-                <span
-                  >Sending an email notification to subscribers (for significant
-                  changes)</span
-                >
+                <span>Sending an email notification to subscribers (for significant
+                  changes)</span>
               </li>
               <li class="flex items-start gap-2">
                 <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />

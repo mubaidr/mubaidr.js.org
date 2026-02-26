@@ -1,6 +1,6 @@
 <script setup lang="ts">
-// Fetch testimonials using composable
-const { data: testimonialsData } = await useTestimonialsData()
+// Fetch testimonials using composable with loading state
+const { data: testimonialsData, pending: isLoading } = await useTestimonialsData()
 </script>
 
 <template>
@@ -13,15 +13,20 @@ const { data: testimonialsData } = await useTestimonialsData()
         </p>
       </div>
 
-      <!-- Testimonials Grid -->
-      <div v-if="testimonialsData && testimonialsData.length > 0">
+      <!-- Loading Skeleton -->
+      <div v-if="isLoading">
         <UCard>
           <div class="grid gap-6 md:grid-cols-2">
-            <div
-              v-for="testimonial in testimonialsData"
-              :key="testimonial.name"
-              class="space-y-2"
-            >
+            <USkeleton v-for="i in 4" :key="i" class="h-32 w-full" />
+          </div>
+        </UCard>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div v-else-if="testimonialsData && testimonialsData.length > 0">
+        <UCard>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div v-for="testimonial in testimonialsData" :key="testimonial.name" class="space-y-2">
               <p class="text-neutral-700 dark:text-neutral-300 leading-relaxed">
                 "{{ testimonial.quote }}"
               </p>

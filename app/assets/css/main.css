@@ -31,3 +31,82 @@ h5 {
 h6 {
   @apply text-lg font-medium text-neutral-800 dark:text-neutral-200 uppercase tracking-wider mt-2 mb-2;
 }
+
+/* Focus Indicators - WCAG AA Compliant */
+*:focus-visible {
+  outline: 2px solid theme('colors.green.500');
+  outline-offset: 2px;
+}
+
+/* Ensure focus outline is visible on dark backgrounds */
+.dark *:focus-visible {
+  outline-color: theme('colors.green.400');
+}
+
+/* Remove default outline for mouse users, keep for keyboard */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Special focus styles for buttons */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid theme('colors.green.500');
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px theme('colors.green.500', 0.2);
+}
+
+.dark button:focus-visible,
+.dark a:focus-visible,
+.dark input:focus-visible,
+.dark textarea:focus-visible,
+.dark select:focus-visible {
+  outline-color: theme('colors.green.400');
+  box-shadow: 0 0 0 4px theme('colors.green.400', 0.2);
+}
+
+/* Skip Link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 9999;
+  padding: 1rem 1.5rem;
+  background: theme('colors.green.600');
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px theme('colors.black', 0.1), 0 2px 4px -1px theme('colors.black', 0.06);
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+/* Skip link on focus - visible and positioned */
+.skip-link:focus {
+  top: 1rem;
+  left: 1rem;
+  outline: 3px solid theme('colors.black');
+  outline-offset: 2px;
+  box-shadow: 0 8px 16px -4px theme('colors.black', 0.2), 0 4px 8px -2px theme('colors.black', 0.1);
+}
+
+/* Dark mode skip link styling */
+.dark .skip-link {
+  background: theme('colors.green.500');
+  color: theme('colors.neutral.900');
+  box-shadow: 0 4px 6px -1px theme('colors.white', 0.1), 0 2px 4px -1px theme('colors.white', 0.06);
+}
+
+.dark .skip-link:focus {
+  outline-color: theme('colors.white');
+  box-shadow: 0 8px 16px -4px theme('colors.white', 0.2), 0 4px 8px -2px theme('colors.white', 0.1);
+}
+
+/* Ensure skip link is always above all content */
+.skip-link:focus {
+  z-index: 10000;
+}

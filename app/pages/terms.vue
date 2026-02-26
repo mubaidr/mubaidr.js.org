@@ -75,21 +75,21 @@ const lastUpdated = ref("December 1, 2024")
             <h3><strong class="text-base">Permitted Use</strong></h3>
             <ul class="space-y-2">
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-check" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   >Browse my portfolio and read my content for legitimate
                   business purposes</span
                 >
               </li>
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-check" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   >Contact me for professional inquiries and project
                   discussions</span
                 >
               </li>
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-check" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   >Share my content with proper attribution and linking</span
                 >
@@ -97,7 +97,7 @@ const lastUpdated = ref("December 1, 2024")
               <li class="flex items-start gap-2">
                 <UIcon
                   name="i-ph-check"
-                  class="w-4 h-4 text-primary mt-1 flex-shrink-0"
+                  class="w-4 h-4 text-primary mt-1 shrink-0"
                 />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   >Subscribe to my newsletter and updates</span
@@ -108,26 +108,26 @@ const lastUpdated = ref("December 1, 2024")
             <h3><strong class="text-base">Prohibited Activities</strong></h3>
             <ul class="space-y-2">
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-x" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-x" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   >Reproduce, copy, or redistribute my content without
                   permission</span
                 >
               </li>
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-x" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-x" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   >Use automated tools to scrape or download my content</span
                 >
               </li>
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-x" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-x" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   >Attempt to gain unauthorized access to my systems</span
                 >
               </li>
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-x" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-x" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   >Submit false or misleading information in contact forms</span
                 >
@@ -153,7 +153,7 @@ const lastUpdated = ref("December 1, 2024")
               <li class="flex items-start gap-2">
                 <UIcon
                   name="i-ph-arrow-right"
-                  class="w-4 h-4 mt-1 flex-shrink-0"
+                  class="w-4 h-4 mt-1 shrink-0"
                 />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Written Agreements:</strong> All projects require a
@@ -163,7 +163,7 @@ const lastUpdated = ref("December 1, 2024")
               <li class="flex items-start gap-2">
                 <UIcon
                   name="i-ph-arrow-right"
-                  class="w-4 h-4 mt-1 flex-shrink-0"
+                  class="w-4 h-4 mt-1 shrink-0"
                 />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Scope Definition:</strong> Project scope,
@@ -174,7 +174,7 @@ const lastUpdated = ref("December 1, 2024")
               <li class="flex items-start gap-2">
                 <UIcon
                   name="i-ph-arrow-right"
-                  class="w-4 h-4 mt-1 flex-shrink-0"
+                  class="w-4 h-4 mt-1 shrink-0"
                 />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Change Requests:</strong> Any scope changes require
@@ -184,7 +184,7 @@ const lastUpdated = ref("December 1, 2024")
               <li class="flex items-start gap-2">
                 <UIcon
                   name="i-ph-arrow-right"
-                  class="w-4 h-4 mt-1 flex-shrink-0"
+                  class="w-4 h-4 mt-1 shrink-0"
                 />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Communication:</strong> Primary communication will be
@@ -198,28 +198,28 @@ const lastUpdated = ref("December 1, 2024")
             <h3><strong class="text-base">Client Responsibilities</strong></h3>
             <ul class="space-y-2">
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-users" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-users" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Timely Communication:</strong> Respond to
                   project-related communications within 48 hours</span
                 >
               </li>
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-users" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-users" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Required Materials:</strong> Provide all necessary
                   content, assets, and access credentials promptly</span
                 >
               </li>
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-users" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-users" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Review & Feedback:</strong> Provide constructive
                   feedback within agreed timeframes</span
                 >
               </li>
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-users" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-users" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Payment Terms:</strong> Adhere to agreed payment
                   schedules and terms</span
@@ -325,21 +325,21 @@ const lastUpdated = ref("December 1, 2024")
             </p>
             <ul class="space-y-2">
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-check" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   >Use general methodologies, techniques, and know-how in future
                   projects</span
                 >
               </li>
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-check" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   >Display completed work in my portfolio (with client
                   permission)</span
                 >
               </li>
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-check" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-check" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   >Reuse generic code components and libraries in other
                   projects</span
@@ -369,21 +369,21 @@ const lastUpdated = ref("December 1, 2024")
               <h3><strong class="text-base">Delivery Terms</strong></h3>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
-                  <UIcon name="i-ph-clock" class="w-4 h-4 mt-1 flex-shrink-0" />
+                  <UIcon name="i-ph-clock" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-neutral-600 dark:text-neutral-300"
                     ><strong>Timeline Estimates:</strong> Provided in good faith
                     but not guaranteed</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon name="i-ph-clock" class="w-4 h-4 mt-1 flex-shrink-0" />
+                  <UIcon name="i-ph-clock" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-neutral-600 dark:text-neutral-300"
                     ><strong>Testing Period:</strong> 7-day testing period for
                     bug reports</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon name="i-ph-clock" class="w-4 h-4 mt-1 flex-shrink-0" />
+                  <UIcon name="i-ph-clock" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-neutral-600 dark:text-neutral-300"
                     ><strong>Minor Revisions:</strong> Included within agreed
                     scope</span
@@ -392,7 +392,7 @@ const lastUpdated = ref("December 1, 2024")
                 <li class="flex items-start gap-2">
                   <UIcon
                     name="i-ph-clock"
-                    class="w-4 h-4 text-primary-500 mt-1 flex-shrink-0"
+                    class="w-4 h-4 text-primary-500 mt-1 shrink-0"
                   />
                   <span class="text-neutral-600 dark:text-neutral-300"
                     ><strong>Final Delivery:</strong> Via agreed delivery
@@ -407,7 +407,7 @@ const lastUpdated = ref("December 1, 2024")
                 <li class="flex items-start gap-2">
                   <UIcon
                     name="i-ph-wrench"
-                    class="w-4 h-4 mt-1 flex-shrink-0"
+                    class="w-4 h-4 mt-1 shrink-0"
                   />
                   <span class="text-neutral-600 dark:text-neutral-300"
                     ><strong>Bug Fixes:</strong> 30-day warranty for
@@ -417,7 +417,7 @@ const lastUpdated = ref("December 1, 2024")
                 <li class="flex items-start gap-2">
                   <UIcon
                     name="i-ph-wrench"
-                    class="w-4 h-4 mt-1 flex-shrink-0"
+                    class="w-4 h-4 mt-1 shrink-0"
                   />
                   <span class="text-neutral-600 dark:text-neutral-300"
                     ><strong>Documentation:</strong> Basic usage documentation
@@ -427,7 +427,7 @@ const lastUpdated = ref("December 1, 2024")
                 <li class="flex items-start gap-2">
                   <UIcon
                     name="i-ph-wrench"
-                    class="w-4 h-4 mt-1 flex-shrink-0"
+                    class="w-4 h-4 mt-1 shrink-0"
                   />
                   <span class="text-gray-600 dark:text-gray-300"
                     ><strong>Training:</strong> Basic handover session
@@ -437,7 +437,7 @@ const lastUpdated = ref("December 1, 2024")
                 <li class="flex items-start gap-2">
                   <UIcon
                     name="i-ph-wrench"
-                    class="w-4 h-4 mt-1 flex-shrink-0"
+                    class="w-4 h-4 mt-1 shrink-0"
                   />
                   <span class="text-gray-600 dark:text-gray-300"
                     ><strong>Extended Support:</strong> Available via separate
@@ -466,26 +466,26 @@ const lastUpdated = ref("December 1, 2024")
             </p>
             <ul class="space-y-2">
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-warning" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-warning" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-gray-600 dark:text-gray-300"
                   >Compatibility with future software versions or updates</span
                 >
               </li>
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-warning" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-warning" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-gray-600 dark:text-gray-300"
                   >Performance on all devices, browsers, or operating
                   systems</span
                 >
               </li>
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-warning" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-warning" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-gray-600 dark:text-gray-300"
                   >Specific business results or revenue outcomes</span
                 >
               </li>
               <li class="flex items-start gap-2">
-                <UIcon name="i-ph-warning" class="w-4 h-4 mt-1 flex-shrink-0" />
+                <UIcon name="i-ph-warning" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-gray-600 dark:text-gray-300"
                   >Third-party service integrations or external
                   dependencies</span
@@ -518,25 +518,25 @@ const lastUpdated = ref("December 1, 2024")
               </h3>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
-                  <UIcon name="i-ph-info" class="w-4 h-4 mt-1 flex-shrink-0" />
+                  <UIcon name="i-ph-info" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-gray-600 dark:text-gray-300"
                     >14-day written notice required for termination</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon name="i-ph-info" class="w-4 h-4 mt-1 flex-shrink-0" />
+                  <UIcon name="i-ph-info" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-gray-600 dark:text-gray-300"
                     >Payment due for all completed work</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon name="i-ph-info" class="w-4 h-4 mt-1 flex-shrink-0" />
+                  <UIcon name="i-ph-info" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-gray-600 dark:text-gray-300"
                     >Partial refund of unused deposits (minus costs)</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon name="i-ph-info" class="w-4 h-4 mt-1 flex-shrink-0" />
+                  <UIcon name="i-ph-info" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-gray-600 dark:text-gray-300"
                     >Delivery of work completed to date</span
                   >
@@ -549,7 +549,7 @@ const lastUpdated = ref("December 1, 2024")
                 <li class="flex items-start gap-2">
                   <UIcon
                     name="i-ph-warning"
-                    class="w-4 h-4 mt-1 flex-shrink-0"
+                    class="w-4 h-4 mt-1 shrink-0"
                   />
                   <span class="text-gray-600 dark:text-gray-300"
                     >Non-payment beyond agreed terms</span
@@ -558,7 +558,7 @@ const lastUpdated = ref("December 1, 2024")
                 <li class="flex items-start gap-2">
                   <UIcon
                     name="i-ph-warning"
-                    class="w-4 h-4 mt-1 flex-shrink-0"
+                    class="w-4 h-4 mt-1 shrink-0"
                   />
                   <span class="text-gray-600 dark:text-gray-300"
                     >Lack of client communication or cooperation</span
@@ -567,7 +567,7 @@ const lastUpdated = ref("December 1, 2024")
                 <li class="flex items-start gap-2">
                   <UIcon
                     name="i-ph-warning"
-                    class="w-4 h-4 mt-1 flex-shrink-0"
+                    class="w-4 h-4 mt-1 shrink-0"
                   />
                   <span class="text-gray-600 dark:text-gray-300"
                     >Scope changes that fundamentally alter the project</span
@@ -576,7 +576,7 @@ const lastUpdated = ref("December 1, 2024")
                 <li class="flex items-start gap-2">
                   <UIcon
                     name="i-ph-warning"
-                    class="w-4 h-4 text-orange-500 mt-1 flex-shrink-0"
+                    class="w-4 h-4 text-orange-500 mt-1 shrink-0"
                   />
                   <span class="text-gray-600 dark:text-gray-300"
                     >Violation of these terms or unprofessional conduct</span
@@ -602,7 +602,7 @@ const lastUpdated = ref("December 1, 2024")
                 <li class="flex items-start gap-2">
                   <UIcon
                     name="i-ph-scales"
-                    class="w-4 h-4 mt-1 flex-shrink-0"
+                    class="w-4 h-4 mt-1 shrink-0"
                   />
                   <span class="text-gray-600 dark:text-gray-300"
                     ><strong>Governing Law:</strong> These terms are governed by
@@ -612,7 +612,7 @@ const lastUpdated = ref("December 1, 2024")
                 <li class="flex items-start gap-2">
                   <UIcon
                     name="i-ph-scales"
-                    class="w-4 h-4 mt-1 flex-shrink-0"
+                    class="w-4 h-4 mt-1 shrink-0"
                   />
                   <span class="text-gray-600 dark:text-gray-300"
                     ><strong>Dispute Resolution:</strong> Good faith negotiation
@@ -622,7 +622,7 @@ const lastUpdated = ref("December 1, 2024")
                 <li class="flex items-start gap-2">
                   <UIcon
                     name="i-ph-scales"
-                    class="w-4 h-4 mt-1 flex-shrink-0"
+                    class="w-4 h-4 mt-1 shrink-0"
                   />
                   <span class="text-gray-600 dark:text-gray-300"
                     ><strong>Severability:</strong> Invalid provisions don't
@@ -635,21 +635,21 @@ const lastUpdated = ref("December 1, 2024")
               <h3><strong class="text-base">Modifications</strong></h3>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
-                  <UIcon name="i-ph-bell" class="w-4 h-4 mt-1 flex-shrink-0" />
+                  <UIcon name="i-ph-bell" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-gray-600 dark:text-gray-300"
                     ><strong>Updates:</strong> Terms may be updated with 30-day
                     notice</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon name="i-ph-bell" class="w-4 h-4 mt-1 flex-shrink-0" />
+                  <UIcon name="i-ph-bell" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-gray-600 dark:text-gray-300"
                     ><strong>Notification:</strong> Changes communicated via
                     website and email</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon name="i-ph-bell" class="w-4 h-4 mt-1 flex-shrink-0" />
+                  <UIcon name="i-ph-bell" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-gray-600 dark:text-gray-300"
                     ><strong>Existing Projects:</strong> Current agreements
                     remain under original terms</span

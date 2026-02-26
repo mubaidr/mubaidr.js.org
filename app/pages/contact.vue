@@ -24,6 +24,7 @@ const contactMethods = ref([
     description: "Send me an email anytime",
     value: "mubaidr@gmail.com",
     action: "mailto:mubaidr@gmail.com",
+    ariaLabel: "Send email to mubaidr@gmail.com",
   },
   {
     icon: "i-ph-linkedin-logo",
@@ -31,6 +32,7 @@ const contactMethods = ref([
     description: "Connect with me professionally",
     value: "/in/mubaidr",
     action: "https://linkedin.com/in/mubaidr",
+    ariaLabel: "Connect with Muhammad Ubaid Raza on LinkedIn",
   },
   {
     icon: "i-ph-calendar",
@@ -38,6 +40,7 @@ const contactMethods = ref([
     description: "Book a 30-min consultation",
     value: "cal.com/mubaidr",
     action: "https://cal.com/mubaidr",
+    ariaLabel: "Schedule a 30-minute consultation call",
   },
 ])
 
@@ -83,18 +86,10 @@ onMounted(() => {
         </div>
 
         <div class="grid gap-8 md:grid-cols-3">
-          <UCard
-            v-for="method in contactMethods"
-            :key="method.title"
-            class="text-center h-full"
-          >
+          <UCard v-for="method in contactMethods" :key="method.title" class="text-center h-full">
             <div class="p-6 space-y-6">
               <div class="flex items-center justify-center mx-auto">
-                <UIcon
-                  :name="method.icon"
-                  size="3em"
-                  class="text-primary-500"
-                />
+                <UIcon :name="method.icon" size="3em" class="text-primary-500" />
               </div>
               <div class="space-y-4">
                 <div class="space-y-1">
@@ -107,11 +102,8 @@ onMounted(() => {
                 </div>
 
                 <UButton
-                  variant="outline"
-                  color="neutral"
-                  class="w-full justify-center"
-                  @click="navigateTo(method.action, { external: true })"
-                >
+variant="outline" color="neutral" class="w-full justify-center" :aria-label="method.ariaLabel"
+                  @click="navigateTo(method.action, { external: true })">
                   {{ method.value }}
                 </UButton>
               </div>
@@ -121,11 +113,7 @@ onMounted(() => {
       </section>
 
       <!-- FAQ -->
-      <section
-        v-if="faqsData && faqsData.list.length > 0"
-        id="faqs"
-        class="space-y-12"
-      >
+      <section v-if="faqsData && faqsData.list.length > 0" id="faqs" class="space-y-12">
         <div class="text-center space-y-6">
           <h2>Frequently Asked Questions</h2>
           <p class="max-w-3xl mx-auto">

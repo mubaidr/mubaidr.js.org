@@ -89,27 +89,17 @@ const submitForm = async () => {
       <form class="space-y-4" @submit.prevent="submitForm">
         <div class="flex flex-col sm:flex-row gap-3">
           <UInput
-            v-model="email"
-            type="email"
-            placeholder="Enter your email address"
-            size="xl"
-            class="flex-1"
-            :disabled="isSubmitting"
-            required
-          />
-          <UButton
-            type="submit"
-            size="xl"
-            :loading="isSubmitting"
-            :disabled="isSubmitting"
-            class="whitespace-nowrap"
-          >
+v-model="email" type="email" placeholder="Enter your email address" size="xl" class="flex-1"
+            :disabled="isSubmitting" :aria-describedby="errorMessage ? 'email-error' : undefined" required />
+          <UButton type="submit" size="xl" :loading="isSubmitting" :disabled="isSubmitting" class="whitespace-nowrap">
             <UIcon name="i-ph-download" />
             Get Free Checklist
           </UButton>
         </div>
 
-        <div v-if="errorMessage">
+        <div
+v-if="errorMessage" id="email-error" aria-live="polite" role="alert"
+          class="text-red-500 dark:text-red-400">
           {{ errorMessage }}
         </div>
 

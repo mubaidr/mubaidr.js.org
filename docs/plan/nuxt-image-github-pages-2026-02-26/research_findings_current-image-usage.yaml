@@ -1,0 +1,477 @@
+plan_id: nuxt-image-github-pages-2026-02-26
+objective: Research current image usage in the mubaidr.js.org Nuxt 4 project to understand how images are currently handled, optimized, and displayed
+focus_area: current-image-usage
+created_at: "2026-02-26T00:00:00.000Z"
+created_by: gem-researcher
+status: completed
+
+tldr: |
+  - @nuxt/image module is installed (v2.0.0) with basic format configuration (webp, avif) but NOT actively used in components
+  - All images use standard HTML <img> tags with direct src paths from /public/ directory
+  - Blog posts use socialImage frontmatter for OG images with rich metadata (src, alt, width, height, mime)
+  - Static images stored in /public/img/blog/{slug}/ directories, primarily SVG banners and PNG screenshots
+  - No custom image components or utilities found; images are hardcoded in templates
+  - Image optimization relies on nuxt-og-image for social media, not runtime optimization
+
+research_metadata:
+  methodology: |
+    Hybrid retrieval approach combining semantic_search for conceptual discovery, grep_search for exact pattern matching,
+    and file system exploration. Multi-pass analysis: (1) Initial discovery of @nuxt/image configuration and usage patterns,
+    (2) Deep dive into component image rendering patterns, (3) Content frontmatter analysis for image metadata,
+    (4) Static asset directory structure mapping.
+  tools_used:
+    - semantic_search
+    - grep_search
+    - file_search
+    - read_file
+    - list_dir
+  scope: |
+    Comprehensive analysis covering: nuxt.config.ts image configuration, all Vue components (pages, components),
+    content frontmatter (blog posts, profiles, projects), public/ static asset structure, and image-related
+    SEO/OG image patterns.
+  confidence: high
+  coverage: 95
+
+files_analyzed:
+  - file: nuxt.config.ts
+    path: /projects/mubaidr.js.org/nuxt.config.ts
+    purpose: Main Nuxt configuration including image module setup
+    key_elements:
+      - element: image configuration
+        type: configuration
+        location: nuxt.config.ts:87-89
+        description: Configures @nuxt/image module with webp and avif format support
+      - element: @nuxt/image module
+        type: dependency
+        location: nuxt.config.ts:89
+        description: Module is registered in modules array
+      - element: schemaOrg identity image
+        type: configuration
+        location: nuxt.config.ts:153
+        description: Profile image reference for Schema.org Person entity
+    language: typescript
+    lines: 201
+
+  - file: package.json
+    path: /projects/mubaidr.js.org/package.json
+    purpose: Dependencies and scripts
+    key_elements:
+      - element: @nuxt/image dependency
+        type: dependency
+        location: package.json:10
+        description: Version 2.0.0 installed in devDependencies
+    language: json
+    lines: 50
+
+  - file: content.config.ts
+    path: /projects/mubaidr.js.org/content.config.ts
+    purpose: Content schema definitions including image fields
+    key_elements:
+      - element: asOgImageCollection import
+        type: import
+        location: content.config.ts:2
+        description: Imports OG image collection wrapper from nuxt-og-image/content
+      - element: socialImage schema
+        type: schema
+        location: content.config.ts:38-47
+        description: Rich image metadata with src, mime, alt, width, height fields
+      - element: image schema (fallback)
+        type: schema
+        location: content.config.ts:49
+        description: Simple string URL for legacy image support
+      - element: avatar schema
+        type: schema
+        location: content.config.ts:74,153
+        description: Avatar URL field for profile and authors collections
+    language: typescript
+    lines: 250
+
+  - file: app/pages/blog/[...slug].vue
+    path: /projects/mubaidr.js.org/app/pages/blog/[...slug].vue
+    purpose: Blog post detail page with featured image and SEO
+    key_elements:
+      - element: Featured image rendering
+        type: template
+        location: app/pages/blog/[...slug].vue:133-137
+        description: Standard <img> tag with socialImage/image fallback, aspect-video container
+      - element: defineOgImage
+        type: composable
+        location: app/pages/blog/[...slug].vue:68
+        description: Sets OG image from socialImage or ogImage frontmatter
+      - element: defineOgImageComponent
+        type: composable
+        location: app/pages/blog/[...slug].vue:69
+        description: Uses NuxtSeo component for OG image rendering
+      - element: ogImage useSeoMeta
+        type: composable
+        location: app/pages/blog/[...slug].vue:57
+        description: Sets ogImage meta tag from image field
+    language: vue
+    lines: 160
+
+  - file: app/components/RecentBlogPosts.vue
+    path: /projects/mubaidr.js.org/app/components/RecentBlogPosts.vue
+    purpose: Displays recent blog posts with thumbnails
+    key_elements:
+      - element: Post thumbnail image
+        type: template
+        location: app/components/RecentBlogPosts.vue:62-66
+        description: Standard <img> tag with socialImage/image fallback, loading="lazy", hover scale effect
+    language: vue
+    lines: 100
+
+  - file: app/components/FeaturedBlogPosts.vue
+    path: /projects/mubaidr.js.org/app/components/FeaturedBlogPosts.vue
+    purpose: Displays featured blog posts with thumbnails
+    key_elements:
+      - element: Post thumbnail image
+        type: template
+        location: app/components/FeaturedBlogPosts.vue:64-68
+        description: Standard <img> tag with socialImage/image fallback, loading="lazy", hover scale effect
+    language: vue
+    lines: 100
+
+  - file: app/pages/blog/index.vue
+    path: /projects/mubaidr.js.org/app/pages/blog/index.vue
+    purpose: Blog listing page with post cards
+    key_elements:
+      - element: Post card image
+        type: template
+        location: app/pages/blog/index.vue:104-110
+        description: Standard <img> tag with socialImage/image fallback, loading="lazy", empty state fallback
+    language: vue
+    lines: 200
+
+  - file: app/pages/projects.vue
+    path: /projects/mubaidr.js.org/app/pages/projects.vue
+    purpose: Projects listing page with testimonial avatars
+    key_elements:
+      - element: Testimonial avatar image
+        type: template
+        location: app/pages/projects.vue:182
+        description: Standard <img> tag for testimonial avatars, object-cover
+      - element: ogImage meta
+        type: composable
+        location: app/pages/projects.vue:27
+        description: Sets OG image to /img/og-image.jpg
+    language: vue
+    lines: 300
+
+  - file: app/pages/index.vue
+    path: /projects/mubaidr.js.org/app/pages/index.vue
+    purpose: Homepage with profile data
+    key_elements:
+      - element: ogImage from avatar
+        type: composable
+        location: app/pages/index.vue:13,18
+        description: Uses profileData.value.avatar for OG and Twitter images
+    language: vue
+    lines: 80
+
+  - file: app/app.vue
+    path: /projects/mubaidr.js.org/app/app.vue
+    purpose: Root app component with favicon
+    key_elements:
+      - element: Favicon link
+        type: template
+        location: app/app.vue:10
+        description: Links to /favicon.png
+    language: vue
+    lines: 30
+
+  - file: content/profile.yml
+    path: /projects/mubaidr.js.org/content/profile.yml
+    purpose: Profile data including avatar
+    key_elements:
+      - element: avatar field
+        type: data
+        location: content/profile.yml:3
+        description: Avatar path: /mubaidr.png
+    language: yaml
+    lines: 80
+
+  - file: content/projects.yml
+    path: /projects/mubaidr.js.org/content/projects.yml
+    purpose: Projects data
+    key_elements:
+      - element: No image fields
+        type: observation
+        location: content/projects.yml:1-201
+        description: Projects do not have image fields, only technology tags and links
+    language: yaml
+    lines: 200+
+
+  - file: content/blog/1-my-first-blog-post.md
+    path: /projects/mubaidr.js.org/content/blog/1-my-first-blog-post.md
+    purpose: Example blog post with socialImage
+    key_elements:
+      - element: socialImage frontmatter
+        type: frontmatter
+        location: content/blog/1-my-first-blog-post.md:13-18
+        description: SVG banner with full metadata (src, mime, alt, width, height)
+    language: markdown
+    lines: 201
+
+  - file: content/blog/2-my-vscode-setup.md
+    path: /projects/mubaidr.js.org/content/blog/2-my-vscode-setup.md
+    purpose: Example blog post with inline images
+    key_elements:
+      - element: socialImage frontmatter
+        type: frontmatter
+        location: content/blog/2-my-vscode-setup.md:13-17
+        description: PNG screenshot with full metadata
+      - element: Inline markdown images
+        type: markdown
+        location: content/blog/2-my-vscode-setup.md:94,100
+        description: Standard markdown image syntax with alt text
+    language: markdown
+    lines: 201
+
+  - file: app/composables/useBlogData.ts
+    path: /projects/mubaidr.js.org/app/composables/useBlogData.ts
+    purpose: Blog data fetching composables
+    key_elements:
+      - element: No image-specific logic
+        type: observation
+        location: app/composables/useBlogData.ts:1-30
+        description: Composables fetch blog data but don't process images separately
+    language: typescript
+    lines: 30
+
+patterns_found:
+  - category: image_rendering
+    pattern: Standard HTML <img> tags
+    description: All images in components use native <img> tags, not @nuxt/image components
+    examples:
+      - file: app/pages/blog/[...slug].vue
+        location: "app/pages/blog/[...slug].vue:133-137"
+        snippet: |
+          <img
+            :src="blogPostData.socialImage?.src || blogPostData.image"
+            :alt="blogPostData.socialImage?.alt || blogPostData.title"
+            class="w-full h-full object-cover">
+      - file: app/components/RecentBlogPosts.vue
+        location: "app/components/RecentBlogPosts.vue:62-66"
+        snippet: |
+          <img
+            :src="post.socialImage?.src || post.image"
+            :alt="post.socialImage?.alt || post.title"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy">
+    prevalence: common
+
+  - category: image_fallback
+    pattern: socialImage with image fallback
+    description: Components check socialImage first, then fall back to legacy image string
+    examples:
+      - file: app/pages/blog/[...slug].vue
+        location: "app/pages/blog/[...slug].vue:133"
+        snippet: ":src=\"blogPostData.socialImage?.src || blogPostData.image\""
+      - file: app/components/FeaturedBlogPosts.vue
+        location: "app/components/FeaturedBlogPosts.vue:64"
+        snippet: ":src=\"post.socialImage?.src || post.image\""
+    prevalence: common
+
+  - category: image_loading
+    pattern: loading="lazy" on below-fold images
+    description: Blog listing and card components use lazy loading for images
+    examples:
+      - file: app/components/RecentBlogPosts.vue
+        location: "app/components/RecentBlogPosts.vue:66"
+        snippet: "loading=\"lazy\">"
+      - file: app/pages/blog/index.vue
+        location: "app/pages/blog/index.vue:109"
+        snippet: "loading=\"lazy\">"
+    prevalence: common
+
+  - category: content_structure
+    pattern: socialImage rich metadata schema
+    description: Blog posts use structured socialImage object with src, mime, alt, width, height
+    examples:
+      - file: content/blog/1-my-first-blog-post.md
+        location: "content/blog/1-my-first-blog-post.md:13-18"
+        snippet: |
+          socialImage:
+            src: /img/blog/1-my-first-blog-post/banner.svg
+            mime: svg
+            alt: Code editor with mountain landscape - Starting a tech blog journey
+            width: 1200
+            height: 630
+    prevalence: common
+
+  - category: static_assets
+    pattern: /public/img/blog/{slug}/ directory structure
+    description: Blog post images organized in slug-named subdirectories
+    examples:
+      - file: public/img/blog/1-my-first-blog-post
+        location: "public/img/blog/1-my-first-blog-post/"
+        snippet: Contains banner.svg
+      - file: public/img/blog/2-my-vscode-setup
+        location: "public/img/blog/2-my-vscode-setup/"
+        snippet: Contains typescript-dark.png, typescript-light.png, empty-dark.png, empty-light.png
+    prevalence: common
+
+  - category: og_images
+    pattern: defineOgImage and defineOgImageComponent
+    description: Blog posts use Nuxt SEO composables for OG image generation
+    examples:
+      - file: app/pages/blog/[...slug].vue
+        location: "app/pages/blog/[...slug].vue:68-69"
+        snippet: |
+          defineOgImage(blogPostData.value.ogImage || blogPostData.value.socialImage)
+          defineOgImageComponent("NuxtSeo")
+    prevalence: common
+
+  - category: image_formats
+    pattern: SVG and PNG usage
+    description: Blog banners use SVG for scalable graphics, PNG for screenshots
+    examples:
+      - file: public/img/blog/1-my-first-blog-post/banner.svg
+        location: "public/img/blog/1-my-first-blog-post/banner.svg"
+        snippet: SVG banner (1200x630)
+      - file: public/img/blog/2-my-vscode-setup/typescript-dark.png
+        location: "public/img/blog/2-my-vscode-setup/typescript-dark.png"
+        snippet: PNG screenshot (1200x630)
+    prevalence: common
+
+  - category: seo_images
+    pattern: Schema.org image references
+    description: Profile and blog posts include image in structured data
+    examples:
+      - file: nuxt.config.ts
+        location: "nuxt.config.ts:153"
+        snippet: "image: \"/mubaidr.png\""
+      - file: app/pages/blog/[...slug].vue
+        location: "app/pages/blog/[...slug].vue:84"
+        snippet: "image: image ? [image] : undefined"
+    prevalence: occasional
+
+related_architecture:
+  components_relevant_to_domain:
+    - component: Blog post detail page
+      responsibility: Displays featured image and sets OG images
+      location: app/pages/blog/[...slug].vue
+      relationship_to_domain: domain depends on this for image rendering
+    - component: Blog listing components
+      responsibility: Display post thumbnails with lazy loading
+      location: app/components/RecentBlogPosts.vue, app/components/FeaturedBlogPosts.vue, app/pages/blog/index.vue
+      relationship_to_domain: domain depends on these for image display patterns
+    - component: Content schema
+      responsibility: Defines socialImage and image field types
+      location: content.config.ts
+      relationship_to_domain: this uses domain outputs for type validation
+  interfaces_used_by_domain:
+    - interface: socialImage object
+      location: content.config.ts:38-47
+      usage_pattern: Rich metadata with src, mime, alt, width, height fields
+    - interface: image string (legacy)
+      location: content.config.ts:49
+      usage_pattern: Simple URL string for backward compatibility
+  data_flow_involving_domain: |
+    Blog post frontmatter → content.config.ts schema validation → components access socialImage/image fields
+    → <img> tags render with fallback pattern → defineOgImage sets SEO metadata → nuxt-og-image generates OG images
+  key_relationships_to_domain:
+    - from: content.config.ts
+      to: app/pages/blog/[...slug].vue
+      relationship: defines schema for
+    - from: content/blog/*.md
+      to: app/components/RecentBlogPosts.vue
+      relationship: provides data for
+    - from: nuxt.config.ts
+      to: @nuxt/image module
+      relationship: configures
+
+related_technology_stack:
+  languages_used_in_domain:
+    - TypeScript (configuration, composables)
+    - Vue 3 (components, templates)
+    - YAML (content frontmatter)
+    - Markdown (blog content)
+  frameworks_used_in_domain:
+    - name: Nuxt 4
+      usage_in_domain: Main framework providing SSR and routing
+    - name: Nuxt Content
+      usage_in_domain: Content management with typed schemas
+    - name: Nuxt SEO
+      usage_in_domain: OG image generation via defineOgImage
+  libraries_used_in_domain:
+    - name: @nuxt/image
+      purpose_in_domain: Installed but not actively used (configured for webp/avif formats)
+    - name: nuxt-og-image
+      purpose_in_domain: OG image generation from socialImage frontmatter
+    - name: nuxt-og-image/content
+      purpose_in_domain: asOgImageCollection wrapper for blog collection
+  external_apis_used_in_domain: null
+
+related_conventions:
+  naming_patterns_in_domain: |
+    - Image directories: /public/img/blog/{slug}/ (slug matches blog post filename)
+    - Frontmatter field: socialImage (preferred) vs image (legacy fallback)
+    - Schema fields: src, mime, alt, width, height for rich metadata
+  structure_of_domain: |
+    - Static files in /public/img/ with blog/ subdirectory
+    - Each blog post has its own image subdirectory
+    - Banners named banner.svg, screenshots descriptive names
+  error_handling_in_domain: |
+    - Fallback pattern: socialImage?.src || image
+    - Empty state: conditional rendering with icon fallback when no image
+    - Avatar handling: conditional with v-if="testimonial.avatar"
+  testing_in_domain: null
+  documentation_in_domain: |
+    - README.md includes image frontmatter example
+    - Blog posts document their own image usage in examples
+
+related_dependencies:
+  internal:
+    - component: content.config.ts
+      relationship_to_domain: Defines image schemas used throughout
+      direction: outbound
+    - component: app/pages/blog/[...slug].vue
+      relationship_to_domain: Main consumer of image patterns
+      direction: inbound
+    - component: app/components/RecentBlogPosts.vue
+      relationship_to_domain: Reuses image rendering patterns
+      direction: inbound
+  external:
+    - name: @nuxt/image
+      purpose_for_domain: Image optimization (configured but unused)
+    - name: nuxt-og-image
+      purpose_for_domain: OG image generation from socialImage
+    - name: nuxt-og-image/content
+      purpose_for_domain: Content collection integration for OG images
+
+domain_security_considerations: null
+
+testing_patterns: null
+
+open_questions:
+  - question: Why is @nuxt/image module installed and configured but not used in any components?
+    context: Module is in nuxt.config.ts with format configuration, but all components use native <img> tags
+  - question: What is the purpose of /img/og-image.jpg referenced in projects.vue?
+    context: File path is referenced but file doesn't exist in public/img/ directory
+  - question: Are there plans to migrate from native <img> tags to @nuxt/image components?
+    context: Current setup doesn't leverage the installed image optimization module
+  - question: How are blog post images currently generated and optimized?
+    context: Images appear to be manually created and placed in /public/img/blog/{slug}/ directories
+  - question: What is the workflow for creating new blog post images?
+    context: No automation or documentation found for image creation process
+
+gaps:
+  - area: @nuxt/image module usage
+    description: Module is installed and configured but completely unused in the codebase
+    impact: Missing out on automatic image optimization, lazy loading, responsive images, and format conversion
+  - area: Image optimization pipeline
+    description: No automated image optimization for static assets
+    impact: Images are served as-is without compression, format conversion, or responsive sizing
+  - area: Responsive image implementation
+    description: No srcset or sizes attributes for responsive images
+    impact: All users download the same image size regardless of device capabilities
+  - area: Missing OG image file
+    description: /img/og-image.jpg referenced in projects.vue doesn't exist
+    impact: Broken OG image reference for projects page
+  - area: Image documentation
+    description: No documentation for image creation workflow or conventions
+    impact: Unclear process for adding new blog post images
+  - area: WebP/AVIF configuration
+    description: Image module configured for webp/avif but not utilized
+    impact: Modern image formats not being served to browsers that support them

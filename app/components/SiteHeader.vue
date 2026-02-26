@@ -45,7 +45,7 @@ class="lg:hidden" variant="ghost" color="neutral" :icon="mobileMenuOpen ? 'i-ph-
     <!-- Mobile Menu -->
     <div
 v-show="mobileMenuOpen" id="mobile-menu"
-      class="lg:hidden h-auto min-h-screen absolute left-0 top-full w-screen max-w-none overflow-hidden -mx-[calc(50vw-50%)]"
+      class="lg:hidden z-50 h-auto min-h-screen absolute left-0 top-full w-screen max-w-none overflow-hidden -mx-[calc(50vw-50%)]"
       @click.stop>
       <div class="m-4" @click="toggleMobileMenu">
         <div

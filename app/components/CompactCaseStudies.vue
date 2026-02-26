@@ -34,10 +34,12 @@ withDefaults(defineProps<Props>(), {
     </div>
 
     <!-- Case Studies -->
-    <div v-else-if="
+    <div
+v-else-if="
       caseStudiesData?.caseStudies && caseStudiesData.caseStudies.length > 0
     " class="grid gap-6 md:grid-cols-3">
-      <UPageCard v-for="study in caseStudiesData.caseStudies.slice(0, count)" :key="study.id" :spotlight="true"
+      <UPageCard
+v-for="study in caseStudiesData.caseStudies.slice(0, count)" :key="study.id" :spotlight="true"
         spotlight-color="info">
         <div class="space-y-8 text-center">
           <!-- Problem -->
@@ -59,7 +61,7 @@ withDefaults(defineProps<Props>(), {
             </p>
           </div>
 
-          <UAlert :title="study.metric" variant="soft" color="info"></UAlert>
+          <UAlert :title="study.metric" variant="soft" color="info"/>
         </div>
       </UPageCard>
     </div>
