@@ -77,16 +77,16 @@ export default defineNuxtConfig({
     },
   },
 
-  image: {
-    format: ["webp", "avif"],
-  },
+  // image: {
+  //   format: ["webp", "avif"],
+  // },
 
   modules: [
     "@nuxtjs/color-mode",
     "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/ui",
-    "@nuxt/image",
+    // "@nuxt/image",
     // "@nuxtjs/mdc",
     "@nuxtjs/seo",
     // "nuxt-feedme",
