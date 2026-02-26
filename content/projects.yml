@@ -610,11 +610,333 @@ projects:
     myRole: Creator & Developer
     teamSize: 1
     type: Open Source
+  - id: 16
+    title: WhatsApp Chat Summary
+    description: AI-powered platform that connects to WhatsApp accounts via QR code to generate intelligent summaries of chat conversations, with the ability to ask questions about chats and get suggested replies.
+    longDescription: WhatsApp Chat Summary is a full-stack web application that enables users to connect their WhatsApp accounts through QR code authentication. Once connected, the platform fetches all chat conversations and leverages AI (Google Generative AI and OpenAI) to generate comprehensive summaries of each chat. Users can view their chat history, generate new summaries, ask specific questions about their conversations using RAG (Retrieval-Augmented Generation), and receive AI-powered reply suggestions. The platform supports multiple phone numbers per user, real-time session management via Server-Sent Events, and vector-based semantic search using pgvector embeddings. The backend is powered by a NestJS server with PostgreSQL database for data persistence.
+    technologies:
+      - Next.js 15
+      - React 19
+      - TypeScript
+      - Tailwind CSS
+      - shadcn/ui
+      - Prisma ORM
+      - PostgreSQL
+      - pgvector
+      - Google Generative AI
+      - OpenAI
+      - Socket.io
+      - NestJS (Backend)
+      - Server-Sent Events (SSE)
+      - JWT Authentication
+    category: Web Application
+    featured: true
+    status: active
+    startDate: "2024-01-01"
+    endDate: null
+    links: {}
+    stats:
+      database_tables: 9
+      frontend_components: 25
+      api_integrations: 5
+    features:
+      - WhatsApp QR code authentication and session management
+      - Multi-phone number support per user
+      - AI-powered chat summarization using Google Generative AI
+      - RAG-based question answering about chat content
+      - AI-generated reply suggestions
+      - Real-time session handling via Server-Sent Events
+      - Vector embeddings for semantic search (pgvector)
+      - User authentication and authorization (JWT)
+      - Responsive dashboard with mobile and desktop layouts
+      - Chat history browsing and management
+      - Summary session history tracking
+      - Profile pictures for contacts
+    challenges:
+      - Implementing secure WhatsApp session management via QR code
+      - Handling real-time updates with Server-Sent Events
+      - Integrating AI for both summarization and Q&A
+      - Managing vector embeddings for semantic search
+      - Building responsive UI for mobile and desktop
+      - Coordinating between Next.js frontend and NestJS backend
+    outcomes:
+      - Successfully integrated WhatsApp authentication flow
+      - Built AI-powered summarization pipeline
+      - Implemented RAG-based chat Q&A system
+      - Created responsive multi-device UI
+    businessImpact:
+      automation: Automated chat summarization using AI
+      userEngagement: Enhanced user interaction with chat data
+      efficiency: Quick access to conversation insights
+      innovation: RAG-based conversational interface with chat data
+    myRole: Full-Stack Engineer
+    teamSize: 3
+    type: Client Project
+  - id: 17
+    title: Al Sammak Digital
+    description: E-commerce platform for hardware and fasteners wholesale company based in UAE, featuring product catalog, lead generation, and admin management.
+    longDescription: Al Sammak Digital is a comprehensive e-commerce and lead generation platform built for Al Sammak Overseas Trading LLC, a established hardware and fasteners wholesale company operating across the UAE and international markets. The platform serves as both a digital storefront for product showcase and a lead generation tool for business inquiries. Built on Payload CMS 3.0 with Next.js 15, it features a complete product management system with categories, brands, product variants with customizable specifications, media management, and user authentication. The public-facing website includes dynamic product browsing with filtering by category, brand, and search, while providing lead generation through comprehensive contact forms. The admin dashboard enables complete content management including slider management, site settings, and product catalog administration. The platform is containerized with Docker support and configured for production deployment with PostgreSQL.
+    technologies:
+      - Next.js 15
+      - React 19
+      - TypeScript
+      - Payload CMS 3.0
+      - PostgreSQL
+      - SQLite (dev)
+      - Tailwind CSS
+      - Shadcn/ui
+      - Docker
+      - Resend Email
+    category: Web Application
+    featured: false
+    status: active
+    startDate: "2024-01-01"
+    endDate: null
+    stats:
+      years_in_business: 40+
+      product_categories: 10+
+      brands_represented: 15+
+      countries_served: 20+
+    features:
+      - Product catalog with categories, brands, and variants
+      - Dynamic product filtering by category, brand, and search
+      - Custom product specifications per category
+      - Media management for product images
+      - Hero slider management
+      - User authentication for admin access
+      - Lead generation contact forms
+      - Newsletter subscription system
+      - About page with company history and gallery
+      - Contact page with location information
+      - Privacy policy and terms pages
+      - Mobile-responsive design
+      - GraphQL API endpoints
+      - REST API endpoints
+      - Site settings management
+      - Footer and mission section customization
+    challenges:
+      - Building dynamic product variant system with category-specific specifications
+      - Managing hierarchical category structures with parent-child relationships
+      - Creating intuitive filtering system for products
+      - Implementing responsive design for diverse devices
+      - Setting up PostgreSQL production database with SQLite development
+      - Configuring email delivery with Resend
+      - Docker containerization for deployment
+    outcomes:
+      - Successfully digitized product catalog for hardware wholesaler
+      - Streamlined product management through Payload CMS admin
+      - Enabled lead generation through contact forms
+      - Provided API for mobile app integration
+      - Improved brand presence in UAE market
+    businessImpact:
+      communityImpact: B2B e-commerce for hardware industry
+      marketReach: 20+ countries served
+      operationalEfficiency: Digitized product catalog and lead management
+      socialImpact: Supporting UAE hardware distribution business
+    myRole: Full-Stack Engineer
+    teamSize: 3
+    client:
+      name: Al Sammak Trading LLC
+      industry: Hardware & Fasteners Ecommerce
+    type: Client Project
+  - id: 18
+    title: OR-Tools Route Optimizer
+    description: A FastAPI-based route optimization service using Google OR-Tools for solving Vehicle Routing Problems (VRP) with time windows and job constraints.
+    longDescription: OR-Tools Route Optimizer is a sophisticated route planning and optimization platform designed for field service operations. It leverages Google OR-Tools to solve complex Vehicle Routing Problems (VRP) with time windows, enabling organizations to efficiently schedule and route field technicians or service vehicles. The system employs a multi-step relaxation approach that progressively relaxes time window constraints when no feasible solution exists, starting with ±30 minute windows and escalating to full-day windows. It supports multiple optimization objectives including least violations, shortest time, and shortest distance. The platform provides both a REST API built with FastAPI and a command-line interface for running optimizations. Interactive route visualization is available through Folium maps, while real-world routing data is sourced from Mapbox. The application is designed for field service companies, delivery fleets, and any organization requiring optimized route scheduling with complex constraints.
+    technologies:
+      - Python
+      - FastAPI
+      - Google OR-Tools
+      - Folium
+      - Mapbox API
+      - Pydantic
+      - PostgreSQL (storage ready)
+    category: Web Application
+    featured: false
+    status: active
+    startDate: "2024-01-01"
+    endDate: null
+    links: {}
+    stats:
+      api_versions: 2
+      optimization_objectives: 3
+      relaxation_steps: 5
+      sample_datasets: 5
+    features:
+      - FastAPI REST API with automatic documentation
+      - Multiple optimization objectives (least violations, shortest time, shortest distance)
+      - Time window constraints with progressive relaxation strategies
+      - Job prioritization system
+      - Interactive route visualization using Folium maps
+      - CLI interface for standalone optimization
+      - Mapbox integration for real-world routing data
+      - Job and resource management per group
+      - Schedule storage and retrieval (in-memory)
+      - Matrix subset API for distance/time calculations
+      - CORS middleware support
+      - Health check and version endpoints
+    challenges:
+      - Implementing progressive constraint relaxation for infeasible solutions
+      - Managing time window violations and priority-based relaxation
+      - Supporting both API and CLI modes with shared logic
+      - Handling hardcoded vs real-world distance matrices
+      - Converting between internal indices and original job IDs
+      - Building flexible job assignment and status tracking
+    outcomes:
+      - Successfully refactored from standalone scripts to modular FastAPI application
+      - Implemented multi-objective route optimization
+      - Created comprehensive REST API for field service scheduling
+      - Enabled interactive route visualization
+      - Supported multiple geographic regions with sample datasets
+    businessImpact:
+      efficiency: Automated route optimization with constraint handling
+      scalability: Handles complex Vehicle Routing Problem (VRP) with 5 relaxation steps
+      innovation: Progressive relaxation for infeasible solutions
+      return on investment: Improved delivery and service scheduling accuracy
+    myRole: Full-Stack Developer
+    teamSize: 2
+    client:
+      name: Internal / Field Service Operations
+      industry: Logistics & Field Services
+    type: Internal Tool
+  - id: 19
+    title: RemindMeBot
+    description: WhatsApp-based personal assistant that helps users manage files and set expiry reminders through natural conversation.
+    longDescription: RemindMeBot is a hybrid system consisting of a WhatsApp bot interface and a web-based dashboard that helps users manage important life reminders and files through natural conversation. Users can upload files (passports, IDs, certificates) via WhatsApp, set expiry/due date reminders with custom intervals (90/60/30 days before), and receive automated WhatsApp notifications before deadlines. The platform supports dual intent processing - both AI-based NLP interpretation for natural language commands and guided questionnaire-based interaction for structured reminder setup. Additional features include file retrieval via simple commands ("Send me my passport"), email forwarding to third parties, proactive bot suggestions, and a comprehensive web dashboard for managing all files and reminders. The system uses PostgreSQL for data storage, AWS S3 for secure encrypted file storage, BullMQ for job scheduling, and better-auth for secure user authentication.
+    technologies:
+      - Node.js
+      - Express.js
+      - TypeScript
+      - PostgreSQL
+      - Prisma ORM
+      - Better-Auth
+      - AWS S3
+      - WhatsApp Web.js
+      - BullMQ
+      - Zod
+    category: Web Application
+    featured: false
+    status: in_progress
+    startDate: "2025-12-10"
+    endDate: null
+    links: {}
+    stats:
+      supported_channels: 1
+      notification_channels: 1
+      storage_encryption: true
+    features:
+      - WhatsApp bot integration with natural conversation
+      - File upload and storage via WhatsApp and Web
+      - Smart reminder scheduling with custom intervals
+      - Automated WhatsApp notifications
+      - File retrieval via chat commands
+      - Email forwarding of documents
+      - Dual intent processing (NLP and questionnaire-based)
+      - Web dashboard for file and reminder management
+      - User authentication and session management
+      - Conversation state management for guided flows
+      - Secure encrypted file storage (AWS S3)
+      - Job queue system for reliable notifications
+      - User preferences and timezone settings
+      - RESTful API architecture
+    challenges:
+      - Building reliable WhatsApp Web.js integration
+      - Managing conversation state for multi-turn flows
+      - Implementing dual intent processing (NLP vs questionnaire)
+      - Creating secure file storage with encryption
+      - Building reliable reminder scheduling system
+      - Handling rate limits for WhatsApp messages
+      - Designing intuitive user experience for both WhatsApp and Web
+    outcomes:
+      - Implemented foundational project structure
+      - Set up PostgreSQL database with Prisma ORM
+      - Created user authentication system
+      - Built core API routes for users, reminders, files, notifications
+      - Implemented file upload and storage service
+      - Created notification scheduling system
+    businessImpact:
+      convenience: Chat-based reminder management via WhatsApp
+      automation: Automated expiry notifications
+      accessibility: Universal access through WhatsApp (widely used messenger)
+      security: Encrypted file storage with user-specific access
+    myRole: Full-Stack Engineer
+    teamSize: 3
+    client:
+      name: Enterprise
+      industry: Productivity & Personal Assistant
+    type: Personal Project
+  - id: 20
+    title: Parody CV
+    description: AI-powered platform for generating humorous, theme-based parody CVs using GPT-5 and Gemini image processing.
+    longDescription: Parody CV is a sophisticated API platform that generates funny, theme-based parody CVs using artificial intelligence. Users can upload photos, select from various creative themes (like Space Opera, Medieval Fantasy, etc.), and receive personalized humorous CVs that reinterpret their traits, skills, and experiences in comedic ways. The platform features a credit-based monetization system, secure user authentication via Kinde, Stripe payment integration for credit purchases, and advanced sharing capabilities with expirable tokens. Users can regenerate entire CVs or specific sections (objective, experience, skills, achievements, endorsements), and images can be transformed into cartoonish cyberpunk styles using Google's Gemini AI. The system supports public sharing via secure tokens with customizable expiration and usage limits.
+    technologies:
+      - Node.js
+      - Express
+      - TypeScript
+      - PostgreSQL
+      - Drizzle ORM
+      - OpenAI GPT-5
+      - Google Gemini
+      - Stripe
+      - Kinde Authentication
+      - Multer
+      - Sharp
+      - Zod
+    category: Web Application
+    featured: true
+    status: active
+    startDate: "2024-01-01"
+    endDate: null
+    stats:
+      ai_models: 2
+      themes_available: 10+
+      cv_sections: 5
+      sharing_options: 3
+    features:
+      - AI-powered parody CV generation using GPT-5
+      - Photo upload with AI image processing (cartoon cyberpunk style via Gemini)
+      - Multiple creative themes (Space Opera, Medieval Fantasy, etc.)
+      - Credit-based system for AI usage management
+      - User authentication via Kinde
+      - Stripe payment integration for credit purchases
+      - CV section reroll (objective, experience, skills, achievements, endorsements)
+      - Full CV reroll functionality
+      - Image-only reroll capability
+      - Secure token-based CV sharing
+      - Customizable share token expiration and usage limits
+      - Public CV access via share tokens
+      - Theme management and selection
+      - User CV library management
+      - Share view count tracking
+      - Token revocation system
+    challenges:
+      - Managing AI credit consumption and cost optimization
+      - Handling image processing with Gemini API efficiently
+      - Implementing secure token-based sharing with expiration
+      - Schema validation for AI-generated content using Zod
+      - Balancing AI response quality with token limits
+      - Storing and serving generated images securely
+    outcomes:
+      - Successfully deployed AI-powered CV generation platform
+      - Implemented credit-based monetization system
+      - Created secure sharing infrastructure with tokens
+      - Integrated multiple AI services (OpenAI + Google Gemini)
+    businessImpact:
+      communityImpact: Fun, creative CV generation for users
+      monetization: Credit-based revenue system
+      operationalEfficiency: Automated AI-powered content generation
+      socialImpact: Entertaining platform for humor and creativity
+    myRole: Lead Full-Stack Engineer
+    teamSize: 4
+    client:
+      name: Freelance project
+      industry: AI & Creative Technology
+    type: Client Project
 categories:
   - name: All
-    count: 11
+    count: 16
   - name: Web Application
-    count: 3
+    count: 8
   - name: SaaS
     count: 3
   - name: Development Tools

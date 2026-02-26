@@ -31,7 +31,7 @@ const { data: featuredProjectsData } = await useFeaturedProjects(count)
 
     <div class="grid gap-6 md:grid-cols-2">
       <UCard
-        v-for="project in featuredProjectsData"
+        v-for="project in featuredProjectsData || []"
         :key="project.id"
         class="cursor-pointer h-full"
       >
@@ -56,7 +56,7 @@ const { data: featuredProjectsData } = await useFeaturedProjects(count)
             <!-- Technologies -->
             <div class="flex flex-wrap gap-1">
               <UBadge
-                v-for="tech in project.technologies.slice(0, 3)"
+                v-for="tech in (project.technologies || []).slice(0, 3)"
                 :key="tech"
                 :label="tech"
               />

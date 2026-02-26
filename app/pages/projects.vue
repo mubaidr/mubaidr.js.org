@@ -223,7 +223,7 @@ const getProjectTestimonials = (project: { testimonials?: number[] }) => {
                             :src="testimonial.avatar"
                             :alt="testimonial.name"
                             class="w-full h-full object-cover"
-                          >
+                          />
                         </div>
                         <div class="text-xs">
                           <div class="font-medium">{{ testimonial.name }}</div>
@@ -240,15 +240,15 @@ const getProjectTestimonials = (project: { testimonials?: number[] }) => {
                 <!-- Technologies -->
                 <div class="flex flex-wrap gap-1.5">
                   <UBadge
-                    v-for="tech in project.technologies.slice(0, 4)"
+                    v-for="tech in (project.technologies || []).slice(0, 4)"
                     :key="tech"
                     :label="tech"
                     variant="outline"
                     size="sm"
                   />
                   <UBadge
-                    v-if="project.technologies.length > 4"
-                    :label="`+${project.technologies.length - 4}`"
+                    v-if="(project.technologies || []).length > 4"
+                    :label="`+${(project.technologies || []).length - 4}`"
                     variant="subtle"
                     size="sm"
                   />
@@ -256,7 +256,7 @@ const getProjectTestimonials = (project: { testimonials?: number[] }) => {
 
                 <!-- Links -->
                 <div
-                  v-if="Object.keys(project.links).length > 0"
+                  v-if="project.links && Object.keys(project.links).length > 0"
                   class="flex flex-wrap items-center gap-2 pt-2"
                 >
                   <UButton
