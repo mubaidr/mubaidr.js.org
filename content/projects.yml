@@ -1,4 +1,256 @@
 projects:
+  - id: 11
+    title: ParagonSquare.ai
+    description: Next-generation multi-marketplace platform offering 0% commission through subscription model, combining auctions, products, services, and future vacation rentals.
+    longDescription: >-
+      ParagonSquare.ai is a revolutionary multi-marketplace platform that bridges B2B, B2C,
+      and C2C transactions through a unified ecosystem. The platform features four distinct
+      marketplaces: online auctions for goods, flat-price product sales, services marketplace
+      with 43+ categories, and upcoming vacation rentals. Its innovative subscription-based
+      model eliminates traditional 10-25% commission fees, offering VIP subscriptions that
+      reduce commissions to 0%. Key features include 72-hour funds release policy, 3-way chat
+      dispute resolution, and comprehensive KYC verification for sellers. The platform has
+      achieved significant traction with 28,000+ sign-ups and 600,000+ unique visitors across
+      5 countries, with plans to IPO on the Bahamas Stock Exchange (BISX).
+    technologies:
+      - Custom Framework
+      - Stripe
+      - NOWPayments
+      - Font Awesome
+      - Termly.io
+    category: SaaS
+    featured: true
+    status: active
+    startDate: "2024-01-01"
+    endDate: null
+    links:
+      demo: https://paragonsquare.ai
+    stats:
+      signups: 28k+
+      visitors: 600k+
+      raised: $18,696
+      countries: 5
+    features:
+      - Multi-marketplace platform (auctions, products, services, rentals)
+      - 0% commission model through VIP subscriptions
+      - 72-hour funds release policy
+      - 3-way chat dispute resolution system
+      - KYC verification for sellers
+      - 43+ service categories
+      - 50+ product categories
+      - Multi-currency payment support (Stripe + crypto via NOWPayments)
+      - Cookie consent management (GDPR compliant)
+    challenges:
+      - Building multi-marketplace architecture supporting diverse transaction types
+      - Implementing secure payment processing with 72-hour hold period
+      - Creating effective 3-way dispute resolution chat system
+      - Managing KYC verification workflow for sellers
+      - Scaling to handle 600K+ visitors across 5 countries
+    outcomes:
+      - 28,000+ user sign-ups achieved
+      - 600,000+ unique visitors across 5 countries
+      - $18,696 raised in Regulation CF offering
+      - Planning IPO on Bahamas Stock Exchange (BISX)
+      - Subsidiary Paris Realty established for vacation rental segment
+    businessImpact:
+      userGrowth: 28K+ sign-ups, 600K+ unique visitors
+      marketReach: Operating across 5 countries
+      funding: $18,696 raised, targeting $600K total
+      innovation: 0% commission model disrupting traditional 10-25% fees
+      futureGrowth: IPO planned on Bahamas Stock Exchange (BISX)
+    myRole: Lead Full-Stack Developer
+    teamSize: 3
+    client:
+      name: ParagonSquare.ai
+      industry: E-commerce & Marketplace
+    type: Client Project
+  - id: 15
+    title: AI Document Chat Platform
+    description: Interactive web application with document repository and AI-based chat portal that responds to queries based on uploaded PDF and Word documents, including scanned copies with OCR support.
+    longDescription: AI Document Chat Platform is a comprehensive web application that combines document management with intelligent AI-powered chat capabilities. Users can upload and browse through a repository of documents in PDF and Word formats, then interact with an AI chat system that answers questions based on the content of those documents. The platform features advanced OCR (Optical Character Recognition) technology to read and process scanned documents, making it possible to extract information from image-based PDFs and other non-text formats. The system includes a robust administrative dashboard that displays usage statistics, query analytics, user activity, and document engagement metrics. Built with a scalable back-end architecture supporting secure Single Sign-On (SSO) authentication, the platform ensures data security and seamless user access. The AI chat functionality leverages modern language models to provide contextual, accurate responses based on document content, with the ability to handle multiple document sources simultaneously. The application features a user-friendly interface optimized for document browsing, query submission, and result visualization, making it easy for users to find information quickly and efficiently.
+    technologies:
+      - Next.js
+      - React
+      - TypeScript
+      - OpenAI API
+      - LangChain
+      - Tesseract.js
+      - PDF.js
+      - Node.js
+      - PostgreSQL
+      - Redis
+      - AWS S3
+      - SAML/OAuth
+      - Docker
+    category: SaaS
+    featured: true
+    status: active
+    startDate: "2024-05-01"
+    endDate: null
+    links:
+      demo: https://demo.example.com
+    stats:
+      documents_processed: 50k+
+      queries_handled: 200k+
+      users: 5k+
+      accuracy_rate: 95%
+    features:
+      - Document repository with PDF and Word support
+      - AI-powered chat with document-based responses
+      - OCR for scanned document processing
+      - Administrative dashboard with usage analytics
+      - Secure SSO authentication (SAML/OAuth)
+      - Real-time query processing and response
+      - Multi-document context awareness
+      - Document versioning and management
+      - User activity tracking and reporting
+      - Scalable back-end infrastructure
+    challenges:
+      - Implementing accurate OCR for diverse scanned document types
+      - Building efficient document indexing for fast AI retrieval
+      - Managing context across multiple documents in chat conversations
+      - Designing secure SSO integration with multiple providers
+      - Optimizing AI response accuracy based on document content
+      - Handling large document files efficiently without performance degradation
+    outcomes:
+      - 50K+ documents successfully processed and indexed
+      - 200K+ AI queries handled with 95% accuracy
+      - 5K+ active users across organizations
+      - Seamless SSO integration with enterprise providers
+      - Reduced document search time by 90% compared to manual review
+    businessImpact:
+      efficiency: 90% reduction in document search time
+      adoption: 5K+ users across multiple organizations
+      accuracy: 95% query accuracy rate
+      scalability: 50K+ documents processed with fast retrieval
+    myRole: Lead Full-Stack Developer & AI Integration Specialist
+    teamSize: 4
+    client:
+      name: Enterprise Client
+      industry: Technology & AI
+    type: Client Project
+  - id: 16
+    title: WhatsApp Chat Summary
+    description: AI-powered platform that connects to WhatsApp accounts via QR code to generate intelligent summaries of chat conversations, with the ability to ask questions about chats and get suggested replies.
+    longDescription: WhatsApp Chat Summary is a full-stack web application that enables users to connect their WhatsApp accounts through QR code authentication. Once connected, the platform fetches all chat conversations and leverages AI (Google Generative AI and OpenAI) to generate comprehensive summaries of each chat. Users can view their chat history, generate new summaries, ask specific questions about their conversations using RAG (Retrieval-Augmented Generation), and receive AI-powered reply suggestions. The platform supports multiple phone numbers per user, real-time session management via Server-Sent Events, and vector-based semantic search using pgvector embeddings. The backend is powered by a NestJS server with PostgreSQL database for data persistence.
+    technologies:
+      - Next.js 15
+      - React 19
+      - TypeScript
+      - Tailwind CSS
+      - shadcn/ui
+      - Prisma ORM
+      - PostgreSQL
+      - pgvector
+      - Google Generative AI
+      - OpenAI
+      - Socket.io
+      - NestJS (Backend)
+      - Server-Sent Events (SSE)
+      - JWT Authentication
+    category: Web Application
+    featured: true
+    status: active
+    startDate: "2024-01-01"
+    endDate: null
+    links: {}
+    stats:
+      database_tables: 9
+      frontend_components: 25
+      api_integrations: 5
+    features:
+      - WhatsApp QR code authentication and session management
+      - Multi-phone number support per user
+      - AI-powered chat summarization using Google Generative AI
+      - RAG-based question answering about chat content
+      - AI-generated reply suggestions
+      - Real-time session handling via Server-Sent Events
+      - Vector embeddings for semantic search (pgvector)
+      - User authentication and authorization (JWT)
+      - Responsive dashboard with mobile and desktop layouts
+      - Chat history browsing and management
+      - Summary session history tracking
+      - Profile pictures for contacts
+    challenges:
+      - Implementing secure WhatsApp session management via QR code
+      - Handling real-time updates with Server-Sent Events
+      - Integrating AI for both summarization and Q&A
+      - Managing vector embeddings for semantic search
+      - Building responsive UI for mobile and desktop
+      - Coordinating between Next.js frontend and NestJS backend
+    outcomes:
+      - Successfully integrated WhatsApp authentication flow
+      - Built AI-powered summarization pipeline
+      - Implemented RAG-based chat Q&A system
+      - Created responsive multi-device UI
+    businessImpact:
+      automation: Automated chat summarization using AI
+      userEngagement: Enhanced user interaction with chat data
+      efficiency: Quick access to conversation insights
+      innovation: RAG-based conversational interface with chat data
+    myRole: Full-Stack Engineer
+    teamSize: 3
+    type: Client Project
+  - id: 18
+    title: OR-Tools Route Optimizer
+    description: A FastAPI-based route optimization service using Google OR-Tools for solving Vehicle Routing Problems (VRP) with time windows and job constraints.
+    longDescription: OR-Tools Route Optimizer is a sophisticated route planning and optimization platform designed for field service operations. It leverages Google OR-Tools to solve complex Vehicle Routing Problems (VRP) with time windows, enabling organizations to efficiently schedule and route field technicians or service vehicles. The system employs a multi-step relaxation approach that progressively relaxes time window constraints when no feasible solution exists, starting with ±30 minute windows and escalating to full-day windows. It supports multiple optimization objectives including least violations, shortest time, and shortest distance. The platform provides both a REST API built with FastAPI and a command-line interface for running optimizations. Interactive route visualization is available through Folium maps, while real-world routing data is sourced from Mapbox. The application is designed for field service companies, delivery fleets, and any organization requiring optimized route scheduling with complex constraints.
+    technologies:
+      - Python
+      - FastAPI
+      - Google OR-Tools
+      - Folium
+      - Mapbox API
+      - Pydantic
+      - PostgreSQL (storage ready)
+    category: Web Application
+    featured: false
+    status: active
+    startDate: "2024-01-01"
+    endDate: null
+    links: {}
+    stats:
+      api_versions: 2
+      optimization_objectives: 3
+      relaxation_steps: 5
+      sample_datasets: 5
+    features:
+      - FastAPI REST API with automatic documentation
+      - Multiple optimization objectives (least violations, shortest time, shortest distance)
+      - Time window constraints with progressive relaxation strategies
+      - Job prioritization system
+      - Interactive route visualization using Folium maps
+      - CLI interface for standalone optimization
+      - Mapbox integration for real-world routing data
+      - Job and resource management per group
+      - Schedule storage and retrieval (in-memory)
+      - Matrix subset API for distance/time calculations
+      - CORS middleware support
+      - Health check and version endpoints
+    challenges:
+      - Implementing progressive constraint relaxation for infeasible solutions
+      - Managing time window violations and priority-based relaxation
+      - Supporting both API and CLI modes with shared logic
+      - Handling hardcoded vs real-world distance matrices
+      - Converting between internal indices and original job IDs
+      - Building flexible job assignment and status tracking
+    outcomes:
+      - Successfully refactored from standalone scripts to modular FastAPI application
+      - Implemented multi-objective route optimization
+      - Created comprehensive REST API for field service scheduling
+      - Enabled interactive route visualization
+      - Supported multiple geographic regions with sample datasets
+    businessImpact:
+      efficiency: Automated route optimization with constraint handling
+      scalability: Handles complex Vehicle Routing Problem (VRP) with 5 relaxation steps
+      innovation: Progressive relaxation for infeasible solutions
+      return on investment: Improved delivery and service scheduling accuracy
+    myRole: Full-Stack Developer
+    teamSize: 2
+    client:
+      name: Internal / Field Service Operations
+      industry: Logistics & Field Services
+    type: Internal Tool
   - id: 12
     title: Midnight Run
     description: Community outreach platform organizing weekly street runs to provide food, clothing, and companionship to homeless individuals in New York City.
@@ -112,71 +364,6 @@ projects:
       name: ParagonRentals.ai
       industry: Travel & Hospitality
     type: Client Project
-  - id: 11
-    title: ParagonSquare.ai
-    description: Next-generation multi-marketplace platform offering 0% commission through subscription model, combining auctions, products, services, and future vacation rentals.
-    longDescription: >-
-      ParagonSquare.ai is a revolutionary multi-marketplace platform that bridges B2B, B2C,
-      and C2C transactions through a unified ecosystem. The platform features four distinct
-      marketplaces: online auctions for goods, flat-price product sales, services marketplace
-      with 43+ categories, and upcoming vacation rentals. Its innovative subscription-based
-      model eliminates traditional 10-25% commission fees, offering VIP subscriptions that
-      reduce commissions to 0%. Key features include 72-hour funds release policy, 3-way chat
-      dispute resolution, and comprehensive KYC verification for sellers. The platform has
-      achieved significant traction with 28,000+ sign-ups and 600,000+ unique visitors across
-      5 countries, with plans to IPO on the Bahamas Stock Exchange (BISX).
-    technologies:
-      - Custom Framework
-      - Stripe
-      - NOWPayments
-      - Font Awesome
-      - Termly.io
-    category: SaaS
-    featured: true
-    status: active
-    startDate: "2024-01-01"
-    endDate: null
-    links:
-      demo: https://paragonsquare.ai
-    stats:
-      signups: 28k+
-      visitors: 600k+
-      raised: $18,696
-      countries: 5
-    features:
-      - Multi-marketplace platform (auctions, products, services, rentals)
-      - 0% commission model through VIP subscriptions
-      - 72-hour funds release policy
-      - 3-way chat dispute resolution system
-      - KYC verification for sellers
-      - 43+ service categories
-      - 50+ product categories
-      - Multi-currency payment support (Stripe + crypto via NOWPayments)
-      - Cookie consent management (GDPR compliant)
-    challenges:
-      - Building multi-marketplace architecture supporting diverse transaction types
-      - Implementing secure payment processing with 72-hour hold period
-      - Creating effective 3-way dispute resolution chat system
-      - Managing KYC verification workflow for sellers
-      - Scaling to handle 600K+ visitors across 5 countries
-    outcomes:
-      - 28,000+ user sign-ups achieved
-      - 600,000+ unique visitors across 5 countries
-      - $18,696 raised in Regulation CF offering
-      - Planning IPO on Bahamas Stock Exchange (BISX)
-      - Subsidiary Paris Realty established for vacation rental segment
-    businessImpact:
-      userGrowth: 28K+ sign-ups, 600K+ unique visitors
-      marketReach: Operating across 5 countries
-      funding: $18,696 raised, targeting $600K total
-      innovation: 0% commission model disrupting traditional 10-25% fees
-      futureGrowth: IPO planned on Bahamas Stock Exchange (BISX)
-    myRole: Lead Full-Stack Developer
-    teamSize: 3
-    client:
-      name: ParagonSquare.ai
-      industry: E-commerce & Marketplace
-    type: Client Project
   - id: 8
     title: Online Recruitment System
     description: Modern recruitment platform for companies hiring with AI-powered candidate matching and automated workflows.
@@ -228,191 +415,119 @@ projects:
       name: HR Tech Startup
       industry: Human Resources
     type: Client Project
-  - id: 15
-    title: AI Document Chat Platform
-    description: Interactive web application with document repository and AI-based chat portal that responds to queries based on uploaded PDF and Word documents, including scanned copies with OCR support.
-    longDescription: AI Document Chat Platform is a comprehensive web application that combines document management with intelligent AI-powered chat capabilities. Users can upload and browse through a repository of documents in PDF and Word formats, then interact with an AI chat system that answers questions based on the content of those documents. The platform features advanced OCR (Optical Character Recognition) technology to read and process scanned documents, making it possible to extract information from image-based PDFs and other non-text formats. The system includes a robust administrative dashboard that displays usage statistics, query analytics, user activity, and document engagement metrics. Built with a scalable back-end architecture supporting secure Single Sign-On (SSO) authentication, the platform ensures data security and seamless user access. The AI chat functionality leverages modern language models to provide contextual, accurate responses based on document content, with the ability to handle multiple document sources simultaneously. The application features a user-friendly interface optimized for document browsing, query submission, and result visualization, making it easy for users to find information quickly and efficiently.
+  - id: 20
+    title: Parody CV
+    description: AI-powered platform for generating humorous, theme-based parody CVs using GPT-5 and Gemini image processing.
+    longDescription: Parody CV is a sophisticated API platform that generates funny, theme-based parody CVs using artificial intelligence. Users can upload photos, select from various creative themes (like Space Opera, Medieval Fantasy, etc.), and receive personalized humorous CVs that reinterpret their traits, skills, and experiences in comedic ways. The platform features a credit-based monetization system, secure user authentication via Kinde, Stripe payment integration for credit purchases, and advanced sharing capabilities with expirable tokens. Users can regenerate entire CVs or specific sections (objective, experience, skills, achievements, endorsements), and images can be transformed into cartoonish cyberpunk styles using Google's Gemini AI. The system supports public sharing via secure tokens with customizable expiration and usage limits.
     technologies:
-      - Next.js
-      - React
-      - TypeScript
-      - OpenAI API
-      - LangChain
-      - Tesseract.js
-      - PDF.js
       - Node.js
+      - Express
+      - TypeScript
       - PostgreSQL
-      - Redis
-      - AWS S3
-      - SAML/OAuth
-      - Docker
-    category: SaaS
+      - Drizzle ORM
+      - OpenAI GPT-5
+      - Google Gemini
+      - Stripe
+      - Kinde Authentication
+      - Multer
+      - Sharp
+      - Zod
+    category: Web Application
     featured: true
     status: active
-    startDate: "2024-05-01"
+    startDate: "2024-01-01"
     endDate: null
-    links:
-      demo: https://demo.example.com
     stats:
-      documents_processed: 50k+
-      queries_handled: 200k+
-      users: 5k+
-      accuracy_rate: 95%
+      ai_models: 2
+      themes_available: 10+
+      cv_sections: 5
+      sharing_options: 3
     features:
-      - Document repository with PDF and Word support
-      - AI-powered chat with document-based responses
-      - OCR for scanned document processing
-      - Administrative dashboard with usage analytics
-      - Secure SSO authentication (SAML/OAuth)
-      - Real-time query processing and response
-      - Multi-document context awareness
-      - Document versioning and management
-      - User activity tracking and reporting
-      - Scalable back-end infrastructure
+      - AI-powered parody CV generation using GPT-5
+      - Photo upload with AI image processing (cartoon cyberpunk style via Gemini)
+      - Multiple creative themes (Space Opera, Medieval Fantasy, etc.)
+      - Credit-based system for AI usage management
+      - User authentication via Kinde
+      - Stripe payment integration for credit purchases
+      - CV section reroll (objective, experience, skills, achievements, endorsements)
+      - Full CV reroll functionality
+      - Image-only reroll capability
+      - Secure token-based CV sharing
+      - Customizable share token expiration and usage limits
+      - Public CV access via share tokens
+      - Theme management and selection
+      - User CV library management
+      - Share view count tracking
+      - Token revocation system
     challenges:
-      - Implementing accurate OCR for diverse scanned document types
-      - Building efficient document indexing for fast AI retrieval
-      - Managing context across multiple documents in chat conversations
-      - Designing secure SSO integration with multiple providers
-      - Optimizing AI response accuracy based on document content
-      - Handling large document files efficiently without performance degradation
+      - Managing AI credit consumption and cost optimization
+      - Handling image processing with Gemini API efficiently
+      - Implementing secure token-based sharing with expiration
+      - Schema validation for AI-generated content using Zod
+      - Balancing AI response quality with token limits
+      - Storing and serving generated images securely
     outcomes:
-      - 50K+ documents successfully processed and indexed
-      - 200K+ AI queries handled with 95% accuracy
-      - 5K+ active users across organizations
-      - Seamless SSO integration with enterprise providers
-      - Reduced document search time by 90% compared to manual review
+      - Successfully deployed AI-powered CV generation platform
+      - Implemented credit-based monetization system
+      - Created secure sharing infrastructure with tokens
+      - Integrated multiple AI services (OpenAI + Google Gemini)
     businessImpact:
-      efficiency: 90% reduction in document search time
-      adoption: 5K+ users across multiple organizations
-      accuracy: 95% query accuracy rate
-      scalability: 50K+ documents processed with fast retrieval
-    myRole: Lead Full-Stack Developer & AI Integration Specialist
+      communityImpact: Fun, creative CV generation for users
+      monetization: Credit-based revenue system
+      operationalEfficiency: Automated AI-powered content generation
+      socialImpact: Entertaining platform for humor and creativity
+    myRole: Lead Full-Stack Engineer
     teamSize: 4
     client:
-      name: Enterprise Client
-      industry: Technology & AI
+      name: Freelance project
+      industry: AI & Creative Technology
     type: Client Project
-  - id: 14
-    title: Parallel Automation Framework
-    description: High-performance Node.js automation framework capable of executing 200+ parallel tasks for SEO operations, clicking behavior simulation, and online workflows.
-    longDescription: Parallel Automation Framework is an extremely efficient Node.js-based automation system designed for high-volume web operations including SEO tasks, clicking behavior simulation, and complex online workflow automation. The framework leverages advanced concurrency management and resource optimization techniques to execute up to 200 parallel tasks simultaneously even on local systems, making it ideal for large-scale automation projects. Built with performance at its core, the system utilizes worker pools, connection pooling, and intelligent task scheduling to maximize throughput while maintaining stability. The framework supports browser automation through Puppeteer and Playwright, HTTP request orchestration, and custom task workflows. Features include distributed task execution, real-time monitoring and logging, rate limiting and anti-detection mechanisms, and comprehensive error handling with automatic retry logic. The system is designed to handle resource-intensive operations efficiently, managing memory, CPU, and network usage to prevent system overload while maintaining high performance across all parallel tasks.
+  - id: 9
+    title: Real-time Chat Application
+    description: Scalable chat application with video calling, file sharing, and team channels.
+    longDescription: Enterprise-grade chat application supporting real-time messaging, video calls, file sharing, and team collaboration. Built with modern technologies to support thousands of concurrent users with features like message encryption, custom emojis, and integration capabilities.
     technologies:
+      - Vue.js
+      - Socket.io
       - Node.js
-      - TypeScript
-      - Puppeteer
-      - Playwright
-      - Worker Threads
       - Redis
-      - Express.js
-      - WebSocket
-      - MongoDB
-      - Docker
-    category: Development Tools
-    featured: true
-    status: active
-    startDate: "2023-06-01"
-    endDate: null
-    links:
-      github: https://github.com/mubaidr/parallel-automation-framework
+      - WebRTC
+      - PostgreSQL
+    category: Web Application
+    featured: false
+    status: completed
+    startDate: "2021-09-01"
+    endDate: "2022-02-28"
+    links: {}
     stats:
-      parallel_tasks: 200+
-      tasks_executed: 10M+
-      uptime: 99.9%
-      throughput: 1000+ tasks/minute
+      concurrent_users: 5k+
+      messages_sent: 1M+
+      uptime: 99.8%
+      response_time: 50ms
     features:
-      - 200+ parallel task execution on local systems
-      - Advanced worker pool management
-      - Browser automation with Puppeteer and Playwright
-      - HTTP request orchestration and scaling
-      - Real-time task monitoring and logging
-      - Rate limiting and anti-detection mechanisms
-      - Automatic retry logic with exponential backoff
-      - Resource optimization (CPU, memory, network)
-      - Distributed task execution support
-      - Custom workflow builder and task scheduler
+      - Real-time messaging
+      - Video/audio calls
+      - File sharing
+      - Team channels
+      - Message encryption
+      - Mobile support
     challenges:
-      - Managing 200+ concurrent browser instances without system overload
-      - Implementing efficient resource allocation and load balancing
-      - Handling rate limiting and anti-bot detection from target websites
-      - Designing robust error handling for large-scale parallel operations
-      - Optimizing memory usage for high-concurrency scenarios
-      - Building real-time monitoring for hundreds of simultaneous tasks
+      - Scaling WebSocket connections
+      - Implementing end-to-end encryption
+      - Managing video call quality
     outcomes:
-      - Successfully executed 10M+ automated tasks
-      - Achieved 200+ parallel task execution on local systems
-      - Maintained 99.9% uptime with zero data loss
-      - Processed 1000+ tasks per minute consistently
-      - Reduced automation time by 95% compared to sequential execution
+      - 5k+ concurrent users supported
+      - 1M+ messages processed
+      - 99.8% uptime achieved
+      - 50ms average response time
     businessImpact:
-      scalability: 200+ parallel tasks on single machine
-      efficiency: 95% reduction in automation time
-      throughput: 10M+ tasks executed successfully
-      reliability: 99.9% uptime with robust error handling
-    myRole: Lead Developer & Architect
-    teamSize: 2
-    type: Open Source
-  - id: 13
-    title: Online Grocery Calorie Tracker
-    description: Chrome extension that tracks and displays caloric content of grocery items in online shopping carts from Woolworths and Coles with free and premium tiers.
-    longDescription: Online Grocery Calorie Tracker is a Chrome extension designed to help health-conscious users make informed nutritional decisions while shopping online. The extension integrates seamlessly with Woolworths.com.au and Coles.com.au, scanning the user's shopping cart to retrieve and display comprehensive caloric information including total calories, fats, proteins, and carbohydrates. The tool features a clean, intuitive interface that presents nutritional breakdowns in real-time, allowing users to adjust their cart before checkout. The project includes a Python backend for efficient data processing and caloric information retrieval, with optional GPT-3 integration for enhanced accuracy. The extension operates on a freemium model - the free tier provides basic caloric information and nutritional breakdowns, while the premium tier offers personalized recommendations for healthier alternatives, caloric intake tracking over time, and integration with additional grocery delivery platforms. The paywall feature includes secure payment processing to unlock premium features.
-    technologies:
-      - Chrome Extension
-      - JavaScript
-      - HTML
-      - CSS
-      - Python
-      - WebExtensions API
-      - Manifest V3
-      - Payment Processing API
-      - GPT-3 API
-    category: Development Tools
-    featured: true
-    status: active
-    startDate: "2024-08-01"
-    endDate: null
-    links:
-      demo: https://chrome.google.com/webstore
-    stats:
-      users: 2k+
-      carts_analyzed: 15k+
-      calories_tracked: 5M+
-      premium_users: 300+
-    features:
-      - Shopping cart scanning on Woolworths.com.au and Coles.com.au
-      - Real-time caloric information display
-      - Nutritional breakdown (fats, proteins, carbohydrates)
-      - Clean and intuitive user interface
-      - Freemium model with paywall feature
-      - Secure payment processing for premium tier
-      - Personalized healthier alternatives (premium)
-      - Caloric intake tracking over time (premium)
-      - Integration with additional grocery sites (premium)
-      - Customizable caloric intake goals
-    challenges:
-      - Accurately scraping product data from dynamic grocery websites
-      - Efficiently retrieving caloric information for diverse product ranges
-      - Building reliable payment processing for paywall feature
-      - Creating accurate nutritional data without relying solely on GPT-3
-      - Designing intuitive UI for complex nutritional data display
-      - Ensuring cross-browser compatibility and performance
-    outcomes:
-      - 2K+ active users tracking grocery calories
-      - 15K+ shopping carts analyzed successfully
-      - 5M+ individual calories tracked
-      - 300+ premium users enjoying advanced features
-      - Reduced user decision-making time for healthy shopping
-    businessImpact:
-      userAdoption: 2K+ users actively tracking nutrition
-      healthImpact: 5M+ calories tracked for informed decisions
-      monetization: 300+ premium users generating revenue
-      expansion: Foundation laid for additional grocery integrations
-    myRole: Lead Chrome Extension Developer
-    teamSize: 2
-    client:
-      name: Health Tech Startup
-      industry: Health & Wellness
-    type: Client Project
+      scale: 5K+ concurrent users, 1M+ messages
+      reliability: 99.8% uptime maintained
+      performance: 50ms average response time
+      security: End-to-end encryption implemented
+    myRole: Lead Backend Developer
+    teamSize: 4
+    type: Enterprise Application
   - id: 1
     title: AI PhishNet
     description: Chrome extension using dual AI technology to detect zero-day phishing URLs and protect users from sophisticated phishing attacks.
@@ -471,206 +586,6 @@ projects:
     client:
       name: Prosfinity
       industry: Cybersecurity
-    type: Client Project
-  - id: 2
-    title: Vite Vue3 Browser Extension V3
-    description: A modern template for building cross-browser extensions using Vue 3, TypeScript, Vite, and Manifest V3.
-    longDescription: A comprehensive starter template for building modern browser extensions that work across Chrome, Firefox, Edge, and Safari. Built with Vue 3, TypeScript, Vite for lightning-fast builds, and the latest Manifest V3 specifications, this template provides a solid foundation for extension development with hot reloading, automated building, and cross-browser compatibility.
-    technologies:
-      - Vue 3
-      - TypeScript
-      - WebExtensions API
-      - Vite
-      - Manifest V3
-      - SCSS
-    category: Development Tools
-    featured: true
-    status: active
-    startDate: "2021-08-10"
-    endDate: null
-    links:
-      github: https://github.com/mubaidr/vue-browser-extension-template
-      documentation: https://github.com/mubaidr/vue-browser-extension-template#readme
-    stats:
-      stars: "800"
-      users: 10k+
-      forks: "120"
-      downloads: 25k+
-    features:
-      - Cross-browser compatibility
-      - Hot reload development
-      - TypeScript support
-      - Automated build process
-      - Manifest V3 ready
-    challenges:
-      - Cross-browser API differences
-      - Manifest V3 migration complexities
-      - Build optimization for extensions
-    outcomes:
-      - 800+ GitHub stars
-      - 10k+ active users
-      - Featured in Chrome Web Store
-    businessImpact:
-      openSourceImpact: 10K+ developers using the template
-      developerProductivity: Reduced extension setup time by 80%
-      communityAdoption: 25K+ downloads, featured in Chrome Web Store
-    myRole: Creator & Maintainer
-    teamSize: 1
-    type: Open Source
-  - id: 9
-    title: Real-time Chat Application
-    description: Scalable chat application with video calling, file sharing, and team channels.
-    longDescription: Enterprise-grade chat application supporting real-time messaging, video calls, file sharing, and team collaboration. Built with modern technologies to support thousands of concurrent users with features like message encryption, custom emojis, and integration capabilities.
-    technologies:
-      - Vue.js
-      - Socket.io
-      - Node.js
-      - Redis
-      - WebRTC
-      - PostgreSQL
-    category: Web Application
-    featured: false
-    status: completed
-    startDate: "2021-09-01"
-    endDate: "2022-02-28"
-    links: {}
-    stats:
-      concurrent_users: 5k+
-      messages_sent: 1M+
-      uptime: 99.8%
-      response_time: 50ms
-    features:
-      - Real-time messaging
-      - Video/audio calls
-      - File sharing
-      - Team channels
-      - Message encryption
-      - Mobile support
-    challenges:
-      - Scaling WebSocket connections
-      - Implementing end-to-end encryption
-      - Managing video call quality
-    outcomes:
-      - 5k+ concurrent users supported
-      - 1M+ messages processed
-      - 99.8% uptime achieved
-      - 50ms average response time
-    businessImpact:
-      scale: 5K+ concurrent users, 1M+ messages
-      reliability: 99.8% uptime maintained
-      performance: 50ms average response time
-      security: End-to-end encryption implemented
-    myRole: Lead Backend Developer
-    teamSize: 4
-    type: Enterprise Application
-  - id: 6
-    title: API Documentation Tool
-    description: Interactive API documentation generator with live testing capabilities and beautiful UI.
-    longDescription: A developer-focused tool for generating beautiful, interactive API documentation. Features live testing capabilities, code examples in multiple languages, authentication testing, and collaborative features. Designed to make API documentation both beautiful and functional.
-    technologies:
-      - Vue.js
-      - Express.js
-      - OpenAPI
-      - Prism.js
-      - MongoDB
-      - Docker
-    category: Development Tools
-    featured: false
-    status: completed
-    startDate: "2022-01-10"
-    endDate: "2022-05-20"
-    links:
-      github: https://github.com/mubaidr/api-docs-generator
-    stats:
-      stars: "450"
-      downloads: 15k+
-      users: 3k+
-      apis_documented: 1k+
-    features:
-      - Interactive API testing
-      - Multiple language examples
-      - Authentication support
-      - Collaborative editing
-      - Custom branding
-      - Export capabilities
-    challenges:
-      - Supporting multiple API specifications
-      - Real-time collaboration implementation
-      - Code generation for multiple languages
-    outcomes:
-      - 450+ GitHub stars
-      - 15k+ downloads
-      - 3k+ active users
-      - 1k+ APIs documented
-    businessImpact:
-      openSourceImpact: 3K+ developers using the tool
-      productivity: Reduced documentation time by 60%
-      adoption: 1K+ APIs documented using the tool
-      community: 450+ GitHub stars, 15K+ downloads
-    myRole: Creator & Developer
-    teamSize: 1
-    type: Open Source
-  - id: 16
-    title: WhatsApp Chat Summary
-    description: AI-powered platform that connects to WhatsApp accounts via QR code to generate intelligent summaries of chat conversations, with the ability to ask questions about chats and get suggested replies.
-    longDescription: WhatsApp Chat Summary is a full-stack web application that enables users to connect their WhatsApp accounts through QR code authentication. Once connected, the platform fetches all chat conversations and leverages AI (Google Generative AI and OpenAI) to generate comprehensive summaries of each chat. Users can view their chat history, generate new summaries, ask specific questions about their conversations using RAG (Retrieval-Augmented Generation), and receive AI-powered reply suggestions. The platform supports multiple phone numbers per user, real-time session management via Server-Sent Events, and vector-based semantic search using pgvector embeddings. The backend is powered by a NestJS server with PostgreSQL database for data persistence.
-    technologies:
-      - Next.js 15
-      - React 19
-      - TypeScript
-      - Tailwind CSS
-      - shadcn/ui
-      - Prisma ORM
-      - PostgreSQL
-      - pgvector
-      - Google Generative AI
-      - OpenAI
-      - Socket.io
-      - NestJS (Backend)
-      - Server-Sent Events (SSE)
-      - JWT Authentication
-    category: Web Application
-    featured: true
-    status: active
-    startDate: "2024-01-01"
-    endDate: null
-    links: {}
-    stats:
-      database_tables: 9
-      frontend_components: 25
-      api_integrations: 5
-    features:
-      - WhatsApp QR code authentication and session management
-      - Multi-phone number support per user
-      - AI-powered chat summarization using Google Generative AI
-      - RAG-based question answering about chat content
-      - AI-generated reply suggestions
-      - Real-time session handling via Server-Sent Events
-      - Vector embeddings for semantic search (pgvector)
-      - User authentication and authorization (JWT)
-      - Responsive dashboard with mobile and desktop layouts
-      - Chat history browsing and management
-      - Summary session history tracking
-      - Profile pictures for contacts
-    challenges:
-      - Implementing secure WhatsApp session management via QR code
-      - Handling real-time updates with Server-Sent Events
-      - Integrating AI for both summarization and Q&A
-      - Managing vector embeddings for semantic search
-      - Building responsive UI for mobile and desktop
-      - Coordinating between Next.js frontend and NestJS backend
-    outcomes:
-      - Successfully integrated WhatsApp authentication flow
-      - Built AI-powered summarization pipeline
-      - Implemented RAG-based chat Q&A system
-      - Created responsive multi-device UI
-    businessImpact:
-      automation: Automated chat summarization using AI
-      userEngagement: Enhanced user interaction with chat data
-      efficiency: Quick access to conversation insights
-      innovation: RAG-based conversational interface with chat data
-    myRole: Full-Stack Engineer
-    teamSize: 3
     type: Client Project
   - id: 17
     title: Al Sammak Digital
@@ -739,66 +654,6 @@ projects:
       name: Al Sammak Trading LLC
       industry: Hardware & Fasteners Ecommerce
     type: Client Project
-  - id: 18
-    title: OR-Tools Route Optimizer
-    description: A FastAPI-based route optimization service using Google OR-Tools for solving Vehicle Routing Problems (VRP) with time windows and job constraints.
-    longDescription: OR-Tools Route Optimizer is a sophisticated route planning and optimization platform designed for field service operations. It leverages Google OR-Tools to solve complex Vehicle Routing Problems (VRP) with time windows, enabling organizations to efficiently schedule and route field technicians or service vehicles. The system employs a multi-step relaxation approach that progressively relaxes time window constraints when no feasible solution exists, starting with ±30 minute windows and escalating to full-day windows. It supports multiple optimization objectives including least violations, shortest time, and shortest distance. The platform provides both a REST API built with FastAPI and a command-line interface for running optimizations. Interactive route visualization is available through Folium maps, while real-world routing data is sourced from Mapbox. The application is designed for field service companies, delivery fleets, and any organization requiring optimized route scheduling with complex constraints.
-    technologies:
-      - Python
-      - FastAPI
-      - Google OR-Tools
-      - Folium
-      - Mapbox API
-      - Pydantic
-      - PostgreSQL (storage ready)
-    category: Web Application
-    featured: false
-    status: active
-    startDate: "2024-01-01"
-    endDate: null
-    links: {}
-    stats:
-      api_versions: 2
-      optimization_objectives: 3
-      relaxation_steps: 5
-      sample_datasets: 5
-    features:
-      - FastAPI REST API with automatic documentation
-      - Multiple optimization objectives (least violations, shortest time, shortest distance)
-      - Time window constraints with progressive relaxation strategies
-      - Job prioritization system
-      - Interactive route visualization using Folium maps
-      - CLI interface for standalone optimization
-      - Mapbox integration for real-world routing data
-      - Job and resource management per group
-      - Schedule storage and retrieval (in-memory)
-      - Matrix subset API for distance/time calculations
-      - CORS middleware support
-      - Health check and version endpoints
-    challenges:
-      - Implementing progressive constraint relaxation for infeasible solutions
-      - Managing time window violations and priority-based relaxation
-      - Supporting both API and CLI modes with shared logic
-      - Handling hardcoded vs real-world distance matrices
-      - Converting between internal indices and original job IDs
-      - Building flexible job assignment and status tracking
-    outcomes:
-      - Successfully refactored from standalone scripts to modular FastAPI application
-      - Implemented multi-objective route optimization
-      - Created comprehensive REST API for field service scheduling
-      - Enabled interactive route visualization
-      - Supported multiple geographic regions with sample datasets
-    businessImpact:
-      efficiency: Automated route optimization with constraint handling
-      scalability: Handles complex Vehicle Routing Problem (VRP) with 5 relaxation steps
-      innovation: Progressive relaxation for infeasible solutions
-      return on investment: Improved delivery and service scheduling accuracy
-    myRole: Full-Stack Developer
-    teamSize: 2
-    client:
-      name: Internal / Field Service Operations
-      industry: Logistics & Field Services
-    type: Internal Tool
   - id: 19
     title: RemindMeBot
     description: WhatsApp-based personal assistant that helps users manage files and set expiry reminders through natural conversation.
@@ -865,73 +720,218 @@ projects:
       name: Enterprise
       industry: Productivity & Personal Assistant
     type: Personal Project
-  - id: 20
-    title: Parody CV
-    description: AI-powered platform for generating humorous, theme-based parody CVs using GPT-5 and Gemini image processing.
-    longDescription: Parody CV is a sophisticated API platform that generates funny, theme-based parody CVs using artificial intelligence. Users can upload photos, select from various creative themes (like Space Opera, Medieval Fantasy, etc.), and receive personalized humorous CVs that reinterpret their traits, skills, and experiences in comedic ways. The platform features a credit-based monetization system, secure user authentication via Kinde, Stripe payment integration for credit purchases, and advanced sharing capabilities with expirable tokens. Users can regenerate entire CVs or specific sections (objective, experience, skills, achievements, endorsements), and images can be transformed into cartoonish cyberpunk styles using Google's Gemini AI. The system supports public sharing via secure tokens with customizable expiration and usage limits.
+  - id: 13
+    title: Online Grocery Calorie Tracker
+    description: Chrome extension that tracks and displays caloric content of grocery items in online shopping carts from Woolworths and Coles with free and premium tiers.
+    longDescription: Online Grocery Calorie Tracker is a Chrome extension designed to help health-conscious users make informed nutritional decisions while shopping online. The extension integrates seamlessly with Woolworths.com.au and Coles.com.au, scanning the user's shopping cart to retrieve and display comprehensive caloric information including total calories, fats, proteins, and carbohydrates. The tool features a clean, intuitive interface that presents nutritional breakdowns in real-time, allowing users to adjust their cart before checkout. The project includes a Python backend for efficient data processing and caloric information retrieval, with optional GPT-3 integration for enhanced accuracy. The extension operates on a freemium model - the free tier provides basic caloric information and nutritional breakdowns, while the premium tier offers personalized recommendations for healthier alternatives, caloric intake tracking over time, and integration with additional grocery delivery platforms. The paywall feature includes secure payment processing to unlock premium features.
     technologies:
-      - Node.js
-      - Express
-      - TypeScript
-      - PostgreSQL
-      - Drizzle ORM
-      - OpenAI GPT-5
-      - Google Gemini
-      - Stripe
-      - Kinde Authentication
-      - Multer
-      - Sharp
-      - Zod
-    category: Web Application
+      - Chrome Extension
+      - JavaScript
+      - HTML
+      - CSS
+      - Python
+      - WebExtensions API
+      - Manifest V3
+      - Payment Processing API
+      - GPT-3 API
+    category: Development Tools
     featured: true
     status: active
-    startDate: "2024-01-01"
+    startDate: "2024-08-01"
     endDate: null
+    links:
+      demo: https://chrome.google.com/webstore
     stats:
-      ai_models: 2
-      themes_available: 10+
-      cv_sections: 5
-      sharing_options: 3
+      users: 2k+
+      carts_analyzed: 15k+
+      calories_tracked: 5M+
+      premium_users: 300+
     features:
-      - AI-powered parody CV generation using GPT-5
-      - Photo upload with AI image processing (cartoon cyberpunk style via Gemini)
-      - Multiple creative themes (Space Opera, Medieval Fantasy, etc.)
-      - Credit-based system for AI usage management
-      - User authentication via Kinde
-      - Stripe payment integration for credit purchases
-      - CV section reroll (objective, experience, skills, achievements, endorsements)
-      - Full CV reroll functionality
-      - Image-only reroll capability
-      - Secure token-based CV sharing
-      - Customizable share token expiration and usage limits
-      - Public CV access via share tokens
-      - Theme management and selection
-      - User CV library management
-      - Share view count tracking
-      - Token revocation system
+      - Shopping cart scanning on Woolworths.com.au and Coles.com.au
+      - Real-time caloric information display
+      - Nutritional breakdown (fats, proteins, carbohydrates)
+      - Clean and intuitive user interface
+      - Freemium model with paywall feature
+      - Secure payment processing for premium tier
+      - Personalized healthier alternatives (premium)
+      - Caloric intake tracking over time (premium)
+      - Integration with additional grocery sites (premium)
+      - Customizable caloric intake goals
     challenges:
-      - Managing AI credit consumption and cost optimization
-      - Handling image processing with Gemini API efficiently
-      - Implementing secure token-based sharing with expiration
-      - Schema validation for AI-generated content using Zod
-      - Balancing AI response quality with token limits
-      - Storing and serving generated images securely
+      - Accurately scraping product data from dynamic grocery websites
+      - Efficiently retrieving caloric information for diverse product ranges
+      - Building reliable payment processing for paywall feature
+      - Creating accurate nutritional data without relying solely on GPT-3
+      - Designing intuitive UI for complex nutritional data display
+      - Ensuring cross-browser compatibility and performance
     outcomes:
-      - Successfully deployed AI-powered CV generation platform
-      - Implemented credit-based monetization system
-      - Created secure sharing infrastructure with tokens
-      - Integrated multiple AI services (OpenAI + Google Gemini)
+      - 2K+ active users tracking grocery calories
+      - 15K+ shopping carts analyzed successfully
+      - 5M+ individual calories tracked
+      - 300+ premium users enjoying advanced features
+      - Reduced user decision-making time for healthy shopping
     businessImpact:
-      communityImpact: Fun, creative CV generation for users
-      monetization: Credit-based revenue system
-      operationalEfficiency: Automated AI-powered content generation
-      socialImpact: Entertaining platform for humor and creativity
-    myRole: Lead Full-Stack Engineer
-    teamSize: 4
+      userAdoption: 2K+ users actively tracking nutrition
+      healthImpact: 5M+ calories tracked for informed decisions
+      monetization: 300+ premium users generating revenue
+      expansion: Foundation laid for additional grocery integrations
+    myRole: Lead Chrome Extension Developer
+    teamSize: 2
     client:
-      name: Freelance project
-      industry: AI & Creative Technology
+      name: Health Tech Startup
+      industry: Health & Wellness
     type: Client Project
+  - id: 14
+    title: Parallel Automation Framework
+    description: High-performance Node.js automation framework capable of executing 200+ parallel tasks for SEO operations, clicking behavior simulation, and online workflows.
+    longDescription: Parallel Automation Framework is an extremely efficient Node.js-based automation system designed for high-volume web operations including SEO tasks, clicking behavior simulation, and complex online workflow automation. The framework leverages advanced concurrency management and resource optimization techniques to execute up to 200 parallel tasks simultaneously even on local systems, making it ideal for large-scale automation projects. Built with performance at its core, the system utilizes worker pools, connection pooling, and intelligent task scheduling to maximize throughput while maintaining stability. The framework supports browser automation through Puppeteer and Playwright, HTTP request orchestration, and custom task workflows. Features include distributed task execution, real-time monitoring and logging, rate limiting and anti-detection mechanisms, and comprehensive error handling with automatic retry logic. The system is designed to handle resource-intensive operations efficiently, managing memory, CPU, and network usage to prevent system overload while maintaining high performance across all parallel tasks.
+    technologies:
+      - Node.js
+      - TypeScript
+      - Puppeteer
+      - Playwright
+      - Worker Threads
+      - Redis
+      - Express.js
+      - WebSocket
+      - MongoDB
+      - Docker
+    category: Development Tools
+    featured: true
+    status: active
+    startDate: "2023-06-01"
+    endDate: null
+    links:
+      github: https://github.com/mubaidr/parallel-automation-framework
+    stats:
+      parallel_tasks: 200+
+      tasks_executed: 10M+
+      uptime: 99.9%
+      throughput: 1000+ tasks/minute
+    features:
+      - 200+ parallel task execution on local systems
+      - Advanced worker pool management
+      - Browser automation with Puppeteer and Playwright
+      - HTTP request orchestration and scaling
+      - Real-time task monitoring and logging
+      - Rate limiting and anti-detection mechanisms
+      - Automatic retry logic with exponential backoff
+      - Resource optimization (CPU, memory, network)
+      - Distributed task execution support
+      - Custom workflow builder and task scheduler
+    challenges:
+      - Managing 200+ concurrent browser instances without system overload
+      - Implementing efficient resource allocation and load balancing
+      - Handling rate limiting and anti-bot detection from target websites
+      - Designing robust error handling for large-scale parallel operations
+      - Optimizing memory usage for high-concurrency scenarios
+      - Building real-time monitoring for hundreds of simultaneous tasks
+    outcomes:
+      - Successfully executed 10M+ automated tasks
+      - Achieved 200+ parallel task execution on local systems
+      - Maintained 99.9% uptime with zero data loss
+      - Processed 1000+ tasks per minute consistently
+      - Reduced automation time by 95% compared to sequential execution
+    businessImpact:
+      scalability: 200+ parallel tasks on single machine
+      efficiency: 95% reduction in automation time
+      throughput: 10M+ tasks executed successfully
+      reliability: 99.9% uptime with robust error handling
+    myRole: Lead Developer & Architect
+    teamSize: 2
+    type: Open Source
+  - id: 2
+    title: Vite Vue3 Browser Extension V3
+    description: A modern template for building cross-browser extensions using Vue 3, TypeScript, Vite, and Manifest V3.
+    longDescription: A comprehensive starter template for building modern browser extensions that work across Chrome, Firefox, Edge, and Safari. Built with Vue 3, TypeScript, Vite for lightning-fast builds, and the latest Manifest V3 specifications, this template provides a solid foundation for extension development with hot reloading, automated building, and cross-browser compatibility.
+    technologies:
+      - Vue 3
+      - TypeScript
+      - WebExtensions API
+      - Vite
+      - Manifest V3
+      - SCSS
+    category: Development Tools
+    featured: true
+    status: active
+    startDate: "2021-08-10"
+    endDate: null
+    links:
+      github: https://github.com/mubaidr/vue-browser-extension-template
+      documentation: https://github.com/mubaidr/vue-browser-extension-template#readme
+    stats:
+      stars: "800"
+      users: 10k+
+      forks: "120"
+      downloads: 25k+
+    features:
+      - Cross-browser compatibility
+      - Hot reload development
+      - TypeScript support
+      - Automated build process
+      - Manifest V3 ready
+    challenges:
+      - Cross-browser API differences
+      - Manifest V3 migration complexities
+      - Build optimization for extensions
+    outcomes:
+      - 800+ GitHub stars
+      - 10k+ active users
+      - Featured in Chrome Web Store
+    businessImpact:
+      openSourceImpact: 10K+ developers using the template
+      developerProductivity: Reduced extension setup time by 80%
+      communityAdoption: 25K+ downloads, featured in Chrome Web Store
+    myRole: Creator & Maintainer
+    teamSize: 1
+    type: Open Source
+  - id: 6
+    title: API Documentation Tool
+    description: Interactive API documentation generator with live testing capabilities and beautiful UI.
+    longDescription: A developer-focused tool for generating beautiful, interactive API documentation. Features live testing capabilities, code examples in multiple languages, authentication testing, and collaborative features. Designed to make API documentation both beautiful and functional.
+    technologies:
+      - Vue.js
+      - Express.js
+      - OpenAPI
+      - Prism.js
+      - MongoDB
+      - Docker
+    category: Development Tools
+    featured: false
+    status: completed
+    startDate: "2022-01-10"
+    endDate: "2022-05-20"
+    links:
+      github: https://github.com/mubaidr/api-docs-generator
+    stats:
+      stars: "450"
+      downloads: 15k+
+      users: 3k+
+      apis_documented: 1k+
+    features:
+      - Interactive API testing
+      - Multiple language examples
+      - Authentication support
+      - Collaborative editing
+      - Custom branding
+      - Export capabilities
+    challenges:
+      - Supporting multiple API specifications
+      - Real-time collaboration implementation
+      - Code generation for multiple languages
+    outcomes:
+      - 450+ GitHub stars
+      - 15k+ downloads
+      - 3k+ active users
+      - 1k+ APIs documented
+    businessImpact:
+      openSourceImpact: 3K+ developers using the tool
+      productivity: Reduced documentation time by 60%
+      adoption: 1K+ APIs documented using the tool
+      community: 450+ GitHub stars, 15K+ downloads
+    myRole: Creator & Developer
+    teamSize: 1
+    type: Open Source
 categories:
   - name: All
     count: 16
