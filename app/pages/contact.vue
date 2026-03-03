@@ -34,14 +34,14 @@ const contactMethods = ref([
     action: "https://linkedin.com/in/mubaidr",
     ariaLabel: "Connect with Muhammad Ubaid Raza on LinkedIn",
   },
-  {
-    icon: "i-ph-calendar",
-    title: "Schedule a Call",
-    description: "Book a 30-min consultation",
-    value: "cal.com/mubaidr",
-    action: "https://cal.com/mubaidr",
-    ariaLabel: "Schedule a 30-minute consultation call",
-  },
+  // {
+  //   icon: "i-ph-calendar",
+  //   title: "Schedule a Call",
+  //   description: "Book a 30-min consultation",
+  //   value: "cal.com/mubaidr",
+  //   action: "https://cal.com/mubaidr",
+  //   ariaLabel: "Schedule a 30-minute consultation call",
+  // },
 ])
 
 // Fetch FAQs using composable
@@ -101,8 +101,7 @@ onMounted(() => {
                   </p>
                 </div>
 
-                <UButton
-variant="outline" color="neutral" class="w-full justify-center" :aria-label="method.ariaLabel"
+                <UButton variant="outline" color="neutral" class="w-full justify-center" :aria-label="method.ariaLabel"
                   @click="navigateTo(method.action, { external: true })">
                   {{ method.value }}
                 </UButton>
