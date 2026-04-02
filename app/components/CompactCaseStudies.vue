@@ -34,13 +34,12 @@ withDefaults(defineProps<Props>(), {
     </div>
 
     <!-- Case Studies -->
-    <div
-v-else-if="
+    <div v-else-if="
       caseStudiesData?.caseStudies && caseStudiesData.caseStudies.length > 0
     " class="grid gap-6 md:grid-cols-3">
-      <UPageCard
-v-for="study in caseStudiesData.caseStudies.slice(0, count)" :key="study.id" :spotlight="true"
-        spotlight-color="info">
+      <UPageCard v-for="study in caseStudiesData.caseStudies.slice(0, count)" :key="study.id" :ui="{
+        root: 'transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group'
+      }" :spotlight="true" spotlight-color="primary" class="group">
         <div class="space-y-8 text-center">
           <!-- Problem -->
           <div>
@@ -61,7 +60,7 @@ v-for="study in caseStudiesData.caseStudies.slice(0, count)" :key="study.id" :sp
             </p>
           </div>
 
-          <UAlert :title="study.metric" variant="soft" color="info"/>
+          <UAlert :title="study.metric" variant="soft" color="info" />
         </div>
       </UPageCard>
     </div>

@@ -204,7 +204,8 @@ const breadcrumbItems: BreadcrumbItem[] = [
                 </p>
               </div>
             </div>
-            <UAlert icon="i-ph-info" color="primary" variant="soft" title="Cookie Management"
+            <UAlert
+icon="i-ph-info" color="primary" variant="soft" title="Cookie Management"
               description="You can control cookie preferences through your browser settings. Note that disabling certain cookies may affect website functionality." />
           </div>
         </UCard>
@@ -323,7 +324,8 @@ const breadcrumbItems: BreadcrumbItem[] = [
                 </li>
               </ul>
             </div>
-            <UAlert icon="i-ph-envelope" color="primary" variant="soft" title="Exercise Your Rights"
+            <UAlert
+icon="i-ph-envelope" color="primary" variant="soft" title="Exercise Your Rights"
               description="To exercise any of these rights, please contact me at hello@mubaidr.js.org. I will respond within 30 days." />
           </div>
         </UCard>

@@ -2,34 +2,109 @@
 @import "@nuxt/ui";
 @plugin "@tailwindcss/typography";
 
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --font-family: "Public Sans", sans-serif;
+  --font-display: "Syne", sans-serif;
+  --font-body: "Public Sans", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --ui-radius: 0.75rem;
 }
 
-/* Typography - Heading Levels */
+/* ================================================
+   TYPOGRAPHY SYSTEM
+   ================================================ */
+
+/* Body Typography - Relaxed line-height for readability */
+body {
+  font-family: var(--font-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Display Font Applied to All Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
+}
+
+/* Heading Levels */
 h1 {
   @apply text-5xl font-bold text-neutral-900 dark:text-neutral-50 tracking-tight mt-8 mb-4 leading-tight;
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
 }
 
 h2 {
   @apply text-4xl font-semibold text-neutral-900 dark:text-neutral-50 mt-8 mb-4 leading-tight;
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
 }
 
 h3 {
   @apply text-3xl font-semibold text-neutral-900 dark:text-neutral-50 mt-6 mb-3 leading-tight;
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
 }
 
 h4 {
   @apply text-2xl font-medium text-neutral-900 dark:text-neutral-50 mt-4 mb-2 leading-tight;
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
 }
 
 h5 {
   @apply text-xl font-medium text-neutral-900 dark:text-neutral-50 mt-3 mb-2 leading-tight;
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
 }
 
 h6 {
   @apply text-lg font-medium text-neutral-800 dark:text-neutral-200 uppercase tracking-wider mt-2 mb-2;
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
+}
+
+/* ================================================
+   PROSE TYPOGRAPHY (Blog Posts)
+   ================================================ */
+
+.prose {
+  --tw-prose-body: var(--color-neutral-700, #404040);
+  --tw-prose-headings: var(--color-neutral-900, #171717);
+  --tw-prose-links: var(--color-primary-600, #059669);
+  --tw-prose-bold: var(--color-neutral-900, #171717);
+  --tw-prose-code: var(--color-neutral-800, #262626);
+  --tw-prose-quotes: var(--color-neutral-600, #525252);
+  --tw-prose-hr: var(--color-neutral-300, #d4d4d4);
+  font-family: var(--font-body);
+  line-height: 1.75;
+}
+
+.prose :where(h1, h2, h3, h4, h5, h6):not(:where([class~="not-prose"] *)) {
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
+}
+
+.prose :where(code):not(:where([class~="not-prose"] *)) {
+  font-family: var(--font-mono);
+  line-height: 1.5;
+}
+
+/* Dark Mode Prose */
+.dark .prose {
+  --tw-prose-body: var(--color-neutral-300, #d4d4d4);
+  --tw-prose-headings: var(--color-neutral-50, #fafafa);
+  --tw-prose-links: var(--color-primary-400, #34d399);
+  --tw-prose-bold: var(--color-neutral-50, #fafafa);
+  --tw-prose-code: var(--color-neutral-200, #e5e5e5);
+  --tw-prose-quotes: var(--color-neutral-400, #a3a3a3);
+  --tw-prose-hr: var(--color-neutral-700, #404040);
 }
 
 /* Focus Indicators - WCAG AA Compliant */
@@ -109,4 +184,142 @@ select:focus-visible {
 /* Ensure skip link is always above all content */
 .skip-link:focus {
   z-index: 10000;
+}
+
+/* ================================================
+   ANIMATION UTILITIES
+   ================================================ */
+
+/* Fade-in-up animation */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+/* Stagger delays - 150ms increments for luxury feel */
+.stagger-1 { animation-delay: 150ms; }
+.stagger-2 { animation-delay: 300ms; }
+.stagger-3 { animation-delay: 450ms; }
+.stagger-4 { animation-delay: 600ms; }
+.stagger-5 { animation-delay: 750ms; }
+.stagger-6 { animation-delay: 900ms; }
+
+/* Code Typography - Normal line-height */
+code, pre {
+  line-height: 1.5;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ================================================
+   DARK MODE REFINEMENTS - Premium Feel
+   ================================================ */
+
+/* Dark mode semantic colors - subtle lifts for depth */
+.dark {
+  --color-elevated: oklch(0.22 0.01 50);
+  --color-elevated-2: oklch(0.18 0.01 50);
+  --color-muted: oklch(0.6 0.02 50);
+  --color-faint: oklch(0.15 0.01 50);
+}
+
+/* Dark mode shadows - softer with better diffusion */
+.dark {
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.4);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.45), 0 4px 6px -4px rgb(0 0 0 / 0.35);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.4);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.6);
+}
+
+/* Emerald accent refinement for dark backgrounds */
+.dark {
+  --color-primary-50: oklch(0.96 0.03 158);
+  --color-primary-100: oklch(0.9 0.06 157);
+  --color-primary-200: oklch(0.82 0.1 156);
+  --color-primary-300: oklch(0.72 0.12 155);
+  --color-primary-400: oklch(0.65 0.15 155);
+  --color-primary-500: oklch(0.72 0.13 155);
+  --color-primary-600: oklch(0.6 0.12 156);
+  --color-primary-700: oklch(0.5 0.1 156);
+  --color-primary-800: oklch(0.4 0.08 156);
+  --color-primary-900: oklch(0.32 0.06 156);
+  --color-primary-950: oklch(0.2 0.04 156);
+}
+
+/* Neutral refinements - warmer undertones for dark mode */
+.dark {
+  --color-neutral-50: oklch(0.97 0 0);
+  --color-neutral-100: oklch(0.93 0 0);
+  --color-neutral-200: oklch(0.85 0 0);
+  --color-neutral-300: oklch(0.72 0 0);
+  --color-neutral-400: oklch(0.56 0 0);
+  --color-neutral-500: oklch(0.45 0 0);
+  --color-neutral-600: oklch(0.38 0 0);
+  --color-neutral-700: oklch(0.3 0 0);
+  --color-neutral-800: oklch(0.22 0 0);
+  --color-neutral-900: oklch(0.15 0 0);
+  --color-neutral-950: oklch(0.1 0 0);
+}
+
+/* Ring colors for dark mode */
+.dark {
+  --ring-color: oklch(0.65 0.15 155);
+  --ring-offset-color: oklch(0.15 0 0);
+}
+
+/* Border refinements for premium dark mode */
+.dark {
+  --border-color: oklch(0.25 0 0);
+  --border-color-hover: oklch(0.35 0 0);
+}
+
+/* Input backgrounds for dark mode */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: oklch(0.15 0 0);
+  border-color: oklch(0.25 0 0);
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: oklch(0.65 0.15 155);
+  background-color: oklch(0.12 0 0);
+}
+
+/* Card refinements - subtle glow effect on hover */
+.dark .hover\:ring-primary\/20:hover {
+  box-shadow: 0 0 20px -5px oklch(0.65 0.15 155 / 0.3);
+}
+
+/* Text muted for premium feel - better contrast */
+.dark .text-muted-foreground {
+  color: oklch(0.6 0.02 50);
+}
+
+/* Background subtle gradient overlay for premium feel */
+.dark {
+  background-image:
+    radial-gradient(ellipse at top, oklch(0.18 0.01 50) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, oklch(0.15 0.01 55) 0%, transparent 50%);
 }

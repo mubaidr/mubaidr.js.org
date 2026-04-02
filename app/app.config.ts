@@ -3,25 +3,33 @@ export default defineAppConfig({
     colors: {
       primary: "emerald",
       secondary: "indigo",
-      neutral: "slate",
+      neutral: "stone",
     },
     badge: {
       defaultVariants: {
-        variant: "soft",
+        variant: "subtle",
       },
     },
     button: {
+      slots: {
+        base: "transition-all duration-200 ease-out",
+      },
       defaultVariants: {
         color: "primary",
       },
     },
     card: {
       slots: {
-        root: "shadow-xs border border-neutral-200 dark:border-neutral-800 transition-all duration-300 hover:shadow-md bg-white dark:bg-neutral-900",
+        root: "shadow-xs ring ring-default/50 transition-all duration-300 hover:shadow-lg hover:ring-primary/30 hover:-translate-y-0.5 bg-white dark:bg-neutral-900/80 backdrop-blur-sm",
       },
       variants: {
         variant: {
-          outline: "border border-neutral-200 dark:border-neutral-800",
+          outline: {
+            root: "ring ring-default/50 hover:ring-primary/30 dark:ring-neutral-700/50",
+          },
+          soft: {
+            root: "bg-elevated/40 hover:bg-elevated/60 dark:bg-neutral-900/40 dark:hover:bg-neutral-900/60",
+          },
         },
       },
     },

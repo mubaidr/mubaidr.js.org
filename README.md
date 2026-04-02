@@ -12,11 +12,11 @@ A modern, high-performance personal portfolio and blog website built with **Nuxt
 
 ### 🎨 **Modern Design & UX**
 
-- **Glass morphism design** with beautiful visual effects
+- **Minimal Luxury aesthetic** with elevated surfaces and warm neutrals
 - **Dark/Light mode toggle** with system preference detection
 - **Fully responsive** design for all devices
-- **Smooth animations** and transitions
-- **Geometric background** patterns for visual appeal
+- **Refined animations** with reduced-motion support
+- **Accessible** components built on Nuxt UI 4
 
 ### 📝 **Content Management**
 

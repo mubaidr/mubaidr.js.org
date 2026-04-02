@@ -101,7 +101,8 @@ onMounted(() => {
                   </p>
                 </div>
 
-                <UButton variant="outline" color="neutral" class="w-full justify-center" :aria-label="method.ariaLabel"
+                <UButton
+variant="outline" color="neutral" class="w-full justify-center" :aria-label="method.ariaLabel"
                   @click="navigateTo(method.action, { external: true })">
                   {{ method.value }}
                 </UButton>
