@@ -42,13 +42,13 @@ One of the most requested features has finally arrived. Const type parameters al
 function wrap<T>(value: T): { value: T } {
   return { value }
 }
-const result = wrap('hello') // Type: { value: string }
+const result = wrap("hello") // Type: { value: string }
 
 // With const type parameters
 function wrap<const T>(value: T): { value: T } {
   return { value }
 }
-const result = wrap('hello') // Type: { value: 'hello' }
+const result = wrap("hello") // Type: { value: 'hello' }
 ```
 
 This feature is particularly valuable when working with configuration objects, API responses, and any scenario where preserving literal types provides better type safety.
@@ -79,7 +79,9 @@ New built-in utility types make it easier to work with string types:
 
 ```typescript
 type Route = `/api/${string}/users/${number}`
-type ExtractId<T> = T extends `/api/${string}/users/${infer Id extends number}` ? Id : never
+type ExtractId<T> = T extends `/api/${string}/users/${infer Id extends number}`
+  ? Id
+  : never
 type UserId = ExtractId<`/api/v1/users/123`> // Type: 123
 ```
 
@@ -123,11 +125,13 @@ type ApiResponse<T> = {
   data: T
   meta: {
     timestamp: string
-    version: 'v1' | 'v2'
+    version: "v1" | "v2"
   }
 }
 
-async function fetchUser(id: number): Promise<ApiResponse<{ id: number; name: string }>> {
+async function fetchUser(
+  id: number,
+): Promise<ApiResponse<{ id: number; name: string }>> {
   const response = await fetch(`/api/users/${id}`)
   return response.json()
 }

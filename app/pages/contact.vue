@@ -86,10 +86,18 @@ onMounted(() => {
         </div>
 
         <div class="grid gap-8 md:grid-cols-2">
-          <UCard v-for="method in contactMethods" :key="method.title" class="text-center h-full">
+          <UCard
+            v-for="method in contactMethods"
+            :key="method.title"
+            class="text-center h-full"
+          >
             <div class="p-6 space-y-6">
               <div class="flex items-center justify-center mx-auto">
-                <UIcon :name="method.icon" size="3em" class="text-primary-500" />
+                <UIcon
+                  :name="method.icon"
+                  size="3em"
+                  class="text-primary-500"
+                />
               </div>
               <div class="space-y-4">
                 <div class="space-y-1">
@@ -102,8 +110,12 @@ onMounted(() => {
                 </div>
 
                 <UButton
-variant="outline" color="neutral" class="w-full justify-center" :aria-label="method.ariaLabel"
-                  @click="navigateTo(method.action, { external: true })">
+                  variant="outline"
+                  color="neutral"
+                  class="w-full justify-center"
+                  :aria-label="method.ariaLabel"
+                  @click="navigateTo(method.action, { external: true })"
+                >
                   {{ method.value }}
                 </UButton>
               </div>
@@ -113,7 +125,11 @@ variant="outline" color="neutral" class="w-full justify-center" :aria-label="met
       </section>
 
       <!-- FAQ -->
-      <section v-if="faqsData && faqsData.list.length > 0" id="faqs" class="space-y-12">
+      <section
+        v-if="faqsData && faqsData.list.length > 0"
+        id="faqs"
+        class="space-y-12"
+      >
         <div class="text-center space-y-6">
           <h2>Frequently Asked Questions</h2>
           <p class="max-w-3xl mx-auto">

@@ -65,15 +65,15 @@ Start with strongly-typed database schemas:
 
 ```typescript
 // db/schema/users.ts
-import { pgTable, text, timestamp, uuid } from 'drizzle-orm/pg-core'
-import { createInsertSchema, createSelectSchema } from 'drizzle-zod'
-import { z } from 'zod'
+import { pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core"
+import { createInsertSchema, createSelectSchema } from "drizzle-zod"
+import { z } from "zod"
 
-export const users = pgTable('users', {
-  id: uuid('id').primaryKey().defaultRandom(),
-  email: text('email').notNull().unique(),
-  name: text('name').notNull(),
-  createdAt: timestamp('created_at').defaultNow().notNull(),
+export const users = pgTable("users", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  email: text("email").notNull().unique(),
+  name: text("name").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
 })
 
 // Generate Zod schemas from database schema
@@ -89,31 +89,27 @@ export type NewUser = typeof users.$inferInsert
 
 ```typescript
 // server/routes/api/users.ts
-import { Hono } from 'hono'
-import { zValidator } from '@hono/zod-validator'
-import { insertUserSchema, selectUserSchema } from '@/db/schema'
+import { Hono } from "hono"
+import { zValidator } from "@hono/zod-validator"
+import { insertUserSchema, selectUserSchema } from "@/db/schema"
 
 const app = new Hono()
 
 // Type-safe route with validation
-app.post(
-  '/users',
-  zValidator('json', insertUserSchema),
-  async (c) => {
-    const data = c.req.valid('json')
-    // data is fully typed as NewUser
+app.post("/users", zValidator("json", insertUserSchema), async (c) => {
+  const data = c.req.valid("json")
+  // data is fully typed as NewUser
 
-    const user = await db.insert(users).values(data).returning()
+  const user = await db.insert(users).values(data).returning()
 
-    return c.json({
-      data: user[0],
-      meta: {
-        timestamp: new Date().toISOString(),
-        version: 'v1'
-      }
-    })
-  }
-)
+  return c.json({
+    data: user[0],
+    meta: {
+      timestamp: new Date().toISOString(),
+      version: "v1",
+    },
+  })
+})
 
 // Export route type
 export type UsersRoutes = typeof app
@@ -123,16 +119,13 @@ export type UsersRoutes = typeof app
 
 ```typescript
 // lib/api/client.ts
-import type { UsersRoutes } from '@/server/routes/api/users'
-import type { SelectUserSchema } from '@/db/schema'
+import type { UsersRoutes } from "@/server/routes/api/users"
+import type { SelectUserSchema } from "@/db/schema"
 
 // Infer types from routes
 type UsersApi = typeof UsersRoutes
 
-async function api<T>(
-  endpoint: string,
-  options?: RequestInit
-): Promise<T> {
+async function api<T>(endpoint: string, options?: RequestInit): Promise<T> {
   const response = await fetch(`/api/${endpoint}`, options)
 
   if (!response.ok) {
@@ -144,13 +137,13 @@ async function api<T>(
 
 // Fully typed API calls
 export const usersApi = {
-  getAll: () => api<SelectUserSchema[]>('/api/users'),
+  getAll: () => api<SelectUserSchema[]>("/api/users"),
   getById: (id: string) => api<SelectUserSchema>(`/api/users/${id}`),
   create: (data: NewUser) =>
-    api<SelectUserSchema>('/api/users', {
-      method: 'POST',
+    api<SelectUserSchema>("/api/users", {
+      method: "POST",
       body: JSON.stringify(data),
-      headers: { 'Content-Type': 'application/json' },
+      headers: { "Content-Type": "application/json" },
     }),
 }
 ```
@@ -189,7 +182,7 @@ const UserCard = defineComponent<{ user: User }>({
 
 ```typescript
 // shared/types/common.ts
-import { z } from 'zod'
+import { z } from "zod"
 
 // Common response structure
 export const apiResponseSchema = <T extends z.ZodType>(dataSchema: T) =>
@@ -209,12 +202,12 @@ export type ApiResponse<T> = z.infer<ReturnType<typeof apiResponseSchema<T>>>
 
 ```typescript
 // lib/env.ts
-import { z } from 'zod'
+import { z } from "zod"
 
 const envSchema = z.object({
   DATABASE_URL: z.string().url(),
   API_KEY: z.string().min(1),
-  NODE_ENV: z.enum(['development', 'production', 'test']),
+  NODE_ENV: z.enum(["development", "production", "test"]),
 })
 
 export const env = envSchema.parse(process.env)
@@ -225,7 +218,7 @@ export type Env = z.infer<typeof envSchema>
 
 ```typescript
 // db/migrations/001_create_users.ts
-import { sql } from 'drizzle-orm'
+import { sql } from "drizzle-orm"
 
 export async function up() {
   await sql`
@@ -249,13 +242,13 @@ export async function down() {
 
 ```typescript
 // db/schema/products.ts
-export const products = pgTable('products', {
-  id: uuid('id').primaryKey(),
-  name: text('name').notNull(),
-  description: text('description'),
-  price: numeric('price').notNull(),
-  inventory: integer('inventory').default(0),
-  categoryId: uuid('category_id').references(() => categories.id),
+export const products = pgTable("products", {
+  id: uuid("id").primaryKey(),
+  name: text("name").notNull(),
+  description: text("description"),
+  price: numeric("price").notNull(),
+  inventory: integer("inventory").default(0),
+  categoryId: uuid("category_id").references(() => categories.id),
 })
 ```
 
@@ -263,23 +256,27 @@ export const products = pgTable('products', {
 
 ```typescript
 // server/routes/api/products.ts
-app.get('/products/:id', zValidator('param', z.object({ id: z.string().uuid() })), async (c) => {
-  const { id } = c.req.valid('param')
+app.get(
+  "/products/:id",
+  zValidator("param", z.object({ id: z.string().uuid() })),
+  async (c) => {
+    const { id } = c.req.valid("param")
 
-  const product = await db.query.products.findFirst({
-    where: eq(products.id, id),
-    with: {
-      category: true,
-      images: true,
+    const product = await db.query.products.findFirst({
+      where: eq(products.id, id),
+      with: {
+        category: true,
+        images: true,
+      },
+    })
+
+    if (!product) {
+      return c.json({ error: "Product not found" }, 404)
     }
-  })
 
-  if (!product) {
-    return c.json({ error: 'Product not found' }, 404)
-  }
-
-  return c.json({ data: product })
-})
+    return c.json({ data: product })
+  },
+)
 ```
 
 ### Frontend Component
@@ -287,17 +284,17 @@ app.get('/products/:id', zValidator('param', z.object({ id: z.string().uuid() })
 ```vue
 <!-- app/components/ProductCard.vue -->
 <script setup lang="ts">
-import type { Product } from '@/db/schema'
+import type { Product } from "@/db/schema"
 
 const props = defineProps<{
   product: Product
 }>()
 
 const formattedPrice = computed(() =>
-  new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-  }).format(Number(props.product.price))
+  new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format(Number(props.product.price)),
 )
 </script>
 
@@ -386,14 +383,14 @@ function createUser(data: unknown) {
 
 ```typescript
 // tests/types.test.ts
-import { expectTypeOf } from 'expect-type'
-import { usersApi } from '@/lib/api/client'
+import { expectTypeOf } from "expect-type"
+import { usersApi } from "@/lib/api/client"
 
-test('usersApi.getAll returns User[]', () => {
+test("usersApi.getAll returns User[]", () => {
   expectTypeOf(usersApi.getAll()).resolves.toEqualTypeOf<User[]>()
 })
 
-test('usersApi.create accepts NewUser', () => {
+test("usersApi.create accepts NewUser", () => {
   expectTypeOf(usersApi.create).parameter(0).toEqualTypeOf<NewUser>()
 })
 ```

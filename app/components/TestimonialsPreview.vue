@@ -1,6 +1,7 @@
 <script setup lang="ts">
 // Fetch testimonials using composable with loading state
-const { data: testimonialsData, pending: isLoading } = await useTestimonialsData()
+const { data: testimonialsData, pending: isLoading } =
+  await useTestimonialsData()
 </script>
 
 <template>
@@ -21,15 +22,27 @@ const { data: testimonialsData, pending: isLoading } = await useTestimonialsData
       </div>
 
       <!-- Testimonials Grid -->
-      <div v-else-if="testimonialsData && testimonialsData.length > 0" class="grid gap-6 md:grid-cols-2">
-        <UPageCard v-for="testimonial in testimonialsData" :key="testimonial.name" :ui="{
-          root: 'transition-all duration-300 hover:shadow-md'
-        }" variant="soft">
+      <div
+        v-else-if="testimonialsData && testimonialsData.length > 0"
+        class="grid gap-6 md:grid-cols-2"
+      >
+        <UPageCard
+          v-for="testimonial in testimonialsData"
+          :key="testimonial.name"
+          :ui="{
+            root: 'transition-all duration-300 hover:shadow-md',
+          }"
+          variant="soft"
+        >
           <div class="space-y-4">
-            <p class="text-neutral-600 dark:text-neutral-400 italic leading-relaxed">
+            <p
+              class="text-neutral-600 dark:text-neutral-400 italic leading-relaxed"
+            >
               "{{ testimonial.quote }}"
             </p>
-            <p class="text-sm font-medium text-neutral-500 dark:text-neutral-400">
+            <p
+              class="text-sm font-medium text-neutral-500 dark:text-neutral-400"
+            >
               — {{ testimonial.name }}
             </p>
           </div>

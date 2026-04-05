@@ -28,7 +28,12 @@ body {
 }
 
 /* Display Font Applied to All Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   letter-spacing: -0.025em;
 }
@@ -109,13 +114,13 @@ h6 {
 
 /* Focus Indicators - WCAG AA Compliant */
 *:focus-visible {
-  outline: 2px solid theme('colors.green.500');
+  outline: 2px solid theme("colors.green.500");
   outline-offset: 2px;
 }
 
 /* Ensure focus outline is visible on dark backgrounds */
 .dark *:focus-visible {
-  outline-color: theme('colors.green.400');
+  outline-color: theme("colors.green.400");
 }
 
 /* Remove default outline for mouse users, keep for keyboard */
@@ -129,9 +134,9 @@ a:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid theme('colors.green.500');
+  outline: 2px solid theme("colors.green.500");
   outline-offset: 2px;
-  box-shadow: 0 0 0 4px theme('colors.green.500', 0.2);
+  box-shadow: 0 0 0 4px theme("colors.green.500", 0.2);
 }
 
 .dark button:focus-visible,
@@ -139,8 +144,8 @@ select:focus-visible {
 .dark input:focus-visible,
 .dark textarea:focus-visible,
 .dark select:focus-visible {
-  outline-color: theme('colors.green.400');
-  box-shadow: 0 0 0 4px theme('colors.green.400', 0.2);
+  outline-color: theme("colors.green.400");
+  box-shadow: 0 0 0 4px theme("colors.green.400", 0.2);
 }
 
 /* Skip Link - Accessibility */
@@ -150,12 +155,14 @@ select:focus-visible {
   left: 0;
   z-index: 9999;
   padding: 1rem 1.5rem;
-  background: theme('colors.green.600');
+  background: theme("colors.green.600");
   color: white;
   font-weight: 600;
   text-decoration: none;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px -1px theme('colors.black', 0.1), 0 2px 4px -1px theme('colors.black', 0.06);
+  box-shadow:
+    0 4px 6px -1px theme("colors.black", 0.1),
+    0 2px 4px -1px theme("colors.black", 0.06);
   transition: all 0.2s ease-in-out;
   outline: none;
 }
@@ -164,21 +171,27 @@ select:focus-visible {
 .skip-link:focus {
   top: 1rem;
   left: 1rem;
-  outline: 3px solid theme('colors.black');
+  outline: 3px solid theme("colors.black");
   outline-offset: 2px;
-  box-shadow: 0 8px 16px -4px theme('colors.black', 0.2), 0 4px 8px -2px theme('colors.black', 0.1);
+  box-shadow:
+    0 8px 16px -4px theme("colors.black", 0.2),
+    0 4px 8px -2px theme("colors.black", 0.1);
 }
 
 /* Dark mode skip link styling */
 .dark .skip-link {
-  background: theme('colors.green.500');
-  color: theme('colors.neutral.900');
-  box-shadow: 0 4px 6px -1px theme('colors.white', 0.1), 0 2px 4px -1px theme('colors.white', 0.06);
+  background: theme("colors.green.500");
+  color: theme("colors.neutral.900");
+  box-shadow:
+    0 4px 6px -1px theme("colors.white", 0.1),
+    0 2px 4px -1px theme("colors.white", 0.06);
 }
 
 .dark .skip-link:focus {
-  outline-color: theme('colors.white');
-  box-shadow: 0 8px 16px -4px theme('colors.white', 0.2), 0 4px 8px -2px theme('colors.white', 0.1);
+  outline-color: theme("colors.white");
+  box-shadow:
+    0 8px 16px -4px theme("colors.white", 0.2),
+    0 4px 8px -2px theme("colors.white", 0.1);
 }
 
 /* Ensure skip link is always above all content */
@@ -208,15 +221,28 @@ select:focus-visible {
 }
 
 /* Stagger delays - 150ms increments for luxury feel */
-.stagger-1 { animation-delay: 150ms; }
-.stagger-2 { animation-delay: 300ms; }
-.stagger-3 { animation-delay: 450ms; }
-.stagger-4 { animation-delay: 600ms; }
-.stagger-5 { animation-delay: 750ms; }
-.stagger-6 { animation-delay: 900ms; }
+.stagger-1 {
+  animation-delay: 150ms;
+}
+.stagger-2 {
+  animation-delay: 300ms;
+}
+.stagger-3 {
+  animation-delay: 450ms;
+}
+.stagger-4 {
+  animation-delay: 600ms;
+}
+.stagger-5 {
+  animation-delay: 750ms;
+}
+.stagger-6 {
+  animation-delay: 900ms;
+}
 
 /* Code Typography - Normal line-height */
-code, pre {
+code,
+pre {
   line-height: 1.5;
 }
 
@@ -245,8 +271,10 @@ code, pre {
 .dark {
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.4);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.45), 0 4px 6px -4px rgb(0 0 0 / 0.35);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.4);
+  --shadow-lg:
+    0 10px 15px -3px rgb(0 0 0 / 0.45), 0 4px 6px -4px rgb(0 0 0 / 0.35);
+  --shadow-xl:
+    0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.4);
   --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.6);
 }
 
@@ -321,5 +349,9 @@ code, pre {
 .dark {
   background-image:
     radial-gradient(ellipse at top, oklch(0.18 0.01 50) 0%, transparent 50%),
-    radial-gradient(ellipse at bottom right, oklch(0.15 0.01 55) 0%, transparent 50%);
+    radial-gradient(
+      ellipse at bottom right,
+      oklch(0.15 0.01 55) 0%,
+      transparent 50%
+    );
 }

@@ -12,8 +12,12 @@ const { count, title } = defineProps({
 })
 
 // Fetch recent blog posts using composable with loading and error state
-const { data: recentPostsData, pending: isLoading, error, refresh } =
-  await useRecentBlogPosts(count)
+const {
+  data: recentPostsData,
+  pending: isLoading,
+  error,
+  refresh,
+} = await useRecentBlogPosts(count)
 
 // Retry function for error recovery
 const retryFetch = () => {
@@ -36,10 +40,23 @@ const retryFetch = () => {
       </div>
 
       <!-- Error State -->
-      <UAlert v-if="error" color="error" variant="soft" icon="i-ph-warning-circle" title="Unable to Load Posts"
-        description="We couldn't load the recent blog posts. Please try again." class="max-w-2xl mx-auto">
+      <UAlert
+        v-if="error"
+        color="error"
+        variant="soft"
+        icon="i-ph-warning-circle"
+        title="Unable to Load Posts"
+        description="We couldn't load the recent blog posts. Please try again."
+        class="max-w-2xl mx-auto"
+      >
         <template #actions>
-          <UButton color="error" variant="solid" size="sm" icon="i-ph-arrow-clockwise" @click="retryFetch">
+          <UButton
+            color="error"
+            variant="solid"
+            size="sm"
+            icon="i-ph-arrow-clockwise"
+            @click="retryFetch"
+          >
             Retry
           </UButton>
         </template>
@@ -51,31 +68,54 @@ const retryFetch = () => {
       </div>
 
       <!-- Show blog posts if available -->
-      <div v-else-if="recentPostsData && recentPostsData.length > 0" class="grid gap-8 md:grid-cols-2">
-        <NuxtLink v-for="(post, index) in recentPostsData" :key="post.path || `post-${index}`"
-          :to="post.path || '/blog'" class="h-full">
-          <UCard class="group h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+      <div
+        v-else-if="recentPostsData && recentPostsData.length > 0"
+        class="grid gap-8 md:grid-cols-2"
+      >
+        <NuxtLink
+          v-for="(post, index) in recentPostsData"
+          :key="post.path || `post-${index}`"
+          :to="post.path || '/blog'"
+          class="h-full"
+        >
+          <UCard
+            class="group h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+          >
             <div class="space-y-6">
-              <div v-if="post.socialImage?.src || post.image" class="aspect-video -mx-6 -mt-6 mb-4 overflow-hidden">
-                <img :src="post.socialImage?.src || post.image" :alt="post.socialImage?.alt || post.title"
+              <div
+                v-if="post.socialImage?.src || post.image"
+                class="aspect-video -mx-6 -mt-6 mb-4 overflow-hidden"
+              >
+                <img
+                  :src="post.socialImage?.src || post.image"
+                  :alt="post.socialImage?.alt || post.title"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy">
+                  loading="lazy"
+                />
               </div>
               <div class="space-y-3">
-                <h3 class="text-xl font-bold group-hover:text-primary transition-colors duration-200">
+                <h3
+                  class="text-xl font-bold group-hover:text-primary transition-colors duration-200"
+                >
                   {{ post.title }}
                 </h3>
-                <p class="text-neutral-600 dark:text-neutral-400 line-clamp-3 leading-relaxed">
+                <p
+                  class="text-neutral-600 dark:text-neutral-400 line-clamp-3 leading-relaxed"
+                >
                   {{ post.description }}
                 </p>
                 <div
-                  class="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-xs font-medium text-neutral-500 dark:text-neutral-500">
+                  class="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-xs font-medium text-neutral-500 dark:text-neutral-500"
+                >
                   <div class="flex items-center gap-2">
                     <UIcon name="i-ph-calendar-blank-bold" />
                     <span>{{ $formatDate(post.date) }}</span>
                   </div>
                   <div class="flex items-center gap-1 text-primary">
-                    <span class="group-hover:translate-x-1 transition-transform duration-200">Read More</span>
+                    <span
+                      class="group-hover:translate-x-1 transition-transform duration-200"
+                      >Read More</span
+                    >
                     <UIcon name="i-ph-arrow-right-bold" />
                   </div>
                 </div>
@@ -87,11 +127,20 @@ const retryFetch = () => {
 
       <!-- Empty State -->
       <div v-else-if="!isLoading && !error" class="text-center py-12">
-        <UAlert color="neutral" variant="soft" icon="i-ph-article" title="No Posts Available"
-          description="Check back soon for new blog posts." class="max-w-2xl mx-auto" />
+        <UAlert
+          color="neutral"
+          variant="soft"
+          icon="i-ph-article"
+          title="No Posts Available"
+          description="Check back soon for new blog posts."
+          class="max-w-2xl mx-auto"
+        />
       </div>
 
-      <div v-if="recentPostsData && recentPostsData.length > 0" class="text-center">
+      <div
+        v-if="recentPostsData && recentPostsData.length > 0"
+        class="text-center"
+      >
         <UButton to="/blog" variant="outline" size="xl">
           <UIcon name="i-ph-article" />
           View All Posts

@@ -52,8 +52,8 @@ Design tokens are named variables that store design decisions:
 ```css
 /* Tailwind v4 uses CSS variables natively */
 @theme {
-  --color-primary: #3B82F6;
-  --color-primary-500: #3B82F6;
+  --color-primary: #3b82f6;
+  --color-primary-500: #3b82f6;
   --spacing-4: 1rem;
   --font-size-lg: 1.125rem;
 }
@@ -64,7 +64,7 @@ Design tokens are named variables that store design decisions:
 ```css
 /* Before v4 */
 .bg-primary {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Tailwind v4 */
@@ -119,13 +119,13 @@ Design tokens are named variables that store design decisions:
 
 @theme {
   /* Colors */
-  --color-primary-50: #EFF6FF;
-  --color-primary-100: #DBEAFE;
-  --color-primary-500: #3B82F6;
-  --color-primary-900: #1E3A8A;
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-500: #3b82f6;
+  --color-primary-900: #1e3a8a;
 
-  --color-neutral-100: #F3F4F6;
-  --color-neutral-500: #6B7280;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-500: #6b7280;
   --color-neutral-900: #111827;
 
   /* Spacing */
@@ -158,7 +158,7 @@ Design tokens are named variables that store design decisions:
     :class="[
       `bg-primary-500 hover:bg-primary-600`,
       `text-white`,
-      sizeClasses[size]
+      sizeClasses[size],
     ]"
   >
     <slot />
@@ -168,15 +168,15 @@ Design tokens are named variables that store design decisions:
 <script setup lang="ts">
 const props = defineProps({
   size: {
-    type: String as () => 'sm' | 'md' | 'lg',
-    default: 'md'
-  }
+    type: String as () => "sm" | "md" | "lg",
+    default: "md",
+  },
 })
 
 const sizeClasses = {
-  sm: 'px-2 py-1 text-sm',
-  md: 'px-4 py-2 text-base',
-  lg: 'px-6 py-3 text-lg'
+  sm: "px-2 py-1 text-sm",
+  md: "px-4 py-2 text-base",
+  lg: "px-6 py-3 text-lg",
 }
 </script>
 ```
@@ -262,15 +262,16 @@ const sizeClasses = {
 const colorMode = useColorMode()
 
 const toggleTheme = () => {
-  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+  colorMode.preference = colorMode.value === "dark" ? "light" : "dark"
 }
 </script>
 
 <template>
-  <button @click="toggleTheme" class="p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800">
-    <UIcon
-      :name="colorMode.value === 'dark' ? 'i-ph-sun' : 'i-ph-moon'"
-    />
+  <button
+    @click="toggleTheme"
+    class="p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800"
+  >
+    <UIcon :name="colorMode.value === 'dark' ? 'i-ph-sun' : 'i-ph-moon'" />
   </button>
 </template>
 ```
@@ -280,20 +281,20 @@ const toggleTheme = () => {
 ```css
 /* themes/blue.css */
 [data-theme="blue"] {
-  --color-primary-500: #3B82F6;
-  --color-primary-600: #2563EB;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
 }
 
 /* themes/green.css */
 [data-theme="green"] {
-  --color-primary-500: #10B981;
+  --color-primary-500: #10b981;
   --color-primary-600: #059669;
 }
 
 /* themes/purple.css */
 [data-theme="purple"] {
-  --color-primary-500: #8B5CF6;
-  --color-primary-600: #7C3AED;
+  --color-primary-500: #8b5cf6;
+  --color-primary-600: #7c3aed;
 }
 ```
 
@@ -303,28 +304,32 @@ const toggleTheme = () => {
 
 ```javascript
 // build-tokens.js
-const StyleDictionary = require('style-dictionary')
+const StyleDictionary = require("style-dictionary")
 
 StyleDictionary.extend({
-  source: ['tokens/**/*.json'],
+  source: ["tokens/**/*.json"],
   platforms: {
     css: {
-      transformGroup: 'css',
-      buildPath: 'dist/css/',
-      files: [{
-        destination: 'variables.css',
-        format: 'css/variables'
-      }]
+      transformGroup: "css",
+      buildPath: "dist/css/",
+      files: [
+        {
+          destination: "variables.css",
+          format: "css/variables",
+        },
+      ],
     },
     js: {
-      transformGroup: 'js',
-      buildPath: 'dist/js/',
-      files: [{
-        destination: 'tokens.js',
-        format: 'javascript/es6'
-      }]
-    }
-  }
+      transformGroup: "js",
+      buildPath: "dist/js/",
+      files: [
+        {
+          destination: "tokens.js",
+          format: "javascript/es6",
+        },
+      ],
+    },
+  },
 }).buildAllPlatforms()
 ```
 
@@ -379,7 +384,7 @@ StyleDictionary.extend({
 ```css
 /* Use CSS variables for runtime theme switching */
 :root {
-  --color-primary: #3B82F6;
+  --color-primary: #3b82f6;
 }
 
 .button {
@@ -393,8 +398,8 @@ StyleDictionary.extend({
 <!-- Extract critical tokens for initial render -->
 <style>
 :root {
-  --color-primary: #3B82F6;
-  --color-background: #FFFFFF;
+  --color-primary: #3b82f6;
+  --color-background: #ffffff;
   --color-foreground: #111827;
 }
 </style>

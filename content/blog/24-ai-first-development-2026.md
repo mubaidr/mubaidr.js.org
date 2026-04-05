@@ -71,7 +71,9 @@ interface ApiResponse<T> {
 }
 
 // AI generates new endpoints following your pattern:
-async function getUserProfile(userId: string): Promise<ApiResponse<UserProfile>> {
+async function getUserProfile(
+  userId: string,
+): Promise<ApiResponse<UserProfile>> {
   // Implementation follows your project's conventions
 }
 ```

@@ -5,8 +5,9 @@ const { data: profileData } = await useProfileData()
 
 <template>
   <div
-v-if="profileData?.availability"
-    class="flex flex-wrap items-center justify-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
+    v-if="profileData?.availability"
+    class="flex flex-wrap items-center justify-center gap-4 text-sm text-neutral-500 dark:text-neutral-400"
+  >
     <!-- Timezone -->
     <div class="flex items-center gap-2">
       <UIcon name="i-ph-globe" />

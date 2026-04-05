@@ -51,9 +51,9 @@ Meta-frameworks optimize performance automatically:
 // No manual optimization needed
 export default defineNuxtComponent({
   setup() {
-    const { data } = useFetch('/api/data')
+    const { data } = useFetch("/api/data")
     return { data }
-  }
+  },
 })
 ```
 
@@ -111,7 +111,7 @@ export default async function Page() {
 
 ```typescript
 // Nuxt 4 - Fully typed with auto-imports
-const { data: posts } = await useFetch('/api/posts')
+const { data: posts } = await useFetch("/api/posts")
 ```
 
 **Strengths**:
@@ -164,12 +164,12 @@ export async function action({ request }) {
 
 ## Real-World Performance Comparison
 
-| Framework | TTI | Bundle Size | LCP | FID |
-|-----------|-----|-------------|-----|-----|
-| Next.js 16 | 1.2s | 145KB | 1.5s | 15ms |
-| Nuxt 4 | 1.1s | 132KB | 1.4s | 12ms |
-| SvelteKit 3 | 0.9s | 85KB | 1.1s | 10ms |
-| React SPA | 2.5s | 250KB | 2.8s | 45ms |
+| Framework   | TTI  | Bundle Size | LCP  | FID  |
+| ----------- | ---- | ----------- | ---- | ---- |
+| Next.js 16  | 1.2s | 145KB       | 1.5s | 15ms |
+| Nuxt 4      | 1.1s | 132KB       | 1.4s | 12ms |
+| SvelteKit 3 | 0.9s | 85KB        | 1.1s | 10ms |
+| React SPA   | 2.5s | 250KB       | 2.8s | 45ms |
 
 ## Migration Strategies
 
@@ -206,8 +206,8 @@ export default async function ServerComponent() {
 
 ```typescript
 // Use appropriate caching strategies
-const { data } = await useFetch('/api/data', {
-  cache: 'force-cache', // Static
+const { data } = await useFetch("/api/data", {
+  cache: "force-cache", // Static
   // cache: 'no-store', // Dynamic
 })
 ```

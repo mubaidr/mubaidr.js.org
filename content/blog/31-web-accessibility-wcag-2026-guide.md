@@ -67,7 +67,7 @@ Web accessibility isn't optional—it's essential. In 2026, WCAG 2.2 guidelines 
 ```vue
 <script setup lang="ts">
 const handleKeyDown = (event: KeyboardEvent) => {
-  if (event.key === 'Enter' || event.key === ' ') {
+  if (event.key === "Enter" || event.key === " ") {
     event.preventDefault()
     // Handle action
   }
@@ -76,11 +76,7 @@ const handleKeyDown = (event: KeyboardEvent) => {
 
 <template>
   <!-- Keyboard accessible button -->
-  <button
-    @click="handleClick"
-    @keydown="handleKeyDown"
-    :tabindex="0"
-  >
+  <button @click="handleClick" @keydown="handleKeyDown" :tabindex="0">
     Click Me
   </button>
 </template>
@@ -91,7 +87,7 @@ const handleKeyDown = (event: KeyboardEvent) => {
 ```vue
 <script setup lang="ts">
 const focusFirstError = () => {
-  const firstError = document.querySelector('[data-error]')
+  const firstError = document.querySelector("[data-error]")
   if (firstError) {
     firstError.focus()
   }
@@ -100,14 +96,18 @@ const focusFirstError = () => {
 // Trap focus in modals
 const useFocusTrap = (element: Ref<HTMLElement | null>) => {
   const focusableElements = element.value?.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
   )
 
   const firstElement = focusableElements?.[0]
   const lastElement = focusableElements?.[focusableElements.length - 1]
 
-  element.value?.addEventListener('keydown', (e) => {
-    if (e.key === 'Tab' && e.shiftKey && document.activeElement === firstElement) {
+  element.value?.addEventListener("keydown", (e) => {
+    if (
+      e.key === "Tab" &&
+      e.shiftKey &&
+      document.activeElement === firstElement
+    ) {
       e.preventDefault()
       lastElement?.focus()
     }
@@ -128,11 +128,7 @@ const useFocusTrap = (element: Ref<HTMLElement | null>) => {
   </button>
 
   <!-- Label for form inputs -->
-  <input
-    type="text"
-    aria-label="Search"
-    aria-describedby="search-help"
-  />
+  <input type="text" aria-label="Search" aria-describedby="search-help" />
   <p id="search-help">Enter keywords to search</p>
 </template>
 ```
@@ -142,19 +138,12 @@ const useFocusTrap = (element: Ref<HTMLElement | null>) => {
 ```vue
 <template>
   <!-- Announce dynamic content -->
-  <div
-    role="status"
-    aria-live="polite"
-    aria-atomic="true"
-  >
+  <div role="status" aria-live="polite" aria-atomic="true">
     {{ notification }}
   </div>
 
   <!-- Assertive for urgent updates -->
-  <div
-    role="alert"
-    aria-live="assertive"
-  >
+  <div role="alert" aria-live="assertive">
     {{ errorMessage }}
   </div>
 </template>
@@ -165,8 +154,8 @@ const useFocusTrap = (element: Ref<HTMLElement | null>) => {
 ```vue
 <script setup lang="ts">
 const tabs = ref([
-  { id: 'tab1', label: 'Tab 1', active: true },
-  { id: 'tab2', label: 'Tab 2', active: false }
+  { id: "tab1", label: "Tab 1", active: true },
+  { id: "tab2", label: "Tab 2", active: false },
 ])
 
 const selectTab = (index: number) => {
@@ -327,9 +316,7 @@ const selectTab = (index: number) => {
   <figure>
     <img src="infographic.png" alt="See infographic description below" />
     <figcaption>
-      <p class="sr-only">
-        Detailed description of the infographic content...
-      </p>
+      <p class="sr-only">Detailed description of the infographic content...</p>
     </figcaption>
   </figure>
 </template>
@@ -341,17 +328,8 @@ const selectTab = (index: number) => {
 <template>
   <video controls>
     <source src="video.mp4" type="video/mp4" />
-    <track
-      kind="captions"
-      src="captions.vtt"
-      srclang="en"
-      label="English"
-    />
-    <track
-      kind="descriptions"
-      src="descriptions.vtt"
-      srclang="en"
-    />
+    <track kind="captions" src="captions.vtt" srclang="en" label="English" />
+    <track kind="descriptions" src="descriptions.vtt" srclang="en" />
   </video>
 </template>
 ```
@@ -362,22 +340,22 @@ const selectTab = (index: number) => {
 
 ```typescript
 // vitest.config.ts
-import { defineVitestConfig } from '@nuxt/test-utils/config'
+import { defineVitestConfig } from "@nuxt/test-utils/config"
 
 export default defineVitestConfig({
   test: {
-    setupFiles: ['./test/setup.ts'],
+    setupFiles: ["./test/setup.ts"],
   },
 })
 
 // test/accessibility.test.ts
-import { axe, toHaveNoViolations } from 'jest-axe'
-import { mount } from '@vue/test-utils'
-import MyComponent from '@/components/MyComponent.vue'
+import { axe, toHaveNoViolations } from "jest-axe"
+import { mount } from "@vue/test-utils"
+import MyComponent from "@/components/MyComponent.vue"
 
 expect.extend(toHaveNoViolations)
 
-test('should not have accessibility violations', async () => {
+test("should not have accessibility violations", async () => {
   const wrapper = mount(MyComponent)
   const results = await axe(wrapper.element)
   expect(results).toHaveNoViolations()
@@ -389,13 +367,13 @@ test('should not have accessibility violations', async () => {
 ```typescript
 // Test scenarios
 const accessibilityTests = [
-  'Navigate using keyboard only',
-  'Test with screen reader (NVDA, JAWS, VoiceOver)',
-  'Check color contrast',
-  'Verify focus indicators',
-  'Test zoom to 200%',
-  'Validate with WAVE tool',
-  'Test with browser accessibility tools',
+  "Navigate using keyboard only",
+  "Test with screen reader (NVDA, JAWS, VoiceOver)",
+  "Check color contrast",
+  "Verify focus indicators",
+  "Test zoom to 200%",
+  "Validate with WAVE tool",
+  "Test with browser accessibility tools",
 ]
 ```
 
@@ -512,6 +490,7 @@ We conform to WCAG 2.2 Level AA standards.
 ### Contact
 
 If you experience barriers, contact us:
+
 - Email: accessibility@example.com
 - Phone: +1-555-123-4567
 ```

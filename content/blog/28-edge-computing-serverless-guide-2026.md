@@ -66,19 +66,16 @@ User → Edge Node (50ms) → Response
 
 ```typescript
 // app/api/edge/route.ts
-export const runtime = 'edge'
-export const dynamic = 'force-dynamic'
+export const runtime = "edge"
+export const dynamic = "force-dynamic"
 
 export async function GET(request: Request) {
-  const geo = request.headers.get('x-vercel-ip-country')
+  const geo = request.headers.get("x-vercel-ip-country")
 
-  return new Response(
-    JSON.stringify({ geo }),
-    {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' }
-    }
-  )
+  return new Response(JSON.stringify({ geo }), {
+    status: 200,
+    headers: { "Content-Type": "application/json" },
+  })
 }
 ```
 
@@ -101,14 +98,14 @@ export default {
     }
 
     // Generate response
-    response = new Response('Hello from edge!')
+    response = new Response("Hello from edge!")
 
     // Cache for 1 hour
-    response.headers.set('Cache-Control', 'public, max-age=3600')
+    response.headers.set("Cache-Control", "public, max-age=3600")
     await cache.put(request, response.clone())
 
     return response
-  }
+  },
 }
 ```
 
@@ -123,7 +120,7 @@ export const handler = async (event: any) => {
 
   // A/B testing at edge
   const experiment = getExperiment(request.headers)
-  request.headers['x-experiment'] = experiment
+  request.headers["x-experiment"] = experiment
 
   return request
 }
@@ -139,10 +136,10 @@ Deno.serve(async (req: Request) => {
   const url = new URL(req.url)
 
   // Native fetch API
-  const data = await fetch('https://api.example.com/data')
+  const data = await fetch("https://api.example.com/data")
 
   return new Response(JSON.stringify(data), {
-    headers: { 'Content-Type': 'application/json' }
+    headers: { "Content-Type": "application/json" },
   })
 })
 ```
@@ -159,11 +156,11 @@ export async function middleware(request: Request) {
   const { country, city } = getGeoLocation(request)
 
   // Personalize content based on location
-  const response = await fetch('https://api.example.com/content', {
+  const response = await fetch("https://api.example.com/content", {
     headers: {
-      'X-Country': country,
-      'X-City': city,
-    }
+      "X-Country": country,
+      "X-City": city,
+    },
   })
 
   return response
@@ -174,18 +171,16 @@ export async function middleware(request: Request) {
 
 ```typescript
 // Edge A/B testing
-function getExperimentGroup(userId: string): 'A' | 'B' {
+function getExperimentGroup(userId: string): "A" | "B" {
   const hash = hashCode(userId)
-  return hash % 2 === 0 ? 'A' : 'B'
+  return hash % 2 === 0 ? "A" : "B"
 }
 
 export async function handler(request: Request) {
-  const userId = request.headers.get('x-user-id')
+  const userId = request.headers.get("x-user-id")
   const group = getExperimentGroup(userId!)
 
-  const content = group === 'A'
-    ? await getVariantA()
-    : await getVariantB()
+  const content = group === "A" ? await getVariantA() : await getVariantB()
 
   return new Response(content)
 }
@@ -197,9 +192,9 @@ export async function handler(request: Request) {
 // Aggregate multiple APIs at the edge
 export async function handler(request: Request) {
   const [users, products, stats] = await Promise.all([
-    fetch('https://api.users.com/data'),
-    fetch('https://api.products.com/data'),
-    fetch('https://api.stats.com/data'),
+    fetch("https://api.users.com/data"),
+    fetch("https://api.products.com/data"),
+    fetch("https://api.stats.com/data"),
   ])
 
   const aggregated = {
@@ -218,17 +213,17 @@ export async function handler(request: Request) {
 // Edge image optimization
 export async function handler(request: Request) {
   const url = new URL(request.url)
-  const imageUrl = url.searchParams.get('url')
-  const width = url.searchParams.get('w') || '800'
+  const imageUrl = url.searchParams.get("url")
+  const width = url.searchParams.get("w") || "800"
 
   const image = await fetch(imageUrl)
   const optimized = await optimizeImage(image, { width })
 
   return new Response(optimized, {
     headers: {
-      'Content-Type': 'image/webp',
-      'Cache-Control': 'public, max-age=31536000'
-    }
+      "Content-Type": "image/webp",
+      "Cache-Control": "public, max-age=31536000",
+    },
   })
 }
 ```
@@ -242,7 +237,7 @@ export async function handler(request: Request) {
 const CACHE_TTL = 3600 // 1 hour
 
 async function getCachedData(key: string, fetcher: () => Promise<any>) {
-  const cache = await caches.open('edge-cache')
+  const cache = await caches.open("edge-cache")
   const cached = await cache.get(key)
 
   if (cached) {
@@ -260,7 +255,7 @@ async function getCachedData(key: string, fetcher: () => Promise<any>) {
 
 ```typescript
 // Connection pooling at edge
-import { Pool } from 'pg'
+import { Pool } from "pg"
 
 const pool = new Pool({
   max: 10,
@@ -271,7 +266,7 @@ const pool = new Pool({
 export async function handler() {
   const client = await pool.connect()
   try {
-    const result = await client.query('SELECT * FROM users')
+    const result = await client.query("SELECT * FROM users")
     return result.rows
   } finally {
     client.release()
@@ -284,7 +279,7 @@ export async function handler() {
 ```typescript
 // Keep functions warm
 setInterval(async () => {
-  await fetch('https://your-app.com/api/warm-up')
+  await fetch("https://your-app.com/api/warm-up")
 }, 240000) // Every 4 minutes
 
 // Use provisioned concurrency
@@ -300,12 +295,12 @@ setInterval(async () => {
 // nuxt.config.ts
 export default defineNuxtConfig({
   nitro: {
-    preset: 'cloudflare',
+    preset: "cloudflare",
     experimental: {
       wasm: true,
     },
     routeRules: {
-      '/api/**': {
+      "/api/**": {
         cors: true,
         cache: {
           maxAge: 3600,
@@ -347,18 +342,18 @@ functions:
 ### 1. Distributed Tracing
 
 ```typescript
-import { trace } from '@opentelemetry/api'
+import { trace } from "@opentelemetry/api"
 
-const tracer = trace.getTracer('edge-app')
+const tracer = trace.getTracer("edge-app")
 
 export async function handler(request: Request) {
-  return tracer.startActiveSpan('request', async (span) => {
+  return tracer.startActiveSpan("request", async (span) => {
     try {
       const result = await processRequest(request)
-      span.setAttribute('status', 'success')
+      span.setAttribute("status", "success")
       return result
     } catch (error) {
-      span.setAttribute('status', 'error')
+      span.setAttribute("status", "error")
       span.recordException(error)
       throw error
     } finally {
@@ -382,12 +377,12 @@ async function handler() {
   const result = await processRequest()
 
   // Send metrics
-  await fetch('/api/metrics', {
-    method: 'POST',
+  await fetch("/api/metrics", {
+    method: "POST",
     body: JSON.stringify({
       ...metrics,
       duration: Date.now() - metrics.startTime,
-    })
+    }),
   })
 
   return result
@@ -427,20 +422,20 @@ function batchedRequest(key: string, request: () => Promise<any>) {
 ### 1. Authentication at Edge
 
 ```typescript
-import { verify } from 'jsonwebtoken'
+import { verify } from "jsonwebtoken"
 
 export async function middleware(request: Request) {
-  const token = request.headers.get('Authorization')?.split(' ')[1]
+  const token = request.headers.get("Authorization")?.split(" ")[1]
 
   if (!token) {
-    return new Response('Unauthorized', { status: 401 })
+    return new Response("Unauthorized", { status: 401 })
   }
 
   try {
     const decoded = verify(token, process.env.JWT_SECRET!)
-    request.headers.set('X-User-ID', decoded.userId)
+    request.headers.set("X-User-ID", decoded.userId)
   } catch {
-    return new Response('Unauthorized', { status: 401 })
+    return new Response("Unauthorized", { status: 401 })
   }
 }
 ```
@@ -448,19 +443,19 @@ export async function middleware(request: Request) {
 ### 2. Rate Limiting
 
 ```typescript
-import { Ratelimit } from '@upstash/ratelimit'
+import { Ratelimit } from "@upstash/ratelimit"
 
 const ratelimit = new Ratelimit({
   redis: redisClient,
-  limiter: Ratelimit.slidingWindow(10, '10 s'),
+  limiter: Ratelimit.slidingWindow(10, "10 s"),
 })
 
 export async function handler(request: Request) {
-  const ip = request.headers.get('x-forwarded-for')
+  const ip = request.headers.get("x-forwarded-for")
   const { success } = await ratelimit.limit(ip!)
 
   if (!success) {
-    return new Response('Too Many Requests', { status: 429 })
+    return new Response("Too Many Requests", { status: 429 })
   }
 
   return processRequest(request)

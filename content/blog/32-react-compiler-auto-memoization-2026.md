@@ -369,12 +369,12 @@ function Component({ data }) {
 
 ## Performance Comparison
 
-| Metric | Manual Memoization | React Compiler |
-|--------|-------------------|----------------|
-| Bundle Size | Larger | Smaller |
-| Dev Time | More | Less |
-| Runtime Perf | Good | Better |
-| Code Quality | Variable | Consistent |
+| Metric       | Manual Memoization | React Compiler |
+| ------------ | ------------------ | -------------- |
+| Bundle Size  | Larger             | Smaller        |
+| Dev Time     | More               | Less           |
+| Runtime Perf | Good               | Better         |
+| Code Quality | Variable           | Consistent     |
 
 ## Future of React Optimization
 

@@ -65,12 +65,12 @@ Infrastructure:
 ```typescript
 // Essential concepts
 const fundamentals = [
-  'Closures and scope',
-  'Async/await and Promises',
-  'Event loop',
-  'ES6+ features',
-  'TypeScript types',
-  'Generics',
+  "Closures and scope",
+  "Async/await and Promises",
+  "Event loop",
+  "ES6+ features",
+  "TypeScript types",
+  "Generics",
 ]
 ```
 
@@ -113,11 +113,7 @@ const emit = defineEmits<{
   <div>
     <h2>{{ title }}</h2>
     <ul>
-      <li
-        v-for="item in items"
-        :key="item.id"
-        @click="emit('select', item.id)"
-      >
+      <li v-for="item in items" :key="item.id" @click="emit('select', item.id)">
         {{ item.name }}
       </li>
     </ul>
@@ -129,7 +125,7 @@ const emit = defineEmits<{
 
 ```typescript
 // Zustand example
-import { create } from 'zustand'
+import { create } from "zustand"
 
 interface Store {
   items: Item[]
@@ -139,12 +135,14 @@ interface Store {
 
 export const useStore = create<Store>((set) => ({
   items: [],
-  addItem: (item) => set((state) => ({
-    items: [...state.items, item]
-  })),
-  removeItem: (id) => set((state) => ({
-    items: state.items.filter(i => i.id !== id)
-  })),
+  addItem: (item) =>
+    set((state) => ({
+      items: [...state.items, item],
+    })),
+  removeItem: (id) =>
+    set((state) => ({
+      items: state.items.filter((i) => i.id !== id),
+    })),
 }))
 ```
 
@@ -154,8 +152,8 @@ export const useStore = create<Store>((set) => ({
 
 ```typescript
 // Hono API example
-import { Hono } from 'hono'
-import { z } from 'zod'
+import { Hono } from "hono"
+import { z } from "zod"
 
 const app = new Hono()
 
@@ -164,12 +162,12 @@ const userSchema = z.object({
   email: z.string().email(),
 })
 
-app.get('/api/users', async (c) => {
+app.get("/api/users", async (c) => {
   const users = await db.user.findMany()
   return c.json({ data: users })
 })
 
-app.post('/api/users', async (c) => {
+app.post("/api/users", async (c) => {
   const body = await c.req.json()
   const data = userSchema.parse(body)
   const user = await db.user.create({ data })
@@ -230,7 +228,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install dependencies
         run: npm ci
@@ -283,19 +281,19 @@ app.get('/api/data', async (c) => {
 
 ```typescript
 // Authentication
-import { sign, verify } from 'jsonwebtoken'
+import { sign, verify } from "jsonwebtoken"
 
 const createToken = (userId: string) => {
   return sign({ userId }, process.env.JWT_SECRET!, {
-    expiresIn: '7d',
+    expiresIn: "7d",
   })
 }
 
 // Rate limiting
-import { Ratelimit } from '@upstash/ratelimit'
+import { Ratelimit } from "@upstash/ratelimit"
 
 const ratelimit = new Ratelimit({
-  limiter: Ratelimit.slidingWindow(10, '10 s'),
+  limiter: Ratelimit.slidingWindow(10, "10 s"),
   redis: redisClient,
 })
 
@@ -310,28 +308,28 @@ const schema = z.object({
 
 ```typescript
 // Unit tests
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect } from "vitest"
 
-describe('UserService', () => {
-  it('creates user', async () => {
+describe("UserService", () => {
+  it("creates user", async () => {
     const user = await createUser({
-      email: 'test@example.com',
-      name: 'Test'
+      email: "test@example.com",
+      name: "Test",
     })
 
-    expect(user.email).toBe('test@example.com')
+    expect(user.email).toBe("test@example.com")
   })
 })
 
 // E2E tests
-import { test, expect } from '@playwright/test'
+import { test, expect } from "@playwright/test"
 
-test('user can login', async ({ page }) => {
-  await page.goto('/login')
-  await page.fill('[name=email]', 'test@example.com')
-  await page.fill('[name=password]', 'password')
-  await page.click('button[type=submit]')
-  await expect(page).toHaveURL('/dashboard')
+test("user can login", async ({ page }) => {
+  await page.goto("/login")
+  await page.fill("[name=email]", "test@example.com")
+  await page.fill("[name=password]", "password")
+  await page.click("button[type=submit]")
+  await expect(page).toHaveURL("/dashboard")
 })
 ```
 
@@ -403,11 +401,11 @@ npm install -g @anthropic/ai # AI assistance
 ```typescript
 // Portfolio projects
 const projects = [
-  'Full-stack e-commerce site',
-  'Real-time chat application',
-  'Data visualization dashboard',
-  'Mobile-first PWA',
-  'Open-source contribution'
+  "Full-stack e-commerce site",
+  "Real-time chat application",
+  "Data visualization dashboard",
+  "Mobile-first PWA",
+  "Open-source contribution",
 ]
 ```
 
@@ -431,12 +429,12 @@ const projects = [
 
 ## Salary Expectations (2026)
 
-| Level | Experience | Salary Range (US) |
-|-------|-----------|------------------|
-| Junior | 0-2 years | $70k - $95k |
-| Mid | 2-5 years | $95k - $140k |
-| Senior | 5-8 years | $140k - $180k |
-| Staff | 8+ years | $180k - $250k+ |
+| Level  | Experience | Salary Range (US) |
+| ------ | ---------- | ----------------- |
+| Junior | 0-2 years  | $70k - $95k       |
+| Mid    | 2-5 years  | $95k - $140k      |
+| Senior | 5-8 years  | $140k - $180k     |
+| Staff  | 8+ years   | $180k - $250k+    |
 
 ## Common Mistakes to Avoid
 
@@ -467,10 +465,10 @@ const learningPath = {
 ```typescript
 // Generalist → Specialist path
 const careerPath = [
-  'Learn basics (6 months)',
-  'Build projects (6 months)',
-  'Choose specialization (3 months)',
-  'Deep dive specialization (ongoing)'
+  "Learn basics (6 months)",
+  "Build projects (6 months)",
+  "Choose specialization (3 months)",
+  "Deep dive specialization (ongoing)",
 ]
 ```
 

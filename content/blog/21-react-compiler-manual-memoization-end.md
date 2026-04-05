@@ -107,10 +107,13 @@ The React Compiler is designed for incremental adoption. You can enable it for y
 // babel.config.js
 module.exports = {
   plugins: [
-    ['babel-plugin-react-compiler', {
-      runtimeModule: 'react-compiler-runtime'
-    }]
-  ]
+    [
+      "babel-plugin-react-compiler",
+      {
+        runtimeModule: "react-compiler-runtime",
+      },
+    ],
+  ],
 }
 ```
 
@@ -121,13 +124,13 @@ For cases where you need fine-grained control, the compiler supports directives:
 ```typescript
 // Opt-out specific component
 function LegacyComponent(props) {
-  'use no memo'
+  "use no memo"
   // Component code
 }
 
 // Force memoization
 function CriticalComponent(props) {
-  'use memo'
+  "use memo"
   // Component code
 }
 ```

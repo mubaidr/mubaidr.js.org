@@ -47,12 +47,10 @@ The JavaScript-WebAssembly interface has become significantly smoother:
 
 ```typescript
 // Seamless integration with modern JavaScript
-const wasmModule = await WebAssembly.instantiateStreaming(
-  fetch('/module.wasm')
-);
+const wasmModule = await WebAssembly.instantiateStreaming(fetch("/module.wasm"))
 
 // Direct function calls with automatic type conversion
-const result = wasmModule.exports.processData(dataArray);
+const result = wasmModule.exports.processData(dataArray)
 ```
 
 ### 2. Multi-Threading Support
@@ -110,12 +108,12 @@ Game developers are leveraging WebAssembly for:
 
 Recent benchmarks show impressive results:
 
-| Task | JavaScript | WebAssembly | Speedup |
-|------|-----------|-------------|---------|
-| Image Filter | 150ms | 15ms | 10x |
-| Data Sorting (1M items) | 800ms | 120ms | 6.7x |
-| Encryption | 200ms | 25ms | 8x |
-| Video Encoding | 2000ms | 250ms | 8x |
+| Task                    | JavaScript | WebAssembly | Speedup |
+| ----------------------- | ---------- | ----------- | ------- |
+| Image Filter            | 150ms      | 15ms        | 10x     |
+| Data Sorting (1M items) | 800ms      | 120ms       | 6.7x    |
+| Encryption              | 200ms      | 25ms        | 8x      |
+| Video Encoding          | 2000ms     | 250ms       | 8x      |
 
 ## Getting Started with WebAssembly
 
@@ -143,12 +141,12 @@ wasm-pack new my-wasm-module
 
 ```typescript
 // Import and use in your JavaScript/TypeScript code
-import init, { process_data } from './pkg/my_wasm_module.js';
+import init, { process_data } from "./pkg/my_wasm_module.js"
 
 async function run() {
-  await init();
-  const result = process_data(inputData);
-  console.log(result);
+  await init()
+  const result = process_data(inputData)
+  console.log(result)
 }
 ```
 
@@ -170,10 +168,10 @@ async function run() {
 
 ```typescript
 try {
-  const result = wasmModule.exports.riskyOperation();
+  const result = wasmModule.exports.riskyOperation()
 } catch (error) {
   // Handle Wasm errors appropriately
-  console.error('Wasm operation failed:', error);
+  console.error("Wasm operation failed:", error)
 }
 ```
 

@@ -23,12 +23,20 @@ const { data: servicesData, pending: isLoading } = await useServicesPreview(3)
 
       <!-- Service Categories -->
       <div v-else class="grid gap-8 lg:grid-cols-3">
-        <UCard v-for="service in servicesData" :key="service.title" class="text-center h-full">
+        <UCard
+          v-for="service in servicesData"
+          :key="service.title"
+          class="text-center h-full"
+        >
           <div class="space-y-6">
             <!-- Icon & Title -->
             <div class="space-y-4">
               <div class="w-16 h-16 flex items-center justify-center mx-auto">
-                <UIcon :name="service.icon" size="3em" class="text-primary-500" />
+                <UIcon
+                  :name="service.icon"
+                  size="3em"
+                  class="text-primary-500"
+                />
               </div>
 
               <div class="space-y-3">

@@ -53,7 +53,7 @@ Modern search uses AI to understand intent:
 // Nuxt 4 - Automatic SSR
 export default defineNuxtComponent({
   async setup() {
-    const { data: post } = await useFetch('/api/blog/post')
+    const { data: post } = await useFetch("/api/blog/post")
 
     // SEO metadata
     useSeoMeta({
@@ -61,11 +61,11 @@ export default defineNuxtComponent({
       description: post.value.excerpt,
       ogTitle: post.value.title,
       ogDescription: post.value.excerpt,
-      twitterCard: 'summary_large_image',
+      twitterCard: "summary_large_image",
     })
 
     return { post }
-  }
+  },
 })
 ```
 
@@ -100,17 +100,21 @@ useSchemaOrg([
 ```typescript
 // app/pages/sitemap.xml.ts
 export default defineEventHandler(async () => {
-  const posts = await queryCollection('blog').all()
+  const posts = await queryCollection("blog").all()
 
   const sitemap = `
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      ${posts.map(post => `
+      ${posts
+        .map(
+          (post) => `
         <url>
           <loc>https://example.com/blog/${post.slug}</loc>
           <lastmod>${post.updatedAt}</lastmod>
           <changefreq>monthly</changefreq>
         </url>
-      `).join('')}
+      `,
+        )
+        .join("")}
     </urlset>
   `
 
@@ -170,9 +174,9 @@ export default defineEventHandler(async () => {
 ```typescript
 // Use AI for keyword clustering
 const keywords = await aiClusterKeywords([
-  'web development',
-  'frontend frameworks',
-  'JavaScript tutorials'
+  "web development",
+  "frontend frameworks",
+  "JavaScript tutorials",
 ])
 
 // Returns related terms and search intent
@@ -184,11 +188,13 @@ const keywords = await aiClusterKeywords([
 # H1: Main Topic (include primary keyword)
 
 ## H2: Key Subtopics
+
 - Cover related concepts
 - Answer common questions
 - Include semantic keywords
 
 ### H3: Detailed Points
+
 - Provide examples
 - Add code snippets
 - Include data and statistics
@@ -197,13 +203,13 @@ const keywords = await aiClusterKeywords([
 ### 3. AI-Generated Meta Descriptions
 
 ```typescript
-import { generateMetaDescription } from '@/lib/ai-seo'
+import { generateMetaDescription } from "@/lib/ai-seo"
 
 const metaDescription = await generateMetaDescription({
-  title: 'Complete Guide to Web Development',
+  title: "Complete Guide to Web Development",
   content: articleContent,
-  keywords: ['web development', 'frontend', 'backend'],
-  maxLength: 160
+  keywords: ["web development", "frontend", "backend"],
+  maxLength: 160,
 })
 ```
 
@@ -215,7 +221,7 @@ const metaDescription = await generateMetaDescription({
 // nuxt.config.ts
 export default defineNuxtConfig({
   routeRules: {
-    '/blog/**': {
+    "/blog/**": {
       isr: 3600, // Revalidate every hour
       cache: {
         maxAge: 3600,
@@ -232,14 +238,14 @@ export default defineNuxtConfig({
 <!-- Multi-language SEO -->
 <script setup>
 useSeoMeta({
-  title: 'My Blog',
+  title: "My Blog",
   htmlAttrs: {
-    lang: 'en'
+    lang: "en",
   },
   link: [
-    { rel: 'alternate', hreflang: 'es', href: '/es/blog' },
-    { rel: 'alternate', hreflang: 'fr', href: '/fr/blog' },
-  ]
+    { rel: "alternate", hreflang: "es", href: "/es/blog" },
+    { rel: "alternate", hreflang: "fr", href: "/fr/blog" },
+  ],
 })
 </script>
 ```
@@ -250,19 +256,19 @@ useSeoMeta({
 <script setup>
 useSchemaOrg([
   {
-    '@type': 'BreadcrumbList',
+    "@type": "BreadcrumbList",
     itemListElement: [
       {
-        '@type': 'ListItem',
+        "@type": "ListItem",
         position: 1,
-        name: 'Home',
-        item: 'https://example.com/',
+        name: "Home",
+        item: "https://example.com/",
       },
       {
-        '@type': 'ListItem',
+        "@type": "ListItem",
         position: 2,
-        name: 'Blog',
-        item: 'https://example.com/blog',
+        name: "Blog",
+        item: "https://example.com/blog",
       },
     ],
   },
@@ -290,9 +296,7 @@ useSchemaOrg([
 ```vue
 <template>
   <!-- Minimum 44x44px touch targets -->
-  <button class="min-h-[44px] min-w-[44px] p-4">
-    Click Me
-  </button>
+  <button class="min-h-[44px] min-w-[44px] p-4">Click Me</button>
 </template>
 ```
 
@@ -301,7 +305,7 @@ useSchemaOrg([
 ```typescript
 // Lazy load non-critical resources
 const loadOnInteraction = () => {
-  return import('./heavy-component.vue')
+  return import("./heavy-component.vue")
 }
 ```
 
@@ -313,8 +317,8 @@ const loadOnInteraction = () => {
 // Verify site ownership
 useHead({
   meta: [
-    { name: 'google-site-verification', content: 'your-verification-code' }
-  ]
+    { name: "google-site-verification", content: "your-verification-code" },
+  ],
 })
 ```
 
@@ -322,7 +326,7 @@ useHead({
 
 ```typescript
 // app/plugins/web-vitals.ts
-import { onCLS, onFID, onLCP } from 'web-vitals'
+import { onCLS, onFID, onLCP } from "web-vitals"
 
 export default defineNuxtPlugin(() => {
   onCLS(console.log)
@@ -351,11 +355,7 @@ npx lighthouse https://example.com --view
 <img src="huge-image.jpg" />
 
 <!-- ✅ Good: Optimized and responsive -->
-<NuxtImg
-  src="image.jpg"
-  sizes="xs:100vw sm:800px"
-  format="webp"
-/>
+<NuxtImg src="image.jpg" sizes="xs:100vw sm:800px" format="webp" />
 ```
 
 ### 2. Missing Structured Data
@@ -368,10 +368,12 @@ npx lighthouse https://example.com --view
 
 <!-- ✅ Good: With schema markup -->
 <script setup>
-useSchemaOrg([{
-  '@type': 'BlogPosting',
-  headline: 'Blog Post Title'
-}])
+useSchemaOrg([
+  {
+    "@type": "BlogPosting",
+    headline: "Blog Post Title",
+  },
+])
 </script>
 ```
 
@@ -379,10 +381,10 @@ useSchemaOrg([{
 
 ```typescript
 // ❌ Bad: Unclear URLs
-'/p?id=123&cat=blog'
+"/p?id=123&cat=blog"
 
 // ✅ Good: Descriptive URLs
-'/blog/seo-guide-2026'
+"/blog/seo-guide-2026"
 ```
 
 ## AI SEO Tools for 2026

@@ -55,13 +55,14 @@ LCP measures loading performance by tracking when the largest content element be
 useHead({
   link: [
     {
-      rel: 'preload',
-      as: 'image',
-      href: '/img/hero-banner.avif',
-      imagesrcset: '/img/hero-banner-480.avif 480w, /img/hero-banner-768.avif 768w',
-      imagesizes: '100vw'
-    }
-  ]
+      rel: "preload",
+      as: "image",
+      href: "/img/hero-banner.avif",
+      imagesrcset:
+        "/img/hero-banner-480.avif 480w, /img/hero-banner-768.avif 768w",
+      imagesizes: "100vw",
+    },
+  ],
 })
 ```
 
@@ -86,8 +87,8 @@ INP replaced First Input Delay (FID) in 2024 and has become the primary responsi
 ```typescript
 // Optimize event handlers with passive listeners
 onMounted(() => {
-  const element = document.querySelector('.scroll-container')
-  element?.addEventListener('scroll', handleScroll, { passive: true })
+  const element = document.querySelector(".scroll-container")
+  element?.addEventListener("scroll", handleScroll, { passive: true })
 })
 ```
 
@@ -118,8 +119,8 @@ CLS measures visual stability by tracking unexpected layout shifts. The target r
 
 /* Optimize font loading */
 @font-face {
-  font-family: 'Inter';
-  src: url('/fonts/inter.woff2') format('woff2');
+  font-family: "Inter";
+  src: url("/fonts/inter.woff2") format("woff2");
   font-display: swap;
 }
 ```
@@ -135,18 +136,18 @@ Chrome's Speculation Rules API allows you to prefetch or prerender pages based o
 useHead({
   script: [
     {
-      type: 'speculationrules',
+      type: "speculationrules",
       textContent: JSON.stringify({
         prefetch: [
           {
-            source: 'document',
-            where: { href_matches: '/blog/*' },
-            eagerness: 'moderate'
-          }
-        ]
-      })
-    }
-  ]
+            source: "document",
+            where: { href_matches: "/blog/*" },
+            eagerness: "moderate",
+          },
+        ],
+      }),
+    },
+  ],
 })
 ```
 
@@ -168,12 +169,12 @@ function loadAnalytics() {
   analyticsLoaded = true
 
   // Dynamically import analytics
-  import('./analytics').then(({ init }) => init())
+  import("./analytics").then(({ init }) => init())
 }
 
 // Load on first user interaction
-document.addEventListener('click', loadAnalytics, { once: true })
-document.addEventListener('scroll', loadAnalytics, { once: true })
+document.addEventListener("click", loadAnalytics, { once: true })
+document.addEventListener("scroll", loadAnalytics, { once: true })
 ```
 
 ### Implementing Progressive Hydration
@@ -204,19 +205,19 @@ Lab data from Lighthouse is valuable, but real user monitoring provides insights
 
 ```typescript
 // Track Core Web Vitals with web-vitals library
-import { onLCP, onINP, onCLS } from 'web-vitals'
+import { onLCP, onINP, onCLS } from "web-vitals"
 
 onLCP((metric) => {
   // Send to analytics endpoint
-  sendToAnalytics('LCP', metric)
+  sendToAnalytics("LCP", metric)
 })
 
 onINP((metric) => {
-  sendToAnalytics('INP', metric)
+  sendToAnalytics("INP", metric)
 })
 
 onCLS((metric) => {
-  sendToAnalytics('CLS', metric)
+  sendToAnalytics("CLS", metric)
 })
 ```
 
@@ -235,9 +236,7 @@ Set performance budgets in your CI/CD pipeline to catch regressions before they 
           { "resourceType": "image", "budget": 200 },
           { "resourceType": "total", "budget": 500 }
         ],
-        "resourceCounts": [
-          { "resourceType": "third-party", "budget": 5 }
-        ]
+        "resourceCounts": [{ "resourceType": "third-party", "budget": 5 }]
       }
     ]
   }

@@ -151,20 +151,14 @@ const lastUpdated = ref("December 1, 2024")
             </h3>
             <ul class="space-y-2">
               <li class="flex items-start gap-2">
-                <UIcon
-                  name="i-ph-arrow-right"
-                  class="w-4 h-4 mt-1 shrink-0"
-                />
+                <UIcon name="i-ph-arrow-right" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Written Agreements:</strong> All projects require a
                   signed written agreement before work begins</span
                 >
               </li>
               <li class="flex items-start gap-2">
-                <UIcon
-                  name="i-ph-arrow-right"
-                  class="w-4 h-4 mt-1 shrink-0"
-                />
+                <UIcon name="i-ph-arrow-right" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Scope Definition:</strong> Project scope,
                   deliverables, and timelines must be clearly defined in
@@ -172,20 +166,14 @@ const lastUpdated = ref("December 1, 2024")
                 >
               </li>
               <li class="flex items-start gap-2">
-                <UIcon
-                  name="i-ph-arrow-right"
-                  class="w-4 h-4 mt-1 shrink-0"
-                />
+                <UIcon name="i-ph-arrow-right" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Change Requests:</strong> Any scope changes require
                   written approval and may affect timeline and cost</span
                 >
               </li>
               <li class="flex items-start gap-2">
-                <UIcon
-                  name="i-ph-arrow-right"
-                  class="w-4 h-4 mt-1 shrink-0"
-                />
+                <UIcon name="i-ph-arrow-right" class="w-4 h-4 mt-1 shrink-0" />
                 <span class="text-neutral-600 dark:text-neutral-300"
                   ><strong>Communication:</strong> Primary communication will be
                   conducted via email and scheduled meetings</span
@@ -405,40 +393,28 @@ const lastUpdated = ref("December 1, 2024")
               <h3><strong class="text-base">Support & Maintenance</strong></h3>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
-                  <UIcon
-                    name="i-ph-wrench"
-                    class="w-4 h-4 mt-1 shrink-0"
-                  />
+                  <UIcon name="i-ph-wrench" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-neutral-600 dark:text-neutral-300"
                     ><strong>Bug Fixes:</strong> 30-day warranty for
                     functionality issues</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon
-                    name="i-ph-wrench"
-                    class="w-4 h-4 mt-1 shrink-0"
-                  />
+                  <UIcon name="i-ph-wrench" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-neutral-600 dark:text-neutral-300"
                     ><strong>Documentation:</strong> Basic usage documentation
                     provided</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon
-                    name="i-ph-wrench"
-                    class="w-4 h-4 mt-1 shrink-0"
-                  />
+                  <UIcon name="i-ph-wrench" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-gray-600 dark:text-gray-300"
                     ><strong>Training:</strong> Basic handover session
                     included</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon
-                    name="i-ph-wrench"
-                    class="w-4 h-4 mt-1 shrink-0"
-                  />
+                  <UIcon name="i-ph-wrench" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-gray-600 dark:text-gray-300"
                     ><strong>Extended Support:</strong> Available via separate
                     agreement</span
@@ -547,28 +523,19 @@ const lastUpdated = ref("December 1, 2024")
               <h3><strong class="text-base">my Termination Rights</strong></h3>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
-                  <UIcon
-                    name="i-ph-warning"
-                    class="w-4 h-4 mt-1 shrink-0"
-                  />
+                  <UIcon name="i-ph-warning" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-gray-600 dark:text-gray-300"
                     >Non-payment beyond agreed terms</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon
-                    name="i-ph-warning"
-                    class="w-4 h-4 mt-1 shrink-0"
-                  />
+                  <UIcon name="i-ph-warning" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-gray-600 dark:text-gray-300"
                     >Lack of client communication or cooperation</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon
-                    name="i-ph-warning"
-                    class="w-4 h-4 mt-1 shrink-0"
-                  />
+                  <UIcon name="i-ph-warning" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-gray-600 dark:text-gray-300"
                     >Scope changes that fundamentally alter the project</span
                   >
@@ -600,30 +567,21 @@ const lastUpdated = ref("December 1, 2024")
               <h3><strong class="text-base">Legal Framework</strong></h3>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
-                  <UIcon
-                    name="i-ph-scales"
-                    class="w-4 h-4 mt-1 shrink-0"
-                  />
+                  <UIcon name="i-ph-scales" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-gray-600 dark:text-gray-300"
                     ><strong>Governing Law:</strong> These terms are governed by
                     applicable local laws</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon
-                    name="i-ph-scales"
-                    class="w-4 h-4 mt-1 shrink-0"
-                  />
+                  <UIcon name="i-ph-scales" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-gray-600 dark:text-gray-300"
                     ><strong>Dispute Resolution:</strong> Good faith negotiation
                     preferred, mediation if needed</span
                   >
                 </li>
                 <li class="flex items-start gap-2">
-                  <UIcon
-                    name="i-ph-scales"
-                    class="w-4 h-4 mt-1 shrink-0"
-                  />
+                  <UIcon name="i-ph-scales" class="w-4 h-4 mt-1 shrink-0" />
                   <span class="text-gray-600 dark:text-gray-300"
                     ><strong>Severability:</strong> Invalid provisions don't
                     affect remaining terms</span

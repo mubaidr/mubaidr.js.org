@@ -67,7 +67,11 @@ export default defineNuxtConfig({
 
   fonts: {
     families: [
-      { name: "Public Sans", provider: "google", weights: [400, 500, 600, 700] },
+      {
+        name: "Public Sans",
+        provider: "google",
+        weights: [400, 500, 600, 700],
+      },
       { name: "Syne", provider: "google", weights: [400, 500, 600, 700, 800] },
     ],
   },
@@ -97,7 +101,7 @@ export default defineNuxtConfig({
   ],
 
   nitro: {
-    preset: "github-pages",
+    preset: "github_pages",
     prerender: {
       crawlLinks: true,
       failOnError: false,
@@ -137,7 +141,6 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    // @ts-expect-error - Tailwind CSS Vite plugin type compatibility
     plugins: [tailwindcss()],
   },
 

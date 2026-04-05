@@ -216,12 +216,12 @@ npm install
 
 ```typescript
 export default defineNuxtConfig({
-  modules: ['@nuxt/content'],
+  modules: ["@nuxt/content"],
   app: {
     head: {
-      title: 'My App'
-    }
-  }
+      title: "My App",
+    },
+  },
 })
 ```
 
@@ -229,17 +229,17 @@ export default defineNuxtConfig({
 
 ```typescript
 export default defineNuxtConfig({
-  modules: ['@nuxt/content'],
+  modules: ["@nuxt/content"],
   app: {
     head: {
-      title: 'My App'
-    }
+      title: "My App",
+    },
   },
   // New in Nuxt 4: Better TypeScript defaults
   typescript: {
     strict: true,
-    typeCheck: true
-  }
+    typeCheck: true,
+  },
 })
 ```
 
@@ -290,18 +290,18 @@ Nuxt 4 improves `useAsyncData` and `useFetch`:
 **Nuxt 3:**
 
 ```typescript
-const { data } = await useFetch('/api/posts', {
-  key: 'posts',
-  lazy: true
+const { data } = await useFetch("/api/posts", {
+  key: "posts",
+  lazy: true,
 })
 ```
 
 **Nuxt 4:** (same API, better behavior)
 
 ```typescript
-const { data } = await useFetch('/api/posts', {
-  key: 'posts',
-  lazy: true
+const { data } = await useFetch("/api/posts", {
+  key: "posts",
+  lazy: true,
   // Now automatically shares data across components with same key
   // Automatic cleanup on unmount
 })
@@ -315,10 +315,10 @@ const { data } = await useFetch(`/api/posts/${postId}`)
 
 // Multiple components with same key share data
 // Component A
-const { data: posts } = await useFetch('/api/posts', { key: 'posts' })
+const { data: posts } = await useFetch("/api/posts", { key: "posts" })
 
 // Component B (gets same data, no duplicate request)
-const { data: posts } = await useFetch('/api/posts', { key: 'posts' })
+const { data: posts } = await useFetch("/api/posts", { key: "posts" })
 ```
 
 ### Step 6: Update Plugins
@@ -330,7 +330,7 @@ Nuxt 4 uses auto-imports for plugins by default:
 ```typescript
 // plugins/my-plugin.ts
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.provide('myPlugin', myPlugin)
+  nuxtApp.provide("myPlugin", myPlugin)
 })
 ```
 
@@ -339,7 +339,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 ```typescript
 // plugins/my-plugin.ts
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.provide('myPlugin', myPlugin)
+  nuxtApp.provide("myPlugin", myPlugin)
 })
 
 // Usage in components (auto-typed)
@@ -383,7 +383,7 @@ npm install pinia @pinia/nuxt
 
 ```typescript
 export default defineNuxtConfig({
-  modules: ['@pinia/nuxt']
+  modules: ["@pinia/nuxt"],
 })
 ```
 
@@ -391,15 +391,15 @@ export default defineNuxtConfig({
 
 ```typescript
 // stores/counter.ts
-export const useCounterStore = defineStore('counter', {
+export const useCounterStore = defineStore("counter", {
   state: () => ({
-    count: 0
+    count: 0,
   }),
   actions: {
     increment() {
       this.count++
-    }
-  }
+    },
+  },
 })
 ```
 
@@ -448,10 +448,10 @@ Some modules changed their APIs.
 
 ```typescript
 // Old
-const articles = await queryContent('articles').find()
+const articles = await queryContent("articles").find()
 
 // New (same API, better types)
-const articles = await queryCollection('articles').find()
+const articles = await queryCollection("articles").find()
 ```
 
 ### 4. Deprecated APIs
@@ -523,10 +523,10 @@ export default defineNuxtConfig({
   vite: {
     server: {
       watch: {
-        usePolling: true
-      }
-    }
-  }
+        usePolling: true,
+      },
+    },
+  },
 })
 ```
 
@@ -595,13 +595,13 @@ npx lighthouse http://localhost:3000
 
 Real-world results from migrating to Nuxt 4:
 
-| Metric | Nuxt 3 | Nuxt 4 | Improvement |
-|--------|--------|--------|-------------|
-| Build Time | 45s | 32s | **29% faster** |
-| HMR Update | 800ms | 350ms | **56% faster** |
-| LCP | 2.1s | 1.6s | **24% faster** |
-| Bundle Size | 185KB | 162KB | **12% smaller** |
-| TTI | 3.2s | 2.4s | **25% faster** |
+| Metric      | Nuxt 3 | Nuxt 4 | Improvement     |
+| ----------- | ------ | ------ | --------------- |
+| Build Time  | 45s    | 32s    | **29% faster**  |
+| HMR Update  | 800ms  | 350ms  | **56% faster**  |
+| LCP         | 2.1s   | 1.6s   | **24% faster**  |
+| Bundle Size | 185KB  | 162KB  | **12% smaller** |
+| TTI         | 3.2s   | 2.4s   | **25% faster**  |
 
 ---
 

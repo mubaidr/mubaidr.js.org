@@ -89,13 +89,13 @@ Understanding how AI systems discover and use content is the first step to optim
 
 ### Key Differences from Traditional SEO
 
-| Traditional SEO | AI Search (AISEO) |
-|----------------|-------------------|
-| Keyword matching | Semantic understanding |
-| Backlinks matter | Entity authority matters |
-| Meta descriptions | Direct, citable answers |
-| Page-level ranking | Chunk-level retrieval |
-| Click-through rate | Citation frequency |
+| Traditional SEO    | AI Search (AISEO)        |
+| ------------------ | ------------------------ |
+| Keyword matching   | Semantic understanding   |
+| Backlinks matter   | Entity authority matters |
+| Meta descriptions  | Direct, citable answers  |
+| Page-level ranking | Chunk-level retrieval    |
+| Click-through rate | Citation frequency       |
 
 ---
 
@@ -205,8 +205,11 @@ Structure your H2/H3 headings as questions developers actually ask:
 
 ```markdown
 ## How do I migrate from Nuxt 3 to Nuxt 4?
+
 ## What are the breaking changes in Nuxt 4?
+
 ## When is Nuxt 3 end of life?
+
 ## Why should I use TypeScript with Nuxt?
 ```
 
@@ -214,8 +217,11 @@ Structure your H2/H3 headings as questions developers actually ask:
 
 ```markdown
 ## Migration Process
+
 ## Breaking Changes Overview
+
 ## End of Life Timeline
+
 ## TypeScript Benefits
 ```
 
@@ -363,6 +369,7 @@ AI systems show a **26% recency bias**, preferring content that's regularly upda
 **Last updated:** February 2026
 
 **What changed in this update:**
+
 - Added migration timeline reminder (Nuxt 3 EOL: January 31, 2026)
 - Updated codemod tool instructions
 - Added new module compatibility matrix
@@ -374,7 +381,7 @@ AI systems show a **26% recency bias**, preferring content that's regularly upda
 ```yaml
 ---
 date: 2026-01-15
-dateUpdated: 2026-02-25  # Critical for AI
+dateUpdated: 2026-02-25 # Critical for AI
 ---
 ```
 
@@ -446,9 +453,11 @@ Link cluster posts to pillar and to each other:
 
 ```markdown
 <!-- In migration guide -->
+
 For performance tips, see our [Nuxt 4 Performance Guide](/blog/nuxt-4-performance).
 
 <!-- In performance guide -->
+
 Before optimizing, ensure you've [migrated to Nuxt 4](/blog/nuxt-4-migration).
 ```
 
@@ -479,12 +488,12 @@ Regularly test your content in AI platforms:
 
 ### Metrics to Track
 
-| Metric | Tool | Target |
-|--------|------|--------|
-| Citation frequency | Manual testing | Increasing |
-| AI referral traffic | Analytics | 5-10% of total |
-| Bounce rate (AI traffic) | Analytics | <40% |
-| Time on page (AI traffic) | Analytics | >3 minutes |
+| Metric                    | Tool           | Target         |
+| ------------------------- | -------------- | -------------- |
+| Citation frequency        | Manual testing | Increasing     |
+| AI referral traffic       | Analytics      | 5-10% of total |
+| Bounce rate (AI traffic)  | Analytics      | <40%           |
+| Time on page (AI traffic) | Analytics      | >3 minutes     |
 
 ---
 

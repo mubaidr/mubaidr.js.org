@@ -85,11 +85,11 @@ The most common pattern combines static generation for content pages with edge f
 // Nuxt 4 configuration for hybrid rendering
 export default defineNuxtConfig({
   routeRules: {
-    '/': { isr: 300 }, // Homepage: 5 minute cache
-    '/blog/**': { isr: 86400 }, // Blog posts: 24 hour cache
-    '/api/**': { cors: true }, // API routes: edge functions
-    '/dashboard/**': { ssr: true } // Dashboard: full SSR
-  }
+    "/": { isr: 300 }, // Homepage: 5 minute cache
+    "/blog/**": { isr: 86400 }, // Blog posts: 24 hour cache
+    "/api/**": { cors: true }, // API routes: edge functions
+    "/dashboard/**": { ssr: true }, // Dashboard: full SSR
+  },
 })
 ```
 
@@ -100,11 +100,11 @@ Edge middleware enables powerful personalization without sacrificing performance
 ```typescript
 // Edge middleware for geolocation-based content
 export default defineEventHandler(async (event) => {
-  const country = getRequestHeader(event, 'x-country-code')
+  const country = getRequestHeader(event, "x-country-code")
 
-  if (country === 'US') {
+  if (country === "US") {
     // Serve US-specific content
-  } else if (country === 'EU') {
+  } else if (country === "EU") {
     // Serve EU-specific content with GDPR compliance
   }
 })
@@ -118,9 +118,9 @@ Edge functions excel at API aggregation—combining multiple backend API calls i
 // Edge function aggregating multiple APIs
 export default defineEventHandler(async (event) => {
   const [users, products, analytics] = await Promise.all([
-    $fetch('/api/users'),
-    $fetch('/api/products'),
-    $fetch('/api/analytics')
+    $fetch("/api/users"),
+    $fetch("/api/products"),
+    $fetch("/api/analytics"),
   ])
 
   return { users, products, analytics }
