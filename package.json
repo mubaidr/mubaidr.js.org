@@ -24,7 +24,7 @@
     "vue-tsc": "^3.2.6"
   },
   "engines": {
-    "node": ">=23",
+    "node": ">=24",
     "npm": ">=10"
   },
   "name": "mubaidr.js.org",

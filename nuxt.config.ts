@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/main.css"],
 
-  compatibilityDate: "2026-01-01",
+  compatibilityDate: "2026-04-04",
 
   content: {
     renderer: {

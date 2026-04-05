@@ -11,22 +11,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Install Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: actions/setup-node@v4
         with:
-          node-version: 23
+          node-version: "24"
           cache: "npm"
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: build
-        run: npm run build
-        env:
-          NITRO_PRESET: github_pages
+      - run: npm install
+      - run: npx nuxt build --preset github_pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
