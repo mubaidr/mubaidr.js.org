@@ -140,10 +140,6 @@ export default defineNuxtConfig({
     strict: true,
   },
 
-  vite: {
-    plugins: [tailwindcss()],
-  },
-
   schemaOrg: {
     identity: definePerson({
       // Basic Information, if applicable

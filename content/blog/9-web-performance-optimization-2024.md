@@ -75,7 +75,7 @@ LCP measures when the largest content element becomes visible. Target: **under 2
 <link rel="dns-prefetch" href="//analytics.google.com" />
 ```
 
-2. **Critical CSS Inlining**
+1. **Critical CSS Inlining**
 
 ```html
 <style>
@@ -141,7 +141,7 @@ document.addEventListener(
 )
 ```
 
-2. **Web Workers for Heavy Computations**
+1. **Web Workers for Heavy Computations**
 
 ```javascript
 // main.js
@@ -167,7 +167,7 @@ self.onmessage = function (e) {
 }
 ```
 
-3. **Optimizing Event Handlers**
+1. **Optimizing Event Handlers**
 
 ```javascript
 // ❌ Blocking event handlers
@@ -221,7 +221,7 @@ CLS measures unexpected layout shifts. Target: **under 0.1**.
 }
 ```
 
-2. **Font Loading Optimization**
+1. **Font Loading Optimization**
 
 ```css
 /* ✅ Prevent font swap layout shifts */
@@ -244,7 +244,7 @@ body {
 }
 ```
 
-3. **Skeleton Screens for Loading States**
+1. **Skeleton Screens for Loading States**
 
 ```jsx
 // ✅ Skeleton that matches final content dimensions
