@@ -140,6 +140,10 @@ export default defineNuxtConfig({
     strict: true,
   },
 
+  ogImage: {
+    zeroRuntime: true
+  },
+
   schemaOrg: {
     identity: definePerson({
       // Basic Information, if applicable
