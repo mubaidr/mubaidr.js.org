@@ -1,0 +1,402 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-label="Gem Team Orchestrator - AI Workflow Orchestration">
+  <title>Gem Team Orchestrator</title>
+  <desc>AI workflow orchestration with phase detection, agent routing, and wave-based execution</desc>
+
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="50%" stop-color="#1a1a4e"/>
+      <stop offset="100%" stop-color="#24243e"/>
+    </linearGradient>
+
+    <!-- Orchestrator gem gradients -->
+    <linearGradient id="gemTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a5b4fc"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="gemLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="gemRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+
+    <!-- Phase badge gradients -->
+    <linearGradient id="discussGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="prdGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <linearGradient id="researchGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="planningGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="execGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="summaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="gemGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft shadow -->
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+
+    <!-- Phase glow -->
+    <filter id="phaseGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Connection gradient -->
+    <linearGradient id="connGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Radial orchestrator glow -->
+    <radialGradient id="orchGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.04">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5"/>
+    </pattern>
+    <rect width="1200" height="680" fill="url(#grid)"/>
+  </g>
+
+  <!-- Central orchestrator ambient glow -->
+  <ellipse cx="600" cy="380" rx="380" ry="220" fill="url(#orchGlow)"/>
+
+  <!-- ==================== PHASE FLOW (Top) ==================== -->
+  <g transform="translate(0, 30)">
+    <!-- Phase flow connectors -->
+    <line x1="105" y1="38" x2="105" y2="38" stroke="url(#connGrad)" stroke-width="2"/>
+    <g transform="translate(0, 0)">
+      <!-- Discuss -->
+      <g transform="translate(30, 20)">
+        <rect x="0" y="0" width="90" height="36" rx="18" fill="url(#discussGrad)" filter="url(#cardShadow)"/>
+        <text x="45" y="23" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Discuss</text>
+        <circle cx="85" cy="18" r="5" fill="#ffffff" opacity="0.3"/>
+      </g>
+
+      <!-- Arrow -->
+      <path d="M130,38 L150,38" stroke="#6366f1" stroke-width="2" stroke-dasharray="4,3" opacity="0.6"/>
+
+      <!-- PRD -->
+      <g transform="translate(160, 20)">
+        <rect x="0" y="0" width="70" height="36" rx="18" fill="url(#prdGrad)" filter="url(#cardShadow)"/>
+        <text x="35" y="23" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">PRD</text>
+      </g>
+
+      <!-- Arrow -->
+      <path d="M240,38 L260,38" stroke="#6366f1" stroke-width="2" stroke-dasharray="4,3" opacity="0.6"/>
+
+      <!-- Research -->
+      <g transform="translate(270, 20)">
+        <rect x="0" y="0" width="100" height="36" rx="18" fill="url(#researchGrad)" filter="url(#cardShadow)"/>
+        <text x="50" y="23" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Research</text>
+      </g>
+
+      <!-- Arrow -->
+      <path d="M380,38 L400,38" stroke="#6366f1" stroke-width="2" stroke-dasharray="4,3" opacity="0.6"/>
+
+      <!-- Planning -->
+      <g transform="translate(410, 20)">
+        <rect x="0" y="0" width="95" height="36" rx="18" fill="url(#planningGrad)" filter="url(#cardShadow)"/>
+        <text x="47" y="23" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Planning</text>
+      </g>
+
+      <!-- Arrow -->
+      <path d="M515,38 L535,38" stroke="#6366f1" stroke-width="2" stroke-dasharray="4,3" opacity="0.6"/>
+
+      <!-- Execution -->
+      <g transform="translate(545, 20)">
+        <rect x="0" y="0" width="100" height="36" rx="18" fill="url(#execGrad)" filter="url(#cardShadow)"/>
+        <text x="50" y="23" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Execution</text>
+      </g>
+
+      <!-- Arrow -->
+      <path d="M655,38 L675,38" stroke="#6366f1" stroke-width="2" stroke-dasharray="4,3" opacity="0.6"/>
+
+      <!-- Summary -->
+      <g transform="translate(685, 20)">
+        <rect x="0" y="0" width="100" height="36" rx="18" fill="url(#summaryGrad)" filter="url(#cardShadow)"/>
+        <text x="50" y="23" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Summary</text>
+      </g>
+
+      <!-- Flow label -->
+      <text x="600" y="75" fill="#6366f1" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.8">WORKFLOW PHASES</text>
+    </g>
+  </g>
+
+  <!-- ==================== CENTRAL ORCHESTRATOR ==================== -->
+  <g transform="translate(600, 340)" filter="url(#gemGlow)">
+    <!-- Outer pulsing ring -->
+    <circle cx="0" cy="0" r="90" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.25">
+      <animate attributeName="r" values="88;94;88" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;0.5;0.25" dur="3s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Middle ring -->
+    <circle cx="0" cy="0" r="72" fill="none" stroke="#818cf8" stroke-width="1" opacity="0.2"/>
+
+    <!-- Core circle -->
+    <circle cx="0" cy="0" r="58" fill="#1e1b4b" stroke="#6366f1" stroke-width="2.5"/>
+
+    <!-- Gem facets -->
+    <g transform="translate(0, -5)">
+      <!-- Top facet (highlight) -->
+      <polygon points="0,-42 36,0 0,12 -36,0" fill="url(#gemTop)" opacity="0.7"/>
+      <!-- Left facet -->
+      <polygon points="-36,0 0,12 0,42" fill="url(#gemLeft)"/>
+      <!-- Right facet -->
+      <polygon points="36,0 0,12 0,42" fill="url(#gemRight)"/>
+      <!-- Top highlight reflection -->
+      <polygon points="0,-42 36,0 0,12 -36,0" fill="#c7d2fe" opacity="0.25"/>
+      <!-- Center light -->
+      <ellipse cx="0" cy="0" rx="8" ry="6" fill="#a5b4fc" opacity="0.4"/>
+    </g>
+
+    <!-- Label -->
+    <text x="0" y="75" fill="#a5b4fc" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="0.5">ORCHESTRATOR</text>
+  </g>
+
+  <!-- ==================== AGENT CARDS (Surrounding) ==================== -->
+
+  <!-- gem-researcher (top-left) -->
+  <g transform="translate(170, 200)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="130" height="60" rx="12" fill="#1e293b" stroke="#06b6d4" stroke-width="1.5"/>
+    <text x="12" y="22" fill="#06b6d4" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" letter-spacing="1">🔍 RESEARCHER</text>
+    <text x="12" y="38" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Codebase patterns</text>
+    <text x="12" y="50" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="8">Context7 · docs · search</text>
+  </g>
+
+  <!-- gem-planner (top-center-left) -->
+  <g transform="translate(340, 175)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="130" height="60" rx="12" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.5"/>
+    <text x="12" y="22" fill="#8b5cf6" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" letter-spacing="1">📋 PLANNER</text>
+    <text x="12" y="38" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">DAG task planning</text>
+    <text x="12" y="50" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="8">Wave scheduling · risk analysis</text>
+  </g>
+
+  <!-- gem-reviewer (top-center-right) -->
+  <g transform="translate(730, 175)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="130" height="60" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="12" y="22" fill="#3b82f6" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" letter-spacing="1">🛡️ REVIEWER</text>
+    <text x="12" y="38" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Security · PRD compliance</text>
+    <text x="12" y="50" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="8">OWASP · quality gates</text>
+  </g>
+
+  <!-- gem-critic (top-right) -->
+  <g transform="translate(900, 200)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="130" height="60" rx="12" fill="#1e293b" stroke="#ec4899" stroke-width="1.5"/>
+    <text x="12" y="22" fill="#ec4899" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" letter-spacing="1">🎯 CRITIC</text>
+    <text x="12" y="38" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Edge cases · assumptions</text>
+    <text x="12" y="50" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="8">Logic gaps · over-engineering</text>
+  </g>
+
+  <!-- gem-implementer (bottom-left) -->
+  <g transform="translate(170, 380)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="130" height="60" rx="12" fill="#1e293b" stroke="#22c55e" stroke-width="1.5"/>
+    <text x="12" y="22" fill="#22c55e" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" letter-spacing="1">🔧 IMPLEMENTER</text>
+    <text x="12" y="38" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">TDD code implementation</text>
+    <text x="12" y="50" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="8">Features · bugs · refactoring</text>
+  </g>
+
+  <!-- gem-debugger (bottom-center-left) -->
+  <g transform="translate(340, 395)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="130" height="60" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="12" y="22" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" letter-spacing="1">🔬 DEBUGGER</text>
+    <text x="12" y="38" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">Root-cause diagnosis</text>
+    <text x="12" y="50" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="8">Stack traces · confidence scoring</text>
+  </g>
+
+  <!-- gem-designer (bottom-center-right) -->
+  <g transform="translate(730, 395)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="130" height="60" rx="12" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+    <text x="12" y="22" fill="#a855f7" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" letter-spacing="1">🎨 DESIGNER</text>
+    <text x="12" y="38" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">UI/UX validation</text>
+    <text x="12" y="50" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="8">Accessibility · design systems</text>
+  </g>
+
+  <!-- gem-browser-tester (bottom-right) -->
+  <g transform="translate(900, 380)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="130" height="60" rx="12" fill="#1e293b" stroke="#14b8a6" stroke-width="1.5"/>
+    <text x="12" y="22" fill="#14b8a6" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" letter-spacing="1">🧪 BROWSER TESTER</text>
+    <text x="12" y="38" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">E2E browser testing</text>
+    <text x="12" y="50" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="8">Playwright · visual regression</text>
+  </g>
+
+  <!-- Connection lines from orchestrator to agents -->
+  <g stroke="#6366f1" stroke-width="1" opacity="0.25" stroke-dasharray="4,4">
+    <!-- Top row -->
+    <line x1="530" y1="310" x2="300" y2="230"/>
+    <line x1="560" y1="300" x2="405" y2="205"/>
+    <line x1="640" y1="300" x2="795" y2="205"/>
+    <line x1="670" y1="310" x2="965" y2="230"/>
+    <!-- Bottom row -->
+    <line x1="530" y1="370" x2="300" y2="410"/>
+    <line x1="560" y1="380" x2="405" y2="425"/>
+    <line x1="640" y1="380" x2="795" y2="425"/>
+    <line x1="670" y1="370" x2="965" y2="410"/>
+  </g>
+
+  <!-- ==================== WAVE EXECUTION DIAGRAM (Bottom) ==================== -->
+  <g transform="translate(100, 570)">
+    <text x="0" y="0" fill="#6366f1" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" letter-spacing="2" opacity="0.7">WAVE-BASED EXECUTION</text>
+
+    <!-- Wave 1 box -->
+    <g transform="translate(0, 14)">
+      <rect x="0" y="0" width="200" height="50" rx="10" fill="#1e293b" stroke="#22c55e" stroke-width="1.5"/>
+      <text x="12" y="18" fill="#22c55e" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">WAVE 1 — Parallel (≤4)</text>
+      <g transform="translate(12, 26)">
+        <circle cx="4" cy="4" r="3" fill="#22c55e"/>
+        <text x="14" y="8" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">task_A</text>
+        <circle cx="64" cy="4" r="3" fill="#22c55e"/>
+        <text x="74" y="8" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">task_B</text>
+        <circle cx="124" cy="4" r="3" fill="#22c55e"/>
+        <text x="134" y="8" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">task_C</text>
+      </g>
+    </g>
+
+    <!-- Arrow down -->
+    <path d="M100,74 L100,86" stroke="#6366f1" stroke-width="2" stroke-dasharray="4,3" opacity="0.5"/>
+    <path d="M96,82 L100,88 L104,82" stroke="#6366f1" stroke-width="1.5" fill="none" opacity="0.5"/>
+
+    <!-- Integration Gate -->
+    <g transform="translate(0, 90)">
+      <rect x="0" y="0" width="200" height="28" rx="6" fill="#1e293b" stroke="#6366f1" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="100" y="18" fill="#818cf8" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" text-anchor="middle">⬡ Integration Gate</text>
+    </g>
+
+    <!-- Arrow down -->
+    <path d="M100,118 L100,130" stroke="#6366f1" stroke-width="2" stroke-dasharray="4,3" opacity="0.5"/>
+    <path d="M96,126 L100,132 L104,126" stroke="#6366f1" stroke-width="1.5" fill="none" opacity="0.5"/>
+
+    <!-- Wave 2 box -->
+    <g transform="translate(0, 134)">
+      <rect x="0" y="0" width="200" height="38" rx="10" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.5"/>
+      <text x="12" y="18" fill="#8b5cf6" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">WAVE 2 — Parallel</text>
+      <g transform="translate(12, 24)">
+        <circle cx="4" cy="4" r="3" fill="#8b5cf6"/>
+        <text x="14" y="8" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">task_D (depends on C)</text>
+        <circle cx="130" cy="4" r="3" fill="#8b5cf6"/>
+        <text x="140" y="8" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">task_E</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== DIAGNOSE-THEN-FIX LOOP (Bottom Center) ==================== -->
+  <g transform="translate(420, 570)">
+    <text x="0" y="0" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" letter-spacing="2" opacity="0.7">DIAGNOSE-THEN-FIX LOOP</text>
+
+    <!-- Flow diagram -->
+    <g transform="translate(0, 14)">
+      <!-- debugger -->
+      <rect x="0" y="0" width="90" height="32" rx="6" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="1"/>
+      <text x="45" y="20" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" text-anchor="middle">🔬 Diagnose</text>
+
+      <!-- Arrow -->
+      <path d="M95,16 L115,16" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <text x="105" y="12" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-size="7" text-anchor="middle" opacity="0.7">root cause</text>
+
+      <!-- implementer -->
+      <rect x="120" y="0" width="90" height="32" rx="6" fill="#22c55e" opacity="0.2" stroke="#22c55e" stroke-width="1"/>
+      <text x="165" y="20" fill="#22c55e" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" text-anchor="middle">🔧 Fix</text>
+
+      <!-- Arrow back -->
+      <path d="M215,16 L235,16" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <text x="225" y="12" fill="#22c55e" font-family="system-ui, -apple-system, sans-serif" font-size="7" text-anchor="middle" opacity="0.7">verify</text>
+
+      <!-- re-verify -->
+      <rect x="240" y="0" width="90" height="32" rx="6" fill="#3b82f6" opacity="0.2" stroke="#3b82f6" stroke-width="1"/>
+      <text x="285" y="20" fill="#3b82f6" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" text-anchor="middle">✅ Re-verify</text>
+    </g>
+
+    <!-- Confidence badge -->
+    <g transform="translate(0, 54)">
+      <rect x="0" y="0" width="200" height="24" rx="4" fill="#1e293b" stroke="#374151" stroke-width="1"/>
+      <text x="100" y="16" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="8" text-anchor="middle">Confidence ≥ 0.7 required to proceed</text>
+    </g>
+  </g>
+
+  <!-- ==================== TRUST LEVELS (Bottom Right) ==================== -->
+  <g transform="translate(720, 570)">
+    <text x="0" y="0" fill="#6366f1" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" letter-spacing="2" opacity="0.7">KNOWLEDGE TRUST LEVELS</text>
+
+    <g transform="translate(0, 14)">
+      <!-- Trusted -->
+      <rect x="0" y="0" width="200" height="24" rx="6" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="1"/>
+      <text x="100" y="16" fill="#22c55e" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700" text-anchor="middle">✓ TRUSTED — PRD, plan.yaml, AGENTS.md</text>
+
+      <!-- Verified -->
+      <rect x="0" y="30" width="200" height="24" rx="6" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="1"/>
+      <text x="100" y="46" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700" text-anchor="middle">◉ VERIFIED — Codebase, research findings</text>
+
+      <!-- Untrusted -->
+      <rect x="0" y="60" width="200" height="24" rx="6" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="1"/>
+      <text x="100" y="76" fill="#ef4444" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700" text-anchor="middle">✗ UNTRUSTED — Error logs, external data</text>
+    </g>
+  </g>
+
+  <!-- ==================== TITLE ==================== -->
+  <g transform="translate(600, 620)">
+    <text x="0" y="0" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="-0.5">The Team Lead Your AI Workflow Has Been Waiting For</text>
+  </g>
+
+  <!-- Version badge -->
+  <g transform="translate(1100, 610)">
+    <rect x="0" y="0" width="80" height="28" rx="14" fill="#6366f1" opacity="0.9"/>
+    <text x="40" y="18" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" text-anchor="middle">v1.6.0</text>
+  </g>
+
+  <!-- Decorative particles -->
+  <g fill="#6366f1" opacity="0.3">
+    <circle cx="80" cy="120" r="2">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1120" cy="100" r="2">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="540" r="1.5">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1140" cy="500" r="1.5">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

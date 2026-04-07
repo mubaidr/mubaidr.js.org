@@ -112,7 +112,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
                     :alt="post.socialImage?.alt || post.title"
                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
-                  />
+                  >
                   <div
                     v-else
                     class="flex items-center justify-center h-full bg-neutral-100 dark:bg-neutral-800"
