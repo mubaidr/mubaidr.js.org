@@ -23,7 +23,7 @@ const { data: profileData } = await useProfileData()
         <UPageCard
           title="Technical Excellence"
           description="Deep technical expertise across full-stack development, DevOps, and modern architectures."
-          icon="i-ph-code-bold"
+          icon="i-ph-code"
           :spotlight="true"
           :ui="{
             root: 'text-center',
@@ -31,7 +31,11 @@ const { data: profileData } = await useProfileData()
         >
           <template #footer>
             <div>
-              <div class="text-xl font-bold mb-1">
+              <div class="text-2xl font-bold mb-1 font-mono">
+                <UIcon
+                  name="i-ph-git-commit"
+                  class="w-5 h-5 inline-block mr-1 text-primary-500"
+                />
                 {{ profileData.experience }}+
               </div>
               <div
@@ -47,12 +51,16 @@ const { data: profileData } = await useProfileData()
         <UPageCard
           title="Proven Results"
           description="Successful projects delivered with exceptional outcomes and measurable impact."
-          icon="i-ph-chart-line-up-bold"
+          icon="i-ph-rocket"
           :spotlight="true"
         >
           <template #footer>
             <div>
-              <div class="text-xl font-bold mb-1">
+              <div class="text-2xl font-bold mb-1 font-mono">
+                <UIcon
+                  name="i-ph-clock"
+                  class="w-5 h-5 inline-block mr-1 text-primary-500"
+                />
                 {{ profileData.projectsDelivered }}+
               </div>
               <div
@@ -68,13 +76,17 @@ const { data: profileData } = await useProfileData()
         <UPageCard
           title="True Partnership"
           description="I work closely with clients to understand unique needs, ensuring solutions that truly fit their business."
-          icon="i-ph-handshake-bold"
+          icon="i-ph-users"
           :spotlight="true"
           class="text-center"
         >
           <template #footer>
             <div>
-              <div class="text-xl font-bold mb-1">
+              <div class="text-2xl font-bold mb-1 font-mono">
+                <UIcon
+                  name="i-ph-users"
+                  class="w-5 h-5 inline-block mr-1 text-primary-500"
+                />
                 {{ profileData.clientSatisfaction }}%
               </div>
               <div

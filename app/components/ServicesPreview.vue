@@ -31,17 +31,26 @@ const { data: servicesData, pending: isLoading } = await useServicesPreview(3)
           <div class="space-y-6">
             <!-- Icon & Title -->
             <div class="space-y-4">
-              <div class="w-16 h-16 flex items-center justify-center mx-auto">
+              <div
+                class="w-16 h-16 flex items-center justify-center mx-auto rounded-xl bg-linear-to-br from-primary-100 to-primary-50 dark:from-primary-900/30 dark:to-primary-950/20 ring-1 ring-primary/20"
+              >
                 <UIcon
                   :name="service.icon"
-                  size="3em"
-                  class="text-primary-500"
+                  size="2em"
+                  class="text-primary-600 dark:text-primary-400 drop-shadow-[0_0_4px_rgba(99,102,241,0.4)]"
                 />
               </div>
-
               <div class="space-y-3">
-                <h3 class="font-bold">
+                <h3 class="font-bold font-mono">
+                  <UIcon
+                    name="i-ph-braces"
+                    class="w-4 h-4 inline-block mr-1 text-primary-500/60"
+                  />
                   {{ service.title }}
+                  <UIcon
+                    name="i-ph-braces"
+                    class="w-4 h-4 inline-block ml-1 text-primary-500/60"
+                  />
                 </h3>
                 <p class="text-neutral-600 dark:text-neutral-400">
                   {{ service.description }}
@@ -50,9 +59,15 @@ const { data: servicesData, pending: isLoading } = await useServicesPreview(3)
             </div>
 
             <!-- Key Highlight -->
-            <UBadge size="lg" variant="subtle" color="neutral">{{
-              service.suitable
-            }}</UBadge>
+            <UBadge
+              size="lg"
+              variant="subtle"
+              color="neutral"
+              class="font-mono"
+            >
+              <UIcon name="i-ph-code" class="w-3 h-3 mr-1" />
+              {{ service.suitable }}
+            </UBadge>
           </div>
         </UCard>
       </div>

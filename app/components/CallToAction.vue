@@ -37,12 +37,16 @@ const available = computed(
         <UButton
           :to="profileData?.availability?.cta?.url"
           size="lg"
-          class="px-8"
+          class="px-8 group"
         >
-          {{ profileData?.availability?.cta?.text || "Start a Conversation" }}
+          <UIcon name="i-ph-code" class="mr-2" />
+          <span class="font-mono">
+            {{ profileData?.availability?.cta?.text || "Start a Conversation" }}
+          </span>
         </UButton>
         <UButton to="/projects" variant="outline" size="lg" class="px-8">
-          View My Work
+          <UIcon name="i-ph-brackets-angle" class="mr-2" />
+          <span class="font-mono">View My Work</span>
         </UButton>
       </div>
 

@@ -1,4 +1,3 @@
-import tailwindcss from "@tailwindcss/vite"
 import { definePerson } from "nuxt-schema-org/schema"
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -141,7 +140,7 @@ export default defineNuxtConfig({
   },
 
   ogImage: {
-    zeroRuntime: true
+    zeroRuntime: true,
   },
 
   schemaOrg: {

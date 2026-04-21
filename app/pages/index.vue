@@ -54,8 +54,9 @@ if (profileData.value) {
         <div class="flex flex-col items-center text-center space-y-6">
           <!-- Label -->
           <p
-            class="fade-in-up stagger-1 text-sm font-medium tracking-[0.2em] uppercase text-primary"
+            class="fade-in-up stagger-1 text-sm font-medium tracking-[0.2em] uppercase text-primary font-mono"
           >
+            <UIcon name="i-ph-terminal" class="w-4 h-4 inline-block mr-2" />
             {{ profileData.title }}
           </p>
 
@@ -66,12 +67,20 @@ if (profileData.value) {
             {{ profileData.name }}
           </h1>
 
-          <!-- Tagline as Subheading -->
+          <!-- Tagline as Subheading with monospace code aesthetic -->
           <p
             v-if="profileData.heroHeadline"
-            class="fade-in-up stagger-3 text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl"
+            class="fade-in-up stagger-3 text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl font-mono"
           >
+            <UIcon
+              name="i-ph-brackets-angle"
+              class="w-4 h-4 inline-block mx-1 text-primary-500/60"
+            />
             {{ profileData.heroHeadline }}
+            <UIcon
+              name="i-ph-brackets-angle"
+              class="w-4 h-4 inline-block mx-1 text-primary-500/60"
+            />
           </p>
 
           <!-- CTA Button -->

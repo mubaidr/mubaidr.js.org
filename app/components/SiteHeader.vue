@@ -15,14 +15,17 @@
           <!-- Logo/Brand -->
           <ULink
             to="/"
-            class="flex items-center gap-2 px-2 py-1 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200"
+            class="flex items-center gap-2 px-2 py-1 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200 font-mono"
             aria-label="Go to homepage"
           >
-            <UIcon
-              name="i-ph-code"
-              class="w-5 h-5 text-primary-600 dark:text-primary-400"
-            />
-            <span class="font-bold tracking-tight">mubaidr</span>
+            <span
+              class="font-bold tracking-tight text-neutral-900 dark:text-neutral-100"
+            >
+              <span class="text-primary-600 dark:text-primary-400">&lt;</span
+              >mubaidr<span class="text-primary-600 dark:text-primary-400"
+                >/&gt;</span
+              >
+            </span>
           </ULink>
 
           <!-- Desktop Navigation -->
