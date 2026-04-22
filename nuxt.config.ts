@@ -58,11 +58,13 @@ export default defineNuxtConfig({
 
   experimental: {
     typedPages: true,
-    headNext: true,
     typescriptPlugin: true,
   },
 
-  eslint: {},
+  eslint: {
+    checker: false,
+    config: true,
+  },
 
   fonts: {
     families: [
@@ -136,7 +138,12 @@ export default defineNuxtConfig({
   ssr: true,
 
   typescript: {
-    strict: true,
+    typeCheck: false,
+    tsConfig: {
+      compilerOptions: {
+        skipLibCheck: true,
+      },
+    },
   },
 
   ogImage: {
@@ -175,5 +182,11 @@ export default defineNuxtConfig({
         url: "https://paragonsquare.ai",
       },
     }),
+  },
+
+  vite: {
+    optimizeDeps: {
+      include: ["@vue/devtools-core", "@vue/devtools-kit"],
+    },
   },
 })
