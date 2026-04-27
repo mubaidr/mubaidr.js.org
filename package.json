@@ -8,7 +8,7 @@
     "@nuxt/fonts": "^0.14.0",
     "@nuxt/icon": "^2.2.1",
     "@nuxt/image": "^2.0.0",
-    "@nuxt/ui": "^4.6.1",
+    "@nuxt/ui": "^4.7.0",
     "@nuxthq/studio": "^2.2.1",
     "@nuxtjs/color-mode": "^4.0.0",
     "@nuxtjs/mdc": "0.21.1",
