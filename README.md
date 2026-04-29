@@ -10,14 +10,6 @@ A modern, high-performance personal portfolio and blog website built with **Nuxt
 
 ## ✨ Features
 
-### 🎨 **Modern Design & UX**
-
-- **Minimal Luxury aesthetic** with elevated surfaces and warm neutrals
-- **Dark/Light mode toggle** with system preference detection
-- **Fully responsive** design for all devices
-- **Refined animations** with reduced-motion support
-- **Accessible** components built on Nuxt UI 4
-
 ### 📝 **Content Management**
 
 - **Blog system** with markdown support and syntax highlighting
@@ -35,6 +27,14 @@ A modern, high-performance personal portfolio and blog website built with **Nuxt
 - **Structured data** and rich snippets
 - **Open Graph** and Twitter meta tags
 
+### 🎨 **Modern Design & UX**
+
+- **Minimal Luxury aesthetic** with elevated surfaces and warm neutrals
+- **Dark/Light mode toggle** with system preference detection
+- **Fully responsive** design for all devices
+- **Refined animations** with reduced-motion support
+- **Accessible** components built on Nuxt UI 4
+
 ### 🔧 **Developer Experience**
 
 - **TypeScript** support throughout the project
@@ -42,33 +42,6 @@ A modern, high-performance personal portfolio and blog website built with **Nuxt
 - **Hot module replacement** for fast development
 - **Automated deployment** to GitHub Pages
 - **Content-driven** architecture with YAML/Markdown
-
-## � Website Optimization (2026-02-24)
-
-The website has been optimized for trust, conversion, and performance with results-focused content and transparent communication.
-
-### Key Enhancements
-
-- **Results-Focused Hero:** Headline showcasing tangible outcomes (125+ projects, 100% client satisfaction, 13 years experience)
-- **Compact Case Studies:** Problem → Solution → Metric format highlighting real project impact
-- **"Who I Work With" Section:** Target audiences (Startups, SMEs, Enterprise, Agencies, Founders) with transparent pricing ranges
-- **Availability Display:** Timezone (UTC+5) and response time (6h) for clear communication expectations
-- **Performance Optimized:** Lazy loading for below-fold components, loading skeletons, and optimized bundle size
-
-### New Components
-
-- **CompactCaseStudies.vue:** Displays 3 case studies with visual hierarchy and metrics
-- **WhoIWorkWith.vue:** Shows target audiences and pricing cards (MVP, Architecture Audit, Hourly)
-- **AvailabilityInfo.vue:** Compact timezone and response time display
-
-### Content Collections
-
-- **case-studies.yml:** New collection for compact, results-focused case studies
-- **profile.yml (extended):** Added `heroHeadline`, `whoIWorkWith`, `pricingRanges`, and `availability.timezone` fields
-
-### Documentation
-
-For detailed documentation of all optimization changes, including configuration options and update instructions, see [`docs/website-optimization.md`](./docs/website-optimization.md).
 
 ### Quick Update Guide
 
