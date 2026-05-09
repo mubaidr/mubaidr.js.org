@@ -218,7 +218,7 @@ select:focus-visible {
 }
 
 .fade-in-up {
-  animation: fade-in-up 0.6s ease-out forwards;
+  animation: fade-in-up 1s ease-out forwards;
   will-change: transform, opacity;
 }
 

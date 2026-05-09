@@ -40,14 +40,14 @@ if (profileData.value) {
 
 onMounted(() => {
   toast.add({
-    title: "Meet Gem Team",
+    title: "Meet Gem Team!",
     description: `Self-Learning Multi-agent orchestration harness for spec-driven development and automated verification.`,
     icon: "i-ph-info",
     progress: false,
-    timeout: 10000,
+    timeout: 30000,
     actions: [
       {
-        label: "Explore on GitHub",
+        label: "Explore Now",
         to: "https://github.com/mubaidr/gem-team",
         external: true,
         click: () => {},
