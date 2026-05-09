@@ -8,10 +8,12 @@ html {
 }
 
 :root {
-  --font-family: "Public Sans", sans-serif;
-  --font-display: "Syne", sans-serif;
-  --font-body: "Public Sans", sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-family: "JetBrains Mono", sans-serif;
+  --font-display: "JetBrains Mono", sans-serif;
+  --font-body: "JetBrains Mono", sans-serif;
+  --font-mono:
+    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    monospace;
   --ui-radius: 0.75rem;
 }
 

@@ -51,7 +51,6 @@ withDefaults(defineProps<Props>(), {
           root: 'transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group',
         }"
         :spotlight="true"
-        spotlight-color="primary"
         class="group"
       >
         <div class="space-y-8 text-center">
@@ -78,7 +77,7 @@ withDefaults(defineProps<Props>(), {
             </p>
           </div>
 
-          <UAlert :title="study.metric" variant="soft" color="info" />
+          <UAlert :title="study.metric" variant="soft" />
         </div>
       </UPageCard>
     </div>
