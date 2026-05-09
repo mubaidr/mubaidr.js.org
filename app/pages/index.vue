@@ -3,6 +3,8 @@
 const { data: profileData } = await useProfileData()
 // const { data: professionalJourneyData } = await useProfessionalJourneyData()
 
+const toast = useToast()
+
 // SEO Meta using reactive composables
 if (profileData.value) {
   useSeoMeta({
@@ -35,6 +37,24 @@ if (profileData.value) {
     }),
   ])
 }
+
+onMounted(() => {
+  toast.add({
+    title: "Meet Gem Team",
+    description: `Self-Learning Multi-agent orchestration harness for spec-driven development and automated verification.`,
+    icon: "i-ph-info",
+    progress: false,
+    timeout: 10000,
+    actions: [
+      {
+        label: "Explore on GitHub",
+        to: "https://github.com/mubaidr/gem-team",
+        external: true,
+        click: () => {},
+      },
+    ],
+  })
+})
 </script>
 
 <template>

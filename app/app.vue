@@ -24,12 +24,12 @@ useHead({
 </script>
 <template>
   <div>
-    <div>
+    <UApp>
       <NuxtLoadingIndicator />
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
       <NuxtRouteAnnouncer />
-    </div>
+    </UApp>
   </div>
 </template>
