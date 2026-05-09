@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#818cf8;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#gradient)" />
+  <circle cx="200" cy="150" r="80" fill="rgba(255,255,255,0.1)" />
+  <circle cx="1000" cy="530" r="120" fill="rgba(255,255,255,0.08)" />
+  <text x="600" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">
+    Gem Team
+  </text>
+  <text x="600" y="390" font-family="system-ui, -apple-system, sans-serif" font-size="36" fill="rgba(255,255,255,0.9)" text-anchor="middle" dominant-baseline="middle">
+    v1.20.0
+  </text>
+  <text x="600" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="rgba(255,255,255,0.7)" text-anchor="middle" dominant-baseline="middle">
+    Marketplace Integration • APM Structure • Enhanced Install
+  </text>
+  <path d="M 400 550 Q 600 480 800 550" stroke="url(#accent)" stroke-width="4" fill="none" stroke-linecap="round" />
+</svg>
