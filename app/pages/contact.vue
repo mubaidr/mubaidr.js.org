@@ -34,6 +34,17 @@ const contactMethods = ref([
     action: "https://linkedin.com/in/mubaidr",
     ariaLabel: "Connect with Muhammad Ubaid Raza on LinkedIn",
   },
+  {
+    icon: "i-ph-calendar-blank",
+    title: "No Discovery Call Required",
+    description:
+      "Skip the call — share details via email and I'll respond with a plan",
+    value: "Start async",
+    action:
+      "mailto:mubaidr@gmail.com?subject=Project%20Inquiry&body=Hi%20Muhammad%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project%20without%20a%20discovery%20call.%20Here%20are%20the%20details%3A%0A%0A%5BDescribe%20your%20project%2C%20goals%2C%20timeline%2C%20and%20any%20requirements%5D",
+    ariaLabel: "Start async project discussion via email",
+    highlight: true,
+  },
   // {
   //   icon: "i-ph-calendar",
   //   title: "Schedule a Call",
@@ -73,6 +84,16 @@ onMounted(() => {
           Have a project in mind? I'd love to hear about it and discuss how we
           can bring your ideas to life.
         </p>
+
+        <!-- Async-first consulting badge -->
+        <div class="flex items-center justify-center gap-3 mt-4">
+          <UIcon name="i-ph-lightning" size="1.25em" class="text-primary-500" />
+          <span
+            class="inline-flex items-center px-4 py-2 rounded-full bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 font-semibold text-base border border-primary-200 dark:border-primary-800"
+          >
+            Async-first consulting
+          </span>
+        </div>
       </div>
 
       <!-- Contact Methods -->
@@ -89,14 +110,21 @@ onMounted(() => {
           <UCard
             v-for="method in contactMethods"
             :key="method.title"
-            class="text-center h-full"
+            :class="[
+              'text-center h-full transition-all duration-200',
+              method.highlight
+                ? 'border-2 border-primary-500 bg-primary-50 dark:bg-primary-900/20 shadow-lg shadow-primary-500/10'
+                : '',
+            ]"
           >
             <div class="p-6 space-y-6">
               <div class="flex items-center justify-center mx-auto">
                 <UIcon
                   :name="method.icon"
                   size="3em"
-                  class="text-primary-500"
+                  :class="
+                    method.highlight ? 'text-primary-500' : 'text-primary-500'
+                  "
                 />
               </div>
               <div class="space-y-4">
@@ -110,8 +138,8 @@ onMounted(() => {
                 </div>
 
                 <UButton
-                  variant="outline"
-                  color="neutral"
+                  :variant="method.highlight ? 'solid' : 'outline'"
+                  :color="method.highlight ? 'primary' : 'neutral'"
                   class="w-full justify-center"
                   :aria-label="method.ariaLabel"
                   @click="navigateTo(method.action, { external: true })"

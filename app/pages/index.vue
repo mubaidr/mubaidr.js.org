@@ -51,7 +51,7 @@ onMounted(() => {
           label: "Explore Now",
           to: "https://github.com/mubaidr/gem-team",
           external: true,
-          click: () => {},
+          onClick: () => {},
         },
       ],
     })

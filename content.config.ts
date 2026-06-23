@@ -1,5 +1,4 @@
 import { defineContentConfig, defineCollection, z } from "@nuxt/content"
-import { asOgImageCollection } from "nuxt-og-image/content"
 
 export default defineContentConfig({
   collections: {
@@ -20,48 +19,85 @@ export default defineContentConfig({
         url: z.string().url(),
       }),
     }),
-    blog: defineCollection(
-      asOgImageCollection({
-        type: "page",
-        source: "blog/**/*.md",
-        schema: z.object({
-          // Note: title and description are auto-generated for type: 'page'
-          // We can add custom fields without redefining them
-          excerpt: z.string().optional(),
-          headline: z.string().optional(),
-          abstract: z.string().optional(),
-          // Use z.date() for proper date parsing as per Nuxt Content docs
-          date: z.date(),
-          dateUpdated: z.date().optional(),
-          author: z.string(),
-          authorUrl: z.string().optional(),
-          // Preferred: socialImage provides richer data (src, alt, dimensions)
-          socialImage: z
-            .object({
-              src: z.string(),
-              mime: z.string(),
-              alt: z.string(),
-              width: z.number(),
-              height: z.number(),
-            })
-            .optional(),
-          // Fallback: simple string URL (legacy support)
-          image: z.string().optional(),
-          tags: z.array(z.string()).optional(),
-          featured: z.boolean().optional().default(false),
-          // Series fields for content organization
-          series: z.string().optional(),
-          seriesOrder: z.number().optional(),
-          seriesDescription: z.string().optional(),
-        }),
+    blog: defineCollection({
+      type: "page",
+      source: "blog/**/*.md",
+      schema: z.object({
+        // Note: title and description are auto-generated for type: 'page'
+        // We can add custom fields without redefining them
+        excerpt: z.string().optional(),
+        headline: z.string().optional(),
+        abstract: z.string().optional(),
+        // Use z.date() for proper date parsing as per Nuxt Content docs
+        date: z.date(),
+        dateUpdated: z.date().optional(),
+        author: z.string(),
+        authorUrl: z.string().optional(),
+        // Preferred: socialImage provides richer data (src, alt, dimensions)
+        socialImage: z
+          .object({
+            src: z.string(),
+            mime: z.string(),
+            alt: z.string(),
+            width: z.number(),
+            height: z.number(),
+          })
+          .optional(),
+        // Fallback: simple string URL (legacy support)
+        image: z.string().optional(),
+        tags: z.array(z.string()).optional(),
+        featured: z.boolean().optional().default(false),
+        // Series fields for content organization
+        series: z.string().optional(),
+        seriesOrder: z.number().optional(),
+        seriesDescription: z.string().optional(),
+        // OG Image fields
+        ogImage: z
+          .object({
+            component: z.string().optional(),
+            disableInjection: z.boolean().optional(),
+            route: z.string().optional(),
+            alt: z.string().optional(),
+            fonts: z.array(z.string()).optional(),
+            html: z.string().optional(),
+            screenshots: z
+              .array(
+                z.object({
+                  name: z.string(),
+                  width: z.number(),
+                  height: z.number(),
+                }),
+              )
+              .optional(),
+          })
+          .optional(),
       }),
-    ),
-    pages: defineCollection(
-      asOgImageCollection({
-        type: "page",
-        source: "*.md",
+    }),
+    pages: defineCollection({
+      type: "page",
+      source: "*.md",
+      schema: z.object({
+        ogImage: z
+          .object({
+            component: z.string().optional(),
+            disableInjection: z.boolean().optional(),
+            route: z.string().optional(),
+            alt: z.string().optional(),
+            fonts: z.array(z.string()).optional(),
+            html: z.string().optional(),
+            screenshots: z
+              .array(
+                z.object({
+                  name: z.string(),
+                  width: z.number(),
+                  height: z.number(),
+                }),
+              )
+              .optional(),
+          })
+          .optional(),
       }),
-    ),
+    }),
     testimonials: defineCollection({
       type: "data",
       source: "testimonials/**/*.{json,yml,yaml}",

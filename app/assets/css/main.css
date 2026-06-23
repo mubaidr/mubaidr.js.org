@@ -8,12 +8,7 @@ html {
 }
 
 :root {
-  --font-family: "JetBrains Mono", sans-serif;
-  --font-display: "JetBrains Mono", sans-serif;
-  --font-body: "JetBrains Mono", sans-serif;
-  --font-mono:
-    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    monospace;
+  --font-sans: "Berkeley Mono", sans-serif;
   --ui-radius: 0.75rem;
 }
 

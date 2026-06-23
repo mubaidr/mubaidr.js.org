@@ -17,3 +17,21 @@ caseStudies:
     metric: 50K+ documents, 90% faster search, 95% query accuracy
     link: /projects
     projectRef: 15
+  - id: 4
+    problem: Marketplace startup needed to disrupt 10-25% commission model with scalable multi-marketplace architecture
+    solution: Built subscription-based platform with 4 marketplaces, 72-hr funds release, 3-way dispute resolution, and KYC verification
+    metric: 28K+ signups, 600K+ visitors across 5 countries, $18K+ raised, IPO-track
+    link: /projects
+    projectRef: 11
+  - id: 5
+    problem: Enterprise struggled with 50K+ unsearchable documents and manual review bottlenecks
+    solution: Developed AI chat platform with OCR, vector search, and RAG — 95% query accuracy, 90% faster retrieval
+    metric: 50K+ docs processed, 200K+ queries, 5K+ users, 95% accuracy
+    link: /projects
+    projectRef: 15
+  - id: 6
+    problem: Teams drowning in WhatsApp chats with no way to extract insights or automate responses
+    solution: Built AI-powered platform with QR auth, chat summarization, RAG-based Q&A, and reply suggestions
+    metric: Multi-phone support, real-time SSE, pgvector search, JWT auth
+    link: /projects
+    projectRef: 16

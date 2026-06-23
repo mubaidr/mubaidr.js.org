@@ -35,14 +35,14 @@ const { data: relatedPosts } = await useAsyncData(
       .filter(
         (post) =>
           post.path !== props.currentPath &&
-          post.tags?.some((tag) => props.tags?.includes(tag)),
+          post.tags?.some((tag: string) => props.tags?.includes(tag)),
       )
       .sort((a, b) => {
         // Sort by number of matching tags, then by date
         const aMatches =
-          a.tags?.filter((tag) => props.tags?.includes(tag)).length || 0
+          a.tags?.filter((tag: string) => props.tags?.includes(tag)).length || 0
         const bMatches =
-          b.tags?.filter((tag) => props.tags?.includes(tag)).length || 0
+          b.tags?.filter((tag: string) => props.tags?.includes(tag)).length || 0
         if (bMatches !== aMatches) return bMatches - aMatches
         return new Date(b.date).getTime() - new Date(a.date).getTime()
       })

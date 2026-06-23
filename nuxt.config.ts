@@ -13,6 +13,15 @@ export default defineNuxtConfig({
 
   compatibilityDate: "2026-04-04",
 
+  app: {
+    head: {
+      link: [
+        { rel: "icon", type: "image/png", href: "/favicon.png" },
+        { rel: "apple-touch-icon", href: "/favicon.png" },
+      ],
+    },
+  },
+
   content: {
     renderer: {
       anchorLinks: false,
@@ -59,6 +68,12 @@ export default defineNuxtConfig({
   experimental: {
     typedPages: true,
     typescriptPlugin: true,
+    buildCache: true,
+    headNext: true,
+    writeEarlyHints: true,
+    viewTransition: true,
+    navigationRepaint: true,
+    lazyHydration: true,
   },
 
   eslint: {
@@ -148,6 +163,48 @@ export default defineNuxtConfig({
     zeroRuntime: true,
   },
 
+  // Sitemap - Auto-generates from static routes + dynamic sources
+  sitemap: {
+    enabled: true,
+  },
+
+  // Robots - Dynamic generation with AI crawler controls
+  robots: {
+    allow: ["*"],
+    enabled: true,
+    robotsTxt: true,
+    blockAiBots: false,
+    credits: false,
+    sitemap: "sitemap.xml",
+    blockNonSeoBots: true,
+  },
+
+  // 6. Optimized SEO (Removed IE support)
+  seo: {
+    enabled: true,
+    redirectToCanonicalSiteUrl: true,
+
+    meta: {
+      applicationName: "Muhammad Ubaid Raza",
+      author: "Muhammad Ubaid Raza",
+
+      keywords:
+        "AI agent architecture consultant, multi-agent systems, LLM orchestration, AI agents engineer, Laravel consultant, Nuxt consultant, full stack architect, software architecture review, MVP development consultant, fractional CTO, technical consultant, async software development, open source engineer, AI integration specialist, agentic workflows, workflow orchestration, developer tooling, SaaS architecture, Laravel expert, Vue.js consultant",
+
+      description:
+        "Senior Software Engineer specializing in AI agent systems, LLM orchestration, Laravel, Nuxt, and scalable SaaS architecture. Helping startups and teams build MVPs, AI-powered products, and production-ready systems through async-first consulting.",
+
+      colorScheme: "dark light",
+
+      titleTemplate:
+        "%s | Muhammad Ubaid Raza — AI Agent Architect & Full-Stack Consultant",
+    },
+
+    automaticDefaults: true,
+    automaticOgAndTwitterTags: true,
+    setupNuxtConfigAppHeadWithMoreDefaults: true,
+  },
+
   schemaOrg: {
     identity: definePerson({
       // Basic Information, if applicable
@@ -184,7 +241,11 @@ export default defineNuxtConfig({
 
   vite: {
     optimizeDeps: {
-      include: ["@vue/devtools-core", "@vue/devtools-kit"],
+      include: [
+        "@vue/devtools-core",
+        "@vue/devtools-kit",
+        "@unhead/schema-org/vue",
+      ],
     },
   },
 })

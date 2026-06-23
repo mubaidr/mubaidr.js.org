@@ -98,60 +98,90 @@ services:
     technologies:
       - "Code Analysis Tools"
       - "Best Practices"
-      - "Security Patterns"
-      - "Performance Monitoring"
 
   - id: 5
-    title: "Browser Extension Development"
-    description: "Custom browser extensions for Chrome, Firefox, and other browsers."
-    icon: "i-ph-puzzle-piece"
-    category: "Development"
-    featured: false
+    title: "AI Agent Architecture Review"
+    description: "Comprehensive architecture review for AI agent systems — evaluate design, identify risks, and provide actionable improvement roadmap."
+    icon: "i-ph-cpu"
+    category: "AI & Architecture"
+    featured: true
     features:
-      - "Chrome Extension Development"
-      - "Firefox Add-on Development"
-      - "Cross-browser Compatibility"
-      - "Manifest V3 Migration"
-      - "API Integration"
-      - "User Interface Design"
+      - "Multi-agent system design evaluation"
+      - "Orchestration & communication patterns review"
+      - "Memory & context management audit"
+      - "Tool integration & security assessment"
+      - "Scalability & cost optimization"
+      - "Production readiness checklist"
     pricing:
-      hourly: 125
+      hourly: null
       currency: "USD"
-      description: "From $125/hour"
-    timeline: "2-6 weeks"
-    suitable: "Businesses, Startups"
+      description: "$2,500 fixed"
+    timeline: "1-2 weeks"
+    suitable: "Teams building AI agents"
     technologies:
-      - "WebExtensions API"
-      - "Vue.js"
-      - "TypeScript"
-      - "Manifest V3"
+      - "LangChain"
+      - "LangGraph"
+      - "AutoGen"
+      - "CrewAI"
+      - "Custom Agents"
+      - "LLM APIs"
 
   - id: 6
-    title: "API Development & Integration"
-    description: "RESTful APIs, GraphQL endpoints, and third-party integrations."
-    icon: "i-ph-plugs-connected"
+    title: "Laravel/Nuxt MVP Sprint"
+    description: "End-to-end MVP delivery in 2-4 weeks — full-stack Laravel API + Nuxt frontend with authentication, database, API, and core features."
+    icon: "i-ph-rocket-launch"
     category: "Development"
-    featured: false
+    featured: true
     features:
-      - "RESTful API Design"
-      - "GraphQL Implementation"
-      - "Third-party Integrations"
-      - "API Documentation"
-      - "Authentication & Security"
-      - "Rate Limiting & Caching"
+      - "Laravel 11 API with Sanctum auth"
+      - "Nuxt 4 frontend with Nuxt UI"
+      - "PostgreSQL database design & migrations"
+      - "RESTful API with resources & policies"
+      - "Type-safe API client generation"
+      - "CI/CD pipeline with GitHub Actions"
+      - "Production deployment config"
     pricing:
-      hourly: 125
+      hourly: null
       currency: "USD"
-      description: "From $125/hour"
-    timeline: "1-8 weeks"
-    suitable: "All business sizes"
+      description: "$8,000 fixed"
+    timeline: "2-4 weeks"
+    suitable: "Startups & product teams"
     technologies:
-      - "Node.js"
-      - "Express.js"
-      - "GraphQL"
-      - "OpenAPI"
-      - "JWT"
-      - "OAuth"
+      - "Laravel 11"
+      - "Nuxt 4"
+      - "Vue 3"
+      - "TypeScript"
+      - "PostgreSQL"
+      - "Tailwind CSS"
+      - "GitHub Actions"
+
+  - id: 7
+    title: "Codebase Audit & Refactor Plan"
+    description: "Deep codebase analysis with prioritized refactor roadmap — technical debt quantification, architecture improvements, and migration strategy."
+    icon: "i-ph-file-magnifying-glass"
+    category: "Consulting"
+    featured: true
+    features:
+      - "Automated code quality analysis"
+      - "Architecture & dependency mapping"
+      - "Technical debt quantification"
+      - "Security vulnerability scan"
+      - "Performance bottleneck identification"
+      - "Prioritized refactor roadmap with estimates"
+      - "Team onboarding & knowledge transfer"
+    pricing:
+      hourly: null
+      currency: "USD"
+      description: "$3,500 fixed"
+    timeline: "2-3 weeks"
+    suitable: "Teams with legacy codebases"
+    technologies:
+      - "TypeScript"
+      - "ESLint"
+      - "SonarQube"
+      - "Madge"
+      - "Depcheck"
+      - "Architecture Decision Records"
 
 process:
   - step: 1
