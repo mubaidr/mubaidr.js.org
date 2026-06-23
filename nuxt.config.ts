@@ -81,14 +81,7 @@ export default defineNuxtConfig({
     config: true,
   },
 
-  fonts: {
-    families: [
-      {
-        name: "Berkeley Mono",
-        provider: "google",
-      },
-    ],
-  },
+  // fonts: {},
 
   icon: {
     clientBundle: {

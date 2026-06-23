@@ -106,24 +106,57 @@ onMounted(() => {
           </p>
         </div>
 
+        <!-- Highlighted method: full width -->
+        <UPageCard
+          v-for="method in contactMethods.filter((m) => m.highlight)"
+          :key="method.title"
+          spotlight
+          highlight
+          class="w-full"
+        >
+          <div class="p-6 md:p-8 space-y-6">
+            <div class="flex items-center justify-center mx-auto">
+              <UIcon :name="method.icon" size="3em" class="text-primary-500" />
+            </div>
+            <div class="space-y-4 text-center">
+              <div class="space-y-1">
+                <h3 class="text-2xl md:text-3xl font-bold">
+                  {{ method.title }}
+                </h3>
+                <p
+                  class="text-neutral-600 dark:text-neutral-400 text-base md:text-lg"
+                >
+                  {{ method.description }}
+                </p>
+              </div>
+
+              <UButton
+                variant="solid"
+                color="primary"
+                size="lg"
+                class="w-full md:w-auto justify-center"
+                :aria-label="method.ariaLabel"
+                @click="navigateTo(method.action, { external: true })"
+              >
+                {{ method.value }}
+              </UButton>
+            </div>
+          </div>
+        </UPageCard>
+
+        <!-- Other methods: 2-column grid -->
         <div class="grid gap-8 md:grid-cols-2">
           <UPageCard
-            v-for="method in contactMethods"
+            v-for="method in contactMethods.filter((m) => !m.highlight)"
             :key="method.title"
             spotlight
-            :highlight="method.highlight"
-            :class="{
-              'flex-1': method.highlight,
-            }"
           >
             <div class="p-6 space-y-6">
               <div class="flex items-center justify-center mx-auto">
                 <UIcon
                   :name="method.icon"
                   size="3em"
-                  :class="
-                    method.highlight ? 'text-primary-500' : 'text-primary-500'
-                  "
+                  class="text-primary-500"
                 />
               </div>
               <div class="space-y-4">
@@ -137,8 +170,8 @@ onMounted(() => {
                 </div>
 
                 <UButton
-                  :variant="method.highlight ? 'solid' : 'outline'"
-                  :color="method.highlight ? 'primary' : 'neutral'"
+                  variant="outline"
+                  color="neutral"
                   class="w-full justify-center"
                   :aria-label="method.ariaLabel"
                   @click="navigateTo(method.action, { external: true })"
