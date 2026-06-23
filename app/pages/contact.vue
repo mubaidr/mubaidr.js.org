@@ -19,6 +19,17 @@ useHead({
 // Contact methods
 const contactMethods = ref([
   {
+    icon: "i-ph-calendar-blank",
+    title: "No Discovery Call Required",
+    description:
+      "Skip the call — share details via email and I'll respond with a plan",
+    value: "Start async",
+    action:
+      "mailto:mubaidr@gmail.com?subject=Project%20Inquiry&body=Hi%20Muhammad%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project%20without%20a%20discovery%20call.%20Here%20are%20the%20details%3A%0A%0A%5BDescribe%20your%20project%2C%20goals%2C%20timeline%2C%20and%20any%20requirements%5D",
+    ariaLabel: "Start async project discussion via email",
+    highlight: true,
+  },
+  {
     icon: "i-ph-envelope",
     title: "Email",
     description: "Send me an email anytime",
@@ -33,17 +44,6 @@ const contactMethods = ref([
     value: "/in/mubaidr",
     action: "https://linkedin.com/in/mubaidr",
     ariaLabel: "Connect with Muhammad Ubaid Raza on LinkedIn",
-  },
-  {
-    icon: "i-ph-calendar-blank",
-    title: "No Discovery Call Required",
-    description:
-      "Skip the call — share details via email and I'll respond with a plan",
-    value: "Start async",
-    action:
-      "mailto:mubaidr@gmail.com?subject=Project%20Inquiry&body=Hi%20Muhammad%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project%20without%20a%20discovery%20call.%20Here%20are%20the%20details%3A%0A%0A%5BDescribe%20your%20project%2C%20goals%2C%20timeline%2C%20and%20any%20requirements%5D",
-    ariaLabel: "Start async project discussion via email",
-    highlight: true,
   },
   // {
   //   icon: "i-ph-calendar",
@@ -107,15 +107,14 @@ onMounted(() => {
         </div>
 
         <div class="grid gap-8 md:grid-cols-2">
-          <UCard
+          <UPageCard
             v-for="method in contactMethods"
             :key="method.title"
-            :class="[
-              'text-center h-full transition-all duration-200',
-              method.highlight
-                ? 'border-2 border-primary-500 bg-primary-50 dark:bg-primary-900/20 shadow-lg shadow-primary-500/10'
-                : '',
-            ]"
+            spotlight
+            :highlight="method.highlight"
+            :class="{
+              'flex-1': method.highlight,
+            }"
           >
             <div class="p-6 space-y-6">
               <div class="flex items-center justify-center mx-auto">
@@ -148,7 +147,7 @@ onMounted(() => {
                 </UButton>
               </div>
             </div>
-          </UCard>
+          </UPageCard>
         </div>
       </section>
 

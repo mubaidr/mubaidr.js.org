@@ -84,7 +84,7 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       {
-        name: "JetBrains Mono",
+        name: "Berkeley Mono",
         provider: "google",
       },
     ],
