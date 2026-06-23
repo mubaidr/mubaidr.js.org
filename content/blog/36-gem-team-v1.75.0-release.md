@@ -5,6 +5,7 @@ excerpt: "The latest gem-team release adds production-grade quality gates to AI-
 date: 2026-06-22T00:00:00.000Z
 author: mubaidr
 featured: true
+image: /img/blog/36-gem-team-v1.75.0-release/banner.svg
 tags:
   - Gem Team
   - AI Agents

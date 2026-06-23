@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#818cf8;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="highlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#gradient)" />
+  <circle cx="150" cy="120" r="60" fill="rgba(255,255,255,0.1)" />
+  <circle cx="1050" cy="560" r="100" fill="rgba(255,255,255,0.08)" />
+  <circle cx="300" cy="580" r="40" fill="rgba(251,191,36,0.15)" />
+  <circle cx="900" cy="100" r="50" fill="rgba(34,211,238,0.12)" />
+
+  <!-- Version badge -->
+  <rect x="450" y="180" width="300" height="60" rx="30" fill="url(#highlight)" opacity="0.2" />
+  <text x="600" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="600" fill="#fbbf24" text-anchor="middle" dominant-baseline="middle">
+    v1.75.0 Release
+  </text>
+
+  <!-- Main title -->
+  <text x="600" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">
+    Gem Team
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="32" fill="rgba(255,255,255,0.9)" text-anchor="middle" dominant-baseline="middle">
+    Quality Gates &amp; Verification
+  </text>
+
+  <!-- Feature tags -->
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="rgba(255,255,255,0.8)" text-anchor="middle" dominant-baseline="middle">
+    <text x="600" y="440">✓ Pre-Flight Verification</text>
+    <text x="600" y="475">✓ Accessibility Audits (WCAG AA)</text>
+    <text x="600" y="510">✓ Visual Diff Thresholds</text>
+    <text x="600" y="545">✓ Devil's Advocate • Differential Diagnosis</text>
+  </g>
+
+  <!-- Decorative curve -->
+  <path d="M 300 600 Q 600 520 900 600" stroke="url(#accent)" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6" />
+
+  <!-- Small indicator dots -->
+  <g fill="rgba(255,255,255,0.4)">
+    <circle cx="500" cy="620" r="4" />
+    <circle cx="600" cy="625" r="4" />
+    <circle cx="700" cy="620" r="4" />
+  </g>
+</svg>
