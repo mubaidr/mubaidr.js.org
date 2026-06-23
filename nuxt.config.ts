@@ -153,6 +153,7 @@ export default defineNuxtConfig({
   },
 
   ogImage: {
+    buildCache: true,
     zeroRuntime: true,
   },
 

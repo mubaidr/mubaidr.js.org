@@ -1,5 +1,6 @@
 projects:
   - id: 11
+    rank: 2
     title: ParagonSquare.ai
     description: Next-generation multi-marketplace platform offering 0% commission through subscription model, combining auctions, products, services, and future vacation rentals.
     longDescription: >-
@@ -65,6 +66,7 @@ projects:
       industry: E-commerce & Marketplace
     type: Client Project
   - id: 15
+    rank: 3
     title: AI Document Chat Platform
     description: Interactive web application with document repository and AI-based chat portal that responds to queries based on uploaded PDF and Word documents, including scanned copies with OCR support.
     longDescription: AI Document Chat Platform is a comprehensive web application that combines document management with intelligent AI-powered chat capabilities. Users can upload and browse through a repository of documents in PDF and Word formats, then interact with an AI chat system that answers questions based on the content of those documents. The platform features advanced OCR (Optical Character Recognition) technology to read and process scanned documents, making it possible to extract information from image-based PDFs and other non-text formats. The system includes a robust administrative dashboard that displays usage statistics, query analytics, user activity, and document engagement metrics. Built with a scalable back-end architecture supporting secure Single Sign-On (SSO) authentication, the platform ensures data security and seamless user access. The AI chat functionality leverages modern language models to provide contextual, accurate responses based on document content, with the ability to handle multiple document sources simultaneously. The application features a user-friendly interface optimized for document browsing, query submission, and result visualization, making it easy for users to find information quickly and efficiently.
@@ -130,6 +132,7 @@ projects:
       industry: Technology & AI
     type: Client Project
   - id: 16
+    rank: 6
     title: WhatsApp Chat Summary
     description: AI-powered platform that connects to WhatsApp accounts via QR code to generate intelligent summaries of chat conversations, with the ability to ask questions about chats and get suggested replies.
     longDescription: WhatsApp Chat Summary is a full-stack web application that enables users to connect their WhatsApp accounts through QR code authentication. Once connected, the platform fetches all chat conversations and leverages AI (Google Generative AI and OpenAI) to generate comprehensive summaries of each chat. Users can view their chat history, generate new summaries, ask specific questions about their conversations using RAG (Retrieval-Augmented Generation), and receive AI-powered reply suggestions. The platform supports multiple phone numbers per user, real-time session management via Server-Sent Events, and vector-based semantic search using pgvector embeddings. The backend is powered by a NestJS server with PostgreSQL database for data persistence.
@@ -192,6 +195,7 @@ projects:
     teamSize: 3
     type: Client Project
   - id: 18
+    rank: 12
     title: OR-Tools Route Optimizer
     description: A FastAPI-based route optimization service using Google OR-Tools for solving Vehicle Routing Problems (VRP) with time windows and job constraints.
     longDescription: OR-Tools Route Optimizer is a sophisticated route planning and optimization platform designed for field service operations. It leverages Google OR-Tools to solve complex Vehicle Routing Problems (VRP) with time windows, enabling organizations to efficiently schedule and route field technicians or service vehicles. The system employs a multi-step relaxation approach that progressively relaxes time window constraints when no feasible solution exists, starting with ±30 minute windows and escalating to full-day windows. It supports multiple optimization objectives including least violations, shortest time, and shortest distance. The platform provides both a REST API built with FastAPI and a command-line interface for running optimizations. Interactive route visualization is available through Folium maps, while real-world routing data is sourced from Mapbox. The application is designed for field service companies, delivery fleets, and any organization requiring optimized route scheduling with complex constraints.
@@ -252,6 +256,7 @@ projects:
       industry: Logistics & Field Services
     type: Internal Tool
   - id: 12
+    rank: 5
     title: Midnight Run
     description: Community outreach platform organizing weekly street runs to provide food, clothing, and companionship to homeless individuals in New York City.
     longDescription: Midnight Run is a digital platform supporting a 40+ year community outreach movement in New York City. The platform coordinates weekly volunteer runs where community members distribute food, clothing, and provide companionship to neighbors experiencing homelessness. Features include a public run calendar with event scheduling, volunteer registration and authentication, detailed run information for registered users, community feedback collection, and newsletter subscription. The platform bridges civic groups, churches, and individuals to create a network of mutual support, making it easy for volunteers to get involved through food preparation, direct outreach, and community building activities.
@@ -306,6 +311,7 @@ projects:
       industry: Non-profit & Community Service
     type: Client Project
   - id: 10
+    rank: 1
     title: ParagonRentals.ai
     description: Comprehensive vacation rental marketplace platform connecting property owners with guests, featuring real-time communication, secure payments, and advanced analytics.
     longDescription: ParagonRentals.ai is a next-generation vacation rental marketplace that connects property owners with guests worldwide. The platform features real-time messaging, secure payment processing with multi-currency support, advanced fraud detection, and comprehensive analytics. Built with modern technologies including WebSocket for real-time updates, Laravel for backend authentication, and Nuxt with Vue 3 for a responsive frontend. The platform serves dual user bases with distinct feature sets for guests (searching, booking, messaging) and hosts (listing, calendar management, analytics dashboard).
@@ -365,6 +371,7 @@ projects:
       industry: Travel & Hospitality
     type: Client Project
   - id: 8
+    rank: 4
     title: Online Recruitment System
     description: Modern recruitment platform for companies hiring with AI-powered candidate matching and automated workflows.
     longDescription: A comprehensive online recruitment system designed to streamline the hiring process for companies of all sizes. Features include AI-powered candidate matching, automated job posting, applicant tracking system (ATS), interview scheduling, candidate assessments, and detailed analytics. Built to reduce time-to-hire and improve recruitment efficiency.
@@ -416,6 +423,7 @@ projects:
       industry: Human Resources
     type: Client Project
   - id: 20
+    rank: 7
     title: Parody CV
     description: AI-powered platform for generating humorous, theme-based parody CVs using GPT-5 and Gemini image processing.
     longDescription: Parody CV is a sophisticated API platform that generates funny, theme-based parody CVs using artificial intelligence. Users can upload photos, select from various creative themes (like Space Opera, Medieval Fantasy, etc.), and receive personalized humorous CVs that reinterpret their traits, skills, and experiences in comedic ways. The platform features a credit-based monetization system, secure user authentication via Kinde, Stripe payment integration for credit purchases, and advanced sharing capabilities with expirable tokens. Users can regenerate entire CVs or specific sections (objective, experience, skills, achievements, endorsements), and images can be transformed into cartoonish cyberpunk styles using Google's Gemini AI. The system supports public sharing via secure tokens with customizable expiration and usage limits.
@@ -483,6 +491,7 @@ projects:
       industry: AI & Creative Technology
     type: Client Project
   - id: 9
+    rank: 15
     title: Real-time Chat Application
     description: Scalable chat application with video calling, file sharing, and team channels.
     longDescription: Enterprise-grade chat application supporting real-time messaging, video calls, file sharing, and team collaboration. Built with modern technologies to support thousands of concurrent users with features like message encryption, custom emojis, and integration capabilities.
@@ -529,6 +538,7 @@ projects:
     teamSize: 4
     type: Enterprise Application
   - id: 1
+    rank: 8
     title: AI PhishNet
     description: Chrome extension using dual AI technology to detect zero-day phishing URLs and protect users from sophisticated phishing attacks.
     longDescription: AI PhishNet is an advanced Chrome extension that leverages Prosfinity's unique AI technology to detect zero-day phishing URLs and protect both individuals and organizations from sophisticated phishing attacks. The extension employs two specialized AI models - PhishNet AI One analyzes domain names for suspicious patterns, while PhishNet AI Two examines URL patterns and signatures to identify phishing attempts. Features include customizable whitelist management, intelligent warning alerts, neutral alert pages for uncertain matches, and company-level protection with centralized management. The extension offers two security modes - Intensive Mode for comprehensive URL analysis (including domain, path, and query string) and Alert Mode for maximum security with enhanced warnings. Additionally, AI PhishNet includes built-in phishing user awareness training on alert pages to educate users about different types of phishing attacks and how to identify them.
@@ -588,6 +598,7 @@ projects:
       industry: Cybersecurity
     type: Client Project
   - id: 17
+    rank: 13
     title: Al Sammak Digital
     description: E-commerce platform for hardware and fasteners wholesale company based in UAE, featuring product catalog, lead generation, and admin management.
     longDescription: Al Sammak Digital is a comprehensive e-commerce and lead generation platform built for Al Sammak Overseas Trading LLC, a established hardware and fasteners wholesale company operating across the UAE and international markets. The platform serves as both a digital storefront for product showcase and a lead generation tool for business inquiries. Built on Payload CMS 3.0 with Next.js 15, it features a complete product management system with categories, brands, product variants with customizable specifications, media management, and user authentication. The public-facing website includes dynamic product browsing with filtering by category, brand, and search, while providing lead generation through comprehensive contact forms. The admin dashboard enables complete content management including slider management, site settings, and product catalog administration. The platform is containerized with Docker support and configured for production deployment with PostgreSQL.
@@ -655,6 +666,7 @@ projects:
       industry: Hardware & Fasteners Ecommerce
     type: Client Project
   - id: 19
+    rank: 14
     title: RemindMeBot
     description: WhatsApp-based personal assistant that helps users manage files and set expiry reminders through natural conversation.
     longDescription: RemindMeBot is a hybrid system consisting of a WhatsApp bot interface and a web-based dashboard that helps users manage important life reminders and files through natural conversation. Users can upload files (passports, IDs, certificates) via WhatsApp, set expiry/due date reminders with custom intervals (90/60/30 days before), and receive automated WhatsApp notifications before deadlines. The platform supports dual intent processing - both AI-based NLP interpretation for natural language commands and guided questionnaire-based interaction for structured reminder setup. Additional features include file retrieval via simple commands ("Send me my passport"), email forwarding to third parties, proactive bot suggestions, and a comprehensive web dashboard for managing all files and reminders. The system uses PostgreSQL for data storage, AWS S3 for secure encrypted file storage, BullMQ for job scheduling, and better-auth for secure user authentication.
@@ -721,6 +733,7 @@ projects:
       industry: Productivity & Personal Assistant
     type: Personal Project
   - id: 13
+    rank: 9
     title: Online Grocery Calorie Tracker
     description: Chrome extension that tracks and displays caloric content of grocery items in online shopping carts from Woolworths and Coles with free and premium tiers.
     longDescription: Online Grocery Calorie Tracker is a Chrome extension designed to help health-conscious users make informed nutritional decisions while shopping online. The extension integrates seamlessly with Woolworths.com.au and Coles.com.au, scanning the user's shopping cart to retrieve and display comprehensive caloric information including total calories, fats, proteins, and carbohydrates. The tool features a clean, intuitive interface that presents nutritional breakdowns in real-time, allowing users to adjust their cart before checkout. The project includes a Python backend for efficient data processing and caloric information retrieval, with optional GPT-3 integration for enhanced accuracy. The extension operates on a freemium model - the free tier provides basic caloric information and nutritional breakdowns, while the premium tier offers personalized recommendations for healthier alternatives, caloric intake tracking over time, and integration with additional grocery delivery platforms. The paywall feature includes secure payment processing to unlock premium features.
@@ -782,6 +795,7 @@ projects:
       industry: Health & Wellness
     type: Client Project
   - id: 14
+    rank: 10
     title: Parallel Automation Framework
     description: High-performance Node.js automation framework capable of executing 200+ parallel tasks for SEO operations, clicking behavior simulation, and online workflows.
     longDescription: Parallel Automation Framework is an extremely efficient Node.js-based automation system designed for high-volume web operations including SEO tasks, clicking behavior simulation, and complex online workflow automation. The framework leverages advanced concurrency management and resource optimization techniques to execute up to 200 parallel tasks simultaneously even on local systems, making it ideal for large-scale automation projects. Built with performance at its core, the system utilizes worker pools, connection pooling, and intelligent task scheduling to maximize throughput while maintaining stability. The framework supports browser automation through Puppeteer and Playwright, HTTP request orchestration, and custom task workflows. Features include distributed task execution, real-time monitoring and logging, rate limiting and anti-detection mechanisms, and comprehensive error handling with automatic retry logic. The system is designed to handle resource-intensive operations efficiently, managing memory, CPU, and network usage to prevent system overload while maintaining high performance across all parallel tasks.
@@ -796,7 +810,7 @@ projects:
       - WebSocket
       - MongoDB
       - Docker
-    category: Development Tools
+    category: Open Source
     featured: true
     status: active
     startDate: "2023-06-01"
@@ -810,37 +824,38 @@ projects:
       throughput: 1000+ tasks/minute
     features:
       - 200+ parallel task execution on local systems
-      - Advanced worker pool management
-      - Browser automation with Puppeteer and Playwright
-      - HTTP request orchestration and scaling
-      - Real-time task monitoring and logging
-      - Rate limiting and anti-detection mechanisms
-      - Automatic retry logic with exponential backoff
-      - Resource optimization (CPU, memory, network)
-      - Distributed task execution support
-      - Custom workflow builder and task scheduler
+      - Worker pool management
+      - Puppeteer & Playwright
+      - HTTP orchestration
+      - Real-time monitoring
+      - Rate limiting & anti-detection
+      - Auto-retry with backoff
+      - Resource optimization
+      - Distributed execution
+      - Custom workflow builder
     challenges:
-      - Managing 200+ concurrent browser instances without system overload
-      - Implementing efficient resource allocation and load balancing
-      - Handling rate limiting and anti-bot detection from target websites
-      - Designing robust error handling for large-scale parallel operations
-      - Optimizing memory usage for high-concurrency scenarios
-      - Building real-time monitoring for hundreds of simultaneous tasks
+      - 200+ concurrent browsers
+      - Resource allocation & load balancing
+      - Rate limiting & anti-bot
+      - Error handling at scale
+      - Memory optimization
+      - Real-time monitoring
     outcomes:
-      - Successfully executed 10M+ automated tasks
-      - Achieved 200+ parallel task execution on local systems
-      - Maintained 99.9% uptime with zero data loss
-      - Processed 1000+ tasks per minute consistently
-      - Reduced automation time by 95% compared to sequential execution
+      - 10M+ tasks executed
+      - 200+ parallel on local
+      - 99.9% uptime
+      - 1000+ tasks/minute
+      - 95% time reduction
     businessImpact:
-      scalability: 200+ parallel tasks on single machine
-      efficiency: 95% reduction in automation time
-      throughput: 10M+ tasks executed successfully
-      reliability: 99.9% uptime with robust error handling
+      scalability: 200+ parallel tasks
+      efficiency: 95% time reduction
+      throughput: 10M+ tasks
+      reliability: 99.9% uptime
     myRole: Lead Developer & Architect
     teamSize: 2
     type: Open Source
   - id: 2
+    rank: 11
     title: Vite Vue3 Browser Extension V3
     description: A modern template for building cross-browser extensions using Vue 3, TypeScript, Vite, and Manifest V3.
     longDescription: A comprehensive starter template for building modern browser extensions that work across Chrome, Firefox, Edge, and Safari. Built with Vue 3, TypeScript, Vite for lightning-fast builds, and the latest Manifest V3 specifications, this template provides a solid foundation for extension development with hot reloading, automated building, and cross-browser compatibility.
@@ -851,7 +866,7 @@ projects:
       - Vite
       - Manifest V3
       - SCSS
-    category: Development Tools
+    category: Open Source
     featured: true
     status: active
     startDate: "2021-08-10"
@@ -865,27 +880,28 @@ projects:
       forks: "120"
       downloads: 25k+
     features:
-      - Cross-browser compatibility
-      - Hot reload development
-      - TypeScript support
-      - Automated build process
-      - Manifest V3 ready
+      - Cross-browser (Chrome, Firefox, Edge, Safari)
+      - Hot reload dev
+      - TypeScript
+      - Auto build
+      - Manifest V3
     challenges:
-      - Cross-browser API differences
-      - Manifest V3 migration complexities
-      - Build optimization for extensions
+      - Cross-browser API diffs
+      - Manifest V3 migration
+      - Build optimization
     outcomes:
       - 800+ GitHub stars
-      - 10k+ active users
-      - Featured in Chrome Web Store
+      - 10k+ users
+      - Chrome Web Store featured
     businessImpact:
-      openSourceImpact: 10K+ developers using the template
-      developerProductivity: Reduced extension setup time by 80%
-      communityAdoption: 25K+ downloads, featured in Chrome Web Store
+      openSourceImpact: 10K+ developers
+      developerProductivity: 80% setup reduction
+      communityAdoption: 25K+ downloads
     myRole: Creator & Maintainer
     teamSize: 1
     type: Open Source
   - id: 6
+    rank: 16
     title: API Documentation Tool
     description: Interactive API documentation generator with live testing capabilities and beautiful UI.
     longDescription: A developer-focused tool for generating beautiful, interactive API documentation. Features live testing capabilities, code examples in multiple languages, authentication testing, and collaborative features. Designed to make API documentation both beautiful and functional.
@@ -896,7 +912,7 @@ projects:
       - Prism.js
       - MongoDB
       - Docker
-    category: Development Tools
+    category: Open Source
     featured: false
     status: completed
     startDate: "2022-01-10"
@@ -910,25 +926,25 @@ projects:
       apis_documented: 1k+
     features:
       - Interactive API testing
-      - Multiple language examples
-      - Authentication support
+      - Multi-language examples
+      - Auth support
       - Collaborative editing
       - Custom branding
-      - Export capabilities
+      - Export
     challenges:
-      - Supporting multiple API specifications
-      - Real-time collaboration implementation
-      - Code generation for multiple languages
+      - Multi-spec support
+      - Real-time collaboration
+      - Multi-language code gen
     outcomes:
-      - 450+ GitHub stars
+      - 450+ stars
       - 15k+ downloads
-      - 3k+ active users
+      - 3k+ users
       - 1k+ APIs documented
     businessImpact:
-      openSourceImpact: 3K+ developers using the tool
-      productivity: Reduced documentation time by 60%
-      adoption: 1K+ APIs documented using the tool
-      community: 450+ GitHub stars, 15K+ downloads
+      openSourceImpact: 3K+ developers
+      productivity: 60% doc time reduction
+      adoption: 1K+ APIs documented
+      community: 450+ stars, 15K+ downloads
     myRole: Creator & Developer
     teamSize: 1
     type: Open Source
@@ -940,6 +956,6 @@ categories:
   - name: SaaS
     count: 3
   - name: Development Tools
-    count: 5
-  - name: Open Source
     count: 2
+  - name: Open Source
+    count: 3

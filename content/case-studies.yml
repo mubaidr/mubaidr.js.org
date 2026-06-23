@@ -1,28 +1,16 @@
 caseStudies:
-  - id: 1
-    problem: Vacation rental marketplace needed real-time features and secure payments at scale
-    solution: Built WebSocket-powered platform with 3D Secure payments and fraud detection
-    metric: 10K+ properties, 50K+ guests, 99.9% uptime
-    link: /projects
-    projectRef: 10
-  - id: 2
-    problem: Recruitment process was slow and manual with high time-to-hire
-    solution: Developed AI-powered platform with automated workflows and candidate matching
-    metric: 100+ companies, 40% faster hiring, 2K+ successful hires
-    link: /projects
-    projectRef: 8
-  - id: 3
-    problem: Enterprise struggled with slow document search and information retrieval
-    solution: Created AI chat platform with OCR and intelligent document indexing
-    metric: 50K+ documents, 90% faster search, 95% query accuracy
-    link: /projects
-    projectRef: 15
   - id: 4
     problem: Marketplace startup needed to disrupt 10-25% commission model with scalable multi-marketplace architecture
     solution: Built subscription-based platform with 4 marketplaces, 72-hr funds release, 3-way dispute resolution, and KYC verification
     metric: 28K+ signups, 600K+ visitors across 5 countries, $18K+ raised, IPO-track
     link: /projects
     projectRef: 11
+  - id: 3
+    problem: Enterprise struggled with slow document search and information retrieval
+    solution: Created AI chat platform with OCR and intelligent document indexing
+    metric: 50K+ documents, 90% faster search, 95% query accuracy
+    link: /projects
+    projectRef: 15
   - id: 5
     problem: Enterprise struggled with 50K+ unsearchable documents and manual review bottlenecks
     solution: Developed AI chat platform with OCR, vector search, and RAG — 95% query accuracy, 90% faster retrieval
@@ -35,3 +23,15 @@ caseStudies:
     metric: Multi-phone support, real-time SSE, pgvector search, JWT auth
     link: /projects
     projectRef: 16
+  - id: 1
+    problem: Vacation rental marketplace needed real-time features and secure payments at scale
+    solution: Built WebSocket-powered platform with 3D Secure payments and fraud detection
+    metric: 10K+ properties, 50K+ guests, 99.9% uptime
+    link: /projects
+    projectRef: 10
+  - id: 2
+    problem: Recruitment process was slow and manual with high time-to-hire
+    solution: Developed AI-powered platform with automated workflows and candidate matching
+    metric: 100+ companies, 40% faster hiring, 2K+ successful hires
+    link: /projects
+    projectRef: 8

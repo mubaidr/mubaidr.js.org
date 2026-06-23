@@ -262,6 +262,7 @@ export default defineContentConfig({
         projects: z.array(
           z.object({
             id: z.number(),
+            rank: z.number().optional().default(999),
             title: z.string(),
             description: z.string(),
             longDescription: z.string(),
