@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-label="Async-First Engineering">
+  <title>Async-First Engineering in 2026</title>
+  <desc>Async workflow diagram showing written specs flowing through GitHub issues to structured delivery</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="50%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="ghGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="specGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="deliverGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg)"/>
+  <g opacity="0.03">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5"/>
+    </pattern>
+    <rect width="1200" height="680" fill="url(#grid)"/>
+  </g>
+  <g transform="translate(150, 180)">
+    <rect x="0" y="0" width="160" height="50" rx="25" fill="url(#specGrad)" opacity="0.9"/>
+    <text x="80" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#0d1117" text-anchor="middle" font-weight="bold">Written Spec</text>
+  </g>
+  <line x1="310" y1="205" x2="400" y2="205" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4,3" opacity="0.6"/>
+  <polygon points="400,198 415,205 400,212" fill="#3b82f6" opacity="0.6"/>
+  <g transform="translate(420, 180)">
+    <rect x="0" y="0" width="160" height="50" rx="25" fill="url(#ghGrad)" opacity="0.9"/>
+    <text x="80" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">GitHub Issue</text>
+  </g>
+  <line x1="580" y1="205" x2="670" y2="205" stroke="#a78bfa" stroke-width="2" stroke-dasharray="4,3" opacity="0.6"/>
+  <polygon points="670,198 685,205 670,212" fill="#a78bfa" opacity="0.6"/>
+  <g transform="translate(690, 180)">
+    <rect x="0" y="0" width="160" height="50" rx="25" fill="url(#deliverGrad)" opacity="0.9"/>
+    <text x="80" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">Delivery</text>
+  </g>
+  <text x="600" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#8b8cba" text-anchor="middle" letter-spacing="2">ASYNC FLOW</text>
+  <text x="600" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="bold" fill="#e0e7ff" text-anchor="middle" dominant-baseline="middle">Async-First Engineering in 2026</text>
+  <text x="600" y="465" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#8b8cba" text-anchor="middle" dominant-baseline="middle">Why I Avoid Most Technical Calls</text>
+  <line x1="400" y1="500" x2="800" y2="500" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+  <text x="600" y="530" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#3b82f6" text-anchor="middle" letter-spacing="3">WRITTEN SPECS • GITHUB WORKFLOWS • STRUCTURED DELIVERY</text>
+</svg>

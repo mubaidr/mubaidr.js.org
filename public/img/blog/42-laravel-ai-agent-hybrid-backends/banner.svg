@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-label="Laravel AI Agent Hybrid Backends">
+  <title>Laravel + AI Agent Systems</title>
+  <desc>Hybrid backend architecture showing Laravel orchestration layer connecting to AI agent systems via queues and API gateway</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0a1a"/>
+      <stop offset="50%" stop-color="#1a0a2e"/>
+      <stop offset="100%" stop-color="#0f0a1a"/>
+    </linearGradient>
+    <linearGradient id="laravel" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f05340"/>
+      <stop offset="100%" stop-color="#d93c2a"/>
+    </linearGradient>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="queueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg)"/>
+  <g opacity="0.03">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5"/>
+    </pattern>
+    <rect width="1200" height="680" fill="url(#grid)"/>
+  </g>
+  <g transform="translate(120, 180)">
+    <rect x="0" y="0" width="200" height="80" rx="12" fill="url(#laravel)" opacity="0.9"/>
+    <text x="100" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">Laravel</text>
+    <text x="100" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#ffffff" fill-opacity="0.8" text-anchor="middle">Orchestration Layer</text>
+  </g>
+  <g transform="translate(480, 120)">
+    <rect x="0" y="0" width="180" height="60" rx="10" fill="url(#queueGrad)" opacity="0.9"/>
+    <text x="90" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#0f0a1a" text-anchor="middle" font-weight="bold">Queue Jobs</text>
+  </g>
+  <g transform="translate(480, 210)">
+    <rect x="0" y="0" width="180" height="60" rx="10" fill="url(#aiGrad)" opacity="0.9"/>
+    <text x="90" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">API Gateway</text>
+  </g>
+  <g transform="translate(860, 180)">
+    <rect x="0" y="0" width="200" height="80" rx="12" fill="url(#aiGrad)" opacity="0.9"/>
+    <text x="100" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">AI Agents</text>
+    <text x="100" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#ffffff" fill-opacity="0.8" text-anchor="middle">LLM Workers</text>
+  </g>
+  <line x1="320" y1="210" x2="480" y2="150" stroke="#22c55e" stroke-width="2" stroke-dasharray="4,3" opacity="0.6"/>
+  <line x1="320" y1="230" x2="480" y2="240" stroke="#6366f1" stroke-width="2" stroke-dasharray="4,3" opacity="0.6"/>
+  <line x1="660" y1="150" x2="860" y2="210" stroke="#22c55e" stroke-width="2" stroke-dasharray="4,3" opacity="0.6"/>
+  <line x1="660" y1="240" x2="860" y2="210" stroke="#6366f1" stroke-width="2" stroke-dasharray="4,3" opacity="0.6"/>
+  <text x="600" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="bold" fill="#e0e7ff" text-anchor="middle" dominant-baseline="middle">Laravel + AI Agent Systems</text>
+  <text x="600" y="385" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#8b8cba" text-anchor="middle" dominant-baseline="middle">Building Hybrid Backends in 2026</text>
+  <line x1="400" y1="420" x2="800" y2="420" stroke="#f05340" stroke-width="2" stroke-linecap="round"/>
+  <text x="600" y="450" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#f05340" text-anchor="middle" letter-spacing="3">QUEUE-DRIVEN EXECUTION • LLM GATEWAY • HYBRID ARCHITECTURE</text>
+</svg>

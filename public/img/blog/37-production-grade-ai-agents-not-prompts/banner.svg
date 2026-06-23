@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-label="Production-Grade AI Agents">
+  <title>Production-Grade AI Agents Are Not Prompts</title>
+  <desc>DAG execution graph showing agent orchestration with phase detection, routing, and specialist agents</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0a1d"/>
+      <stop offset="50%" stop-color="#1a1040"/>
+      <stop offset="100%" stop-color="#0f0c29"/>
+    </linearGradient>
+    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="accent2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg)"/>
+  <g opacity="0.03">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5"/>
+    </pattern>
+    <rect width="1200" height="680" fill="url(#grid)"/>
+  </g>
+  <g transform="translate(600, 300)">
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#8b5cf6" stroke-width="1" opacity="0.15"/>
+    <circle cx="0" cy="0" r="90" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.2"/>
+    <circle cx="0" cy="0" r="60" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="2"/>
+    <polygon points="0,-45 38,0 0,14 -38,0" fill="url(#accent2)" opacity="0.8"/>
+    <polygon points="-38,0 0,14 0,45" fill="#6366f1"/>
+    <polygon points="38,0 0,14 0,45" fill="#4f46e5"/>
+    <polygon points="0,-45 38,0 0,14 -38,0" fill="#c7d2fe" opacity="0.2"/>
+  </g>
+  <text x="600" y="430" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="bold" fill="#e0e7ff" text-anchor="middle" dominant-baseline="middle">Production-Grade AI Agents</text>
+  <text x="600" y="475" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#8b8cba" text-anchor="middle" dominant-baseline="middle">Are Not Prompts — They Are Systems</text>
+  <line x1="420" y1="510" x2="780" y2="510" stroke="url(#accent1)" stroke-width="2" stroke-linecap="round"/>
+  <text x="600" y="540" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#6366f1" text-anchor="middle" letter-spacing="3">ORCHESTRATION LAYER • DAG EXECUTION • ROUTING</text>
+</svg>
