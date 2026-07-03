@@ -7,9 +7,9 @@ defineProps<{
 // Fetch profile data using composable
 const { data: profileData } = await useProfileData()
 
-const available = computed(
-  () => profileData.value?.availability?.status === "available",
-)
+// const available = computed(
+//   () => profileData.value?.availability?.status === "available",
+// )
 </script>
 
 <template>

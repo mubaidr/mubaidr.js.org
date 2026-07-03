@@ -94,12 +94,7 @@ The orchestrator starts by assessing the incoming goal. It does not assume every
 // Phase detection logic from gem-orchestrator
 type GoalComplexity = "simple" | "medium" | "complex"
 type WorkflowPhase =
-  | "discuss"
-  | "prd"
-  | "research"
-  | "planning"
-  | "execution"
-  | "summary"
+  "discuss" | "prd" | "research" | "planning" | "execution" | "summary"
 
 interface GoalAssessment {
   complexity: GoalComplexity
