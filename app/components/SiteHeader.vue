@@ -15,7 +15,7 @@
           <!-- Logo/Brand -->
           <ULink
             to="/"
-            class="flex items-center gap-2 px-2 py-1 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200 font-mono"
+            class="flex items-center gap-2 px-2 py-1 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200"
             aria-label="Go to homepage"
           >
             <span

@@ -31,7 +31,7 @@ const { data: profileData } = await useProfileData()
         >
           <template #footer>
             <div>
-              <div class="text-2xl font-bold mb-1 font-mono">
+              <div class="text-2xl font-bold mb-1">
                 <UIcon
                   name="i-ph-git-commit"
                   class="w-5 h-5 inline-block mr-1 text-primary-500"
@@ -56,7 +56,7 @@ const { data: profileData } = await useProfileData()
         >
           <template #footer>
             <div>
-              <div class="text-2xl font-bold mb-1 font-mono">
+              <div class="text-2xl font-bold mb-1">
                 <UIcon
                   name="i-ph-clock"
                   class="w-5 h-5 inline-block mr-1 text-primary-500"
@@ -82,7 +82,7 @@ const { data: profileData } = await useProfileData()
         >
           <template #footer>
             <div>
-              <div class="text-2xl font-bold mb-1 font-mono">
+              <div class="text-2xl font-bold mb-1">
                 <UIcon
                   name="i-ph-users"
                   class="w-5 h-5 inline-block mr-1 text-primary-500"

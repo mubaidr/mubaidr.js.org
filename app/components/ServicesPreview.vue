@@ -41,7 +41,7 @@ const { data: servicesData, pending: isLoading } = await useServicesPreview(3)
                 />
               </div>
               <div class="space-y-3">
-                <h3 class="font-bold font-mono">
+                <h3 class="font-bold">
                   <UIcon
                     name="i-ph-braces"
                     class="w-4 h-4 inline-block mr-1 text-primary-500/60"

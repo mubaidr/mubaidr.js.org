@@ -6,7 +6,7 @@ const IS_DEV = import.meta.dev
 export default defineNuxtConfig({
   colorMode: {
     preference: "system",
-    fallback: "light",
+    fallback: "dark",
     classSuffix: "",
   },
 

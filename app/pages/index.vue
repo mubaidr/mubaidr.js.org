@@ -56,23 +56,23 @@ if (profileData.value) {
     <!-- Subtle gradient background -->
     <div class="absolute inset-0 -z-10">
       <div
-        class="absolute inset-0 bg-linear-to-b from-primary-50/50 via-transparent to-transparent dark:from-primary-950/20"
+        class="absolute inset-0 bg-linear-to-b from-primary-50/20 via-transparent to-transparent dark:from-primary-950/20"
       />
     </div>
 
     <section
       v-if="profileData"
-      class="min-h-[90vh] flex items-center justify-center py-16 md:py-24"
+      class="min-h-[60vh] flex items-center justify-center py-32 md:py-48"
     >
       <div class="max-w-3xl mx-auto px-4 space-y-8">
         <div class="flex flex-col items-center text-center space-y-6">
           <!-- Label -->
-          <p
-            class="fade-in-up stagger-1 text-sm font-medium tracking-[0.2em] uppercase text-primary font-mono"
+          <!-- <p
+            class="fade-in-up stagger-1 text-sm font-medium tracking-[0.2em] uppercase"
           >
             <UIcon name="i-ph-terminal" class="w-4 h-4 inline-block mr-2" />
             {{ profileData.title }}
-          </p>
+          </p> -->
 
           <!-- Name as Hero -->
           <h1
@@ -84,7 +84,7 @@ if (profileData.value) {
           <!-- Tagline as Subheading with monospace code aesthetic -->
           <p
             v-if="profileData.heroHeadline"
-            class="fade-in-up stagger-3 text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl font-mono"
+            class="fade-in-up stagger-3 text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl"
           >
             <UIcon
               name="i-ph-brackets-angle"
