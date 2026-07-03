@@ -11,7 +11,8 @@ authorUrl: https://mubaidr.js.org
 featured: true
 tags: - Laravel - Nuxt - Dokploy - Docker - Deployment - DevOps - Production - Traefik - Let's Encrypt
 readingTime: "18 min read"
-socialImage: src: /img/blog/43-dokploy-deploy-laravel-nuxt/banner.svg
+socialImage: 
+  src: /img/blog/43-dokploy-deploy-laravel-nuxt/banner.svg
   mime: svg
   alt: "Dokploy deployment architecture showing Laravel backend and Nuxt frontend services with Traefik proxy and Let's Encrypt SSL"
   width: 1200
