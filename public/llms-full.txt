@@ -1,0 +1,237 @@
+<project title="Muhammad Ubaid Raza — AI Agent Architect & Full-Stack Consultant" summary="Senior Software Engineer (13+ years) specializing in AI agent systems, LLM orchestration, Laravel, Nuxt, and scalable SaaS architecture. 125+ projects delivered with 100% client satisfaction.">
+
+<context>
+This is the full AI context for mubaidr.js.org — a personal portfolio, blog, and consulting landing page for Muhammad Ubaid Raza.
+
+Key facts:
+- 13+ years of software engineering experience
+- 125+ projects delivered with 100% client satisfaction
+- Available for new projects (next opening: April 2025)
+- Response time: ~3 hours | Timezone: GMT+5
+- Payment: 20% upfront, rest on milestones
+- Pricing: MVP $5K-$15K USD | Architecture audit $1.5K-$3K USD | Hourly $100-$125 USD
+- Works with: Startups, SMEs, Enterprise, Agencies, Individual Founders
+- Current focus: Infrastructure as Code (IaC), Cloud-native tooling, AI-assisted development workflows
+- Tech stack: Vue.js/Nuxt, React/Next.js, Node.js, TypeScript, PostgreSQL, MongoDB, Docker, AWS
+- Open source maintainer of gem-team: multi-agent AI development framework
+</context>
+
+<profile>
+Name: Muhammad Ubaid R.
+Title: Senior Software Engineer | Full-Stack Developer | DevOps Enthusiast
+Hero: Senior Software Engineer building scalable systems and developer tools. Open source maintainer
+Tagline: Delivered 125+ projects with 100% client satisfaction. 13 years building scalable systems.
+Description: Delivering robust, scalable, and user-focused software solutions that drive business success.
+
+Work Approach:
+- Architecting solutions and managing product lifecycles — optimizing performance, scalability, and security
+- Leading agile teams and collaborating with clients — ensuring clarity, timeliness, and adaptability
+- Automating workflows and ensuring code quality
+
+Social:
+- GitHub: https://github.com/mubaidr
+- LinkedIn: https://www.linkedin.com/in/mubaidr
+- X (Twitter): https://x.com/mubaidr
+</profile>
+
+<services>
+1. Full-Stack Development — $100+/hr, 2-12 weeks
+   - Vue.js / Nuxt.js Applications
+   - React / Next.js Development
+   - Node.js Backend Services
+   - Database Design & Integration
+   - API Development & Integration
+   - Performance Optimization
+
+2. Technical Consulting — $120+/hr, 1-4 weeks
+   - Technology Stack Selection
+   - Architecture Design & Review
+   - Code Review & Audit
+   - Performance Analysis
+   - Scalability Planning
+   - Best Practices Implementation
+
+3. Project Leadership — Custom pricing
+   - Development team leadership
+   - Agile project delivery
+   - Mentoring & code review
+   - Technical project management
+
+4. Code Review & Mentoring — $100/hr
+   - Code quality assessment
+   - Best practices guidance
+   - Team skill development
+   - Architecture recommendations
+
+5. Browser Extension Development — Custom pricing
+   - Chrome & Firefox extensions
+   - Vite + Vue 3 tooling
+   - Cross-browser compatibility
+   - Extension store publishing
+
+6. API Development & Integration — $100/hr
+   - RESTful & GraphQL APIs
+   - Stripe integration
+   - Payment gateway integration
+   - Third-party API integration
+</services>
+
+<featured_projects>
+1. ParagonSquare.ai
+   Type: Multi-marketplace SaaS platform
+   Role: Lead Full-Stack Developer
+   Team: 3 people
+   Status: Active (2024-Present)
+   Description: Next-generation multi-marketplace platform offering 0% commission through subscription model, combining auctions, products, services, and future vacation rentals.
+   Technologies: Custom Framework, Stripe, NOWPayments, Font Awesome, Termly.io
+   Stats: 28K+ signups, 600K+ visitors across 5 countries, $18,696 raised
+   Key Features: 4 marketplaces, 72-hr funds release, 3-way chat dispute resolution, KYC verification, 43+ service categories, 50+ product categories, multi-currency payments (Stripe + crypto)
+   Business Impact: 0% commission model disrupting traditional 10-25% fees, IPO planned on Bahamas Stock Exchange (BISX)
+
+2. AI Document Chat Platform
+   Type: Enterprise AI SaaS
+   Role: Lead Full-Stack Developer & AI Integration Specialist
+   Team: 4 people
+   Status: Active (2024-Present)
+   Description: Interactive web application with document repository and AI-based chat that responds to queries based on uploaded PDF/Word documents, including scanned copies with OCR support.
+   Technologies: Next.js, React, TypeScript, OpenAI API, LangChain, Tesseract.js, PostgreSQL, Redis, AWS S3, SAML/OAuth, Docker
+   Stats: 50K+ documents processed, 200K+ queries handled, 5K+ users, 95% query accuracy rate
+   Key Features: Document repository with PDF/Word support, AI-powered chat, OCR for scanned docs, admin dashboard with analytics, SSO authentication, real-time query processing, multi-document context
+   Business Impact: 90% reduction in document search time, enterprise-grade scalability
+
+3. WhatsApp Chat Summary
+   Type: AI-powered web application
+   Status: Active
+   Description: Platform that connects to WhatsApp accounts via QR code to generate AI-powered summaries, enables Q&A about conversations, and provides suggested replies.
+   Technologies: Next.js 15, React 19, TypeScript, Tailwind CSS, shadcn/ui, Prisma ORM, PostgreSQL, pgvector, Google Generative AI, OpenAI, Socket.io
+   Key Features: QR code WhatsApp authentication, AI chat summarization, RAG-based Q&A, suggested replies, multi-phone support, real-time SSE, vector-based semantic search
+
+4. Vacation Rental Marketplace
+   Type: Real-time booking platform
+   Description: WebSocket-powered platform with 3D Secure payments, fraud detection, and real-time booking management.
+   Stats: 10K+ properties, 50K+ guests, 99.9% uptime
+</featured_projects>
+
+<professional_journey>
+Current: Senior Software Engineer — Freelance/Remote (2020-Present)
+- 20+ projects delivered with 100% client satisfaction
+- Reduced application load times by 60% through optimization
+- Mentored 15+ junior developers
+
+Previous:
+- Full-Stack Developer — Tech Solutions Inc, Karachi (2018-2020)
+  - Led migration of legacy system to modern tech stack
+  - Improved system performance by 40%
+  - Increased code coverage to 85% through automated testing
+
+- Software Developer — Digital Agency Pro, Lahore (2015-2018)
+  - Delivered 50+ client websites on time and within budget
+  - Reduced development time by 30% through reusable components
+  - Achieved 98% client retention rate
+
+- Junior Developer — StartUp Hub, Islamabad (2012-2015)
+
+Technologies:
+- Languages: TypeScript, JavaScript, PHP, Python, SQL, HTML, CSS/SCSS
+- Frameworks: Nuxt.js, Next.js, Vue.js, React, Laravel, Express.js, NestJS
+- Frontend: Tailwind CSS, Vite, Webpack, shadcn/ui, Nuxt UI
+- Testing: Vitest, Playwright, Cypress, PHPUnit, Pest
+- Databases: PostgreSQL, MySQL, MongoDB, SQLite, Redis
+- DevOps: Docker, AWS, CI/CD, GitHub Actions, Linux
+- Build: TurboRepo, Nx, ESLint, Prettier, Stylelint
+</professional_journey>
+
+<case_studies>
+1. Marketplace Disruption
+   Problem: Marketplace startup needed to disrupt 10-25% commission model
+   Solution: Built subscription-based platform with 4 marketplaces, 72-hr funds release, 3-way dispute resolution, KYC verification
+   Result: 28K+ signups, 600K+ visitors, $18K+ raised, IPO-track
+
+2. Enterprise Document Search
+   Problem: Enterprise struggled with 50K+ unsearchable documents
+   Solution: AI chat platform with OCR, vector search, and RAG
+   Result: 50K+ docs processed, 90% faster search, 95% query accuracy, 200K+ queries
+
+3. WhatsApp Insight Extraction
+   Problem: Teams unable to extract insights from WhatsApp chats
+   Solution: AI-powered platform with QR auth, chat summarization, RAG Q&A, reply suggestions
+   Result: Multi-phone support, real-time SSE, pgvector search
+
+4. Vacation Rental Scaling
+   Problem: Needed real-time features and secure payments at scale
+   Solution: WebSocket-powered platform with 3D Secure payments and fraud detection
+   Result: 10K+ properties, 50K+ guests, 99.9% uptime
+</case_studies>
+
+<blog_posts>
+Technical AI & Agent Systems:
+- "Production-Grade AI Agents Are Not Prompts — They Are Systems" — Why real agents need orchestration layers, not prompt chains
+- "DAG-Based AI Orchestration: Why Linear Agent Pipelines Break at Scale" — DAG beats sequential chains for production
+- "I Stopped Building Features First — I Now Design Execution Systems First" — Why execution-first produces better software
+- "Multi-Agent Memory Systems: What Actually Works in Production" — Structured state, controlled injection, lifecycle management
+- "Async-First Engineering in 2026: Why I Avoid Most Technical Calls" — Async workflows for senior engineering
+- "Laravel + AI Agent Systems: Building Hybrid Backends in 2026" — Laravel as orchestration backend for AI agents
+- "AI-First Development: Building the Future of Software in 2026" — Autonomous agents and intelligent code generation
+- "AI-Powered Development Tools in 2026: A Complete Guide" — AI-first tools transforming software development
+
+Web Development & Frameworks:
+- "Nuxt 3 to Nuxt 4 Migration Guide: Complete Checklist for 2026" — Step-by-step migration with codemod tools
+- "Nuxt 4 SSR Performance Optimization: Complete Guide to Core Web Vitals" — Caching, data fetching, hybrid rendering
+- "Meta-Frameworks in 2026: The New Default for Web Development" — Why Next.js, Nuxt, SvelteKit dominate
+- "React Compiler and the End of Manual Memoization" — React Compiler automating memoization in 2026
+- "React Server Components Deep Dive" — RSC with practical examples and migration strategies
+- "Vue 3 Composition API: Best Practices for Modern Development" — Effective patterns for Composition API
+- "Next.js 14 App Router Complete Guide" — Server Components, streaming, caching strategies
+- "Full-Stack Development in 2026: Complete Roadmap" — Modern frameworks, tools, best practices
+
+TypeScript & JavaScript:
+- "TypeScript 2026: New Features Every Developer Should Know" — Enhanced inference, module resolution
+- "End-to-End Type Safety: The Complete Guide for 2026" — TypeScript, Zod, modern tools
+- "Advanced TypeScript Patterns for Enterprise Applications" — Conditional types, template literals, design patterns
+- "TypeScript + Node.js in Production: A Complete Guide" — Build, deploy, maintain production apps
+- "Modern JavaScript ES2024 Features" — Temporal API, decorators, pattern matching
+
+Performance, SEO & Design:
+- "Core Web Vitals 2026: Performance Optimization Strategies" — Latest metrics and optimization
+- "AI SEO for Developer Blogs: Get Cited by ChatGPT, Gemini & Perplexity" — AISEO for developer blogs
+- "Web Performance Optimization in 2024" — Core Web Vitals improvements
+- "Web Accessibility WCAG 2026: Complete Compliance Guide" — WCAG 2.2 guidelines
+- "Design Tokens & Tailwind v4: The Complete Guide" — Design tokens for scalable design systems
+
+Infrastructure & Architecture:
+- "Edge Computing and Serverless: The Future of Web Deployment" — Edge/serverless revolutionizing deployment
+- "Docker and Microservices Deployment" — Kubernetes, monitoring, CI/CD pipelines
+- "GraphQL API Design Patterns" — Performance optimization, security best practices
+- "WebAssembly in 2026: The Performance Revolution" — Near-native speed for web apps
+- "CSS Grid and Flexbox Mastery" — Responsive design patterns, advanced layout techniques
+
+Gem Team Framework:
+- "Introducing gem-orchestrator" — The team lead for AI development workflows
+- "Gem Team v1.20.0: Marketplace Integration, APM Structure" — Latest features
+- "Introducing the gem-team Repository" — AI development workflow enhancements
+</blog_posts>
+
+<testimonials>
+Clients consistently highlight: technical expertise, reliable communication, on-time delivery, and ability to translate complex requirements into working solutions. 100% client satisfaction across 125+ delivered projects.
+</testimonials>
+
+<faq_highlights>
+- Services offered: Full-Stack Development, Technical Consulting, Project Leadership, Code Review & Mentoring, Browser Extension Development, API Development
+- Process: Discovery → Planning → Development (agile sprints) → Delivery
+- Pricing: Hourly ($100-$125/hr), fixed-price quotes, milestone-based payments
+- Works with: Both new and existing projects, including project rescue
+- Initial consultation: Free 30-60 min discovery call
+- IP ownership: Client owns custom code upon full payment
+- Scope changes: Managed through formal change request process
+- Location: Remote, async, flexible across time zones
+</faq_highlights>
+
+<contact>
+- Email: mubaidr@gmail.com
+- Contact page: https://mubaidr.js.org/contact
+- GitHub: https://github.com/mubaidr
+- LinkedIn: https://www.linkedin.com/in/mubaidr
+- X (Twitter): https://x.com/mubaidr
+- Freelancer: https://www.freelancer.com/u/razamubaid
+</contact>
+</project>

@@ -18,6 +18,8 @@ export default defineNuxtConfig({
       link: [
         { rel: "icon", type: "image/png", href: "/favicon.png" },
         { rel: "apple-touch-icon", href: "/favicon.png" },
+        { rel: "llms-txt", href: "/llms.txt" },
+        { rel: "llms-txt-full", href: "/llms-full.txt" },
       ],
     },
   },
@@ -126,6 +128,14 @@ export default defineNuxtConfig({
       prerender: true,
     },
     "/blog/**": {
+      static: true,
+      prerender: true,
+    },
+    "/llms.txt": {
+      static: true,
+      prerender: true,
+    },
+    "/llms-full.txt": {
       static: true,
       prerender: true,
     },
