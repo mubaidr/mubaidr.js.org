@@ -104,10 +104,10 @@ const getProjectTestimonials = (project: { testimonials?: number[] }) => {
       <section>
         <div class="grid gap-8 md:grid-cols-2">
           <UCard
-            variant="soft"
-            class="h-full"
             v-for="project in filteredProjects"
             :key="project.id"
+            variant="soft"
+            class="h-full"
           >
             <div class="space-y-6">
               <!-- Project Header -->
@@ -208,7 +208,7 @@ const getProjectTestimonials = (project: { testimonials?: number[] }) => {
                           :src="testimonial.avatar"
                           :alt="testimonial.name"
                           class="w-full h-full object-cover"
-                        />
+                        >
                       </div>
                       <div class="text-xs">
                         <div class="font-medium">{{ testimonial.name }}</div>
