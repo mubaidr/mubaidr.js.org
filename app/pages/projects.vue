@@ -93,7 +93,11 @@ const getProjectTestimonials = (project: { testimonials?: number[] }) => {
             v-for="category in projectsData?.categories"
             :key="category.name"
             :variant="selectedCategory === category.name ? 'solid' : 'outline'"
-            @click="selectedCategory = category.name"
+            @click="
+              () => {
+                selectedCategory = category.name
+              }
+            "
           >
             {{ category.name }}
           </UButton>

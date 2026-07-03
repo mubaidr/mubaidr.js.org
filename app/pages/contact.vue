@@ -144,7 +144,11 @@ if (faqsData.value?.list?.length) {
                 size="lg"
                 class="w-full md:w-auto justify-center"
                 :aria-label="method.ariaLabel"
-                @click="navigateTo(method.action, { external: true })"
+                @click="
+                  () => {
+                    navigateTo(method.action, { external: true })
+                  }
+                "
               >
                 {{ method.value }}
               </UButton>
@@ -182,7 +186,11 @@ if (faqsData.value?.list?.length) {
                   color="neutral"
                   class="w-full justify-center"
                   :aria-label="method.ariaLabel"
-                  @click="navigateTo(method.action, { external: true })"
+                  @click="
+                    () => {
+                      navigateTo(method.action, { external: true })
+                    }
+                  "
                 >
                   {{ method.value }}
                 </UButton>
