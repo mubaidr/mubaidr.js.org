@@ -248,7 +248,6 @@ Modify [`content/services.yml`](./content/services.yml) to manage service offeri
 | Page                      | Description                    | Features                                |
 | ------------------------- | ------------------------------ | --------------------------------------- |
 | **[Home](/)**             | Landing page with hero section | Profile showcase, featured content, CTA |
-| **[About](/about)**       | Professional background        | Journey timeline, skills, approach      |
 | **[Projects](/projects)** | Portfolio showcase             | Filterable grid, detailed project cards |
 | **[Blog](/blog)**         | Technical articles             | Pagination, search, categories          |
 | **[Services](/services)** | Service offerings              | Pricing packages, process workflow      |

@@ -29,7 +29,7 @@ if (blogPostData.value) {
   const modifiedTime = blogPostData.value.dateUpdated || blogPostData.value.date
   const authorName = blogPostData.value.author || site.name
 
-  // Resolve author URL with fallback chain: frontmatter -> authors collection -> /about
+  // Resolve author URL with fallback chain: frontmatter -> authors collection -> /
   let authorUrl: string | undefined = blogPostData.value.authorUrl
   if (authorUrl && !authorUrl.startsWith("http")) {
     authorUrl = new URL(authorUrl, site.url).toString()
@@ -46,7 +46,7 @@ if (blogPostData.value) {
   }
 
   if (!authorUrl) {
-    authorUrl = `${site.url}/about`
+    authorUrl = `${site.url}`
   }
 
   useSeoMeta({
@@ -151,7 +151,7 @@ if (blogPostData.value) {
           :src="blogPostData.socialImage?.src || blogPostData.image"
           :alt="blogPostData.socialImage?.alt || blogPostData.title"
           class="w-full h-full object-cover"
-        >
+        />
       </div>
 
       <!-- Post Content -->

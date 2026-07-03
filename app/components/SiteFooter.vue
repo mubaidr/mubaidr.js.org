@@ -5,7 +5,6 @@ const { data: profileData } = await useProfileData()
 const navLinks = [
   { label: "Blog", to: "/blog" },
   { label: "Projects", to: "/projects" },
-  { label: "About", to: "/about" },
   { label: "Contact", to: "/contact" },
 ]
 

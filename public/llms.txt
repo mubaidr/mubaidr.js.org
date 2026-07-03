@@ -15,8 +15,6 @@ Key information about this website:
 ## About
 
 - [Home - Muhammad Ubaid Raza](https://mubaidr.js.org/): Portfolio landing page with hero, stats, featured projects, testimonials, and call-to-action
-- [About](https://mubaidr.js.org/about): Full professional profile, work approach, current focus areas, and open source contributions
-- [Professional Journey](https://mubaidr.js.org/about): Detailed work history from Junior Developer (2012) to Senior Software Engineer (2020-Present)
 
 ## Services
 
