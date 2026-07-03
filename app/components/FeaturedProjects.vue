@@ -24,8 +24,9 @@ const { data: featuredProjectsData } = await useFeaturedProjects(count)
     <!-- Section Header -->
     <div class="text-center space-y-6">
       <h2>{{ title }}</h2>
-      <p class="max-w-3xl mx-auto">
-        A selection of projects that showcase my expertise and passion for development
+      <p>
+        A selection of projects that showcase my expertise and passion for
+        development
       </p>
     </div>
 
@@ -39,19 +40,26 @@ const { data: featuredProjectsData } = await useFeaturedProjects(count)
         <div class="space-y-6">
           <!-- Project Icon with Gradient Background -->
           <div class="flex items-center justify-center">
-            <div class="w-14 h-14 rounded-2xl bg-linear-to-br from-primary/20 to-primary/5 flex items-center justify-center ring-1 ring-primary/10">
-              <UIcon name="i-ph-terminal" class="text-2xl text-primary drop-shadow-[0_0_4px_rgba(99,102,241,0.4)]" />
+            <div
+              class="w-14 h-14 rounded-2xl bg-linear-to-br from-primary/20 to-primary/5 flex items-center justify-center ring-1 ring-primary/10"
+            >
+              <UIcon
+                name="i-ph-terminal"
+                class="text-2xl text-primary drop-shadow-[0_0_4px_rgba(99,102,241,0.4)]"
+              />
             </div>
           </div>
           <!-- Project Content -->
           <div class="space-y-3">
             <div class="flex items-center justify-between gap-4">
-              <h3 class="text-xl font-semibold group-hover:text-primary transition-colors duration-200">
+              <h3
+                class="text-xl font-semibold group-hover:text-primary transition-colors duration-200"
+              >
                 {{ project.title }}
               </h3>
-              <UBadge :label="project.category" variant="subtle" />
+              <UBadge :label="project.category" variant="outline" />
             </div>
-            <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            <p class="leading-relaxed">
               {{ project.description }}
             </p>
             <!-- Technologies -->
@@ -61,9 +69,11 @@ const { data: featuredProjectsData } = await useFeaturedProjects(count)
                 :key="tech"
                 variant="outline"
                 size="sm"
-                class="font-mono"
               >
-                <UIcon name="i-ph-brackets-angle" class="w-3 h-3 mr-1 text-primary-500" />
+                <UIcon
+                  name="i-ph-brackets-angle"
+                  class="w-3 h-3 mr-1 text-primary-500"
+                />
                 {{ tech }}
               </UBadge>
             </div>

@@ -28,7 +28,7 @@ experience: 13
 availability:
   status: available
   statusText: Available for new projects
-  startDate: April 2025
+  startDate: September 26
   startDateContext: "Next opening"
   description: Open to freelance, consulting, and collaborative projects. Flexible with remote, async, and agile workflows. Comfortable working across time zones and with distributed teams.
   responseTime: 3h
@@ -46,12 +46,6 @@ whoIWorkWith:
   - name: SMEs
     icon: i-ph-buildings
     description: Small to medium enterprises optimizing and modernizing systems
-  - name: Enterprise
-    icon: i-ph-buildings
-    description: Large organizations requiring architecture and performance expertise
-  - name: Agencies
-    icon: i-ph-users-three
-    description: Digital agencies needing technical leadership and delivery support
   - name: Individual Founders
     icon: i-ph-user
     description: Solo founders turning ideas into production-ready applications

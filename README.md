@@ -105,7 +105,6 @@ All changes automatically reflect on the homepage after save.
 │   │   ├── FeaturedProjects.vue
 │   │   ├── GeometricBackground.vue
 │   │   ├── RecentBlogPosts.vue
-│   │   ├── ServicesPreview.vue
 │   │   ├── SiteFooter.vue
 │   │   ├── SiteHeader.vue
 │   │   ├── TestimonialsPreview.vue

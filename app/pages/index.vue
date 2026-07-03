@@ -2,9 +2,6 @@
 // Fetch data using composables
 const { data: profileData } = await useProfileData()
 const { data: testimonialsData } = await useTestimonialsData()
-// const { data: professionalJourneyData } = await useProfessionalJourneyData()
-
-const toast = useToast()
 
 // SEO Meta using reactive composables
 if (profileData.value) {
@@ -62,30 +59,25 @@ if (profileData.value) {
 
     <section
       v-if="profileData"
-      class="min-h-[60vh] flex items-center justify-center py-32 md:py-48"
+      class="min-h-[64vh] flex items-center justify-center py-32 md:py-48"
     >
-      <div class="max-w-3xl mx-auto px-4 space-y-8">
+      <div class="max-w-3xl mx-auto px-4 space-y-12">
         <div class="flex flex-col items-center text-center space-y-6">
           <!-- Label -->
           <!-- <p
-            class="fade-in-up stagger-1 text-sm font-medium tracking-[0.2em] uppercase"
+            class=" text-sm font-medium tracking-[0.2em] uppercase"
           >
             <UIcon name="i-ph-terminal" class="w-4 h-4 inline-block mr-2" />
             {{ profileData.title }}
           </p> -->
 
           <!-- Name as Hero -->
-          <h1
-            class="fade-in-up stagger-2 font-display text-5xl md:text-7xl font-semibold tracking-tight"
-          >
+          <h1>
             {{ profileData.name }}
           </h1>
 
           <!-- Tagline as Subheading with monospace code aesthetic -->
-          <p
-            v-if="profileData.heroHeadline"
-            class="fade-in-up stagger-3 text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl"
-          >
+          <p v-if="profileData.heroHeadline" class="text-2xl! mt-0!">
             <UIcon
               name="i-ph-brackets-angle"
               class="w-4 h-4 inline-block mx-1 text-primary-500/60"
@@ -98,7 +90,7 @@ if (profileData.value) {
           </p>
 
           <!-- CTA Button -->
-          <div class="fade-in-up stagger-4 pt-2">
+          <div class="pt-2">
             <UButton to="/contact" size="lg" class="px-8 group">
               Let's Work Together
               <UIcon
@@ -109,25 +101,21 @@ if (profileData.value) {
           </div>
 
           <!-- Stats Divider -->
-          <div
-            class="fade-in-up stagger-5 flex items-center justify-center gap-3 text-sm text-neutral-500"
-          >
+          <div class="flex items-center justify-center gap-3 text-neutral-500">
             <span class="w-8 h-px bg-neutral-300 dark:bg-neutral-700" />
             <span>125+ projects • 100% satisfaction</span>
             <span class="w-8 h-px bg-neutral-300 dark:bg-neutral-700" />
           </div>
 
           <!-- Social Links -->
-          <div
-            class="fade-in-up stagger-6 flex items-center justify-center gap-4"
-          >
+          <div class="flex items-center justify-center gap-4">
             <ULink
               v-for="social in profileData.social"
               :key="social.name"
               :to="social.url"
               external
               :title="social.name"
-              class="p-2 rounded-full hover:bg-primary-50 dark:hover:bg-primary-950/30 text-neutral-600 dark:text-neutral-400 hover:text-primary transition-all"
+              class="p-2 rounded-full hover:bg-primary-50 dark:hover:bg-primary-950/30 hover:text-primary transition-all"
             >
               <UIcon :name="social.icon" size="1.25rem" />
             </ULink>
@@ -135,7 +123,7 @@ if (profileData.value) {
         </div>
 
         <!-- Availability Info -->
-        <div class="flex justify-center fade-in-up stagger-6">
+        <div class="flex justify-center">
           <AvailabilityInfo />
         </div>
       </div>
@@ -143,7 +131,7 @@ if (profileData.value) {
 
     <div class="space-y-24 pb-16">
       <CompactCaseStudies />
-      <!-- <WhoIWorkWith /> -->
+      <WhoIWorkWith />
       <TestimonialsPreview />
       <CallToAction />
       <RecentBlogPosts />

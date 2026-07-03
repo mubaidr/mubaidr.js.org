@@ -1,7 +1,6 @@
 <script setup lang="ts">
-// Fetch case studies data using composable with loading state
-const { data: caseStudiesData, pending: isLoading } =
-  await useCompactCaseStudies()
+// Fetch case studies data using composable
+const { data: caseStudiesData } = await useCompactCaseStudies()
 
 // Optional props for customization
 interface Props {
@@ -24,22 +23,14 @@ withDefaults(defineProps<Props>(), {
       >
         {{ title }}
       </h2>
-      <p
-        class="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto"
-      >
+      <p class="text-lg max-w-2xl mx-auto">
         Tangible outcomes from real projects
       </p>
     </div>
 
-    <!-- Case Studies Grid -->
-    <!-- Loading Skeleton -->
-    <div v-if="isLoading" class="grid gap-6 md:grid-cols-3">
-      <USkeleton v-for="i in count" :key="i" class="h-64 w-full" />
-    </div>
-
     <!-- Case Studies -->
     <div
-      v-else-if="
+      v-if="
         caseStudiesData?.caseStudies && caseStudiesData.caseStudies.length > 0
       "
       class="grid gap-6 md:grid-cols-3"

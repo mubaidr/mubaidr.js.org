@@ -48,7 +48,7 @@ defineOptions({
         <NuxtLink
           v-if="index < items.length - 1"
           :to="item.path"
-          class="text-neutral-600 dark:text-neutral-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-200"
+          class="hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-200"
         >
           {{ item.label }}
         </NuxtLink>

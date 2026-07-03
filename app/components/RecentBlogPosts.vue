@@ -11,18 +11,8 @@ const { count, title } = defineProps({
   },
 })
 
-// Fetch recent blog posts using composable with loading and error state
-const {
-  data: recentPostsData,
-  pending: isLoading,
-  error,
-  refresh,
-} = await useRecentBlogPosts(count)
-
-// Retry function for error recovery
-const retryFetch = () => {
-  refresh()
-}
+// Fetch recent blog posts using composable
+const { data: recentPostsData } = await useRecentBlogPosts(count)
 </script>
 
 <template>
@@ -34,42 +24,12 @@ const retryFetch = () => {
           {{ title }}
         </h2>
 
-        <p class="max-w-3xl mx-auto">
-          Latest thoughts on development, technology, and best practices
-        </p>
-      </div>
-
-      <!-- Error State -->
-      <UAlert
-        v-if="error"
-        color="error"
-        variant="soft"
-        icon="i-ph-warning-circle"
-        title="Unable to Load Posts"
-        description="We couldn't load the recent blog posts. Please try again."
-        class="max-w-2xl mx-auto"
-      >
-        <template #actions>
-          <UButton
-            color="error"
-            variant="solid"
-            size="sm"
-            icon="i-ph-arrow-clockwise"
-            @click="retryFetch"
-          >
-            Retry
-          </UButton>
-        </template>
-      </UAlert>
-
-      <!-- Loading Skeleton -->
-      <div v-else-if="isLoading" class="grid gap-8 md:grid-cols-2">
-        <USkeleton v-for="i in count" :key="i" class="h-96 w-full" />
+        <p>Latest thoughts on development, technology, and best practices</p>
       </div>
 
       <!-- Show blog posts if available -->
       <div
-        v-else-if="recentPostsData && recentPostsData.length > 0"
+        v-if="recentPostsData && recentPostsData.length > 0"
         class="grid gap-8 md:grid-cols-2"
       >
         <NuxtLink
@@ -91,7 +51,7 @@ const retryFetch = () => {
                   :alt="post.socialImage?.alt || post.title"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
-                >
+                />
               </div>
               <div class="space-y-3">
                 <h3
@@ -99,9 +59,7 @@ const retryFetch = () => {
                 >
                   {{ post.title }}
                 </h3>
-                <p
-                  class="text-neutral-600 dark:text-neutral-400 line-clamp-3 leading-relaxed"
-                >
+                <p class="line-clamp-3 leading-relaxed">
                   {{ post.description }}
                 </p>
                 <div
@@ -123,18 +81,6 @@ const retryFetch = () => {
             </div>
           </UCard>
         </NuxtLink>
-      </div>
-
-      <!-- Empty State -->
-      <div v-else-if="!isLoading && !error" class="text-center py-12">
-        <UAlert
-          color="neutral"
-          variant="soft"
-          icon="i-ph-article"
-          title="No Posts Available"
-          description="Check back soon for new blog posts."
-          class="max-w-2xl mx-auto"
-        />
       </div>
 
       <div

@@ -1,10 +1,4 @@
-<script setup lang="ts">
-// Page transition
-const transition = {
-  name: "fade",
-  mode: "out-in" as const,
-}
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="min-h-screen relative overflow-hidden">
@@ -25,22 +19,10 @@ const transition = {
       id="main"
       class="flex-1 py-24 md:py-32 lg:py-42 px-4 md:px-8 max-w-6xl mx-auto"
     >
-      <NuxtPage :transition="transition" />
+      <NuxtPage />
     </main>
 
     <!-- Site Footer -->
     <SiteFooter />
   </div>
 </template>
-
-<style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>

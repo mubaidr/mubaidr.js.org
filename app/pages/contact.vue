@@ -23,7 +23,7 @@ const contactMethods = ref([
     title: "No Discovery Call Required",
     description:
       "Skip the call - share details via email and I'll respond with a plan",
-    value: "Start async",
+    value: "Contact Now",
     action:
       "mailto:mubaidr@gmail.com?subject=Project%20Inquiry&body=Hi%20Muhammad%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project%20without%20a%20discovery%20call.%20Here%20are%20the%20details%3A%0A%0A%5BDescribe%20your%20project%2C%20goals%2C%20timeline%2C%20and%20any%20requirements%5D",
     ariaLabel: "Start async project discussion via email",
@@ -95,40 +95,35 @@ if (faqsData.value?.list?.length) {
       <div class="text-center space-y-6">
         <h1>Let's Work Together</h1>
 
-        <p class="max-w-4xl mx-auto">
+        <p>
           Have a project in mind? I'd love to hear about it and discuss how we
           can bring your ideas to life.
         </p>
-
-        <!-- Async-first consulting badge -->
-        <div class="flex items-center justify-center gap-3 mt-4">
-          <UIcon name="i-ph-lightning" size="1.25em" class="text-primary-500" />
-          <span
-            class="inline-flex items-center px-4 py-2 rounded-full bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 font-semibold text-base border border-primary-200 dark:border-primary-800"
-          >
-            Async-first consulting
-          </span>
-        </div>
       </div>
 
       <!-- Contact Methods -->
       <section class="space-y-12">
-        <div class="text-center space-y-6">
+        <!-- <div class="text-center space-y-6">
           <h2>Choose Your Preferred Method</h2>
-          <p class="max-w-3xl mx-auto">
+          <p>
             Select the most convenient way to reach out, and I'll get back to
             you as soon as possible.
           </p>
-        </div>
+        </div> -->
 
         <!-- Highlighted method: full width -->
         <UPageCard
           v-for="method in contactMethods.filter((m) => m.highlight)"
           :key="method.title"
           spotlight
-          highlight
-          class="w-full"
+          class="w-full relative"
         >
+          <UBadge
+            class="absolute top-2 right-2"
+            variant="outline"
+            color="neutral"
+            >Async First</UBadge
+          >
           <div class="p-6 md:p-8 space-y-6">
             <div class="flex items-center justify-center mx-auto">
               <UIcon :name="method.icon" size="3em" class="text-primary-500" />
@@ -138,9 +133,7 @@ if (faqsData.value?.list?.length) {
                 <h3 class="text-2xl md:text-3xl font-bold">
                   {{ method.title }}
                 </h3>
-                <p
-                  class="text-neutral-600 dark:text-neutral-400 text-base md:text-lg"
-                >
+                <p class="text-base md:text-lg">
                   {{ method.description }}
                 </p>
               </div>
@@ -175,11 +168,11 @@ if (faqsData.value?.list?.length) {
                 />
               </div>
               <div class="space-y-4">
-                <div class="space-y-1">
+                <div class="space-y-1 text-center">
                   <h3 class="text-xl font-bold">
                     {{ method.title }}
                   </h3>
-                  <p class="text-neutral-600 dark:text-neutral-400 text-sm">
+                  <p class="text-sm">
                     {{ method.description }}
                   </p>
                 </div>
@@ -207,7 +200,7 @@ if (faqsData.value?.list?.length) {
       >
         <div class="text-center space-y-6">
           <h2>Frequently Asked Questions</h2>
-          <p class="max-w-3xl mx-auto">
+          <p>
             Find answers to common inquiries about my services and processes.
           </p>
         </div>

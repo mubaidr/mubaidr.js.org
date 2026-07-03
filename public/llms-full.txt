@@ -7,7 +7,7 @@ This is the full AI context for mubaidr.js.org - a personal portfolio, blog, and
 Key facts:
 - 13+ years of software engineering experience
 - 125+ projects delivered with 100% client satisfaction
-- Available for new projects (next opening: April 2025)
+- Available for new projects
 - Response time: ~3 hours | Timezone: GMT+5
 - Payment: 20% upfront, rest on milestones
 - Pricing: MVP $5K-$15K USD | Architecture audit $1.5K-$3K USD | Hourly $100-$125 USD

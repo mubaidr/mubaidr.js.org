@@ -95,7 +95,7 @@ const approachSteps = [
       <div class="text-center space-y-4">
         <h1>Technical Consulting</h1>
 
-        <p class="max-w-3xl mx-auto text-lg">
+        <p>
           I help teams build better systems through architecture reviews,
           technical strategy, and engineering leadership.
         </p>
@@ -103,6 +103,10 @@ const approachSteps = [
 
       <!-- Consulting Areas -->
       <section>
+        <div class="text-center space-y-4 mb-8">
+          <h2>My Services</h2>
+        </div>
+
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <UPageCard
             v-for="area in consultingAreas"
@@ -126,23 +130,14 @@ const approachSteps = [
             :key="step.title"
             :title="step.title"
             :description="step.description"
-            :icon="step.icon"
             :spotlight="true"
           />
         </div>
-
-        <p
-          class="text-center text-neutral-600 dark:text-neutral-400 leading-relaxed"
-        >
-          With 12+ years of experience building scalable systems and maintaining
-          open source projects used by thousands of developers, I bring deep
-          technical expertise to every engagement.
-        </p>
       </section>
 
       <!-- CTA -->
-      <section class="text-center space-y-4">
-        <p class="max-w-2xl mx-auto text-lg">
+      <section class="text-center space-y-4 text-xl">
+        <p class="max-w-2xl mx-auto">
           Let's discuss how I can help your team build better software.
         </p>
 

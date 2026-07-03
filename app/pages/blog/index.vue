@@ -5,8 +5,6 @@ definePageMeta({
   description: "Read our latest blog posts and insights",
 })
 
-const itemsPerPage = 3
-
 // Fetch blog posts using composable
 const { data: blogPosts } = await useBlogPosts()
 
@@ -72,8 +70,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
       <!-- Page Header -->
       <div class="text-center space-y-6">
         <h1>Insights & Articles</h1>
-
-        <p class="max-w-4xl mx-auto">
+        <p>
           Insights, tutorials, and thoughts on web development, technology, and
           more.
         </p>
@@ -81,13 +78,8 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
 
       <FeaturedBlogPosts title="Featured Posts" />
 
-      <!-- Loading State -->
-      <div v-if="!blogData" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <USkeleton v-for="i in itemsPerPage" :key="i" class="h-96 w-full" />
-      </div>
-
       <!-- Blog Posts Grid -->
-      <section v-else-if="blogData.posts.length > 0" class="space-y-12">
+      <section v-if="blogData.posts.length > 0" class="space-y-12">
         <div class="text-center space-y-6">
           <h2>Explore My Latest Articles</h2>
           <p>
@@ -112,7 +104,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
                     :alt="post.socialImage?.alt || post.title"
                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
-                  >
+                  />
                   <div
                     v-else
                     class="flex items-center justify-center h-full bg-neutral-100 dark:bg-neutral-800"
@@ -131,9 +123,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
                     >
                       {{ post.title }}
                     </h3>
-                    <p
-                      class="text-neutral-600 dark:text-neutral-400 line-clamp-3 text-sm leading-relaxed"
-                    >
+                    <p class="line-clamp-3 text-sm leading-relaxed">
                       {{ post.description || getExcerpt(post.body) }}
                     </p>
                   </div>
@@ -143,7 +133,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
                       v-for="tag in post.tags?.slice(0, 2)"
                       :key="tag"
                       :label="tag"
-                      variant="subtle"
+                      variant="outline"
                       color="neutral"
                       size="xs"
                     />
@@ -170,15 +160,6 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
           </NuxtLink>
         </div>
       </section>
-
-      <!-- Empty State -->
-      <div v-else class="text-center py-16">
-        <!-- <div class="mx-auto w-24 h-24 flex items-center justify-center mb-6">
-          <UIcon name="i-ph-newspaper" class="w-12 h-12" />
-        </div> -->
-        <h3 class="mb-2">No blog posts found</h3>
-        <p>Check back soon for new content!</p>
-      </div>
     </div>
   </div>
 </template>
