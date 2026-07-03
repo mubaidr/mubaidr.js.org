@@ -1,0 +1,122 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Muhammad Ubaid R.",
+  "alternateName": "Muhammad Ubaid Raza",
+  "url": "https://mubaidr.js.org",
+  "jobTitle": "Senior Software Engineer | Full-Stack Developer | DevOps Enthusiast",
+  "description": "Delivering robust, scalable, and user-focused software solutions that drive business success.",
+  "availability": {
+    "status": "available",
+    "statusText": "Available for new projects",
+    "nextOpening": "April 2025",
+    "responseTime": "3h",
+    "timezone": "GMT+5",
+    "slotsAvailable": 3,
+    "paymentTerms": "20% upfront, rest on milestones"
+  },
+  "pricing": {
+    "hourly": {
+      "min": 100,
+      "max": 125,
+      "currency": "USD",
+      "description": "Hourly consulting and development"
+    },
+    "mvp": {
+      "min": 5000,
+      "max": 15000,
+      "currency": "USD",
+      "description": "Full-stack MVP development"
+    },
+    "architectureAudit": {
+      "min": 1500,
+      "max": 3000,
+      "currency": "USD",
+      "description": "System architecture review and recommendations"
+    }
+  },
+  "services": [
+    {
+      "name": "Full-Stack Development",
+      "description": "End-to-end web application development using modern frameworks and technologies.",
+      "technologies": [
+        "Vue.js",
+        "React",
+        "Node.js",
+        "TypeScript",
+        "PostgreSQL",
+        "MongoDB"
+      ],
+      "hourlyRate": 100,
+      "currency": "USD",
+      "timeline": "2-12 weeks"
+    },
+    {
+      "name": "Technical Consulting",
+      "description": "Strategic technical guidance and architecture planning for your projects.",
+      "technologies": [
+        "System Architecture",
+        "Performance Optimization",
+        "Security Best Practices",
+        "Scalability Solutions"
+      ],
+      "hourlyRate": 120,
+      "currency": "USD",
+      "timeline": "1-4 weeks"
+    },
+    {
+      "name": "Project Leadership",
+      "description": "Lead and manage development teams to deliver successful projects.",
+      "technologies": [
+        "Agile/Scrum",
+        "Project Management Tools",
+        "Quality Assurance",
+        "Team Coordination"
+      ],
+      "timeline": "Project-based"
+    },
+    {
+      "name": "Code Review & Mentoring",
+      "description": "Improve code quality and mentor development teams.",
+      "technologies": ["Code Analysis Tools", "Best Practices"],
+      "hourlyRate": 100,
+      "currency": "USD"
+    },
+    {
+      "name": "Browser Extension Development",
+      "description": "Chrome & Firefox extensions, Vite + Vue 3 tooling.",
+      "technologies": [
+        "Chrome Extensions",
+        "Firefox Extensions",
+        "Vite",
+        "Vue 3"
+      ],
+      "hourlyRate": 100,
+      "currency": "USD"
+    },
+    {
+      "name": "API Development & Integration",
+      "description": "RESTful & GraphQL APIs, payment gateways, third-party integrations.",
+      "technologies": [
+        "REST",
+        "GraphQL",
+        "Payment Gateways",
+        "Third-party APIs"
+      ],
+      "hourlyRate": 100,
+      "currency": "USD"
+    }
+  ],
+  "social": [
+    { "name": "GitHub", "url": "https://github.com/mubaidr" },
+    { "name": "LinkedIn", "url": "https://www.linkedin.com/in/mubaidr" },
+    { "name": "X", "url": "https://x.com/mubaidr" }
+  ],
+  "contact": {
+    "email": "mubaidr@gmail.com",
+    "preferredMethod": "email",
+    "asyncFirst": true,
+    "discoveryCallRequired": false
+  },
+  "lastUpdated": "2026-07-03"
+}

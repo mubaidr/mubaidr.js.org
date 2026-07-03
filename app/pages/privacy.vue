@@ -6,7 +6,7 @@ interface BreadcrumbItem {
 
 // SEO Meta
 useHead({
-  title: "Privacy Policy - Muhammad Ubaid Raza",
+  title: "Privacy Policy",
   meta: [
     {
       name: "description",

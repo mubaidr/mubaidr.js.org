@@ -1,9 +1,9 @@
 ---
 title: "Multi-Agent Memory Systems: What Actually Works in Production"
-description: "Memory is the hardest part of AI systems — not reasoning. Here's what actually works for multi-agent memory in production: structured state, controlled injection, lifecycle management."
+description: "Memory is the hardest part of AI systems - not reasoning. Here's what actually works for multi-agent memory in production: structured state, controlled injection, lifecycle management."
 excerpt: "Why memory is harder than reasoning in multi-agent systems, types of memory, common failure modes, and production-tested patterns for agent state management."
 headline: "Multi-Agent Memory Systems: What Actually Works in Production"
-abstract: "Multi-agent memory is the hardest engineering challenge in production AI systems. Short-term context, persistent memory, vector retrieval — and how to avoid context drift and hallucinated memory."
+abstract: "Multi-agent memory is the hardest engineering challenge in production AI systems. Short-term context, persistent memory, vector retrieval - and how to avoid context drift and hallucinated memory."
 date: 2026-05-21T00:00:00.000Z
 dateUpdated: 2026-05-21T00:00:00.000Z
 author: mubaidr
@@ -185,13 +185,13 @@ Context drift occurs when an agent's understanding of the current state diverges
 
 Context drift is insidious because it accumulates gradually. Each turn introduces a small imprecision. By turn ten, the agent operates on a fundamentally incorrect model of the world. The symptoms are baffling: the agent produces code that looks reasonable but references functions that no longer exist or assumes data structures that were refactored earlier.
 
-The fix is to inject ground truth at every agent invocation. Before an agent starts work, provide it with the current state of every resource it might touch. File contents, environment variables, database schemas — whatever the agent needs, inject it as structured data before the agent generates its first token. This adds latency to each invocation but eliminates accumulated drift.
+The fix is to inject ground truth at every agent invocation. Before an agent starts work, provide it with the current state of every resource it might touch. File contents, environment variables, database schemas - whatever the agent needs, inject it as structured data before the agent generates its first token. This adds latency to each invocation but eliminates accumulated drift.
 
 ### Hallucinated Memory
 
-Hallucinated memory is different from hallucinated output. The agent does not generate false facts about the world — it generates false facts about what it previously did. It claims to have written a function that it never wrote. It states that it tested a scenario that it never evaluated.
+Hallucinated memory is different from hallucinated output. The agent does not generate false facts about the world - it generates false facts about what it previously did. It claims to have written a function that it never wrote. It states that it tested a scenario that it never evaluated.
 
-This happens because language models are not databases. When asked "What did you do in the previous turn?", the model does not query a log — it generates a plausible completion based on the conversation history. If the history contains gaps or ambiguities, the model fills them with fabricated content.
+This happens because language models are not databases. When asked "What did you do in the previous turn?", the model does not query a log - it generates a plausible completion based on the conversation history. If the history contains gaps or ambiguities, the model fills them with fabricated content.
 
 The defense against hallucinated memory is to never ask the agent to recall its own history. Instead, provide explicit memory from the checkpoint store. When the agent needs to know what it did, inject the relevant checkpoint data into its context window. The agent reads facts rather than generating them.
 
@@ -217,11 +217,11 @@ The Gem-Team repository codifies the patterns I have described into reusable com
 
 ### Wave-Based Checkpointing
 
-Rather than writing state on every turn, the Gem-Team architecture uses wave-based checkpointing. A wave is a logical unit of work — completing a code review, generating a test suite, implementing a feature. The agent writes a checkpoint only at wave boundaries.
+Rather than writing state on every turn, the Gem-Team architecture uses wave-based checkpointing. A wave is a logical unit of work - completing a code review, generating a test suite, implementing a feature. The agent writes a checkpoint only at wave boundaries.
 
 This approach reduces write volume by an order of magnitude compared to per-turn checkpointing while preserving all semantically meaningful state. If a wave fails partway through, the checkpoint from the previous successful wave provides a clean recovery point.
 
-Wave boundaries are defined by the agent's task definition. A code-generation agent creates a wave boundary when it finishes editing a file. A testing agent creates a wave boundary when it completes a test run. The system does not need to know the details — it only needs to detect when a wave starts and ends.
+Wave boundaries are defined by the agent's task definition. A code-generation agent creates a wave boundary when it finishes editing a file. A testing agent creates a wave boundary when it completes a test run. The system does not need to know the details - it only needs to detect when a wave starts and ends.
 
 ### Typed State Schemas
 
@@ -229,7 +229,7 @@ Every agent in the Gem-Team system writes state using a typed schema. The schema
 
 Typed schemas serve two purposes. First, they constrain what the agent can write, preventing hallucinated fields from entering the persistent store. Second, they constrain what downstream agents can read, providing a contract that other agents can depend on.
 
-When a new agent role is added to the system, the first deliverable is not the agent logic — it is the state schema. The schema is reviewed and tested before any code is written. This discipline prevents a class of integration bugs that would otherwise surface only in production.
+When a new agent role is added to the system, the first deliverable is not the agent logic - it is the state schema. The schema is reviewed and tested before any code is written. This discipline prevents a class of integration bugs that would otherwise surface only in production.
 
 ### Controlled Injection
 
@@ -300,7 +300,7 @@ The mistake is adding memory to a one-shot task because "it might be useful late
 
 ### Pure Transformations
 
-Any operation that is a pure function of its inputs — same inputs always produce same outputs — does not require memory. A lint fixer that applies deterministic rules. A code formatter. A type annotator.
+Any operation that is a pure function of its inputs - same inputs always produce same outputs - does not require memory. A lint fixer that applies deterministic rules. A code formatter. A type annotator.
 
 These tasks benefit from stateless design because stateless systems are trivially testable, trivially parallelizable, and trivially reproducible. Adding memory to a pure transformation makes it harder to debug, harder to test, and harder to reason about.
 
@@ -308,6 +308,6 @@ These tasks benefit from stateless design because stateless systems are triviall
 
 Memory is the differentiator between a multi-agent system that works in a demo and one that works in production. Reasoning models improve on a quarterly cadence. Memory architectures must be designed from the ground up and refined through production operation.
 
-My experience building with the Gem-Team patterns has taught me three enduring lessons. First, typed schemas are the most effective defense against memory corruption — they constrain what agents can write and what they can read. Second, explicit memory injection at agent boundaries eliminates context drift better than any amount of prompt engineering. Third, memory requires maintenance — retention policies, pruning schedules, and reference validation are not optional.
+My experience building with the Gem-Team patterns has taught me three enduring lessons. First, typed schemas are the most effective defense against memory corruption - they constrain what agents can write and what they can read. Second, explicit memory injection at agent boundaries eliminates context drift better than any amount of prompt engineering. Third, memory requires maintenance - retention policies, pruning schedules, and reference validation are not optional.
 
 The systems that survive production pressure are the ones that treat memory as a first-class architectural concern, not an afterthought. Design your memory before you design your agents. The reasoning will take care of itself.

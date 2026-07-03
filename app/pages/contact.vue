@@ -1,12 +1,12 @@
 <script setup lang="ts">
 definePageMeta({
-  title: "Contact - Muhammad Ubaid Raza",
+  title: "Contact",
   description:
     "Get in touch to discuss your project requirements and start working together.",
 })
 
 useHead({
-  title: "Contact - Muhammad Ubaid Raza",
+  title: "Contact",
   meta: [
     {
       name: "description",
@@ -22,7 +22,7 @@ const contactMethods = ref([
     icon: "i-ph-calendar-blank",
     title: "No Discovery Call Required",
     description:
-      "Skip the call — share details via email and I'll respond with a plan",
+      "Skip the call - share details via email and I'll respond with a plan",
     value: "Start async",
     action:
       "mailto:mubaidr@gmail.com?subject=Project%20Inquiry&body=Hi%20Muhammad%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project%20without%20a%20discovery%20call.%20Here%20are%20the%20details%3A%0A%0A%5BDescribe%20your%20project%2C%20goals%2C%20timeline%2C%20and%20any%20requirements%5D",
@@ -71,6 +71,21 @@ onMounted(() => {
     })
   }
 })
+
+// FAQPage structured data
+if (faqsData.value?.list?.length) {
+  useSchemaOrg({
+    "@type": "FAQPage",
+    mainEntity: faqsData.value.list.map((faq) => ({
+      "@type": "Question",
+      name: faq.label,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.content,
+      },
+    })),
+  })
+}
 </script>
 
 <template>

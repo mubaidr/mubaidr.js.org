@@ -36,7 +36,7 @@ seriesDescription: "Building production-grade AI systems that scale beyond demos
 
 - First publication of this guide
 
-A 30-minute discovery call costs two hours of productive engineering time. Not the 30 minutes on the calendar — the context switch before and recovery after. I stopped counting how many afternoons I lost to a single well-intentioned sync meeting that could have been an email, a spec, or a GitHub issue.
+A 30-minute discovery call costs two hours of productive engineering time. Not the 30 minutes on the calendar - the context switch before and recovery after. I stopped counting how many afternoons I lost to a single well-intentioned sync meeting that could have been an email, a spec, or a GitHub issue.
 
 In 2026, I operate async-first. Written specs replace verbal requirements, GitHub issue workflows replace status meetings, and structured delivery replaces open-ended discovery calls. This post explains the system I use, why it works, and where synchronous communication still earns its place.
 
@@ -187,7 +187,7 @@ flowchart LR
     Q --> R[Milestone Documented]
 ```
 
-The pipeline eliminates every synchronous handoff. Each stage produces an artifact — a written brief, a spec document, a pull request — that persists as project documentation. No information is lost in verbal gaps.
+The pipeline eliminates every synchronous handoff. Each stage produces an artifact - a written brief, a spec document, a pull request - that persists as project documentation. No information is lost in verbal gaps.
 
 ---
 
@@ -197,11 +197,11 @@ I track five dimensions across every engagement to measure the impact of async-f
 
 | Dimension                 | Synchronous (Meeting-First)                                                             | Async-First (Written-First)                                                          |
 | :------------------------ | :-------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------- |
-| **Time to Clarity**       | Fast initial alignment, frequent backtracking as details are forgotten or misremembered | Slower initial alignment, zero backtracking — everything is in writing               |
-| **Documentation Quality** | Poor — whatever someone typed in meeting notes, assuming notes were taken               | Excellent — the spec IS the documentation, no separate note-taking needed            |
-| **Scalability**           | O(n^2) — more participants means exponentially more meeting overhead                    | O(n) — each person reads/writes at their own pace                                    |
+| **Time to Clarity**       | Fast initial alignment, frequent backtracking as details are forgotten or misremembered | Slower initial alignment, zero backtracking - everything is in writing               |
+| **Documentation Quality** | Poor - whatever someone typed in meeting notes, assuming notes were taken               | Excellent - the spec IS the documentation, no separate note-taking needed            |
+| **Scalability**           | O(n^2) - more participants means exponentially more meeting overhead                    | O(n) - each person reads/writes at their own pace                                    |
 | **Client Satisfaction**   | High initially, degrades as meeting fatigue sets in over long engagements               | Lower initial friction, consistent satisfaction across the full engagement lifecycle |
-| **Decision Traceability** | Weak — "I thought we agreed on X in last week's call"                                   | Strong — every decision has a commit, a comment, or a PR approval                    |
+| **Decision Traceability** | Weak - "I thought we agreed on X in last week's call"                                   | Strong - every decision has a commit, a comment, or a PR approval                    |
 
 The data I have collected across twelve engagements shows that async-first delivery completes within 10% of the estimated timeline on average, versus 35% overrun for projects that relied on sync meetings for requirements gathering and decision-making.
 
@@ -276,7 +276,7 @@ When a production system is down or a critical deadline is at risk, sync communi
 
 ### Relationship Building
 
-For long-term engagements, I schedule quarterly sync calls to discuss the relationship, roadmap, and satisfaction. These are not status meetings — they are strategic conversations that benefit from real-time discussion.
+For long-term engagements, I schedule quarterly sync calls to discuss the relationship, roadmap, and satisfaction. These are not status meetings - they are strategic conversations that benefit from real-time discussion.
 
 Each sync interaction has a purpose, an agenda, and a written outcome. The rule is simple: no meeting without a documented reason and a documented result.
 

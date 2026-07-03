@@ -1,8 +1,8 @@
 ---
-title: "I Stopped Building Features First — I Now Design Execution Systems First"
-description: "Feature-first development leads to technical debt. Designing execution systems first — flows, state, task decomposition — produces better software with less rework."
-excerpt: "Why feature-first dev leads to technical debt, and how designing execution systems first — flows, state management, task decomposition — produces better outcomes."
-headline: "I Stopped Building Features First — I Now Design Execution Systems First"
+title: "I Stopped Building Features First - I Now Design Execution Systems First"
+description: "Feature-first development leads to technical debt. Designing execution systems first - flows, state, task decomposition - produces better software with less rework."
+excerpt: "Why feature-first dev leads to technical debt, and how designing execution systems first - flows, state management, task decomposition - produces better outcomes."
+headline: "I Stopped Building Features First - I Now Design Execution Systems First"
 abstract: "A shift from feature-driven development to system-driven execution design, with practical patterns from Laravel, Nuxt, and AI systems."
 date: 2026-05-11T00:00:00.000Z
 dateUpdated: 2026-05-11T00:00:00.000Z
@@ -28,11 +28,11 @@ seriesOrder: 3
 seriesDescription: "Building production-grade AI systems that scale beyond demos"
 ---
 
-## I Stopped Building Features First — I Now Design Execution Systems First
+## I Stopped Building Features First - I Now Design Execution Systems First
 
 Three years ago, I spent two months building a billing feature for a Laravel SaaS application. On paper, it was straightforward: tiered subscriptions, usage-based metering, invoice generation. The client approved the spec. I built the features. Everything worked.
 
-Then the first edge case hit. A customer upgraded mid-cycle, received a prorated invoice, downgraded the next day, and the system double-charged them. The fix required tracing through five controllers, three event listeners, and a tangled web of Eloquent callbacks to understand the full execution path. What looked like six clean features was actually one broken system. The root cause was never the billing logic — it was the execution flow. I had modeled features, not flows. I had built isolated pieces without designing the sequence, state transitions, and failure recovery that connected them.
+Then the first edge case hit. A customer upgraded mid-cycle, received a prorated invoice, downgraded the next day, and the system double-charged them. The fix required tracing through five controllers, three event listeners, and a tangled web of Eloquent callbacks to understand the full execution path. What looked like six clean features was actually one broken system. The root cause was never the billing logic - it was the execution flow. I had modeled features, not flows. I had built isolated pieces without designing the sequence, state transitions, and failure recovery that connected them.
 
 That project took three times longer than estimated, not because the features were complex, but because the execution system was an afterthought. I learned a hard lesson: building features first is the fastest path to technical debt. Designing the execution system first is the fastest path to maintainable software.
 
@@ -193,7 +193,7 @@ The before version is shorter. It is also untestable without HTTP mocks, un-resu
 
 ### 3. Task Decomposition
 
-Execution systems decompose work into tasks. The mistake most teams make is decomposing along feature boundaries — one task per UI component, one task per API endpoint. This produces tasks that are coupled to presentation, not to execution.
+Execution systems decompose work into tasks. The mistake most teams make is decomposing along feature boundaries - one task per UI component, one task per API endpoint. This produces tasks that are coupled to presentation, not to execution.
 
 I decompose along failure boundaries instead. A task should represent a unit of work that can succeed or fail independently. If a task fails, the system should be able to retry it, skip it, or route around it without restarting the entire execution.
 
@@ -253,7 +253,7 @@ export function useCheckoutSystem() {
     step.value = "processing_payment"
     const payment = await tasks.processPayment.run(order.data)
     if (!payment.ok) {
-      // Payment failed but order is already created — handle independently
+      // Payment failed but order is already created - handle independently
       await tasks.compensate("createOrder", order.data.id).run()
       return fail(payment.error)
     }
@@ -315,7 +315,7 @@ class DocumentExecutionService
 }
 ```
 
-The result was not smaller — the codebase grew by about 15% — but the number of production incidents dropped by 80%. The execution system made the implicit explicit, and explicit systems are debuggable.
+The result was not smaller - the codebase grew by about 15% - but the number of production incidents dropped by 80%. The execution system made the implicit explicit, and explicit systems are debuggable.
 
 ## Tradeoff Table: Feature-First vs System-First
 
@@ -324,25 +324,25 @@ The result was not smaller — the codebase grew by about 15% — but the number
 | Time to first feature     | Faster (days instead of weeks)               | Slower initial investment                            |
 | Time to ten features      | Slowing down as coupling grows               | Accelerating as patterns reuse                       |
 | Edge case handling        | Reactive, patch-by-patch                     | Proactive, defined in flow design                    |
-| Rework cost per change    | High — changes ripple across scattered state | Low — changes are confined to task boundaries        |
-| Onboarding new developers | Steep — implicit flows must be traced        | Shallow — flow diagram is the documentation          |
-| Failure recovery          | Manual — operators must reconstruct state    | Automatic or assisted — state machine knows position |
+| Rework cost per change    | High - changes ripple across scattered state | Low - changes are confined to task boundaries        |
+| Onboarding new developers | Steep - implicit flows must be traced        | Shallow - flow diagram is the documentation          |
+| Failure recovery          | Manual - operators must reconstruct state    | Automatic or assisted - state machine knows position |
 | Testing strategy          | End-to-end only, slow and brittle            | Task-level unit tests + system integration tests     |
-| Refactoring confidence    | Low — afraid to touch tangled state          | High — state transitions are contractually defined   |
+| Refactoring confidence    | Low - afraid to touch tangled state          | High - state transitions are contractually defined   |
 
 The time-to-market tradeoff is real. System-first costs more upfront. In my experience, the breakeven point is around the fifth feature. Beyond that, system-first pulls ahead and the gap widens with every addition.
 
 ## How This Applies to AI Systems
 
-This principle becomes critical in AI systems. An AI agent without an execution system is a single prompt call — it generates a response and stops. Production AI systems need multi-step execution with state persistence, failure recovery, and deterministic observability.
+This principle becomes critical in AI systems. An AI agent without an execution system is a single prompt call - it generates a response and stops. Production AI systems need multi-step execution with state persistence, failure recovery, and deterministic observability.
 
 The gem-orchestrator system in the Gem Team framework is an execution system first and an AI tool second. Its phase detection, agent routing, wave-based execution, and structured retry loops mirror the same three pillars:
 
-- **Flow**: The phase pipeline — detect phase, route to specialist, execute wave, synthesize results
+- **Flow**: The phase pipeline - detect phase, route to specialist, execute wave, synthesize results
 - **State**: Persistent execution context that survives individual agent calls
 - **Task decomposition**: Each agent handles one phase, one deliverable, one failure boundary
 
-When I see teams building AI agents by chaining prompts together, I see the same pattern that caused the billing system to fail. They are building features — prompt templates, tool integrations, output parsers — without designing the execution system that sequences, governs, and recovers them.
+When I see teams building AI agents by chaining prompts together, I see the same pattern that caused the billing system to fail. They are building features - prompt templates, tool integrations, output parsers - without designing the execution system that sequences, governs, and recovers them.
 
 An AI agent's execution system answers the same questions as any other system: what is the flow, what is the state, where are the failure boundaries. The fact that the executor is an LLM rather than a PHP controller does not change the architectural requirement.
 
@@ -356,7 +356,7 @@ Selling system design means the deliverable is not a list of working features. I
 
 ## Closing
 
-I still ship features. The difference is that I no longer design them first. I design the execution system — the flow, the state machine, the task boundaries — and the features emerge from that foundation.
+I still ship features. The difference is that I no longer design them first. I design the execution system - the flow, the state machine, the task boundaries - and the features emerge from that foundation.
 
 The billing project that took three times longer taught me that the code is never the bottleneck. The bottleneck is invisible structure. Every edge case that surprises you in production was already visible in the execution flow you did not draw. Every tangled refactoring session was baked in the moment you decided to build features instead of systems.
 

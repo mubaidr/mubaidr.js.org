@@ -101,7 +101,7 @@ services:
 
   - id: 5
     title: "AI Agent Architecture Review"
-    description: "Comprehensive architecture review for AI agent systems — evaluate design, identify risks, and provide actionable improvement roadmap."
+    description: "Comprehensive architecture review for AI agent systems - evaluate design, identify risks, and provide actionable improvement roadmap."
     icon: "i-ph-cpu"
     category: "AI & Architecture"
     featured: true
@@ -128,7 +128,7 @@ services:
 
   - id: 6
     title: "Laravel/Nuxt MVP Sprint"
-    description: "End-to-end MVP delivery in 2-4 weeks — full-stack Laravel API + Nuxt frontend with authentication, database, API, and core features."
+    description: "End-to-end MVP delivery in 2-4 weeks - full-stack Laravel API + Nuxt frontend with authentication, database, API, and core features."
     icon: "i-ph-rocket-launch"
     category: "Development"
     featured: true
@@ -157,7 +157,7 @@ services:
 
   - id: 7
     title: "Codebase Audit & Refactor Plan"
-    description: "Deep codebase analysis with prioritized refactor roadmap — technical debt quantification, architecture improvements, and migration strategy."
+    description: "Deep codebase analysis with prioritized refactor roadmap - technical debt quantification, architecture improvements, and migration strategy."
     icon: "i-ph-file-magnifying-glass"
     category: "Consulting"
     featured: true

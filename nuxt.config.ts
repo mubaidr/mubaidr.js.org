@@ -20,6 +20,7 @@ export default defineNuxtConfig({
         { rel: "apple-touch-icon", href: "/favicon.png" },
         { rel: "llms-txt", href: "/llms.txt" },
         { rel: "llms-txt-full", href: "/llms-full.txt" },
+        { rel: "llms", href: "/llms.txt" },
       ],
     },
   },
@@ -201,7 +202,7 @@ export default defineNuxtConfig({
       colorScheme: "dark light",
 
       titleTemplate:
-        "%s | Muhammad Ubaid Raza — AI Agent Architect & Full-Stack Consultant",
+        "%s | Muhammad Ubaid Raza - AI Agent Architect & Full-Stack Consultant",
     },
 
     automaticDefaults: true,

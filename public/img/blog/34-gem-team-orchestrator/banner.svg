@@ -282,7 +282,7 @@
     <!-- Wave 1 box -->
     <g transform="translate(0, 14)">
       <rect x="0" y="0" width="200" height="50" rx="10" fill="#1e293b" stroke="#22c55e" stroke-width="1.5"/>
-      <text x="12" y="18" fill="#22c55e" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">WAVE 1 — Parallel (≤4)</text>
+      <text x="12" y="18" fill="#22c55e" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">WAVE 1 - Parallel (≤4)</text>
       <g transform="translate(12, 26)">
         <circle cx="4" cy="4" r="3" fill="#22c55e"/>
         <text x="14" y="8" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">task_A</text>
@@ -310,7 +310,7 @@
     <!-- Wave 2 box -->
     <g transform="translate(0, 134)">
       <rect x="0" y="0" width="200" height="38" rx="10" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.5"/>
-      <text x="12" y="18" fill="#8b5cf6" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">WAVE 2 — Parallel</text>
+      <text x="12" y="18" fill="#8b5cf6" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700">WAVE 2 - Parallel</text>
       <g transform="translate(12, 24)">
         <circle cx="4" cy="4" r="3" fill="#8b5cf6"/>
         <text x="14" y="8" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="9">task_D (depends on C)</text>
@@ -361,15 +361,15 @@
     <g transform="translate(0, 14)">
       <!-- Trusted -->
       <rect x="0" y="0" width="200" height="24" rx="6" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="1"/>
-      <text x="100" y="16" fill="#22c55e" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700" text-anchor="middle">✓ TRUSTED — PRD, plan.yaml, AGENTS.md</text>
+      <text x="100" y="16" fill="#22c55e" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700" text-anchor="middle">✓ TRUSTED - PRD, plan.yaml, AGENTS.md</text>
 
       <!-- Verified -->
       <rect x="0" y="30" width="200" height="24" rx="6" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="1"/>
-      <text x="100" y="46" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700" text-anchor="middle">◉ VERIFIED — Codebase, research findings</text>
+      <text x="100" y="46" fill="#f59e0b" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700" text-anchor="middle">◉ VERIFIED - Codebase, research findings</text>
 
       <!-- Untrusted -->
       <rect x="0" y="60" width="200" height="24" rx="6" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="1"/>
-      <text x="100" y="76" fill="#ef4444" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700" text-anchor="middle">✗ UNTRUSTED — Error logs, external data</text>
+      <text x="100" y="76" fill="#ef4444" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700" text-anchor="middle">✗ UNTRUSTED - Error logs, external data</text>
     </g>
   </g>
 

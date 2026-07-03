@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // SEO Meta
 useHead({
-  title: "Terms of Service - Muhammad Ubaid Raza",
+  title: "Terms of Service",
   meta: [
     {
       name: "description",

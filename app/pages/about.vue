@@ -1,6 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-  title: "About - Muhammad Ubaid Raza",
+  title: "About",
   description:
     "Senior software engineer building scalable systems and developer tools.",
 })
@@ -9,7 +9,7 @@ definePageMeta({
 const { data: profileData } = await useProfileData()
 
 useHead({
-  title: "About - Muhammad Ubaid Raza",
+  title: "About",
   meta: [
     {
       name: "description",

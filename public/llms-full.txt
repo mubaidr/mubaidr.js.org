@@ -1,7 +1,8 @@
-<project title="Muhammad Ubaid Raza — AI Agent Architect & Full-Stack Consultant" summary="Senior Software Engineer (13+ years) specializing in AI agent systems, LLM orchestration, Laravel, Nuxt, and scalable SaaS architecture. 125+ projects delivered with 100% client satisfaction.">
+# Last updated: 2026-07-03
+<project title="Muhammad Ubaid Raza - AI Agent Architect & Full-Stack Consultant" summary="Senior Software Engineer (13+ years) specializing in AI agent systems, LLM orchestration, Laravel, Nuxt, and scalable SaaS architecture. 125+ projects delivered with 100% client satisfaction.">
 
 <context>
-This is the full AI context for mubaidr.js.org — a personal portfolio, blog, and consulting landing page for Muhammad Ubaid Raza.
+This is the full AI context for mubaidr.js.org - a personal portfolio, blog, and consulting landing page for Muhammad Ubaid Raza.
 
 Key facts:
 - 13+ years of software engineering experience
@@ -24,8 +25,8 @@ Tagline: Delivered 125+ projects with 100% client satisfaction. 13 years buildin
 Description: Delivering robust, scalable, and user-focused software solutions that drive business success.
 
 Work Approach:
-- Architecting solutions and managing product lifecycles — optimizing performance, scalability, and security
-- Leading agile teams and collaborating with clients — ensuring clarity, timeliness, and adaptability
+- Architecting solutions and managing product lifecycles - optimizing performance, scalability, and security
+- Leading agile teams and collaborating with clients - ensuring clarity, timeliness, and adaptability
 - Automating workflows and ensuring code quality
 
 Social:
@@ -35,7 +36,7 @@ Social:
 </profile>
 
 <services>
-1. Full-Stack Development — $100+/hr, 2-12 weeks
+1. Full-Stack Development - $100+/hr, 2-12 weeks
    - Vue.js / Nuxt.js Applications
    - React / Next.js Development
    - Node.js Backend Services
@@ -43,7 +44,7 @@ Social:
    - API Development & Integration
    - Performance Optimization
 
-2. Technical Consulting — $120+/hr, 1-4 weeks
+2. Technical Consulting - $120+/hr, 1-4 weeks
    - Technology Stack Selection
    - Architecture Design & Review
    - Code Review & Audit
@@ -51,25 +52,25 @@ Social:
    - Scalability Planning
    - Best Practices Implementation
 
-3. Project Leadership — Custom pricing
+3. Project Leadership - Custom pricing
    - Development team leadership
    - Agile project delivery
    - Mentoring & code review
    - Technical project management
 
-4. Code Review & Mentoring — $100/hr
+4. Code Review & Mentoring - $100/hr
    - Code quality assessment
    - Best practices guidance
    - Team skill development
    - Architecture recommendations
 
-5. Browser Extension Development — Custom pricing
+5. Browser Extension Development - Custom pricing
    - Chrome & Firefox extensions
    - Vite + Vue 3 tooling
    - Cross-browser compatibility
    - Extension store publishing
 
-6. API Development & Integration — $100/hr
+6. API Development & Integration - $100/hr
    - RESTful & GraphQL APIs
    - Stripe integration
    - Payment gateway integration
@@ -113,23 +114,23 @@ Social:
 </featured_projects>
 
 <professional_journey>
-Current: Senior Software Engineer — Freelance/Remote (2020-Present)
+Current: Senior Software Engineer - Freelance/Remote (2020-Present)
 - 20+ projects delivered with 100% client satisfaction
 - Reduced application load times by 60% through optimization
 - Mentored 15+ junior developers
 
 Previous:
-- Full-Stack Developer — Tech Solutions Inc, Karachi (2018-2020)
+- Full-Stack Developer - Tech Solutions Inc, Karachi (2018-2020)
   - Led migration of legacy system to modern tech stack
   - Improved system performance by 40%
   - Increased code coverage to 85% through automated testing
 
-- Software Developer — Digital Agency Pro, Lahore (2015-2018)
+- Software Developer - Digital Agency Pro, Lahore (2015-2018)
   - Delivered 50+ client websites on time and within budget
   - Reduced development time by 30% through reusable components
   - Achieved 98% client retention rate
 
-- Junior Developer — StartUp Hub, Islamabad (2012-2015)
+- Junior Developer - StartUp Hub, Islamabad (2012-2015)
 
 Technologies:
 - Languages: TypeScript, JavaScript, PHP, Python, SQL, HTML, CSS/SCSS
@@ -165,50 +166,50 @@ Technologies:
 
 <blog_posts>
 Technical AI & Agent Systems:
-- "Production-Grade AI Agents Are Not Prompts — They Are Systems" — Why real agents need orchestration layers, not prompt chains
-- "DAG-Based AI Orchestration: Why Linear Agent Pipelines Break at Scale" — DAG beats sequential chains for production
-- "I Stopped Building Features First — I Now Design Execution Systems First" — Why execution-first produces better software
-- "Multi-Agent Memory Systems: What Actually Works in Production" — Structured state, controlled injection, lifecycle management
-- "Async-First Engineering in 2026: Why I Avoid Most Technical Calls" — Async workflows for senior engineering
-- "Laravel + AI Agent Systems: Building Hybrid Backends in 2026" — Laravel as orchestration backend for AI agents
-- "AI-First Development: Building the Future of Software in 2026" — Autonomous agents and intelligent code generation
-- "AI-Powered Development Tools in 2026: A Complete Guide" — AI-first tools transforming software development
+- "Production-Grade AI Agents Are Not Prompts - They Are Systems" - Why real agents need orchestration layers, not prompt chains
+- "DAG-Based AI Orchestration: Why Linear Agent Pipelines Break at Scale" - DAG beats sequential chains for production
+- "I Stopped Building Features First - I Now Design Execution Systems First" - Why execution-first produces better software
+- "Multi-Agent Memory Systems: What Actually Works in Production" - Structured state, controlled injection, lifecycle management
+- "Async-First Engineering in 2026: Why I Avoid Most Technical Calls" - Async workflows for senior engineering
+- "Laravel + AI Agent Systems: Building Hybrid Backends in 2026" - Laravel as orchestration backend for AI agents
+- "AI-First Development: Building the Future of Software in 2026" - Autonomous agents and intelligent code generation
+- "AI-Powered Development Tools in 2026: A Complete Guide" - AI-first tools transforming software development
 
 Web Development & Frameworks:
-- "Nuxt 3 to Nuxt 4 Migration Guide: Complete Checklist for 2026" — Step-by-step migration with codemod tools
-- "Nuxt 4 SSR Performance Optimization: Complete Guide to Core Web Vitals" — Caching, data fetching, hybrid rendering
-- "Meta-Frameworks in 2026: The New Default for Web Development" — Why Next.js, Nuxt, SvelteKit dominate
-- "React Compiler and the End of Manual Memoization" — React Compiler automating memoization in 2026
-- "React Server Components Deep Dive" — RSC with practical examples and migration strategies
-- "Vue 3 Composition API: Best Practices for Modern Development" — Effective patterns for Composition API
-- "Next.js 14 App Router Complete Guide" — Server Components, streaming, caching strategies
-- "Full-Stack Development in 2026: Complete Roadmap" — Modern frameworks, tools, best practices
+- "Nuxt 3 to Nuxt 4 Migration Guide: Complete Checklist for 2026" - Step-by-step migration with codemod tools
+- "Nuxt 4 SSR Performance Optimization: Complete Guide to Core Web Vitals" - Caching, data fetching, hybrid rendering
+- "Meta-Frameworks in 2026: The New Default for Web Development" - Why Next.js, Nuxt, SvelteKit dominate
+- "React Compiler and the End of Manual Memoization" - React Compiler automating memoization in 2026
+- "React Server Components Deep Dive" - RSC with practical examples and migration strategies
+- "Vue 3 Composition API: Best Practices for Modern Development" - Effective patterns for Composition API
+- "Next.js 14 App Router Complete Guide" - Server Components, streaming, caching strategies
+- "Full-Stack Development in 2026: Complete Roadmap" - Modern frameworks, tools, best practices
 
 TypeScript & JavaScript:
-- "TypeScript 2026: New Features Every Developer Should Know" — Enhanced inference, module resolution
-- "End-to-End Type Safety: The Complete Guide for 2026" — TypeScript, Zod, modern tools
-- "Advanced TypeScript Patterns for Enterprise Applications" — Conditional types, template literals, design patterns
-- "TypeScript + Node.js in Production: A Complete Guide" — Build, deploy, maintain production apps
-- "Modern JavaScript ES2024 Features" — Temporal API, decorators, pattern matching
+- "TypeScript 2026: New Features Every Developer Should Know" - Enhanced inference, module resolution
+- "End-to-End Type Safety: The Complete Guide for 2026" - TypeScript, Zod, modern tools
+- "Advanced TypeScript Patterns for Enterprise Applications" - Conditional types, template literals, design patterns
+- "TypeScript + Node.js in Production: A Complete Guide" - Build, deploy, maintain production apps
+- "Modern JavaScript ES2024 Features" - Temporal API, decorators, pattern matching
 
 Performance, SEO & Design:
-- "Core Web Vitals 2026: Performance Optimization Strategies" — Latest metrics and optimization
-- "AI SEO for Developer Blogs: Get Cited by ChatGPT, Gemini & Perplexity" — AISEO for developer blogs
-- "Web Performance Optimization in 2024" — Core Web Vitals improvements
-- "Web Accessibility WCAG 2026: Complete Compliance Guide" — WCAG 2.2 guidelines
-- "Design Tokens & Tailwind v4: The Complete Guide" — Design tokens for scalable design systems
+- "Core Web Vitals 2026: Performance Optimization Strategies" - Latest metrics and optimization
+- "AI SEO for Developer Blogs: Get Cited by ChatGPT, Gemini & Perplexity" - AISEO for developer blogs
+- "Web Performance Optimization in 2024" - Core Web Vitals improvements
+- "Web Accessibility WCAG 2026: Complete Compliance Guide" - WCAG 2.2 guidelines
+- "Design Tokens & Tailwind v4: The Complete Guide" - Design tokens for scalable design systems
 
 Infrastructure & Architecture:
-- "Edge Computing and Serverless: The Future of Web Deployment" — Edge/serverless revolutionizing deployment
-- "Docker and Microservices Deployment" — Kubernetes, monitoring, CI/CD pipelines
-- "GraphQL API Design Patterns" — Performance optimization, security best practices
-- "WebAssembly in 2026: The Performance Revolution" — Near-native speed for web apps
-- "CSS Grid and Flexbox Mastery" — Responsive design patterns, advanced layout techniques
+- "Edge Computing and Serverless: The Future of Web Deployment" - Edge/serverless revolutionizing deployment
+- "Docker and Microservices Deployment" - Kubernetes, monitoring, CI/CD pipelines
+- "GraphQL API Design Patterns" - Performance optimization, security best practices
+- "WebAssembly in 2026: The Performance Revolution" - Near-native speed for web apps
+- "CSS Grid and Flexbox Mastery" - Responsive design patterns, advanced layout techniques
 
 Gem Team Framework:
-- "Introducing gem-orchestrator" — The team lead for AI development workflows
-- "Gem Team v1.20.0: Marketplace Integration, APM Structure" — Latest features
-- "Introducing the gem-team Repository" — AI development workflow enhancements
+- "Introducing gem-orchestrator" - The team lead for AI development workflows
+- "Gem Team v1.20.0: Marketplace Integration, APM Structure" - Latest features
+- "Introducing the gem-team Repository" - AI development workflow enhancements
 </blog_posts>
 
 <testimonials>

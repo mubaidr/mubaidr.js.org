@@ -25,7 +25,7 @@ seriesOrder: 4
 seriesDescription: "Exploring how AI is transforming software development"
 ---
 
-Since introducing gem-orchestrator last month, the Gem Team project has evolved rapidly. Version 1.20.0 brings major improvements in distribution, installation, and project structure — making it easier than ever to integrate AI-powered workflows into your development environment.
+Since introducing gem-orchestrator last month, the Gem Team project has evolved rapidly. Version 1.20.0 brings major improvements in distribution, installation, and project structure - making it easier than ever to integrate AI-powered workflows into your development environment.
 
 In this post, I'll walk you through what's new, why these changes matter, and how they improve the developer experience.
 
@@ -33,7 +33,7 @@ In this post, I'll walk you through what's new, why these changes matter, and ho
 
 ### Marketplace Integration for All Major AI Tools
 
-The biggest change: Gem Team is now available as a marketplace package for **GitHub Copilot**, **Claude Code**, **Cursor**, and **OpenCode**. No more manual file copying or symlinking — just one command to install across all your AI coding tools.
+The biggest change: Gem Team is now available as a marketplace package for **GitHub Copilot**, **Claude Code**, **Cursor**, and **OpenCode**. No more manual file copying or symlinking - just one command to install across all your AI coding tools.
 
 ```bash
 # Install APM (AI Package Manager) first
@@ -43,7 +43,7 @@ curl -fsSL https://microsoft.github.io/apm/install.sh | sh
 apm install mubaidr/gem-team
 ```
 
-APM handles the rest — detecting your installed AI tools and deploying the agents to the correct locations automatically.
+APM handles the rest - detecting your installed AI tools and deploying the agents to the correct locations automatically.
 
 **Why this matters:** Lower barrier to entry means faster adoption. You can try Gem Team in minutes, not hours.
 
@@ -51,10 +51,10 @@ APM handles the rest — detecting your installed AI tools and deploying the age
 
 The agent definitions have been moved to `.apm/agents/` to align with the AI Package Manager standard. This change brings several benefits:
 
-- **Cleaner project root** — No more clutter from agent definitions
-- **Better compatibility** — Works seamlessly with APM's dependency management
-- **Hidden from source control** — `.apm/` is typically gitignored, reducing repo size
-- **Multi-version support** — Different projects can use different Gem Team versions
+- **Cleaner project root** - No more clutter from agent definitions
+- **Better compatibility** - Works seamlessly with APM's dependency management
+- **Hidden from source control** - `.apm/` is typically gitignored, reducing repo size
+- **Multi-version support** - Different projects can use different Gem Team versions
 
 The plugin manifest (`plugin.json`) at the project root now references the APM location, making the package self-contained and portable.
 
@@ -72,9 +72,9 @@ The plugin manifest (`plugin.json`) at the project root now references the APM l
 
 The README and installation guide have been completely rewritten to reflect the new multi-method approach:
 
-1. **APM install** (recommended) — one command for all tools
-2. **Marketplace registration** — install via your tool's marketplace
-3. **Manual install** — still supported for advanced users
+1. **APM install** (recommended) - one command for all tools
+2. **Marketplace registration** - install via your tool's marketplace
+3. **Manual install** - still supported for advanced users
 
 The docs now include clear, step-by-step instructions for each AI tool, with troubleshooting tips and verification steps.
 
@@ -110,7 +110,7 @@ A `context7.json` file has been added to provide rich metadata for Context7 inte
 
 ### Custom Domain Setup
 
-The project now has a custom domain: [gem-team.js.org](https://gem-team.js.org) — easier to share and remember than the GitHub Pages URL. The `CNAME` file configures this for GitHub Pages.
+The project now has a custom domain: [gem-team.js.org](https://gem-team.js.org) - easier to share and remember than the GitHub Pages URL. The `CNAME` file configures this for GitHub Pages.
 
 ## Under-the-Hood Improvements
 
@@ -130,10 +130,10 @@ The `.gitignore` has been expanded to cover all common build artifacts, logs, co
 
 The roadmap for Gem Team includes:
 
-- **Phase 8 Final Review automation** — deeper architecture validation before completion
-- **Enhanced mobile testing** — Detox and Maestro integration for React Native/Flutter
-- **Performance profiling** — automatic bottleneck detection and optimization suggestions
-- **More design agents** — specialized UI/UX patterns for different industries
+- **Phase 8 Final Review automation** - deeper architecture validation before completion
+- **Enhanced mobile testing** - Detox and Maestro integration for React Native/Flutter
+- **Performance profiling** - automatic bottleneck detection and optimization suggestions
+- **More design agents** - specialized UI/UX patterns for different industries
 
 ## How to Upgrade
 
@@ -163,7 +163,7 @@ Then describe your next development goal and watch the team work:
 > Implement OAuth2 authentication with refresh token rotation and secure cookie storage
 ```
 
-The orchestrator will detect the complexity, route through research and planning, and execute with wave-based parallelism — all while maintaining traceability and quality gates.
+The orchestrator will detect the complexity, route through research and planning, and execute with wave-based parallelism - all while maintaining traceability and quality gates.
 
 ---
 

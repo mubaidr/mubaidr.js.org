@@ -1,12 +1,12 @@
 <script setup lang="ts">
 definePageMeta({
-  title: "Consulting - Muhammad Ubaid Raza",
+  title: "Consulting",
   description:
     "Technical consulting and leadership for teams building scalable systems.",
 })
 
 useHead({
-  title: "Consulting - Muhammad Ubaid Raza",
+  title: "Consulting",
   meta: [
     {
       name: "description",
@@ -15,6 +15,35 @@ useHead({
     },
   ],
 })
+
+useSchemaOrg([
+  {
+    "@type": "Service",
+    name: "Technical Consulting",
+    description:
+      "Technical consulting and leadership for teams building scalable systems.",
+    provider: {
+      "@type": "Person",
+      name: "Muhammad Ubaid Raza",
+      url: "https://mubaidr.js.org",
+    },
+    areaServed: "Worldwide",
+    serviceType: "Technical Consulting",
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceUrl: "https://mubaidr.js.org/consulting",
+      availableLanguage: ["English"],
+    },
+  },
+  defineOffer({
+    priceSpecification: {
+      type: "UnitPriceSpecification",
+      priceCurrency: "USD",
+      price: 120,
+      description: "Hourly consulting and development",
+    },
+  }),
+])
 
 const consultingAreas = [
   {

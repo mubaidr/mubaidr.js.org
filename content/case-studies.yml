@@ -13,7 +13,7 @@ caseStudies:
     projectRef: 15
   - id: 5
     problem: Enterprise struggled with 50K+ unsearchable documents and manual review bottlenecks
-    solution: Developed AI chat platform with OCR, vector search, and RAG — 95% query accuracy, 90% faster retrieval
+    solution: Developed AI chat platform with OCR, vector search, and RAG - 95% query accuracy, 90% faster retrieval
     metric: 50K+ docs processed, 200K+ queries, 5K+ users, 95% accuracy
     link: /projects
     projectRef: 15

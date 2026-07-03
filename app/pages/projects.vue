@@ -1,6 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-  title: "Projects - Muhammad Ubaid Raza",
+  title: "Projects",
   description:
     "Explore my portfolio of web applications, browser extensions, and open source contributions.",
 })
@@ -13,20 +13,21 @@ const { data: testimonialsData } = await useTestimonialsData()
 
 // SEO Meta
 const url = `${site.url}/projects`
-const title = "Projects - Muhammad Ubaid Raza"
+const htmlTitle = "Projects"
+const ogTitle = "Projects - Muhammad Ubaid Raza"
 const description =
   "Explore my portfolio of web applications, browser extensions, and open source contributions."
 
 useSeoMeta({
-  title,
+  title: htmlTitle,
   description,
-  ogTitle: title,
+  ogTitle,
   ogDescription: description,
   ogType: "website",
   ogUrl: url,
   ogImage: site.url + "/img/og-image.jpg",
   twitterCard: "summary_large_image",
-  twitterTitle: title,
+  twitterTitle: ogTitle,
   twitterDescription: description,
   twitterImage: site.url + "/img/og-image.jpg",
 })
@@ -38,7 +39,7 @@ useHead({
 // Structured data for SEO
 useSchemaOrg([
   defineWebPage({
-    name: title,
+    name: ogTitle,
     description,
     url,
   }),
@@ -223,7 +224,7 @@ const getProjectTestimonials = (project: { testimonials?: number[] }) => {
                             :src="testimonial.avatar"
                             :alt="testimonial.name"
                             class="w-full h-full object-cover"
-                          >
+                          />
                         </div>
                         <div class="text-xs">
                           <div class="font-medium">{{ testimonial.name }}</div>

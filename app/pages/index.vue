@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 // Fetch data using composables
 const { data: profileData } = await useProfileData()
+const { data: testimonialsData } = await useTestimonialsData()
 // const { data: professionalJourneyData } = await useProfessionalJourneyData()
 
 const toast = useToast()
@@ -8,7 +9,7 @@ const toast = useToast()
 // SEO Meta using reactive composables
 if (profileData.value) {
   useSeoMeta({
-    title: `${profileData.value.name} - ${profileData.value.title}`,
+    title: "Home",
     description: profileData.value.description,
     ogTitle: `${profileData.value.name} - ${profileData.value.title}`,
     ogDescription: profileData.value.description,
@@ -34,6 +35,17 @@ if (profileData.value) {
       image: profileData.value.avatar,
       url: "https://mubaidr.js.org",
       sameAs: profileData.value.social?.map((s) => s.url) || [],
+    }),
+    defineAggregateRating({
+      ratingValue: 5.0,
+      bestRating: 5,
+      worstRating: 1,
+      ratingCount: testimonialsData.value?.length || 0,
+      reviewCount: testimonialsData.value?.length || 0,
+      itemReviewed: definePerson({
+        name: profileData.value.name,
+        url: "https://mubaidr.js.org",
+      }),
     }),
   ])
 }

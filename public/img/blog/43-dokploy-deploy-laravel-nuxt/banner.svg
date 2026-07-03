@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-label="Deploying Laravel + Nuxt with Dokploy">
+  <title>Deploying Laravel + Nuxt with Dokploy</title>
+  <desc>Deployment architecture showing Laravel backend and Nuxt frontend services with Traefik proxy and Let's Encrypt SSL</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1525"/>
+      <stop offset="50%" stop-color="#132743"/>
+      <stop offset="100%" stop-color="#0a1525"/>
+    </linearGradient>
+    <linearGradient id="laravel" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f05340"/>
+      <stop offset="100%" stop-color="#d93c2a"/>
+    </linearGradient>
+    <linearGradient id="nuxt" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00dc82"/>
+      <stop offset="100%" stop-color="#00c566"/>
+    </linearGradient>
+    <linearGradient id="dokploy" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="traefik" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="ssl" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg)"/>
+  <g opacity="0.04">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5"/>
+    </pattern>
+    <rect width="1200" height="680" fill="url(#grid)"/>
+  </g>
+  <g transform="translate(100, 140)">
+    <text x="0" y="0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#ffffff" letter-spacing="0.3">Deploying Laravel + Nuxt with Dokploy</text>
+    <text x="0" y="36" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="16" font-weight="400" fill="#94a3b8" letter-spacing="0.2">Production setup with Docker Compose, Traefik, and Let's Encrypt</text>
+    <line x1="0" y1="60" x2="320" y2="60" stroke="#334155" stroke-width="2"/>
+  </g>
+  <g transform="translate(100, 260)" filter="url(#shadow)">
+    <rect x="0" y="0" width="220" height="360" rx="12" fill="#1e293b" stroke="#334155"/>
+    <text x="16" y="28" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Stack Overview</text>
+    <rect x="16" y="44" width="188" height="52" rx="6" fill="#0f172a"/>
+    <text x="24" y="66" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#f97316">nginx-production</text>
+    <text x="24" y="82" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Reverse proxy</text>
+    <rect x="16" y="104" width="188" height="52" rx="6" fill="#0f172a"/>
+    <text x="24" y="126" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#f05340">backend-production</text>
+    <text x="24" y="142" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Laravel / PHP-FPM</text>
+    <rect x="16" y="164" width="188" height="52" rx="6" fill="#0f172a"/>
+    <text x="24" y="186" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#00dc82">frontend-production</text>
+    <text x="24" y="202" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Nuxt frontend</text>
+    <rect x="16" y="224" width="188" height="52" rx="6" fill="#0f172a"/>
+    <text x="24" y="246" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#60a5fa">mysql-production</text>
+    <text x="24" y="262" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">MySQL 8.0</text>
+    <rect x="16" y="284" width="188" height="52" rx="6" fill="#0f172a"/>
+    <text x="24" y="306" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#ef4444">redis-production</text>
+    <text x="24" y="322" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Cache / Queue</text>
+  </g>
+  <g transform="translate(380, 250)">
+    <line x1="0" y1="40" x2="140" y2="40" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="50" y="32" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="12" fill="#cbd5e1">Traffic</text>
+    <g transform="translate(200, 10)" filter="url(#shadow)">
+      <rect x="0" y="0" width="240" height="360" rx="12" fill="#1e293b" stroke="#6366f1" stroke-width="2"/>
+      <text x="16" y="28" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Dokploy + Traefik</text>
+      <rect x="16" y="44" width="208" height="40" rx="6" fill="#0f172a"/>
+      <text x="24" y="68" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Reverse proxy / Load balancer</text>
+      <text x="16" y="96" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#6366f1">Routers</text>
+      <text x="24" y="114" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Host-based routing per service</text>
+      <text x="16" y="142" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#22d3ee">ACME / TLS</text>
+      <text x="24" y="160" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Let's Encrypt HTTP-01</text>
+      <text x="16" y="188" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#eab308">Dashboard</text>
+      <text x="24" y="206" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Traefik admin / metrics</text>
+      <rect x="16" y="218" width="208" height="110" rx="6" fill="#0f172a"/>
+      <text x="24" y="238" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">Docker Volumes</text>
+      <text x="24" y="256" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">backend-production-storage</text>
+      <text x="24" y="274" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">backend-production-public</text>
+      <text x="24" y="292" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">mysql-production-data</text>
+      <text x="24" y="310" font-family="Inter, ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">redis-production-data</text>
+    </g>
+  </g>
+</svg>

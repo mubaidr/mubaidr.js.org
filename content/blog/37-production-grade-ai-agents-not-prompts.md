@@ -1,8 +1,8 @@
 ---
-title: "Production-Grade AI Agents Are Not Prompts — They Are Systems"
+title: "Production-Grade AI Agents Are Not Prompts - They Are Systems"
 description: "Most 2026 agent frameworks are still demo-level. Real production agents require orchestration layers, not prompt chains. Here's what separates toy agents from systems that ship."
 excerpt: "Why prompt-only agents fail in production, the difference between prompt chains, tool-using agents, and orchestrated multi-agent systems, and how the Gem-Team architecture solves this with DAG execution and deterministic routing."
-headline: "Production-Grade AI Agents Are Not Prompts — They Are Systems"
+headline: "Production-Grade AI Agents Are Not Prompts - They Are Systems"
 abstract: "A deep dive into why prompt-only AI agents fail in production, the architecture of orchestrated multi-agent systems, and practical patterns from the Gem-Team framework for building reliable AI workflows."
 date: 2026-05-01T00:00:00.000Z
 dateUpdated: 2026-05-01T00:00:00.000Z
@@ -28,7 +28,7 @@ seriesOrder: 1
 seriesDescription: "Building production-grade AI systems that scale beyond demos"
 ---
 
-## Production-Grade AI Agents Are Not Prompts — They Are Systems
+## Production-Grade AI Agents Are Not Prompts - They Are Systems
 
 I learned this lesson the hard way. In early 2025, I built what I thought was a clever AI agent for a Laravel application. It was a single prompt chain: receive a bug report, analyze the stack trace, search the codebase, generate a fix, apply it. Five steps chained together with a template that read "Based on the following context, generate..." at each hop. It worked beautifully in the demo. Then we put it on a real repository with real issues, and it fell apart within 24 hours.
 

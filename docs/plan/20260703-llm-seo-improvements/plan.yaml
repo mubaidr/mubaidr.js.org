@@ -1,0 +1,88 @@
+plan_id: 20260703-llm-seo-improvements
+objective: "Implement LLM/SEO improvements: fix duplicated titles, add JSON-LD schemas, create availability JSON endpoint, update llms.txt freshness, add rel=llms link"
+complexity: MEDIUM
+created_at: 2026-07-03
+
+waves:
+  - wave: 1
+    description: "Titles & head fixes - low risk, foundational"
+    tasks:
+      - id: title-fix
+        agent: gem-implementer
+        agent_input_reference: task_title_fix
+        status: pending
+        dependencies: []
+        description: "Fix duplicated page titles - pages set full titles like 'Contact - Muhammad Ubaid Raza' but titleTemplate '%s | Muhammad Ubaid Raza - AI Agent Architect...' adds it again. Simplify page titles to be concise (e.g. 'Contact', 'About', 'Projects', 'Consulting') and let titleTemplate handle branding."
+        files:
+          - app/pages/contact.vue
+          - app/pages/about.vue
+          - app/pages/consulting.vue
+          - app/pages/projects.vue
+          - app/pages/index.vue
+          - app/pages/blog/[...slug].vue
+          - app/pages/privacy.vue
+          - app/pages/terms.vue
+
+  - wave: 2
+    description: "JSON-LD structured data additions"
+    tasks:
+      - id: jsonld-professional-service
+        agent: gem-implementer
+        agent_input_reference: task_jsonld_professional_service
+        status: pending
+        dependencies: []
+        description: "Add ProfessionalService + Offer JSON-LD schema to consulting page using useSchemaOrg. Include service types, pricing ranges (from profile.yml pricingRanges), areaServed, availableChannel (async-email)."
+        files:
+          - app/pages/consulting.vue
+
+      - id: jsonld-aggregate-rating
+        agent: gem-implementer
+        agent_input_reference: task_jsonld_aggregate_rating
+        status: pending
+        dependencies: []
+        description: "Add AggregateRating JSON-LD to homepage (index.vue) using reviewCount=125, ratingValue=5.0 from profile data (clientSatisfaction=100, projectsDelivered=125)."
+        files:
+          - app/pages/index.vue
+
+      - id: jsonld-faq-page
+        agent: gem-implementer
+        agent_input_reference: task_jsonld_faq_page
+        status: pending
+        dependencies: []
+        description: "Add FAQPage JSON-LD to contact page using useSchemaOrg. Map faqsData.list items to Question/Answer schema."
+        files:
+          - app/pages/contact.vue
+
+  - wave: 3
+    description: "Content endpoints & llms hygiene"
+    tasks:
+      - id: availability-json
+        agent: gem-implementer
+        agent_input_reference: task_availability_json
+        status: pending
+        dependencies: []
+        description: "Create a static JSON file at public/availability.json with machine-readable contact/availability data: rates, timezone, responseTime, status, paymentTerms, services array, social links. This lets AI agents consume data without parsing prose."
+        files:
+          - public/availability.json
+
+      - id: llms-txt-date
+        agent: gem-implementer
+        agent_input_reference: task_llms_txt_date
+        status: pending
+        dependencies: []
+        description: "Add a '# Last updated: 2026-07-03' comment line at the top of llms.txt and llms-full.txt for freshness tracking."
+        files:
+          - public/llms.txt
+          - public/llms-full.txt
+
+      - id: rel-llms-link
+        agent: gem-implementer
+        agent_input_reference: task_rel_llms_link
+        status: pending
+        dependencies: []
+        description: 'Add <link rel="llms" href="/llms.txt"> to app.head.link in nuxt.config.ts alongside existing llms-txt and llms-txt-full links.'
+        files:
+          - nuxt.config.ts
+
+output:
+  format: "## Plan Status\nPlan: `{plan_id}` | `{objective}`\nProgress: `{completed}/{total}` tasks completed\nWaves: Wave `{n}` `({completed}/{total})`\n\n## Blocked Tasks\n| Task ID | Why Blocked | Waiting Time |\n|---------|-------------|-------------|\n"

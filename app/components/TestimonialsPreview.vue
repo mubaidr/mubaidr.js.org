@@ -43,7 +43,7 @@ const { data: testimonialsData, pending: isLoading } =
             <p
               class="text-sm font-medium text-neutral-500 dark:text-neutral-400"
             >
-              — {{ testimonial.name }}
+              - {{ testimonial.name }}
             </p>
           </div>
         </UPageCard>

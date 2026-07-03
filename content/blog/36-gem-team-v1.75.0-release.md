@@ -1,5 +1,5 @@
 ---
-title: "gem-team v1.75.0 — Pre-Flight Verification, A11y Audits & Agent Quality Gates"
+title: "gem-team v1.75.0 - Pre-Flight Verification, A11y Audits & Agent Quality Gates"
 description: "gem-team v1.75.0 introduces pre-flight verification steps, visual diff thresholds, accessibility audit levels, and major agent workflow improvements including Devil's Advocate, Differential Diagnosis, and Hypothesis-driven planning."
 excerpt: "The latest gem-team release adds production-grade quality gates to AI-assisted development workflows. New pre-flight verification, visual regression thresholds, and accessibility audit levels ensure generated code meets standards before it reaches your codebase."
 date: 2026-06-22T00:00:00.000Z
@@ -15,27 +15,27 @@ tags:
 readingTime: "6 min read"
 ---
 
-gem-team v1.75.0 represents a significant step toward production-grade AI-assisted development. This release focuses on **quality gates**, **verification protocols**, and **agent reasoning discipline** — the infrastructure that turns "AI-generated code" into "production-ready code."
+gem-team v1.75.0 represents a significant step toward production-grade AI-assisted development. This release focuses on **quality gates**, **verification protocols**, and **agent reasoning discipline** - the infrastructure that turns "AI-generated code" into "production-ready code."
 
 ## What's New in v1.75.0
 
 ### 🚀 New Quality Gates & Verification
 
-**Pre-Flight Verification Steps** — Every agent now runs a pre-flight checklist before executing tasks. This catches configuration issues, missing dependencies, and context gaps _before_ they waste tokens or produce broken output.
+**Pre-Flight Verification Steps** - Every agent now runs a pre-flight checklist before executing tasks. This catches configuration issues, missing dependencies, and context gaps _before_ they waste tokens or produce broken output.
 
-**Visual Diff Thresholds** (`quality.visual_diff_threshold`) — Configure pixel-perfect or perceptual thresholds for browser testing. Catch unintended UI changes in PRs automatically.
+**Visual Diff Thresholds** (`quality.visual_diff_threshold`) - Configure pixel-perfect or perceptual thresholds for browser testing. Catch unintended UI changes in PRs automatically.
 
-**Accessibility Audit Levels** (`quality.a11y_audit_level`) — Choose from `none` | `basic` | `strict` | `wcag-aa` to enforce accessibility standards at the agent level. The new A11y cache uses page snapshot hashes for instant re-runs.
+**Accessibility Audit Levels** (`quality.a11y_audit_level`) - Choose from `none` | `basic` | `strict` | `wcag-aa` to enforce accessibility standards at the agent level. The new A11y cache uses page snapshot hashes for instant re-runs.
 
-**Screenshot on Failure** (`testing.screenshot_on_failure`) — Automatic visual capture when browser tests fail, making debugging visual regressions trivial.
+**Screenshot on Failure** (`testing.screenshot_on_failure`) - Automatic visual capture when browser tests fail, making debugging visual regressions trivial.
 
 ---
 
 ### 📝 Documentation & Agent Discipline
 
-**Impact Triage & Scope Discipline** — Agent documentation now includes explicit impact triage (low/medium/high/critical) and scope discipline rules. Agents must declare blast radius before acting.
+**Impact Triage & Scope Discipline** - Agent documentation now includes explicit impact triage (low/medium/high/critical) and scope discipline rules. Agents must declare blast radius before acting.
 
-**gem-designer-mobile Parsing Modes** — New parsing mode descriptions for mobile UI analysis: `create` | `validate` with scope targeting (`component` | `screen` | `navigation` | `design_system`).
+**gem-designer-mobile Parsing Modes** - New parsing mode descriptions for mobile UI analysis: `create` | `validate` with scope targeting (`component` | `screen` | `navigation` | `design_system`).
 
 ---
 
@@ -64,7 +64,7 @@ This release includes **15+ housekeeping commits** that fundamentally improve ho
 Early AI coding tools optimized for _speed of generation_. gem-team optimizes for **correctness of outcome**.
 
 The v1.75.0 quality gates mean:
--when an agent won't just "write code" — it will verify the code compiles, passes tests, meets accessibility standards, and doesn't introduce visual regressions _before_ presenting it to you.
+-when an agent won't just "write code" - it will verify the code compiles, passes tests, meets accessibility standards, and doesn't introduce visual regressions _before_ presenting it to you.
 
 ### Agent Reasoning You Can Audit
 
@@ -72,13 +72,13 @@ The Devil's Advocate step, Differential Diagnosis, and Hypothesis-Driven Plannin
 
 This is critical for:
 
-- **Code review** — Review the reasoning, not just the diff
-- **Compliance** — Demonstrate due diligence in AI-assisted development
-- **Learning** — Understand patterns that lead to better outcomes
+- **Code review** - Review the reasoning, not just the diff
+- **Compliance** - Demonstrate due diligence in AI-assisted development
+- **Learning** - Understand patterns that lead to better outcomes
 
 ### Production-Ready Defaults
 
-The new configuration options (`visual_diff_threshold`, `a11y_audit_level`, `screenshot_on_failure`) have sensible defaults but are fully tunable. Teams can start strict and relax, or start permissive and tighten — the framework adapts to your maturity.
+The new configuration options (`visual_diff_threshold`, `a11y_audit_level`, `screenshot_on_failure`) have sensible defaults but are fully tunable. Teams can start strict and relax, or start permissive and tighten - the framework adapts to your maturity.
 
 ---
 
@@ -113,9 +113,9 @@ orchestrator:
 
 v1.76.0 will focus on:
 
-- **Skill extraction automation** — Convert successful patterns into reusable agent skills
-- **Cross-agent memory sharing** — Context envelope improvements for multi-agent workflows
-- **MCP server integration** — Native Model Context Protocol support for external tool access
+- **Skill extraction automation** - Convert successful patterns into reusable agent skills
+- **Cross-agent memory sharing** - Context envelope improvements for multi-agent workflows
+- **MCP server integration** - Native Model Context Protocol support for external tool access
 
 ---
 
