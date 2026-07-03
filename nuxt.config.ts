@@ -5,13 +5,14 @@ const IS_DEV = import.meta.dev
 
 export default defineNuxtConfig({
   colorMode: {
-    preference: "dark",
+    preference: "system",
+    fallback: "light",
     classSuffix: "",
   },
 
   css: ["~/assets/css/main.css"],
 
-  compatibilityDate: "2026-04-04",
+  compatibilityDate: "2026-07-03",
 
   app: {
     head: {
@@ -41,6 +42,8 @@ export default defineNuxtConfig({
           theme: {
             // Default theme (same as single string)
             default: "github-light",
+            // Light theme used if `html.light`
+            light: "github-light",
             // Theme used if `html.dark`
             dark: "github-dark",
             // Theme used if `html.sepia`
@@ -111,7 +114,7 @@ export default defineNuxtConfig({
   ],
 
   nitro: {
-    preset: "github_pages",
+    preset: "github-pages",
     prerender: {
       crawlLinks: true,
       failOnError: false,

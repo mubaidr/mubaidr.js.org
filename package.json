@@ -3,25 +3,25 @@
     "@giscus/vue": "^3.1.1",
     "@iconify-json/devicon": "^1.2.62",
     "@iconify-json/ph": "^1.2.2",
-    "@nuxt/content": "^3.14.0",
+    "@nuxt/content": "^3.15.0",
     "@nuxt/eslint": "^1.16.0",
     "@nuxt/fonts": "^0.14.0",
-    "@nuxt/icon": "^2.2.3",
+    "@nuxt/icon": "^2.3.1",
     "@nuxt/image": "^2.0.0",
     "@nuxt/ui": "^4.9.0",
     "@nuxthq/studio": "^2.2.1",
     "@nuxtjs/color-mode": "^4.0.1",
-    "@nuxtjs/mdc": "0.22.0",
-    "@nuxtjs/seo": "^5.3.0",
+    "@nuxtjs/mdc": "0.22.1",
+    "@nuxtjs/seo": "^5.3.2",
     "@tailwindcss/typography": "^0.5.20",
-    "@tailwindcss/vite": "^4.3.1",
+    "@tailwindcss/vite": "^4.3.2",
     "nuxt": "^4.4.8",
     "nuxt-feedme": "^2.1.0",
     "nuxt-mcp-dev": "^0.3.2",
-    "prettier": "^3.8.4",
-    "tailwindcss": "^4.3.1",
+    "prettier": "^3.9.4",
+    "tailwindcss": "^4.3.2",
     "vite-plugin-eslint2": "^5.3.0",
-    "vue-tsc": "^3.3.5"
+    "vue-tsc": "^3.3.6"
   },
   "engines": {
     "node": ">=24",
@@ -45,5 +45,14 @@
     "better-sqlite3": "^12.11.1",
     "satori": "^0.26.0",
     "typescript": "^6.0.3"
+  },
+  "allowScripts": {
+    "vue-demi@0.14.10": true,
+    "@parcel/watcher@2.5.6": true,
+    "better-sqlite3@12.11.1": true,
+    "esbuild@0.27.7": true,
+    "esbuild@0.28.1": true,
+    "sharp@0.34.5": true,
+    "unrs-resolver@1.12.2": true
   }
 }
