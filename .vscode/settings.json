@@ -1,3 +1,6 @@
 {
-  "js/ts.experimental.useTsgo": false
+  "markdown.validate.ignoredLinks": [
+    "/projects",
+    "/blog/3-vite-vue3-browser-extension-v3"
+  ]
 }

@@ -19,4 +19,4 @@ What sets gem-team apart is its focus on practical, real-world applications. The
 
 The impact of adopting these patterns extends beyond individual developers. When teams implement the gem-team approach, they see improved collaboration, faster feature delivery, and more maintainable codebases. The repository's community-driven nature means it continuously evolves based on feedback from developers worldwide.
 
-Explore the gem-team repository to transform your AI development workflow. For more resources on AI-powered development, visit the [awesome-copilot](https://github.com/github/awesome-copilot) collection. Learn more about our work at [mubaidr.js.org](https://mubaidr.js.org).
+Explore the gem-team repository to transform your AI development workflow. For more resources on AI-powered development, visit the [awesome-copilot](https://github.com/github/awesome-copilot) collection. Learn more about my work at [mubaidr.js.org](/).

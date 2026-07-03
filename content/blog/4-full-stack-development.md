@@ -857,7 +857,7 @@ Building full stack applications with Node.js and Vue.js offers a powerful, unif
 4. **Optimize performance** - Implement caching and code splitting
 5. **Set up CI/CD** - Automate your testing and deployment process
 
-If you're interested in extending this to browser extensions, check out my [comprehensive guide on building modern browser extensions](https://mubaidr.js.org/blog/3-vite-vue3-browser-extension-v3/) with similar technologies.
+If you're interested in extending this to browser extensions, check out my [comprehensive guide on building modern browser extensions](/blog/3-vite-vue3-browser-extension-v3) with similar technologies.
 
 The journey of full stack development is continuous learning, but with Node.js and Vue.js, you have a solid foundation to build amazing applications. Start with the basics, practice regularly, and gradually add more advanced features as your confidence grows.
 
