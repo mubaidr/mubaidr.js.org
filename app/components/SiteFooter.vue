@@ -16,34 +16,12 @@ const { data: profileData } = await useProfileData()
     class="bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800"
   >
     <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
-      <div class="flex justify-between">
-        <!-- Brand Column -->
+      <div>
         <div class="space-y-4">
-          <h6>Muhammad Ubaid R.</h6>
           <p>
             {{ profileData!.heroHeadline }}
           </p>
-        </div>
-
-        <!-- Navigation Links -->
-        <!-- <div>
-          <h6 class="mb-2 ml-2">Navigation</h6>
-          <nav class="flex flex-col gap-1">
-            <UButton
-              v-for="link in navLinks"
-              :key="link.to"
-              :to="link.to"
-              variant="link"
-              size="sm"
-            >
-              {{ link.label }}
-            </UButton>
-          </nav>
-        </div> -->
-
-        <!-- Connect -->
-        <div>
-          <h6 class="mb-2">Connect</h6>
+          <p>Muhammad Ubaid R.</p>
           <div class="flex gap-2">
             <UButton
               v-for="social in profileData?.social"
@@ -57,16 +35,8 @@ const { data: profileData } = await useProfileData()
             </UButton>
           </div>
         </div>
+        <div class="font-semibold text-xl"></div>
       </div>
-
-      <!-- Divider -->
-      <!-- <div
-        class="mt-12 pt-8 border-t border-neutral-100 dark:border-neutral-800"
-      >
-        <p class="text-center text-sm text-neutral-500">
-          © {{ currentYear }} All rights reserved.
-        </p>
-      </div> -->
     </div>
   </footer>
 </template>

@@ -54,6 +54,8 @@ onBeforeUnmount(() => {
 
           <!-- Action Buttons & Mobile Menu -->
           <div class="flex items-center gap-2">
+            <ThemeSwitcher />
+
             <!-- Desktop Navigation -->
             <UButton
               v-for="item in navigationItems"
@@ -64,8 +66,6 @@ onBeforeUnmount(() => {
             >
               {{ item.label }}
             </UButton>
-
-            <ThemeSwitcher />
 
             <!-- Contact CTA -->
             <UButton
