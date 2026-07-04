@@ -52,7 +52,7 @@ const { data: profileData } = await useProfileData()
               external
               :aria-label="social.name"
               :icon="social.icon"
-              variant="soft"
+              variant="link"
             >
             </UButton>
           </div>

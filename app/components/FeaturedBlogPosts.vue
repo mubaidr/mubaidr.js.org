@@ -2,7 +2,7 @@
 const { count, title } = defineProps({
   count: {
     type: Number,
-    default: 1,
+    default: 2,
   },
   title: {
     type: String,
