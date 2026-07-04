@@ -231,6 +231,7 @@ export default defineContentConfig({
             }),
           )
           .optional(),
+        whatIDo: z.array(z.string()),
         pricingRanges: z
           .object({
             mvp: z.object({

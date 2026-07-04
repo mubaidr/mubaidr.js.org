@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 // Fetch data using composables
 const { data: profileData } = await useProfileData()
-const { data: testimonialsData } = await useTestimonialsData()
 
 // SEO Meta using reactive composables
 if (profileData.value) {
@@ -33,61 +32,8 @@ if (profileData.value) {
       url: "https://mubaidr.js.org",
       sameAs: profileData.value.social?.map((s) => s.url) || [],
     }),
-    defineAggregateRating({
-      ratingValue: 5.0,
-      bestRating: 5,
-      worstRating: 1,
-      ratingCount: testimonialsData.value?.length || 0,
-      reviewCount: testimonialsData.value?.length || 0,
-      itemReviewed: definePerson({
-        name: profileData.value.name,
-        url: "https://mubaidr.js.org",
-      }),
-    }),
   ])
 }
-
-const consultingAreas = [
-  {
-    title: "Architecture Reviews",
-    description:
-      "Evaluate system designs for scalability, security, and performance. Identify technical debt and provide actionable recommendations.",
-    icon: "i-ph-buildings",
-  },
-  {
-    title: "Technical Strategy",
-    description:
-      "Help teams make informed technology decisions, plan roadmaps, and align technical investments with business goals.",
-    icon: "i-ph-lightbulb",
-  },
-  {
-    title: "Team Leadership",
-    description:
-      "Mentor developers, improve engineering practices, and help teams ship better code faster through proven processes.",
-    icon: "i-ph-users-three",
-  },
-]
-
-const approachSteps = [
-  {
-    title: "Discover",
-    description:
-      "Work closely with your team to understand unique challenges, context, and goals for the project.",
-    icon: "i-ph-magnifying-glass",
-  },
-  {
-    title: "Analyze",
-    description:
-      "Evaluate systems and provide practical, actionable guidance that helps you make better technical decisions today.",
-    icon: "i-ph-chart-line-up",
-  },
-  {
-    title: "Deliver",
-    description:
-      "Apply deep technical expertise with a pragmatic approach to set you up for long-term success.",
-    icon: "i-ph-rocket-launch",
-  },
-]
 </script>
 
 <template>
@@ -101,10 +47,10 @@ const approachSteps = [
 
     <section
       v-if="profileData"
-      class="min-h-[64vh] flex items-center justify-center py-32 md:py-48"
+      class="min-h-[64vh] flex items-center justify-center py-32 md:py-56"
     >
       <div class="max-w-3xl mx-auto px-4 space-y-12">
-        <div class="flex flex-col items-center text-center space-y-6">
+        <div class="flex flex-col items-center text-center space-y-4">
           <!-- Label -->
           <!-- <p
             class=" text-sm font-medium tracking-[0.2em] uppercase"
@@ -132,15 +78,15 @@ const approachSteps = [
           </p>
 
           <!-- CTA Button -->
-          <div class="pt-2">
-            <UButton to="/contact" size="lg" class="px-8 group">
+          <!-- <div class="pt-2">
+            <UButton to="/contact" size="lg" variant="solid" class="px-8 group">
               Let's Work Together
               <UIcon
                 name="i-ph-arrow-right"
                 class="ml-2 transition-transform group-hover:translate-x-1"
               />
             </UButton>
-          </div>
+          </div> -->
 
           <!-- Stats Divider -->
           <!-- <div class="flex items-center justify-center gap-3 text-neutral-500">
@@ -151,28 +97,26 @@ const approachSteps = [
 
           <!-- Social Links -->
           <div class="flex items-center justify-center gap-4">
-            <ULink
+            <UButton
               v-for="social in profileData.social"
               :key="social.name"
               :to="social.url"
               external
               :title="social.name"
-              class="p-2 rounded-full hover:bg-primary-50 dark:hover:bg-primary-950/30 hover:text-primary transition-all"
+              variant="link"
+              :icon="social.icon"
             >
-              <UIcon :name="social.icon" size="1.25rem" />
-            </ULink>
+            </UButton>
           </div>
         </div>
-
-        <!-- Availability Info -->
-        <!-- <div class="flex justify-center">
-          <AvailabilityInfo />
-        </div> -->
       </div>
     </section>
 
-    <div class="space-y-24 pb-16">
-      <Consultation />
+    <div class="space-y-16 mt-42">
+      <About />
+      <WhatIDo />
+      <FeaturedProjects :hide-link="true" />
+      <!-- <Consultation /> -->
       <!-- <TestimonialsPreview /> -->
       <RecentBlogPosts />
       <!-- <CallToAction /> -->

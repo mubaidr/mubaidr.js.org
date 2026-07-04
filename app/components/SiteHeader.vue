@@ -102,7 +102,7 @@ onMounted(() => {
     ]"
   >
     <div class="relative">
-      <div class="flex justify-center items-center px-4 py-1.5 min-w-lg">
+      <div class="flex justify-center items-center px-4 py-1.5 min-w-md">
         <nav
           class="flex justify-between items-center gap-4 lg:gap-6 w-full text-sm font-medium"
           role="navigation"

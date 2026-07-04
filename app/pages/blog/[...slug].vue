@@ -100,32 +100,23 @@ if (blogPostData.value) {
       <Breadcrumb :items="breadcrumbItems" />
 
       <!-- Post Header -->
-      <header class="text-center space-y-6">
+      <header class="space-y-6">
         <h1>
           {{ blogPostData.title }}
         </h1>
 
-        <div class="flex items-center justify-center gap-6">
+        <div class="flex gap-2">
           <div class="flex items-center gap-2">
-            <UIcon
-              name="i-ph-user-circle"
-              class="w-5 h-5 text-primary-500 dark:text-primary-400"
-            />
+            <UIcon name="i-ph-user-circle" />
             <span>{{ blogPostData.author }}</span>
           </div>
           <div class="flex items-center gap-2">
-            <UIcon
-              name="i-ph-calendar"
-              class="w-5 h-5 text-primary-500 dark:text-primary-400"
-            />
+            <UIcon name="i-ph-calendar" />
             <span>{{ $formatDate(blogPostData.date) }}</span>
           </div>
         </div>
 
-        <div
-          v-if="blogPostData.tags"
-          class="flex justify-center flex-wrap gap-2"
-        >
+        <div v-if="blogPostData.tags" class="flex gap-2">
           <UBadge
             v-for="tag in blogPostData.tags"
             :key="tag"

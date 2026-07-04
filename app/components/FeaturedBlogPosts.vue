@@ -19,7 +19,7 @@ const { data: featuredPostsData } = await useFeaturedBlogPosts(count)
   <div>
     <div class="space-y-6">
       <!-- Featured Blog Posts -->
-      <div class="text-center">
+      <div>
         <h2>
           {{ title }}
         </h2>
@@ -32,7 +32,7 @@ const { data: featuredPostsData } = await useFeaturedBlogPosts(count)
       <!-- Show blog posts if available -->
       <div
         v-if="featuredPostsData && featuredPostsData.length > 0"
-        class="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto"
+        class="grid gap-8 md:grid-cols-2"
       >
         <NuxtLink
           v-for="(post, index) in featuredPostsData"

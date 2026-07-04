@@ -90,9 +90,9 @@ if (faqsData.value?.list?.length) {
 
 <template>
   <div>
-    <div class="space-y-32">
+    <div class="space-y-16">
       <!-- Page Header -->
-      <div class="text-center space-y-6">
+      <div>
         <h1>Let's Work Together</h1>
 
         <p>
@@ -118,12 +118,12 @@ if (faqsData.value?.list?.length) {
           spotlight
           class="w-full relative"
         >
-          <UBadge
+          <!-- <UBadge
             class="absolute top-2 right-2"
             variant="outline"
             color="neutral"
             >Async First</UBadge
-          >
+          > -->
           <div class="p-6 md:p-8 space-y-6">
             <div class="flex items-center justify-center mx-auto">
               <UIcon :name="method.icon" size="3em" class="text-primary-500" />
@@ -206,7 +206,7 @@ if (faqsData.value?.list?.length) {
         id="faqs"
         class="space-y-12"
       >
-        <div class="text-center space-y-6">
+        <div>
           <h2>Frequently Asked Questions</h2>
           <p>
             Find answers to common inquiries about my services and processes.

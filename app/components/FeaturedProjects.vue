@@ -2,11 +2,11 @@
 const { count, title, hideLink } = defineProps({
   count: {
     type: Number,
-    default: 2,
+    default: 3,
   },
   title: {
     type: String,
-    default: "Featured Projects",
+    default: "Selected Work",
     required: false,
   },
   hideLink: {
@@ -15,79 +15,34 @@ const { count, title, hideLink } = defineProps({
   },
 })
 
-// Fetch featured projects using composable
 const { data: featuredProjectsData } = await useFeaturedProjects(count)
 </script>
 
 <template>
-  <div class="space-y-16">
-    <!-- Section Header -->
-    <div class="text-center space-y-6">
+  <div class="space-y-6">
+    <div>
       <h2>{{ title }}</h2>
-      <p>
-        A selection of projects that showcase my expertise and passion for
-        development
-      </p>
+      <p>A handful of projects, out of many.</p>
     </div>
 
-    <!-- Projects Grid -->
-    <div class="grid gap-8 md:grid-cols-2">
-      <UCard
-        v-for="project in featuredProjectsData || []"
-        :key="project.id"
-        class="group cursor-pointer h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-      >
-        <div class="space-y-6">
-          <!-- Project Icon with Gradient Background -->
-          <div class="flex items-center justify-center">
-            <div
-              class="w-14 h-14 rounded-2xl bg-linear-to-br from-primary/20 to-primary/5 flex items-center justify-center ring-1 ring-primary/10"
-            >
-              <UIcon
-                name="i-ph-terminal"
-                class="text-2xl text-primary drop-shadow-[0_0_4px_rgba(99,102,241,0.4)]"
-              />
-            </div>
-          </div>
-          <!-- Project Content -->
-          <div class="space-y-3">
-            <div class="flex items-center justify-between gap-4">
-              <h3
-                class="text-xl font-semibold group-hover:text-primary transition-colors duration-200"
-              >
-                {{ project.title }}
-              </h3>
-              <UBadge :label="project.category" variant="outline" />
-            </div>
-            <p class="leading-relaxed">
-              {{ project.description }}
-            </p>
-            <!-- Technologies -->
-            <div class="flex flex-wrap gap-2 pt-2">
-              <UBadge
-                v-for="tech in (project.technologies || []).slice(0, 3)"
-                :key="tech"
-                variant="outline"
-                size="sm"
-              >
-                <UIcon
-                  name="i-ph-brackets-angle"
-                  class="w-3 h-3 mr-1 text-primary-500"
-                />
-                {{ tech }}
-              </UBadge>
-            </div>
-          </div>
-        </div>
-      </UCard>
+    <!-- Projects List -->
+    <div class="space-y-8">
+      <div v-for="project in featuredProjectsData || []" :key="project.id">
+        <p class="font-semibold">
+          {{ project.title }}
+        </p>
+        <p>
+          {{ project.description }}
+        </p>
+        <p v-if="project.technologies?.length" class="text-sm text-muted">
+          {{ project.technologies.slice(0, 4).join(" · ") }}
+        </p>
+      </div>
     </div>
 
-    <!-- View All Button -->
-    <div v-if="!hideLink" class="text-center">
-      <UButton to="/projects" variant="outline" size="xl">
-        <UIcon name="i-ph-folder-open" />
-        View All Projects
-      </UButton>
+    <!-- View All Link -->
+    <div v-if="!hideLink">
+      <ULink to="/projects" class="text-sm"> More projects → </ULink>
     </div>
   </div>
 </template>

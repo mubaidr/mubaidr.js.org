@@ -94,4 +94,3 @@ Key information about this website:
 - [All Blog Posts](https://mubaidr.js.org/blog): Complete archive of 42+ blog posts on web development, AI, TypeScript, and software engineering
 - [Contact](https://mubaidr.js.org/contact): Get in touch for consulting, freelance projects, or collaboration inquiries
 - [Freelancer Profile](https://www.freelancer.com/u/razamubaid?sb=t): Top-rated freelancer profile - 125+ projects delivered, full-stack development, AI systems, and technical consulting
-- [Terms of Service](https://mubaidr.js.org/terms): Service terms and conditions

@@ -19,7 +19,7 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
   <div>
     <div class="space-y-16">
       <!-- Section Header -->
-      <div class="text-center space-y-6">
+      <div>
         <h2>
           {{ title }}
         </h2>
@@ -38,9 +38,7 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
           :to="post.path || '/blog'"
           class="h-full"
         >
-          <UCard
-            class="group h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-          >
+          <UCard class="h-full overflow-hidden">
             <div class="space-y-6">
               <div
                 v-if="post.socialImage?.src || post.image"
@@ -49,7 +47,7 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
                 <img
                   :src="post.socialImage?.src || post.image"
                   :alt="post.socialImage?.alt || post.title"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  class="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
@@ -79,16 +77,6 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
             </div>
           </UCard>
         </NuxtLink>
-      </div>
-
-      <div
-        v-if="recentPostsData && recentPostsData.length > 0"
-        class="text-center"
-      >
-        <UButton to="/blog" variant="outline" size="xl">
-          <UIcon name="i-ph-article" />
-          View All Posts
-        </UButton>
       </div>
     </div>
   </div>

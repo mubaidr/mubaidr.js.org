@@ -54,7 +54,7 @@ h3 + p,
 h4 + p,
 h5 + p,
 h6 + p {
-  @apply text-xl max-w-2xl mx-auto mt-4;
+  @apply text-lg mt-2;
 }
 
 /* Skip Link - Accessibility */

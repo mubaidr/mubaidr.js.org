@@ -66,9 +66,9 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
 
 <template>
   <div>
-    <div class="space-y-32">
+    <div class="space-y-16">
       <!-- Page Header -->
-      <div class="text-center space-y-6">
+      <div>
         <h1>Insights & Articles</h1>
         <p>
           Insights, tutorials, and thoughts on web development, technology, and
@@ -76,12 +76,12 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
         </p>
       </div>
 
-      <FeaturedBlogPosts title="Featured Posts" />
+      <FeaturedBlogPosts title="Featured" />
 
       <!-- Blog Posts Grid -->
       <section v-if="blogData.posts.length > 0" class="space-y-12">
-        <div class="text-center space-y-6">
-          <h2>Explore My Latest Articles</h2>
+        <div>
+          <h2>Latest</h2>
           <p>
             Stay updated with the latest trends and insights in web development.
           </p>
