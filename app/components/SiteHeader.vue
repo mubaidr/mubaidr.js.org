@@ -4,8 +4,8 @@ const mobileMenuOpen = ref(false)
 
 // Navigation items configuration
 const navigationItems = [
-  { path: "/consulting", label: "Consulting", icon: "i-ph-lightbulb" },
-  { path: "/projects", label: "Portfolio", icon: "i-ph-folder-open" },
+  // { path: "/consulting", label: "Consulting", icon: "i-ph-lightbulb" },
+  // { path: "/projects", label: "Portfolio", icon: "i-ph-folder-open" },
   { path: "/blog", label: "Blog", icon: "i-ph-article" },
 ]
 
@@ -102,9 +102,9 @@ onMounted(() => {
     ]"
   >
     <div class="relative">
-      <div class="flex justify-center items-center px-4 py-1.5">
+      <div class="flex justify-center items-center px-4 py-1.5 min-w-xl">
         <nav
-          class="flex justify-center items-center gap-4 lg:gap-6 w-full text-sm font-medium"
+          class="flex justify-between items-center gap-4 lg:gap-6 w-full text-sm font-medium"
           role="navigation"
           aria-label="Main navigation"
         >
@@ -124,41 +124,27 @@ onMounted(() => {
             </span>
           </ULink>
 
-          <!-- Desktop Navigation -->
-          <div class="hidden lg:flex items-center gap-1">
-            <ULink
+          <!-- Action Buttons & Mobile Menu -->
+          <div class="flex items-center gap-2">
+            <ThemeSwitcher />
+
+            <!-- Desktop Navigation -->
+            <UButton
               v-for="item in navigationItems"
               :key="item.path"
               :to="item.path"
-              class="px-4 py-2 rounded-lg transition-colors duration-200 hover:bg-neutral-100 dark:hover:bg-neutral-800"
-              active-class="text-primary-600 dark:text-primary-400 font-medium bg-primary-50 dark:bg-primary-900/20"
+              variant="link"
+              color="neutral"
             >
               {{ item.label }}
-            </ULink>
-          </div>
+            </UButton>
 
-          <!-- Action Buttons & Mobile Menu -->
-          <div class="flex items-center gap-1">
             <!-- Contact CTA -->
             <UButton
               to="/contact"
               variant="solid"
               color="primary"
-              class="hidden md:inline-flex rounded-full px-4"
               label="Contact"
-            />
-
-            <ThemeSwitcher />
-
-            <!-- Mobile menu button -->
-            <UButton
-              class="lg:hidden"
-              variant="ghost"
-              color="neutral"
-              :icon="mobileMenuOpen ? 'i-ph-x' : 'i-ph-list'"
-              :aria-expanded="mobileMenuOpen"
-              aria-label="Toggle mobile menu"
-              @click="toggleMobileMenu"
             />
           </div>
         </nav>
@@ -193,8 +179,6 @@ onMounted(() => {
                 v-for="item in navigationItems"
                 :key="item.path"
                 :to="item.path"
-                class="flex items-center gap-4 px-4 py-3 min-h-12 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-xl transition-all duration-200"
-                active-class="text-primary-600 dark:text-primary-400 font-medium bg-primary-50 dark:bg-primary-900/20"
                 @click="closeMobileMenu"
               >
                 <UIcon :name="item.icon" class="w-5 h-5" />

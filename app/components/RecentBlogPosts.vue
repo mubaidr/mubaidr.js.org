@@ -2,7 +2,7 @@
 const { count, title } = defineProps({
   count: {
     type: Number,
-    default: 2,
+    default: 3,
   },
   title: {
     type: String,
@@ -30,7 +30,7 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
       <!-- Show blog posts if available -->
       <div
         v-if="recentPostsData && recentPostsData.length > 0"
-        class="grid gap-8 md:grid-cols-2"
+        class="grid gap-8 md:grid-cols-3"
       >
         <NuxtLink
           v-for="(post, index) in recentPostsData"
@@ -54,12 +54,10 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
                 />
               </div>
               <div class="space-y-3">
-                <h3
-                  class="text-xl font-bold group-hover:text-primary transition-colors duration-200"
-                >
+                <h6>
                   {{ post.title }}
-                </h3>
-                <p class="line-clamp-3 leading-relaxed">
+                </h6>
+                <p class="line-clamp-3">
                   {{ post.description }}
                 </p>
                 <div

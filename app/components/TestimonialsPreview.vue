@@ -14,15 +14,15 @@ const { data: testimonialsData } = await useTestimonialsData()
       <!-- Testimonials Grid -->
       <div
         v-if="testimonialsData && testimonialsData.length > 0"
-        class="grid gap-6 md:grid-cols-2"
+        class="grid gap-6 md:grid-cols-3"
       >
         <UPageCard
-          v-for="testimonial in testimonialsData"
+          v-for="testimonial in testimonialsData.slice(0, 3)"
           :key="testimonial.name"
           variant="subtle"
         >
           <div class="space-y-4 text-center">
-            <p class="text-xl">"{{ testimonial.quote }}"</p>
+            <p>"{{ testimonial.quote }}"</p>
             <p>- {{ testimonial.name }}</p>
           </div>
         </UPageCard>

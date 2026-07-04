@@ -46,6 +46,48 @@ if (profileData.value) {
     }),
   ])
 }
+
+const consultingAreas = [
+  {
+    title: "Architecture Reviews",
+    description:
+      "Evaluate system designs for scalability, security, and performance. Identify technical debt and provide actionable recommendations.",
+    icon: "i-ph-buildings",
+  },
+  {
+    title: "Technical Strategy",
+    description:
+      "Help teams make informed technology decisions, plan roadmaps, and align technical investments with business goals.",
+    icon: "i-ph-lightbulb",
+  },
+  {
+    title: "Team Leadership",
+    description:
+      "Mentor developers, improve engineering practices, and help teams ship better code faster through proven processes.",
+    icon: "i-ph-users-three",
+  },
+]
+
+const approachSteps = [
+  {
+    title: "Discover",
+    description:
+      "Work closely with your team to understand unique challenges, context, and goals for the project.",
+    icon: "i-ph-magnifying-glass",
+  },
+  {
+    title: "Analyze",
+    description:
+      "Evaluate systems and provide practical, actionable guidance that helps you make better technical decisions today.",
+    icon: "i-ph-chart-line-up",
+  },
+  {
+    title: "Deliver",
+    description:
+      "Apply deep technical expertise with a pragmatic approach to set you up for long-term success.",
+    icon: "i-ph-rocket-launch",
+  },
+]
 </script>
 
 <template>
@@ -130,8 +172,7 @@ if (profileData.value) {
     </section>
 
     <div class="space-y-24 pb-16">
-      <CompactCaseStudies />
-      <WhoIWorkWith />
+      <Consultation />
       <TestimonialsPreview />
       <CallToAction />
       <RecentBlogPosts />
