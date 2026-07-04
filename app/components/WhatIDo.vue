@@ -12,7 +12,7 @@ const { data: profileData } = await useProfileData()
       </div>
 
       <!-- Target Audiences -->
-      <div v-if="profileData.whatIDo?.length">
+      <div v-if="profileData.whatIDo?.length" class="space-y-3 font-semibold">
         <p v-for="service in profileData.whatIDo" :key="service">
           {{ service }}
         </p>

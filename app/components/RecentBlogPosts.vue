@@ -52,9 +52,9 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
                 />
               </div>
               <div class="space-y-3">
-                <h6>
+                <span class="font-semibold line-clamp-2">
                   {{ post.title }}
-                </h6>
+                </span>
                 <p class="line-clamp-3">
                   {{ post.description }}
                 </p>

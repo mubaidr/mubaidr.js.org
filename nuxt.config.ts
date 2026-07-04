@@ -42,6 +42,31 @@ export default defineNuxtConfig({
           depth: 2,
           searchDepth: 2,
         },
+        highlight: {
+          langs: [
+            "js",
+            "jsx",
+            "json",
+            "ts",
+            "tsx",
+            "vue",
+            "css",
+            "html",
+            "vue",
+            "bash",
+            "md",
+            "mdc",
+            "yaml",
+            "php",
+            "dockerfile",
+            "nginx",
+            "apache",
+            "ini",
+            "bash",
+            "python",
+            "yaml",
+          ],
+        },
       },
     },
     preview: {
@@ -64,10 +89,10 @@ export default defineNuxtConfig({
     typescriptPlugin: true,
     buildCache: true,
     headNext: true,
-    writeEarlyHints: true,
     viewTransition: true,
     navigationRepaint: true,
-    lazyHydration: true,
+    payloadExtraction: false,
+    appManifest: false,
   },
 
   eslint: {
@@ -75,13 +100,13 @@ export default defineNuxtConfig({
     config: true,
   },
 
+  features: {
+    inlineStyles: true,
+  },
+
   // fonts: {},
 
-  icon: {
-    clientBundle: {
-      scan: true,
-    },
-  },
+  // icon: {},
 
   // image: {
   //   format: ["webp", "avif"],
