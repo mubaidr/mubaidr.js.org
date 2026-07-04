@@ -34,6 +34,10 @@ if (profileData.value) {
     }),
   ])
 }
+
+definePageMeta({
+  layout: "home",
+})
 </script>
 
 <template>
@@ -45,19 +49,16 @@ if (profileData.value) {
       />
     </div>
 
-    <section
-      v-if="profileData"
-      class="min-h-[64vh] flex items-center justify-center py-32 md:py-56"
-    >
-      <div class="max-w-3xl mx-auto px-4 space-y-12">
+    <UPageCard v-if="profileData" spotlight variant="naked">
+      <div
+        class="max-w-3xl mx-auto space-y-12 h-dvh flex flex-col justify-center"
+      >
         <div class="flex flex-col items-center text-center space-y-4">
           <!-- Label -->
-          <!-- <p
-            class=" text-sm font-medium tracking-[0.2em] uppercase"
-          >
+          <p class="text-sm font-medium tracking-[0.2em] uppercase text-muted">
             <UIcon name="i-ph-terminal" class="w-4 h-4 inline-block mr-2" />
             {{ profileData.title }}
-          </p> -->
+          </p>
 
           <!-- Name as Hero -->
           <h1>
@@ -68,12 +69,12 @@ if (profileData.value) {
           <p v-if="profileData.heroHeadline" class="text-2xl! mt-0!">
             <UIcon
               name="i-ph-brackets-angle"
-              class="w-4 h-4 inline-block mx-1 text-primary-500/60"
+              class="w-4 h-4 inline-block mx-1 text-primary/50"
             />
             {{ profileData.heroHeadline }}
             <UIcon
               name="i-ph-brackets-angle"
-              class="w-4 h-4 inline-block mx-1 text-primary-500/60"
+              class="w-4 h-4 inline-block mx-1 text-primary/50"
             />
           </p>
 
@@ -110,16 +111,13 @@ if (profileData.value) {
           </div>
         </div>
       </div>
-    </section>
+    </UPageCard>
 
-    <div class="space-y-16 mt-42">
+    <div class="flex-1 py-16 md:py-24 lg:py-32 max-w-6xl mx-auto space-y-16">
       <About />
       <WhatIDo />
       <FeaturedProjects :hide-link="true" />
-      <!-- <Consultation /> -->
-      <!-- <TestimonialsPreview /> -->
       <RecentBlogPosts />
-      <!-- <CallToAction /> -->
     </div>
   </div>
 </template>

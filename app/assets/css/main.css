@@ -9,7 +9,7 @@ html {
 
 :root {
   --font-sans: "Space Grotesk", sans-serif;
-  --ui-radius: 0.75rem;
+  --ui-radius: 0;
 }
 
 /* ================================================
@@ -54,7 +54,7 @@ h3 + p,
 h4 + p,
 h5 + p,
 h6 + p {
-  @apply text-lg mt-2;
+  @apply text-xl mt-2;
 }
 
 /* Skip Link - Accessibility */

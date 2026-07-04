@@ -128,58 +128,6 @@ export default defineContentConfig({
         ),
       }),
     }),
-    professionalJourney: defineCollection({
-      type: "data",
-      source: "professional-journey.{json,yml,yaml}",
-      schema: z.object({
-        experiences: z.array(
-          z.object({
-            id: z.number(),
-            title: z.string(),
-            company: z.string(),
-            location: z.string(),
-            period: z.string(),
-            current: z.boolean(),
-            description: z.string(),
-            responsibilities: z.array(z.string()),
-            technologies: z.array(z.string()),
-            achievements: z.array(z.string()),
-          }),
-        ),
-        education: z.array(
-          z.object({
-            id: z.number(),
-            degree: z.string(),
-            institution: z.string(),
-            location: z.string(),
-            period: z.string(),
-            description: z.string(),
-            achievements: z.array(z.string()),
-          }),
-        ),
-        certifications: z.array(
-          z.object({
-            id: z.number(),
-            name: z.string(),
-            issuer: z.string(),
-            date: z.string(),
-            credentialId: z.string(),
-            description: z.string(),
-          }),
-        ),
-        technologies: z.object({
-          languages: z.array(z.string()),
-          frameworks: z.array(z.string()),
-          frontend: z.array(z.string()),
-          testing: z.array(z.string()),
-          databases: z.array(z.string()),
-          devops: z.array(z.string()),
-          automation: z.array(z.string()),
-          build: z.array(z.string()),
-          other: z.array(z.string()),
-        }),
-      }),
-    }),
     profile: defineCollection({
       type: "data",
       source: "profile.{json,yml,yaml}",
@@ -303,80 +251,6 @@ export default defineContentConfig({
           z.object({
             name: z.string(),
             count: z.number(),
-          }),
-        ),
-      }),
-    }),
-    services: defineCollection({
-      type: "data",
-      source: "services.{json,yml,yaml}",
-      schema: z.object({
-        services: z.array(
-          z.object({
-            id: z.number(),
-            title: z.string(),
-            description: z.string(),
-            icon: z.string(),
-            category: z.string(),
-            featured: z.boolean(),
-            features: z.array(z.string()),
-            pricing: z.object({
-              hourly: z.number().nullable(),
-              currency: z.string(),
-              description: z.string(),
-            }),
-            timeline: z.string(),
-            suitable: z.string(),
-            technologies: z.array(z.string()),
-          }),
-        ),
-        process: z.array(
-          z.object({
-            step: z.number(),
-            title: z.string(),
-            description: z.string(),
-            icon: z.string(),
-            details: z.array(z.string()),
-          }),
-        ),
-        packages: z.array(
-          z.object({
-            name: z.string(),
-            price: z.number().nullable(),
-            currency: z.string(),
-            period: z.string(),
-            description: z.string(),
-            features: z.array(z.string()),
-            highlighted: z.boolean(),
-            category: z.string(),
-          }),
-        ),
-      }),
-    }),
-    techStack: defineCollection({
-      type: "data",
-      source: "tech-stack.{json,yml,yaml}",
-      schema: z.object({
-        categories: z.array(
-          z.object({
-            title: z.string(),
-            items: z.array(z.string()),
-          }),
-        ),
-      }),
-    }),
-    caseStudies: defineCollection({
-      type: "data",
-      source: "case-studies.{json,yml,yaml}",
-      schema: z.object({
-        caseStudies: z.array(
-          z.object({
-            id: z.number(),
-            problem: z.string().max(150),
-            solution: z.string().max(150),
-            metric: z.string().max(150),
-            link: z.string(),
-            projectRef: z.number().optional(),
           }),
         ),
       }),

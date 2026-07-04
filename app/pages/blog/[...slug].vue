@@ -136,7 +136,7 @@ if (blogPostData.value) {
       <!-- Featured Image -->
       <div
         v-if="blogPostData.socialImage?.src || blogPostData.image"
-        class="aspect-video overflow-hidden rounded-2xl shadow-lg"
+        class="aspect-video overflow-hidden shadow-lg"
       >
         <img
           :src="blogPostData.socialImage?.src || blogPostData.image"

@@ -53,7 +53,7 @@ const nextPost = computed(() => {
 <template>
   <div
     v-if="seriesPosts && seriesPosts.length > 1"
-    class="border border-gray-200 dark:border-gray-800 rounded-lg p-6 mb-8 bg-gray-50 dark:bg-gray-900/50"
+    class="border border-gray-200 dark:border-gray-800 p-6 mb-8 bg-gray-50 dark:bg-gray-900/50"
   >
     <div class="flex items-center gap-3 mb-4">
       <UIcon name="i-ph-books" class="w-6 h-6 text-primary-500" />
@@ -71,7 +71,7 @@ const nextPost = computed(() => {
       <NuxtLink
         v-if="previousPost"
         :to="previousPost.path"
-        class="flex items-center gap-3 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 hover:bg-white dark:hover:bg-gray-800 transition-all duration-200 text-left"
+        class="flex items-center gap-3 p-4 border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 hover:bg-white dark:hover:bg-gray-800 transition-all duration-200 text-left"
       >
         <UIcon name="i-ph-arrow-left" />
         <div class="flex flex-col">
@@ -89,7 +89,7 @@ const nextPost = computed(() => {
       <NuxtLink
         v-if="nextPost"
         :to="nextPost.path"
-        class="flex items-center gap-3 p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 hover:bg-white dark:hover:bg-gray-800 transition-all duration-200 text-right sm:ml-auto"
+        class="flex items-center gap-3 p-4 border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 hover:bg-white dark:hover:bg-gray-800 transition-all duration-200 text-right sm:ml-auto"
       >
         <div class="flex flex-col">
           <span

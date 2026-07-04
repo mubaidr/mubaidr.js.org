@@ -15,10 +15,7 @@
     <SiteHeader class="z-50" />
 
     <!-- Main Content -->
-    <main
-      id="main"
-      class="flex-1 py-24 md:py-32 lg:py-42 px-4 md:px-8 max-w-6xl mx-auto"
-    >
+    <main id="main">
       <NuxtPage />
     </main>
 
