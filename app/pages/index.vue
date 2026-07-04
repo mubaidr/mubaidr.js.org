@@ -42,16 +42,14 @@ definePageMeta({
 
 <template>
   <div>
-    <!-- Subtle gradient background -->
-    <div class="absolute inset-0 -z-10">
+    <UPageCard
+      v-if="profileData"
+      spotlight
+      variant="naked"
+      class="bg-linear-to-t from-primary-200 via-transparent to-transparent dark:from-primary-900"
+    >
       <div
-        class="absolute inset-0 bg-linear-to-b from-primary-50/20 via-transparent to-transparent dark:from-primary-950/20"
-      />
-    </div>
-
-    <UPageCard v-if="profileData" spotlight variant="naked">
-      <div
-        class="max-w-3xl mx-auto space-y-12 h-dvh flex flex-col justify-center"
+        class="max-w-3xl mx-auto space-y-16 h-dvh flex flex-col justify-center"
       >
         <div class="flex flex-col items-center text-center space-y-4">
           <!-- Label -->

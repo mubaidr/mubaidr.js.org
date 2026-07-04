@@ -1,11 +1,7 @@
 name: Muhammad Ubaid R.
 title: Senior Software Engineer
 avatar: /mubaidr.png
-description:
-  I'm a backend-focused software engineer working on AI agent tooling,
-  API design, and developer infrastructure. Currently [building X / at
-  Y], with an ongoing habit of open-sourcing tools I build along the
-  way.
+description: I'm a Senior Software Engineer with 13+ years of experience delivering web applications, SaaS platforms, AI-powered solutions, browser extensions, and cloud-native systems. Currently building Rental Platform, with an ongoing habit of open-sourcing tools I build along the way.
 heroHeadline: Full-stack engineer leading teams to build scalable systems & tools, with solid DevOps expertise.
 tagline: Delivered 125+ projects with 100% client satisfaction. 13 years building scalable systems.
 social:
@@ -54,10 +50,15 @@ whoIWorkWith:
     icon: i-ph-user
     description: Solo founders turning ideas into production-ready applications
 whatIDo:
+  - Full-stack web application development
+  - SaaS platforms & cloud-native systems
+  - AI-powered solutions & browser extensions
   - Backend systems & API design
-  - AI agent architecture
-  - Laravel / Nuxt
   - DevOps & CI/CD
+  - System architecture review & optimization
+  - Observability & monitoring solutions
+  - Agile team leadership & project management
+  - Open-source contributions & community engagement
 
 pricingRanges:
   mvp:

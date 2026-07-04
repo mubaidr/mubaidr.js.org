@@ -38,18 +38,6 @@ export default defineNuxtConfig({
             rel: "noopener noreferrer",
           },
         },
-        highlight: {
-          theme: {
-            // Default theme (same as single string)
-            default: "github-light",
-            // Light theme used if `html.light`
-            light: "github-light",
-            // Theme used if `html.dark`
-            dark: "github-dark",
-            // Theme used if `html.sepia`
-            sepia: "monokai",
-          },
-        },
         toc: {
           depth: 2,
           searchDepth: 2,
@@ -129,19 +117,12 @@ export default defineNuxtConfig({
   routeRules: {
     "/**": {
       static: true,
-      prerender: true,
-    },
-    "/blog/**": {
-      static: true,
-      prerender: true,
     },
     "/llms.txt": {
       static: true,
-      prerender: true,
     },
     "/llms-full.txt": {
       static: true,
-      prerender: true,
     },
   },
 
@@ -174,6 +155,7 @@ export default defineNuxtConfig({
   // Sitemap - Auto-generates from static routes + dynamic sources
   sitemap: {
     enabled: true,
+    zeroRuntime: true,
   },
 
   // Robots - Dynamic generation with AI crawler controls
@@ -190,7 +172,6 @@ export default defineNuxtConfig({
   // 6. Optimized SEO (Removed IE support)
   seo: {
     enabled: true,
-    redirectToCanonicalSiteUrl: true,
 
     meta: {
       applicationName: "Muhammad Ubaid Raza",

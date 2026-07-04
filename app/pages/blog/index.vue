@@ -102,7 +102,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
                     v-if="post.socialImage?.src || post.image"
                     :src="post.socialImage?.src || post.image"
                     :alt="post.socialImage?.alt || post.title"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    class="w-full h-full object-cover"
                     loading="lazy"
                   />
                   <div
