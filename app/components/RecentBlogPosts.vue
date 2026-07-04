@@ -55,11 +55,11 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
                 <span class="font-semibold line-clamp-2">
                   {{ post.title }}
                 </span>
-                <p class="line-clamp-3 text-muted">
+                <p class="line-clamp-3">
                   {{ post.description }}
                 </p>
                 <div
-                  class="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-muted text-sm"
+                  class="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-sm"
                 >
                   <div class="flex items-center gap-2">
                     <UIcon name="i-ph-calendar-blank-bold" />
