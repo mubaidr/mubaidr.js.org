@@ -17,8 +17,8 @@ const toggleTheme = () => {
       color="neutral"
       @click="toggleTheme"
     >
-      <template v-if="isDark"><UIcon name="i-ph-moon"></UIcon></template>
-      <template v-else><UIcon name="i-ph-sun"></UIcon></template>
+      <UIcon v-if="isDark" name="i-ph-moon" />
+      <UIcon v-if="!isDark" name="i-ph-sun" />
     </UButton>
     <template #fallback>
       <div class="h-6 w-6" />
