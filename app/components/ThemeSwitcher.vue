@@ -16,8 +16,9 @@ const toggleTheme = () => {
       class="transition-transform duration-200 ease-in-out active:scale-95 hover:scale-105"
       color="neutral"
       @click="toggleTheme"
-      :icon="isDark ? 'i-ph-moon' : 'i-ph-sun'"
     >
+      <template v-if="isDark"><UIcon name="i-ph-moon"></UIcon></template>
+      <template v-else><UIcon name="i-ph-sun"></UIcon></template>
     </UButton>
     <template #fallback>
       <div class="h-6 w-6" />
