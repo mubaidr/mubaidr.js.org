@@ -98,11 +98,11 @@ onMounted(() => {
   <header
     :class="[
       'fixed left-1/2 top-4 md:top-6 transform -translate-x-1/2 z-50 w-auto max-w-4xl rounded-full backdrop-blur-md transition-shadow duration-300 bg-white/75 dark:bg-neutral-900/75 border border-accented',
-      scrolled ? 'shadow-lg' : '',
+      scrolled ? 'shadow-md' : '',
     ]"
   >
     <div class="relative">
-      <div class="flex justify-center items-center px-4 py-1.5 min-w-xl">
+      <div class="flex justify-center items-center px-4 py-1.5 min-w-lg">
         <nav
           class="flex justify-between items-center gap-4 lg:gap-6 w-full text-sm font-medium"
           role="navigation"

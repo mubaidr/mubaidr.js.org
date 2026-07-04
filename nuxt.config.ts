@@ -204,8 +204,7 @@ export default defineNuxtConfig({
 
       colorScheme: "dark light",
 
-      titleTemplate:
-        "%s | Muhammad Ubaid Raza - AI Agent Architect & Full-Stack Consultant",
+      titleTemplate: "%s | Muhammad Ubaid Raza",
     },
 
     automaticDefaults: true,

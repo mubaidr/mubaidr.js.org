@@ -8,12 +8,12 @@ if (profileData.value) {
   useSeoMeta({
     title: "Home",
     description: profileData.value.description,
-    ogTitle: `${profileData.value.name} - ${profileData.value.title}`,
+    ogTitle: profileData.value.name,
     ogDescription: profileData.value.description,
     ogImage: profileData.value.avatar,
     ogType: "profile",
     twitterCard: "summary_large_image",
-    twitterTitle: `${profileData.value.name} - ${profileData.value.title}`,
+    twitterTitle: profileData.value.name,
     twitterDescription: profileData.value.description,
     twitterImage: profileData.value.avatar,
   })
@@ -143,11 +143,11 @@ const approachSteps = [
           </div>
 
           <!-- Stats Divider -->
-          <div class="flex items-center justify-center gap-3 text-neutral-500">
+          <!-- <div class="flex items-center justify-center gap-3 text-neutral-500">
             <span class="w-8 h-px bg-neutral-300 dark:bg-neutral-700" />
             <span>125+ projects • 100% satisfaction</span>
             <span class="w-8 h-px bg-neutral-300 dark:bg-neutral-700" />
-          </div>
+          </div> -->
 
           <!-- Social Links -->
           <div class="flex items-center justify-center gap-4">
@@ -165,17 +165,17 @@ const approachSteps = [
         </div>
 
         <!-- Availability Info -->
-        <div class="flex justify-center">
+        <!-- <div class="flex justify-center">
           <AvailabilityInfo />
-        </div>
+        </div> -->
       </div>
     </section>
 
     <div class="space-y-24 pb-16">
       <Consultation />
-      <TestimonialsPreview />
-      <CallToAction />
+      <!-- <TestimonialsPreview /> -->
       <RecentBlogPosts />
+      <!-- <CallToAction /> -->
     </div>
   </div>
 </template>
