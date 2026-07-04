@@ -11,7 +11,7 @@ export const useProjectsData = () => {
   })
 }
 
-export const useFeaturedProjects = (count = 2) => {
+export const useFeaturedProjects = (count = 3) => {
   return useAsyncData(`featured-projects-${count}`, async () => {
     const data = await queryCollection("projects").first()
     if (!data) return []

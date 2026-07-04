@@ -35,7 +35,7 @@ const { data: featuredProjectsData } = await useFeaturedProjects(count)
           {{ project.description }}
         </p>
         <p v-if="project.technologies?.length" class="text-sm text-muted">
-          {{ project.technologies.slice(0, 4).join(" · ") }}
+          {{ project.technologies.join(" · ") }}
         </p>
       </div>
     </div>

@@ -50,13 +50,9 @@ whoIWorkWith:
     icon: i-ph-user
     description: Solo founders turning ideas into production-ready applications
 whatIDo:
-  - Full-stack web application development
-  - SaaS platforms & cloud-native systems
+  - Full-stack & backend development
   - AI-powered solutions & browser extensions
-  - Backend systems & API design
-  - DevOps & CI/CD
-  - System architecture review & optimization
-  - Observability & monitoring solutions
+  - System architecture, DevOps & observability
   - Agile team leadership & project management
   - Open-source contributions & community engagement
 
