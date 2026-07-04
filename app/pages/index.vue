@@ -49,7 +49,7 @@ definePageMeta({
       class="bg-linear-to-t from-primary-200 via-transparent to-transparent dark:from-primary-900"
     >
       <div
-        class="max-w-3xl mx-auto space-y-16 h-dvh flex flex-col justify-center"
+        class="max-w-3xl mx-auto space-y-16 h-dvh flex flex-col justify-center pt-32"
       >
         <div class="flex flex-col items-center text-center space-y-4">
           <!-- Label -->

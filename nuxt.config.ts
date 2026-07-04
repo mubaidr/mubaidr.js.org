@@ -106,7 +106,9 @@ export default defineNuxtConfig({
 
   // fonts: {},
 
-  // icon: {},
+  icon: {
+    provider: "iconify",
+  },
 
   // image: {
   //   format: ["webp", "avif"],
