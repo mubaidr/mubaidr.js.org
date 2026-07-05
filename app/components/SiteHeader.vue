@@ -31,7 +31,7 @@ onBeforeUnmount(() => {
     ]"
   >
     <div class="relative">
-      <div class="flex justify-center items-center px-2 py-1.5 min-w-md">
+      <div class="flex justify-center items-center px-2 py-1.5 min-w-sm">
         <nav
           class="flex justify-between items-center gap-2 lg:gap-6 w-full text-sm font-medium"
           role="navigation"
