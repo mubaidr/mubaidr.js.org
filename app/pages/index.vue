@@ -46,7 +46,7 @@ definePageMeta({
       v-if="profileData"
       spotlight
       variant="naked"
-      class="bg-linear-to-t from-primary-200 via-transparent to-transparent dark:from-primary-900"
+      class="bg-linear-to-t from-primary-200 via-transparent to-transparent dark:from-primary-900 px-4 md:px-8"
     >
       <div
         class="max-w-3xl mx-auto space-y-16 h-dvh flex flex-col justify-center pt-32"
@@ -111,7 +111,9 @@ definePageMeta({
       </div>
     </UPageCard>
 
-    <div class="flex-1 py-16 md:py-24 lg:py-32 max-w-6xl mx-auto space-y-16">
+    <div
+      class="flex-1 py-16 md:py-24 lg:py-32 max-w-6xl mx-auto space-y-16 px-4 md:px-8"
+    >
       <About />
       <WhatIDo />
       <FeaturedProjects :hide-link="true" />

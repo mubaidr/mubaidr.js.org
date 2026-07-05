@@ -15,7 +15,7 @@
     <SiteHeader class="z-50" />
 
     <!-- Main Content -->
-    <main id="main" class="px-4 md:px-8">
+    <main id="main">
       <NuxtPage />
     </main>
 
