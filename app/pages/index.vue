@@ -46,10 +46,10 @@ definePageMeta({
       v-if="profileData"
       spotlight
       variant="naked"
-      class="bg-linear-to-t from-primary-200 via-transparent to-transparent dark:from-primary-900 px-4 md:px-8"
+      class="bg-linear-to-t from-primary-200 via-transparent to-transparent dark:from-primary-900"
     >
       <div
-        class="max-w-3xl mx-auto space-y-16 h-dvh flex flex-col justify-center pt-32"
+        class="max-w-3xl mx-auto space-y-16 h-dvh flex flex-col justify-center pt-32 px-4 md:px-8"
       >
         <div class="flex flex-col items-center text-center space-y-4">
           <!-- Label -->
