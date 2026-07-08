@@ -15,7 +15,7 @@ const { data: profileData } = await useProfileData()
   <footer
     class="bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800"
   >
-    <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-16">
       <div>
         <div class="space-y-4">
           <p>
