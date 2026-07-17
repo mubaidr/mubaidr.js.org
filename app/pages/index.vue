@@ -42,20 +42,14 @@ definePageMeta({
 
 <template>
   <UPage>
-    <UPageHero v-if="profileData" class="pt-24 md:pt-48">
+    <UPageHero v-if="profileData" class="py-32 md:py-48">
       <LazyStarsBg />
+      <template #headline>{{ profileData.title }}</template>
       <template #title>
         {{ profileData.name }}
       </template>
       <template #description>
-        <div>
-          <p>
-            {{ profileData.title }}
-          </p>
-          <p>
-            {{ profileData.heroHeadline }}
-          </p>
-        </div>
+        {{ profileData.heroHeadline }}
       </template>
       <template #links>
         <UButton
@@ -69,10 +63,15 @@ definePageMeta({
         >
         </UButton>
       </template>
+
+      <!-- <UPageCard spotlight> {{ profileData.description }} </UPageCard> -->
     </UPageHero>
     <UPageBody>
+      <USeparator />
       <About />
+      <USeparator />
       <WhatIDo />
+      <USeparator />
       <!-- <FeaturedProjects :hide-link="true" /> -->
       <RecentBlogPosts />
     </UPageBody>

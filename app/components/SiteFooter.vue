@@ -4,7 +4,7 @@ const currentYear = new Date().getFullYear()
 </script>
 
 <template>
-  <UFooter>
+  <UFooter class="border-t border-t-muted">
     <template #left>
       <p class="text-muted text-sm">
         &copy; {{ currentYear }} Muhammad Ubaid R.

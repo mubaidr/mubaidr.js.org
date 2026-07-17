@@ -16,79 +16,66 @@ const { data: featuredPostsData } = await useFeaturedBlogPosts(count)
 </script>
 
 <template>
-  <div>
-    <div class="space-y-6">
-      <!-- Featured Blog Posts -->
-      <div>
-        <h2>
-          {{ title }}
-        </h2>
-        <p>
-          Handpicked articles that highlight key insights, tutorials, and best
-          practices in web development and technology.
-        </p>
-      </div>
-
-      <!-- Show blog posts if available -->
-      <div
-        v-if="featuredPostsData && featuredPostsData.length > 0"
-        class="grid gap-8 md:grid-cols-2"
+  <UPageSection title="Featured Posts">
+    <!-- Show blog posts if available -->
+    <div
+      v-if="featuredPostsData && featuredPostsData.length > 0"
+      class="grid gap-8 md:grid-cols-2"
+    >
+      <NuxtLink
+        v-for="(post, index) in featuredPostsData"
+        :key="post.path || `post-${index}`"
+        :to="post.path || '/blog'"
+        class="h-full"
       >
-        <NuxtLink
-          v-for="(post, index) in featuredPostsData"
-          :key="post.path || `post-${index}`"
-          :to="post.path || '/blog'"
-          class="h-full"
-        >
-          <UCard class="group h-full overflow-hidden">
-            <div class="space-y-6">
-              <div
-                v-if="post.socialImage?.src || post.image"
-                class="aspect-video -mx-6 -mt-6 mb-4 overflow-hidden"
+        <UCard class="group h-full overflow-hidden">
+          <div class="space-y-6">
+            <div
+              v-if="post.socialImage?.src || post.image"
+              class="aspect-video -mx-6 -mt-6 mb-4 overflow-hidden"
+            >
+              <img
+                :src="post.socialImage?.src || post.image"
+                :alt="post.socialImage?.alt || post.title"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+            <div class="space-y-3">
+              <h3
+                class="text-xl font-bold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors"
               >
-                <img
-                  :src="post.socialImage?.src || post.image"
-                  :alt="post.socialImage?.alt || post.title"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
-              <div class="space-y-3">
-                <h3
-                  class="text-xl font-bold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors"
-                >
-                  {{ post.title }}
-                </h3>
-                <p class="line-clamp-3 leading-relaxed">
-                  {{ post.description }}
-                </p>
+                {{ post.title }}
+              </h3>
+              <p class="line-clamp-3 leading-relaxed">
+                {{ post.description }}
+              </p>
+              <div
+                class="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-xs font-medium text-neutral-500"
+              >
+                <div class="flex items-center gap-2">
+                  <UIcon name="i-ph-calendar-blank-bold" />
+                  <span>
+                    {{
+                      new Date(post.date).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })
+                    }}
+                  </span>
+                </div>
                 <div
-                  class="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-xs font-medium text-neutral-500"
+                  class="flex items-center gap-1 text-primary-600 dark:text-primary-400"
                 >
-                  <div class="flex items-center gap-2">
-                    <UIcon name="i-ph-calendar-blank-bold" />
-                    <span>
-                      {{
-                        new Date(post.date).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })
-                      }}
-                    </span>
-                  </div>
-                  <div
-                    class="flex items-center gap-1 text-primary-600 dark:text-primary-400"
-                  >
-                    <span>Read More</span>
-                    <UIcon name="i-ph-arrow-right-bold" />
-                  </div>
+                  <span>Read More</span>
+                  <UIcon name="i-ph-arrow-right-bold" />
                 </div>
               </div>
             </div>
-          </UCard>
-        </NuxtLink>
-      </div>
+          </div>
+        </UCard>
+      </NuxtLink>
     </div>
-  </div>
+  </UPageSection>
 </template>

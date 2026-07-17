@@ -176,6 +176,8 @@ if (faqsData.value?.list?.length) {
         </UPageCard>
       </div>
 
+      <USeparator />
+
       <!-- FAQ -->
       <section
         v-if="faqsData && faqsData.list.length > 0"

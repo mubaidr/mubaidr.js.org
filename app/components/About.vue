@@ -7,6 +7,7 @@ const { data: profileData } = await useProfileData()
     v-if="profileData"
     title="About"
     description="Background and focus"
+    icon="ph:info"
   >
     <div class="text-center text-xl">
       {{ profileData.description }}

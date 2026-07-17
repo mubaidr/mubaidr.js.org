@@ -31,8 +31,8 @@ defineOptions({
 </script>
 
 <template>
-  <nav aria-label="Breadcrumb" class="mb-8">
-    <ol class="flex items-center flex-wrap gap-2 text-sm">
+  <nav aria-label="Breadcrumb">
+    <ol class="flex items-center flex-wrap text-sm">
       <li
         v-for="(item, index) in items"
         :key="item.path"

@@ -7,6 +7,7 @@ const { data: profileData } = await useProfileData()
     v-if="profileData"
     title="What I do"
     description="Where I spend most of my time"
+    icon="ph:package"
   >
     <div class="text-center text-xl">
       <div v-if="profileData.whatIDo?.length" class="space-y-3">

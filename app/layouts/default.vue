@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="min-h-screen relative overflow-hidden">
+  <div>
     <!-- Skip Link for Accessibility -->
     <a
       href="#main"
@@ -11,16 +11,13 @@
       Skip to main content
     </a>
 
-    <!-- Site Header - Sticky above content -->
-    <SiteHeader class="z-50" />
+    <SiteHeader />
 
-    <!-- Main Content -->
-    <main
-      id="main"
-      class="flex-1 py-24 md:py-32 lg:py-42 px-4 md:px-8 max-w-6xl mx-auto"
-    >
-      <NuxtPage />
-    </main>
+    <UMain>
+      <UContainer>
+        <NuxtPage />
+      </UContainer>
+    </UMain>
 
     <!-- Site Footer -->
     <SiteFooter />

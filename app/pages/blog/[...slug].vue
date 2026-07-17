@@ -94,18 +94,13 @@ if (blogPostData.value) {
 </script>
 
 <template>
-  <div v-if="blogPostData">
-    <div class="space-y-16 py-16">
-      <!-- Breadcrumb Navigation -->
-      <Breadcrumb :items="breadcrumbItems" />
-
-      <!-- Post Header -->
-      <header class="space-y-6">
-        <h1>
-          {{ blogPostData.title }}
-        </h1>
-
-        <div class="flex gap-2">
+  <UPage v-if="blogPostData">
+    <UPageHeader>
+      <template #title>
+        {{ blogPostData.title }}
+      </template>
+      <template #description
+        ><div class="flex gap-2">
           <div class="flex items-center gap-2">
             <UIcon name="i-ph-user-circle" />
             <span>{{ blogPostData.author }}</span>
@@ -115,17 +110,20 @@ if (blogPostData.value) {
             <span>{{ $formatDate(blogPostData.date) }}</span>
           </div>
         </div>
-
-        <div v-if="blogPostData.tags" class="flex gap-2">
+      </template>
+      <template #headline> <Breadcrumb :items="breadcrumbItems" /> </template>
+      <template #default>
+        <div v-if="blogPostData.tags" class="flex gap-2 mt-4">
           <UBadge
             v-for="tag in blogPostData.tags"
             :key="tag"
             :label="tag"
             variant="soft"
-          />
-        </div>
-      </header>
-
+            color="neutral"
+          /></div
+      ></template>
+    </UPageHeader>
+    <div class="space-y-16 py-16">
       <!-- Series Navigation -->
       <SeriesNavigation
         v-if="blogPostData.series && blogPostData.seriesOrder"
@@ -182,7 +180,7 @@ if (blogPostData.value) {
         :tags="blogPostData.tags"
       />
     </div>
-  </div>
+  </UPage>
   <div v-else class="text-center py-24">
     <h1>Post Not Found</h1>
     <p class="mt-4">The requested blog post could not be found.</p>

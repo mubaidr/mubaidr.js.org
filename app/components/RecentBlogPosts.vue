@@ -20,6 +20,7 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
     v-if="recentPostsData"
     title="Recent Blog Posts"
     description="Latest thoughts on development, technology, and best practices"
+    icon="ph:note-blank"
   >
     <div class="text-center text-xl">
       <div
