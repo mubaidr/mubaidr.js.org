@@ -89,60 +89,82 @@ if (faqsData.value?.list?.length) {
 </script>
 
 <template>
-  <div>
-    <div class="space-y-16">
-      <!-- Page Header -->
-      <div>
-        <h1>Let's Work Together</h1>
+  <UPage>
+    <UPageHeader
+      title="Let's Work Together"
+      description="Have a project in mind? I'd love to hear about it and discuss how we
+          can bring your ideas to life."
+    >
+    </UPageHeader>
 
-        <p>
-          Have a project in mind? I'd love to hear about it and discuss how we
-          can bring your ideas to life.
-        </p>
-      </div>
-
-      <!-- Contact Methods -->
-      <section class="space-y-12">
-        <!-- <div class="text-center space-y-6">
-          <h2>Choose Your Preferred Method</h2>
-          <p>
-            Select the most convenient way to reach out, and I'll get back to
-            you as soon as possible.
-          </p>
-        </div> -->
-
-        <!-- Highlighted method: full width -->
-        <UPageCard
-          v-for="method in contactMethods.filter((m) => m.highlight)"
-          :key="method.title"
-          spotlight
-          class="w-full relative"
-        >
-          <!-- <UBadge
+    <UPageBody>
+      <!-- Highlighted method: full width -->
+      <UPageCard
+        v-for="method in contactMethods.filter((m) => m.highlight)"
+        :key="method.title"
+        spotlight
+        class="w-full relative"
+      >
+        <!-- <UBadge
             class="absolute top-2 right-2"
             variant="outline"
             color="neutral"
             >Async First</UBadge
           > -->
-          <div class="p-6 md:p-8 space-y-6">
+        <div class="p-6 md:p-8 space-y-6">
+          <div class="flex items-center justify-center mx-auto">
+            <UIcon :name="method.icon" size="3em" class="text-primary-500" />
+          </div>
+          <div class="space-y-4 text-center">
+            <div class="space-y-1">
+              <h3 class="text-2xl md:text-3xl font-bold">
+                {{ method.title }}
+              </h3>
+              <p class="text-base md:text-lg">
+                {{ method.description }}
+              </p>
+            </div>
+
+            <UButton
+              variant="solid"
+              color="primary"
+              size="lg"
+              class="w-full md:w-auto justify-center"
+              :aria-label="method.ariaLabel"
+              :to="method.action"
+              external
+            >
+              {{ method.value }}
+            </UButton>
+          </div>
+        </div>
+      </UPageCard>
+
+      <!-- Other methods: 2-column grid -->
+      <div class="grid gap-8 md:grid-cols-2">
+        <UPageCard
+          v-for="method in contactMethods.filter((m) => !m.highlight)"
+          :key="method.title"
+          spotlight
+        >
+          <div class="p-6 space-y-6">
             <div class="flex items-center justify-center mx-auto">
               <UIcon :name="method.icon" size="3em" class="text-primary-500" />
             </div>
-            <div class="space-y-4 text-center">
-              <div class="space-y-1">
-                <h3 class="text-2xl md:text-3xl font-bold">
+            <div class="space-y-4">
+              <div class="space-y-1 text-center">
+                <h3 class="text-xl font-bold">
                   {{ method.title }}
                 </h3>
-                <p class="text-base md:text-lg">
+                <p class="text-sm">
                   {{ method.description }}
                 </p>
               </div>
 
               <UButton
-                variant="solid"
-                color="primary"
-                size="lg"
-                class="w-full md:w-auto justify-center"
+                variant="outline"
+                color="neutral"
+                class="w-full justify-center"
                 :aria-label="method.ariaLabel"
                 :to="method.action"
                 external
@@ -152,47 +174,7 @@ if (faqsData.value?.list?.length) {
             </div>
           </div>
         </UPageCard>
-
-        <!-- Other methods: 2-column grid -->
-        <div class="grid gap-8 md:grid-cols-2">
-          <UPageCard
-            v-for="method in contactMethods.filter((m) => !m.highlight)"
-            :key="method.title"
-            spotlight
-          >
-            <div class="p-6 space-y-6">
-              <div class="flex items-center justify-center mx-auto">
-                <UIcon
-                  :name="method.icon"
-                  size="3em"
-                  class="text-primary-500"
-                />
-              </div>
-              <div class="space-y-4">
-                <div class="space-y-1 text-center">
-                  <h3 class="text-xl font-bold">
-                    {{ method.title }}
-                  </h3>
-                  <p class="text-sm">
-                    {{ method.description }}
-                  </p>
-                </div>
-
-                <UButton
-                  variant="outline"
-                  color="neutral"
-                  class="w-full justify-center"
-                  :aria-label="method.ariaLabel"
-                  :to="method.action"
-                  external
-                >
-                  {{ method.value }}
-                </UButton>
-              </div>
-            </div>
-          </UPageCard>
-        </div>
-      </section>
+      </div>
 
       <!-- FAQ -->
       <section
@@ -211,6 +193,6 @@ if (faqsData.value?.list?.length) {
           <UAccordion :items="faqsData.list" variant="soft" size="lg" />
         </div>
       </section>
-    </div>
-  </div>
+    </UPageBody>
+  </UPage>
 </template>

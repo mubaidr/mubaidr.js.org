@@ -253,4 +253,15 @@ export default defineNuxtConfig({
       },
     }),
   },
+
+  vite: {
+    optimizeDeps: {
+      include: [
+        "@unhead/schema-org/vue",
+        "@vue/devtools-core",
+        "@vue/devtools-kit",
+        "@vueuse/core",
+      ],
+    },
+  },
 })

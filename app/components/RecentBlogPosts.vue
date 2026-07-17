@@ -16,18 +16,12 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
 </script>
 
 <template>
-  <div>
-    <div class="space-y-16">
-      <!-- Section Header -->
-      <div>
-        <h2>
-          {{ title }}
-        </h2>
-
-        <p>Latest thoughts on development, technology, and best practices</p>
-      </div>
-
-      <!-- Show blog posts if available -->
+  <UPageSection
+    v-if="recentPostsData"
+    title="Recent Blog Posts"
+    description="Latest thoughts on development, technology, and best practices"
+  >
+    <div class="text-center text-xl">
       <div
         v-if="recentPostsData && recentPostsData.length > 0"
         class="grid gap-8 md:grid-cols-3"
@@ -79,5 +73,5 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
         </NuxtLink>
       </div>
     </div>
-  </div>
+  </UPageSection>
 </template>

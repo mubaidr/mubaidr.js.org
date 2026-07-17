@@ -41,83 +41,40 @@ definePageMeta({
 </script>
 
 <template>
-  <div>
-    <UPageCard
-      v-if="profileData"
-      spotlight
-      variant="naked"
-      class="bg-linear-to-t from-primary-200 via-transparent to-transparent dark:from-primary-900"
-    >
-      <div
-        class="max-w-3xl mx-auto space-y-16 h-dvh flex flex-col justify-center pt-32 px-4 md:px-8"
-      >
-        <div class="flex flex-col items-center text-center space-y-4">
-          <!-- Label -->
-          <p class="text-sm font-medium tracking-[0.2em] uppercase text-muted">
-            <UIcon name="i-ph-terminal" class="w-4 h-4 inline-block mr-2" />
+  <UPage>
+    <UPageHero v-if="profileData" class="pt-24 md:pt-48">
+      <LazyStarsBg />
+      <template #title>
+        {{ profileData.name }}
+      </template>
+      <template #description>
+        <div>
+          <p>
             {{ profileData.title }}
           </p>
-
-          <!-- Name as Hero -->
-          <h1>
-            {{ profileData.name }}
-          </h1>
-
-          <!-- Tagline as Subheading with monospace code aesthetic -->
-          <p v-if="profileData.heroHeadline" class="text-2xl! mt-0!">
-            <UIcon
-              name="i-ph-brackets-angle"
-              class="w-4 h-4 inline-block mx-1 text-primary/50"
-            />
+          <p>
             {{ profileData.heroHeadline }}
-            <UIcon
-              name="i-ph-brackets-angle"
-              class="w-4 h-4 inline-block mx-1 text-primary/50"
-            />
           </p>
-
-          <!-- CTA Button -->
-          <!-- <div class="pt-2">
-            <UButton to="/contact" size="lg" variant="solid" class="px-8 group">
-              Let's Work Together
-              <UIcon
-                name="i-ph-arrow-right"
-                class="ml-2 transition-transform group-hover:translate-x-1"
-              />
-            </UButton>
-          </div> -->
-
-          <!-- Stats Divider -->
-          <!-- <div class="flex items-center justify-center gap-3 text-neutral-500">
-            <span class="w-8 h-px bg-neutral-300 dark:bg-neutral-700" />
-            <span>125+ projects • 100% satisfaction</span>
-            <span class="w-8 h-px bg-neutral-300 dark:bg-neutral-700" />
-          </div> -->
-
-          <!-- Social Links -->
-          <div class="flex items-center justify-center gap-4">
-            <UButton
-              v-for="social in profileData.social"
-              :key="social.name"
-              :to="social.url"
-              external
-              :title="social.name"
-              variant="link"
-              :icon="social.icon"
-            >
-            </UButton>
-          </div>
         </div>
-      </div>
-    </UPageCard>
-
-    <div
-      class="flex-1 py-16 md:py-24 lg:py-32 max-w-6xl mx-auto space-y-16 px-4 md:px-8"
-    >
+      </template>
+      <template #links>
+        <UButton
+          v-for="social in profileData.social"
+          :key="social.name"
+          :to="social.url"
+          external
+          :title="social.name"
+          variant="link"
+          :icon="social.icon"
+        >
+        </UButton>
+      </template>
+    </UPageHero>
+    <UPageBody>
       <About />
       <WhatIDo />
-      <FeaturedProjects :hide-link="true" />
+      <!-- <FeaturedProjects :hide-link="true" /> -->
       <RecentBlogPosts />
-    </div>
-  </div>
+    </UPageBody>
+  </UPage>
 </template>
