@@ -33,7 +33,7 @@ onBeforeUnmount(() => {
       mode="drawer"
     >
       <template #title>
-        <span>
+        <span class="text-base font-normal">
           <span class="text-muted">&lt;</span>mubaidr<span class="text-muted"
             >/&gt;</span
           >
