@@ -14,7 +14,7 @@
     <SiteHeader />
 
     <UMain>
-      <UContainer>
+      <UContainer class="pt-32">
         <NuxtPage />
       </UContainer>
     </UMain>
