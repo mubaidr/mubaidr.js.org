@@ -67,11 +67,8 @@ definePageMeta({
       <!-- <UPageCard spotlight> {{ profileData.description }} </UPageCard> -->
     </UPageHero>
     <UPageBody>
-      <USeparator />
       <About />
-      <USeparator />
       <WhatIDo />
-      <USeparator />
       <!-- <FeaturedProjects :hide-link="true" /> -->
       <RecentBlogPosts />
     </UPageBody>
