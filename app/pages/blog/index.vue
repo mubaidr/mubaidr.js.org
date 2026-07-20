@@ -133,7 +133,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
               <div class="space-y-4">
                 <div class="space-y-2">
                   <h3
-                    class="text-xl font-bold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors"
+                    class="font-bold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors"
                   >
                     {{ post.title }}
                   </h3>

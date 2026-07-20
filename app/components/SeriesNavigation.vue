@@ -58,7 +58,7 @@ const nextPost = computed(() => {
     <div class="flex items-center gap-3 mb-4">
       <UIcon name="i-ph-books" class="w-6 h-6 text-primary-500" />
       <div>
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
+        <h3 class="font-semibold text-gray-900 dark:text-gray-100">
           {{ series }} Series
         </h3>
         <p class="text-sm text-gray-600 dark:text-gray-400">

@@ -70,7 +70,7 @@ const { data: relatedPosts } = await useAsyncData(
         class="group block p-6 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
       >
         <h3
-          class="text-lg font-semibold mb-2 group-hover:text-primary-500 transition-colors line-clamp-2"
+          class="font-semibold mb-2 group-hover:text-primary-500 transition-colors line-clamp-2"
         >
           {{ post.title }}
         </h3>
