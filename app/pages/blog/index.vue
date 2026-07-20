@@ -5,13 +5,39 @@ definePageMeta({
   description: "Read our latest blog posts and insights",
 })
 
-// Fetch blog posts using composable
-const { data: blogPosts } = await useBlogPosts()
+// Pagination state
+const route = useRoute()
+const router = useRouter()
+const page = ref(Number(route.query.page) || 1)
+const perPage = 6
+
+// Fetch paginated blog posts
+const { data: blogPosts } = usePaginatedBlogPosts(page, perPage)
+const { data: totalPosts } = await useBlogPostCount()
 
 const blogData = computed(() => ({
   posts: blogPosts.value || [],
   count: blogPosts.value?.length || 0,
 }))
+
+const totalPages = computed(() => Math.ceil((totalPosts.value || 0) / perPage))
+
+// Sync page with URL query param
+watch(page, () => {
+  router.replace({
+    query: {
+      ...route.query,
+      page: page.value > 1 ? String(page.value) : undefined,
+    },
+  })
+})
+
+watch(
+  () => route.query.page,
+  (val) => {
+    page.value = Number(val) || 1
+  },
+)
 
 // Extract excerpt from content
 const getExcerpt = (content: unknown, maxLength = 150) => {
@@ -146,6 +172,16 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
             </div>
           </UCard>
         </NuxtLink>
+      </div>
+
+      <!-- Pagination -->
+      <div v-if="totalPages > 1" class="flex justify-center mt-8">
+        <UPagination
+          v-model:page="page"
+          :total="totalPosts || 0"
+          :items-per-page="perPage"
+          show-edges
+        />
       </div>
     </UPageSection>
   </UPage>
