@@ -144,7 +144,13 @@ export default defineContentConfig({
             icon: z.string(),
           }),
         ),
-        whatIDo: z.array(z.string()),
+        whatIDo: z.array(
+          z.object({
+            field: z.string(),
+            icon: z.string(),
+            description: z.string(),
+          }),
+        ),
       }),
     }),
     projects: defineCollection({

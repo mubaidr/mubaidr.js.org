@@ -10,15 +10,13 @@ const { data: profileData } = await useProfileData()
     icon="ph:package"
   >
     <UPageGrid v-if="profileData.whatIDo?.length">
-      {{ profileData.whatIDo }}
-      <!-- <UPageFeature
+      <UPageFeature
         v-for="service in profileData.whatIDo"
-        :key="service"
-        :title="getTitle(service)"
-        :description="getDescription(service)"
-        :icon="getIcon(service)"
-        orientation="vertical"
-      /> -->
+        :key="service.field"
+        :title="service.field"
+        :description="service.description"
+        :icon="service.icon"
+      />
     </UPageGrid>
   </UPageSection>
 </template>
