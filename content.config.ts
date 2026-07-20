@@ -137,7 +137,6 @@ export default defineContentConfig({
         avatar: z.string(),
         description: z.string(),
         heroHeadline: z.string().optional(),
-        tagline: z.string(),
         social: z.array(
           z.object({
             name: z.string(),
@@ -145,63 +144,7 @@ export default defineContentConfig({
             icon: z.string(),
           }),
         ),
-        workApproach: z.array(z.string()),
-        currentFocus: z.array(z.string()),
-        clientSatisfaction: z.number().min(0).max(100),
-        projectsDelivered: z.number().min(0),
-        experience: z.number().min(0),
-        availability: z.object({
-          status: z.string(),
-          statusText: z.string(),
-          startDate: z.string(),
-          startDateContext: z.string(),
-          description: z.string(),
-          responseTime: z.string(),
-          timezone: z.string(),
-          slotsAvailable: z.number(),
-          paymentTerms: z.string(),
-          cta: z.object({
-            text: z.string(),
-            url: z.string(),
-          }),
-          note: z.string(),
-        }),
-        footer: z.object({
-          message: z.string(),
-          lastUpdated: z.string(),
-        }),
-        whoIWorkWith: z
-          .array(
-            z.object({
-              name: z.string(),
-              icon: z.string(),
-              description: z.string(),
-            }),
-          )
-          .optional(),
         whatIDo: z.array(z.string()),
-        pricingRanges: z
-          .object({
-            mvp: z.object({
-              min: z.number(),
-              max: z.number(),
-              currency: z.string(),
-              description: z.string(),
-            }),
-            architectureAudit: z.object({
-              min: z.number(),
-              max: z.number(),
-              currency: z.string(),
-              description: z.string(),
-            }),
-            hourly: z.object({
-              min: z.number(),
-              max: z.number(),
-              currency: z.string(),
-              description: z.string(),
-            }),
-          })
-          .optional(),
       }),
     }),
     projects: defineCollection({

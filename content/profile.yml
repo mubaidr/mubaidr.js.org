@@ -1,9 +1,8 @@
 name: Muhammad Ubaid R.
 title: Senior Software Engineer
 avatar: /mubaidr.png
-description: I'm a Senior Software Engineer with 13+ years of experience delivering web applications, SaaS platforms, AI-powered solutions, browser extensions, and cloud-native systems. Currently building Rental Platform, with an ongoing habit of open-sourcing tools I build along the way.
-heroHeadline: Full-stack engineer leading teams to build scalable systems & tools, with solid DevOps expertise.
-tagline: Delivered 125+ projects with 100% client satisfaction. 13 years building scalable systems.
+description: Senior Software Engineer with 13+ years of experience delivering web applications, SaaS platforms, AI-powered solutions, browser extensions, and cloud-native systems. Currently building Rental Platform, with an ongoing habit of open-sourcing tools I build along the way.
+heroHeadline: "Building and shipping production systems that scale. SaaS platforms to AI-powered tools."
 social:
   - name: GitHub
     url: https://github.com/mubaidr
@@ -14,65 +13,19 @@ social:
   - name: X
     url: https://x.com/mubaidr
     icon: i-ph-x-logo
-workApproach:
-  - Architecting solutions and managing product lifecycles - optimizing performance, scalability, and security
-  - Leading agile teams and collaborating with clients - Ensuring clarity, timeliness, and adaptability in all project phases
-  - Automating workflows and ensuring code quality
-currentFocus:
-  - Infrastructure as Code (IaC)
-  - Cloud-native tooling and observability
-  - AI-assisted development workflows
-clientSatisfaction: 100
-projectsDelivered: 125
-experience: 13
-availability:
-  status: available
-  statusText: Available for new projects
-  startDate: September 26
-  startDateContext: "Next opening"
-  description: Open to freelance, consulting, and collaborative projects. Flexible with remote, async, and agile workflows. Comfortable working across time zones and with distributed teams.
-  responseTime: 3h
-  timezone: GMT+5
-  slotsAvailable: 3
-  paymentTerms: "20% upfront, rest on milestones"
-  cta:
-    text: Email Now To Discuss Your Project Or Idea
-    url: mailto:mubaidr@gmail.com
-  note: I aim to reply as quickly as possible with the attention your message deserves.
-whoIWorkWith:
-  - name: Startups
-    icon: i-ph-rocket-launch
-    description: Early-stage companies building MVPs and scaling products
-  - name: SMEs
-    icon: i-ph-buildings
-    description: Small to medium enterprises optimizing and modernizing systems
-  - name: Individual Founders
-    icon: i-ph-user
-    description: Solo founders turning ideas into production-ready applications
 whatIDo:
-  - Full-stack & backend development
-  - AI-powered solutions & browser extensions
-  - System architecture, DevOps & observability
-  - Agile team leadership & project management
-  - Open-source contributions & community engagement
-
-pricingRanges:
-  mvp:
-    min: 5000
-    max: 15000
-    currency: USD
-    description: Full-stack MVP development
-  architectureAudit:
-    min: 1500
-    max: 3000
-    currency: USD
-    description: System architecture review and recommendations
-  hourly:
-    min: 100
-    max: 125
-    currency: USD
-    description: Hourly consulting and development
-
-footer:
-  message: Thank you for your interest. I look forward to collaborating and building something exceptional together.
-  lastUpdated: 2025-06-28T12:00:00.000Z
+  - field: Full Stack
+    icon: i-ph-stack
+    description: End-to-end development across frontend and backend systems.
+  - field: AI-powered Solutions & Browser Extensions
+    icon: i-ph-puzzle-piece
+    description: Building intelligent tools and browser extensions powered by AI.
+  - field: System Architecture, DevOps & Observability
+    icon: i-ph-gear-six
+    description: Designing scalable architectures with strong DevOps and monitoring practices.
+  - field: Agile Team Leadership & Project Management
+    icon: i-ph-users-three
+    description: Leading teams and managing projects using agile methodologies.
+  - field: Open-source Contributions & Community Engagement
+    icon: i-ph-git-branch
+    description: Contributing to open-source projects and engaging with developer communities.

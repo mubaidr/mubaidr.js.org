@@ -25,6 +25,7 @@ onBeforeUnmount(() => {
       :class="[
         'w-full max-w-xl rounded-full border border-default bg-default/50 backdrop-blur transition-shadow duration-300',
         scrolled && 'shadow-lg',
+        'border-primary/25',
       ]"
       :ui="{
         root: 'sticky-0 static',

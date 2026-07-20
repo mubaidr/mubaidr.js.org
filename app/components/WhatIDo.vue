@@ -9,12 +9,16 @@ const { data: profileData } = await useProfileData()
     description="Where I spend most of my time"
     icon="ph:package"
   >
-    <div class="text-center text-xl">
-      <div v-if="profileData.whatIDo?.length" class="space-y-3">
-        <p v-for="service in profileData.whatIDo" :key="service">
-          {{ service }}
-        </p>
-      </div>
-    </div>
+    <UPageGrid v-if="profileData.whatIDo?.length">
+      {{ profileData.whatIDo }}
+      <!-- <UPageFeature
+        v-for="service in profileData.whatIDo"
+        :key="service"
+        :title="getTitle(service)"
+        :description="getDescription(service)"
+        :icon="getIcon(service)"
+        orientation="vertical"
+      /> -->
+    </UPageGrid>
   </UPageSection>
 </template>

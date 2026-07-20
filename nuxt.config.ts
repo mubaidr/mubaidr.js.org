@@ -124,9 +124,21 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     // "nuxt-feedme",
     "@nuxt/content",
-    "nuxt-mcp-dev",
+    // "nuxt-mcp-dev",
     "@nuxt/eslint",
+    "nuxt-llms",
   ],
+
+  llms: {
+    domain: "https://mubaidr.js.org",
+    title: "Muhammad Ubaid Raza - Portfolio",
+    description:
+      "Personal portfolio, blog, and consulting landing page for Muhammad Ubaid Raza - AI Agent Architect & Full-Stack Consultant",
+    full: {
+      title: "Full Documentation",
+      description: "Complete documentation for mubaidr.js.org",
+    },
+  },
 
   nitro: {
     preset: "github-pages",
@@ -143,12 +155,6 @@ export default defineNuxtConfig({
 
   routeRules: {
     "/**": {
-      static: true,
-    },
-    "/llms.txt": {
-      static: true,
-    },
-    "/llms-full.txt": {
       static: true,
     },
   },

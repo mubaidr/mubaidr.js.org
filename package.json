@@ -12,7 +12,7 @@
     "@nuxthq/studio": "^2.2.1",
     "@nuxtjs/color-mode": "^4.0.1",
     "@nuxtjs/mdc": "0.22.2",
-    "@nuxtjs/seo": "^5.3.2",
+    "@nuxtjs/seo": "^5.3.3",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
     "nuxt": "^4.4.8",
@@ -24,8 +24,8 @@
     "vue-tsc": "^3.3.7"
   },
   "engines": {
-    "node": ">=24",
-    "npm": ">=10"
+    "node": ">=26",
+    "npm": ">=12"
   },
   "name": "mubaidr.js.org",
   "private": true,
@@ -43,7 +43,8 @@
   "dependencies": {
     "@resvg/resvg-js": "^2.6.2",
     "better-sqlite3": "^12.11.1",
-    "satori": "^0.28.0",
+    "nuxt-llms": "^0.2.0",
+    "satori": "^0.28.1",
     "typescript": "^6.0.3"
   },
   "allowScripts": {

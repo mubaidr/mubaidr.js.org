@@ -22,7 +22,7 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
     description="Latest thoughts on development, technology, and best practices"
     icon="ph:note-blank"
   >
-    <div class="text-center text-xl">
+    <div class="text-center">
       <div
         v-if="recentPostsData && recentPostsData.length > 0"
         class="grid gap-8 md:grid-cols-3"
@@ -54,7 +54,7 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
                   {{ post.description }}
                 </p>
                 <div
-                  class="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-sm"
+                  class="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-xs"
                 >
                   <div class="flex items-center gap-2">
                     <UIcon name="i-ph-calendar-blank-bold" />
