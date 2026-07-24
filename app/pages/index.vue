@@ -44,7 +44,7 @@ definePageMeta({
   <UPage>
     <UPageHero
       v-if="profileData"
-      class="py-32 md:py-48"
+      class="py-24 md:py-48"
       orientation="horizontal"
     >
       <LazyStarsBg />
