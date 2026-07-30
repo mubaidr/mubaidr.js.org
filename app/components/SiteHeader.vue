@@ -19,7 +19,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="fixed inset-x-0 top-8 z-50 flex justify-center">
+  <div class="fixed inset-x-0 top-12 z-50 flex justify-center px-12 md:px-0">
     <UHeader
       title="mubaidr"
       :class="[
