@@ -23,7 +23,7 @@ html {
 
 :root {
   --font-sans: "Space Grotesk", system-ui, sans-serif;
-  --ui-radius: 0.125rem;
+  --ui-radius: 0.75rem;
   --ui-container: 64rem;
 }
 

@@ -1,5 +1,10 @@
 export default defineAppConfig({
   ui: {
+    icons: {
+      system: "i-ph-desktop",
+      light: "i-ph-sun",
+      dark: "i-ph-moon",
+    },
     colors: {
       primary: "red",
       secondary: "blue",
@@ -14,11 +19,6 @@ export default defineAppConfig({
       defaultVariants: {
         color: "neutral",
         variant: "outline",
-      },
-    },
-    card: {
-      slots: {
-        root: "bg-default ring ring-default",
       },
     },
   },

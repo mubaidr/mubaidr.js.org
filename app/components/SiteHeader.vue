@@ -1,6 +1,9 @@
 <script setup lang="ts">
 // Navigation items configuration
-const navigationItems = [{ to: "/blog", label: "Blog", icon: "i-ph-article" }]
+const navigationItems = [
+  { to: "/blog", label: "Blog", icon: "i-ph-article" },
+  { to: "/contact", label: "Contact", icon: "i-ph-article" },
+]
 
 // Header shadow on scroll
 const scrolled = ref(false)
@@ -23,7 +26,7 @@ onBeforeUnmount(() => {
     <UHeader
       title="mubaidr"
       :class="[
-        'w-full max-w-xl rounded-xs border border-default bg-default/50 backdrop-blur transition-shadow duration-300',
+        'w-full max-w-xl rounded-full border backdrop-blur transition-shadow duration-300',
         scrolled && 'shadow',
         'border-primary/25',
       ]"
@@ -42,8 +45,6 @@ onBeforeUnmount(() => {
       </template>
 
       <template #right>
-        <ThemeSwitcher />
-
         <nav aria-label="Main navigation" class="hidden md:block">
           <UButton
             v-for="item in navigationItems"
@@ -54,9 +55,19 @@ onBeforeUnmount(() => {
           >
             {{ item.label }}
           </UButton>
-
-          <UButton to="/contact" color="primary" label="Contact" />
         </nav>
+        <UColorModeSelect
+          variant="ghost"
+          color="neutral"
+          size="sm"
+          :ui="{
+            base: 'items-center h-10 py-4',
+            value: 'hidden',
+            itemLabel: 'hidden',
+            label: 'hidden',
+          }"
+        >
+        </UColorModeSelect>
       </template>
 
       <template #body>
@@ -71,7 +82,6 @@ onBeforeUnmount(() => {
           >
             {{ item.label }}
           </UButton>
-          <UButton to="/contact" color="primary" label="Contact" block />
         </nav>
       </template>
     </UHeader>
