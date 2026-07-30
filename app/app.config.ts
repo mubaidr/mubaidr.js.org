@@ -1,9 +1,9 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: "slate",
+      primary: "stone",
       secondary: "blue",
-      neutral: "slate",
+      neutral: "stone",
     },
     badge: {
       defaultVariants: {
@@ -18,7 +18,7 @@ export default defineAppConfig({
     },
     card: {
       slots: {
-        root: "bg-default ring ring-default rounded-none",
+        root: "bg-default ring ring-default",
       },
     },
   },

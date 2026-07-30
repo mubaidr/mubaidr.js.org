@@ -16,11 +16,6 @@ html {
   --ui-container: 64rem;
 }
 
-.dark {
-  --ui-bg: #000000;
-  --ui-bg-elevated: #0a0a0a;
-}
-
 /* ================================================
    TYPOGRAPHY SYSTEM
    ================================================ */
@@ -113,17 +108,4 @@ h6 + p {
 /* Ensure skip link is always above all content */
 .skip-link:focus {
   z-index: 10000;
-}
-
-/* ================================================
-   SWISS MINIMAL POLISH
-   ================================================ */
-/* Smooth transitions on interactive elements */
-* {
-  @apply transition-colors duration-150;
-}
-
-/* Links: no underline by default, underline on hover */
-a:not(.u-button) {
-  @apply no-underline hover:underline;
 }
