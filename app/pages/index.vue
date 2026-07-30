@@ -68,8 +68,8 @@ definePageMeta({
         </UButton>
       </template>
 
-      <div class="inline-block perspective-container">
-        <UCard variant="outline" class="border border-primary/25 tilt">
+      <div class="inline-block">
+        <UCard variant="outline" class="border border-primary/25">
           {{ profileData.description }}
         </UCard>
       </div>
@@ -82,29 +82,3 @@ definePageMeta({
     </UPageBody>
   </UPage>
 </template>
-
-<style>
-.perspective-container {
-  perspective: none;
-}
-
-.tilt {
-  transform: none;
-  transition: none;
-  box-shadow:
-    rgba(0, 0, 0, 0.024) 0px 0px 0px 1px,
-    rgba(0, 0, 0, 0.05) 0px 1px 0px 0px,
-    rgba(0, 0, 0, 0.03) 0px 0px 8px 0px,
-    rgba(0, 0, 0, 0.1) 0px 10px 15px 0px;
-}
-
-@media (min-width: 768px) {
-  .perspective-container {
-    perspective: 1000px;
-  }
-
-  .tilt {
-    transform: perspective(900px) rotateY(-7deg);
-  }
-}
-</style>
