@@ -107,7 +107,6 @@ if (faqsData.value?.list?.length) {
       >
         <!-- <UBadge
             class="absolute top-2 right-2"
-            variant="outline"
             color="neutral"
             >Async First</UBadge
           > -->
@@ -126,7 +125,6 @@ if (faqsData.value?.list?.length) {
             </div>
 
             <UButton
-              variant="solid"
               color="primary"
               size="lg"
               class="w-full md:w-auto justify-center"
@@ -162,7 +160,6 @@ if (faqsData.value?.list?.length) {
               </div>
 
               <UButton
-                variant="outline"
                 color="neutral"
                 class="w-full justify-center"
                 :aria-label="method.ariaLabel"
@@ -192,7 +189,7 @@ if (faqsData.value?.list?.length) {
         </div>
 
         <div>
-          <UAccordion :items="faqsData.list" variant="soft" size="lg" />
+          <UAccordion :items="faqsData.list" size="lg" />
         </div>
       </section>
     </UPageBody>

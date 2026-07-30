@@ -48,7 +48,9 @@ definePageMeta({
       orientation="horizontal"
     >
       <LazyStarsBg />
-      <template #headline>{{ profileData.title }}</template>
+      <template #headline
+        ><span class="tracking-tighter">{{ profileData.title }}</span></template
+      >
       <template #title>
         {{ profileData.name }}
       </template>
@@ -69,7 +71,7 @@ definePageMeta({
       </template>
 
       <div class="inline-block">
-        <UCard variant="outline" class="border border-primary/25">
+        <UCard class="border border-primary/25">
           {{ profileData.description }}
         </UCard>
       </div>

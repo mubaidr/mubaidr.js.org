@@ -71,7 +71,6 @@ const testimonials = [
               v-for="(result, i) in testimonial.results.slice(0, 2)"
               :key="i"
               color="neutral"
-              variant="soft"
               size="sm"
             >
               {{ result }}

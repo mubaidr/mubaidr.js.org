@@ -1,17 +1,17 @@
 <script setup lang="ts">
-const { isLoading } = useLoadingIndicator();
+const { isLoading } = useLoadingIndicator()
 
-const appear = ref(false);
-const appeared = ref(false);
+const appear = ref(false)
+const appeared = ref(false)
 
 onMounted(() => {
   setTimeout(() => {
-    appear.value = true;
+    appear.value = true
     setTimeout(() => {
-      appeared.value = true;
-    }, 1000);
-  }, 0);
-});
+      appeared.value = true
+    }, 1000)
+  }, 0)
+})
 </script>
 
 <template>

@@ -55,12 +55,7 @@ onBeforeUnmount(() => {
             {{ item.label }}
           </UButton>
 
-          <UButton
-            to="/contact"
-            variant="outline"
-            color="primary"
-            label="Contact"
-          />
+          <UButton to="/contact" color="primary" label="Contact" />
         </div>
       </template>
 
@@ -76,13 +71,7 @@ onBeforeUnmount(() => {
           >
             {{ item.label }}
           </UButton>
-          <UButton
-            to="/contact"
-            variant="outline"
-            color="primary"
-            label="Contact"
-            block
-          />
+          <UButton to="/contact" color="primary" label="Contact" block />
         </div>
       </template>
     </UHeader>

@@ -118,7 +118,6 @@ if (blogPostData.value) {
             v-for="tag in blogPostData.tags"
             :key="tag"
             :label="tag"
-            variant="soft"
             color="neutral"
           /></div
       ></template>
@@ -150,7 +149,7 @@ if (blogPostData.value) {
 
       <!-- Back to Blog Link -->
       <div class="text-center pt-8">
-        <UButton to="/blog" variant="outline" class="">
+        <UButton to="/blog" class="">
           <UIcon name="i-ph-arrow-left" class="mr-2" />
           <span>Back to Blog</span>
         </UButton>
