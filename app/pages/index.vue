@@ -71,7 +71,7 @@ definePageMeta({
       </template>
 
       <div class="inline-block">
-        <UCard class="border border-primary/25">
+        <UCard variant="outline">
           {{ profileData.description }}
         </UCard>
       </div>

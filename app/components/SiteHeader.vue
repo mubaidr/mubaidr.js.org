@@ -19,17 +19,17 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="fixed inset-x-0 top-8 z-50 flex justify-center px-4">
+  <div class="fixed inset-x-0 top-8 z-50 flex justify-center">
     <UHeader
       title="mubaidr"
       :class="[
         'w-full max-w-xl rounded-xs border border-default bg-default/50 backdrop-blur transition-shadow duration-300',
-        scrolled && 'shadow-lg',
+        scrolled && 'shadow',
         'border-primary/25',
       ]"
       :ui="{
         root: 'sticky-0 static',
-        container: 'px-4 sm:px-4',
+        container: 'px-4!',
       }"
       mode="drawer"
     >
