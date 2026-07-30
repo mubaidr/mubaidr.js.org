@@ -1,14 +1,18 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+@theme {
+  --font-sans: "Space Grotesk", system-ui, sans-serif;
+}
+
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }
 
 :root {
-  --font-sans: "Tomorrow", sans-serif;
-  --ui-radius: 0.75rem;
+  --font-sans: "Space Grotesk", system-ui, sans-serif;
+  --ui-radius: 0.125rem;
 }
 
 /* ================================================

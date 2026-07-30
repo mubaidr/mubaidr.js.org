@@ -1,18 +1,24 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: "amber",
+      primary: "slate",
       secondary: "blue",
-      neutral: "zinc",
+      neutral: "slate",
     },
     badge: {
       defaultVariants: {
-        variant: "subtle",
+        variant: "outline",
       },
     },
     button: {
       defaultVariants: {
-        color: "primary",
+        color: "neutral",
+        variant: "outline",
+      },
+    },
+    card: {
+      slots: {
+        root: "bg-default ring ring-default rounded-none",
       },
     },
   },
