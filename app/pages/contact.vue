@@ -16,6 +16,18 @@ useHead({
   ],
 })
 
+useSeoMeta({
+  title: "Contact",
+  description:
+    "Get in touch to discuss your project requirements and start working together.",
+  ogTitle: "Contact Muhammad Ubaid Raza - Full Stack Engineer",
+  ogDescription:
+    "Get in touch to discuss your project requirements and start working together.",
+  twitterTitle: "Contact Muhammad Ubaid Raza - Full Stack Engineer",
+  twitterDescription:
+    "Get in touch to discuss your project requirements and start working together.",
+})
+
 // Contact methods
 const contactMethods = ref([
   {

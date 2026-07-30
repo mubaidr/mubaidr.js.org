@@ -56,6 +56,8 @@ if (blogPostData.value) {
     ogUrl: url,
     ogImage: image ? [{ url: image }] : undefined,
     twitterCard: image ? "summary_large_image" : "summary",
+    twitterTitle: title,
+    twitterDescription: description,
     twitterImage: image,
     articlePublishedTime: publishedTime,
     articleModifiedTime: modifiedTime,
@@ -68,9 +70,9 @@ if (blogPostData.value) {
   // Register BlogPosting JSON-LD via Nuxt SEO
   useSchemaOrg({
     "@type": "BlogPosting",
-    headline: title,
+    headline: title?.replace(/ \| Blog$/, ""),
     description,
-    image: image ? [image] : undefined,
+    image: image ? [new URL(image, site.url).toString()] : undefined,
     datePublished: publishedTime,
     dateModified: modifiedTime,
     mainEntityOfPage: url,
@@ -138,6 +140,8 @@ if (blogPostData.value) {
         <img
           :src="blogPostData.socialImage?.src || blogPostData.image"
           :alt="blogPostData.socialImage?.alt || blogPostData.title"
+          :width="blogPostData.socialImage?.width || 960"
+          :height="blogPostData.socialImage?.height || 540"
           class="w-full h-full object-cover"
         />
       </div>

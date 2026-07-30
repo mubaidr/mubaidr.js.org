@@ -166,6 +166,7 @@ export default defineNuxtConfig({
       "Senior Software Engineer specializing in modern web technologies. Crafting scalable web applications and browser extensions for startups and founders.",
     defaultLocale: "en",
     enabled: true,
+    ogImage: "/mubaidr.png",
   },
 
   ssr: true,

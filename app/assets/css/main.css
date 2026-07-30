@@ -10,6 +10,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Focus visible styles for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--ui-color-primary-500, #3b82f6);
+  outline-offset: 2px;
+}
+
+/* Remove default outline for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 :root {
   --font-sans: "Space Grotesk", system-ui, sans-serif;
   --ui-radius: 0.125rem;

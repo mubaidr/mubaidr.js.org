@@ -5,6 +5,18 @@ definePageMeta({
   description: "Read our latest blog posts and insights",
 })
 
+useSeoMeta({
+  title: "Blog",
+  description:
+    "Read the latest articles, tutorials, and insights on web development, AI, and software architecture by Muhammad Ubaid Raza.",
+  ogTitle: "Blog - Muhammad Ubaid Raza - Full Stack Engineer",
+  ogDescription:
+    "Read the latest articles, tutorials, and insights on web development, AI, and software architecture.",
+  twitterTitle: "Blog - Muhammad Ubaid Raza - Full Stack Engineer",
+  twitterDescription:
+    "Read the latest articles, tutorials, and insights on web development, AI, and software architecture.",
+})
+
 // Pagination state
 const route = useRoute()
 const router = useRouter()
@@ -108,7 +120,11 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
           :title="post.title"
           :description="post.description || getExcerpt(post.body)"
           :date="post.date"
-          :image="post.socialImage?.src || post.image"
+          :image="{
+            src: post.socialImage?.src || post.image,
+            alt: post.socialImage?.alt || post.title,
+            loading: 'lazy',
+          }"
           :to="post.path"
           :badge="post.tags?.[0]"
         />

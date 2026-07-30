@@ -1,37 +1,59 @@
 <script lang="ts" setup>
 // Fetch data using composables
+const site = useSiteConfig()
 const { data: profileData } = await useProfileData()
 
 // SEO Meta using reactive composables
 if (profileData.value) {
+  // Trim description to ~155 chars for optimal SERP display
+  const shortDescription =
+    profileData.value.description.length > 155
+      ? profileData.value.description.slice(0, 152) + "..."
+      : profileData.value.description
+
   useSeoMeta({
     title: "Home",
-    description: profileData.value.description,
+    description: shortDescription,
     ogTitle: profileData.value.name,
-    ogDescription: profileData.value.description,
+    ogDescription: shortDescription,
     ogImage: profileData.value.avatar,
-    ogType: "profile",
+    ogType: "website",
     twitterCard: "summary_large_image",
     twitterTitle: profileData.value.name,
-    twitterDescription: profileData.value.description,
+    twitterDescription: shortDescription,
     twitterImage: profileData.value.avatar,
+  })
+
+  useHead({
+    link: [{ rel: "canonical", href: site.url }],
   })
 
   // Structured data for SEO
   useSchemaOrg([
     defineWebSite({
       name: profileData.value.name,
-      description: profileData.value.description,
-      url: "https://mubaidr.js.org",
+      description: shortDescription,
+      url: site.url,
     }),
     definePerson({
       name: profileData.value.name,
       jobTitle: profileData.value.title,
       description: profileData.value.description,
       image: profileData.value.avatar,
-      url: "https://mubaidr.js.org",
+      url: site.url,
       sameAs: profileData.value.social?.map((s) => s.url) || [],
     }),
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: site.url,
+        },
+      ],
+    },
   ])
 }
 

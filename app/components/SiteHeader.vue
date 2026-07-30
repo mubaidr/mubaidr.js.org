@@ -44,7 +44,7 @@ onBeforeUnmount(() => {
       <template #right>
         <ThemeSwitcher />
 
-        <div class="hidden md:block">
+        <nav aria-label="Main navigation" class="hidden md:block">
           <UButton
             v-for="item in navigationItems"
             :key="item.to"
@@ -56,11 +56,11 @@ onBeforeUnmount(() => {
           </UButton>
 
           <UButton to="/contact" color="primary" label="Contact" />
-        </div>
+        </nav>
       </template>
 
       <template #body>
-        <div class="flex flex-col gap-2 -mx-2.5">
+        <nav aria-label="Mobile navigation" class="flex flex-col gap-2 -mx-2.5">
           <UButton
             v-for="item in navigationItems"
             :key="item.to"
@@ -72,7 +72,7 @@ onBeforeUnmount(() => {
             {{ item.label }}
           </UButton>
           <UButton to="/contact" color="primary" label="Contact" block />
-        </div>
+        </nav>
       </template>
     </UHeader>
   </div>

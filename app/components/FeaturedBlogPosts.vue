@@ -2,7 +2,7 @@
 const { count } = defineProps({
   count: {
     type: Number,
-    default: 2,
+    default: 3,
   },
 })
 
@@ -19,7 +19,11 @@ const { data: featuredPostsData } = await useFeaturedBlogPosts(count)
         :title="post.title"
         :description="post.description"
         :date="post.date"
-        :image="post.socialImage?.src || post.image"
+        :image="{
+          src: post.socialImage?.src || post.image,
+          alt: post.socialImage?.alt || post.title,
+          loading: 'lazy',
+        }"
         :to="post.path || '/blog'"
         :badge="post.tags?.[0]"
       />
