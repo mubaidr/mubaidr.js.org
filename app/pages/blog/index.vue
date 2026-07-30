@@ -101,78 +101,18 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
     <FeaturedBlogPosts />
     <USeparator />
     <UPageSection title="Latest Posts">
-      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <NuxtLink
+      <UBlogPosts>
+        <UBlogPost
           v-for="post in blogData.posts"
           :key="post.path"
+          :title="post.title"
+          :description="post.description || getExcerpt(post.body)"
+          :date="post.date"
+          :image="post.socialImage?.src || post.image"
           :to="post.path"
-          class="h-full"
-        >
-          <UCard class="group h-full overflow-hidden">
-            <div class="space-y-6">
-              <!-- Featured Image -->
-              <div class="aspect-video -mx-6 -mt-6 overflow-hidden">
-                <img
-                  v-if="post.socialImage?.src || post.image"
-                  :src="post.socialImage?.src || post.image"
-                  :alt="post.socialImage?.alt || post.title"
-                  class="w-full h-full object-cover"
-                  loading="lazy"
-                />
-                <div
-                  v-else
-                  class="flex items-center justify-center h-full bg-neutral-100 dark:bg-neutral-800"
-                >
-                  <UIcon
-                    name="i-ph-article-bold"
-                    class="w-12 h-12 text-neutral-400"
-                  />
-                </div>
-              </div>
-
-              <div class="space-y-4">
-                <div class="space-y-2">
-                  <h3
-                    class="font-bold group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors"
-                  >
-                    {{ post.title }}
-                  </h3>
-                  <p class="line-clamp-3 text-sm leading-relaxed">
-                    {{ post.description || getExcerpt(post.body) }}
-                  </p>
-                </div>
-
-                <div class="flex flex-wrap gap-2">
-                  <UBadge
-                    v-for="tag in post.tags?.slice(0, 2)"
-                    :key="tag"
-                    :label="tag"
-                    variant="outline"
-                    color="neutral"
-                    size="xs"
-                  />
-                </div>
-
-                <!-- Meta -->
-                <div
-                  class="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800 text-xs font-medium text-neutral-500"
-                >
-                  <div class="flex items-center gap-2">
-                    <UIcon name="i-ph-calendar-blank-bold" />
-                    <span>{{ $formatDate(post.date) }}</span>
-                  </div>
-                  <div
-                    class="flex items-center gap-1 text-primary-600 dark:text-primary-400"
-                  >
-                    <span>Read More</span>
-                    <UIcon name="i-ph-arrow-right-bold" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </UCard>
-        </NuxtLink>
-      </div>
+          :badge="post.tags?.[0]"
+        />
+      </UBlogPosts>
 
       <!-- Pagination -->
       <div v-if="totalPages > 1" class="flex justify-center mt-8">
