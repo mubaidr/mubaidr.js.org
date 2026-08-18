@@ -6,7 +6,7 @@ const currentYear = new Date().getFullYear()
 <template>
   <UFooter class="border-t border-t-muted">
     <template #left>
-      <p class="text-muted text-sm">
+      <p class="font-mono text-xs text-muted">
         &copy; {{ currentYear }} Muhammad Ubaid R.
       </p>
     </template>

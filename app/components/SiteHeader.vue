@@ -1,8 +1,8 @@
 <script setup lang="ts">
 // Navigation items configuration
 const navigationItems = [
-  { to: "/blog", label: "Blog", icon: "i-ph-article" },
-  { to: "/contact", label: "Contact", icon: "i-ph-article" },
+  { to: "/blog", label: "Blog" },
+  { to: "/contact", label: "Contact" },
 ]
 
 // Header shadow on scroll
@@ -22,68 +22,54 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="fixed inset-x-0 top-12 z-50 flex justify-center px-12 md:px-0">
-    <UHeader
-      title="mubaidr"
-      :class="[
-        'w-full max-w-xl rounded-full border backdrop-blur transition-shadow duration-300',
-        scrolled && 'shadow',
-        'border-primary/25',
-      ]"
-      :ui="{
-        root: 'sticky-0 static',
-        container: 'px-4!',
-      }"
-      mode="drawer"
-    >
-      <template #title>
-        <span class="text-base font-normal">
-          <span class="text-muted">&lt;</span>mubaidr<span class="text-muted"
-            >/&gt;</span
-          >
-        </span>
-      </template>
+  <UHeader
+    title="mubaidr"
+    sticky
+    mode="drawer"
+    :class="[
+      'border-b border-(--ui-border) bg-background/95 backdrop-blur transition-shadow duration-300',
+      scrolled && 'shadow-sm',
+    ]"
+    :ui="{
+      root: 'sticky top-0 z-50',
+    }"
+  >
+    <template #title>
+      <span class="font-mono text-sm font-medium tracking-tight">
+        <span class="text-muted">~/</span>mubaidr
+      </span>
+    </template>
 
-      <template #right>
-        <nav aria-label="Main navigation" class="hidden md:block">
-          <UButton
-            v-for="item in navigationItems"
-            :key="item.to"
-            :to="item.to"
-            variant="link"
-            color="neutral"
-          >
-            {{ item.label }}
-          </UButton>
-        </nav>
-        <UColorModeSelect
-          variant="ghost"
+    <template #right>
+      <nav aria-label="Main navigation" class="hidden items-center gap-1 md:flex">
+        <UButton
+          v-for="item in navigationItems"
+          :key="item.to"
+          :to="item.to"
+          variant="link"
           color="neutral"
           size="sm"
-          :ui="{
-            base: 'items-center h-10 py-4',
-            value: 'hidden',
-            itemLabel: 'hidden',
-            label: 'hidden',
-          }"
+          class="font-mono"
         >
-        </UColorModeSelect>
-      </template>
+          {{ item.label }}
+        </UButton>
+      </nav>
+    </template>
 
-      <template #body>
-        <nav aria-label="Mobile navigation" class="flex flex-col gap-2 -mx-2.5">
-          <UButton
-            v-for="item in navigationItems"
-            :key="item.to"
-            :to="item.to"
-            variant="link"
-            color="neutral"
-            block
-          >
-            {{ item.label }}
-          </UButton>
-        </nav>
-      </template>
-    </UHeader>
-  </div>
+    <template #body>
+      <nav aria-label="Mobile navigation" class="-mx-2.5 flex flex-col gap-2">
+        <UButton
+          v-for="item in navigationItems"
+          :key="item.to"
+          :to="item.to"
+          variant="link"
+          color="neutral"
+          block
+          class="font-mono"
+        >
+          {{ item.label }}
+        </UButton>
+      </nav>
+    </template>
+  </UHeader>
 </template>

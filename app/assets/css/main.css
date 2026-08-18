@@ -2,11 +2,22 @@
 @import "@nuxt/ui";
 
 @theme {
-  --font-sans: "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
-/* Smooth scroll behavior */
+/*
+ * Unlayered overrides for Nuxt UI tokens so they beat Nuxt UI's
+ * `@layer theme` defaults (which otherwise win regardless of source order).
+ */
+:root {
+  --ui-container: 64rem;
+  --ui-radius: 0.5rem;
+}
+
+/* Slightly tighter base type for a denser, more technical feel */
 html {
+  font-size: 15px;
   scroll-behavior: smooth;
 }
 
@@ -21,18 +32,12 @@ html {
   outline: none;
 }
 
-:root {
-  --font-sans: "Space Grotesk", system-ui, sans-serif;
-  --ui-radius: 0.75rem;
-  --ui-container: 64rem;
-}
-
 /* ================================================
    TYPOGRAPHY SYSTEM
    ================================================ */
-/* h1 {
+h1 {
   @apply text-4xl;
-} */
+}
 
 h2 {
   @apply text-3xl;
@@ -54,12 +59,14 @@ h6 {
   @apply text-base;
 }
 
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   @apply font-semibold tracking-tight;
+  font-family: var(--font-mono);
 }
 
 h2 + p,

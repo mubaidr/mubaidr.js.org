@@ -47,21 +47,20 @@ const testimonials = [
 
 <template>
   <UPageSection
-    title="What Clients Say"
-    description="Real feedback from founders and teams I've worked with"
+    title="Testimonials"
+    description="Feedback from founders and teams I've worked with"
     icon="ph:chat-circle-text"
   >
-    <div class="grid gap-8 md:grid-cols-3">
+    <div class="grid gap-4 md:grid-cols-3">
       <UPageCard
         v-for="testimonial in testimonials"
         :key="testimonial.id"
         class="h-full"
-        spotlight
       >
         <div class="space-y-4">
-          <p class="leading-relaxed">"{{ testimonial.quote }}"</p>
+          <p class="text-sm leading-relaxed">"{{ testimonial.quote }}"</p>
           <div class="border-t border-muted pt-4">
-            <p class="font-semibold">{{ testimonial.name }}</p>
+            <p class="font-mono text-sm font-medium">{{ testimonial.name }}</p>
             <p class="text-sm text-muted">
               {{ testimonial.title }}, {{ testimonial.company }}
             </p>

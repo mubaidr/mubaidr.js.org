@@ -3,25 +3,25 @@
     "@giscus/vue": "^3.1.1",
     "@iconify-json/devicon": "^1.2.62",
     "@iconify-json/ph": "^1.2.2",
-    "@nuxt/content": "^3.15.0",
+    "@nuxt/content": "^3.15.2",
     "@nuxt/eslint": "^1.16.0",
     "@nuxt/fonts": "^0.14.0",
-    "@nuxt/icon": "^2.3.1",
-    "@nuxt/image": "^2.0.0",
+    "@nuxt/icon": "^2.4.1",
+    "@nuxt/image": "^2.1.0",
     "@nuxt/ui": "^4.10.0",
     "@nuxthq/studio": "^2.2.1",
     "@nuxtjs/color-mode": "^4.0.1",
     "@nuxtjs/mdc": "0.22.2",
-    "@nuxtjs/seo": "^5.3.3",
+    "@nuxtjs/seo": "^5.3.6",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
-    "nuxt": "^4.4.8",
+    "nuxt": "^4.5.1",
     "nuxt-feedme": "^2.1.0",
     "nuxt-mcp-dev": "^0.3.2",
-    "prettier": "^3.9.5",
+    "prettier": "^3.9.6",
     "tailwindcss": "^4.3.3",
     "vite-plugin-eslint2": "^5.3.0",
-    "vue-tsc": "^3.3.7"
+    "vue-tsc": "^3.3.9"
   },
   "engines": {
     "node": ">=26",
@@ -29,6 +29,10 @@
   },
   "name": "mubaidr.js.org",
   "private": true,
+  "overrides": {
+    "@unhead/vue": "^3.3.0",
+    "unhead": "^3.3.0"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -44,8 +48,9 @@
     "@resvg/resvg-js": "^2.6.2",
     "better-sqlite3": "^12.11.1",
     "nuxt-llms": "^0.2.0",
-    "satori": "^0.28.1",
-    "typescript": "^6.0.3"
+    "satori": "^0.29.0",
+    "typescript": "^6.0.3",
+    "unhead": "^3.3.0"
   },
   "allowScripts": {
     "vue-demi@0.14.10": true,

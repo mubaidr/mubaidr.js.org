@@ -124,65 +124,67 @@ if (blogPostData.value) {
           /></div
       ></template>
     </UPageHeader>
-    <div class="space-y-16 py-16">
-      <!-- Series Navigation -->
-      <SeriesNavigation
-        v-if="blogPostData.series && blogPostData.seriesOrder"
-        :series="blogPostData.series"
-        :current-order="blogPostData.seriesOrder"
-      />
+    <UContainer class="py-16">
+      <div class="space-y-16">
+        <!-- Series Navigation -->
+        <SeriesNavigation
+          v-if="blogPostData.series && blogPostData.seriesOrder"
+          :series="blogPostData.series"
+          :current-order="blogPostData.seriesOrder"
+        />
 
-      <!-- Featured Image -->
-      <div
-        v-if="blogPostData.socialImage?.src || blogPostData.image"
-        class="aspect-video overflow-hidden shadow-lg"
-      >
-        <img
-          :src="blogPostData.socialImage?.src || blogPostData.image"
-          :alt="blogPostData.socialImage?.alt || blogPostData.title"
-          :width="blogPostData.socialImage?.width || 960"
-          :height="blogPostData.socialImage?.height || 540"
-          class="w-full h-full object-cover"
+        <!-- Featured Image -->
+        <div
+          v-if="blogPostData.socialImage?.src || blogPostData.image"
+          class="aspect-video overflow-hidden"
+        >
+          <img
+            :src="blogPostData.socialImage?.src || blogPostData.image"
+            :alt="blogPostData.socialImage?.alt || blogPostData.title"
+            :width="blogPostData.socialImage?.width || 960"
+            :height="blogPostData.socialImage?.height || 540"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Post Content -->
+        <article class="prose prose-lg max-w-3xl mx-auto">
+          <ContentRenderer :value="blogPostData" />
+        </article>
+
+        <!-- Back to Blog Link -->
+        <div class="text-center pt-8">
+          <UButton to="/blog" class="">
+            <UIcon name="i-ph-arrow-left" class="mr-2" />
+            <span>Back to Blog</span>
+          </UButton>
+        </div>
+
+        <!-- Comments -->
+        <Giscuss
+          id="comments"
+          repo="mubaidr/mubaidr.js.org"
+          repo-id="R_kgDOMTcs7A"
+          category="General"
+          category-id="DIC_kwDOMTcs7M4Cq7vl"
+          mapping="pathname"
+          term="Welcome!"
+          reactions-enabled="1"
+          emit-metadata="1"
+          input-position="top"
+          theme="preferred_color_scheme"
+          lang="en"
+          loading="lazy"
+        />
+
+        <!-- Related Posts -->
+        <RelatedPosts
+          v-if="blogPostData?.tags"
+          :current-path="route.path"
+          :tags="blogPostData.tags"
         />
       </div>
-
-      <!-- Post Content -->
-      <article class="prose prose-lg max-w-none mx-auto">
-        <ContentRenderer :value="blogPostData" />
-      </article>
-
-      <!-- Back to Blog Link -->
-      <div class="text-center pt-8">
-        <UButton to="/blog" class="">
-          <UIcon name="i-ph-arrow-left" class="mr-2" />
-          <span>Back to Blog</span>
-        </UButton>
-      </div>
-
-      <!-- Comments -->
-      <Giscuss
-        id="comments"
-        repo="mubaidr/mubaidr.js.org"
-        repo-id="R_kgDOMTcs7A"
-        category="General"
-        category-id="DIC_kwDOMTcs7M4Cq7vl"
-        mapping="pathname"
-        term="Welcome!"
-        reactions-enabled="1"
-        emit-metadata="1"
-        input-position="top"
-        theme="preferred_color_scheme"
-        lang="en"
-        loading="lazy"
-      />
-
-      <!-- Related Posts -->
-      <RelatedPosts
-        v-if="blogPostData?.tags"
-        :current-path="route.path"
-        :tags="blogPostData.tags"
-      />
-    </div>
+    </UContainer>
   </UPage>
   <div v-else class="text-center py-24">
     <h1>Post Not Found</h1>

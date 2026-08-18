@@ -10,9 +10,7 @@
     <SiteHeader />
 
     <UMain id="main">
-      <UContainer class="pt-32">
-        <NuxtPage />
-      </UContainer>
+      <NuxtPage />
     </UMain>
 
     <!-- Site Footer -->

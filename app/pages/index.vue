@@ -66,15 +66,19 @@ definePageMeta({
   <UPage>
     <UPageHero
       v-if="profileData"
-      class="py-24 md:py-48"
       orientation="horizontal"
+      :ui="{
+        root: 'relative isolate flex min-h-[calc(100svh-var(--ui-header-height))] flex-col',
+        container: 'flex-1 py-16 sm:py-24 gap-12 justify-center',
+      }"
     >
-      <LazyStarsBg />
-      <template #headline
-        ><span class="tracking-tighter">{{ profileData.title }}</span></template
-      >
+      <template #headline>
+        <span class="font-mono text-sm text-primary">{{ profileData.title }}</span>
+      </template>
       <template #title>
-        {{ profileData.name }}
+        <span class="font-mono font-medium tracking-tight">
+          {{ profileData.name }}
+        </span>
       </template>
       <template #description>
         {{ profileData.heroHeadline }}
@@ -86,14 +90,29 @@ definePageMeta({
           :to="social.url"
           external
           :title="social.name"
-          variant="link"
+          variant="ghost"
+          color="neutral"
           :icon="social.icon"
-        >
-        </UButton>
+        />
       </template>
 
-      <div class="inline-block">
-        <UCard variant="outline">
+      <div class="w-full max-w-md">
+        <UCard
+          variant="outline"
+          class="font-mono text-sm leading-relaxed"
+          :ui="{
+            header: 'px-4 py-2.5',
+            body: 'p-4 sm:p-5',
+          }"
+        >
+          <template #header>
+            <div class="flex items-center gap-1.5">
+              <span class="size-2.5 rounded-full bg-red-400/80" />
+              <span class="size-2.5 rounded-full bg-yellow-400/80" />
+              <span class="size-2.5 rounded-full bg-green-400/80" />
+              <span class="ml-2 text-xs text-muted">~/mubaidr.md</span>
+            </div>
+          </template>
           {{ profileData.description }}
         </UCard>
       </div>

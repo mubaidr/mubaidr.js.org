@@ -1,4 +1,5 @@
 import { definePerson } from "nuxt-schema-org/schema"
+import { defineLink } from "unhead"
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const IS_DEV = import.meta.dev
@@ -19,9 +20,16 @@ export default defineNuxtConfig({
       link: [
         { rel: "icon", type: "image/png", href: "/favicon.png" },
         { rel: "apple-touch-icon", href: "/favicon.png" },
-        { rel: "llms-txt", href: "/llms.txt" },
-        { rel: "llms-txt-full", href: "/llms-full.txt" },
-        { rel: "llms", href: "/llms.txt" },
+        defineLink({ rel: "llms-txt", href: "/llms.txt" }),
+        defineLink({ rel: "llms-txt-full", href: "/llms-full.txt" }),
+        defineLink({ rel: "llms", href: "/llms.txt" }),
+      ],
+      meta: [
+        {
+          name: "keywords",
+          content:
+            "AI agent architecture consultant, multi-agent systems, LLM orchestration, AI agents engineer, Laravel consultant, Nuxt consultant, full stack architect, software architecture review, MVP development consultant, fractional CTO, technical consultant, async software development, open source engineer, AI integration specialist, agentic workflows, workflow orchestration, developer tooling, SaaS architecture, Laravel expert, Vue.js consultant",
+        },
       ],
     },
   },
@@ -209,9 +217,6 @@ export default defineNuxtConfig({
     meta: {
       applicationName: "Muhammad Ubaid Raza",
       author: "Muhammad Ubaid Raza",
-
-      keywords:
-        "AI agent architecture consultant, multi-agent systems, LLM orchestration, AI agents engineer, Laravel consultant, Nuxt consultant, full stack architect, software architecture review, MVP development consultant, fractional CTO, technical consultant, async software development, open source engineer, AI integration specialist, agentic workflows, workflow orchestration, developer tooling, SaaS architecture, Laravel expert, Vue.js consultant",
 
       description:
         "Senior Software Engineer specializing in AI agent systems, LLM orchestration, Laravel, Nuxt, and scalable SaaS architecture. Helping startups and teams build MVPs, AI-powered products, and production-ready systems through async-first consulting.",
