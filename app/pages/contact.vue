@@ -1,21 +1,13 @@
 <script setup lang="ts">
-definePageMeta({
-  title: "Contact",
-  description:
-    "Get in touch to discuss your project requirements and start working together.",
-})
+// Fetch FAQs using composable
+const { data: faqsData } = await useFaqsData()
 
-useSeoMeta({
-  title: "Contact",
-  description:
-    "Get in touch to discuss your project requirements and start working together.",
-  ogTitle: "Contact Muhammad Ubaid Raza - Full Stack Engineer",
-  ogDescription:
-    "Get in touch to discuss your project requirements and start working together.",
-  twitterTitle: "Contact Muhammad Ubaid Raza - Full Stack Engineer",
-  twitterDescription:
-    "Get in touch to discuss your project requirements and start working together.",
-})
+if (!faqsData.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: "FAQs not found",
+  })
+}
 
 // Contact methods
 const contactMethods = ref([
@@ -57,8 +49,36 @@ const contactMethods = ref([
   // },
 ])
 
-// Fetch FAQs using composable
-const { data: faqsData } = await useFaqsData()
+definePageMeta({
+  title: "Contact",
+  description:
+    "Get in touch to discuss your project requirements and start working together.",
+})
+
+useSeoMeta({
+  title: "Contact",
+  description:
+    "Get in touch to discuss your project requirements and start working together.",
+  ogTitle: "Contact Muhammad Ubaid Raza - Full Stack Engineer",
+  ogDescription:
+    "Get in touch to discuss your project requirements and start working together.",
+  twitterTitle: "Contact Muhammad Ubaid Raza - Full Stack Engineer",
+  twitterDescription:
+    "Get in touch to discuss your project requirements and start working together.",
+})
+
+// FAQPage structured data
+useSchemaOrg({
+  "@type": "FAQPage",
+  mainEntity: faqsData.value.list.map((faq) => ({
+    "@type": "Question",
+    name: faq.label,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.content,
+    },
+  })),
+})
 
 // If the page was accessed via a link with `?faqs=true`, scroll to FAQs section
 onMounted(() => {
@@ -73,21 +93,6 @@ onMounted(() => {
     })
   }
 })
-
-// FAQPage structured data
-if (faqsData.value?.list?.length) {
-  useSchemaOrg({
-    "@type": "FAQPage",
-    mainEntity: faqsData.value.list.map((faq) => ({
-      "@type": "Question",
-      name: faq.label,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.content,
-      },
-    })),
-  })
-}
 </script>
 
 <template>

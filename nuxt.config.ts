@@ -13,7 +13,7 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/main.css"],
 
-  compatibilityDate: "2026-07-03",
+  compatibilityDate: "2026-08-20",
 
   app: {
     head: {
@@ -96,7 +96,6 @@ export default defineNuxtConfig({
     typedPages: true,
     typescriptPlugin: true,
     buildCache: true,
-    viewTransition: true,
   },
 
   eslint: {
