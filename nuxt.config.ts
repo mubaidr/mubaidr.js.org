@@ -1,5 +1,4 @@
 import { definePerson } from "nuxt-schema-org/schema"
-import { defineLink } from "unhead"
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const IS_DEV = import.meta.dev
@@ -19,10 +18,7 @@ export default defineNuxtConfig({
     head: {
       link: [
         { rel: "icon", type: "image/png", href: "/favicon.png" },
-        { rel: "apple-touch-icon", href: "/favicon.png" },
-        defineLink({ rel: "llms-txt", href: "/llms.txt" }),
-        defineLink({ rel: "llms-txt-full", href: "/llms-full.txt" }),
-        defineLink({ rel: "llms", href: "/llms.txt" }),
+        { rel: "apple-touch-icon", href: "/favicon.png" }
       ],
       meta: [
         {

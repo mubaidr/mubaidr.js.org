@@ -15,7 +15,7 @@ useHead({
 <template>
   <div>
     <UApp>
-      <NuxtLoadingIndicator />
+      <!-- <NuxtLoadingIndicator /> -->
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>

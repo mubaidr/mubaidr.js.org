@@ -35,19 +35,19 @@ html {
    TYPOGRAPHY SYSTEM
    ================================================ */
 h1 {
-  @apply text-4xl;
-}
-
-h2 {
   @apply text-3xl;
 }
 
-h3 {
+h2 {
   @apply text-2xl;
 }
 
-h4 {
+h3 {
   @apply text-xl;
+}
+
+h4 {
+  @apply text-lg;
 }
 
 h5 {
@@ -55,7 +55,7 @@ h5 {
 }
 
 h6 {
-  @apply text-base;
+  @apply text-lg;
 }
 
 h1,
@@ -72,7 +72,7 @@ h3 + p,
 h4 + p,
 h5 + p,
 h6 + p {
-  @apply text-xl mt-2;
+  @apply text-lg mt-2;
 }
 
 /* Skip Link - Accessibility */
