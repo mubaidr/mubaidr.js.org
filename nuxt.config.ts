@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     head: {
       link: [
         { rel: "icon", type: "image/png", href: "/favicon.png" },
-        { rel: "apple-touch-icon", href: "/favicon.png" }
+        { rel: "apple-touch-icon", href: "/favicon.png" },
       ],
       meta: [
         {
@@ -254,7 +254,7 @@ export default defineNuxtConfig({
 
   vite: {
     optimizeDeps: {
-      include: ["@vueuse/core"],
+      // include: ["@vueuse/core"],
     },
   },
 })
