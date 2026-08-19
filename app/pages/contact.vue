@@ -5,17 +5,6 @@ definePageMeta({
     "Get in touch to discuss your project requirements and start working together.",
 })
 
-useHead({
-  title: "Contact",
-  meta: [
-    {
-      name: "description",
-      content:
-        "Get in touch to discuss your project requirements and start working together.",
-    },
-  ],
-})
-
 useSeoMeta({
   title: "Contact",
   description:
@@ -107,8 +96,7 @@ if (faqsData.value?.list?.length) {
       title="Let's Work Together"
       description="Have a project in mind? I'd love to hear about it and discuss how we
           can bring your ideas to life."
-    >
-    </UPageHeader>
+    />
 
     <UPageBody>
       <UContainer class="space-y-12">

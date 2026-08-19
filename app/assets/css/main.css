@@ -18,7 +18,6 @@
 /* Slightly tighter base type for a denser, more technical feel */
 html {
   font-size: 15px;
-  scroll-behavior: smooth;
 }
 
 /* Focus visible styles for keyboard navigation */

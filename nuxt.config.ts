@@ -96,11 +96,7 @@ export default defineNuxtConfig({
     typedPages: true,
     typescriptPlugin: true,
     buildCache: true,
-    headNext: true,
     viewTransition: true,
-    navigationRepaint: true,
-    payloadExtraction: false,
-    appManifest: false,
   },
 
   eslint: {
@@ -171,7 +167,7 @@ export default defineNuxtConfig({
     url: "https://mubaidr.js.org",
     name: "Muhammad Ubaid Raza - Full Stack Engineer",
     description:
-      "Senior Software Engineer specializing in modern web technologies. Crafting scalable web applications and browser extensions for startups and founders.",
+      "Senior Software Engineer specializing in AI agent systems, LLM orchestration, Laravel, Nuxt, and scalable SaaS architecture. Helping startups and teams build MVPs, AI-powered products, and production-ready systems.",
     defaultLocale: "en",
     enabled: true,
     ogImage: "/mubaidr.png",
@@ -218,9 +214,6 @@ export default defineNuxtConfig({
       applicationName: "Muhammad Ubaid Raza",
       author: "Muhammad Ubaid Raza",
 
-      description:
-        "Senior Software Engineer specializing in AI agent systems, LLM orchestration, Laravel, Nuxt, and scalable SaaS architecture. Helping startups and teams build MVPs, AI-powered products, and production-ready systems through async-first consulting.",
-
       colorScheme: "dark light",
 
       titleTemplate: "%s | Muhammad Ubaid Raza",
@@ -228,7 +221,6 @@ export default defineNuxtConfig({
 
     automaticDefaults: true,
     automaticOgAndTwitterTags: true,
-    setupNuxtConfigAppHeadWithMoreDefaults: true,
   },
 
   schemaOrg: {
@@ -243,7 +235,7 @@ export default defineNuxtConfig({
       // Profile Information, if applicable
       image: "/mubaidr.png",
       description:
-        "Senior Software Engineer specializing in modern web technologies. Crafting scalable web applications and browser extensions for startups and founders.",
+        "Senior Software Engineer specializing in AI agent systems, LLM orchestration, Laravel, Nuxt, and scalable SaaS architecture. Helping startups and teams build MVPs, AI-powered products, and production-ready systems.",
       jobTitle:
         "Senior Software Engineer | Full-Stack Developer | DevOps Enthusiast",
 
@@ -267,12 +259,7 @@ export default defineNuxtConfig({
 
   vite: {
     optimizeDeps: {
-      include: [
-        "@unhead/schema-org/vue",
-        "@vue/devtools-core",
-        "@vue/devtools-kit",
-        "@vueuse/core",
-      ],
+      include: ["@vueuse/core"],
     },
   },
 })

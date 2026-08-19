@@ -108,7 +108,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
       title="Insights & Articles"
       description="Insights, tutorials, and thoughts on web development, technology,
               and more"
-    ></UPageHeader>
+    />
 
     <FeaturedBlogPosts />
     <USeparator />

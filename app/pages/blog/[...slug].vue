@@ -63,10 +63,6 @@ if (blogPostData.value) {
     articleModifiedTime: modifiedTime,
   })
 
-  useHead({
-    link: [{ rel: "canonical", href: url }],
-  })
-
   // Register BlogPosting JSON-LD via Nuxt SEO
   useSchemaOrg({
     "@type": "BlogPosting",

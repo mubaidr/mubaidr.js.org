@@ -24,8 +24,7 @@ export default defineAppConfig({
     // to the same column as the header/hero/sections.
     pageHeader: {
       slots: {
-        container:
-          "w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8",
+        container: "w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8",
         headline:
           "mb-2.5 text-sm font-semibold text-primary flex items-center gap-1.5 w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8",
       },

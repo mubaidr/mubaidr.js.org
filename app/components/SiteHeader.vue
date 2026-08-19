@@ -41,7 +41,10 @@ onBeforeUnmount(() => {
     </template>
 
     <template #right>
-      <nav aria-label="Main navigation" class="hidden items-center gap-1 md:flex">
+      <nav
+        aria-label="Main navigation"
+        class="hidden items-center gap-1 md:flex"
+      >
         <UButton
           v-for="item in navigationItems"
           :key="item.to"
