@@ -92,6 +92,7 @@ export default defineNuxtConfig({
     typedPages: true,
     typescriptPlugin: true,
     buildCache: true,
+    navigationRepaint: true,
   },
 
   eslint: {
