@@ -4,36 +4,10 @@ const navigationItems = [
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ]
-
-// Header shadow on scroll
-const scrolled = ref(false)
-const handleScroll = () => {
-  scrolled.value = window.scrollY > 8
-}
-
-onMounted(() => {
-  window.addEventListener("scroll", handleScroll, { passive: true })
-  handleScroll()
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener("scroll", handleScroll)
-})
 </script>
 
 <template>
-  <UHeader
-    title="mubaidr"
-    sticky
-    mode="drawer"
-    :class="[
-      'border-b border-(--ui-border) bg-background/95 backdrop-blur transition-shadow duration-300',
-      scrolled && 'shadow-sm',
-    ]"
-    :ui="{
-      root: 'sticky top-0 z-50',
-    }"
-  >
+  <UHeader title="mubaidr" sticky mode="slideover">
     <template #title>
       <span class="font-mono text-sm font-medium tracking-tight">
         <span class="text-muted">~/</span>mubaidr
