@@ -31,6 +31,7 @@ export default defineNuxtConfig({
   },
 
   content: {
+    experimental: { sqliteConnector: "native" },
     renderer: {
       anchorLinks: false,
     },
@@ -126,7 +127,7 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     // "@nuxt/image",
     "@nuxtjs/seo",
-    "nuxt-feedme",
+    // "nuxt-feedme",
     "@nuxt/content",
     // "nuxt-mcp-dev",
     "@nuxt/eslint",

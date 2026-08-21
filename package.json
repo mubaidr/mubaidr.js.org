@@ -13,7 +13,6 @@
     "@nuxtjs/color-mode": "^4.0.1",
     "@nuxtjs/mdc": "0.23.1",
     "@nuxtjs/seo": "^5.3.14",
-    "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
     "nuxt": "^4.5.2",
     "nuxt-feedme": "^2.1.0",
@@ -31,7 +30,10 @@
   "private": true,
   "overrides": {
     "@unhead/vue": "^3.3.0",
-    "unhead": "^3.3.2"
+    "unhead": "^3.3.2",
+    "@nuxt/eslint": {
+      "eslint-webpack-plugin": "^6.0.0"
+    }
   },
   "scripts": {
     "build": "nuxt build",
@@ -46,7 +48,6 @@
   "type": "module",
   "dependencies": {
     "@resvg/resvg-js": "^2.6.2",
-    "better-sqlite3": "^13.0.3",
     "nuxt-llms": "^0.2.0",
     "satori": "^0.33.1",
     "typescript": "^6.0.3",
@@ -55,7 +56,6 @@
   "allowScripts": {
     "vue-demi@0.14.10": true,
     "@parcel/watcher@2.5.6": true,
-    "better-sqlite3@12.11.1": true,
     "esbuild@0.27.7": true,
     "esbuild@0.28.1": true,
     "sharp@0.34.5": true,
