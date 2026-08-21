@@ -93,6 +93,11 @@ export default defineNuxtConfig({
     typescriptPlugin: true,
     buildCache: true,
     navigationRepaint: true,
+    payloadExtraction: true,
+  },
+
+  future: {
+    typescriptBundlerResolution: true,
   },
 
   eslint: {

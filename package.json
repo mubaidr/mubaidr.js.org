@@ -4,24 +4,24 @@
     "@iconify-json/devicon": "^1.2.62",
     "@iconify-json/ph": "^1.2.2",
     "@nuxt/content": "^3.15.2",
-    "@nuxt/eslint": "^1.16.0",
+    "@nuxt/eslint": "^1.17.0",
     "@nuxt/fonts": "^0.14.0",
-    "@nuxt/icon": "^2.4.1",
+    "@nuxt/icon": "^2.5.0",
     "@nuxt/image": "^2.1.0",
     "@nuxt/ui": "^4.10.0",
     "@nuxthq/studio": "^2.2.1",
     "@nuxtjs/color-mode": "^4.0.1",
-    "@nuxtjs/mdc": "0.22.2",
-    "@nuxtjs/seo": "^5.3.6",
+    "@nuxtjs/mdc": "0.23.1",
+    "@nuxtjs/seo": "^5.3.14",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
-    "nuxt": "^4.5.1",
+    "nuxt": "^4.5.2",
     "nuxt-feedme": "^2.1.0",
     "nuxt-mcp-dev": "^0.3.2",
     "prettier": "^3.9.6",
     "tailwindcss": "^4.3.3",
     "vite-plugin-eslint2": "^5.3.0",
-    "vue-tsc": "^3.3.9"
+    "vue-tsc": "^3.3.11"
   },
   "engines": {
     "node": ">=26",
@@ -31,7 +31,7 @@
   "private": true,
   "overrides": {
     "@unhead/vue": "^3.3.0",
-    "unhead": "^3.3.0"
+    "unhead": "^3.3.2"
   },
   "scripts": {
     "build": "nuxt build",
@@ -46,11 +46,11 @@
   "type": "module",
   "dependencies": {
     "@resvg/resvg-js": "^2.6.2",
-    "better-sqlite3": "^12.11.1",
+    "better-sqlite3": "^13.0.3",
     "nuxt-llms": "^0.2.0",
-    "satori": "^0.29.0",
+    "satori": "^0.33.1",
     "typescript": "^6.0.3",
-    "unhead": "^3.3.0"
+    "unhead": "^3.3.2"
   },
   "allowScripts": {
     "vue-demi@0.14.10": true,
