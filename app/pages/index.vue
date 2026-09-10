@@ -88,7 +88,7 @@ definePageMeta({
       </template>
 
       <div class="w-full max-w-md space-y-4">
-        <div
+        <!-- <div
           v-if="profileData!.experience?.length"
           class="grid grid-cols-3 gap-3"
         >
@@ -104,7 +104,7 @@ definePageMeta({
               {{ stat.label }}
             </div>
           </div>
-        </div>
+        </div> -->
         <UCard variant="subtle">
           {{ profileData!.description }}
         </UCard>
