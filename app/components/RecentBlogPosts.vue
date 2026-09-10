@@ -6,15 +6,14 @@ const { count } = defineProps({
   },
 })
 
-// Fetch recent blog posts using composable
 const { data: recentPostsData } = await useRecentBlogPosts(count)
 </script>
 
 <template>
   <UPageSection
     v-if="recentPostsData"
-    title="Recent Blog Posts"
-    description="Latest thoughts on development, technology, and best practices"
+    title="From the Blog"
+    description="Technical writing on architecture, tooling, and engineering practices"
     icon="ph:note-blank"
   >
     <UBlogPosts v-if="recentPostsData.length > 0">

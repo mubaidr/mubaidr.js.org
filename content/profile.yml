@@ -1,8 +1,8 @@
 name: Muhammad Ubaid R.
 title: Senior Software Engineer
 avatar: /mubaidr.png
-description: 13+ years of experience delivering web applications, SaaS platforms, AI-powered solutions, browser extensions, and cloud-native systems. Currently building Rental Platform, with an ongoing habit of open-sourcing tools I build along the way.
-heroHeadline: "Building and shipping production systems that scale. SaaS platforms to AI-powered tools."
+description: 13+ years shipping web applications, SaaS platforms, AI-powered tools, browser extensions, and cloud-native systems across startups and enterprise. Currently building Rental Platform. Open-source habit.
+heroHeadline: "Building production systems that scale; from SaaS platforms to AI-powered tools."
 social:
   - name: GitHub
     url: https://github.com/mubaidr
@@ -13,19 +13,26 @@ social:
   - name: X
     url: https://x.com/mubaidr
     icon: i-ph-x-logo
+experience:
+  - label: Years
+    value: "13+"
+  - label: Projects Shipped
+    value: "50+"
+  - label: Domains
+    value: "SaaS, AI, FinTech, E-commerce"
 whatIDo:
-  - field: Full Stack
+  - field: Full Stack Development
     icon: i-ph-stack
-    description: End-to-end development across frontend and backend systems.
-  - field: AI-powered Solutions & Browser Extensions
+    description: End-to-end across frontend and backend. Vue, Nuxt, React, Node, Python.
+  - field: AI-Powered Tools & Extensions
     icon: i-ph-puzzle-piece
-    description: Building intelligent tools and browser extensions powered by AI.
-  - field: System Architecture, DevOps & Observability
+    description: Intelligent tools and browser extensions. LLM integrations, RAG pipelines, AI UX.
+  - field: Architecture & DevOps
     icon: i-ph-gear-six
-    description: Designing scalable architectures with strong DevOps and monitoring practices.
-  - field: Agile Team Leadership & Project Management
+    description: Scalable system design. CI/CD, observability, containerized deployments.
+  - field: Team Leadership
     icon: i-ph-users-three
-    description: Leading teams and managing projects using agile methodologies.
-  - field: Open-source Contributions & Community Engagement
+    description: Agile delivery. Cross-functional coordination. Technical mentoring.
+  - field: Open Source
     icon: i-ph-git-branch
-    description: Contributing to open-source projects and engaging with developer communities.
+    description: Active contributor and maintainer. Community-driven tooling.

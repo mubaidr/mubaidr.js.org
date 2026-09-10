@@ -1,27 +1,14 @@
 <script setup lang="ts">
-// Fetch FAQs using composable
-const { data: faqsData } = await useFaqsData()
+// const { data: faqsData } = await useFaqsData()
 
-if (!faqsData.value) {
-  throw createError({
-    statusCode: 404,
-    statusMessage: "FAQs not found",
-  })
-}
+// if (!faqsData.value) {
+//   throw createError({
+//     statusCode: 404,
+//     statusMessage: "FAQs not found",
+//   })
+// }
 
-// Contact methods
 const contactMethods = ref([
-  // {
-  //   icon: "i-ph-calendar-blank",
-  //   title: "No Discovery Call Required",
-  //   description:
-  //     "Skip the call - share details via email and I'll respond with a plan",
-  //   value: "Contact Now",
-  //   action:
-  //     "mailto:mubaidr@gmail.com?subject=Project%20Inquiry&body=Hi%20Muhammad%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project%20without%20a%20discovery%20call.%20Here%20are%20the%20details%3A%0A%0A%5BDescribe%20your%20project%2C%20goals%2C%20timeline%2C%20and%20any%20requirements%5D",
-  //   ariaLabel: "Start async project discussion via email",
-  //   highlight: true,
-  // },
   {
     icon: "i-ph-envelope",
     title: "Email",
@@ -39,14 +26,6 @@ const contactMethods = ref([
     action: "https://linkedin.com/in/mubaidr",
     ariaLabel: "Connect with Muhammad Ubaid Raza on LinkedIn",
   },
-  // {
-  //   icon: "i-ph-calendar",
-  //   title: "Schedule a Call",
-  //   description: "Book a 30-min consultation",
-  //   value: "cal.com/mubaidr",
-  //   action: "https://cal.com/mubaidr",
-  //   ariaLabel: "Schedule a 30-minute consultation call",
-  // },
 ])
 
 definePageMeta({
@@ -59,28 +38,23 @@ useSeoMeta({
   title: "Contact",
   description:
     "Get in touch to discuss your project requirements and start working together.",
-  ogTitle: "Contact Muhammad Ubaid Raza - Full Stack Engineer",
+  ogTitle: "Contact Muhammad Ubaid Raza - Senior Software Engineer",
   ogDescription:
     "Get in touch to discuss your project requirements and start working together.",
-  twitterTitle: "Contact Muhammad Ubaid Raza - Full Stack Engineer",
+  twitterTitle: "Contact Muhammad Ubaid Raza - Senior Software Engineer",
   twitterDescription:
     "Get in touch to discuss your project requirements and start working together.",
 })
 
-// FAQPage structured data
 useSchemaOrg({
-  "@type": "FAQPage",
-  mainEntity: faqsData.value.list.map((faq) => ({
-    "@type": "Question",
-    name: faq.label,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.content,
-    },
-  })),
+  "@type": "ContactPage",
+  mainEntity: {
+    "@type": "Person",
+    name: "Muhammad Ubaid Raza",
+    email: "mubaidr@gmail.com",
+  },
 })
 
-// If the page was accessed via a link with `?faqs=true`, scroll to FAQs section
 onMounted(() => {
   const {
     query: { faqs: isFaqLink = false },
@@ -98,38 +72,27 @@ onMounted(() => {
 <template>
   <UPage>
     <UPageHeader
-      title="Let's Work Together"
-      description="Have a project in mind? I'd love to hear about it and discuss how we
-          can bring your ideas to life."
+      title="Let's work together"
+      description="Have a project in mind? Share the details and I'll respond with a plan."
     />
 
     <UPageBody>
       <UContainer class="space-y-12">
-        <!-- Highlighted method: full width -->
-        <UPageCard
-          v-for="method in contactMethods.filter((m) => m.highlight)"
-          :key="method.title"
-          spotlight
-          class="w-full relative"
-        >
-          <div class="p-6 md:p-8 space-y-6">
-            <div class="flex items-center justify-center mx-auto">
-              <UIcon :name="method.icon" size="3em" class="text-primary-500" />
-            </div>
-            <div class="space-y-4 text-center">
-              <div class="space-y-1">
-                <h3 class="text-2xl md:text-3xl font-bold">
-                  {{ method.title }}
-                </h3>
-                <p class="text-base md:text-lg">
-                  {{ method.description }}
-                </p>
+        <div class="grid gap-6 md:grid-cols-2">
+          <UPageCard v-for="method in contactMethods" :key="method.title">
+            <div class="p-6 space-y-4">
+              <div class="flex items-center gap-3">
+                <UIcon
+                  :name="method.icon"
+                  size="1.5em"
+                  class="text-primary-500"
+                />
+                <h3 class="text-lg font-semibold">{{ method.title }}</h3>
               </div>
-
+              <p class="text-sm text-muted">{{ method.description }}</p>
               <UButton
-                color="primary"
-                size="lg"
-                class="w-full md:w-auto justify-center"
+                color="neutral"
+                class="w-full justify-center"
                 :aria-label="method.ariaLabel"
                 :to="method.action"
                 external
@@ -137,67 +100,22 @@ onMounted(() => {
                 {{ method.value }}
               </UButton>
             </div>
-          </div>
-        </UPageCard>
-
-        <!-- Other methods: 2-column grid -->
-        <div class="grid gap-8 md:grid-cols-2">
-          <UPageCard
-            v-for="method in contactMethods.filter((m) => !m.highlight)"
-            :key="method.title"
-            spotlight
-          >
-            <div class="p-6 space-y-6">
-              <div class="flex items-center justify-center mx-auto">
-                <UIcon
-                  :name="method.icon"
-                  size="3em"
-                  class="text-primary-500"
-                />
-              </div>
-              <div class="space-y-4">
-                <div class="space-y-1 text-center">
-                  <h3 class="text-xl font-bold">
-                    {{ method.title }}
-                  </h3>
-                  <p class="text-sm">
-                    {{ method.description }}
-                  </p>
-                </div>
-
-                <UButton
-                  color="neutral"
-                  class="w-full justify-center"
-                  :aria-label="method.ariaLabel"
-                  :to="method.action"
-                  external
-                >
-                  {{ method.value }}
-                </UButton>
-              </div>
-            </div>
           </UPageCard>
         </div>
 
-        <USeparator />
+        <!-- <USeparator />
 
-        <!-- FAQ -->
         <section
           v-if="faqsData && faqsData.list.length > 0"
           id="faqs"
-          class="space-y-12"
+          class="space-y-8"
         >
           <div>
-            <h2>Frequently Asked Questions</h2>
-            <p>
-              Find answers to common inquiries about my services and processes.
-            </p>
+            <h2>Common Questions</h2>
           </div>
 
-          <div>
-            <UAccordion :items="faqsData.list" size="lg" />
-          </div>
-        </section>
+          <UAccordion :items="faqsData.list" size="lg" />
+        </section> -->
       </UContainer>
     </UPageBody>
   </UPage>

@@ -22,29 +22,26 @@ const { data: featuredProjectsData } = await useFeaturedProjects(count)
   <UPageSection
     v-if="featuredProjectsData"
     :title="title"
-    description="A handful of projects, out of many"
+    description="Production systems shipped across multiple domains"
   >
-    <div class="text-center text-xl">
-      <div class="space-y-6">
-        <!-- Projects List -->
-        <div class="space-y-8">
-          <div v-for="project in featuredProjectsData || []" :key="project.id">
-            <p class="font-semibold">
-              {{ project.title }}
-            </p>
-            <p>
-              {{ project.description }}
-            </p>
-            <p v-if="project.technologies?.length" class="text-sm text-muted">
-              {{ project.technologies.join(" · ") }}
-            </p>
-          </div>
-        </div>
+    <div class="space-y-8">
+      <div
+        v-for="project in featuredProjectsData || []"
+        :key="project.id"
+        class="space-y-2"
+      >
+        <h3 class="text-lg font-semibold">{{ project.title }}</h3>
+        <p class="text-muted">{{ project.description }}</p>
+        <p
+          v-if="project.technologies?.length"
+          class="text-sm text-muted font-mono"
+        >
+          {{ project.technologies.join(" · ") }}
+        </p>
+      </div>
 
-        <!-- View All Link -->
-        <div v-if="!hideLink">
-          <ULink to="/projects" class="text-sm"> More projects → </ULink>
-        </div>
+      <div v-if="!hideLink">
+        <ULink to="/projects" class="text-sm"> More projects → </ULink>
       </div>
     </div>
   </UPageSection>

@@ -6,65 +6,43 @@
   --font-mono: ui-monospace, monospace;
 }
 
-/*
- * Unlayered overrides for Nuxt UI tokens so they beat Nuxt UI's
- * `@layer theme` defaults (which otherwise win regardless of source order).
- */
 :root {
   --ui-container: 64rem;
-  --ui-radius: 0.75rem;
+  --ui-radius: 0.25rem;
 }
 
-/* Slightly tighter base type for a denser, more technical feel */
 html {
   font-size: 15px;
+  scroll-behavior: smooth;
 }
 
-/* Focus visible styles for keyboard navigation */
 :focus-visible {
   outline: 2px solid var(--ui-color-primary-500, #3b82f6);
   outline-offset: 2px;
 }
 
-/* Remove default outline for mouse users */
 :focus:not(:focus-visible) {
   outline: none;
 }
 
-/* ================================================
-   TYPOGRAPHY SYSTEM
-   ================================================ */
+/* Typography hierarchy -- tighter, more technical */
 h1 {
-  @apply text-3xl;
+  @apply text-4xl sm:text-5xl font-bold tracking-tight;
 }
-
 h2 {
-  @apply text-2xl;
+  @apply text-2xl sm:text-3xl font-semibold tracking-tight;
 }
-
 h3 {
-  @apply text-xl;
+  @apply text-xl sm:text-2xl font-semibold;
 }
-
 h4 {
-  @apply text-lg;
+  @apply text-lg font-medium;
 }
-
 h5 {
-  @apply text-lg;
+  @apply text-lg font-medium;
 }
-
 h6 {
-  @apply text-lg;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply font-semibold tracking-tight;
+  @apply text-base font-medium;
 }
 
 h2 + p,
@@ -72,7 +50,23 @@ h3 + p,
 h4 + p,
 h5 + p,
 h6 + p {
-  @apply text-lg mt-2;
+  @apply text-lg mt-2 text-muted;
+}
+
+/* Subtle fade-in for page sections */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out both;
 }
 
 /* Skip Link - Accessibility */
@@ -94,7 +88,6 @@ h6 + p {
   outline: none;
 }
 
-/* Skip link on focus - visible and positioned */
 .skip-link:focus {
   top: 1rem;
   left: 1rem;
@@ -105,7 +98,6 @@ h6 + p {
     0 4px 8px -2px theme("colors.black", 0.1);
 }
 
-/* Dark mode skip link styling */
 .dark .skip-link {
   background: theme("colors.green.500");
   color: theme("colors.neutral.900");
@@ -121,7 +113,6 @@ h6 + p {
     0 4px 8px -2px theme("colors.white", 0.1);
 }
 
-/* Ensure skip link is always above all content */
 .skip-link:focus {
   z-index: 10000;
 }

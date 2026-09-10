@@ -9,7 +9,7 @@ const { data: profileData } = await useProfileData()
     description="Background and focus"
     icon="ph:info"
   >
-    <div class="text-center text-xl">
+    <div class="max-w-3xl mx-auto text-center text-lg text-muted">
       {{ profileData.description }}
     </div>
   </UPageSection>

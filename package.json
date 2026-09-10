@@ -3,12 +3,12 @@
     "@giscus/vue": "^3.1.1",
     "@iconify-json/devicon": "^1.2.62",
     "@iconify-json/ph": "^1.2.2",
-    "@nuxt/content": "^3.15.2",
+    "@nuxt/content": "^3.16.0",
     "@nuxt/eslint": "^1.17.0",
     "@nuxt/fonts": "^0.14.0",
-    "@nuxt/icon": "^2.5.0",
+    "@nuxt/icon": "^2.5.1",
     "@nuxt/image": "^2.1.0",
-    "@nuxt/ui": "^4.10.0",
+    "@nuxt/ui": "^4.11.1",
     "@nuxthq/studio": "^2.2.1",
     "@nuxtjs/color-mode": "^4.0.1",
     "@nuxtjs/mdc": "0.23.1",
@@ -30,7 +30,7 @@
   "private": true,
   "overrides": {
     "@unhead/vue": "^3.3.0",
-    "unhead": "^3.3.2",
+    "unhead": "^3.4.0",
     "@nuxt/eslint": {
       "eslint-webpack-plugin": "^6.0.0"
     }
@@ -49,16 +49,15 @@
   "dependencies": {
     "@resvg/resvg-js": "^2.6.2",
     "nuxt-llms": "^0.2.0",
-    "satori": "^0.33.1",
+    "satori": "^0.33.4",
     "typescript": "^6.0.3",
-    "unhead": "^3.3.2"
+    "unhead": "^3.4.0"
   },
   "allowScripts": {
     "vue-demi@0.14.10": true,
-    "@parcel/watcher@2.5.6": true,
-    "esbuild@0.27.7": true,
-    "esbuild@0.28.1": true,
-    "sharp@0.34.5": true,
+    "@parcel/watcher": true,
+    "esbuild": true,
+    "sharp": true,
     "unrs-resolver@1.12.2": true
   }
 }

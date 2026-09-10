@@ -144,6 +144,14 @@ export default defineContentConfig({
             icon: z.string(),
           }),
         ),
+        experience: z
+          .array(
+            z.object({
+              label: z.string(),
+              value: z.string(),
+            }),
+          )
+          .optional(),
         whatIDo: z.array(
           z.object({
             field: z.string(),

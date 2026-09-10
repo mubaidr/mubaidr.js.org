@@ -11,8 +11,6 @@ const currentYear = new Date().getFullYear()
       </p>
     </template>
 
-    <!-- <p>{{ profileData!.heroHeadline }}</p> -->
-
     <template #right>
       <div class="flex gap-2 items-center justify-center">
         <UButton

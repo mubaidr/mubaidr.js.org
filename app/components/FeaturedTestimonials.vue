@@ -47,8 +47,8 @@ const testimonials = [
 
 <template>
   <UPageSection
-    title="Testimonials"
-    description="Feedback from founders and teams I've worked with"
+    title="Client Outcomes"
+    description="Results from real engagements"
     icon="ph:chat-circle-text"
   >
     <div class="grid gap-4 md:grid-cols-3">
@@ -65,12 +65,13 @@ const testimonials = [
               {{ testimonial.title }}, {{ testimonial.company }}
             </p>
           </div>
-          <div v-if="testimonial.results.length" class="flex flex-wrap gap-2">
+          <div v-if="testimonial.results.length" class="flex flex-wrap gap-1.5">
             <UBadge
-              v-for="(result, i) in testimonial.results.slice(0, 2)"
+              v-for="(result, i) in testimonial.results"
               :key="i"
               color="neutral"
               size="sm"
+              variant="subtle"
             >
               {{ result }}
             </UBadge>
