@@ -112,6 +112,7 @@ definePageMeta({
     </UPageHero>
     <UPageBody>
       <WhatIDo />
+      <HowIWork />
       <!-- <FeaturedTestimonials /> -->
       <RecentBlogPosts />
     </UPageBody>
