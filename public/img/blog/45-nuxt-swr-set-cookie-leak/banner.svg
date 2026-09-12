@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="SWR cache Set-Cookie leak">
+  <title>SWR Cache Set-Cookie Leak Fix</title>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Cookie icon (broken) -->
+  <g transform="translate(560, 160)">
+    <circle cx="40" cy="40" r="40" fill="none" stroke="url(#accent)" stroke-width="3"/>
+    <circle cx="28" cy="30" r="4" fill="#fbbf24"/>
+    <circle cx="52" cy="25" r="3" fill="#fbbf24"/>
+    <circle cx="35" cy="50" r="3.5" fill="#fbbf24"/>
+    <circle cx="55" cy="48" r="3" fill="#fbbf24"/>
+    <line x1="60" y1="15" x2="75" y2="0" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+    <line x1="68" y1="8" x2="62" y2="0" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="310" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="700" fill="#f8fafc" letter-spacing="-1">
+    SWR Cache Set-Cookie Leak
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="360" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#94a3b8">
+    Nuxt 4 · Laravel 12 · The Two-Line Fix
+  </text>
+
+  <!-- Accent line -->
+  <rect x="540" y="390" width="120" height="3" rx="1.5" fill="url(#accent)" opacity="0.6"/>
+</svg>
