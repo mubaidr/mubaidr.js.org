@@ -4,7 +4,7 @@
     description="Principles that guide every project"
     icon="ph:compass"
   >
-    <UPageGrid class="sm:grid-cols-2 lg:grid-cols-3">
+    <UPageGrid>
       <UPageFeature
         title="Senior ownership"
         description="From requirements to architecture, implementation, deployment, and verification."
@@ -23,8 +23,10 @@
               target="_blank"
               rel="noopener"
               class="text-primary underline underline-offset-2"
-            >gem-team</a>
-            and LLM tooling for research, coding, testing, and review — engineering judgment stays in the loop.
+              >gem-team</a
+            >
+            and LLM tooling for research, coding, testing, and review —
+            engineering judgment stays in the loop.
           </span>
         </template>
       </UPageFeature>

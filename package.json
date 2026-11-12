@@ -29,7 +29,7 @@
   "name": "mubaidr.js.org",
   "private": true,
   "overrides": {
-    "@unhead/vue": "^3.3.0",
+    "@unhead/vue": "^3.4.3",
     "unhead": "^3.4.3",
     "@nuxt/eslint": {
       "eslint-webpack-plugin": "^6.0.0"

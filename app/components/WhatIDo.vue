@@ -9,10 +9,7 @@ const { data: profileData } = await useProfileData()
     description="Core areas of focus"
     icon="ph:package"
   >
-    <UPageGrid
-      v-if="profileData.whatIDo?.length"
-      class="sm:grid-cols-2 lg:grid-cols-3"
-    >
+    <UPageGrid v-if="profileData.whatIDo?.length">
       <UPageFeature
         v-for="service in profileData.whatIDo"
         :key="service.field"

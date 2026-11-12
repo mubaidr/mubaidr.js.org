@@ -2,8 +2,8 @@
 @import "@nuxt/ui";
 
 @theme {
-  --font-sans: "Space Grotesk", sans-serif;
-  --font-mono: ui-monospace, monospace;
+  --font-sans: "Ubuntu Mono", sans-serif;
+  --font-mono: "Ubuntu Mono", ui-monospace, monospace;
 }
 
 :root {

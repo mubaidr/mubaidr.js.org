@@ -48,13 +48,7 @@ definePageMeta({
 
 <template>
   <UPage>
-    <UPageHero
-      orientation="horizontal"
-      :ui="{
-        root: 'relative isolate flex min-h-[calc(100svh-var(--ui-header-height))] flex-col',
-        container: 'flex-1 py-16 sm:py-24 gap-12 justify-center',
-      }"
-    >
+    <UPageHero orientation="horizontal">
       <template #headline>
         <span class="font-mono text-sm text-primary">{{
           profileData!.title
@@ -75,13 +69,7 @@ definePageMeta({
               to="mailto:mubaidr@gmail.com"
               color="primary"
               label="Get in touch"
-              variant="subtle"
-            />
-            <UButton
-              to="/blog"
-              variant="link"
-              color="neutral"
-              label="Read the blog"
+              variant="ghost"
             />
           </div>
         </div>
