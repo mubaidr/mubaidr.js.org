@@ -14,7 +14,6 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
     v-if="recentPostsData"
     title="From the Blog"
     description="Technical writing on architecture, tooling, and engineering practices"
-    icon="ph:note-blank"
   >
     <UBlogPosts v-if="recentPostsData.length > 0">
       <UBlogPost

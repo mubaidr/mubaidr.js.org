@@ -28,20 +28,9 @@ export default defineAppConfig({
           "mb-2 text-sm font-semibold text-primary flex items-center gap-1.5 w-full max-w-(--ui-container) mx-auto px-2 sm:px-4",
       },
     },
-    pageHero: {
-      slots: {
-        root: "relative isolate flex min-h-[calc(100svh-var(--ui-header-height))] flex-col",
-        container: "flex flex-col lg:grid py-12 sm:py-16 lg:py-20 gap-8",
-        headline: "mb-2 font-semibold text-primary flex items-center gap-1.5",
-        title:
-          "text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-pretty text-highlighted",
-        description: "text-base text-muted",
-        body: "mt-6",
-      },
-    },
     pageSection: {
       slots: {
-        container: "py-8 sm:py-12",
+        container: "py-4!",
       },
     },
     pageFeature: {

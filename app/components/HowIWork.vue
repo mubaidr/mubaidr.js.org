@@ -8,7 +8,6 @@
       <UPageFeature
         title="Senior ownership"
         description="From requirements to architecture, implementation, deployment, and verification."
-        icon="ph:crown"
         class="animate-fade-in-up"
       />
       <UPageFeature

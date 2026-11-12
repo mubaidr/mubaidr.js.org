@@ -7,7 +7,6 @@ const { data: profileData } = await useProfileData()
     v-if="profileData"
     title="What I do"
     description="Core areas of focus"
-    icon="ph:package"
   >
     <UPageGrid v-if="profileData.whatIDo?.length">
       <UPageFeature

@@ -48,11 +48,9 @@ definePageMeta({
 
 <template>
   <UPage>
-    <UPageHero orientation="horizontal">
+    <UPageHero>
       <template #headline>
-        <span class="font-mono text-sm text-primary">{{
-          profileData!.title
-        }}</span>
+        <span class="font-mono text-primary">{{ profileData!.title }}</span>
       </template>
       <template #title>
         <span class="font-mono font-medium tracking-tight">
@@ -63,40 +61,22 @@ definePageMeta({
         {{ profileData!.heroHeadline }}
       </template>
       <template #links>
-        <div class="flex-col sapce-y-6">
+        <div class="flex-col sapce-y-2">
           <div class="flex items-center gap-4">
             <UButton
               to="mailto:mubaidr@gmail.com"
               color="primary"
               label="Get in touch"
-              variant="ghost"
+              variant="subtle"
             />
           </div>
         </div>
       </template>
-
-      <div class="w-full max-w-md space-y-4">
-        <!-- <div
-          v-if="profileData!.experience?.length"
-          class="grid grid-cols-3 gap-3"
-        >
-          <div
-            v-for="stat in profileData!.experience"
-            :key="stat.label"
-            class="text-center p-3 rounded-lg border border-muted"
-          >
-            <div class="text-2xl font-bold tracking-tight">
-              {{ stat.value }}
-            </div>
-            <div class="text-xs text-muted font-mono mt-1">
-              {{ stat.label }}
-            </div>
-          </div>
-        </div> -->
-        <UCard variant="subtle">
+      <template #body>
+        <p>
           {{ profileData!.description }}
-        </UCard>
-      </div>
+        </p>
+      </template>
     </UPageHero>
     <UPageBody>
       <WhatIDo />
