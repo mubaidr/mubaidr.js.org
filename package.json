@@ -1,26 +1,26 @@
 {
   "devDependencies": {
     "@giscus/vue": "^3.1.1",
-    "@iconify-json/devicon": "^1.2.62",
+    "@iconify-json/devicon": "^1.2.80",
     "@iconify-json/ph": "^1.2.2",
-    "@nuxt/content": "^3.16.0",
+    "@nuxt/content": "^3.16.2",
     "@nuxt/eslint": "^1.17.0",
-    "@nuxt/fonts": "^0.14.0",
-    "@nuxt/icon": "^2.5.1",
-    "@nuxt/image": "^2.1.0",
-    "@nuxt/ui": "^4.11.1",
+    "@nuxt/fonts": "^1.2.0",
+    "@nuxt/icon": "^2.6.2",
+    "@nuxt/image": "^2.2.1",
+    "@nuxt/ui": "^4.12.0",
     "@nuxthq/studio": "^2.2.1",
-    "@nuxtjs/color-mode": "^4.0.1",
-    "@nuxtjs/mdc": "0.23.1",
-    "@nuxtjs/seo": "^5.3.14",
-    "@tailwindcss/vite": "^4.3.3",
-    "nuxt": "^4.5.2",
+    "@nuxtjs/color-mode": "^4.1.0",
+    "@nuxtjs/mdc": "0.23.3",
+    "@nuxtjs/seo": "^6.0.1",
+    "@tailwindcss/vite": "^4.3.5",
+    "nuxt": "^4.6.4",
     "nuxt-feedme": "^2.1.0",
     "nuxt-mcp-dev": "^0.3.2",
-    "prettier": "^3.9.6",
-    "tailwindcss": "^4.3.3",
+    "prettier": "^3.10.1",
+    "tailwindcss": "^4.3.5",
     "vite-plugin-eslint2": "^5.3.0",
-    "vue-tsc": "^3.3.11"
+    "vue-tsc": "^3.3.14"
   },
   "engines": {
     "node": ">=26",
@@ -30,7 +30,7 @@
   "private": true,
   "overrides": {
     "@unhead/vue": "^3.3.0",
-    "unhead": "^3.4.0",
+    "unhead": "^3.4.3",
     "@nuxt/eslint": {
       "eslint-webpack-plugin": "^6.0.0"
     }
@@ -48,10 +48,10 @@
   "type": "module",
   "dependencies": {
     "@resvg/resvg-js": "^2.6.2",
-    "nuxt-llms": "^0.2.0",
-    "satori": "^0.33.4",
+    "nuxt-llms": "^0.3.1",
+    "satori": "^0.63.2",
     "typescript": "^6.0.3",
-    "unhead": "^3.4.0"
+    "unhead": "^3.4.3"
   },
   "allowScripts": {
     "vue-demi@0.14.10": true,
