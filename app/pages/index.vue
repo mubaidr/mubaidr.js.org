@@ -65,9 +65,8 @@ definePageMeta({
           <div class="flex items-center gap-4">
             <UButton
               to="mailto:mubaidr@gmail.com"
-              color="primary"
+              color="neutral"
               label="Get in touch"
-              variant="subtle"
             />
           </div>
         </div>
