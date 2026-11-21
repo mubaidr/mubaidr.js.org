@@ -1,9 +1,9 @@
 ---
-title: "Gem Team v1.148: Output Formats, Plan IDs, and Raw JSON"
-description: "Gem Team v1.148 standardizes agent output format rules, Raw JSON capitalization, and updates plan IDs and references from 2025 to 2026."
-excerpt: "Gem Team v1.148 is a housekeeping release that tightens output contracts across agents: standardized output format rules, consistent Raw JSON capitalization, and updated plan ID references."
-headline: "Gem Team v1.148: Output Formats, Plan IDs, and Raw JSON"
-abstract: "A look at gem-team v1.148.0, a housekeeping release that standardizes agent output format rules, fixes Raw JSON capitalization in comments, and updates plan IDs and references from 2025 to 2026."
+title: "Gem Team v1.124–1.148: What Changed"
+description: "A concise summary of Gem Team releases v1.124 through v1.148 — output standardization, rule cleanup, and new features."
+excerpt: "Gem Team shipped 25 releases between v1.124 and v1.148. Here's what changed, summarized for developers."
+headline: "Gem Team v1.124–1.148: What Changed"
+abstract: "A concise, developer-focused summary of Gem Team releases v1.124 through v1.148. Covers output format standardization, rule normalization, new features like parallel execution and named specialist delegation, and the v1.148 housekeeping release."
 date: 2026-11-21T00:00:00.000Z
 dateUpdated: 2026-11-21T00:00:00.000Z
 author: mubaidr
@@ -23,33 +23,47 @@ socialImage:
   height: 630
 ---
 
-## Gem Team v1.148: Output Formats, Plan IDs, and Raw JSON
+## Gem Team v1.124–1.148: What Changed
 
-Gem Team v1.148.0 landed today. Like v1.123 before it, this is a housekeeping release — no flashy new features, just the kind of behind-the-scenes tightening that makes the system more predictable.
+Gem Team shipped 25 releases between v1.124 and v1.148. Mostly housekeeping — no headline features — but the cumulative effect is a tighter, more predictable system. Here's what changed, summarized for developers.
 
-Here's what changed:
+### Output standardization
 
-## Standardized Agent Output Format Rules
+- **Output format rules** standardized across agents (v1.148) — blocked status, retry reasons, revision findings, confidence scores all follow the same structure.
+- **Raw JSON capitalization** standardized in agent output format comments (v1.148).
+- **Handoff schemas** standardized with memory checks (v1.133), plus `relevant_context` and `stable_findings` added to handoff output (v1.139).
+- **Output hygiene rules** aligned across agent definitions (v1.123, v1.127).
 
-The code simplifier agent's refactoring guideline was refined, and the agent output format rules structure was standardized across agents. This means every agent now follows the same conventions for how it structures its output — blocked status, retry reasons, revision findings, confidence scores — all consistent, all predictable.
+### Rule cleanup & normalization
 
-When your orchestrator makes decisions based on agent output, ambiguous responses break things. A structured `blocked_reason` beats a paragraph of prose every time.
+- Removed redundant directives and reuse rules across agent definitions (v1.129–v1.133).
+- Normalized agent documentation format, ASCII character rules, and dash characters (v1.143, v1.140).
+- Normalized agent descriptions, output format, and phase 3 execution flow (v1.141).
+- Restructured agent documentation across orchestrator, planner, browser-tester, and implementer (v1.145–v1.146).
 
-## Raw JSON Capitalization Standardized
+### Orchestrator & planner tightening
 
-Raw JSON capitalization in agent output format comments was standardized. It's a small detail, but it removes noise from diffs and keeps generated comments consistent across the codebase.
+- Persistent plan enforcement and planner storage contract tightened (v1.134).
+- Failure handling rules and critic-only fields added to the orchestrator spec (v1.139).
+- `needs_retry` status added to the planner spec (v1.139).
+- `LOW` complexity level added to the complexity contract (v1.142).
+- Orchestrator status reporting updated (v1.147).
+- Plan IDs and references updated from 2025 to 2026 (v1.148).
 
-## Plan IDs and References Updated: 2025 to 2026
+### New features
 
-Plan IDs and references were updated from 2025 to 2026. This keeps the internal tracking current across the year boundary so references stay accurate.
+- **Parallel execution** for independent tool calls across agents (v1.135).
+- **YAGNI/KISS principles** clarified in planning and implementation guidelines (v1.136).
+- **Named specialist subagent delegation** for every task (v1.137).
+- **gem-mobile-tester** support for projects with a configured e2e runner (v1.141).
 
-## The Pattern
+### Bug fix
 
-If you step back, the housekeeping releases tell the same story as the feature releases: **maturity**. The system went from "cool agent framework" to "engineering process that happens to use AI."
+- Fixed [#227](https://github.com/mubaidr/gem-team/issues/227) (v1.138).
 
-Every change reinforces the same principle: AI coding should be predictable, efficient, and self-correcting. Not because the AI is perfect, but because the _process_ around it catches the mistakes.
+### v1.148 (latest)
 
-That's the real feature.
+The current release is housekeeping: refined code simplifier refactoring guideline, standardized agent output format rules structure, Raw JSON capitalization, and plan ID/2025→2026 reference updates.
 
 ---
 
