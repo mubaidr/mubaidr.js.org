@@ -575,7 +575,7 @@ The web is constantly evolving, and so are the tools we use to extend it. By emb
 
 What will you build? I can't wait to see the innovative extensions that emerge from this foundation. The future of browser extension development is bright, and I'm excited to be part of this journey with you.
 
-Happy building, and remember—every great extension starts with a single idea and the courage to bring it to life!
+Happy building, and remember-every great extension starts with a single idea and the courage to bring it to life!
 
 ---
 

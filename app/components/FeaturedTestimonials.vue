@@ -1,52 +1,17 @@
 <script lang="ts" setup>
-const testimonials = [
-  {
-    id: "1",
-    name: "Guilherme R.",
-    title: "Startup Founder",
-    company: "Tech Startup",
-    quote:
-      "Muhammad delivered our MVP 2 weeks ahead of schedule and 20% under budget. His expertise in Vue.js helped us achieve 40% faster load times than our previous solution. Highly recommended!",
-    project: "SaaS Platform MVP",
-    results: [
-      "Delivered 2 weeks early",
-      "20% under budget",
-      "40% performance improvement",
-    ],
+const { count } = defineProps({
+  count: {
+    type: Number,
+    default: 3,
   },
-  {
-    id: "2",
-    name: "Mark B.",
-    title: "Product Manager",
-    company: "E-commerce Agency",
-    quote:
-      "Perfect 5/5 across all metrics! Muhammad transformed our legacy system into a modern, scalable solution. Revenue increased by 35% within 3 months of launch. Outstanding work!",
-    project: "E-commerce Platform Modernization",
-    results: [
-      "50% faster page loads",
-      "Zero downtime migration",
-      "100% client satisfaction",
-    ],
-  },
-  {
-    id: "3",
-    name: "Chris M.",
-    title: "CTO",
-    company: "FinTech Startup",
-    quote:
-      "Muhammad exceeded expectations! Delivered a complex financial dashboard on time and budget. The solution handles 10,000+ concurrent users with 99.9% uptime. Already planning our next project together!",
-    project: "Real-time Financial Dashboard",
-    results: [
-      "99.9% uptime achieved",
-      "On time & budget delivery",
-      "30% faster than competitors",
-    ],
-  },
-]
+})
+
+const { data: testimonials } = await useFeaturedTestimonials(count)
 </script>
 
 <template>
   <UPageSection
+    v-if="testimonials && testimonials.length > 0"
     title="Client Outcomes"
     description="Results from real engagements"
     icon="ph:chat-circle-text"
@@ -62,8 +27,9 @@ const testimonials = [
           <div class="border-t border-muted pt-4">
             <p class="font-mono text-sm font-medium">{{ testimonial.name }}</p>
             <p class="text-sm text-muted">
-              {{ testimonial.title }}, {{ testimonial.company }}
+              {{ testimonial.title }}<span v-if="testimonial.company">, {{ testimonial.company }}</span>
             </p>
+            <p class="text-xs text-muted mt-0.5">{{ testimonial.project }}</p>
           </div>
           <div v-if="testimonial.results.length" class="flex flex-wrap gap-1.5">
             <UBadge

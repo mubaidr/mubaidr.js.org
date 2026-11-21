@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const navigationItems = [
   { to: "/blog", label: "Blog" },
-  // { to: "mailto:mubaidr@gmail.com", label: "Contact" },
+  { to: "/contact", label: "Contact" },
 ]
 </script>
 

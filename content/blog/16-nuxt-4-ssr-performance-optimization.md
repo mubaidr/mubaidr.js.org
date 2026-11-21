@@ -78,7 +78,7 @@ export default defineNuxtConfig({
 
 ### Optimize Data Fetching Patterns
 
-Proper data fetching patterns significantly impact SSR performance. Always use `useAsyncData` with a unique key to enable request deduplication. When fetching multiple independent data sources, use `Promise.all` to parallelize requests instead of awaiting them sequentially. Additionally, leverage `pick` and `transform` options to minimize payload size—sending only the data you need reduces both network transfer and processing time.
+Proper data fetching patterns significantly impact SSR performance. Always use `useAsyncData` with a unique key to enable request deduplication. When fetching multiple independent data sources, use `Promise.all` to parallelize requests instead of awaiting them sequentially. Additionally, leverage `pick` and `transform` options to minimize payload size-sending only the data you need reduces both network transfer and processing time.
 
 ### Leverage Static Generation Where Possible
 
@@ -126,7 +126,7 @@ Common causes:
 4. **Large bundles**: Not code splitting effectively
 5. **Database bottlenecks**: Missing database query optimization
 
-Start by implementing caching—it typically provides 50-80% performance improvement.
+Start by implementing caching-it typically provides 50-80% performance improvement.
 
 ### How do I monitor SSR performance in production?
 
@@ -144,9 +144,9 @@ Key metrics to track: TTFB <200ms, LCP <2.5s, FID <100ms, CLS <0.1.
 
 ## Conclusion
 
-Optimizing Nuxt 4 SSR performance is an iterative process that requires understanding the framework's architecture, implementing smart caching strategies, and continuously monitoring results. The strategies outlined here—smart caching, optimized data fetching, hybrid rendering, and comprehensive monitoring—have consistently delivered 50-80% performance improvements in production applications.
+Optimizing Nuxt 4 SSR performance is an iterative process that requires understanding the framework's architecture, implementing smart caching strategies, and continuously monitoring results. The strategies outlined here-smart caching, optimized data fetching, hybrid rendering, and comprehensive monitoring-have consistently delivered 50-80% performance improvements in production applications.
 
-Start with the highest-impact optimizations (caching and static generation), measure the results, and iterate based on real-world performance data. Your users—and search engines—will thank you.
+Start with the highest-impact optimizations (caching and static generation), measure the results, and iterate based on real-world performance data. Your users-and search engines-will thank you.
 
 **Related Reading:**
 

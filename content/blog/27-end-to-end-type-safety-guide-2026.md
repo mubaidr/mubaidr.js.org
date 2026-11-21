@@ -25,7 +25,7 @@ seriesDescription: "Advanced TypeScript patterns for full-stack development"
 
 ## End-to-End Type Safety: The Complete Guide for 2026
 
-Type safety has evolved dramatically. In 2026, having TypeScript on the frontend isn't enough—true type safety spans your entire stack, from database to UI. This comprehensive guide shows you how to achieve end-to-end type safety and eliminate an entire class of runtime errors.
+Type safety has evolved dramatically. In 2026, having TypeScript on the frontend isn't enough-true type safety spans your entire stack, from database to UI. This comprehensive guide shows you how to achieve end-to-end type safety and eliminate an entire class of runtime errors.
 
 ## What is End-to-End Type Safety?
 
@@ -406,7 +406,7 @@ Type safety doesn't have to impact performance:
 
 ## Conclusion
 
-End-to-end type safety is no longer optional in 2026—it's a fundamental requirement for building reliable, maintainable applications. By leveraging modern tools like TypeScript, Zod, and type-safe frameworks, you can catch errors before they reach production and provide a better developer experience.
+End-to-end type safety is no longer optional in 2026-it's a fundamental requirement for building reliable, maintainable applications. By leveraging modern tools like TypeScript, Zod, and type-safe frameworks, you can catch errors before they reach production and provide a better developer experience.
 
 Start small by adding types to your most critical paths, then gradually expand coverage. The investment pays dividends in reduced bugs, better documentation, and improved developer confidence.
 

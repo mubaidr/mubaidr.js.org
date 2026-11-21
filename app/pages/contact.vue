@@ -1,18 +1,11 @@
 <script setup lang="ts">
-// const { data: faqsData } = await useFaqsData()
-
-// if (!faqsData.value) {
-//   throw createError({
-//     statusCode: 404,
-//     statusMessage: "FAQs not found",
-//   })
-// }
+const { data: faqsData } = await useFaqsData()
 
 const contactMethods = ref([
   {
     icon: "i-ph-envelope",
     title: "Email",
-    description: "Send me an email anytime",
+    description: "Best for detailed project briefs and async collaboration",
     value: "mubaidr@gmail.com",
     action: "mailto:mubaidr@gmail.com",
     ariaLabel: "Send email to mubaidr@gmail.com",
@@ -21,7 +14,7 @@ const contactMethods = ref([
   {
     icon: "i-ph-linkedin-logo",
     title: "LinkedIn",
-    description: "Connect with me professionally",
+    description: "Connect professionally or drop a message there",
     value: "/in/mubaidr",
     action: "https://linkedin.com/in/mubaidr",
     ariaLabel: "Connect with Muhammad Ubaid Raza on LinkedIn",
@@ -31,19 +24,19 @@ const contactMethods = ref([
 definePageMeta({
   title: "Contact",
   description:
-    "Get in touch to discuss your project requirements and start working together.",
+    "Get in touch to discuss your project. I'm available for full-stack development, AI agent systems, and technical consulting engagements.",
 })
 
 useSeoMeta({
   title: "Contact",
   description:
-    "Get in touch to discuss your project requirements and start working together.",
+    "Get in touch to discuss your project. I'm available for full-stack development, AI agent systems, and technical consulting engagements.",
   ogTitle: "Contact Muhammad Ubaid Raza - Senior Software Engineer",
   ogDescription:
-    "Get in touch to discuss your project requirements and start working together.",
+    "Get in touch to discuss your project. Available for full-stack development, AI systems, and technical consulting.",
   twitterTitle: "Contact Muhammad Ubaid Raza - Senior Software Engineer",
   twitterDescription:
-    "Get in touch to discuss your project requirements and start working together.",
+    "Get in touch to discuss your project. Available for full-stack development, AI systems, and technical consulting.",
 })
 
 useSchemaOrg({
@@ -73,7 +66,7 @@ onMounted(() => {
   <UPage>
     <UPageHeader
       title="Let's work together"
-      description="Have a project in mind? Share the details and I'll respond with a plan."
+      description="Have a project in mind? Share the details - I'll respond with a clear plan and honest assessment."
     />
 
     <UPageBody>
@@ -103,7 +96,7 @@ onMounted(() => {
           </UPageCard>
         </div>
 
-        <!-- <USeparator />
+        <USeparator />
 
         <section
           v-if="faqsData && faqsData.list.length > 0"
@@ -111,11 +104,14 @@ onMounted(() => {
           class="space-y-8"
         >
           <div>
-            <h2>Common Questions</h2>
+            <h2 class="text-2xl font-semibold">Common Questions</h2>
+            <p class="mt-1 text-muted">
+              Answers to what most clients ask before we start.
+            </p>
           </div>
 
           <UAccordion :items="faqsData.list" size="lg" />
-        </section> -->
+        </section>
       </UContainer>
     </UPageBody>
   </UPage>

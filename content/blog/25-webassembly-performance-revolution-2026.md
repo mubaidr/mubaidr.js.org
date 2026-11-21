@@ -186,7 +186,7 @@ Looking ahead, we can expect:
 
 ## Conclusion
 
-WebAssembly in 2026 is no longer experimental—it's a production-ready technology that can dramatically improve your application's performance. Whether you're building a data-intensive dashboard, a media processing tool, or a game, WebAssembly offers the performance boost you need.
+WebAssembly in 2026 is no longer experimental-it's a production-ready technology that can dramatically improve your application's performance. Whether you're building a data-intensive dashboard, a media processing tool, or a game, WebAssembly offers the performance boost you need.
 
 Start small by identifying performance bottlenecks in your application, and consider whether WebAssembly could help. The investment in learning this technology will pay dividends in user experience and capabilities.
 

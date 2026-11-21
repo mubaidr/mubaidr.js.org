@@ -25,7 +25,7 @@ seriesDescription: "Building inclusive and accessible web applications"
 
 ## Web Accessibility WCAG 2026: Complete Compliance Guide
 
-Web accessibility isn't optional—it's essential. In 2026, WCAG 2.2 guidelines are the standard, and compliance is both a legal requirement and a moral imperative. This comprehensive guide covers everything developers need to know about implementing accessibility in modern web applications.
+Web accessibility isn't optional-it's essential. In 2026, WCAG 2.2 guidelines are the standard, and compliance is both a legal requirement and a moral imperative. This comprehensive guide covers everything developers need to know about implementing accessibility in modern web applications.
 
 ## Understanding WCAG 2.2
 
@@ -497,7 +497,7 @@ If you experience barriers, contact us:
 
 ## Conclusion
 
-Web accessibility is not just about compliance—it's about creating inclusive experiences for everyone. By implementing WCAG 2.2 guidelines, you ensure your applications are usable by people with disabilities while improving overall usability.
+Web accessibility is not just about compliance-it's about creating inclusive experiences for everyone. By implementing WCAG 2.2 guidelines, you ensure your applications are usable by people with disabilities while improving overall usability.
 
 Start with semantic HTML, keyboard navigation, and proper ARIA attributes. Then expand to comprehensive testing and continuous monitoring. Remember: accessibility is an ongoing commitment, not a one-time fix.
 

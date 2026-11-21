@@ -1,8 +1,8 @@
 name: Muhammad Ubaid R.
-title: Senior Software Engineer
+title: Senior Software Engineer & AI Systems Architect
 avatar: /mubaidr.png
-description: 13+ years shipping web applications, SaaS platforms, AI-powered tools, browser extensions, and cloud-native systems across startups and enterprise. Currently building Rental Platform. Open-source habit.
-heroHeadline: "Building production systems that scale; from SaaS platforms to AI-powered tools."
+description: 13+ years shipping production systems - SaaS platforms, AI-powered tools, browser extensions, and cloud-native infrastructure - across startups and enterprise teams. Currently building a rental marketplace platform (Nuxt + Laravel). I build things that work reliably, ship on time, and don't require babysitting after launch.
+heroHeadline: "Production-grade systems, shipped. SaaS, AI agents, and full-stack architecture - built for real usage."
 social:
   - name: GitHub
     url: https://github.com/mubaidr
@@ -21,18 +21,18 @@ experience:
   - label: Domains
     value: "SaaS, AI, FinTech, E-commerce"
 whatIDo:
-  - field: Full Stack Development
+  - field: Full-Stack Development
     icon: i-ph-stack
-    description: End-to-end across frontend and backend. Vue, Nuxt, React, Node, Python.
-  - field: AI-Powered Tools & Extensions
-    icon: i-ph-puzzle-piece
-    description: Intelligent tools and browser extensions. LLM integrations, RAG pipelines, AI UX.
+    description: End-to-end systems - Vue, Nuxt, React on the frontend; Node, Laravel, Python on the backend. From greenfield builds to production migrations.
+  - field: AI Agents & LLM Tooling
+    icon: i-ph-sparkle
+    description: Multi-agent orchestration, RAG pipelines, LLM integrations, and browser extensions powered by AI. Practical systems, not demos.
   - field: Architecture & DevOps
     icon: i-ph-gear-six
-    description: Scalable system design. CI/CD, observability, containerized deployments.
-  - field: Team Leadership
+    description: Scalable system design, CI/CD pipelines, observability, and containerized cloud deployments. Built to run without surprises.
+  - field: Technical Leadership
     icon: i-ph-users-three
-    description: Agile delivery. Cross-functional coordination. Technical mentoring.
+    description: Cross-functional coordination, agile delivery, code review, and technical mentoring. Senior ownership from spec to deployment.
   - field: Open Source
     icon: i-ph-git-branch
-    description: Active contributor and maintainer. Community-driven tooling.
+    description: Active contributor and maintainer. Community-driven tooling - including gem-team, an AI agent orchestration system with 100K+ tokens processed daily.

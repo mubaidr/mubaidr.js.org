@@ -282,8 +282,8 @@ Essential tools for Core Web Vitals optimization:
 
 ## Conclusion
 
-Core Web Vitals are no longer optional—they're essential for search visibility, user experience, and business success. The optimization strategies outlined in this guide have proven effective across dozens of projects, delivering measurable improvements in performance metrics and business outcomes.
+Core Web Vitals are no longer optional-they're essential for search visibility, user experience, and business success. The optimization strategies outlined in this guide have proven effective across dozens of projects, delivering measurable improvements in performance metrics and business outcomes.
 
 Start by measuring your current performance, identify the biggest opportunities, and implement optimizations incrementally. Focus on user-centric metrics rather than chasing perfect scores. Remember, performance optimization is an ongoing process, not a one-time fix.
 
-The web is getting faster, and user expectations continue to rise. By mastering Core Web Vitals optimization, you'll deliver experiences that delight users and drive business results. The time to act is now—your users (and search rankings) will thank you.
+The web is getting faster, and user expectations continue to rise. By mastering Core Web Vitals optimization, you'll deliver experiences that delight users and drive business results. The time to act is now-your users (and search rankings) will thank you.

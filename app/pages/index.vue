@@ -15,14 +15,15 @@ const shortDescription =
     : profileData.value.description
 
 useSeoMeta({
-  title: "Home",
+  title:
+    "Muhammad Ubaid Raza - Senior Software Engineer & AI Systems Architect",
   description: shortDescription,
-  ogTitle: profileData.value.name,
+  ogTitle: `${profileData.value.name} - Senior Software Engineer & AI Systems Architect`,
   ogDescription: shortDescription,
   ogImage: profileData.value.avatar,
   ogType: "website",
   twitterCard: "summary_large_image",
-  twitterTitle: profileData.value.name,
+  twitterTitle: `${profileData.value.name} - Senior Software Engineer & AI Systems Architect`,
   twitterDescription: shortDescription,
   twitterImage: profileData.value.avatar,
 })
@@ -63,10 +64,12 @@ definePageMeta({
       <template #links>
         <div class="flex-col sapce-y-2">
           <div class="flex items-center gap-4">
+            <UButton to="/contact" color="neutral" label="Work with me" />
             <UButton
-              to="mailto:mubaidr@gmail.com"
+              to="/blog"
               color="neutral"
-              label="Get in touch"
+              variant="ghost"
+              label="Read the blog"
             />
           </div>
         </div>

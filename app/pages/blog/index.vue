@@ -2,19 +2,20 @@
 // Define page metadata
 definePageMeta({
   title: "Blog",
-  description: "Read our latest blog posts and insights",
+  description:
+    "Technical writing on AI agent systems, full-stack architecture, Nuxt, Laravel, and production engineering by Muhammad Ubaid Raza.",
 })
 
 useSeoMeta({
   title: "Blog",
   description:
-    "Read the latest articles, tutorials, and insights on web development, AI, and software architecture by Muhammad Ubaid Raza.",
-  ogTitle: "Blog - Muhammad Ubaid Raza - Full Stack Engineer",
+    "Technical writing on AI agent systems, full-stack architecture, Nuxt, Laravel, and production engineering - by Muhammad Ubaid Raza.",
+  ogTitle: "Blog - Muhammad Ubaid Raza",
   ogDescription:
-    "Read the latest articles, tutorials, and insights on web development, AI, and software architecture.",
-  twitterTitle: "Blog - Muhammad Ubaid Raza - Full Stack Engineer",
+    "AI agents, full-stack architecture, Nuxt, Laravel, and practical engineering insights. Written from 13+ years of shipping real systems.",
+  twitterTitle: "Blog - Muhammad Ubaid Raza",
   twitterDescription:
-    "Read the latest articles, tutorials, and insights on web development, AI, and software architecture.",
+    "AI agents, full-stack architecture, Nuxt, Laravel, and practical engineering insights. Written from 13+ years of shipping real systems.",
 })
 
 // Pagination state
@@ -106,8 +107,7 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
   <UPage>
     <UPageHeader
       title="Insights & Articles"
-      description="Insights, tutorials, and thoughts on web development, technology,
-              and more"
+      description="Technical writing on AI agents, full-stack architecture, Nuxt, Laravel, and production engineering"
     />
 
     <FeaturedBlogPosts />

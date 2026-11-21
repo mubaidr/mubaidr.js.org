@@ -25,7 +25,7 @@ seriesDescription: "Career guidance and skill development for developers"
 
 ## Full-Stack Development in 2026: Complete Roadmap
 
-The role of a full-stack developer has evolved dramatically. In 2026, full-stack doesn't just mean knowing frontend and backend—it means understanding the entire development lifecycle, from database design to deployment, from performance optimization to security.
+The role of a full-stack developer has evolved dramatically. In 2026, full-stack doesn't just mean knowing frontend and backend-it means understanding the entire development lifecycle, from database design to deployment, from performance optimization to security.
 
 This comprehensive roadmap will guide you through becoming a successful full-stack developer in 2026.
 

@@ -5,8 +5,8 @@ const { data: profileData } = await useProfileData()
 <template>
   <UPageSection
     v-if="profileData"
-    title="What I do"
-    description="Core areas of focus"
+    title="What I build"
+    description="Core areas where I add value"
   >
     <UPageGrid v-if="profileData.whatIDo?.length">
       <UPageFeature

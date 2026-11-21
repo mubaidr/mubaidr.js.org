@@ -25,7 +25,7 @@ seriesDescription: "Advanced React patterns and performance optimization"
 
 ## React Compiler & Auto-Memoization: End of Manual Optimization
 
-The React landscape has changed dramatically. In 2026, the React Compiler automatically optimizes your components, eliminating the need for manual memoization with `useMemo`, `useCallback`, and `React.memo`. This isn't just a quality-of-life improvement—it's a fundamental shift in how we write React code.
+The React landscape has changed dramatically. In 2026, the React Compiler automatically optimizes your components, eliminating the need for manual memoization with `useMemo`, `useCallback`, and `React.memo`. This isn't just a quality-of-life improvement-it's a fundamental shift in how we write React code.
 
 ## What is React Compiler?
 

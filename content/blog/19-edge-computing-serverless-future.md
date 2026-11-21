@@ -31,13 +31,13 @@ In this deep dive, we'll explore why edge computing and serverless have become t
 
 ## Understanding Edge Computing
 
-Edge computing brings computation closer to end users by running code on distributed servers located at the "edge" of the network—often in the same geographic region as your users. This contrasts with traditional cloud deployment, where applications run in centralized data centers that may be thousands of miles away from users.
+Edge computing brings computation closer to end users by running code on distributed servers located at the "edge" of the network-often in the same geographic region as your users. This contrasts with traditional cloud deployment, where applications run in centralized data centers that may be thousands of miles away from users.
 
 ### The Performance Advantage
 
 The physics of light and network routing mean that distance matters. Every 100 kilometers of distance adds roughly 1ms of latency. For interactive applications, this adds up quickly. Edge computing reduces latency by 50-80% by serving users from nearby edge locations.
 
-Consider a user in Sydney accessing an application hosted in Virginia. The round-trip time is approximately 200-250ms. With edge deployment, that same user connects to a server in Sydney or Melbourne, reducing latency to 10-20ms. This isn't just a nice-to-have—for real-time applications, it's transformative.
+Consider a user in Sydney accessing an application hosted in Virginia. The round-trip time is approximately 200-250ms. With edge deployment, that same user connects to a server in Sydney or Melbourne, reducing latency to 10-20ms. This isn't just a nice-to-have-for real-time applications, it's transformative.
 
 ### Global Distribution Without Complexity
 
@@ -49,7 +49,7 @@ Serverless computing has matured significantly. What started as Function-as-a-Se
 
 ### Cold Starts Are History
 
-One of the original criticisms of serverless—cold start latency—has been largely solved. Modern edge runtimes use advanced techniques like snapshotting, persistent containers, and predictive warming to achieve sub-millisecond startup times. In practice, cold starts are no longer a concern for most applications.
+One of the original criticisms of serverless-cold start latency-has been largely solved. Modern edge runtimes use advanced techniques like snapshotting, persistent containers, and predictive warming to achieve sub-millisecond startup times. In practice, cold starts are no longer a concern for most applications.
 
 ### Cost Efficiency
 
@@ -95,7 +95,7 @@ export default defineNuxtConfig({
 
 ### Edge Middleware for Personalization
 
-Edge middleware enables powerful personalization without sacrificing performance. You can A/B test features, customize content based on location, and implement authentication—all at the edge.
+Edge middleware enables powerful personalization without sacrificing performance. You can A/B test features, customize content based on location, and implement authentication-all at the edge.
 
 ```typescript
 // Edge middleware for geolocation-based content
@@ -112,7 +112,7 @@ export default defineEventHandler(async (event) => {
 
 ### API Aggregation at the Edge
 
-Edge functions excel at API aggregation—combining multiple backend API calls into a single request. This reduces round trips and improves mobile performance.
+Edge functions excel at API aggregation-combining multiple backend API calls into a single request. This reduces round trips and improves mobile performance.
 
 ```typescript
 // Edge function aggregating multiple APIs
@@ -208,4 +208,4 @@ The migration path doesn't have to be all-or-nothing. Start by moving static ass
 
 As the ecosystem matures, edge computing will become the default rather than the exception. Developers who master these patterns now will be well-positioned to build the next generation of high-performance, globally-distributed applications.
 
-The future is at the edge—and it's already here.
+The future is at the edge-and it's already here.

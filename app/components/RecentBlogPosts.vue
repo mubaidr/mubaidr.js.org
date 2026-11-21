@@ -13,7 +13,7 @@ const { data: recentPostsData } = await useRecentBlogPosts(count)
   <UPageSection
     v-if="recentPostsData"
     title="From the Blog"
-    description="Technical writing on architecture, tooling, and engineering practices"
+    description="Recent writing on AI systems, full-stack engineering, and production tooling"
   >
     <UBlogPosts v-if="recentPostsData.length > 0">
       <UBlogPost

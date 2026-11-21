@@ -25,7 +25,7 @@ seriesDescription: "Modern cloud-native architecture patterns and practices"
 
 ## Edge Computing & Serverless in 2026: The Complete Guide
 
-The cloud has evolved. In 2026, the question isn't whether to use serverless—it's how to leverage edge computing to deliver faster, more reliable applications. Edge computing has moved from experimental to essential, with major providers offering sophisticated tools for deploying code closer to users worldwide.
+The cloud has evolved. In 2026, the question isn't whether to use serverless-it's how to leverage edge computing to deliver faster, more reliable applications. Edge computing has moved from experimental to essential, with major providers offering sophisticated tools for deploying code closer to users worldwide.
 
 This guide covers everything you need to know about edge computing and serverless in 2026, from basic concepts to advanced deployment strategies.
 
@@ -480,7 +480,7 @@ export async function handler(request: Request) {
 
 ## Conclusion
 
-Edge computing and serverless architectures are no longer optional—they're essential for building modern, performant applications. By understanding the landscape and implementing best practices, you can deliver faster, more reliable experiences to users worldwide.
+Edge computing and serverless architectures are no longer optional-they're essential for building modern, performant applications. By understanding the landscape and implementing best practices, you can deliver faster, more reliable experiences to users worldwide.
 
 Start small with edge functions for specific use cases, then gradually expand as you understand the patterns and benefits. The future is distributed, and it's here now.
 

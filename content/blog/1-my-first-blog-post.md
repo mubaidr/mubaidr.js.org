@@ -72,7 +72,7 @@ I believe in learning by doing, so you'll find practical, hands-on content that 
 - Creating and maintaining your own open-source libraries
 - Building a portfolio that stands out
 
-Each article will include real code examples, step-by-step tutorials, and lessons learned from actual projects. I'm not just going to tell you what works—I'll show you why it works and how to implement it yourself.
+Each article will include real code examples, step-by-step tutorials, and lessons learned from actual projects. I'm not just going to tell you what works-I'll show you why it works and how to implement it yourself.
 
 ## My Development Philosophy
 
@@ -89,7 +89,7 @@ These principles will be reflected in everything I share here.
 
 I don't want this to be a one-way conversation. I encourage you to:
 
-- **Ask questions** in the comments—chances are, if you're wondering about something, others are too
+- **Ask questions** in the comments-chances are, if you're wondering about something, others are too
 - **Share your own experiences** and alternative approaches to the problems we discuss
 - **Suggest topics** you'd like me to cover based on challenges you're facing
 
@@ -106,7 +106,7 @@ I'm already working on several upcoming posts that I think you'll find valuable:
 
 ## A Personal Note
 
-Starting a blog feels both exciting and slightly nerve-wracking. I'm not here to position myself as an expert who has all the answers—I'm a fellow developer who's learned a lot from making mistakes, celebrating wins, and constantly pushing to improve.
+Starting a blog feels both exciting and slightly nerve-wracking. I'm not here to position myself as an expert who has all the answers-I'm a fellow developer who's learned a lot from making mistakes, celebrating wins, and constantly pushing to improve.
 
 My goal isn't to impress you with complex technical jargon or theoretical concepts. Instead, I want to share practical knowledge that you can use to become a better developer, build better software, and maybe even enjoy the process a little more.
 

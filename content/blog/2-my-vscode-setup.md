@@ -28,13 +28,13 @@ seriesDescription: "Master TypeScript from development setup to advanced enterpr
 
 ## My VSCode Setup: A Journey to Minimal Perfection
 
-As developers, we spend countless hours staring at our code editors. The environment we work in significantly impacts our productivity, focus, and even our well-being. After years of experimenting with different themes, extensions, and configurations, I've finally crafted a VSCode setup that I absolutely love—and I'm excited to share it with you.
+As developers, we spend countless hours staring at our code editors. The environment we work in significantly impacts our productivity, focus, and even our well-being. After years of experimenting with different themes, extensions, and configurations, I've finally crafted a VSCode setup that I absolutely love-and I'm excited to share it with you.
 
 Meet **Minimal Mist**, a theme I created that embodies everything I believe a coding environment should be: clean, distraction-free, and easy on the eyes.
 
 ## The Philosophy Behind Minimal Mist
 
-Before diving into the technical details, let me share the thinking behind this setup. I've always been drawn to minimalist design—not because it's trendy, but because it serves a purpose. When your environment is cluttered with unnecessary visual elements, your brain has to work harder to filter out the noise and focus on what matters: your code.
+Before diving into the technical details, let me share the thinking behind this setup. I've always been drawn to minimalist design-not because it's trendy, but because it serves a purpose. When your environment is cluttered with unnecessary visual elements, your brain has to work harder to filter out the noise and focus on what matters: your code.
 
 I wanted to create a theme that would:
 
@@ -49,7 +49,7 @@ I wanted to create a theme that would:
 
 ### 1. Subtle Background Colors
 
-The foundation of any good theme starts with the background. For the light theme, I chose `#f6f5f0`—a warm, off-white color that's much easier on the eyes than pure white. This subtle beige tone reduces the harsh contrast that can cause eye strain, especially during extended coding sessions.
+The foundation of any good theme starts with the background. For the light theme, I chose `#f6f5f0`-a warm, off-white color that's much easier on the eyes than pure white. This subtle beige tone reduces the harsh contrast that can cause eye strain, especially during extended coding sessions.
 
 For the dark theme, I selected a deep, muted background that provides enough contrast for text readability without being stark black. The goal was to create a sense of depth and comfort.
 
@@ -229,9 +229,9 @@ For those who want to get the exact look from my screenshots, here's everything 
 
 Creating Minimal Mist and this setup has been a journey of continuous refinement. What started as a simple desire for a cleaner interface has evolved into a comprehensive development environment that I genuinely enjoy using every day.
 
-The goal isn't just to make things look pretty—it's to create an environment that helps you focus on what matters most: writing great code. When your tools get out of the way, you can concentrate on solving problems and building amazing things.
+The goal isn't just to make things look pretty-it's to create an environment that helps you focus on what matters most: writing great code. When your tools get out of the way, you can concentrate on solving problems and building amazing things.
 
-I encourage you to try this setup and then customize it to fit your specific needs. The beauty of VSCode is its flexibility—there's no one-size-fits-all solution, but hopefully, this gives you a great starting point.
+I encourage you to try this setup and then customize it to fit your specific needs. The beauty of VSCode is its flexibility-there's no one-size-fits-all solution, but hopefully, this gives you a great starting point.
 
 What aspects of your development environment matter most to you? I'd love to hear about your own setup and any improvements you make to this one.
 

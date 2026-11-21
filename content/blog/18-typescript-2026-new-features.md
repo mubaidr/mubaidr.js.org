@@ -103,7 +103,7 @@ Method and property decorators provide fine-grained control over class behavior,
 
 ## Performance Improvements
 
-TypeScript 2026 isn't just about new features—it's also significantly faster. The compiler team has focused on reducing build times, especially for large projects.
+TypeScript 2026 isn't just about new features-it's also significantly faster. The compiler team has focused on reducing build times, especially for large projects.
 
 ### Incremental Compilation Enhancements
 
@@ -157,7 +157,7 @@ If you're upgrading from an older TypeScript version, here's a practical migrati
 
 ## Conclusion
 
-TypeScript 2026 represents a major leap forward in type safety, developer experience, and performance. The new features—particularly const type parameters, improved module resolution, and enhanced template literal types—solve real-world problems that developers face daily.
+TypeScript 2026 represents a major leap forward in type safety, developer experience, and performance. The new features-particularly const type parameters, improved module resolution, and enhanced template literal types-solve real-world problems that developers face daily.
 
 As the TypeScript ecosystem continues to mature, staying current with these features becomes essential for writing maintainable, type-safe code. Whether you're building a small project or a large enterprise application, TypeScript 2026 provides the tools you need to catch errors early and ship with confidence.
 

@@ -25,7 +25,7 @@ seriesDescription: "Advanced React patterns, performance optimization, and moder
 
 ## React Compiler and the End of Manual Memoization
 
-The React development landscape changed forever with the stable release of the React Compiler in late 2025. Now in 2026, manually writing `useMemo`, `useCallback`, and `React.memo` has become legacy practice—like manually managing memory in languages with garbage collection. After migrating several large React and Next.js applications to use the React Compiler, I've witnessed dramatic improvements in both performance and code quality.
+The React development landscape changed forever with the stable release of the React Compiler in late 2025. Now in 2026, manually writing `useMemo`, `useCallback`, and `React.memo` has become legacy practice-like manually managing memory in languages with garbage collection. After migrating several large React and Next.js applications to use the React Compiler, I've witnessed dramatic improvements in both performance and code quality.
 
 In this comprehensive guide, we'll explore how the React Compiler works, understand why manual memoization is now obsolete, and learn the new best practices for writing high-performance React applications in 2026. Whether you're building with React, Next.js, or React-based frameworks, understanding these changes is essential for modern development.
 
@@ -137,7 +137,7 @@ function CriticalComponent(props) {
 
 ## Performance Improvements
 
-The React Compiler doesn't just match manual optimization—it often exceeds it. Here's why:
+The React Compiler doesn't just match manual optimization-it often exceeds it. Here's why:
 
 ### Consistent Optimization
 
@@ -191,7 +191,7 @@ With the React Compiler handling optimization, best practices have shifted:
 
 ### Focus on Correctness, Not Performance
 
-Write clear, correct code first. The compiler will handle optimization automatically. Don't add premature optimization—trust the compiler.
+Write clear, correct code first. The compiler will handle optimization automatically. Don't add premature optimization-trust the compiler.
 
 ```typescript
 // Good: Clear, readable code
