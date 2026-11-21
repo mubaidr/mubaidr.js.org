@@ -9,6 +9,7 @@
         title="Senior ownership"
         description="I own the problem end-to-end - requirements, architecture, implementation, deployment, and verification. No hand-offs that break context."
         class="animate-fade-in-up"
+        icon="ph:user"
       />
       <UPageFeature
         title="AI-augmented engineering"
