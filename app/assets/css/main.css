@@ -2,8 +2,24 @@
 @import "@nuxt/ui";
 
 @theme {
-  --font-sans: "Ubuntu Mono", sans-serif;
-  --font-mono: "Ubuntu Mono", ui-monospace, monospace;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+
+  body {
+    font-variant-numeric: tabular-nums;
+  }
 }
 
 :root {
