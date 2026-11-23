@@ -70,8 +70,8 @@ onMounted(() => {
     />
 
     <UPageBody>
-      <UContainer class="space-y-12">
-        <div class="grid gap-6 md:grid-cols-2">
+      <UPageSection>
+        <div class="grid grid-cols-2 gap-3">
           <UPageCard v-for="method in contactMethods" :key="method.title">
             <div class="p-6 space-y-4">
               <div class="flex items-center gap-3">
@@ -95,10 +95,10 @@ onMounted(() => {
             </div>
           </UPageCard>
         </div>
+      </UPageSection>
 
-        <USeparator />
-
-        <section
+      <UPageSection>
+        <div
           v-if="faqsData && faqsData.list.length > 0"
           id="faqs"
           class="space-y-8"
@@ -111,8 +111,8 @@ onMounted(() => {
           </div>
 
           <UAccordion :items="faqsData.list" size="lg" />
-        </section>
-      </UContainer>
+        </div>
+      </UPageSection>
     </UPageBody>
   </UPage>
 </template>

@@ -10,7 +10,9 @@
     <SiteHeader />
 
     <UMain id="main">
-      <NuxtPage />
+      <UContainer>
+        <NuxtPage />
+      </UContainer>
     </UMain>
 
     <!-- Site Footer -->

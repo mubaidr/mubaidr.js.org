@@ -111,7 +111,9 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
     />
 
     <FeaturedBlogPosts />
-    <USeparator />
+
+    <USeparator class="my-12"></USeparator>
+
     <UPageSection title="Latest Posts">
       <UBlogPosts>
         <UBlogPost
@@ -131,12 +133,14 @@ const getExcerpt = (content: unknown, maxLength = 150) => {
       </UBlogPosts>
 
       <!-- Pagination -->
-      <div v-if="totalPages > 1" class="flex justify-center mt-8">
+      <div v-if="totalPages > 1" class="flex justify-center my-8">
         <UPagination
           v-model:page="page"
           :total="totalPosts || 0"
           :items-per-page="perPage"
           show-edges
+          color="neutral"
+          :active-color="'primary'"
         />
       </div>
     </UPageSection>

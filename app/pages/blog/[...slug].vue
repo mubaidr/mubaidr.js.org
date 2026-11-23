@@ -117,10 +117,11 @@ if (blogPostData.value) {
             :key="tag"
             :label="tag"
             color="neutral"
+            variant="soft"
           /></div
       ></template>
     </UPageHeader>
-    <UContainer class="py-16">
+    <div class="py-16">
       <div class="space-y-16">
         <!-- Series Navigation -->
         <SeriesNavigation
@@ -144,7 +145,7 @@ if (blogPostData.value) {
         </div>
 
         <!-- Post Content -->
-        <article class="prose prose-lg max-w-3xl mx-auto">
+        <article class="prose prose-lg">
           <ContentRenderer :value="blogPostData" />
         </article>
 
@@ -180,7 +181,7 @@ if (blogPostData.value) {
           :tags="blogPostData.tags"
         />
       </div>
-    </UContainer>
+    </div>
   </UPage>
   <div v-else class="text-center py-24">
     <h1>Post Not Found</h1>

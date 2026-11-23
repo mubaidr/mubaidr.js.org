@@ -49,7 +49,11 @@ definePageMeta({
 
 <template>
   <UPage>
-    <UPageHero>
+    <UPageHero
+      :ui="{
+        container: 'max-w-3xl!',
+      }"
+    >
       <template #headline>
         <span class="font-mono text-primary">{{ profileData!.title }}</span>
       </template>
@@ -75,11 +79,10 @@ definePageMeta({
         </div>
       </template>
       <template #body>
-        <p>
-          {{ profileData!.description }}
-        </p>
+        {{ profileData!.description }}
       </template>
     </UPageHero>
+
     <UPageBody>
       <WhatIDo />
       <HowIWork />
