@@ -134,6 +134,7 @@ export default defineNuxtConfig({
   ],
 
   nitro: {
+    preset: "github_pages",
     prerender: {
       crawlLinks: true,
       failOnError: false,
